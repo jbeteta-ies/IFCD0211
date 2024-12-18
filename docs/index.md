@@ -18,7 +18,7 @@ Unidades de Competencia:
 
 ## Contenidos
 - [MF0966_3](content/MF_0966_3/UF2213)
-    - [UF2213: Modelos de datos](content/MF_0966_3/UF2213)
+    - [UF2213: Modelos de datos](content/MF_0966_3/UF2213/UF2213)
     - [UF2214: Implementación y uso de una base de datos](content/MF_0966_3/UF2214)
     - [UF2215: Herramientas de sistemas gestores](content/MF_0966_3/UF2215)
 - [MF0967_3](content/MF_0967_3/UF2216)

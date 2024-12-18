@@ -1,0 +1,2106 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Javier Beteta Lluna">
+      
+      
+        <link rel="canonical" href="https://jbeteta-ies.github.io/IFCD0211/content/MF_0966_3/UF2213/UF2213/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Tema uf2213 - Modelos de datos y visión conceptual de una base de datos - Certificado de Profesionalidad IFCD0211</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#uf2213-modelos-de-datos-y-vision-conceptual-de-una-base-de-datos" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Certificado de Profesionalidad IFCD0211" class="md-header__button md-logo" aria-label="Certificado de Profesionalidad IFCD0211" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Certificado de Profesionalidad IFCD0211
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tema uf2213 - Modelos de datos y visión conceptual de una base de datos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Certificado de Profesionalidad IFCD0211" class="md-nav__button md-logo" aria-label="Certificado de Profesionalidad IFCD0211" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Certificado de Profesionalidad IFCD0211
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Normativa
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Normativa
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../normativa/IFCD0211/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Normativa General
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../normativa/MF0966_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MF0966_3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../normativa/MF0967_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MF0967_3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../normativa/MF0968_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MF0968_3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../normativa/MP0459/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MP0459
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../normativa/ucs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unidades de Competencia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Contenidos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Contenidos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MF0966_3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            MF0966_3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UF2213.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF2213
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UF2214/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF2214
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UF2215/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF2215
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MF0967_3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            MF0967_3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MF_0967_3/UF2216/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF2216
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MF_0967_3/UF2217/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF2217
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MF_0967_3/UF2218/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF2218
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MF0968_3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            MF0968_3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MF_0968_3/UF1643/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF1643
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MF_0968_3/UF1644/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF1644
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MP0459
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            MP0459
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MP0459/Practicas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prácticas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="uf2213-modelos-de-datos-y-vision-conceptual-de-una-base-de-datos">UF2213 - Modelos de datos y visión conceptual de una base de datos</h1>
+<hr />
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Tema</strong></th>
+<th style="text-align: center;"><strong>Título</strong></th>
+<th style="text-align: right;"><strong>Versión</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>UF2213</strong></td>
+<td style="text-align: center;"><strong><em>Visión conceptual.</em></strong></td>
+<td style="text-align: right;"><em>v 1.0</em></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<ol>
+<li>
+<p>Introducción</p>
+</li>
+<li>
+<p>Elementos del modelo ER</p>
+</li>
+<li>
+<p>Elementos del modelo EER</p>
+</li>
+<li>
+<p>Guía de desarrollo del esquema ER</p>
+</li>
+<li>
+<p>Opciones de diseño</p>
+</li>
+</ol>
+<h1 id="1-introduccion">1. Introducción</h1>
+<p>Una de las dificultades que existían a la hora de diseñar una BD es que el diseñador, a partir de las necesidades descritas por su cliente (quien ha pedido que le hagan una BD) se ponía a crear tablas sin pensar las posibles relaciones entre ellas , etc. Y luego no podía preguntarle al cliente si era eso lo que realmente quería, ya que el cliente no entiende de tablas.</p>
+<p>Por ejemplo, una bibliotecaria le dice al diseñador que le haga una BD y, entre otras cosas le dice:</p>
+<p><strong>"Cuando un usuario se lleva un libro a casa se anota la fecha de préstamo y la de devolución".</strong></p>
+<p>El diseñador, al llegar a su puesto de trabajo, crea todas las tablas pensando que un usuario puede llevarse sólo un único libro y, por tanto, diseña las tablas de acuerdo con esto. Después de realizar todo el trabajo, cuando lo instala en la biblioteca, la bibliotecaria se da cuenta de que la aplicación no deja que un usuario pueda llevarse 2 o más libros.</p>
+<p>¿Qué ha pasado? Un malentendido. Para evitar este tipo de cosas, debería hacerse como un esquema (como un dibujo) que refleje de forma clara los diferentes datos que se quieren guardar y cómo están relacionados. Así, a partir de ese dibujo que hace el diseñador, podrá preguntar a la bibliotecaria si son esas las relaciones o son otras. Es decir, le saldrá la pregunta de: "¿un usuario puede llevarse sólo 1 libro? ¿O muchos?".</p>
+<p>Es decir: el diseñador de la BD debe concebir a la BD a un nivel superior: en lugar de centrarse en la implementación física de las tablas, debe trabajar con las diferentes entidades que habrá y de las <strong>relaciones </strong>entre <strong>ellas </strong>.</p>
+<p>Con este propósito nace el <strong>Modelo Entidad-Relación</strong> (<strong>ER</strong>), propuesto por Peter Pin-Shan Chen en 1976. El modelo Entidad-Relación permite representar la realidad en términos de <strong>entidades</strong>, <strong>atributos</strong> y <strong>relaciones</strong> entre estas entidades.</p>
+<p>Con este modelo se pretende tener una visión abstracta de los datos, independientemente de consideraciones de tipo físico. Como su nombre indica, el Modelo Entidad/Relación se basa en <strong>entidades</strong> (cualquier objeto de interés para el mundo real que se pretende moldear) que se <strong>relacionan</strong>entre sí.</p>
+<p>Conclusión :</p>
+<ul>
+<li>
+<p>El <strong>usuario</strong> conoce bien cómo funciona su empresa pero a menudo no sabe expresarlo de forma correcta y/o precisa para ser informatizado.</p>
+</li>
+<li>
+<p>El <strong>diseñador</strong> sabe crear tablas pero no conoce bien el negocio para el que debe crear la base de datos.</p>
+</li>
+</ul>
+<p>En este sentido, el uso del modelo ER facilita el diálogo entre diseñador informático y usuario. Es decir: como el modelo ER es sencillo pero potente, el diseñador realizará un primer esquema ER y, con él, aclarará posibles dudas con el usuario.</p>
+<p>Para saber dónde estamos, volvemos a mostrar el ciclo de vida del software con el ejemplo de diseño de una BD para una biblioteca. En este tema veremos la fase de <strong>Análisis Conceptual</strong>. Partiremos de unos requerimientos ya hechos y, siguiendo las normas del <em>modelo conceptual</em>, obtendremos un <em>esquema relacional</em> ER y unas posibles <em>restricciones de integridad</em> (condiciones que deben cumplir los datos pero no se han podido reflejar en el ER).</p>
+<p><img alt="Esquema global" src="../img/T02_img01_ANALISIS_CONEPTUAL.png" /></p>
+<h1 id="2-elementos-del-modelo-er">2. Elementos del modelo ER <!-- punto 2 --></h1>
+<h2 id="entidades">Entidades <!-- punto 2.1 --></h2>
+<p><img alt="Entidades" src="../img/T02_img02_Entidades.png" /></p>
+<p>Una entidad representa un conjunto de "<em>personas, lugares, cosas, conceptos o sucesos (reales o abstractos), de interés para la organización</em>". Es ese objeto sobre el que queremos almacenar información en la BD.</p>
+<p>Hay que diferenciar entre entidad y ocurrencias de la entidad: <strong>entidad</strong> es la estructura genérica y <strong>ocurrencia de entidad</strong> es cada uno de los objetos que representa esa entidad (pero que no se pone en el esquema ER, claro). Así, por ejemplo:</p>
+<ul>
+<li>
+<p>La <strong>entidad LIBROS</strong> se refiere a la estructura que nos describe las características de los libros.</p>
+</li>
+<li>
+<p>Las <strong>ocurrencias de LIBROS</strong> serán cada uno de los libros, como por ejemplo el del Nombre de la Rosa, el del Tirant lo Blanc, el de Nosotros los valencianos...</p>
+</li>
+</ul>
+<p><em>Representación de las entidades</em></p>
+<p>Una entidad se representa con un rectángulo etiquetado con el nombre de la entidad en mayúsculas. Un nombre de entidad sólo puede aparecer una vez en el esquema. Los nombres de las entidades son sustantivos (ya veremos que el nombre de las relaciones son verbos) y es aconsejable ponerlos en plural ("PAISES" y no "PAÍS").</p>
+<p>Pero existen 2 tipos de entidades: débiles y fuertes. Las débiles se representarán con doble recuadro. Lo veremos más adelante ya que primero es necesario explicar el concepto de relación entre entidades. Por el momento, para tener una idea, vemos un ejemplo:</p>
+<h2 id="atributos">Atributos <!-- punto 2.2 --></h2>
+<p><em>Definición de atributo</em></p>
+<p>Es cada una de las <strong>propiedades</strong> que tiene una entidad (o una relación , ya veremos). El atributo se representa mediante elipses con un nombre, unidas con un arco en la entidad (o relación) que describe.</p>
+<p>En el ejemplo anterior, código, nombre y tipos son los atributos de la entidad LIBROS.</p>
+<p><em>Dominio del atributo</em></p>
+<p>El conjunto de posibles valores que puede tomar un atributo recibe el nombre de <strong>dominio</strong>. Algunos autores ponen el dominio en cada atributo y después describen el dominio indicando los posibles valores. Por ejemplo:</p>
+<p><img alt="Ejemplo dominios" src="../img/T02_img05_atributos_dominios.png" /></p>
+<p>Dominios:</p>
+<ul>
+<li>
+<p>d_código_lib: número</p>
+</li>
+<li>
+<p>d_nombre_lib: combinación de 50 caracteres alfabéticos</p>
+</li>
+<li>
+<p>d_tipo_lib: una de las siguientes letras: P, F, I, H, A </p>
+</li>
+<li>(correspondientes a Miedo, Ficción, Infantil, Humor, Ensayo)</li>
+</ul>
+<p>Pero por simplicidad, en el ER no pondremos el dominio de cada atributo, sino que sólo indicaremos los posibles valores en aquellos campos donde lo indique el análisis de requerimientos de forma explícita. Por ejemplo:</p>
+<ul>
+<li>"<em>Los empleados tendrán un DNI, un nombre y un estado civil, que sólo podrá tener los valores S, C, D o V</em>"</li>
+</ul>
+<p><img alt="Ejemplo de dominios" src="../img/T02_img06_ejemplo_dominios.png" /></p>
+<p><em>Tipo de atributos</em></p>
+<p>Los atributos pueden clasificarse desde dos puntos de vista: <em>funcionalidad</em> y <em>estructura</em>.</p>
+<ol>
+<li>
+<p>Según su <strong>funcionalidad </strong>podemos distinguir:</p>
+</li>
+<li>
+<p><strong>Atributo identificador</strong>: permite distinguir entre las distintas ocurrencias de una entidad. Se representa subrayando el nombre del atributo. También se le llama " <strong>la clave </strong>" de la entidad. Dos ocurrencias de una entidad no pueden tener el mismo valor en el atributo identificador.</p>
+</li>
+</ol>
+<p><img alt="Ocurrencias de clientes" src="../img/T02_img07_atributo_clave.png" /></p>
+<pre><code>Posibles ocurrencias de la entidad CLIENTES:
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">DNI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">76.333.333H</td>
+</tr>
+<tr>
+<td style="text-align: left;">87.333.445A</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>~~76.333.333H~~</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">54.233.567C</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Nota:</strong> conviene que toda entidad tenga un atributo identificador.</p>
+<ul>
+<li><strong>Atributo descriptor</strong>: describe las ocurrencias de una entidad o relación. Es decir: son los atributos "que no son clave". Se representa simplemente con la elipse, sin subrayar el nombre. Además de esto, un atributo descriptor puede ser "no nulo" y esto se simboliza mediante un pequeño círculo entre el arco y la elipse. Serán atributos que consideremos que deben tener un valor obligatoriamente para cada ocurrencia de la entidad. <em>Los atributos claves son no nulos pero no se pone el círculo.</em></li>
+</ul>
+<p><img alt="Atributos descriptores" src="../img/T02_img08_atributo_descriptor.png" /></p>
+<p>Posibles ocurrencias de la entidad CLIENTES:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">DNI </th>
+<th style="text-align: left;"> Nombre </th>
+<th style="text-align: center;">Data_naix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">76333333H</td>
+<td style="text-align: left;"> Pep</td>
+<td style="text-align: center;"> <strong>08/07/1970</strong></td>
+</tr>
+<tr>
+<td style="text-align: right;">87333445A </td>
+<td style="text-align: left;"> Abdón</td>
+<td style="text-align: center;"> <strong>08/07/1970</strong></td>
+</tr>
+<tr>
+<td style="text-align: right;">54233567C </td>
+<td style="text-align: left;"> <strong>Nieves</strong> </td>
+<td style="text-align: center;"> 01/12/1998</td>
+</tr>
+<tr>
+<td style="text-align: right;">45654322N </td>
+<td style="text-align: left;"><strong>Nieves</strong> </td>
+<td style="text-align: center;"> 12/12/2002</td>
+</tr>
+<tr>
+<td style="text-align: right;">77654432D </td>
+<td style="text-align: left;"> Pepa</td>
+<td style="text-align: center;">--</td>
+</tr>
+<tr>
+<td style="text-align: right;">--</td>
+<td style="text-align: left;">---</td>
+<td style="text-align: center;">---</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Nota:</strong> Pueden haber 2 o más clientes que han nacido el mismo día. Puede ser que haya un cliente del que no conocemos la fecha de nacimiento.
+Poden haver 2 o més clients que hagen nascut el mateix dia.</p>
+<ol>
+<li>
+<p>Según su <strong>estructura</strong> podemos distinguir:</p>
+</li>
+<li>
+<p><strong>Atributo simple</strong>: para cada ocurrencia de la entidad o relación que califican, el atributo toma un único valor atómico. Es decir, es el caso de atributo "normal". En el ejemplo siguiente, "DNI", " <em>Data_naix</em>" y "<em>Dirección</em>" son atributos simples.</p>
+</li>
+</ol>
+<p><img alt="Atributo simple" src="../img/T02_img09_atributo_simple.png" /></p>
+<p>Posibles ocurrencias de la entidad CLIENTES:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">DNI </th>
+<th style="text-align: center;"> Data_naix </th>
+<th style="text-align: left;">Dirección</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">76333333H </td>
+<td style="text-align: center;">08/07/1970</td>
+<td style="text-align: left;">C/Moro, 13 (Sueca)</td>
+</tr>
+<tr>
+<td style="text-align: center;">87333445A </td>
+<td style="text-align: center;">04/03/1970</td>
+<td style="text-align: left;">C/Sequial, 45 (Algemesí)</td>
+</tr>
+<tr>
+<td style="text-align: center;">54233567C </td>
+<td style="text-align: center;">01/12/1998</td>
+<td style="text-align: left;">C/Moro, 13 (Alginet)</td>
+</tr>
+<tr>
+<td style="text-align: center;">--</td>
+<td style="text-align: center;">---</td>
+<td style="text-align: left;">---</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Atributo multivalente</strong>: para cada ocurrencia de la entidad que califica, el atributo puede tomar varios valores. Se pone una "n" sobre el arco del atributo.</li>
+</ul>
+<p><img alt="Atributo multivalente" src="../img/T02_img10_atributo_multivalente.png" /></p>
+<p>Posibles ocurrencias de la entidad CLIENTES:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">DNI</th>
+<th style="text-align: left;"> Teléfonos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">76333333H </td>
+<td style="text-align: left;">96-170-33-44</td>
+</tr>
+<tr>
+<td style="text-align: center;">87333445A </td>
+<td style="text-align: left;">96-171-33-46 96-171-33-47 636-092-555</td>
+</tr>
+<tr>
+<td style="text-align: center;">54233567C </td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">67437567G  </td>
+<td style="text-align: left;">96-170-44-64 699-076-433</td>
+</tr>
+<tr>
+<td style="text-align: center;">--</td>
+<td style="text-align: left;">---</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Atributo compuesto</strong>: está formado por un conjunto de otros atributos. Una ocurrencia de un atributo compuesto estará formada por una ocurrencia de cada uno de sus "sub-atributos".</li>
+</ul>
+<p><img alt="Atributo compuesto" src="../img/T02_img11_atributo_compuesto.png" /></p>
+<p>Posibles ocurrencias de la entidad CLIENTES:</p>
+<p>Dirección = Calle + Número + Población</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">DNI</th>
+<th style="text-align: left;">Dirección  </th>
+<th style="text-align: left;"></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">--</td>
+<td style="text-align: left;"><strong>Calle</strong></td>
+<td style="text-align: left;"><strong>Número</strong></td>
+<td style="text-align: left;"><strong>Población</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">76333333H </td>
+<td style="text-align: left;">C/Moro </td>
+<td style="text-align: left;">13 </td>
+<td style="text-align: left;">Sueca</td>
+</tr>
+<tr>
+<td style="text-align: center;">54233567C </td>
+<td style="text-align: left;">C/Sequial</td>
+<td style="text-align: left;">45 </td>
+<td style="text-align: left;">Algemesí</td>
+</tr>
+<tr>
+<td style="text-align: center;">67437567G </td>
+<td style="text-align: left;">C/Moro </td>
+<td style="text-align: left;">13 </td>
+<td style="text-align: left;">Alginet</td>
+</tr>
+<tr>
+<td style="text-align: center;">--</td>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;">-- </td>
+<td style="text-align: left;">--</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Nota:</strong> el atributo compuesto parece que no sea necesario, ya que podríamos descomponerlo en atributos simples. Pero no podríamos hacerlo en el caso de tener un atributo compuesto <strong>multivalente</strong> (por ejemplo, n direcciones). Además se ve más claro si lo ponemos en forma de atributo compuesto.</p>
+<ul>
+<li><strong>Atributo compuesto multivalente</strong>: para cada ocurrencia de la entidad que califica, el atributo puede tomar varios valores, y cada uno de estos valores está formado por un conjunto de otros atributos.</li>
+</ul>
+<p><img alt="Atributo compuesto multivalente" src="../img/T02_img12_atributo_compuesto_multivalente.png" /></p>
+<p>Posibles ocurrencias:</p>
+<p><img alt="Posibles ocurrencias" src="../img/T02_img13_posibles_ocurrencias.png" /></p>
+<h3 id="ejercicios-sobre-entidades-y-atributos">Ejercicios sobre Entidades y Atributos</h3>
+<ol>
+<li>De los siguientes elementos hay 3 que son entidades. Piensa cuáles son y ponles los atributos correspondientes con los símbolos del ER. Indica también las claves respectivas (atributos identificadores), los campos que no deberían admitir nulos, y si puede haber algún atributo multivalente.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">datos</th>
+<th style="text-align: left;">datos</th>
+<th style="text-align: left;">datos</th>
+<th style="text-align: left;">datos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">edad</td>
+<td style="text-align: left;">ordenadores</td>
+<td style="text-align: left;">metros_cuadrados</td>
+<td style="text-align: left;">apellidos</td>
+</tr>
+<tr>
+<td style="text-align: left;">cantidad_ventanas</td>
+<td style="text-align: left;">aulas</td>
+<td style="text-align: left;">alumnos</td>
+<td style="text-align: left;">planta</td>
+</tr>
+<tr>
+<td style="text-align: left;">mem_disco_duro</td>
+<td style="text-align: left;">teléfonos</td>
+<td style="text-align: left;">dni</td>
+<td style="text-align: left;">código_ordenador</td>
+</tr>
+<tr>
+<td style="text-align: left;">num_aula</td>
+<td style="text-align: left;">velocidad_cpu</td>
+<td style="text-align: left;">nombre</td>
+<td style="text-align: left;">RAM</td>
+</tr>
+<tr>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;">--</td>
+</tr>
+</tbody>
+</table>
+<p>1. Identifica en cada apartado, cuál sería la entidad débil y cuál la fuerte.</p>
+<ul>
+<li>a) Facturas / Clientes</li>
+<li>b) Notas / Alumnos</li>
+<li>
+<p>c) Ciudades / Países</p>
+</li>
+<li>
+<p>Buscar entidades y atributos.</p>
+</li>
+<li>
+<p>a) En un hipermercado quieren tener información de los productos que tienen a la venta.</p>
+</li>
+<li>
+<p>Piensa todos los atributos posibles que podría tener la entidad "productos" y ponlos en la entidad siguiendo el modelo ER para indicar si son atributos: identificadores o descriptores; no nulos; simples o multivalentes; compuestos; o compuesto multivalente.</p>
+</li>
+<li>
+<p>Piensa qué otra información se podría informatizar en el hipermercado, obteniendo otras entidades y sus respectivos atributos.</p>
+</li>
+<li>
+<p>Indica 2 o 3 posibles ocurrencias de cada entidad.</p>
+</li>
+<li>
+<p>b) Haz lo mismo (buscar entidades, atributos de distintos tipos y posibles ocurrencias) para distintas bases de datos: videoclub, equipo de fútbol, clínica dental, hospital...</p>
+</li>
+</ul>
+<h2 id="relaciones">Relaciones   <!-- punto 2.3 --></h2>
+<p>Definimos la relación como la asociación o correspondencia entre entidades. Llamamos <strong>relación</strong> a la estructura que relaciona 2 o más entidades. Mientras que <strong>ocurrencia de una relación </strong>es la relación existente entre una ocurrencia de una entidad y otra ocurrencia de la otra entidad.</p>
+<p>Así, por ejemplo:</p>
+<ul>
+<li>Relación ESCRIBIR: </li>
+<li>
+<p>estructura que describe la relación entre la entidad AUTORS y la entidad LIBROS.</p>
+</li>
+<li>
+<p>Ocurrencias de la relación ESCRIBIR:    </p>
+</li>
+<li>"<em>Joanot Martorell</em>" - "<em>Tirant lo Blanch</em>".</li>
+<li>"<em>Cervantes</em>" - "<em>Don Quijote de la Mancha</em>"</li>
+</ul>
+<p>Representamos la relación mediante un rombo etiquetado con el nombre de la relación, unido mediante arcos a las entidades asociadas. Aquí, vemos que la relación <em>Escribir </em>asocia a un autor con un libro.</p>
+<p><img alt="Relación" src="../img/T02_img14_relaciones.png" /></p>
+<p>Una relación se caracteriza por su nombre, sus atributos, el grado y la conectividad:</p>
+<h3 id="el-nombre-de-la-relacion">El nombre de la relación <!-- Punto 2.3.1 --></h3>
+<p>Identifica la relación (etiqueta del rombo). En un diagrama ER no puede haber 2 relaciones con el mismo nombre (tampoco puede haber 2 entidades con el mismo nombre). En el siguiente ejemplo, el nombre es "<em>Estar_casado</em>":</p>
+<p><img alt="Relación" src="../img/T02_img15_relaciones.png" /></p>
+<h3 id="los-atributos-de-la-relacion">Los atributos de la relación. <!-- Punto 2.3.2 --></h3>
+<p>La relación puede tener 0, 1 o varios atributos propios. Éstos se representan como hemos dicho antes (con elipses) pero "colgando" de la relación. Estos atributos no son de ninguna de las entidades sino de la propia relación. Por ejemplo, para indicar la fecha de boda de un hombre y una mujer, este atributo no depende de la entidad HOMBRES ni de la entidad MUJERES, sino de la relación entre las 2 entidades. Es decir, el atributo " <em>Data</em>" es de la relación "<em>Estar_casado</em>":</p>
+<p><img alt="Relación" src="../img/T02_img16_relaciones_atributo.png" /></p>
+<h3 id="el-grado-radica-en-la-relacion">El grado radica en la relación <!-- Punto 2.3.3 --></h3>
+<p>Cantidad de entidades que participan en ella. Puede ser de grado 1, 2, 3 donde:</p>
+<p><strong>Nota:</strong>  A veces no ponemos los atributos por simplicidad de los ejemplos. Pero sí que los pondremos en la E-R.a vegades no posarem els atributs per simplicitat dels exemples, però sí que es posen en la E-R.</p>
+<ul>
+<li><strong>Unarias</strong> (grado 1), cuando una entidad se relaciona consigo misma</li>
+</ul>
+<p><img alt="Unarias" src="../img/T02_img17_relaciones_unarias.png" /></p>
+<p>Posibles ocurrencias de la relación "Estar_casado":</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Persona</th>
+<th style="text-align: left;"> Persona</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Pep </td>
+<td style="text-align: left;">Pepa</td>
+</tr>
+<tr>
+<td style="text-align: left;">Maria </td>
+<td style="text-align: left;">Albert</td>
+</tr>
+<tr>
+<td style="text-align: left;">Marco </td>
+<td style="text-align: left;">Juana</td>
+</tr>
+<tr>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;">--</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Binarias</strong>(grado 2), cuando asocian dos entidades</li>
+</ul>
+<p><img alt="Binarias" src="../img/T02_img18_relaciones_binarias.png" /></p>
+<p>Posibles ocurrencias de la relación "Conduce":</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Coche</th>
+<th style="text-align: left;">Piloto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Ferrari</td>
+<td style="text-align: left;">Carlos Sainz</td>
+</tr>
+<tr>
+<td style="text-align: left;">Aston Martin</td>
+<td style="text-align: left;">Fernando Alonso</td>
+</tr>
+<tr>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;">--</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Nota:</strong> Los símbolos de las relaciones (rombos y triángulos) "se pintan" de una forma u otra pero eso lo veremos en el apartado siguiente.</p>
+<ul>
+<li><strong>Ternarias</strong> (grado 3), cuando asocian tres entidades</li>
+</ul>
+<p><img alt="Ternarias" src="../img/T02_img19_relaciones_ternarias.png" /></p>
+<p>Posibles ocurrencias de la relación "impartir":</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Profesor</th>
+<th style="text-align: center;"> Grupo</th>
+<th style="text-align: center;"> Asignatura</th>
+<th style="text-align: center;">Horas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">María</td>
+<td style="text-align: center;">1DAM-SP</td>
+<td style="text-align: center;">BD</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr>
+<td style="text-align: left;">Alfredo</td>
+<td style="text-align: center;">1DAM</td>
+<td style="text-align: center;">BD</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr>
+<td style="text-align: left;">Abdó </td>
+<td style="text-align: center;">1DAM</td>
+<td style="text-align: center;">PRG</td>
+<td style="text-align: center;">8</td>
+</tr>
+<tr>
+<td style="text-align: left;">Joan Gerard</td>
+<td style="text-align: center;">1DAM-SP</td>
+<td style="text-align: center;">PRG</td>
+<td style="text-align: center;">8</td>
+</tr>
+<tr>
+<td style="text-align: left;">---</td>
+<td style="text-align: center;">---</td>
+<td style="text-align: center;">---</td>
+<td style="text-align: center;">---</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>N-aria</strong> (grado n), cuando se asocian más de 3 entidades, pero no suele darse (no veremos).</li>
+</ul>
+<p><strong><em>¡Cuidado! atributo o relación?</em></strong></p>
+<p><strong>NO</strong> podemos poner un atributo en una entidad que haga referencia a otra entidad existente. Es decir:</p>
+<p><img alt="Relaciones" src="../img/T02_img20_relaciones.png" /></p>
+<p>Si no tuviéramos la entidad CIUDADES en nuestro ER estaría bien poner el atributo <em>ciudad</em> en la entidad CLIENTES. Pero si ya tenemos la entidad CIUDADES, es necesario quitar ese atributo y relacionar CLIENTES con CIUDADES:</p>
+<p><img alt="Relaciones" src="../img/T02_img21_relaciones.png" /></p>
+<h4 id="ejercicios-sobre-relaciones">Ejercicios sobre relaciones</h4>
+<ul>
+<li>
+<ol>
+<li>Tenemos las entidades EQUIPOS, JUGADORES y TEMPORADAS. Invéntate 2 o 3 atributos de cada una (uno de ellos deberá ser la clave) y dibuja las relaciones necesarias (con nombre y posibles atributos) para poder guardar la siguiente información:</li>
+</ol>
+</li>
+<li>
+<p>Partidos jugados con el correspondiente resultado de goles.</p>
+</li>
+<li>Los jugadores que ha tenido cada equipo en cada temporada y el sueldo que cobraba cada uno.</li>
+<li>
+<p>Cuántos minutos ha jugado cada jugador en cada temporada y cuántos goles ha marcado (independientemente del equipo en el que jugará).</p>
+</li>
+<li>
+<ol>
+<li>Invéntate posibles relaciones (de diferentes grados) entre las entidades que han salido en ejercicios anteriores. Recuerda poner nombres coherentes y ponles también algún atributo.</li>
+</ol>
+</li>
+</ul>
+<h3 id="la-conectividad-de-la-relacion">La conectividad de la relación <!-- 2.3.4 --></h3>
+<p>Cantidad máxima de ocurrencias con que puede estar relacionada una ocurrencia en una relación.</p>
+<p>Por decirlo de una manera de ir por casa, la conectividad de una relación es la forma en que pintaremos los triángulos de la relación.</p>
+<p>¿Cómo pintar una relación binaria?</p>
+<p>Ejemplo:</p>
+<p><img alt="Ejemplo binaria" src="../img/T02_img22_relaciones.png" /></p>
+<p>Suponiendo que tenemos las siguientes ocurencias:</p>
+<p><img alt="Pintar relacion conjuntos" src="../img/T02_img23_relaciones_conjuntos.png" />{width=50%}</p>
+<p>Para pintar los triángulos de la relación debemos hacer dos preguntas sobre si una ocurrencia de una entidad puede estar relacionada con más de una ocurrencias de la otra entidad. Preguntaremos esto usando el verbo de la relación: una en activa y otra en pasiva ("en sentido contrario"). Es decir:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Pregunta</th>
+<th style="text-align: center;">Respuesta</th>
+<th style="text-align: left;">Acción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">¿Dado 1 profesor, de cuantos alumnos <strong>puede ser tutor</strong>?</td>
+<td style="text-align: center;">De muchos</td>
+<td style="text-align: left;">triángulo negro en la parte de alumnos.</td>
+</tr>
+<tr>
+<td style="text-align: left;">¿Dado 1 alumno , por cuántos profesores <strong>puede ser tutorizado</strong>?</td>
+<td style="text-align: center;">Sólo 1</td>
+<td style="text-align: left;">triángulo blanco en la parte de profesores.</td>
+</tr>
+<tr>
+<td style="text-align: left;">---</td>
+<td style="text-align: center;">---</td>
+<td style="text-align: left;">---</td>
+</tr>
+</tbody>
+</table>
+<p>Por tanto, la conectividad de la relación ser_tutor es 1:M (uno a muchos). "Uno" (triángulo blanco) en la parte de PROFESORES y "Muchos" (triángulo negro) en la parte de ALUMNOS:</p>
+<p><img alt="Relacion" src="../img/T02_img24_relaciones.png" /></p>
+<p><strong>Cuidado en NO hacer la pregunta así</strong>: "<em>Dados ~~muchos ~~profesores, ¿cuántos alumnos...?</em>". Siempre la haremos a partir de una ocurrencia: "Dado 1 profesor, cuántos..."</p>
+<p><strong>Tipo de conectividades en relaciones binarias:</strong></p>
+<p>Los tipos de conectividades de una relación binaria son "de 1 a 1" (1:1), "de 1 a muchos" (1:N) y "de muchos a muchos" (N:M). Como hemos dicho antes, esta conectividad, se representa pintando de negro la parte del rombo que haga referencia al "muchos". Y en blanco, la parte que hace referencia a la entidad con conectividad "1".</p>
+<ul>
+<li><strong>De 1 a muchos:</strong> cada ocurrencia de la entidad A puede estar relacionada con muchas ocurrencias de B. Pero cada ocurrencia de B sólo puede estar relacionada con una ocurrencia de A.</li>
+</ul>
+<p><img alt="De uno a muchos" src="../img/T02_img24_relaciones.png" /></p>
+<ul>
+<li>Un profesor puede ser tutor de <strong>muchos</strong> alumnos</li>
+<li>
+<p>Un alumno puede ser tutorizado por <strong>un</strong> profesor</p>
+</li>
+<li>
+<p><strong>De 1 a 1:</strong> por cada ocurrencia de A sólo tenemos una de B, y viceversa.</p>
+</li>
+</ul>
+<p><img alt="De uno a uno" src="../img/T02_img25_relaciones_unoauno.png" /></p>
+<ul>
+<li>Un coche solo puede ser conducido por un piloto (en un momento determinado)</li>
+<li>
+<p>Un piloto solo puede conducir un coche (en un momento determinado)</p>
+</li>
+<li>
+<p><strong>De muchos a muchos</strong> si por cada ocurrencia de A podemos tener cualquier número de ocurrencias de B, y viceversa.</p>
+</li>
+</ul>
+<p><img alt="De muchos a muchos" src="../img/T02_img26_relaciones_muchos_muchos.png" /></p>
+<ul>
+<li>Un profesor puede impartir muchos módulos</li>
+<li>Un módulo puede ser impartido por muchos profesores</li>
+</ul>
+<p><strong>Nota:</strong> entre dos entidades puede existir más de una relación (con igual o distinta conectividad):</p>
+<p><img alt="más de una relación" src="../img/T02_img27_relaciones.png" /></p>
+<p><strong>¿Cómo pintar una relación unaria?</strong></p>
+<p><img alt="Pintar una relación unaria" src="../img/T02_img28_relaciones.png" /></p>
+<p>Supongamos que la entidad PERSONAS tiene 4 ocurrencias (Pep, Pepet, Pepeta y Pepiquet). La relación ser_padre guardará parejas de ocurrencias de PERSONAS donde, en cada pareja, se cumple que uno es padre del otro.</p>
+<p>Supongamos que Pep es padre de Pepet y Pepeta; y que Pepet es padre de Pepiquet.</p>
+<p><img alt="Pintar una relación unaria" src="../img/T02_img29.png" /></p>
+<p>Para saber cómo pintar la relación unaria (es decir, saber cuál es su conectividad) debemos hacer las mismas preguntas que en las relaciones binarias. Lo que ocurre es que ahora tenemos la misma entidad en las 2 partes de la relación. Es como si tuviéramos la siguiente situación (pero NO se hace así, ya que en un ER no pueden haber 2 entidades con el mismo nombre):</p>
+<p><img alt="Pintar una relación unaria" src="../img/T02_img30.png" />{width=50%}</p>
+<p>Para saber si pintamos o no la parte derecha, hacemos la pregunta de izquierda a derecha, con el nombre de la relación. 
+- 1 persona puede ser padre... ¿de cuántas personas? De muchas.</p>
+<p>Para saber si pintamos o no la parte izquierda, hacemos la pregunta de derecha a izquierda, con el "contrario" del nombre de la relación.</p>
+<ul>
+<li>1 persona puede ser hija... ¿de cuántas personas (como padre)?
+Sólo de 1</li>
+</ul>
+<p>Vemos que de una ocurrencia del conjunto de la izquierda pueden salir MUCHAS flechas, pero a una ocurrencia del conjunto de la derecha sólo le puede llegar UNA flecha.</p>
+<pre><code>Los tipos de conectividades en las relaciones unarias son los mismos que las binarias: 1:1, 1:M y M:M
+</code></pre>
+<p><strong>¿Cómo pintar una relación ternaria?</strong></p>
+<p>Las conectividades de las relaciones ternarias se expresarán con 3 datos, correspondientes a las conectividades de las respectivas 3 entidades de esa relación. Por ejemplo: (1:1:M) (1:M:M), etc.</p>
+<p>Por ejemplo, la siguiente relación ternaria tiene conectividad (1:M:M):</p>
+<p><img alt="Relación ternaria" src="../img/T02_img31_ternarias.png" /></p>
+<p>Para saber cómo hemos pintado la relación "impartir" hemos tenido que hacer 3 preguntas en la relación. <strong>En cada pregunta se parte de una pareja de ocurrencias de dos entidades y se pregunta con cuántas ocurrencias de la 3ª de las entidades puede estar relacionada</strong> (como máximo, claro). Consejo: <em>si nos inventamos ocurrencias para hacer las preguntas, quizás lo encontraremos más fácil.</em></p>
+<ul>
+<li>
+<p>El profesor Abdó, en el grupo 1DAM... -&gt; ¿cuántas <strong>asignaturas</strong> puede impartir? <strong>Muchas</strong> (BD y PRG por ejemplo)</p>
+</li>
+<li>
+<p>El profesor Abdó, la asignatura de BD... -&gt; ¿a cuántos <strong>grupos</strong> la puede impartir? <strong>Muchos</strong> (1DAM y 1DAM-SP por ejemplo)</p>
+</li>
+</ul>
+<p>- La asignatura BD en el grupo 1DAM-SP... -&gt; ¿cuántos <strong>profesores</strong> pueden impartirlo? <strong>Sólo 1</strong> ( Abdó por ejemplo)</p>
+<p>Es decir:</p>
+<p>-Dada una ocurrencia de <em>PROFESORES</em> y una ocurrencia de <em>GRUPOS_ALUMNOS</em>, pueden tener asociadas muchas ocurrencias de <em>ASIGNATURAS</em>. Es decir, un profesor puede impartir a un grupo de alumnas <strong>muchas</strong> asignaturas. (1 prof., 1 grupo) -&gt; M asignaturas</p>
+<p>-Dada una ocurrencia de <em>PROFESORES</em> y una ocurrencia de <em>ASIGNATURAS</em>, pueden tener asociadas muchas ocurrencias de <em>GRUPOS_ALUMNOS</em>. Es decir, un profesor puede impartir una asignatura en <strong>muchos</strong> grupos de alumnos. (1 prof, 1 asignatura) -&gt; M grupos</p>
+<p>-Dada una ocurrencia de <em>ASIGNATURAS</em> y una ocurrencia de <em>GRUPOS_ALUMNOS</em>, pueden tener asociadas sólo una ocurrencia de <em>PROFESORES</em>. Es decir, una asignatura puede ser impartida en un grupo de alumnos sólo por <strong>un</strong> profesor. (1 asignatura, 1 grupo) -&gt; sólo 1 profesor</p>
+<p>Las posibles conectividades de las ternarías son: 1:1:1, M:M:M, 1:M:M, 1:1:M</p>
+<p>Ejemplos de posibles ocurrencias de la relación "impartir" anterior:</p>
+<p>Las relaciones ternarias representan tríos de ocurrencias (uno de cada entidad que relacionan). Por tanto, vamos a suponer que queremos introducir esas ocurrencias (una vuelta tuvimos la correspondiente tabla creada):</p>
+<p><img alt="Ocurrencias" src="../img/T02_img32.png" /></p>
+<p><strong>Otra notación para representar la conectividad</strong></p>
+<p>La conectividad es "pintar o no los triángulos". También se le llama la <em>cardinalidad máxima</em>. Algunos autores representan la cardinalidad máxima y la mínima con parejas de datos (mín, máx):</p>
+<p><img alt="Cardinalidades máxima y mínima" src="../img/T02_img33.png" /></p>
+<p>En el ejemplo anterior están representadas, entre paréntesis, las cardinalidades (mínima, máxima) de las relaciones.</p>
+<p>Explicación de las cardinalidades del ejemplo anterior:</p>
+<p>Cardinalidades respecto a la relación " Escribir ":</p>
+<ul>
+<li>
+<p>Un autor puede escribir como mínimo 1 libro y, como máximo, muchos libros (1,n).</p>
+</li>
+<li>
+<p>Un libro puede ser escrito como mínimo por 0 autores (anónimo) y como máximo por muchos (0,n).</p>
+</li>
+</ul>
+<p>Cardinalidades respecto a la relación <em>"Nacer"</em>:</p>
+<ul>
+<li>
+<p>Un autor ha nacido únicamente en una ciudad: mínimo y máximo es 1. Por tanto, (1,1).</p>
+</li>
+<li>
+<p>En una ciudad puede no haber nacido nadie y pueden haber nacido muchos: (0,n)</p>
+</li>
+</ul>
+<p>Cardinalidades respecto a la relación <em>"Morir":</em></p>
+<ul>
+<li>
+<p>Un autor todavía no ha muerto o ha muerto en una única ciudad. Por tanto, (0,1).</p>
+</li>
+<li>
+<p>En una ciudad puede no haber muerto nadie y pueden haber muerto muchos: (0,n)</p>
+</li>
+</ul>
+<p><strong>Nota:</strong> no suele usarse esta notación, ya que la cardinalidad máxima se puede representar con la conectividad (el color del rombo), y la cardinalidad mínima se puede representar con las restricciones de existencia (lo veremos más adelante). Es decir:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">En lugar de indicar</th>
+<th style="text-align: center;"> Usaremos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">( 0, </td>
+<td style="text-align: center;"> ( Nada. Es decir, por defecto el mínimo es 0)</td>
+</tr>
+<tr>
+<td style="text-align: center;">( 1, </td>
+<td style="text-align: center;"> La restricción de existencia : E (lo veremos más adelante)</td>
+</tr>
+<tr>
+<td style="text-align: center;"> , 1)</td>
+<td style="text-align: center;"> Triángulo correspondiente del rombo: blanco</td>
+</tr>
+<tr>
+<td style="text-align: center;">, n)</td>
+<td style="text-align: center;"> Triángulo correspondiente del rombo: negro</td>
+</tr>
+<tr>
+<td style="text-align: center;">---</td>
+<td style="text-align: center;">---</td>
+</tr>
+<tr>
+<td style="text-align: center;">---</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="ejercicios-sobre-relaciones-con-conectividad">Ejercicios sobre relaciones con conectividad</h3>
+<ol>
+<li>
+<p>Pon la conectividad a las relaciones de los ejercicios anteriores.</p>
+</li>
+<li>
+<p>Invéntate relaciones de diferentes tipos:</p>
+</li>
+</ol>
+<p>- Diferente grado: unarias / binarias / ternarias
+   - Diferente conectividad: 1:1 / 1:M / M:M / M:M:M / ...</p>
+<p>Aunque no se ponga en el ER, invéntate también algunas ocurrencias de las entidades y, sobre todo, ocurrencias de las relaciones.</p>
+<ol>
+<li>
+<p>Invéntate 2 entidades con más de una relación entre ellas.</p>
+</li>
+<li>
+<p>Pone la conectividad a estas relaciones matrimoniales :</p>
+</li>
+</ol>
+<p><img alt="Ejercicio 9" src="../img/T02_img34_ejercicio09.png" /></p>
+<p>¿Cómo harías para representar la relación <em>estar_casado_por_lo_civil</em>?</p>
+<ol>
+<li>
+<p><strong>Diseña un esquema ER para un pequeño aeropuerto, con los siguientes requerimientos.</strong></p>
+</li>
+<li>
+<p>Control de cada avión registrado en el aeropuerto (Número, matrícula, antigüedad, fecha registro, ...).</p>
+</li>
+<li>Cada avión es de un tipo determinado, recogiendo de cada tipo su modelo, capacidad y peso. Puede haber muchos aviones del mismo tipo.</li>
+<li>Control de los hangares (Código hangar, capacidad y localización) donde se estacionan los aviones. Cada avión tiene designado un hangar pero en un hangar pueden estacionar muchos aviones.</li>
+<li>Control de las aerolíneas (nombre, dirección, teléfono). Hay que guardar a qué compañía pertenece cada avión y en qué fecha se realizó la compra.</li>
+<li>Control de pilotos (número de licencia, nombre...). Cada piloto está calificado para pilotar determinados tipos de aviones. Es necesario anotar cuántas horas de vuelo tiene cada piloto en cada tipo de avión.</li>
+<li>Control de empleados de mantenimiento (código, nombre, salario y turno).</li>
+<li>Tipo de mantenimientos (código, descripción, horas requeridas). Por ejemplo: limpieza, revisión de motores, revisión de ruedas...</li>
+<li>
+<p>Es necesario guardar los mantenimientos que hace cada empleado de mantenimiento en cada avión y de qué tipo de mantenimiento se trata. Además, para cada uno de esos mantenimientos es necesario registrar la fecha obligatoriamente y unas observaciones opcionales.</p>
+</li>
+<li>
+<p><strong>Realiza el esquema ER para una base de datos en la que se desea guardar la información relativa a algunos aspectos de un campeonato mundial de fútbol, considerando los siguientes supuestos:</strong></p>
+</li>
+<li>
+<p>Un jugador (código, nombre) pertenece a un único equipo.</p>
+</li>
+<li>Un jugador puede actuar en distintos puestos, pero en un determinado partido sólo puede jugar en un puesto.</li>
+<li>De los colegiados queremos saber código y nombre</li>
+<li>
+<p>En cada partido queremos saber el código del partido, el equipo de casa, el de afuera, el resultado de goles, la fecha y 3 colegiados: un juez de línea para la banda derecha, otro para la izquierda y un árbitro (un colegiado puede realizar una función en un partido y otra distinta en otro partido).</p>
+</li>
+<li>
+<p><strong>Consellería quiere tener información de institutos (código, nombre), profesores (código, nombre) y tipos de enseñanza (código, nombre). Vamos a ver diferentes supuestos para reflejar que entre determinadas entidades no siempre se dan las mismas relaciones ni tienen las mismas conectividades, sino que dependerá de las necesidades de los usuarios de la BD y/o de los requerimientos del sistema. Identifica las relaciones en cada uno de los siguientes supuestos:</strong></p>
+</li>
+<li>
+<p>a) A la Consejería le interesa saber cosas como:</p>
+</li>
+<li>
+<p>¿Qué tipos de enseñanza se da en cada instituto</p>
+</li>
+<li>Qué profesores trabajan en cada instituto y en qué institutos trabaja un profesor.</li>
+<li>Qué tipos de enseñanza da cada profesor.</li>
+<li>La cantidad de horas semanales que un profesor realiza en un instituto.</li>
+<li>
+<p>La cantidad de horas semanales que un profesor imparte un tipo de enseñanza determinada.</p>
+</li>
+<li>
+<p>b) A la Consejería le interesa saber cosas como:</p>
+</li>
+<li>
+<p>Qué profesores dan un tipo de enseñanza determinada en un instituto determinado (por ejemplo, quiere saber qué profesores dan ciclos ASI en el instituto St. Vicent Ferrer de Algemesí)</p>
+</li>
+<li>Qué tipos de enseñanza da un profesor determinado en un instituto determinado (por ejemplo, quiere saber qué tipos de enseñanza da el profesor Abdó Garcia en el instituto St. Vicent Ferrer de Algemesí)</li>
+<li>En qué institutos da un profesor determinado un determinado tipo de enseñanza.</li>
+<li>
+<p>La cantidad de horas semanales que un profesor imparte un tipo de enseñanza determinada en un instituto determinado.</p>
+</li>
+<li>
+<p>c) Se cumplen las siguientes condiciones:</p>
+</li>
+<li>En un instituto, un mismo profesor no puede dar más de un tipo de enseñanza.</li>
+<li>En un instituto, un tipo de enseñanza puede ser impartido por distintos profesores.</li>
+<li>Un profesor no puede impartir un tipo de enseñanza en más de un instituto.</li>
+</ol>
+<h2 id="24-entidades-debiles">2.4. Entidades débiles <!-- punto 2.4 --></h2>
+<p>Ahora que ya sabemos qué es una relación, podemos hablar de definir qué es una entidad débil y una fuerte.</p>
+<ul>
+<li><strong>Entidad fuerte</strong>: Sus ocurrencias no necesitan estar relacionadas con ocurrencias de otras entidades.</li>
+<li><strong>Entidad débil</strong>: Sus ocurrencias necesitan estar relacionadas con ocurrencias de alguna entidad.</li>
+</ul>
+<p>Si una entidad es débil, se dice tener una restricción de existencia (E). Además puede tener restricción de identificación (ID). Vamos a ver estas restricciones y cómo se representan.</p>
+<p><strong>Restricción de existencia (E)</strong></p>
+<p><img alt="Ejemplo restricción existencia (E)" src="../img/T02_img35.png" /></p>
+<p>Definición:</p>
+<p>Una entidad tiene una restricción de existencia respecto a una relación si cada ocurrencia de esa entidad no puede existir sin estar relacionada con alguna otra ocurrencia de la otra entidad. Dicho de otra forma: si desaparece una ocurrencia de una entidad fuerte, todas las ocurrencias de la entidad débil que dependen en existencia de la misma desaparecen con ella</p>
+<p>Representación:</p>
+<p><em>Se representan con el doble recuadro y una </em><em>E</em><em> en el arco de la relación correspondiente.</em></p>
+<p><strong>Restricción de identificación (ID)</strong></p>
+<p><img alt="Restricción de Identificación" src="../img/T02_img36.png" /></p>
+<p>La entidad EJEMPLARES tiene una restricción de identificación (ID) respecto a la relación pertenecer ya que para identificar un ejemplar en concreto, además del número de copia, es necesario decir a qué libro pertenece (el código del libro de la entidad LIBROS).</p>
+<p>Es decir: realmente, la clave de los ejemplares está compuesta: <strong>código_libro + núm_copia</strong></p>
+<p>Definición:</p>
+<p>Una entidad tiene una restricción de identificación respecto a una relación cuando, además de la restricción de existencia, sus ocurrencias no pueden identificarse sólo mediante su clave, sino que también necesitan la clave de la entidad fuerte de la que depende.</p>
+<p>Representación :</p>
+<p>Se representan con el doble recuadro y un <strong>ID</strong> en el arco de la relación correspondiente.</p>
+<p><strong>Nota:</strong> si una entidad tiene una R.ID, también tendrá una RE pero no a la inversa.</p>
+<h2 id="otras-restricciones-de-integridad">Otras restricciones de integridad <!-- punt 2.5 --></h2>
+<p>Las restricciones de integridad (o simplemente "restricciones") son limitaciones a los datos, como por ejemplo, las que ya hemos visto:</p>
+<ul>
+<li>
+<p><strong>Restricciones en un atributo:</strong></p>
+</li>
+<li>
+<p>Si el atributo dni de personas es <strong>clave </strong>, significa que existe la restricción de que dos personas no puedan tener el mismo dni.</p>
+</li>
+<li>
+<p>Si el atributo estado_civil de una persona tiene un <strong>dominio </strong>(Soltera, Casada, Divorciada, Viuda) significa que existe la restricción de que los valores de ese atributo no pueden ser otros.</p>
+</li>
+<li>
+<p><strong>Restricciones en una relación:</strong></p>
+</li>
+<li>
+<p>Si la relación usar (entre alumnos y ordenadores) tiene la <strong>conectividad </strong>de M:1, ese "1" significa que existe la restricción de que un alumno/a no puede usar más de 1 ordenador.</p>
+</li>
+<li>
+<p><strong>Restricciones en una entidad:</strong></p>
+</li>
+<li>
+<p>Si la entidad profesores tiene una <strong>E </strong>sobre la relación pertenecer (hacia departamentos) significa que existe la restricción de que no podrá haber un profesor que no pertenezca a ningún departamento.</p>
+</li>
+<li>
+<p>Si la entidad ejemplares tiene un <strong>ID </strong>sobre la relación pertenecer (hacia libros) significa que existe la restricción de que el número de ejemplar no es suficiente para identificarlo entre todos los ejemplares (es necesario también el código del libro ).</p>
+</li>
+</ul>
+<p>Pues bien, en ocasiones en los requerimientos de una base de datos aparecen <strong>otras restricciones</strong> pero que no pueden ser captadas en el ER. En esos casos se especificarán en lenguaje natural, a continuación del esquema ER, en un apartado de "Otras restricciones". Por ejemplo:</p>
+<hr />
+<pre><code>**Otras restricciones:**
+  - Un alumno no puede matricularse de 2º si no tiene terminado el 1er curso.
+  - La suma de las horas que cada profesor imparte en cada asignatura no puede superar 20 horas.
+  - Un profesor no podrá ser jefe de departamento y tutor al mismo tiempo.
+</code></pre>
+<hr />
+<h3 id="ejercicios-sobre-entidades-debiles">Ejercicios sobre entidades débiles</h3>
+<ol>
+<li>
+<p>Supongamos las entidades ALUMNOS y ORDENADORES (con los atributos que creas convenientes) y la relación asignar, que asigna ordenadores a los alumnos. Un alumno sólo puede tener un ordenador pero un ordenador puede asignarse a diferentes alumnos. Haz un esquema ER para cada uno de los siguientes supuestos:</p>
+</li>
+<li>
+<p>a) No puede haber ningún alumno sin ordenador</p>
+</li>
+<li>b) No puede haber ningún ordenador sin asignarlo.</li>
+<li>
+<p>c) Todos los alumnos deben tener un ordenador asignado y cada ordenador debe estar asignado obligatoriamente a un alumno al menos.</p>
+</li>
+<li>
+<p>En el instituto quieren tener información de las aulas (ubicación y metros cuadrados), de los ordenadores (cpu, ramo y dd) y en qué aula está cada ordenador. En la puerta de cada aula existe un cartel donde indica el código del aula. Y los ordenadores tienen una etiqueta que les identifica. Piensa cómo harías el ER en cada uno de estos dos supuestos</p>
+</li>
+<li>
+<p>a) En la etiqueta de los ordenadores existe un código diferente a cada ordenador del instituto.</p>
+</li>
+<li>b) En la etiqueta de los ordenadores consta el código del aula y un código distinto en cada ordenador del aula.</li>
+</ol>
+<h3 id="ejercicios-er-completos">Ejercicios ER completos</h3>
+<p>Hasta aquí hemos visto ejercicios parciales de una organización. Ha llegado la hora de realizar ejercicios completos de los requerimientos para una base de datos de una organización. Realice los ejercicios del fichero anexo sobre "Ejercicios ER completos".</p>
+<p><a href="../../ejercicios/T02%20ER/T02_Ej_EER.html">Ejercicios completos</a></p>
+<h1 id="3-el-modelo-eer">3. El modelo EER</h1>
+<p>El modelo Entidad Relación Extenso es una ampliación del modelo ER para poder reflejar otros aspectos de la realidad. Concretamente, veremos los conceptos de:</p>
+<ul>
+<li>
+<p>Especializaciones (también llamadas generalizaciones)</p>
+</li>
+<li>
+<p>Agregaciones</p>
+</li>
+</ul>
+<h2 id="especializaciones-o-generalizaciones">Especializaciones o generalizaciones**</h2>
+<p>Veámoslo a partir de un ejemplo:</p>
+<p><img alt="Ejemplo especialización" src="../img/T02_img37.png" /></p>
+<p>La entidad PERSONAS es una generalización de las entidades ALUMNOS, PROFESORES y LIMPIADORES: cada alumno, profesor o limpiador ES también una persona. Las ocurrencias de las 3 entidades hijas están representadas también en la entidad madre.</p>
+<p><strong>¿Cuándo usar la especialización/generalización?</strong></p>
+<p>Es lo mismo una especialización y una generalización. Cambia el momento de crearla:</p>
+<ul>
+<li>
+<p>Especialización: cuando tenemos varias entidades y les creamos una entidad madre.</p>
+</li>
+<li>
+<p>Generalización: cuando tenemos una entidad y le creamos entidades hijas.</p>
+</li>
+</ul>
+<p><em>¿Cuándo especializaremos una entidad?</em></p>
+<p>Cuando tenemos una entidad en la que algunas ocurrencias tienen atributos diferentes y/o sólo algunas ocurrencias pueden estar implicadas en alguna relación. En ese caso haremos una especialización en la entidad: le pondremos hijas y "bajaremos" los atributos y/o relaciones diferentes en cada hija.</p>
+<p><em>¿Cuándo generalizaremos entidades?</em></p>
+<p>Cuando tenemos 2 o más entidades en las que las ocurrencias de una de ellas representan el mismo objeto que en otra y, además, esas entidades tienen algún atributo en común y/o están implicadas en una misma relación. En ese caso haremos una generalización de esas entidades: les pondremos una madre y "subiremos" atributos y/o relaciones en común.</p>
+<p><em>Definición formal de generalización</em></p>
+<pre><code>Una entidad **E** es una generalización de un grupo de entidades **E1, E2, ... En** sí cada instancia de cada una de esas entidades **es** también una instancia de **E**.
+</code></pre>
+<p><img alt="Especialización - Generalización" src="../img/T02_img38.png" /></p>
+<p>Todos los atributos de la entidad genérica serán heredados por las entidades específicas. Es decir, que las entidades E~1~, E~2~, ..., E~n~, además de sus respectivos atributos (x, y, z), también tienen los atributos de la entidad E (a~0~ y a~1~). Y, por tanto, la clave de E~1~, de E~2~, ...y de En será a~0~ (sólo hay que indicar la clave de E).</p>
+<p>Los símbolos T1 y T2 del polígono representan los tipos de especialización. Puede ser de diferentes <strong>tipos</strong>:</p>
+<ul>
+<li>
+<p><strong>Total o Parcial</strong>:</p>
+</li>
+<li>
+<p>Total: si <strong>todas</strong> las ocurrencias de la entidad madre están en alguna hija <em>.</em></p>
+</li>
+<li>
+<p>Parcial: si <strong>sólo algunas</strong> ocurrencias de la entidad madre están en las hijas.</p>
+</li>
+<li>
+<p><strong>Disjunta o Superpuesta</strong>:</p>
+</li>
+<li>
+<p>Disjunta: si las ocurrencias de una hija <strong>no</strong> están en ninguna otra hija</p>
+</li>
+<li>
+<p>Superpuesta: si las ocurrencias de una hija <strong>sí</strong> están en otra hija.</p>
+</li>
+</ul>
+<p>Vamos a ver ejemplos de todos estos tipos de especializaciones:</p>
+<ul>
+<li>a) Total y Disjunta</li>
+</ul>
+<p><img alt="Total y disjunta" src="../img/T02_img39.png" /></p>
+<ul>
+<li><strong>Total</strong> porque todo autor o está vivo o está muerto.</li>
+</ul>
+<p>Poniendo a T estamos diciendo que toda ocurrencia que esté en la entidad padre seguro que también estará en alguna entidad hija. Es decir: cada ocurrencia de AUTORES también estará en alguna de las entidades hijas: en la entidad VIVOS o en la entidad MUERTOS</p>
+<ul>
+<li><strong>Disjunta</strong> porque un autor vivo no puede estar muerto y viceversa.</li>
+</ul>
+<p>Poniendo la D estamos diciendo que toda ocurrencia que esté en una entidad hija no estará en ninguna otra entidad hija. Es decir: las ocurrencias de VIVOS no están en MUERTOS (y las de MUERTOS no están en VIVOS).</p>
+<ul>
+<li>b) Parcial y Disjunta</li>
+</ul>
+<p><img alt="Parcial y disjunta" src="../img/t02_img40.png" /></p>
+<ul>
+<li>
+<p><strong>Parcial</strong> porque hay personas que no están solteras ni casadas (faltan las personas separadas y viudas). Es decir: puede darse el caso de que alguna ocurrencia de PERSONAS no esté ni en SOLTERAS ni en CASADES.</p>
+</li>
+<li>
+<p><strong>Disjunta</strong> porque una persona soltera no puede estar casada y viceversa.</p>
+</li>
+<li>
+<p>c) Parcial y Superpuesta</p>
+</li>
+</ul>
+<p><img alt="Parcial y superpuesta" src="../img/T02_img41.png" /></p>
+<ul>
+<li>
+<p><strong>Parcial</strong> porque algún alumno puede ser de bachillerato y no repetidor. Por tanto, las ocurrencias de ALUMNOS que cumplan esto no estarán en la entidad DE_CICLES ni en la de REPETIDORES</p>
+</li>
+<li>
+<p><strong>Superpuesta</strong> porque algún alumno de ciclo puede ser también un repetidor.</p>
+</li>
+<li>
+<p>d) Total y Superpuesta</p>
+</li>
+</ul>
+<p><img alt="Total u superpuesta" src="../img/T02_img42.png" /></p>
+<ul>
+<li>
+<p><strong>Total</strong>, porque todo autor o está vivo o está muerto. Por tanto, seguro que toda ocurrencia de AUTORES estará en alguna de las hijas (al menos en VIVOS o en MUERTOS).</p>
+</li>
+<li>
+<p><strong>Superpuesta</strong> porque algún autor vivo (o muerte) puede ser europeo.</p>
+</li>
+</ul>
+<p><strong>Notas:</strong>            </p>
+<ul>
+<li>Una entidad hija puede ser madre de otra especialización (jerarquía hijas, nietas, ...)</li>
+<li>Una entidad puede ser madre de distintos "grupos de hermanas". Es decir: una entidad puede ser genérica de diversas especializaciones (3 hijas por un lado, 2 por otro...)</li>
+<li>Puede haber relaciones entre las entidades hijas o entre una madre y una hija, etc.</li>
+</ul>
+<p><strong>Esto </strong><em>NO</em><strong> es una especialización:</strong></p>
+<p><img alt="Ejemplo erróneo de especialización" src="../img/T02_img43.png" />{width=50%}</p>
+<p>¿Por qué no?</p>
+<p>Porque, recordemos, en una especialización, cada instancia de una entidad hija <strong>ES</strong> también una instancia de la entidad madre.</p>
+<p>En los ejemplos anteriores tenemos que:</p>
+<ul>
+<li>AUTORES es una generalización de VIVOS y MUERTOS porque un autor vive <strong>ES</strong> un autor. Y un autor muerto <strong>ES</strong> un autor.</li>
+<li>PERSONAS es una generalización de SOLTERAS y CASADAS porque una persona soltera <strong>ES</strong> una persona. Y una persona casada <strong>ES</strong> una persona.</li>
+<li>ALUMNOS es una especialización de DE_CICLOS y de REPETIDORES porque un alumno de ciclos <strong>ES</strong> un alumno. Y un repetidor <strong>ES</strong> un alumno.</li>
+</ul>
+<p>Pero, en cambio, un hombre <strong>NO ES</strong> un matrimonio. Y una mujer <strong>NO ES</strong> un matrimonio. Sino que un matrimonio <strong>ESTÁ FORMADO POR</strong> un hombre y una mujer. Por eso la entidad MATRIMONIOS no puede ser una generalización de HOMBRES y MUJERES.</p>
+<p>En caso de querer expresar que una ocurrencia de una entidad ESTÁ FORMADA POR ocurrencias de otras entidades no usaremos la especialización sino la agregación, que lo veremos en el punto siguiente.</p>
+<h2 id="ejercicios-generalizaciones">Ejercicios generalizaciones</h2>
+<ol>
+<li>
+<p>Invéntate varios escenarios para buscar ejemplos de generalizaciones de todos los tipos. Piensa que, para que tenga sentido una generalización, es necesario que algunas entidades específicas tengan algún atributo diferente y/o estén implicadas en alguna relación y otras no.</p>
+</li>
+<li>
+<p>a) Total y Disjunta</p>
+</li>
+<li>b) Total y Superpuesta</li>
+<li>c) Parcial y Disjunta</li>
+<li>
+<p>d) Parcial y Superpuesta</p>
+</li>
+<li>
+<p>Realiza el esquema ER para el siguiente análisis de requerimientos:</p>
+</li>
+</ol>
+<p>En un instituto queremos saber el dni, nombre y fecha de nacimiento de todos los alumnos. De cada profesor se debe guardar su dni, nombre, si es diplomado o licenciado, y el nombre de la carrera que han hecho. Del personal de limpieza se debe guardar dni, nombre y turno (mañana o tarde). De las aulas se debe saber el código del aula, cuántos ordenadores hay en cada una, si tiene proyector o no y qué profesores dan clase en cada una, teniendo en cuenta que un profesor puede impartir clase en distintas aulas.</p>
+<ol>
+<li>Amplía el anterior ER para añadir los siguientes requerimientos:</li>
+</ol>
+<p>Se quiere guardar el departamento al que pertenece cada profesor, del que queremos saber el código, el nombre, quién es el jefe del departamento y quién es el secretario (ambos son profesores que pertenecen al departamento. Un profesor no puede tener dos cargos (secretario y jefe).</p>
+<h2 id="agregaciones">Agregaciones <!-- punto 3.2 --></h2>
+<p>La agregación es cuando una relación entre entidades pasa a considerarse como una nueva entidad más compleja, con existencia independiente. Por ejemplo, COCHES sería una agregación de las entidades chasis y motores relacionadas por la relación <em>incorporar</em>.</p>
+<p><img alt="Agragación" src="../img/T02_img44.png" /></p>
+<p><strong>Otras formas de decirlo:</strong></p>
+<p>Si unas determinadas entidades relacionadas (E~1~, E~2~, ... E~n~)FORMAN PARTE de una entidad que las engloba (E), diremos que esa nueva entidad es una <strong>agregación</strong> de aquéllas.</p>
+<p>Diremos que una entidad E es una agregación de entidades si una ocurrencia de E está formada por una ocurrencia de cada una de las entidades que agrega. En el ejemplo anterior, una ocurrencia de MOTORS (el motor de código "ABC") incorporado a una ocurrencia de <em>CHASIS</em> (el chasis de código <em>"555"</em>) forman una ocurrencia de la entidad COCHES. La relación "ha conducido" relaciona una ocurrencia de PILOTES con una pareja de ocurrencias de CHASIS y MOTORES que ya está en la relación "incorporar".</p>
+<p><strong>¿Cuándo realizaremos una agregación?</strong></p>
+<p>Normalmente, crearemos una agregación cuando necesitamos una relación de una <strong>entidad</strong> con <strong>otra relación</strong>. Es decir, en el caso anterior, necesitábamos una relación entre la entidad <em>PILOTOS</em> y la entidad <em>COCHES</em>. Como la entidad COCHES no existía, la hemos formado a partir de la agregación entre <em>chasis</em> y <em>motores</em>.</p>
+<p><strong>Diferencia entre generalización y agregación:</strong></p>
+<p>La generalización que hemos visto anteriormente era una relación de jerarquía , es decir, del tipo "A~1~ <strong>es</strong> A". Por ejemplo: "un <em>soltero</em> <strong>es</strong> una <em>persona</em>". En cambio, la agregación es una relación de participación ,es decir, es del tipo "A~1~ y A~2~ <strong>forman parte</strong> de A". Por ejemplo: "un motor y un chasis <strong>forman parte</strong> de un coche ".</p>
+<h2 id="ejercicios-agregaciones">Ejercicios Agregaciones</h2>
+<p>Realiza el esquema ER para cada uno de los siguientes análisis de requerimientos:</p>
+<ol>
+<li>
+<p>En una fábrica de Almussafes se fabrican piezas para la Ford. De cada máquina queremos guardar el código y el nombre. De los operarios: código y nombre. Y de cada tipo de prenda fabricada, el código y nombre. Queremos saber el total de horas acumuladas que cada operario ha trabajado en cada máquina, así como qué tipos de piezas y en qué cantidad ha fabricado cada operario en cada máquina.</p>
+</li>
+<li>
+<p>Una agencia matrimonial quiere guardar de cada persona: dni, nombre, sexo (m/f), y un histórico de la gente a la que ha emparejado la agencia y en qué fecha. La empresa dispone de unos lugares de encuentro de las parejas (bar tal, biblioteca, jardín...), de los que quiere guardar un código, dirección, qué parejas se han citado allí y si les ha ido bien o no .</p>
+</li>
+<li>
+<p>Un estudio de rodaje quiere guardar información de los actores (dny, nombre) y de las escenas de una película (código, lugar, fecha, hora, descripción). Queremos guardar qué actores actúan en qué escenas y si hablan o no en cada escena en la que actúan. El estudio también dispone de un fondo de armario para el vestuario, en el que tiene etiquetada cada prenda con un código identificativo. De cada prenda queremos saber el tipo (pantalón, camisa...), color, talla y época. Queremos saber qué prendas vestirá cada actor en cada escena.</p>
+</li>
+</ol>
+<h1 id="4-guia-de-desarrollo-del-esquema-er">4. Guía de desarrollo del esquema ER <!-- Punto 4 --></h1>
+<p>En el punto anterior hemos visto los distintos elementos del esquema ER. Ahora veremos cómo confeccionar este esquema. Es decir, veremos una guía para desarrollar el esquema ER a partir de los requerimientos (que hemos obtenido entrevistándonos con el futuro usuario de la BD, etc.).</p>
+<p>Los pasos a seguir para confeccionar el esquema ER son:</p>
+<hr />
+<ol>
+<li>
+<p>Construir el esquema E-R propiamente dicho.</p>
+</li>
+<li>
+<p>1.1. Identificar entidades y atributos</p>
+</li>
+<li>1.2. Identificar las especialitzaciones</li>
+<li>1.3. Identificar las relaciones</li>
+<li>
+<p>1.4. Identificar las agregaciones</p>
+</li>
+<li>
+<p>Anotar "Otras Restricciones de Integridad"</p>
+</li>
+<li>Anotar "Suposiciones"</li>
+</ol>
+<hr />
+<p>Cabe decir que esta guía es un proceso:</p>
+<ul>
+<li>
+<p><strong>Iterativo</strong>: una vez hechos esos puntos, habrá que volver a empezar para ver si nos salen nuevas entidades, etc.</p>
+</li>
+<li>
+<p><strong>Creativo</strong>: no es un proceso automático, sino que depende mucho de la creatividad, la imaginación y la experiencia del diseñador.</p>
+</li>
+</ul>
+<p>Pero no es necesario documentar todas y cada una de las fases. Por ejemplo, resulta una pérdida de tiempo realizar una enumeración de las entidades, después otra de las especializaciones, otra de las relaciones... Lo que haremos será ir dibujando todos los elementos en un único esquema.</p>
+<p><strong>¿Por qué buscar especializaciones antes que las relaciones?</strong></p>
+<p>En la guía anterior, vemos que debemos buscar las especializaciones antes de detectar las relaciones. Esto se debe a que una relación quizás relacione una entidad específica y no a toda la entidad genérica.</p>
+<p>Por ejemplo, en una agencia de viajes, si buscamos primero las relaciones antes de las especializaciones, podríamos tener:</p>
+<p><img alt="Relación muchos a muchos" src="../img/T02_img45.png" /></p>
+<p>Pero si buscamos ahora las especializaciones, podría darse el caso de que esa relación no sea para todos los clientes sino sólo para quienes hacen viaje de negocios:</p>
+<p><img alt="Especialización de una entidad" src="../img/T02_img46.png" /></p>
+<p><strong>¿Por qué buscar relaciones antes que las agregaciones?</strong></p>
+<p>Una agregación NO está compuesta por un conjunto de entidades. <strong>Una agregación está formada por una relación</strong> (y por las entidades participantes en la relación). Por tanto, habrá que encontrar primero las relaciones. Si encontramos que es necesario relacionar, por ejemplo, una entidad pilotos con una pareja chasis-motor, como no podemos relacionar 1 entidad con 1 relación, deberemos crear una <em>"entidadota"</em> (agregación de la relación "incorporar" y sus entidades):</p>
+<p><img alt="Agregación" src="../img/T02_img47.png" /></p>
+<p><strong>Anotar otras restricciones de integridad:</strong></p>
+<p>Ya hemos dicho anteriormente que el propio esquema ER puede captar directamente algunas restricciones de integridad (como las restricciones de existencia, las de identificación, las claves, dominios, conectividad a 1...) pero que pueden existir otras restricciones en la propia documentación del análisis, como por ejemplo: "La edad media de todas las ocurrencias de la entidad PERSONES debe superar 20 años". Esto lo expresaremos en lenguaje natural a continuación del esquema ER, en un apartado llamado "Otras restricciones".</p>
+<p><strong>Anotar las suposiciones:</strong></p>
+<p>Así como en el apartado anterior pondremos lo que decía el análisis de requerimientos (enunciado) que no hemos podido captar en el ER, en este apartado pondremos lo contrario: aquellos aspectos que hemos reflejado en el ER de los que no decía nada el análisis de requerimientos y que, por tanto, hemos tenido que suponer. Por ejemplo, si el enunciado dice: "Habrá que guardar los coches que tiene cada persona", haremos una relación binaria entre COCHES y PERSONAS llamada "ser_propietario", pero para pintar la conectividad no sabremos si un coche puede tener muchos propietarios o sólo uno. En un caso real, el diseñador de la BD preguntaría a quién le ha mandado el proyecto si es uno o muchos, pero para la resolución de los ejercicios, lo pondremos en el apartado de suposiciones.</p>
+<hr />
+<pre><code>
+Esquema ER:
+
+            (aquí estaría el esquema ER)
+
+Otras restricciones:
+
+    - La edad media de todas las personas no debe superar los 20 años.
+
+    - ...
+
+Suposiciones:
+
+    - Un coche sólo podrá tener un propietario
+
+    - ...
+
+</code></pre>
+<hr />
+<h1 id="5-opciones-de-diseno">5. Opciones de diseño <!-- Punto 5 --></h1>
+<p>A la hora de realizar el esquema ER debemos tener en cuenta que, según el caso, será más conveniente representar la realidad con unos elementos del ER que en otros. Veamos algunas de estas consideraciones:</p>
+<ul>
+<li>¿Atributo, entidad o relación?</li>
+</ul>
+<p>Por ejemplo, ¿cómo representamos las ciudades de cada país?</p>
+<ul>
+<li>Si queremos guardar datos de cada ciudad: código, nombre, país...:</li>
+</ul>
+<p><img alt="país como atributo" src="../img/T02_img48.png" /></p>
+<ul>
+<li>Si queremos guardar datos de cada país: código, nombre, sus ciudades...:</li>
+</ul>
+<p><img alt="ciudad como atributo" src="../img/T02_img49.png" /></p>
+<ul>
+<li>Si queremos guardar información de cada país y de cada ciudad y, además, saber cuáles son las ciudades de cada país (o, dicho de otro modo, cuál es el país de cada ciudad):</li>
+</ul>
+<p><img alt="relación entre ciudades y países" src="../img/T02_img50.png" /></p>
+<ul>
+<li>
+<p>Cómo relacionamos 3 entidades?</p>
+</li>
+<li>
+<p>Relación ternaria</p>
+</li>
+</ul>
+<p><img alt="Relación ternaria" src="../img/T02_img51.png" /></p>
+<p>Optaremos por esta solución, si por ejemplo, queremos guardar las horas que imparte un profesor de una signatura a un grupo.</p>
+<ul>
+<li>Relaciones binarias</li>
+</ul>
+<p><img alt="Relaciones binarias" src="../img/T02_img52.png" /></p>
+<p>Optaremos por esta solución si, por ejemplo:
+    - Queremos guardar las horas que imparte un profesor a un grupo, indpendientemente de la asignatura.
+    - Queremos saber qué asignaturas imparte un profesor, independientemente de a qué grupo </p>
+<ul>
+<li>Agregaciones</li>
+</ul>
+<p><img alt="Agregación" src="../img/T02_img53.png" /></p>
+<p>Optaremos por esta solución si, por ejemplo:</p>
+<ul>
+<li>
+<p>hay algún atributo que depende solo de 2 entidades (grupos y asignaturas) y, por tanto hay que hacer una relación entre les 2.</p>
+</li>
+<li>
+<p>Además, queremos saber información que involucra a las 3 entidades a la vez.</p>
+</li>
+<li>
+<p>¿Relación con muchos atributos ,u otra entidad?</p>
+</li>
+</ul>
+<p>Supongamos que queremos saber qué artículos se piden a cada proveedor. Y, además, la fecha en que se piden, la dirección de envío y la cantidad pedida de ese artículo:</p>
+<p><img alt="Relación o entidad a" src="../img/T02_img54.png" /></p>
+<p>Pero nos damos cuenta de que dada una ocurrencia de la relación (por ejemplo, dado el artículo <em>tomates </em>pedido a la <em>Cooperativa del Mareny </em>), podemos tener muchos pedidos. Es decir: que esa pareja <em>tomates-Cooperativa del Mareny </em>tiene asociados muchos conjuntos de fechas, direcciones de envío y cantidades. Por tanto, realmente no sería el esquema anterior sino éste:</p>
+<p><img alt="Relación o entidad b" src="../img/T02_img55.png" /></p>
+<p>Por experiencia sabemos que cada pedido debe tener un código único. Como las relaciones no tienen clave, ¿cómo indicamos que ese código no se pueda repetir? La solución es hacer que los pedidos sean una entidad y, por tanto, replanteemos las relaciones y atributos correspondientes:</p>
+<p><img alt="Relación o entidad c" src="../img/T02_img56.png" /></p>
+<ul>
+<li>¿Generalización o atributo discriminador?</li>
+</ul>
+<p>Supongamos que queremos representar los datos de hombres y mujeres.</p>
+<p><img alt="" src="../img/T02_img57.png" /></p>
+<ul>
+<li>
+<p>a) Atribut discriminador</p>
+</li>
+<li>
+<p>Optaremos per esta opción cuando sólo queremos saber el sexo de las personas.</p>
+</li>
+</ul>
+<p><img alt="" src="../img/T02_img58.png" /></p>
+<ul>
+<li>
+<p>b) Diverses entitats</p>
+</li>
+<li>
+<p>Optaremos per esta opción cuando hombres y/o mujeres tienen atributos y/o relaciones diferentes.</p>
+</li>
+</ul>
+<p><img alt="" src="../img/T02_img59.png" />
+- c) Generalització</p>
+<ul>
+<li>
+<p>Optaremos por esta opción cuando se cumplan estas 2 condiciones:</p>
+<ul>
+<li>hombres y mujeres tienen atributos y/o relaciones diferentes.</li>
+<li>hombres y mujeres tienen atributos y/o relaciones en común.</li>
+</ul>
+</li>
+<li>
+<p>Eliminar relaciones redundantes</p>
+</li>
+</ul>
+<p>Supongamos que nos ha salido el siguiente ER:</p>
+<p><img alt="Relaciones redundantes" src="../img/T02_img60.png" /></p>
+<p>En este caso, si una persona trabaja en un departamento, y un departamento está en una empresa, se obvio que esa persona " <em>pertenece</em>" a esa empresa. Es decir:</p>
+<ul>
+<li>
+<p>A partir de la relación " <em>trabaja</em>", sabremos en qué departamento trabaja una persona.</p>
+</li>
+<li>
+<p>A partir de la relación " <em>estar</em>", sabremos en qué empresa está ese departamento.</p>
+</li>
+<li>
+<p>Por tanto, sabremos a qué empresa pertenece aquella persona <strong>sin hacer falta la relación "<em>pertenece</em>"</strong>. Por tanto, <strong>habrá que quitar esa relación del esquema ER para ser redundante</strong>:</p>
+</li>
+</ul>
+<p><img alt="Sin redundancia" src="../img/T02_img61.png" /></p>
+<p>Pero no siempre que existe un "circuito de relaciones" hay alguna redundante, sino que depende del significado de las relaciones. Ejemplos:</p>
+<ul>
+<li>
+<p>Si esa relación no se dijera " <em>pertenece </em>" sino " <em>empresa donde querría trabajar </em>", la información de esa relación no la podríamos obtener a partir de las relaciones " <em>trabaja </em>" y " <em>estar </em>", de forma que no sería una relación redundante.</p>
+</li>
+<li>
+<p>¿De las 3 relaciones anteriores podríamos haber quitado la relación " <em>trabaja </em>" en lugar de " <em>pertenece </em>"? No, puesto que si un empleado pertenece a una empresa y en esa empresa están muchos departamentos, a partir de esa información no podemos deducir en qué departamento trabaja cada empleado.</p>
+</li>
+</ul>
+<h2 id="ejercicios-completos-eer">Ejercicios completos EER</h2>
+<p>Ahora que ya hemos visto todos los elementos de un esquema ER y de su ampliación EER, así como los pasos para resolverlos y las posibles opciones de diseño, ya puede realizar los ejercicios del fichero anexo sobre "Ejercicios EER completos" .</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>
