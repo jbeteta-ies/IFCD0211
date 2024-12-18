@@ -6,9 +6,9 @@ nav:
   - Inicio: index.md
   - Normativa:
       - Normativa General: normativa/IFCD0211.md
-      - MF0966_3: normativa/MF_0966_3.md
-      - MF0967_3: normativa/MF_0967_3.md
-      - MF0968_3: normativa/MF_0968_3.md
+      - MF0966_3: normativa/MF0966_3.md
+      - MF0967_3: normativa/MF0967_3.md
+      - MF0968_3: normativa/MF0968_3.md
       - MP0459: normativa/MP0459.md
       - Unidades de Competencia: normativa/ucs.md
   - Contenidos:
