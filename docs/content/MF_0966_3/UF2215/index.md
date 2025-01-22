@@ -1,0 +1,157 @@
+---
+# Author: Javier Beteta
+# Date: 2025-01-20
+# Keywords: MF_0966_3, UF2215, Programación, JavaScript, Bases de Datos, CMS
+# Description: Unidad Formativa 2215 - Herramientas de sistemas gestores de bases de datos. Pasarelas y medios de conexión
+---
+
+### Unidad Formativa 3: Herramientas de sistemas gestores de bases de datos. Pasarelas y medios de conexión
+
+| **Campo**                | **Detalle**                                                                 |
+|---------------------------|-----------------------------------------------------------------------------|
+| **Código**               | UF2215                                                                      |
+| **Nombre**               | Herramientas de sistemas gestores de bases de datos. Pasarelas y medios de conexión |
+| **Duración**             | 70 horas                                                                   |
+| **Referente de Competencia** | RP3: Documentar procesos y utilizar herramientas de conexión              |
+
+
+En este módulo vamos a realizar las siguientes modificaciones aprovechando los contenidos del módulo `0485 - Programación`. Esta Unidad Formativa nos debe dar las competencias necesarias para poder realizar las tareas de consulta y manipulación de información contenida en gestores de datos. Ya que en el módulo siguiente se nos pide desarrollar una CMS, es necesario que tengamos conocimientos de programación para poder realizar las tareas de consulta y manipulación de información contenida en gestores de datos.
+
+
+| **Campo**                | **Detalle**                                                                 |
+|---------------------------|-----------------------------------------------------------------------------|
+| **Código**               | 0485                                                                      |
+| **Nombre**               | Progrmación (256h)|
+| **Duración**             | 70 horas                                                                   |
+
+
+#### Contenidos Reducidos (100 horas)
+
+# **Curso: Introducción a la Programación con JavaScript (100 horas)**
+
+## **Objetivo General**
+Aprender los fundamentos de la programación utilizando JavaScript, con un enfoque inicial en lógica y estructuras del lenguaje, para luego integrar con HTML en el desarrollo de páginas web.
+
+---
+
+## **Contenidos Reducidos**
+
+### **Unidad 1: Configuración del Entorno y Fundamentos de JavaScript (20 horas)**
+
+- **1.1** Configuración del entorno de desarrollo (5h)
+
+       - Instalación de Node.js y configuración básica.
+       - Uso de VSCode como editor principal.
+       - Introducción al uso de la consola y ejecución de programas con Node.js.
+
+- **1.2** Variables, tipos de datos y operadores (10h)
+       
+       - Declaración de variables (`let`, `const` y `var`).
+       - Tipos de datos primitivos: cadenas, números, booleanos, etc.
+       - Operadores básicos: aritméticos, lógicos, y relacionales.
+
+- **1.3** Estructuras básicas de control (5h)
+       
+       - Condicionales (`if`, `else`, `else if`).
+       - Bucles (`for`, `while`, `do while`).
+
+**Objetivo:** Familiarizar a los alumnos con el entorno de desarrollo, la sintaxis básica de JavaScript y las estructuras fundamentales de control.
+
+---
+
+### **Unidad 2: Funciones y Manejo de Errores (20 horas)**
+- **2.1** Funciones en JavaScript (12h)
+       - Declaración y uso de funciones.
+       - Parámetros y valores de retorno.
+       - Funciones anónimas y flecha (`arrow functions`).
+       - Alcance de las variables: local y global.
+- **2.2** Manejo de errores (3h)
+       - Uso de bloques `try`, `catch` y `finally`.
+       - Lanzar errores con `throw`.
+- **2.3** Métodos básicos de entrada/salida (5h)
+       - Uso de `prompt`, `alert`, y `console.log`.
+       - Interacción básica con el usuario.
+
+**Objetivo:** Modularizar código utilizando funciones, manejar errores y trabajar con entradas/salidas básicas.
+
+---
+
+### **Unidad 3: Arrays, Objetos y Clases (30 horas)**
+- **3.1** Arrays y su manipulación (8h)
+       - Creación y uso de arrays.
+       - Métodos comunes: `push`, `pop`, `shift`, `unshift`, `slice`, `splice`, etc.
+       - Iteración de arrays: `for`, `forEach`, `map`, `filter`, `reduce`.
+- **3.2** Objetos y su uso (7h)
+       - Concepto de objeto y sus propiedades.
+       - Creación y manipulación de objetos.
+       - Métodos en objetos.
+- **3.3** Clases en JavaScript (15h)
+       - Declaración de clases y uso.
+       - Constructores.
+       - Métodos y atributos.
+       - Herencia básica.
+
+**Objetivo:** Trabajar con estructuras más complejas como arrays, objetos y clases para modelar datos y estructuras reales.
+
+---
+
+### **Unidad 4: Integración de JavaScript con HTML y el DOM (20 horas)**
+
+- **4.1** Introducción a HTML (5h)
+       - Conceptos básicos de HTML.
+       - Uso de etiquetas comunes: `<div>`, `<span>`, `<form>`, `<input>`.
+       - Crear un archivo HTML básico.
+- **4.2** Vinculación de JavaScript con HTML (5h)
+       - Uso de etiquetas `<script>` para enlazar archivos JavaScript.
+       - Ejecución de código JS en eventos básicos de HTML (`onClick`, `onSubmit`).
+- **4.3** Introducción al DOM y manejo básico (10h)
+       - ¿Qué es el DOM?
+       - Seleccionar elementos: `getElementById`, `querySelector`.
+       - Modificación básica del contenido: `innerHTML`, `textContent`.
+       - Manejo de eventos: `addEventListener`.
+       - Ejercicio práctico básico: Crear una lista interactiva donde los usuarios puedan añadir y eliminar elementos.
+
+**Objetivo:** Introducir la integración de JavaScript con HTML y la manipulación básica del DOM para trabajar en páginas web dinámicas.
+
+---
+
+### **Unidad 5: Proyecto Final (10 horas)**
+- **5.1** Desarrollo de un proyecto básico
+       - Crear un **gestor de tareas simple**:
+             - Permitir al usuario añadir, editar y eliminar tareas.
+             - Almacenar datos temporalmente en arrays u objetos.
+             - Mostrar la lista de tareas en una página web utilizando HTML y el DOM.
+             - Uso de eventos para manejar interacciones del usuario.
+             - Uso del DOM para actualizar la interfaz dinámica.
+
+**Objetivo:** Integrar todos los conocimientos adquiridos en un proyecto práctico.
+
+---
+
+## **Recursos y Herramientas**
+
+### **Editor y Ejecución**
+- **Editor de código:** VSCode (con extensiones como Prettier para formato).
+- **Ejecución:** Uso de Node.js para la mayor parte del curso. En la unidad del DOM, se usará un navegador para vincular JavaScript con HTML.
+
+### **Materiales de apoyo**
+1. **MDN Web Docs (JavaScript):**
+   - [Guía de JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript).
+2. **FreeCodeCamp:**
+   - [Curso de JavaScript Básico](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/).
+3. **Ejercicios prácticos interactivos:**
+   - [Exercism.io - JavaScript](https://exercism.io/tracks/javascript).
+   - [Codewars](https://www.codewars.com/).
+
+---
+
+### **Distribución del Tiempo**
+
+| Unidad Didáctica                            | Horas |
+|---------------------------------------------|-------|
+| **Unidad 1:** Fundamentos de JavaScript     | 20    |
+| **Unidad 2:** Funciones y Manejo de Errores | 20    |
+| **Unidad 3:** Arrays, Objetos y Clases      | 30    |
+| **Unidad 4:** Integración de JS con HTML y DOM | 20    |
+| **Unidad 5:** Proyecto Final                | 10    |
+| **Total**                                   | **100** |

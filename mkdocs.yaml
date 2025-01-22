@@ -2,15 +2,19 @@ site_name: Certificado de Profesionalidad IFCD0211
 site_url: https://jbeteta-ies.github.io/IFCD0211/
 theme:
   name: material
+  features:
+    - admonition
+markdown_extensions:
+  - admonition
 nav:
   - Inicio: index.md
   - Normativa:
-      - Normativa General: normativa/IFCD0211.md
-      - MF0966_3: normativa/MF0966_3.md
-      - MF0967_3: normativa/MF0967_3.md
-      - MF0968_3: normativa/MF0968_3.md
-      - MP0459: normativa/MP0459.md
-      - Unidades de Competencia: normativa/ucs.md
+      - Normativa General: normativa19/IFCD0211.md
+      - MF0966_3: normativa19/MF0966_3.md
+      - MF0967_3: normativa19/MF0967_3.md
+      - MF0968_3: normativa19/MF0968_3.md
+      - MP0459: normativa19/MP0459.md
+      - Unidades de Competencia: normativa19/ucs.md
   - Contenidos:
       - MF0966_3:
           - UF2213: content/MF_0966_3/UF2213.md
