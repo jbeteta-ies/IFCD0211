@@ -2222,12 +2222,14 @@ npm<span class="w"> </span>-v
 <p>La consola es una herramienta para interactuar con el sistema operativo y ejecutar comandos.</p>
 <h4 id="comandos-basicos"><strong>Comandos básicos</strong></h4>
 <ol>
-<li>Navegar entre carpetas:
-   <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>nombre-de-la-carpeta
-</code></pre></div></li>
-<li>Listar archivos:</li>
-<li>En Windows: <code>dir</code></li>
-<li>En macOS/Linux: <code>ls</code></li>
+<li>Navegar entre carpetas:</li>
+</ol>
+<p><div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>nombre-de-la-carpeta
+</code></pre></div>
+2. Listar archivos:
+     - En Windows: <code>dir</code>
+     - En macOS/Linux: <code>ls</code></p>
+<ol>
 <li>Crear y eliminar archivos:
    <div class="highlight"><pre><span></span><code>touch<span class="w"> </span>archivo.js
 rm<span class="w"> </span>archivo.js
@@ -2239,9 +2241,10 @@ rm<span class="w"> </span>archivo.js
    <div class="highlight"><pre><span></span><code>node
 </code></pre></div></li>
 <li>Escribe comandos simples:
-   <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hola desde el REPL&quot;</span><span class="p">);</span>
+   <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo en el REPL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hola desde el REPL&quot;</span><span class="p">);</span>
 <span class="mf">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
-</code></pre></div></li>
+</code></pre></div></td></tr></table></div></li>
 </ol>
 <hr />
 <h3 id="actividad-practica"><strong>Actividad Práctica</strong></h3>
@@ -2249,11 +2252,19 @@ rm<span class="w"> </span>archivo.js
 <li>Configura el entorno completo instalando Node.js y VSCode.</li>
 <li>Crea una carpeta llamada <code>proyecto_inicial</code>.</li>
 <li>Dentro de la carpeta, crea un archivo <code>index.js</code> con este código:
-   <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Estudiante&quot;</span><span class="p">;</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`¡Bienvenido, </span><span class="si">${</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">, a la programación con JavaScript!`</span><span class="p">);</span>
-</code></pre></div></li>
+    !!! example "Código de ejemplo"<div class="codehilite"><pre><span></span><code><span class="err">```</span><span class="n">javascript</span><span class="w"> </span><span class="n">linenums</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="w"> </span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Programa de bienvenida&quot;</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Estudiante&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="err">`¡</span><span class="n">Bienvenido</span><span class="p">,</span><span class="w"> </span><span class="o">$</span><span class="p">{</span><span class="n">nombre</span><span class="p">},</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">programación</span><span class="w"> </span><span class="n">con</span><span class="w"> </span><span class="n">JavaScript</span><span class="o">!</span><span class="err">`</span><span class="p">);</span>
+<span class="err">```</span>
+</code></pre></div>
+
+<ol>
 <li>Ejecuta el programa en la consola.</li>
 </ol>
+</li>
+</ol>
+<p><code>bash linenums="1" title="Ejecutar programa index.js"
+    node index.js</code></p>
 <h4 id="reto-extra"><strong>Reto Extra</strong></h4>
 <ol>
 <li>Investiga cómo instalar un paquete de npm.</li>
