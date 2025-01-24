@@ -1265,10 +1265,12 @@
 <p>En este ejemplo, mostramos cómo funciona un bucle <code>while</code> para sumar números del 1 al 5. Puedes alternar entre el ordinograma y el código usando las pestañas.</p>
 <!-- !!! example "tabs" -->
 
+<details class="example">
+<summary>Código de ejemplo</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Ordinograma</label><label for="__tabbed_1_2">Código Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">Suma de números del 1 al 5</span><pre><span></span><code>    flowchart TD
+<pre class="mermaid"><code>    flowchart TD
         Start([Inicio])
         Check{¿num &lt;= 5?}
         Incremento[Incrementar num en 1]
@@ -1277,8 +1279,7 @@
 
     Start --&gt; Check
     Check --&gt;|Sí| Suma --&gt; Incremento --&gt; Check
-    Check --&gt;|No| End
-</code></pre></div>
+    Check --&gt;|No| End</code></pre>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Suma de números del 1 al 5</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -1296,6 +1297,7 @@
 </div>
 </div>
 </div>
+</details>
 <hr />
 
 
