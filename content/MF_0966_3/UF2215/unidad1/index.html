@@ -2412,15 +2412,14 @@ rm<span class="w"> </span>archivo.js
 <details class="example">
 <summary>Diagrama de flujo</summary>
 <pre class="mermaid"><code>flowchart TD
-    Start([Inicio&lt;br&gt;1. total = 0&lt;br&gt;2. num = 1])
-    Check{num &lt;= 5} 
-    Suma[total += num]
-    Incremento[num += 1]
-    End([Fin&lt;br&gt;print("La suma es:", total)])
-
-    Start --&gt; Check
-    Check --&gt;|Sí| Suma --&gt; Incremento --&gt; Check
-    Check --&gt;|No| End</code></pre>
+    A[Inicio] --&gt; B[Declarar variables a y b, a=10, b=5]
+    B --&gt; C[Calcular suma -&gt; console.log(a + b)]
+    C --&gt; D[Calcular resta -&gt; console.log(a - b)] 
+    D --&gt; E[Calcular multiplicación -&gt; console.log(a * b)]
+    E --&gt; F[Calcular división -&gt; console.log(a / b)]
+    F --&gt; G[Calcular módulo -&gt; console.log(a % b)]
+    G --&gt; H[Mostrar resultados -&gt; console.log()]
+    H --&gt; I[Fin]</code></pre>
 </details>
 <details class="example">
 <summary>Solución</summary>
