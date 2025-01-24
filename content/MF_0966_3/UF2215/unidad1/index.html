@@ -2402,30 +2402,6 @@ rm<span class="w"> </span>archivo.js
 </code></pre></div></td></tr></table></div></p>
 <hr />
 <h4 id="124-ejercicio-practico"><strong>1.2.4 Ejercicio Práctico</strong></h4>
-<p>Ejemplo con mermaid.</p>
-<pre class="mermaid"><code>flowchart TD
-    Start[Inicio]
-    Suma[Mostrar suma]
-    Resta[Mostrar resta]
-    Multiplicacion[Mostrar multiplicación]
-    Division[Mostrar división]
-    Modulo[Mostrar módulo]
-    End[Fin]
-
-    Start --&gt; Suma --&gt; Resta --&gt; Multiplicacion --&gt; Division --&gt; Modulo --&gt; End</code></pre>
-<details class="example">
-<summary>Diagrama de flujo</summary>
-<pre class="mermaid"><code>flowchart TD
-    A[Inicio] --&gt; B[Solicitar número al usuario]
-    B --&gt; C[Convertir entrada a entero: parseInt]
-    C --&gt; D[Inicializar i = 1]
-    D --&gt; E{¿i &lt;= 10?}
-    E --&gt;|Sí| F[Calcular: numero x i]
-    F --&gt; G[Mostrar resultado en consola]
-    G --&gt; H[Incrementar i en 1]
-    H --&gt; E
-    E --&gt;|No| I[Fin]</code></pre>
-</details>
 <div class="admonition question">
 <p class="admonition-title">Crea un programa que haga lo siguiente:</p>
 <ul>
@@ -2436,13 +2412,13 @@ rm<span class="w"> </span>archivo.js
 <details class="example">
 <summary>Diagrama de flujo 2</summary>
 <pre class="mermaid"><code>flowchart TD
-    Start([Inicio&lt;br&gt;Declarar variables&lt;br&gt;let a = 10;&lt;br&gt;let b = 5;])
-    Suma[Mostrar suma&lt;br&gt;console.log("Suma:", a + b);]
-    Resta[Mostrar resta&lt;br&gt;console.log("Resta:", a - b);]
-    Multiplicacion[Mostrar multiplicación&lt;br&gt;console.log("Multiplicación:", a * b);]
-    Division[Mostrar división&lt;br&gt;console.log("División:", a / b);]
-    Modulo[Mostrar módulo&lt;br&gt;console.log("Módulo:", a % b);]
-    End([Fin])
+    Start[Inicio]
+    Suma[Mostrar suma]
+    Resta[Mostrar resta]
+    Multiplicacion[Mostrar multiplicación]
+    Division[Mostrar división]
+    Modulo[Mostrar módulo]
+    End[Fin]
 
     Start --&gt; Suma --&gt; Resta --&gt; Multiplicacion --&gt; Division --&gt; Modulo --&gt; End</code></pre>
 </details>
