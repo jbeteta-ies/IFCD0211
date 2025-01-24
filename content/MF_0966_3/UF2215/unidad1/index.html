@@ -2098,15 +2098,15 @@
 <ul>
 <li>Asegúrate de que todas las opciones estén seleccionadas:</li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Componentes a instalar</p>
+<details class="note" open="open">
+<summary>Componentes a instalar</summary>
 <ul>
 <li><strong>Node.js runtime:</strong> El núcleo del entorno de ejecución.</li>
 <li><strong>npm package manager:</strong> Administrador de paquetes para instalar bibliotecas.</li>
 <li><strong>Add to PATH:</strong> Agrega Node.js a las variables de entorno del sistema (muy importante).</li>
 <li><strong>Online documentation shortcuts:</strong> Acceso rápido a la documentación en línea.</li>
 </ul>
-</div>
+</details>
 <ul>
 <li>Haz clic en <code>Next</code>.</li>
 </ul>
@@ -2114,16 +2114,27 @@
 </li>
 <li>
 <p><strong>Herramientas adicionales para la compilación nativa (opcional):</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">En</span><span class="w"> </span><span class="n">algunos</span><span class="w"> </span><span class="n">casos</span><span class="p">,</span><span class="w"> </span><span class="n">el</span><span class="w"> </span><span class="n">instalador</span><span class="w"> </span><span class="n">puede</span><span class="w"> </span><span class="n">ofrecer</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">opción</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">instalar</span><span class="w"> </span><span class="n">herramientas</span><span class="w"> </span><span class="n">adicionales</span><span class="w"> </span><span class="n">como</span><span class="w"> </span><span class="o">**</span><span class="n">Python</span><span class="o">**</span><span class="w"> </span><span class="n">o</span><span class="w"> </span><span class="n">compiladores</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">C</span><span class="o">++</span><span class="w"> </span><span class="n">necesarios</span><span class="w"> </span><span class="n">para</span><span class="w"> </span><span class="n">algunos</span><span class="w"> </span><span class="n">paquetes</span><span class="p">.</span>
-<span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Si</span><span class="w"> </span><span class="n">aparece</span><span class="w"> </span><span class="n">esta</span><span class="w"> </span><span class="n">opción</span><span class="p">,</span><span class="w"> </span><span class="n">selecciona</span><span class="w"> </span><span class="n">el</span><span class="w"> </span><span class="n">checkbox</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="n">haz</span><span class="w"> </span><span class="n">clic</span><span class="w"> </span><span class="n">en</span><span class="w"> </span><span class="n n-Quoted">`Next`</span><span class="p">.</span>
-<span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="o">**</span><span class="n">Instalación</span><span class="o">:**</span>
-
-<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">Haz</span><span class="w"> </span><span class="n">clic</span><span class="w"> </span><span class="n">en</span><span class="w"> </span><span class="n n-Quoted">`Install`</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="n">espera</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">que</span><span class="w"> </span><span class="n">el</span><span class="w"> </span><span class="n">instalador</span><span class="w"> </span><span class="n">copie</span><span class="w"> </span><span class="n">los</span><span class="w"> </span><span class="n">archivos</span><span class="w"> </span><span class="n">necesarios</span><span class="p">.</span>
-<span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="o">**</span><span class="n">Finalización</span><span class="o">:**</span>
-
-<span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Una</span><span class="w"> </span><span class="n">vez</span><span class="w"> </span><span class="n">terminada</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">instalación</span><span class="p">,</span><span class="w"> </span><span class="n">marca</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">opción</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="s2">&quot;Automatically install necessary tools&quot;</span><span class="w"> </span><span class="p">(</span><span class="n">si</span><span class="w"> </span><span class="n">está</span><span class="w"> </span><span class="n">disponible</span><span class="p">)</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="n">haz</span><span class="w"> </span><span class="n">clic</span><span class="w"> </span><span class="n">en</span><span class="w"> </span><span class="n n-Quoted">`Finish`</span><span class="p">.</span>
-</code></pre></div>
-
+<div class="admonition info">
+<p class="admonition-title">Herramientas adicionales</p>
+<ul>
+<li>En algunos casos, el instalador puede ofrecer la opción de instalar herramientas adicionales como <strong>Python</strong> o compiladores de C++ necesarios para algunos paquetes.</li>
+<li>Si aparece esta opción, selecciona el checkbox y haz clic en <code>Next</code>.</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Instalación:</strong></p>
+<div class="admonition info">
+<p class="admonition-title">Proceso de instalación</p>
+<ul>
+<li>Haz clic en <code>Install</code> y espera a que el instalador copie los archivos necesarios.</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Finalización:</strong>
+    !!! info "Finalización de la instalación"
+          - Una vez terminada la instalación, marca la opción de "Automatically install necessary tools" (si está disponible) y haz clic en <code>Finish</code>.</p>
 </li>
 </ul>
 </li>
@@ -2131,12 +2142,16 @@
 <h4 id="validacion-de-la-instalacion"><strong>Validación de la instalación</strong></h4>
 <ol>
 <li>Abre la terminal o consola de comandos.</li>
-<li>
-<p>Ejecuta los siguientes comandos para verificar que Node.js y npm están instalados correctamente:</p>
-<p><div class="highlight"><pre><span></span><code><span class="w">    </span>node<span class="w"> </span>-v
-<span class="w">    </span>npm<span class="w"> </span>-v
+<li>Ejecuta los siguientes comandos para verificar que Node.js y npm están instalados correctamente:
+    !!! info "Comandos de verificación"<div class="codehilite"><pre><span></span><code>```bash numlines=&quot;1&quot; title=&quot;Comandos de verificación&quot;
+    node -v
+    npm -v
+```
 </code></pre></div>
-3. Deberías ver los números de versión correspondientes.</p>
+
+<ol>
+<li>Deberías ver los números de versión correspondientes.</li>
+</ol>
 </li>
 </ol>
 <h4 id="ejecutar-un-primer-script-en-nodejs"><strong>Ejecutar un primer script en Node.js</strong></h4>
