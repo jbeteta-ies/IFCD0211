@@ -823,22 +823,32 @@
 <h4 id="declaracion-de-funciones"><strong>Declaración de funciones</strong></h4>
 <p>Las funciones se declaran utilizando la palabra clave <code>function</code>, seguida del nombre de la función, paréntesis (para los parámetros) y un bloque de código entre llaves.</p>
 <h4 id="sintaxis"><strong>Sintaxis</strong></h4>
-<div class="codehilite"><pre><span></span><code>```javascript
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>```javascript
 function nombreFuncion(parámetros) {
     // Código a ejecutar
 }
 ```
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 
 <h4 id="ejemplo"><strong>Ejemplo</strong></h4>
-<div class="codehilite"><pre><span></span><code>```javascript
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>```javascript
 function saludar() {
     console.log(&quot;¡Hola, mundo!&quot;);
 }
 
 saludar(); // Llama a la función y muestra &quot;¡Hola, mundo!&quot;
 ```
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h3 id="212-parametros-y-valores-de-retorno"><strong>2.1.2 Parámetros y valores de retorno</strong></h3>
@@ -847,7 +857,14 @@ saludar(); // Llama a la función y muestra &quot;¡Hola, mundo!&quot;
 <h4 id="valores-de-retorno"><strong>Valores de retorno</strong></h4>
 <p>Las funciones pueden devolver un valor utilizando la palabra clave <code>return</code>.</p>
 <h4 id="ejemplo_1"><strong>Ejemplo</strong></h4>
-<div class="codehilite"><pre><span></span><code><span class="err">```</span><span class="nt">javascript</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">```</span><span class="nt">javascript</span>
 <span class="nt">function</span><span class="w"> </span><span class="nt">sumar</span><span class="o">(</span><span class="nt">a</span><span class="o">,</span><span class="w"> </span><span class="nt">b</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="err">return</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">+</span><span class="w"> </span><span class="err">b</span><span class="p">;</span>
 <span class="p">}</span>
@@ -855,38 +872,56 @@ saludar(); // Llama a la función y muestra &quot;¡Hola, mundo!&quot;
 <span class="nt">let</span><span class="w"> </span><span class="nt">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">sumar</span><span class="o">(</span><span class="nt">5</span><span class="o">,</span><span class="w"> </span><span class="nt">3</span><span class="o">);</span>
 <span class="nt">console</span><span class="p">.</span><span class="nc">log</span><span class="o">(</span><span class="s2">&quot;La suma es:&quot;</span><span class="o">,</span><span class="w"> </span><span class="nt">resultado</span><span class="o">);</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nt">La</span><span class="w"> </span><span class="nt">suma</span><span class="w"> </span><span class="nt">es</span><span class="o">:</span><span class="w"> </span><span class="nt">8</span>
 <span class="err">```</span>
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h3 id="213-funciones-anonimas-y-flecha-arrow-functions"><strong>2.1.3 Funciones anónimas y flecha (arrow functions)</strong></h3>
 <h4 id="funciones-anonimas"><strong>Funciones anónimas</strong></h4>
 <p>Son funciones sin nombre, generalmente asignadas a una variable o usadas como callbacks.</p>
 <h4 id="ejemplo_2"><strong>Ejemplo</strong></h4>
-<div class="codehilite"><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
 <span class="k">const</span><span class="w"> </span><span class="n">multiplicar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">function</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
 <span class="p">};</span>
 
 <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">multiplicar</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">));</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="mi">20</span>
 <span class="err">```</span>
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 
 <h4 id="arrow-functions"><strong>Arrow functions</strong></h4>
 <p>Sintaxis simplificada para declarar funciones anónimas usando <code>=&gt;</code>.</p>
 <h4 id="ejemplo_3"><strong>Ejemplo</strong></h4>
-<div class="codehilite"><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
 <span class="k">const</span><span class="w"> </span><span class="n">dividir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
 
 <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">dividir</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">));</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="mi">5</span>
 <span class="err">```</span>
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h3 id="214-alcance-de-las-variables-local-y-global"><strong>2.1.4 Alcance de las variables: Local y Global</strong></h3>
 <h4 id="alcance-global"><strong>Alcance Global</strong></h4>
 <p>Las variables declaradas fuera de funciones son accesibles desde cualquier lugar del código.</p>
 <h4 id="ejemplo_4"><strong>Ejemplo</strong></h4>
-<div class="codehilite"><pre><span></span><code>```javascript
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>```javascript
 let global = &quot;Soy global&quot;;
 
 function mostrarGlobal() {
@@ -895,12 +930,20 @@ function mostrarGlobal() {
 
 mostrarGlobal(); // Soy global
 ```
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 
 <h4 id="alcance-local"><strong>Alcance Local</strong></h4>
 <p>Las variables declaradas dentro de una función solo son accesibles desde esa función.</p>
 <h4 id="ejemplo_5"><strong>Ejemplo</strong></h4>
-<div class="codehilite"><pre><span></span><code><span class="sb">```javascript</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="sb">```javascript</span>
 <span class="sb">function ejemploLocal() {</span>
 <span class="sb">    let local = &quot;Soy local&quot;;</span>
 <span class="sb">    console.log(local);</span>
@@ -909,7 +952,7 @@ mostrarGlobal(); // Soy global
 <span class="sb">ejemploLocal(); // Soy local</span>
 <span class="sb">// console.log(local); // Error: local is not defined</span>
 <span class="sb">```</span>
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="ejercicios-de-funciones"><strong>Ejercicios de funciones</strong></h2>
@@ -918,14 +961,20 @@ mostrarGlobal(); // Soy global
 <li>Crea una función llamada <code>saludo</code> que tome un nombre como parámetro y muestre un saludo personalizado.</li>
 </ul>
 <p>??? example "Solución ejercicio 1"</p>
-<div class="codehilite"><pre><span></span><code>```javascript
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>```javascript
 function<span class="w"> </span>saludo(nombre)<span class="w"> </span>{
 <span class="w">    </span>console.log(`¡Hola,<span class="w"> </span><span class="cp">${</span><span class="n">nombre</span><span class="cp">}</span>!`);
 }
 
 saludo(&quot;María&quot;);<span class="w"> </span>//<span class="w"> </span>¡Hola,<span class="w"> </span>María!
 ```
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h3 id="ejercicio-2-calculadora"><strong>Ejercicio 2: Calculadora</strong></h3>
@@ -933,7 +982,17 @@ saludo(&quot;María&quot;);<span class="w"> </span>//<span class="w"> </span>¡H
 <li>Crea una función llamada <code>operar</code> que tome tres parámetros: dos números y un operador (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>). Devuelve el resultado de la operación.</li>
 </ul>
 <p>??? example "Solución ejercicio 2"</p>
-<div class="codehilite"><pre><span></span><code>```javascript
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>```javascript
 function operar(a, b, operador) {
     if (operador === &quot;+&quot;) return a + b;
     if (operador === &quot;-&quot;) return a - b;
@@ -944,7 +1003,7 @@ function operar(a, b, operador) {
 
 console.log(operar(10, 5, &quot;+&quot;)); // 15
 ```
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="22-manejo-de-errores-3-horas"><strong>2.2 Manejo de errores (3 horas)</strong></h2>
@@ -953,7 +1012,15 @@ console.log(operar(10, 5, &quot;+&quot;)); // 15
 <hr />
 <h3 id="221-bloques-try-catch-y-finally"><strong>2.2.1 Bloques <code>try</code>, <code>catch</code> y <code>finally</code></strong></h3>
 <h4 id="sintaxis_1"><strong>Sintaxis</strong></h4>
-<div class="codehilite"><pre><span></span><code>```javascript
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>```javascript
 try {
     // Código que puede lanzar un error
 } catch (error) {
@@ -962,10 +1029,19 @@ try {
     // Código que se ejecuta siempre, con o sin error
 }
 ```
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 
 <h4 id="ejemplo_6"><strong>Ejemplo</strong></h4>
-<div class="codehilite"><pre><span></span><code><span class="err">```</span><span class="nt">javascript</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">```</span><span class="nt">javascript</span>
 <span class="nt">try</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="err">let</span><span class="w"> </span><span class="err">resultado</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">10</span><span class="w"> </span><span class="err">/</span><span class="w"> </span><span class="err">0</span><span class="p">;</span>
 <span class="w">    </span><span class="err">console.log(resultado)</span><span class="p">;</span>
@@ -975,12 +1051,23 @@ try {
 <span class="s2">    console.log(&quot;</span><span class="n">Ejecución</span><span class="w"> </span><span class="n">terminada</span><span class="err">&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 <span class="err">```</span>
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h3 id="222-lanzar-errores-con-throw"><strong>2.2.2 Lanzar errores con <code>throw</code></strong></h3>
 <h4 id="ejemplo_7"><strong>Ejemplo</strong></h4>
-<div class="codehilite"><pre><span></span><code>```<span class="nv">javascript</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>```<span class="nv">javascript</span>
 <span class="nv">function</span><span class="w"> </span><span class="nv">dividir</span><span class="ss">(</span><span class="nv">a</span>,<span class="w"> </span><span class="nv">b</span><span class="ss">)</span><span class="w"> </span>{
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="ss">(</span><span class="nv">b</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mi">0</span><span class="ss">)</span><span class="w"> </span><span class="nv">throw</span><span class="w"> </span><span class="nv">new</span><span class="w"> </span><span class="nv">Error</span><span class="ss">(</span><span class="s2">&quot;No se puede dividir por cero&quot;</span><span class="ss">)</span><span class="c1">;</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nv">b</span><span class="c1">;</span>
@@ -992,7 +1079,7 @@ try {
 <span class="w">    </span><span class="nv">console</span>.<span class="nv">log</span><span class="ss">(</span><span class="nv">error</span>.<span class="nv">message</span><span class="ss">)</span><span class="c1">; // No se puede dividir por cero</span>
 }
 ```
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="ejercicios-de-manejo-de-errores"><strong>Ejercicios de manejo de errores</strong></h2>
@@ -1001,7 +1088,26 @@ try {
 <li>Crea una función que solicite al usuario un número. Lanza un error si el usuario no introduce un número válido.</li>
 </ul>
 <p>??? example "Solución ejercicio 1"</p>
-<div class="codehilite"><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
 <span class="k">const</span><span class="w"> </span><span class="n">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
 
 <span class="n">function</span><span class="w"> </span><span class="n">solicitarNumero</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -1021,7 +1127,7 @@ try {
 <span class="w">    </span><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">error</span><span class="o">.</span><span class="n">message</span><span class="p">);</span>
 <span class="p">}</span>
 <span class="err">```</span>
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="23-metodos-basicos-de-entradasalida-5-horas-23-entrada-y-salida-a-ficheros-fs"><strong>2.3 Métodos básicos de entrada/salida (5 horas)</strong>## <strong>2.3 Entrada y Salida a Ficheros (FS)</strong></h2>
@@ -1092,7 +1198,17 @@ console.log("Archivo eliminado con éxito");
 <li>Luego, lee el contenido del archivo y muéstralo en la consola.</li>
 </ol>
 <p>??? example "Solución ejercicio 1"</p>
-<div class="codehilite"><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
 <span class="k">const</span><span class="w"> </span><span class="n">fs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">require</span><span class="p">(</span><span class="s2">&quot;fs&quot;</span><span class="p">);</span>
 
 <span class="o">//</span><span class="w"> </span><span class="n">Crear</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="n">escribir</span><span class="w"> </span><span class="n">en</span><span class="w"> </span><span class="n">el</span><span class="w"> </span><span class="n">archivo</span>
@@ -1103,7 +1219,7 @@ console.log("Archivo eliminado con éxito");
 <span class="n">let</span><span class="w"> </span><span class="n">contenido</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fs</span><span class="o">.</span><span class="n">readFileSync</span><span class="p">(</span><span class="s2">&quot;mensaje.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;utf8&quot;</span><span class="p">);</span>
 <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Contenido del archivo:&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">contenido</span><span class="p">);</span>
 <span class="err">```</span>
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h3 id="232-uso-de-json"><strong>2.3.2 Uso de JSON</strong></h3>
@@ -1112,7 +1228,17 @@ console.log("Archivo eliminado con éxito");
 <h3 id="crear-y-escribir-en-un-json"><strong>Crear y Escribir en un JSON</strong></h3>
 <p>Usamos <code>JSON.stringify()</code> para convertir un objeto en una cadena JSON antes de escribirlo en un archivo.</p>
 <h4 id="ejemplo_8"><strong>Ejemplo</strong></h4>
-<div class="codehilite"><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
 <span class="k">const</span><span class="w"> </span><span class="n">fs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">require</span><span class="p">(</span><span class="s2">&quot;fs&quot;</span><span class="p">);</span>
 
 <span class="k">const</span><span class="w"> </span><span class="n">personas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
@@ -1123,26 +1249,42 @@ console.log("Archivo eliminado con éxito");
 <span class="n">fs</span><span class="o">.</span><span class="n">writeFileSync</span><span class="p">(</span><span class="s2">&quot;personas.json&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">JSON</span><span class="o">.</span><span class="n">stringify</span><span class="p">(</span><span class="n">personas</span><span class="p">,</span><span class="w"> </span><span class="nb nb-Type">null</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">));</span>
 <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Archivo JSON creado con éxito&quot;</span><span class="p">);</span>
 <span class="err">```</span>
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h3 id="leer-un-json"><strong>Leer un JSON</strong></h3>
 <p>Usamos <code>JSON.parse()</code> para convertir una cadena JSON en un objeto o arreglo.</p>
 <h4 id="ejemplo_9"><strong>Ejemplo</strong></h4>
-<div class="codehilite"><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
 <span class="k">const</span><span class="w"> </span><span class="n">fs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">require</span><span class="p">(</span><span class="s2">&quot;fs&quot;</span><span class="p">);</span>
 
 <span class="n">let</span><span class="w"> </span><span class="n">datos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fs</span><span class="o">.</span><span class="n">readFileSync</span><span class="p">(</span><span class="s2">&quot;personas.json&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;utf8&quot;</span><span class="p">);</span>
 <span class="n">let</span><span class="w"> </span><span class="n">personas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JSON</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">datos</span><span class="p">);</span>
 <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Contenido del JSON:&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">personas</span><span class="p">);</span>
 <span class="err">```</span>
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h3 id="agregar-informacion-a-un-json"><strong>Agregar Información a un JSON</strong></h3>
 <p>Leemos el archivo, agregamos un nuevo objeto al arreglo y lo volvemos a escribir.</p>
 <h4 id="ejemplo_10"><strong>Ejemplo</strong></h4>
-<div class="codehilite"><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
 <span class="k">const</span><span class="w"> </span><span class="n">fs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">require</span><span class="p">(</span><span class="s2">&quot;fs&quot;</span><span class="p">);</span>
 
 <span class="n">let</span><span class="w"> </span><span class="n">datos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fs</span><span class="o">.</span><span class="n">readFileSync</span><span class="p">(</span><span class="s2">&quot;personas.json&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;utf8&quot;</span><span class="p">);</span>
@@ -1153,13 +1295,23 @@ console.log("Archivo eliminado con éxito");
 <span class="n">fs</span><span class="o">.</span><span class="n">writeFileSync</span><span class="p">(</span><span class="s2">&quot;personas.json&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">JSON</span><span class="o">.</span><span class="n">stringify</span><span class="p">(</span><span class="n">personas</span><span class="p">,</span><span class="w"> </span><span class="nb nb-Type">null</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">));</span>
 <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Nuevo registro añadido con éxito&quot;</span><span class="p">);</span>
 <span class="err">```</span>
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h3 id="borrar-informacion-de-un-json"><strong>Borrar Información de un JSON</strong></h3>
 <p>Filtramos los datos para eliminar un registro basado en un criterio (por ejemplo, DNI) y reescribimos el archivo.</p>
 <h4 id="ejemplo_11"><strong>Ejemplo</strong></h4>
-<div class="codehilite"><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
 <span class="k">const</span><span class="w"> </span><span class="n">fs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">require</span><span class="p">(</span><span class="s2">&quot;fs&quot;</span><span class="p">);</span>
 
 <span class="n">let</span><span class="w"> </span><span class="n">datos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fs</span><span class="o">.</span><span class="n">readFileSync</span><span class="p">(</span><span class="s2">&quot;personas.json&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;utf8&quot;</span><span class="p">);</span>
@@ -1170,7 +1322,7 @@ console.log("Archivo eliminado con éxito");
 <span class="n">fs</span><span class="o">.</span><span class="n">writeFileSync</span><span class="p">(</span><span class="s2">&quot;personas.json&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">JSON</span><span class="o">.</span><span class="n">stringify</span><span class="p">(</span><span class="n">personas</span><span class="p">,</span><span class="w"> </span><span class="nb nb-Type">null</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">));</span>
 <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Registro eliminado con éxito&quot;</span><span class="p">);</span>
 <span class="err">```</span>
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h3 id="ejercicio-final-crud-con-json"><strong>Ejercicio Final: CRUD con JSON</strong></h3>
@@ -1186,7 +1338,34 @@ console.log("Archivo eliminado con éxito");
 <li>Eliminar una persona por su DNI.</li>
 </ul>
 <p>??? example "Solución ejercicio final"</p>
-<div class="codehilite"><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
 <span class="k">const</span><span class="w"> </span><span class="n">fs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">require</span><span class="p">(</span><span class="s2">&quot;fs&quot;</span><span class="p">);</span>
 
 <span class="o">//</span><span class="w"> </span><span class="n">Función</span><span class="w"> </span><span class="n">para</span><span class="w"> </span><span class="n">leer</span><span class="w"> </span><span class="n">el</span><span class="w"> </span><span class="n">JSON</span>
@@ -1214,7 +1393,7 @@ console.log("Archivo eliminado con éxito");
 
 <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Operaciones realizadas con éxito&quot;</span><span class="p">);</span>
 <span class="err">```</span>
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="24-ejercicios-practicos-solucionados"><strong>2.4 Ejercicios Prácticos Solucionados</strong></h2>
@@ -1224,7 +1403,14 @@ console.log("Archivo eliminado con éxito");
 <h3 id="ejercicio-1-funcion-potencia"><strong>Ejercicio 1: Función Potencia</strong></h3>
 <p>Crea una función llamada <code>potencia</code> que reciba dos números, base y exponente, y devuelva el resultado de elevar la base al exponente.</p>
 <p>??? example "Solución ejercicio 1"</p>
-<div class="codehilite"><pre><span></span><code>```<span class="nv">javascript</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>```<span class="nv">javascript</span>
 <span class="nv">function</span><span class="w"> </span><span class="nv">potencia</span><span class="ss">(</span><span class="nv">base</span>,<span class="w"> </span><span class="nv">exponente</span><span class="ss">)</span><span class="w"> </span>{
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nv">Math</span>.<span class="nv">pow</span><span class="ss">(</span><span class="nv">base</span>,<span class="w"> </span><span class="nv">exponente</span><span class="ss">)</span><span class="c1">;</span>
 }
@@ -1232,13 +1418,20 @@ console.log("Archivo eliminado con éxito");
 <span class="nv">console</span>.<span class="nv">log</span><span class="ss">(</span><span class="nv">potencia</span><span class="ss">(</span><span class="mi">2</span>,<span class="w"> </span><span class="mi">3</span><span class="ss">))</span><span class="c1">; // 8</span>
 <span class="nv">console</span>.<span class="nv">log</span><span class="ss">(</span><span class="nv">potencia</span><span class="ss">(</span><span class="mi">5</span>,<span class="w"> </span><span class="mi">2</span><span class="ss">))</span><span class="c1">; // 25</span>
 ```
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h3 id="ejercicio-2-reverso-de-una-cadena"><strong>Ejercicio 2: Reverso de una Cadena</strong></h3>
 <p>Crea una función llamada <code>reverso</code> que reciba una cadena de texto y devuelva la misma cadena, pero invertida.</p>
 <p>??? example "Solución ejercicio 2"</p>
-<div class="codehilite"><pre><span></span><code>```<span class="nv">javascript</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>```<span class="nv">javascript</span>
 <span class="nv">function</span><span class="w"> </span><span class="nv">reverso</span><span class="ss">(</span><span class="nv">cadena</span><span class="ss">)</span><span class="w"> </span>{
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nv">cadena</span>.<span class="nv">split</span><span class="ss">(</span><span class="s2">&quot;&quot;</span><span class="ss">)</span>.<span class="nv">reverse</span><span class="ss">()</span>.<span class="nv">join</span><span class="ss">(</span><span class="s2">&quot;&quot;</span><span class="ss">)</span><span class="c1">;</span>
 }
@@ -1246,13 +1439,21 @@ console.log("Archivo eliminado con éxito");
 <span class="nv">console</span>.<span class="nv">log</span><span class="ss">(</span><span class="nv">reverso</span><span class="ss">(</span><span class="s2">&quot;hola&quot;</span><span class="ss">))</span><span class="c1">; // &quot;aloh&quot;</span>
 <span class="nv">console</span>.<span class="nv">log</span><span class="ss">(</span><span class="nv">reverso</span><span class="ss">(</span><span class="s2">&quot;JavaScript&quot;</span><span class="ss">))</span><span class="c1">; // &quot;tpircSavaJ&quot;</span>
 ```
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h4 id="ejercicio-3-funcion-multiplicadora"><strong>Ejercicio 3: Función Multiplicadora</strong></h4>
 <p>Crea una función <code>multiplicar</code> que reciba un número y devuelva su tabla de multiplicar del 1 al 10.</p>
 <p>??? example "Solución ejercicio 3"</p>
-<div class="codehilite"><pre><span></span><code>```javascript
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>```javascript
 function<span class="w"> </span>multiplicar(numero)<span class="w"> </span>{
 <span class="w">    </span>for<span class="w"> </span>(let<span class="w"> </span>i<span class="w"> </span>=<span class="w"> </span>1;<span class="w"> </span>i<span class="w"> </span><span class="err">&lt;</span>=<span class="w"> </span>10;<span class="w"> </span>i++)<span class="w"> </span>{
 <span class="w">        </span>console.log(`<span class="cp">${</span><span class="n">numero</span><span class="cp">}</span><span class="w"> </span>x<span class="w"> </span><span class="cp">${</span><span class="n">i</span><span class="cp">}</span><span class="w"> </span>=<span class="w"> </span><span class="cp">${</span><span class="n">numero</span> <span class="o">*</span> <span class="n">i</span><span class="cp">}</span>`);
@@ -1261,13 +1462,24 @@ function<span class="w"> </span>multiplicar(numero)<span class="w"> </span>{
 
 multiplicar(5);
 ```
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h4 id="ejercicio-4-numero-primo"><strong>Ejercicio 4: Número Primo</strong></h4>
 <p>Crea una función llamada <code>esPrimo</code> que determine si un número es primo o no.</p>
 <p>??? example "Solución ejercicio 4"</p>
-<div class="codehilite"><pre><span></span><code>```<span class="nv">javascript</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>```<span class="nv">javascript</span>
 <span class="nv">function</span><span class="w"> </span><span class="nv">esPrimo</span><span class="ss">(</span><span class="nv">numero</span><span class="ss">)</span><span class="w"> </span>{
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="ss">(</span><span class="nv">numero</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">1</span><span class="ss">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nv">false</span><span class="c1">;</span>
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="ss">(</span><span class="nv">let</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="c1">; i &lt; numero; i++) {</span>
@@ -1279,14 +1491,33 @@ multiplicar(5);
 <span class="nv">console</span>.<span class="nv">log</span><span class="ss">(</span><span class="nv">esPrimo</span><span class="ss">(</span><span class="mi">7</span><span class="ss">))</span><span class="c1">; // true</span>
 <span class="nv">console</span>.<span class="nv">log</span><span class="ss">(</span><span class="nv">esPrimo</span><span class="ss">(</span><span class="mi">10</span><span class="ss">))</span><span class="c1">; // false</span>
 ```
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h3 id="ejercicios-de-manejo-de-errores_1"><strong>Ejercicios de Manejo de Errores</strong></h3>
 <h4 id="ejercicio-5-validacion-de-numero"><strong>Ejercicio 5: Validación de Número</strong></h4>
 <p>Crea una función que solicite al usuario un número y lance un error si la entrada no es válida.</p>
 <p>??? example "Solución ejercicio 5"</p>
-<div class="codehilite"><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
 <span class="k">const</span><span class="w"> </span><span class="n">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
 
 <span class="n">function</span><span class="w"> </span><span class="n">solicitarNumero</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -1306,13 +1537,25 @@ multiplicar(5);
 <span class="w">    </span><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">error</span><span class="o">.</span><span class="n">message</span><span class="p">);</span>
 <span class="p">}</span>
 <span class="err">```</span>
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h4 id="ejercicio-6-division-segura"><strong>Ejercicio 6: División Segura</strong></h4>
 <p>Crea una función llamada <code>dividirSegura</code> que reciba dos números y lance un error si se intenta dividir por cero.</p>
 <p>??? example "Solución ejercicio 6"</p>
-<div class="codehilite"><pre><span></span><code>```<span class="nv">javascript</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>```<span class="nv">javascript</span>
 <span class="nv">function</span><span class="w"> </span><span class="nv">dividirSegura</span><span class="ss">(</span><span class="nv">a</span>,<span class="w"> </span><span class="nv">b</span><span class="ss">)</span><span class="w"> </span>{
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="ss">(</span><span class="nv">b</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mi">0</span><span class="ss">)</span><span class="w"> </span><span class="nv">throw</span><span class="w"> </span><span class="nv">new</span><span class="w"> </span><span class="nv">Error</span><span class="ss">(</span><span class="s2">&quot;No se puede dividir por cero&quot;</span><span class="ss">)</span><span class="c1">;</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nv">b</span><span class="c1">;</span>
@@ -1325,14 +1568,22 @@ multiplicar(5);
 <span class="w">    </span><span class="nv">console</span>.<span class="nv">log</span><span class="ss">(</span><span class="nv">error</span>.<span class="nv">message</span><span class="ss">)</span><span class="c1">;</span>
 }
 ```
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h3 id="ejercicios-de-fs_1"><strong>Ejercicios de FS</strong></h3>
 <h4 id="ejercicio-7-crear-y-leer-un-archivo"><strong>Ejercicio 7: Crear y Leer un Archivo</strong></h4>
 <p>Crea un archivo llamado <code>datos.txt</code> con el texto "Hola, este es un mensaje." y luego léelo desde el disco.</p>
 <p>??? example "Solución ejercicio 7"</p>
-<div class="codehilite"><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
 <span class="k">const</span><span class="w"> </span><span class="n">fs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">require</span><span class="p">(</span><span class="s2">&quot;fs&quot;</span><span class="p">);</span>
 
 <span class="n">fs</span><span class="o">.</span><span class="n">writeFileSync</span><span class="p">(</span><span class="s2">&quot;datos.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Hola, este es un mensaje.&quot;</span><span class="p">);</span>
@@ -1341,13 +1592,21 @@ multiplicar(5);
 <span class="n">let</span><span class="w"> </span><span class="n">contenido</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fs</span><span class="o">.</span><span class="n">readFileSync</span><span class="p">(</span><span class="s2">&quot;datos.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;utf8&quot;</span><span class="p">);</span>
 <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Contenido del archivo:&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">contenido</span><span class="p">);</span>
 <span class="err">```</span>
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h4 id="ejercicio-8-actualizar-un-archivo"><strong>Ejercicio 8: Actualizar un Archivo</strong></h4>
 <p>Agrega un nuevo mensaje al archivo <code>datos.txt</code> y luego lee su contenido actualizado.</p>
 <p>??? example "Solución ejercicio 8"</p>
-<div class="codehilite"><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
 <span class="k">const</span><span class="w"> </span><span class="n">fs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">require</span><span class="p">(</span><span class="s2">&quot;fs&quot;</span><span class="p">);</span>
 
 <span class="n">fs</span><span class="o">.</span><span class="n">appendFileSync</span><span class="p">(</span><span class="s2">&quot;datos.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">¡Este es un mensaje adicional!&quot;</span><span class="p">);</span>
@@ -1356,14 +1615,27 @@ multiplicar(5);
 <span class="n">let</span><span class="w"> </span><span class="n">contenido</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fs</span><span class="o">.</span><span class="n">readFileSync</span><span class="p">(</span><span class="s2">&quot;datos.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;utf8&quot;</span><span class="p">);</span>
 <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Contenido actualizado:&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">contenido</span><span class="p">);</span>
 <span class="err">```</span>
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h3 id="ejercicios-de-json"><strong>Ejercicios de JSON</strong></h3>
 <h4 id="ejercicio-9-crear-y-leer-un-json"><strong>Ejercicio 9: Crear y Leer un JSON</strong></h4>
 <p>Crea un archivo JSON llamado <code>usuarios.json</code> que contenga un arreglo de usuarios. Luego, lee y muestra su contenido.</p>
 <p>??? example "Solución ejercicio 9"</p>
-<div class="codehilite"><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
 <span class="k">const</span><span class="w"> </span><span class="n">fs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">require</span><span class="p">(</span><span class="s2">&quot;fs&quot;</span><span class="p">);</span>
 
 <span class="k">const</span><span class="w"> </span><span class="n">usuarios</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
@@ -1377,13 +1649,22 @@ multiplicar(5);
 <span class="n">let</span><span class="w"> </span><span class="n">contenido</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fs</span><span class="o">.</span><span class="n">readFileSync</span><span class="p">(</span><span class="s2">&quot;usuarios.json&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;utf8&quot;</span><span class="p">);</span>
 <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Contenido del JSON:&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">JSON</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">contenido</span><span class="p">));</span>
 <span class="err">```</span>
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h4 id="ejercicio-10-actualizar-un-json"><strong>Ejercicio 10: Actualizar un JSON</strong></h4>
 <p>Agrega un nuevo usuario al archivo <code>usuarios.json</code>.</p>
 <p>??? example "Solución ejercicio 10"</p>
-<div class="codehilite"><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
 <span class="k">const</span><span class="w"> </span><span class="n">fs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">require</span><span class="p">(</span><span class="s2">&quot;fs&quot;</span><span class="p">);</span>
 
 <span class="n">let</span><span class="w"> </span><span class="n">contenido</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fs</span><span class="o">.</span><span class="n">readFileSync</span><span class="p">(</span><span class="s2">&quot;usuarios.json&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;utf8&quot;</span><span class="p">);</span>
@@ -1393,7 +1674,7 @@ multiplicar(5);
 <span class="n">fs</span><span class="o">.</span><span class="n">writeFileSync</span><span class="p">(</span><span class="s2">&quot;usuarios.json&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">JSON</span><span class="o">.</span><span class="n">stringify</span><span class="p">(</span><span class="n">usuarios</span><span class="p">,</span><span class="w"> </span><span class="nb nb-Type">null</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">));</span>
 <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Nuevo usuario agregado con éxito&quot;</span><span class="p">);</span>
 <span class="err">```</span>
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 
 
 
