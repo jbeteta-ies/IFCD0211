@@ -2725,77 +2725,83 @@ rm<span class="w"> </span>archivo.js
 <ol>
 <li>
 <p><strong>Concatenar cadenas:</strong> </p>
-</li>
-<li>
-<p>Combina dos o más cadenas en una sola utilizando el operador <code>+</code> o las plantillas de cadenas (template strings) con backticks (``).</p>
-</li>
-<li>
-<p>Ejemplo:
-     <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Juan&quot;</span><span class="p">;</span>
+<div class="admonition info">
+<p class="admonition-title">Concatenar Cadenas</p>
+<ul>
+<li>Combina dos o más cadenas en una sola utilizando el operador <code>+</code> o las plantillas de cadenas (template strings) con backticks (``).</li>
+<li>Ejemplo:
+    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Juan&quot;</span><span class="p">;</span>
 <span class="kd">let</span><span class="w"> </span><span class="nx">apellido</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Pérez&quot;</span><span class="p">;</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;tu nombre es: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">apellido</span><span class="p">);</span><span class="w"> </span><span class="c1">// Juan Pérez</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`tu nombre es: </span><span class="si">${</span><span class="nx">nombre</span><span class="si">}</span><span class="sb"> </span><span class="si">${</span><span class="nx">apellido</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span><span class="w"> </span><span class="c1">// Juan Pérez</span>
-</code></pre></div></p>
+</code></pre></div></li>
+</ul>
+</div>
 </li>
 <li>
 <p><strong>Obtener la longitud de una cadena (<code>.length</code>):</strong></p>
 </li>
-<li>
-<p>Devuelve el número de caracteres de una cadena, incluidos los espacios.</p>
-</li>
-<li>
-<p>Ejemplo:
-     <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">frase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Hola, mundo&quot;</span><span class="p">;</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">frase</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span><span class="w"> </span><span class="c1">// 11</span>
-</code></pre></div></p>
-</li>
+</ol>
+<p>!!! info "Longitud de una Cadena"</p>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nt">-</span><span class="w"> </span><span class="nt">Devuelve</span><span class="w"> </span><span class="nt">el</span><span class="w"> </span><span class="nt">número</span><span class="w"> </span><span class="nt">de</span><span class="w"> </span><span class="nt">caracteres</span><span class="w"> </span><span class="nt">de</span><span class="w"> </span><span class="nt">una</span><span class="w"> </span><span class="nt">cadena</span><span class="o">,</span><span class="w"> </span><span class="nt">incluidos</span><span class="w"> </span><span class="nt">los</span><span class="w"> </span><span class="nt">espacios</span><span class="o">.</span>
+<span class="w">    </span><span class="nt">-</span><span class="w"> </span><span class="nt">Ejemplo</span><span class="o">:</span>
+<span class="w">        </span><span class="err">```</span><span class="nt">javascript</span>
+<span class="w">        </span><span class="nt">let</span><span class="w"> </span><span class="nt">frase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Hola, mundo&quot;</span><span class="o">;</span>
+<span class="w">        </span><span class="nt">console</span><span class="p">.</span><span class="nc">log</span><span class="o">(</span><span class="nt">frase</span><span class="p">.</span><span class="nc">length</span><span class="o">);</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nt">11</span>
+<span class="w">        </span><span class="err">```</span>
+</code></pre></div>
+
+<ol>
 <li>
 <p><strong>Convertir a mayúsculas (<code>.toUpperCase()</code>):</strong></p>
-</li>
-<li>
-<p>Convierte todos los caracteres de la cadena a mayúsculas.</p>
-</li>
-<li>
-<p>Ejemplo:
-     <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;hola&quot;</span><span class="p">;</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">texto</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">());</span><span class="w"> </span><span class="c1">// HOLA</span>
-</code></pre></div></p>
+<div class="admonition info">
+<p class="admonition-title">Convertir a Mayúsculas</p>
+<ul>
+<li>Convierte todos los caracteres de la cadena a mayúsculas.</li>
+<li>Ejemplo:
+    <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;hola&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">texto</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">());</span><span class="w"> </span><span class="c1">// HOLA</span>
+</code></pre></div></li>
+</ul>
+</div>
 </li>
 <li>
 <p><strong>Convertir a minúsculas (<code>.toLowerCase()</code>):</strong></p>
-</li>
-<li>
-<p>Convierte todos los caracteres de la cadena a minúsculas.</p>
-</li>
-<li>
-<p>Ejemplo:
-     <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;HOLA&quot;</span><span class="p">;</span>
+<div class="admonition info">
+<p class="admonition-title">Convertir a Minúsculas</p>
+<ul>
+<li>Convierte todos los caracteres de la cadena a minúsculas.</li>
+<li>Ejemplo:
+    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;HOLA&quot;</span><span class="p">;</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">texto</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">());</span><span class="w"> </span><span class="c1">// hola</span>
-</code></pre></div></p>
+</code></pre></div></li>
+</ul>
+</div>
 </li>
 <li>
 <p><strong>Extraer parte de una cadena (<code>.slice()</code>):</strong></p>
 </li>
-<li>
-<p>Devuelve una sección de la cadena especificando el índice de inicio y final.</p>
-</li>
-<li>
-<p>Ejemplo:
-     <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">mensaje</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;JavaScript&quot;</span><span class="p">;</span>
+</ol>
+<p>!!! info "Extraer Parte de una Cadena"
+        - Devuelve una sección de la cadena especificando el índice de inicio y final.
+        - Ejemplo:
+            <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">mensaje</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;JavaScript&quot;</span><span class="p">;</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">mensaje</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">));</span><span class="w"> </span><span class="c1">// Java</span>
 </code></pre></div></p>
-</li>
+<ol>
 <li>
 <p><strong>Reemplazar texto en una cadena (<code>.replace()</code>):</strong></p>
-</li>
-<li>
-<p>Reemplaza una parte de la cadena por otra.</p>
-</li>
+<div class="admonition info">
+<p class="admonition-title">Reemplazar Palabras en una Frase</p>
+<ul>
+<li>Reemplaza una parte de la cadena con otra.</li>
 <li>Ejemplo:
-     <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">saludo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Hola, Juan&quot;</span><span class="p">;</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">nuevoSaludo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">saludo</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s2">&quot;Juan&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;María&quot;</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">nuevoSaludo</span><span class="p">);</span><span class="w"> </span><span class="c1">// Hola, María</span>
+    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">frase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;El cielo es azul&quot;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">frase</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s2">&quot;azul&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;verde&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// El cielo es verde</span>
 </code></pre></div></li>
+</ul>
+</div>
+</li>
 </ol>
 <hr />
 <h3 id="ejercicios-de-manipulacion-de-cadenas">Ejercicios de Manipulación de Cadenas</h3>
