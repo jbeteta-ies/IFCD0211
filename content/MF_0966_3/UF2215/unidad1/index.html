@@ -2416,14 +2416,15 @@ rm<span class="w"> </span>archivo.js
 <details class="example">
 <summary>Diagrama de flujo</summary>
 <pre class="mermaid"><code>flowchart TD
-    A[Inicio] --&gt; B[Declarar variables a y b, a=10, b=5]
-    B --&gt; C[Calcular suma -&gt; console.log(a + b)]
-    C --&gt; D[Calcular resta -&gt; console.log(a - b)] 
-    D --&gt; E[Calcular multiplicación -&gt; console.log(a * b)]
-    E --&gt; F[Calcular división -&gt; console.log(a / b)]
-    F --&gt; G[Calcular módulo -&gt; console.log(a % b)]
-    G --&gt; H[Mostrar resultados -&gt; console.log()]
-    H --&gt; I[Fin]</code></pre>
+    A[Inicio] --&gt; B[Solicitar número al usuario]
+    B --&gt; C[Convertir entrada a entero: parseInt]
+    C --&gt; D[Inicializar i = 1]
+    D --&gt; E{¿i &lt;= 10?}
+    E --&gt;|Sí| F[Calcular: numero x i]
+    F --&gt; G[Mostrar resultado en consola]
+    G --&gt; H[Incrementar i en 1]
+    H --&gt; E
+    E --&gt;|No| I[Fin]</code></pre>
 </details>
 <div class="admonition question">
 <p class="admonition-title">Crea un programa que haga lo siguiente:</p>
