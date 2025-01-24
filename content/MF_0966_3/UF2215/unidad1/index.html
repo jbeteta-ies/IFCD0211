@@ -1013,9 +1013,9 @@
 <li>Abre la terminal o consola de comandos.</li>
 <li>
 <p>Ejecuta los siguientes comandos para verificar que Node.js y npm están instalados correctamente:</p>
-<p><code>bash
-    node -v
-    npm -v</code>
+<p><div class="highlight"><pre><span></span><code><span class="w">    </span>node<span class="w"> </span>-v
+<span class="w">    </span>npm<span class="w"> </span>-v
+</code></pre></div>
 3. Deberías ver los números de versión correspondientes.</p>
 </li>
 </ol>
@@ -1023,13 +1023,13 @@
 <ol>
 <li>Crea un archivo <code>hello.js</code> con el siguiente contenido:</li>
 </ol>
-<p><code>javascript
-   console.log("¡Hola, mundo!");</code></p>
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;¡Hola, mundo!&quot;</span><span class="p">);</span>
+</code></pre></div>
 <ol>
 <li>En la consola, navega hasta el directorio donde guardaste el archivo y ejecuta:</li>
 </ol>
-<p><code>bash
-   node hello.js</code></p>
+<div class="highlight"><pre><span></span><code>node<span class="w"> </span>hello.js
+</code></pre></div>
 <hr />
 <h3 id="112-uso-de-visual-studio-code-vscode-como-editor-principal"><strong>1.1.2 Uso de Visual Studio Code (VSCode) como editor principal</strong></h3>
 <h4 id="introduccion-a-vscode"><strong>Introducción a VSCode</strong></h4>
@@ -1051,9 +1051,9 @@
 <ol>
 <li>Abre un nuevo proyecto en VSCode.</li>
 <li>Crea un archivo <code>app.js</code> con el siguiente contenido:
-   <code>javascript
-   const saludo = "¡Hola desde VSCode!";
-   console.log(saludo);</code></li>
+   <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">saludo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;¡Hola desde VSCode!&quot;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">saludo</span><span class="p">);</span>
+</code></pre></div></li>
 <li>Ejecuta el programa desde la terminal integrada de VSCode:</li>
 <li>Abre la terminal integrada con `Ctrl + ``.</li>
 <li>Escribe: <code>node app.js</code>.</li>
@@ -1065,25 +1065,25 @@
 <h4 id="comandos-basicos"><strong>Comandos básicos</strong></h4>
 <ol>
 <li>Navegar entre carpetas:
-   <code>bash
-   cd nombre-de-la-carpeta</code></li>
+   <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>nombre-de-la-carpeta
+</code></pre></div></li>
 <li>Listar archivos:</li>
 <li>En Windows: <code>dir</code></li>
 <li>En macOS/Linux: <code>ls</code></li>
 <li>Crear y eliminar archivos:
-   <code>bash
-   touch archivo.js
-   rm archivo.js</code></li>
+   <div class="highlight"><pre><span></span><code>touch<span class="w"> </span>archivo.js
+rm<span class="w"> </span>archivo.js
+</code></pre></div></li>
 </ol>
 <h4 id="uso-del-repl-de-nodejs"><strong>Uso del REPL de Node.js</strong></h4>
 <ol>
 <li>Inicia el entorno interactivo ejecutando:
-   <code>bash
-   node</code></li>
+   <div class="highlight"><pre><span></span><code>node
+</code></pre></div></li>
 <li>Escribe comandos simples:
-   <code>javascript
-   console.log("Hola desde el REPL");
-   2 + 2;</code></li>
+   <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hola desde el REPL&quot;</span><span class="p">);</span>
+<span class="mf">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+</code></pre></div></li>
 </ol>
 <hr />
 <h3 id="actividad-practica"><strong>Actividad Práctica</strong></h3>
@@ -1091,21 +1091,21 @@
 <li>Configura el entorno completo instalando Node.js y VSCode.</li>
 <li>Crea una carpeta llamada <code>proyecto_inicial</code>.</li>
 <li>Dentro de la carpeta, crea un archivo <code>index.js</code> con este código:
-   <code>javascript
-   const nombre = "Estudiante";
-   console.log(`¡Bienvenido, ${nombre}, a la programación con JavaScript!`);</code></li>
+   <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Estudiante&quot;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`¡Bienvenido, </span><span class="si">${</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">, a la programación con JavaScript!`</span><span class="p">);</span>
+</code></pre></div></li>
 <li>Ejecuta el programa en la consola.</li>
 </ol>
 <h4 id="reto-extra"><strong>Reto Extra</strong></h4>
 <ol>
 <li>Investiga cómo instalar un paquete de npm.</li>
 <li>Instala <code>chalk</code> y úsalo para cambiar el color del texto en la consola:
-   <code>bash
-   npm install chalk</code></li>
+   <div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>chalk
+</code></pre></div></li>
 <li>Código de ejemplo:
-   <code>javascript
-   const chalk = require('chalk');
-   console.log(chalk.green("¡Texto en color verde!"));</code></li>
+   <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">chalk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;chalk&#39;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">chalk</span><span class="p">.</span><span class="nx">green</span><span class="p">(</span><span class="s2">&quot;¡Texto en color verde!&quot;</span><span class="p">));</span>
+</code></pre></div></li>
 </ol>
 <hr />
 <h3 id="evaluacion"><strong>Evaluación</strong></h3>
@@ -1127,16 +1127,16 @@
 <p><strong>Formas de declarar variables en JavaScript:</strong></p>
 <ol>
 <li><strong><code>let</code>:</strong> Permite declarar variables que pueden ser modificadas.
-    <code>javascript
-    let nombre = "Juan";
-    nombre = "Ana"; // Esto es válido</code></li>
+    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Juan&quot;</span><span class="p">;</span>
+<span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Ana&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Esto es válido</span>
+</code></pre></div></li>
 <li><strong><code>const</code>:</strong> Se utiliza para declarar constantes, es decir, valores que no cambian.
-    <code>javascript
-    const pi = 3.1416;
-    // pi = 3; // Esto generará un error</code></li>
+    <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.1416</span><span class="p">;</span>
+<span class="c1">// pi = 3; // Esto generará un error</span>
+</code></pre></div></li>
 <li><strong><code>var</code>:</strong> Declaración más antigua. Evita su uso en favor de <code>let</code> y <code>const</code> debido a problemas de alcance.
-    <code>javascript
-    var edad = 25;</code></li>
+    <div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">25</span><span class="p">;</span>
+</code></pre></div></li>
 </ol>
 <p><strong>Buenas prácticas:</strong></p>
 <ul>
@@ -1150,85 +1150,85 @@
 <ol>
 <li>
 <p><strong>String (Cadenas):</strong> Representa texto.
-    <code>javascript
-    let mensaje = "Hola, mundo!";
-    console.log(typeof mensaje); // "string"</code></p>
+    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">mensaje</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Hola, mundo!&quot;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">mensaje</span><span class="p">);</span><span class="w"> </span><span class="c1">// &quot;string&quot;</span>
+</code></pre></div></p>
 </li>
 <li>
 <p><strong>Number (Números):</strong> Incluye enteros y decimales.
-    <code>javascript
-    let entero = 10;
-    let decimal = 3.14;</code></p>
+    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">entero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">decimal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14</span><span class="p">;</span>
+</code></pre></div></p>
 </li>
 <li>
 <p><strong>Boolean (Booleanos):</strong> Valores <code>true</code> o <code>false</code>.
-    <code>javascript
-    let esActivo = true;
-    let esMayor = 10 &gt; 5; // true</code></p>
+    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">esActivo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">esMayor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span><span class="w"> </span><span class="c1">// true</span>
+</code></pre></div></p>
 </li>
 <li>
 <p><strong>Undefined:</strong> Indica que una variable ha sido declarada pero no tiene valor.
-    <code>javascript
-    let indefinido;
-    console.log(indefinido); // undefined</code></p>
+    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">indefinido</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">indefinido</span><span class="p">);</span><span class="w"> </span><span class="c1">// undefined</span>
+</code></pre></div></p>
 </li>
 <li>
 <p><strong>Null:</strong> Representa un valor intencionalmente vacío.
-    <code>javascript
-    let vacio = null;</code></p>
+    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">vacio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</code></pre></div></p>
 </li>
 <li>
 <p><strong>Symbol (Símbolos):</strong> Valores únicos e inmutables, utilizados principalmente en programación avanzada.
-    <code>javascript
-    let id = Symbol("id");</code></p>
+    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Symbol</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">);</span>
+</code></pre></div></p>
 </li>
 <li>
 <p><strong>BigInt:</strong> Representa números enteros muy grandes.
-    <code>javascript
-    let numeroGrande = 1234567890123456789012345678901234567890n;</code></p>
+    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">numeroGrande</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1234567890123456789012345678901234567890n</span><span class="p">;</span>
+</code></pre></div></p>
 </li>
 </ol>
 <hr />
 <h4 id="123-operadores-basicos"><strong>1.2.3 Operadores Básicos</strong></h4>
 <p><strong>Operadores Aritméticos:</strong>
 - Suma: <code>+</code>
-    <code>javascript
-    let resultado = 5 + 3; // 8</code>
+    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// 8</span>
+</code></pre></div>
 - Resta: <code>-</code>
-    <code>javascript
-    let resultado = 10 - 6; // 4</code>
+    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">6</span><span class="p">;</span><span class="w"> </span><span class="c1">// 4</span>
+</code></pre></div>
 - Multiplicación: <code>*</code>
-    <code>javascript
-    let resultado = 4 * 2; // 8</code>
+    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 8</span>
+</code></pre></div>
 - División: <code>/</code>
-    <code>javascript
-    let resultado = 9 / 3; // 3</code>
+    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">9</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// 3</span>
+</code></pre></div>
 - Resto o módulo: <code>%</code>
-    <code>javascript
-    let resto = 10 % 3; // 1</code></p>
+    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">resto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// 1</span>
+</code></pre></div></p>
 <p><strong>Operadores de Comparación:</strong>
 - Igualdad estricta: <code>===</code>
-    <code>javascript
-    console.log(5 === "5"); // false</code>
+    <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">5</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;5&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// false</span>
+</code></pre></div>
 - Diferente: <code>!==</code>
-    <code>javascript
-    console.log(10 !== 5); // true</code>
+    <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">10</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
+</code></pre></div>
 - Mayor que: <code>&gt;</code>
-    <code>javascript
-    console.log(7 &gt; 3); // true</code>
+    <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">7</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">3</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
+</code></pre></div>
 - Menor que: <code>&lt;</code>
-    <code>javascript
-    console.log(2 &lt; 5); // true</code></p>
+    <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">2</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
+</code></pre></div></p>
 <p><strong>Operadores Lógicos:</strong>
 - AND (<code>&amp;&amp;</code>): Devuelve <code>true</code> si ambos operandos son verdaderos.
-    <code>javascript
-    console.log(true &amp;&amp; false); // false</code>
+    <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="kc">true</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span><span class="w"> </span><span class="c1">// false</span>
+</code></pre></div>
 - OR (<code>||</code>): Devuelve <code>true</code> si al menos uno de los operandos es verdadero.
-    <code>javascript
-    console.log(true || false); // true</code>
+    <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="kc">true</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
+</code></pre></div>
 - NOT (<code>!</code>): Invierte el valor lógico.
-    <code>javascript
-    console.log(!true); // false</code></p>
+    <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="o">!</span><span class="kc">true</span><span class="p">);</span><span class="w"> </span><span class="c1">// false</span>
+</code></pre></div></p>
 <hr />
 <h4 id="124-ejercicio-practico"><strong>1.2.4 Ejercicio Práctico</strong></h4>
 <ol>
@@ -1241,28 +1241,18 @@
 <li>Calcula la suma, resta, multiplicación, división y módulo de ambas variables.</li>
 <li>
 <p>Muestra los resultados en la consola.</p>
-<p>??? example "Mostrar soluciones"</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">```</span><span class="nt">javascript</span>
-<span class="w">    </span><span class="nt">let</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">10</span><span class="o">;</span>
-<span class="w">    </span><span class="nt">let</span><span class="w"> </span><span class="nt">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">5</span><span class="o">;</span>
+<details class="example">
+<summary>Mostrar soluciones</summary>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span>
 
-<span class="w">    </span><span class="nt">console</span><span class="p">.</span><span class="nc">log</span><span class="o">(</span><span class="s2">&quot;Suma:&quot;</span><span class="o">,</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nt">b</span><span class="o">);</span>
-<span class="w">    </span><span class="nt">console</span><span class="p">.</span><span class="nc">log</span><span class="o">(</span><span class="s2">&quot;Resta:&quot;</span><span class="o">,</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="nt">-</span><span class="w"> </span><span class="nt">b</span><span class="o">);</span>
-<span class="w">    </span><span class="nt">console</span><span class="p">.</span><span class="nc">log</span><span class="o">(</span><span class="s2">&quot;Multiplicación:&quot;</span><span class="o">,</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nt">b</span><span class="o">);</span>
-<span class="w">    </span><span class="nt">console</span><span class="p">.</span><span class="nc">log</span><span class="o">(</span><span class="s2">&quot;División:&quot;</span><span class="o">,</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nt">b</span><span class="o">);</span>
-<span class="w">    </span><span class="nt">console</span><span class="p">.</span><span class="nc">log</span><span class="o">(</span><span class="s2">&quot;Módulo:&quot;</span><span class="o">,</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="nt">b</span><span class="o">);</span>
-<span class="err">```</span>
-</code></pre></div></td></tr></table></div>
-
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Suma:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Resta:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">b</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Multiplicación:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">b</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;División:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">b</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Módulo:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="nx">b</span><span class="p">);</span>
+</code></pre></div>
+</details>
 </li>
 <li>
 <p><strong>Reto adicional:</strong></p>
@@ -1298,18 +1288,13 @@
 <li>Asigna tus datos a estas variables.</li>
 <li>Muestra un mensaje en la consola que diga: "Mi nombre es [nombre] y tengo [edad] años".</li>
 </ol>
-<p>??? example "Solución ejercicio 1"</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>```javascript
-let<span class="w"> </span>nombre<span class="w"> </span>=<span class="w"> </span>&quot;Juan&quot;;
-let<span class="w"> </span>edad<span class="w"> </span>=<span class="w"> </span>25;
-console.log(`Mi<span class="w"> </span>nombre<span class="w"> </span>es<span class="w"> </span><span class="cp">${</span><span class="n">nombre</span><span class="cp">}</span><span class="w"> </span>y<span class="w"> </span>tengo<span class="w"> </span><span class="cp">${</span><span class="n">edad</span><span class="cp">}</span><span class="w"> </span>años`);
-```
-</code></pre></div></td></tr></table></div>
-
+<details class="example">
+<summary>Solución ejercicio 1</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Juan&quot;</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">25</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Mi nombre es </span><span class="si">${</span><span class="nx">nombre</span><span class="si">}</span><span class="sb"> y tengo </span><span class="si">${</span><span class="nx">edad</span><span class="si">}</span><span class="sb"> años`</span><span class="p">);</span>
+</code></pre></div>
+</details>
 <hr />
 <h4 id="ejercicio-2-suma-de-dos-numeros"><strong>Ejercicio 2: Suma de dos números</strong></h4>
 <ol>
@@ -1317,20 +1302,14 @@ console.log(`Mi<span class="w"> </span>nombre<span class="w"> </span>es<span cla
 <li>Calcula la suma de ambos números y almacena el resultado en una tercera variable.</li>
 <li>Muestra el resultado en la consola.</li>
 </ol>
-<p>??? example "Solución ejercicio 2"</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>```javascript
-let<span class="w"> </span>num1<span class="w"> </span>=<span class="w"> </span>10;
-let<span class="w"> </span>num2<span class="w"> </span>=<span class="w"> </span>20;
-let<span class="w"> </span>suma<span class="w"> </span>=<span class="w"> </span>num1<span class="w"> </span>+<span class="w"> </span>num2;
-console.log(`La<span class="w"> </span>suma<span class="w"> </span>es:<span class="w"> </span><span class="cp">${</span><span class="n">suma</span><span class="cp">}</span>`);
-```
-</code></pre></div></td></tr></table></div>
-
+<details class="example">
+<summary>Solución ejercicio 2</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">20</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">num2</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`La suma es: </span><span class="si">${</span><span class="nx">suma</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</code></pre></div>
+</details>
 <hr />
 <h4 id="ejercicio-3-operaciones-matematicas-basicas"><strong>Ejercicio 3: Operaciones matemáticas básicas</strong></h4>
 <ol>
@@ -1342,28 +1321,18 @@ console.log(`La<span class="w"> </span>suma<span class="w"> </span>es:<span clas
 <li>División</li>
 <li>Módulo (resto)</li>
 </ol>
-<p>??? example "Solución ejercicio 3"</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">```</span><span class="nt">javascript</span>
-<span class="nt">let</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">15</span><span class="o">;</span>
-<span class="nt">let</span><span class="w"> </span><span class="nt">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">4</span><span class="o">;</span>
+<details class="example">
+<summary>Solución ejercicio 3</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">15</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4</span><span class="p">;</span>
 
-<span class="nt">console</span><span class="p">.</span><span class="nc">log</span><span class="o">(</span><span class="s2">&quot;Suma:&quot;</span><span class="o">,</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nt">b</span><span class="o">);</span>
-<span class="nt">console</span><span class="p">.</span><span class="nc">log</span><span class="o">(</span><span class="s2">&quot;Resta:&quot;</span><span class="o">,</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="nt">-</span><span class="w"> </span><span class="nt">b</span><span class="o">);</span>
-<span class="nt">console</span><span class="p">.</span><span class="nc">log</span><span class="o">(</span><span class="s2">&quot;Multiplicación:&quot;</span><span class="o">,</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nt">b</span><span class="o">);</span>
-<span class="nt">console</span><span class="p">.</span><span class="nc">log</span><span class="o">(</span><span class="s2">&quot;División:&quot;</span><span class="o">,</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nt">b</span><span class="o">);</span>
-<span class="nt">console</span><span class="p">.</span><span class="nc">log</span><span class="o">(</span><span class="s2">&quot;Módulo:&quot;</span><span class="o">,</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="nt">b</span><span class="o">);</span>
-<span class="err">```</span>
-</code></pre></div></td></tr></table></div>
-
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Suma:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Resta:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">b</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Multiplicación:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">b</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;División:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">b</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Módulo:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="nx">b</span><span class="p">);</span>
+</code></pre></div>
+</details>
 <hr />
 <h4 id="ejercicio-4-comparaciones"><strong>Ejercicio 4: Comparaciones</strong></h4>
 <ol>
@@ -1373,44 +1342,30 @@ console.log(`La<span class="w"> </span>suma<span class="w"> </span>es:<span clas
 <li>¿<code>x</code> es igual a <code>y</code> (igualdad estricta)?</li>
 <li>¿<code>x</code> es diferente de <code>y</code>?</li>
 </ol>
-<p>??? example "Solución ejercicio 4"</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">```</span><span class="nt">javascript</span>
-<span class="nt">let</span><span class="w"> </span><span class="nt">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">8</span><span class="o">;</span>
-<span class="nt">let</span><span class="w"> </span><span class="nt">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">5</span><span class="o">;</span>
+<details class="example">
+<summary>Solución ejercicio 4</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">8</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span>
 
-<span class="nt">console</span><span class="p">.</span><span class="nc">log</span><span class="o">(</span><span class="s2">&quot;x es mayor que y:&quot;</span><span class="o">,</span><span class="w"> </span><span class="nt">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nt">y</span><span class="o">);</span>
-<span class="nt">console</span><span class="p">.</span><span class="nc">log</span><span class="o">(</span><span class="s2">&quot;x es igual a y:&quot;</span><span class="o">,</span><span class="w"> </span><span class="nt">x</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nt">y</span><span class="o">);</span>
-<span class="nt">console</span><span class="p">.</span><span class="nc">log</span><span class="o">(</span><span class="s2">&quot;x es diferente de y:&quot;</span><span class="o">,</span><span class="w"> </span><span class="nt">x</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="nt">y</span><span class="o">);</span>
-<span class="err">```</span>
-</code></pre></div></td></tr></table></div>
-
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;x es mayor que y:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">y</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;x es igual a y:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">y</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;x es diferente de y:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="nx">y</span><span class="p">);</span>
+</code></pre></div>
+</details>
 <hr />
 <h4 id="ejercicio-5-negacion-logica"><strong>Ejercicio 5: Negación lógica</strong></h4>
 <ol>
 <li>Declara una variable booleana llamada <code>esActivo</code> y asígnale el valor <code>true</code>.</li>
 <li>Muestra en la consola el valor de <code>esActivo</code> y su opuesto usando el operador <code>!</code>.</li>
 </ol>
-<p>??? example "Solución ejercicio 5"</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">```</span><span class="nt">javascript</span>
-<span class="nt">let</span><span class="w"> </span><span class="nt">esActivo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">true</span><span class="o">;</span>
+<details class="example">
+<summary>Solución ejercicio 5</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">esActivo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
 
-<span class="nt">console</span><span class="p">.</span><span class="nc">log</span><span class="o">(</span><span class="s2">&quot;Valor original:&quot;</span><span class="o">,</span><span class="w"> </span><span class="nt">esActivo</span><span class="o">);</span>
-<span class="nt">console</span><span class="p">.</span><span class="nc">log</span><span class="o">(</span><span class="s2">&quot;Valor negado:&quot;</span><span class="o">,</span><span class="w"> </span><span class="o">!</span><span class="nt">esActivo</span><span class="o">);</span>
-<span class="err">```</span>
-</code></pre></div></td></tr></table></div>
-
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Valor original:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">esActivo</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Valor negado:&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">!</span><span class="nx">esActivo</span><span class="p">);</span>
+</code></pre></div>
+</details>
 <hr />
 <h4 id="ejercicio-6-concatenacion-de-cadenas"><strong>Ejercicio 6: Concatenación de cadenas</strong></h4>
 <ol>
@@ -1419,20 +1374,14 @@ console.log(`La<span class="w"> </span>suma<span class="w"> </span>es:<span clas
 <li><code>apellido</code> con tu apellido.</li>
 <li>Usa el operador <code>+</code> para concatenar ambas variables y mostrar en la consola un mensaje que diga: "Hola, mi nombre es [nombre completo]".</li>
 </ol>
-<p>??? example "Solución ejercicio 6"</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>```javascript
-let nombre = &quot;Juan&quot;;
-let apellido = &quot;Pérez&quot;;
+<details class="example">
+<summary>Solución ejercicio 6</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Juan&quot;</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">apellido</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Pérez&quot;</span><span class="p">;</span>
 
-console.log(&quot;Hola, mi nombre es &quot; + nombre + &quot; &quot; + apellido);
-```
-</code></pre></div></td></tr></table></div>
-
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hola, mi nombre es &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">apellido</span><span class="p">);</span>
+</code></pre></div>
+</details>
 <hr />
 <h4 id="ejercicio-7-conversion-de-tipos"><strong>Ejercicio 7: Conversión de tipos</strong></h4>
 <ol>
@@ -1440,20 +1389,14 @@ console.log(&quot;Hola, mi nombre es &quot; + nombre + &quot; &quot; + apellido)
 <li>Convierte esta cadena a un número y almacénalo en otra variable.</li>
 <li>Suma este número con otro valor numérico y muestra el resultado en la consola.</li>
 </ol>
-<p>??? example "Solución ejercicio 7"</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">```</span><span class="nt">javascript</span>
-<span class="nt">let</span><span class="w"> </span><span class="nt">numeroComoTexto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;123&quot;</span><span class="o">;</span>
-<span class="nt">let</span><span class="w"> </span><span class="nt">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">parseInt</span><span class="o">(</span><span class="nt">numeroComoTexto</span><span class="o">);</span>
+<details class="example">
+<summary>Solución ejercicio 7</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">numeroComoTexto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;123&quot;</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">numeroComoTexto</span><span class="p">);</span>
 
-<span class="nt">console</span><span class="p">.</span><span class="nc">log</span><span class="o">(</span><span class="s2">&quot;Resultado de la suma:&quot;</span><span class="o">,</span><span class="w"> </span><span class="nt">numero</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nt">50</span><span class="o">);</span>
-<span class="err">```</span>
-</code></pre></div></td></tr></table></div>
-
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Resultado de la suma:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">50</span><span class="p">);</span>
+</code></pre></div>
+</details>
 <hr />
 <h4 id="ejercicio-8-operadores-logicos"><strong>Ejercicio 8: Operadores lógicos</strong></h4>
 <ol>
@@ -1463,69 +1406,46 @@ console.log(&quot;Hola, mi nombre es &quot; + nombre + &quot; &quot; + apellido)
 <li><code>a || b</code></li>
 <li><code>!c</code></li>
 </ol>
-<p>??? example "Solución ejercicio 8"</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">```</span><span class="nt">javascript</span>
-<span class="nt">let</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">true</span><span class="o">;</span>
-<span class="nt">let</span><span class="w"> </span><span class="nt">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">false</span><span class="o">;</span>
-<span class="nt">let</span><span class="w"> </span><span class="nt">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">true</span><span class="o">;</span>
+<details class="example">
+<summary>Solución ejercicio 8</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
 
-<span class="nt">console</span><span class="p">.</span><span class="nc">log</span><span class="o">(</span><span class="s2">&quot;a &amp;&amp; b:&quot;</span><span class="o">,</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nt">b</span><span class="o">);</span>
-<span class="nt">console</span><span class="p">.</span><span class="nc">log</span><span class="o">(</span><span class="s2">&quot;a || b:&quot;</span><span class="o">,</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nt">b</span><span class="o">);</span>
-<span class="nt">console</span><span class="p">.</span><span class="nc">log</span><span class="o">(</span><span class="s2">&quot;!c:&quot;</span><span class="o">,</span><span class="w"> </span><span class="o">!</span><span class="nt">c</span><span class="o">);</span>
-<span class="err">```</span>
-</code></pre></div></td></tr></table></div>
-
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;a &amp;&amp; b:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">b</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;a || b:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">b</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;!c:&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">!</span><span class="nx">c</span><span class="p">);</span>
+</code></pre></div>
+</details>
 <hr />
 <h3 id="uso-de-prompt-sync-en-nodejs"><strong>Uso de <code>prompt-sync</code> en Node.js</strong></h3>
 <p>ES6 introdujo el método <code>prompt</code> para solicitar datos al usuario en el navegador, pero en Node.js no está disponible por defecto. Para interactuar con el usuario en Node.js, puedes utilizar la biblioteca <code>prompt-sync</code>. Es la manera que tenemos en Node.js de solicitar datos al usuario de forma sincrónica.</p>
 <p><strong><code>prompt-sync</code></strong> es una biblioteca que facilita las entradas sincronizadas en Node.js.</p>
 <h4 id="instalacion">Instalación:</h4>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="sb">`</span>npm<span class="w"> </span>install<span class="w"> </span>prompt-sync<span class="sb">`</span>
-</code></pre></div></td></tr></table></div>
-
+<div class="highlight"><pre><span></span><code><span class="sb">`</span>npm<span class="w"> </span>install<span class="w"> </span>prompt-sync<span class="sb">`</span>
+</code></pre></div>
 <h4 id="ejemplo">Ejemplo:</h4>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
 
 <span class="kd">let</span><span class="w"> </span><span class="nx">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;¿Qué edad tienes? &quot;</span><span class="p">);</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`¡Hola, tienes </span><span class="si">${</span><span class="nx">edad</span><span class="si">}</span><span class="sb"> años`</span><span class="p">);</span>
-</code></pre></div></td></tr></table></div>
-
+</code></pre></div>
 <h4 id="ejercicio-9-solicitar-el-nombre-del-usuario"><strong>Ejercicio 9: Solicitar el nombre del usuario</strong></h4>
 <ol>
 <li>Crea un programa que solicite al usuario su nombre mediante <code>prompt-sync</code>.</li>
 <li>Muestra un saludo personalizado en la consola, como: "¡Hola, [nombre]!"</li>
 </ol>
-<p>??? example "Solución ejercicio 9"</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
-<span class="k">const</span><span class="w"> </span><span class="n">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+<details class="example">
+<summary>Solución ejercicio 9</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
 
-<span class="o">//</span><span class="w"> </span><span class="n">Solicitar</span><span class="w"> </span><span class="n">el</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="n">al</span><span class="w"> </span><span class="n">usuario</span>
-<span class="n">let</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prompt</span><span class="p">(</span><span class="s2">&quot;¿Cómo te llamas? &quot;</span><span class="p">);</span>
+<span class="c1">// Solicitar el nombre al usuario</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;¿Cómo te llamas? &quot;</span><span class="p">);</span>
 
-<span class="o">//</span><span class="w"> </span><span class="n">Mostrar</span><span class="w"> </span><span class="n">saludo</span><span class="w"> </span><span class="n">personalizado</span>
-<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="err">`¡</span><span class="n">Hola</span><span class="p">,</span><span class="w"> </span><span class="o">$</span><span class="p">{</span><span class="n">nombre</span><span class="p">}</span><span class="o">!</span><span class="err">`</span><span class="p">);</span>
-<span class="err">```</span>
-</code></pre></div></td></tr></table></div>
-
+<span class="c1">// Mostrar saludo personalizado</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`¡Hola, </span><span class="si">${</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">!`</span><span class="p">);</span>
+</code></pre></div>
+</details>
 <hr />
 <h4 id="ejercicio-10-calculadora-basica"><strong>Ejercicio 10: Calculadora básica</strong></h4>
 <ol>
@@ -1534,48 +1454,28 @@ console.log(&quot;Hola, mi nombre es &quot; + nombre + &quot; &quot; + apellido)
 <li>Realice las operaciones matemáticas básicas (suma, resta, multiplicación y división).</li>
 <li>Muestre los resultados en la consola.</li>
 </ol>
-<p>??? example "Solución ejercicio 10"</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
-<span class="k">const</span><span class="w"> </span><span class="n">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+<details class="example">
+<summary>Solución ejercicio 10</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
 
-<span class="o">//</span><span class="w"> </span><span class="n">Solicitar</span><span class="w"> </span><span class="n">números</span><span class="w"> </span><span class="n">al</span><span class="w"> </span><span class="n">usuario</span>
-<span class="n">let</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parseFloat</span><span class="p">(</span><span class="n">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el primer número: &quot;</span><span class="p">));</span>
-<span class="n">let</span><span class="w"> </span><span class="n">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parseFloat</span><span class="p">(</span><span class="n">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el segundo número: &quot;</span><span class="p">));</span>
+<span class="c1">// Solicitar números al usuario</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el primer número: &quot;</span><span class="p">));</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el segundo número: &quot;</span><span class="p">));</span>
 
-<span class="o">//</span><span class="w"> </span><span class="n">Realizar</span><span class="w"> </span><span class="n">operaciones</span><span class="w"> </span><span class="n">matemáticas</span><span class="w"> </span><span class="n">básicas</span>
-<span class="n">let</span><span class="w"> </span><span class="n">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">num2</span><span class="p">;</span>
-<span class="n">let</span><span class="w"> </span><span class="n">resta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">num2</span><span class="p">;</span>
-<span class="n">let</span><span class="w"> </span><span class="n">multiplicacion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">num2</span><span class="p">;</span>
-<span class="n">let</span><span class="w"> </span><span class="n">division</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">num2</span><span class="p">;</span>
+<span class="c1">// Realizar operaciones matemáticas básicas</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">num2</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">resta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">num2</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">multiplicacion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">num2</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">division</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">num2</span><span class="p">;</span>
 
-<span class="o">//</span><span class="w"> </span><span class="n">Mostrar</span><span class="w"> </span><span class="n">los</span><span class="w"> </span><span class="n">resultados</span>
-<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Resultados:&quot;</span><span class="p">);</span>
-<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Suma: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">suma</span><span class="p">);</span>
-<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Resta: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">resta</span><span class="p">);</span>
-<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Multiplicación: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">multiplicacion</span><span class="p">);</span>
-<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;División: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">division</span><span class="p">);</span>
-<span class="err">```</span>
-</code></pre></div></td></tr></table></div>
-
+<span class="c1">// Mostrar los resultados</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Resultados:&quot;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Suma: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">suma</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Resta: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">resta</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Multiplicación: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">multiplicacion</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;División: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">division</span><span class="p">);</span>
+</code></pre></div>
+</details>
 <hr />
 <h1 id="bloque-13-estructuras-basicas-de-control"><strong>Bloque 1.3: Estructuras Básicas de Control</strong></h1>
 <hr />
@@ -1625,98 +1525,60 @@ console.log(&quot;Hola, mi nombre es &quot; + nombre + &quot; &quot; + apellido)
 <ul>
 <li>Solicita al usuario dos números y determina cuál es mayor, menor o si son iguales.</li>
 </ul>
-<p>??? example "Solución"</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
-<span class="k">const</span><span class="w"> </span><span class="n">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
 
-<span class="n">let</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parseFloat</span><span class="p">(</span><span class="n">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el primer número: &quot;</span><span class="p">));</span>
-<span class="n">let</span><span class="w"> </span><span class="n">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parseFloat</span><span class="p">(</span><span class="n">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el segundo número: &quot;</span><span class="p">));</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el primer número: &quot;</span><span class="p">));</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el segundo número: &quot;</span><span class="p">));</span>
 
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">num1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">num2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="err">`</span><span class="o">$</span><span class="p">{</span><span class="n">num1</span><span class="p">}</span><span class="w"> </span><span class="n">es</span><span class="w"> </span><span class="n">mayor</span><span class="w"> </span><span class="n">que</span><span class="w"> </span><span class="o">$</span><span class="p">{</span><span class="n">num2</span><span class="p">}</span><span class="err">`</span><span class="p">);</span>
-<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">num1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">num2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="err">`</span><span class="o">$</span><span class="p">{</span><span class="n">num1</span><span class="p">}</span><span class="w"> </span><span class="n">es</span><span class="w"> </span><span class="n">menor</span><span class="w"> </span><span class="n">que</span><span class="w"> </span><span class="o">$</span><span class="p">{</span><span class="n">num2</span><span class="p">}</span><span class="err">`</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">num1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">num2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">num1</span><span class="si">}</span><span class="sb"> es mayor que </span><span class="si">${</span><span class="nx">num2</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">num1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">num2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">num1</span><span class="si">}</span><span class="sb"> es menor que </span><span class="si">${</span><span class="nx">num2</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
 <span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="err">`</span><span class="o">$</span><span class="p">{</span><span class="n">num1</span><span class="p">}</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">$</span><span class="p">{</span><span class="n">num2</span><span class="p">}</span><span class="w"> </span><span class="n">son</span><span class="w"> </span><span class="n">iguales</span><span class="err">`</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">num1</span><span class="si">}</span><span class="sb"> y </span><span class="si">${</span><span class="nx">num2</span><span class="si">}</span><span class="sb"> son iguales`</span><span class="p">);</span>
 <span class="p">}</span>
-<span class="err">```</span>
-</code></pre></div></td></tr></table></div>
-
+</code></pre></div>
+</details>
 <hr />
 <h4 id="ejercicio-2-numero-positivo-o-negativo"><strong>Ejercicio 2: Número positivo o negativo</strong></h4>
 <ul>
 <li>Solicita un número y determina si es positivo, negativo o cero.</li>
 </ul>
-<p>??? example "Solución"</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
-<span class="k">const</span><span class="w"> </span><span class="n">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
 
-<span class="n">let</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parseFloat</span><span class="p">(</span><span class="n">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce un número: &quot;</span><span class="p">));</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce un número: &quot;</span><span class="p">));</span>
 
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numero</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;El número es positivo&quot;</span><span class="p">);</span>
-<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numero</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;El número es negativo&quot;</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">numero</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El número es positivo&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">numero</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El número es negativo&quot;</span><span class="p">);</span>
 <span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;El número es cero&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El número es cero&quot;</span><span class="p">);</span>
 <span class="p">}</span>
-<span class="err">```</span>
-</code></pre></div></td></tr></table></div>
-
+</code></pre></div>
+</details>
 <hr />
 <h4 id="ejercicio-3-verificacion-de-edad"><strong>Ejercicio 3: Verificación de edad</strong></h4>
 <ul>
 <li>Solicita al usuario su edad y determina si es mayor o menor de edad.</li>
 </ul>
-<p>??? example "Solución"</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
-<span class="k">const</span><span class="w"> </span><span class="n">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
 
-<span class="n">let</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parseInt</span><span class="p">(</span><span class="n">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce tu edad: &quot;</span><span class="p">));</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce tu edad: &quot;</span><span class="p">));</span>
 
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">edad</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">18</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Eres mayor de edad&quot;</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">edad</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">18</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Eres mayor de edad&quot;</span><span class="p">);</span>
 <span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Eres menor de edad&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Eres menor de edad&quot;</span><span class="p">);</span>
 <span class="p">}</span>
-<span class="err">```</span>
-</code></pre></div></td></tr></table></div>
-
+</code></pre></div>
+</details>
 <hr />
 <h3 id="132-if-else-anidado"><strong>1.3.2 If-Else Anidado</strong></h3>
 <h4 id="que-es-un-if-else-anidado"><strong>¿Qué es un if-else anidado?</strong></h4>
@@ -1786,38 +1648,23 @@ console.log(&quot;Hola, mi nombre es &quot; + nombre + &quot; &quot; + apellido)
 <li><code>B</code>: Entre 80 y 89.</li>
 <li><code>C</code>: Menos de 80.</li>
 </ul>
-<p>??? example "Solución"</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
-<span class="k">const</span><span class="w"> </span><span class="n">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
 
-<span class="n">let</span><span class="w"> </span><span class="n">nota</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parseInt</span><span class="p">(</span><span class="n">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce tu calificación: &quot;</span><span class="p">));</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">nota</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce tu calificación: &quot;</span><span class="p">));</span>
 
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nota</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">90</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Tu calificación es A&quot;</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">nota</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">90</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Tu calificación es A&quot;</span><span class="p">);</span>
 <span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nota</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">80</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Tu calificación es B&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">nota</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">80</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Tu calificación es B&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Tu calificación es C&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Tu calificación es C&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
-<span class="err">```</span>
-</code></pre></div></td></tr></table></div>
-
+</code></pre></div>
+</details>
 <hr />
 <h3 id="133-bucles"><strong>1.3.3 Bucles</strong></h3>
 <h4 id="for"><strong>For</strong></h4>
@@ -1917,74 +1764,48 @@ console.log(&quot;Hola, mi nombre es &quot; + nombre + &quot; &quot; + apellido)
 <ul>
 <li>Usa un bucle <code>for</code> para contar del 1 al 10 y mostrar los números en la consola.</li>
 </ul>
-<p>??? example "Solución"</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>```<span class="nv">javascript</span>
-<span class="k">for</span><span class="w"> </span><span class="ss">(</span><span class="nv">let</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="c1">; i &lt;= 10; i++) {</span>
-<span class="w">    </span><span class="nv">console</span>.<span class="nv">log</span><span class="ss">(</span><span class="nv">i</span><span class="ss">)</span><span class="c1">;</span>
-}
-```
-</code></pre></div></td></tr></table></div>
-
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
 <hr />
 <h5 id="ejercicio-2-suma-de-numeros-del-1-al-100"><strong>Ejercicio 2: Suma de números del 1 al 100</strong></h5>
 <ul>
 <li>Usa un bucle <code>while</code> para sumar los números del 1 al 100.</li>
 </ul>
-<p>??? example "Solución"</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">```</span><span class="nt">javascript</span>
-<span class="nt">let</span><span class="w"> </span><span class="nt">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">1</span><span class="o">;</span>
-<span class="nt">let</span><span class="w"> </span><span class="nt">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">0</span><span class="o">;</span>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
 
-<span class="nt">while</span><span class="w"> </span><span class="o">(</span><span class="nt">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nt">100</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="err">suma</span><span class="w"> </span><span class="err">+=</span><span class="w"> </span><span class="err">i</span><span class="p">;</span>
-<span class="w">    </span><span class="err">i++</span><span class="p">;</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">100</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">suma</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">i</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">i</span><span class="o">++</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="nt">console</span><span class="p">.</span><span class="nc">log</span><span class="o">(</span><span class="s2">&quot;La suma de los números del 1 al 100 es:&quot;</span><span class="o">,</span><span class="w"> </span><span class="nt">suma</span><span class="o">);</span>
-<span class="err">```</span>
-</code></pre></div></td></tr></table></div>
-
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;La suma de los números del 1 al 100 es:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">suma</span><span class="p">);</span>
+</code></pre></div>
+</details>
 <hr />
 <h5 id="ejercicio-3-mostrar-numeros-impares"><strong>Ejercicio 3: Mostrar números impares</strong></h5>
 <ul>
 <li>Usa un bucle <code>do-while</code> para mostrar los números impares entre 1 y 20.</li>
 </ul>
-<p>??? example "Solución"</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code>```<span class="nv">javascript</span>
-<span class="nv">let</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="c1">;</span>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
 
-<span class="k">do</span><span class="w"> </span>{
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="ss">(</span><span class="nv">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="mi">0</span><span class="ss">)</span><span class="w"> </span>{
-<span class="w">        </span><span class="nv">console</span>.<span class="nv">log</span><span class="ss">(</span><span class="nv">i</span><span class="ss">)</span><span class="c1">;</span>
-<span class="w">    </span>}
-<span class="w">    </span><span class="nv">i</span><span class="o">++</span><span class="c1">;</span>
-}<span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="ss">(</span><span class="nv">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">20</span><span class="ss">)</span><span class="c1">;</span>
-```
-</code></pre></div></td></tr></table></div>
-
+<span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">20</span><span class="p">);</span>
+</code></pre></div>
+</details>
 <hr />
 <h3 id="for-anidado"><strong>For Anidado</strong></h3>
 <h4 id="que-es-un-for-anidado"><strong>¿Qué es un for anidado?</strong></h4>
@@ -2011,69 +1832,42 @@ for<span class="w"> </span>(let<span class="w"> </span>i<span class="w"> </span>
 <ul>
 <li>Crea un programa que solicite al usuario un número y luego muestre su tabla de multiplicar del 1 al 10.</li>
 </ul>
-<p>??? example "Solución"</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
-<span class="k">const</span><span class="w"> </span><span class="n">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
 
-<span class="n">let</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parseInt</span><span class="p">(</span><span class="n">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce un número para generar su tabla de multiplicar: &quot;</span><span class="p">));</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce un número para generar su tabla de multiplicar: &quot;</span><span class="p">));</span>
 
-<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="err">`</span><span class="n">Tabla</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">multiplicar</span><span class="w"> </span><span class="n">del</span><span class="w"> </span><span class="o">$</span><span class="p">{</span><span class="n">numero</span><span class="p">}:</span><span class="err">`</span><span class="p">);</span>
-<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">let</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="err">`</span><span class="o">$</span><span class="p">{</span><span class="n">numero</span><span class="p">}</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">$</span><span class="p">{</span><span class="n">i</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">$</span><span class="p">{</span><span class="n">numero</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">i</span><span class="p">}</span><span class="err">`</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Tabla de multiplicar del </span><span class="si">${</span><span class="nx">numero</span><span class="si">}</span><span class="sb">:`</span><span class="p">);</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">numero</span><span class="si">}</span><span class="sb"> x </span><span class="si">${</span><span class="nx">i</span><span class="si">}</span><span class="sb"> = </span><span class="si">${</span><span class="nx">numero</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">i</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
 <span class="p">}</span>
-<span class="err">```</span>
-</code></pre></div></td></tr></table></div>
-
+</code></pre></div>
+</details>
 <hr />
 <h4 id="ejercicio-2-tablas-de-multiplicar-entre-dos-numeros"><strong>Ejercicio 2: Tablas de multiplicar entre dos números</strong></h4>
 <ul>
 <li>Crea un programa que solicite al usuario dos números y luego escriba las tablas de multiplicar de todos los números comprendidos entre ellos (inclusive).</li>
 </ul>
-<p>??? example "Solución"</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
-<span class="k">const</span><span class="w"> </span><span class="n">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
 
-<span class="n">let</span><span class="w"> </span><span class="n">inicio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parseInt</span><span class="p">(</span><span class="n">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el primer número: &quot;</span><span class="p">));</span>
-<span class="n">let</span><span class="w"> </span><span class="n">fin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parseInt</span><span class="p">(</span><span class="n">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el segundo número: &quot;</span><span class="p">));</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">inicio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el primer número: &quot;</span><span class="p">));</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">fin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el segundo número: &quot;</span><span class="p">));</span>
 
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">inicio</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">fin</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;El primer número debe ser menor o igual que el segundo.&quot;</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">inicio</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">fin</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El primer número debe ser menor o igual que el segundo.&quot;</span><span class="p">);</span>
 <span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">let</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inicio</span><span class="p">;</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">fin</span><span class="p">;</span><span class="w"> </span><span class="n">numero</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="err">`</span>\<span class="n">nTabla</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">multiplicar</span><span class="w"> </span><span class="n">del</span><span class="w"> </span><span class="o">$</span><span class="p">{</span><span class="n">numero</span><span class="p">}:</span><span class="err">`</span><span class="p">);</span>
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">let</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="err">`</span><span class="o">$</span><span class="p">{</span><span class="n">numero</span><span class="p">}</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">$</span><span class="p">{</span><span class="n">i</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">$</span><span class="p">{</span><span class="n">numero</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">i</span><span class="p">}</span><span class="err">`</span><span class="p">);</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">inicio</span><span class="p">;</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nx">fin</span><span class="p">;</span><span class="w"> </span><span class="nx">numero</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`\nTabla de multiplicar del </span><span class="si">${</span><span class="nx">numero</span><span class="si">}</span><span class="sb">:`</span><span class="p">);</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">numero</span><span class="si">}</span><span class="sb"> x </span><span class="si">${</span><span class="nx">i</span><span class="si">}</span><span class="sb"> = </span><span class="si">${</span><span class="nx">numero</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">i</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
-<span class="err">```</span>
-</code></pre></div></td></tr></table></div>
-
+</code></pre></div>
+</details>
 <hr />
 <h2 id="14-uso-basico-de-librerias-integradas"><strong>1.4 Uso Básico de Librerías Integradas</strong></h2>
 <p>JavaScript incluye bibliotecas integradas que proporcionan funcionalidades avanzadas sin necesidad de importar módulos externos. Este apartado cubre el uso básico de <strong>Math</strong> y funciones comunes para manipular enteros, decimales y cadenas.</p>
@@ -2088,18 +1882,18 @@ for<span class="w"> </span>(let<span class="w"> </span>i<span class="w"> </span>
 <li><code>Math.ceil(x)</code>: Redondea hacia arriba.</li>
 <li><code>Math.round(x)</code>: Redondea al número entero más cercano.</li>
 </ul>
-<p><code>javascript
-console.log(Math.floor(4.7)); // 4
-console.log(Math.ceil(4.2)); // 5
-console.log(Math.round(4.5)); // 5</code></p>
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="mf">4.7</span><span class="p">));</span><span class="w"> </span><span class="c1">// 4</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="mf">4.2</span><span class="p">));</span><span class="w"> </span><span class="c1">// 5</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="mf">4.5</span><span class="p">));</span><span class="w"> </span><span class="c1">// 5</span>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Aleatorio</strong></p>
 <ul>
 <li><code>Math.random()</code>: Genera un número aleatorio entre 0 (inclusive) y 1 (exclusivo).</li>
 </ul>
-<p><code>javascript
-console.log(Math.random()); // Ejemplo: 0.5487</code></p>
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">());</span><span class="w"> </span><span class="c1">// Ejemplo: 0.5487</span>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Potencias y Raíces</strong></p>
@@ -2107,17 +1901,17 @@ console.log(Math.random()); // Ejemplo: 0.5487</code></p>
 <li><code>Math.pow(base, exponente)</code>: Calcula potencias.</li>
 <li><code>Math.sqrt(x)</code>: Calcula la raíz cuadrada.</li>
 </ul>
-<p><code>javascript
-console.log(Math.pow(2, 3)); // 8
-console.log(Math.sqrt(16)); // 4</code></p>
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">));</span><span class="w"> </span><span class="c1">// 8</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="mf">16</span><span class="p">));</span><span class="w"> </span><span class="c1">// 4</span>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Valor Absoluto</strong></p>
 <ul>
 <li><code>Math.abs(x)</code>: Devuelve el valor absoluto de un número.</li>
 </ul>
-<p><code>javascript
-console.log(Math.abs(-5)); // 5</code></p>
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="o">-</span><span class="mf">5</span><span class="p">));</span><span class="w"> </span><span class="c1">// 5</span>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Mínimos y Máximos</strong></p>
@@ -2125,9 +1919,9 @@ console.log(Math.abs(-5)); // 5</code></p>
 <li><code>Math.min(a, b, c, ...)</code>: Devuelve el menor valor.</li>
 <li><code>Math.max(a, b, c, ...)</code>: Devuelve el mayor valor.</li>
 </ul>
-<p><code>javascript
-console.log(Math.min(5, 10, 2)); // 2
-console.log(Math.max(5, 10, 2)); // 10</code></p>
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">min</span><span class="p">(</span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">));</span><span class="w"> </span><span class="c1">// 2</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">));</span><span class="w"> </span><span class="c1">// 10</span>
+</code></pre></div>
 </li>
 </ol>
 <hr />
@@ -2137,18 +1931,18 @@ console.log(Math.max(5, 10, 2)); // 10</code></p>
 <li><code>parseInt(cadena, base)</code>: Convierte una cadena a un entero.</li>
 <li>
 <p><code>parseFloat(cadena)</code>: Convierte una cadena a un número decimal.</p>
-<p><code>javascript
-console.log(parseInt("42")); // 42
-console.log(parseFloat("3.14")); // 3.14</code></p>
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">parseInt</span><span class="p">(</span><span class="s2">&quot;42&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// 42</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">parseFloat</span><span class="p">(</span><span class="s2">&quot;3.14&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// 3.14</span>
+</code></pre></div>
 </li>
 </ul>
 <h4 id="2-fijar-decimales"><strong>2. Fijar Decimales</strong></h4>
 <ul>
 <li>
 <p><code>numero.toFixed(n)</code>: Devuelve una cadena con el número formateado a <code>n</code> decimales.</p>
-<p><code>javascript
-let num = 3.14159;
-console.log(num.toFixed(2)); // "3.14"</code></p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14159</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="mf">2</span><span class="p">));</span><span class="w"> </span><span class="c1">// &quot;3.14&quot;</span>
+</code></pre></div>
 </li>
 </ul>
 <hr />
@@ -2157,9 +1951,9 @@ console.log(num.toFixed(2)); // "3.14"</code></p>
 <ul>
 <li>
 <p><code>cadena.length</code>: Devuelve el número de caracteres en la cadena.</p>
-<p><code>javascript
-let texto = "Hola, mundo";
-console.log(texto.length); // 11</code></p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Hola, mundo&quot;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">texto</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span><span class="w"> </span><span class="c1">// 11</span>
+</code></pre></div>
 </li>
 </ul>
 <h4 id="2-cambiar-mayusculas-y-minusculas"><strong>2. Cambiar Mayúsculas y Minúsculas</strong></h4>
@@ -2167,37 +1961,37 @@ console.log(texto.length); // 11</code></p>
 <li><code>cadena.toUpperCase()</code>: Convierte a mayúsculas.</li>
 <li>
 <p><code>cadena.toLowerCase()</code>: Convierte a minúsculas.</p>
-<p><code>javascript
-let texto = "JavaScript";
-console.log(texto.toUpperCase()); // "JAVASCRIPT"
-console.log(texto.toLowerCase()); // "javascript"</code></p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;JavaScript&quot;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">texto</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">());</span><span class="w"> </span><span class="c1">// &quot;JAVASCRIPT&quot;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">texto</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">());</span><span class="w"> </span><span class="c1">// &quot;javascript&quot;</span>
+</code></pre></div>
 </li>
 </ul>
 <h4 id="3-cortar-una-cadena"><strong>3. Cortar una Cadena</strong></h4>
 <ul>
 <li>
 <p><code>cadena.substring(inicio, fin)</code>: Extrae caracteres desde <code>inicio</code> hasta <code>fin</code> (no incluido).</p>
-<p><code>javascript
-let texto = "Hola, mundo";
-console.log(texto.substring(0, 4)); // "Hola"</code></p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Hola, mundo&quot;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">texto</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">));</span><span class="w"> </span><span class="c1">// &quot;Hola&quot;</span>
+</code></pre></div>
 </li>
 </ul>
 <h4 id="4-reemplazar-texto"><strong>4. Reemplazar Texto</strong></h4>
 <ul>
 <li>
 <p><code>cadena.replace(buscar, reemplazo)</code>: Reemplaza la primera aparición de un texto.</p>
-<p><code>javascript
-let texto = "Hola, mundo";
-console.log(texto.replace("mundo", "JavaScript")); // "Hola, JavaScript"</code></p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Hola, mundo&quot;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">texto</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s2">&quot;mundo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;JavaScript&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// &quot;Hola, JavaScript&quot;</span>
+</code></pre></div>
 </li>
 </ul>
 <h4 id="5-dividir-una-cadena"><strong>5. Dividir una Cadena</strong></h4>
 <ul>
 <li>
 <p><code>cadena.split(separador)</code>: Divide una cadena en un arreglo según el separador.</p>
-<p><code>javascript
-let texto = "manzana,banana,naranja";
-console.log(texto.split(",")); // ["manzana", "banana", "naranja"]</code></p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;manzana,banana,naranja&quot;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">texto</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// [&quot;manzana&quot;, &quot;banana&quot;, &quot;naranja&quot;]</span>
+</code></pre></div>
 </li>
 </ul>
 <hr />
@@ -2209,41 +2003,28 @@ console.log(texto.split(",")); // ["manzana", "banana", "naranja"]</code></p>
 </ul>
 </li>
 </ul>
-<p>??? example "Solución ejercicio 1"</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
-<span class="k">const</span><span class="w"> </span><span class="n">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+<details class="example">
+<summary>Solución ejercicio 1</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
 
-<span class="n">let</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parseFloat</span><span class="p">(</span><span class="n">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce un número decimal: &quot;</span><span class="p">));</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce un número decimal: &quot;</span><span class="p">));</span>
 
-<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Redondeado hacia abajo:&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">numero</span><span class="p">));</span>
-<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Redondeado hacia arriba:&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">numero</span><span class="p">));</span>
-<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Redondeado al más cercano:&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Math</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">numero</span><span class="p">));</span>
-<span class="err">```</span>
-</code></pre></div></td></tr></table></div>
-
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Redondeado hacia abajo:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">numero</span><span class="p">));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Redondeado hacia arriba:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="nx">numero</span><span class="p">));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Redondeado al más cercano:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">numero</span><span class="p">));</span>
+</code></pre></div>
+</details>
 <hr />
 <h4 id="ejercicio-2-numero-aleatorio"><strong>Ejercicio 2: Número aleatorio</strong></h4>
 <ul>
 <li>Genera un número aleatorio entre 1 y 100 y muéstralo en la consola.</li>
 </ul>
-<p>??? example "Solución ejercicio 2"</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">```</span><span class="nt">javascript</span>
-<span class="nt">let</span><span class="w"> </span><span class="nt">aleatorio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">Math</span><span class="p">.</span><span class="nc">floor</span><span class="o">(</span><span class="nt">Math</span><span class="p">.</span><span class="nc">random</span><span class="o">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nt">100</span><span class="o">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nt">1</span><span class="o">;</span>
-<span class="nt">console</span><span class="p">.</span><span class="nc">log</span><span class="o">(</span><span class="s2">&quot;Número aleatorio entre 1 y 100:&quot;</span><span class="o">,</span><span class="w"> </span><span class="nt">aleatorio</span><span class="o">);</span>
-<span class="err">```</span>
-</code></pre></div></td></tr></table></div>
-
+<details class="example">
+<summary>Solución ejercicio 2</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">aleatorio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">100</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Número aleatorio entre 1 y 100:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">aleatorio</span><span class="p">);</span>
+</code></pre></div>
+</details>
 <hr />
 <h4 id="ejercicio-3-conversion-de-numero"><strong>Ejercicio 3: Conversión de número</strong></h4>
 <ul>
@@ -2251,24 +2032,16 @@ console.log(texto.split(",")); // ["manzana", "banana", "naranja"]</code></p>
 <li>Convierte el número a formato entero y decimal.</li>
 <li>Muestra los resultados en la consola.</li>
 </ul>
-<p>??? example "Solución ejercicio 3"</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
-<span class="k">const</span><span class="w"> </span><span class="n">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+<details class="example">
+<summary>Solución ejercicio 3</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
 
-<span class="n">let</span><span class="w"> </span><span class="n">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce un número (como texto): &quot;</span><span class="p">);</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce un número (como texto): &quot;</span><span class="p">);</span>
 
-<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Como entero:&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">parseInt</span><span class="p">(</span><span class="n">texto</span><span class="p">));</span>
-<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Como decimal:&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">parseFloat</span><span class="p">(</span><span class="n">texto</span><span class="p">));</span>
-<span class="err">```</span>
-</code></pre></div></td></tr></table></div>
-
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Como entero:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">texto</span><span class="p">));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Como decimal:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">texto</span><span class="p">));</span>
+</code></pre></div>
+</details>
 <hr />
 <h4 id="ejercicio-4-manipulacion-de-cadenas"><strong>Ejercicio 4: Manipulación de cadenas</strong></h4>
 <ul>
@@ -2280,25 +2053,17 @@ console.log(texto.split(",")); // ["manzana", "banana", "naranja"]</code></p>
 </ul>
 </li>
 </ul>
-<p>??? example "Solución ejercicio 4"</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">```</span><span class="n">javascript</span>
-<span class="k">const</span><span class="w"> </span><span class="n">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+<details class="example">
+<summary>Solución ejercicio 4</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
 
-<span class="n">let</span><span class="w"> </span><span class="n">frase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce una frase: &quot;</span><span class="p">);</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">frase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce una frase: &quot;</span><span class="p">);</span>
 
-<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;En mayúsculas:&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">frase</span><span class="o">.</span><span class="n">toUpperCase</span><span class="p">());</span>
-<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;En minúsculas:&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">frase</span><span class="o">.</span><span class="n">toLowerCase</span><span class="p">());</span>
-<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Número de caracteres:&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">frase</span><span class="o">.</span><span class="n">length</span><span class="p">);</span>
-<span class="err">```</span>
-</code></pre></div></td></tr></table></div>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;En mayúsculas:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">frase</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">());</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;En minúsculas:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">frase</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">());</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Número de caracteres:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">frase</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+</code></pre></div>
+</details>
 
 
 
