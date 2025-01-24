@@ -900,6 +900,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#mermaid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mermaid
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1055,6 +1064,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#mermaid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mermaid
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1127,6 +1145,19 @@
 <span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">numero</span><span class="si">}</span><span class="sb"> x </span><span class="si">${</span><span class="nx">i</span><span class="si">}</span><span class="sb"> = </span><span class="si">${</span><span class="nx">numero</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">i</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<h2 id="mermaid">Mermaid</h2>
+<p>Ejemplo con mermaid.</p>
+<div class="highlight"><pre><span></span><code>flowchart TD
+    A[Inicio] --&gt; B[Solicitar número al usuario]
+    B --&gt; C[Convertir entrada a entero: parseInt]
+    C --&gt; D[Inicializar i = 1]
+    D --&gt; E{¿i &lt;= 10?}
+    E --&gt;|Sí| F[Calcular: numero x i]
+    F --&gt; G[Mostrar resultado en consola]
+    G --&gt; H[Incrementar i en 1]
+    H --&gt; E
+    E --&gt;|No| I[Fin]
+</code></pre></div>
 
 
 
