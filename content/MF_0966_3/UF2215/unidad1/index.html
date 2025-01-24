@@ -2434,16 +2434,17 @@ rm<span class="w"> </span>archivo.js
 <li>Muestra los resultados en la consola.</li>
 </ul>
 <details class="example">
-<summary>Diagrama de flujo</summary>
+<summary>Diagrama de flujo 2</summary>
 <pre class="mermaid"><code>flowchart TD
-    A[Inicio] --&gt; B[Declarar variables a y b, a=10, b=5]
-    B --&gt; C[Calcular suma -&gt; console.log(a + b)]
-    C --&gt; D[Calcular resta -&gt; console.log(a - b)] 
-    D --&gt; E[Calcular multiplicación -&gt; console.log(a * b)]
-    E --&gt; F[Calcular división -&gt; console.log(a / b)]
-    F --&gt; G[Calcular módulo -&gt; console.log(a % b)]
-    G --&gt; H[Mostrar resultados -&gt; console.log()]
-    H --&gt; I[Fin]</code></pre>
+    Start([Inicio&lt;br&gt;Declarar variables&lt;br&gt;let a = 10;&lt;br&gt;let b = 5;])
+    Suma[Mostrar suma&lt;br&gt;console.log("Suma:", a + b);]
+    Resta[Mostrar resta&lt;br&gt;console.log("Resta:", a - b);]
+    Multiplicacion[Mostrar multiplicación&lt;br&gt;console.log("Multiplicación:", a * b);]
+    Division[Mostrar división&lt;br&gt;console.log("División:", a / b);]
+    Modulo[Mostrar módulo&lt;br&gt;console.log("Módulo:", a % b);]
+    End([Fin])
+
+    Start --&gt; Suma --&gt; Resta --&gt; Multiplicacion --&gt; Division --&gt; Modulo --&gt; End</code></pre>
 </details>
 <details class="example">
 <summary>Solución</summary>
