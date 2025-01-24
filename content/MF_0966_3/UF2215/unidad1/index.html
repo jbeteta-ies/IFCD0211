@@ -2413,11 +2413,11 @@ rm<span class="w"> </span>archivo.js
 <summary>Diagrama de flujo</summary>
 <pre class="mermaid"><code>flowchart TD
     Start[Inicio -&gt; Declarar variables a=10 y b=5] 
-    Suma[Mostrar suma]
-    Resta[Mostrar resta]
-    Multiplicacion[Mostrar multiplicación]
-    Division[Mostrar división]
-    Modulo[Mostrar módulo]
+    Suma[Mostrar suma -&gt; console.log("Suma:", a + b);]
+    Resta[Mostrar resta -&gt; console.log("Resta:", a - b);]
+    Multiplicacion[Mostrar multiplicación -&gt; console.log("Multiplicación:", a * b);]
+    Division[Mostrar división -&gt; console.log("División:", a / b);]
+    Modulo[Mostrar módulo -&gt; console.log("Módulo:", a % b);]
     End[Fin]
 
     Start --&gt; Suma --&gt; Resta --&gt; Multiplicacion --&gt; Division --&gt; Modulo --&gt; End</code></pre>
