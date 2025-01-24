@@ -894,15 +894,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#objetivo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Objetivo
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#121-declaracion-de-variables" class="md-nav__link">
     <span class="md-ellipsis">
       1.2.1 Declaración de Variables
@@ -1714,15 +1705,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#objetivo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Objetivo
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#121-declaracion-de-variables" class="md-nav__link">
     <span class="md-ellipsis">
       1.2.1 Declaración de Variables
@@ -2295,131 +2277,149 @@ rm<span class="w"> </span>archivo.js
 </details>
 <hr />
 <h3 id="12-variables-tipos-de-datos-y-operadores"><strong>1.2 Variables, Tipos de Datos y Operadores</strong></h3>
-<h4 id="objetivo"><strong>Objetivo</strong></h4>
-<p>Comprender cómo declarar y usar variables en JavaScript, conocer los diferentes tipos de datos y aprender a trabajar con operadores básicos para realizar operaciones.</p>
+<div class="admonition note">
+<p class="admonition-title">Objetivos</p>
+<ol>
+<li>Comprender cómo declarar y usar variables en JavaScript.</li>
+<li>Conocer los diferentes tipos de datos y aprender a trabajar con operadores básicos para realizar operaciones.</li>
+</ol>
+</div>
 <h4 id="121-declaracion-de-variables"><strong>1.2.1 Declaración de Variables</strong></h4>
 <p><strong>¿Qué es una variable?</strong>  </p>
 <p>Una variable es un espacio en la memoria que se utiliza para almacenar datos que pueden ser usados y manipulados en un programa.</p>
 <p><strong>Formas de declarar variables en JavaScript:</strong></p>
 <ol>
 <li><strong><code>let</code>:</strong> Permite declarar variables que pueden ser modificadas.
-    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Juan&quot;</span><span class="p">;</span>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Juan&quot;</span><span class="p">;</span>
 <span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Ana&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Esto es válido</span>
-</code></pre></div></li>
+</code></pre></div></td></tr></table></div></li>
 <li><strong><code>const</code>:</strong> Se utiliza para declarar constantes, es decir, valores que no cambian.
-    <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.1416</span><span class="p">;</span>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.1416</span><span class="p">;</span>
 <span class="c1">// pi = 3; // Esto generará un error</span>
-</code></pre></div></li>
+</code></pre></div></td></tr></table></div></li>
 <li><strong><code>var</code>:</strong> Declaración más antigua. Evita su uso en favor de <code>let</code> y <code>const</code> debido a problemas de alcance.
-    <div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">25</span><span class="p">;</span>
-</code></pre></div></li>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">25</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></li>
 </ol>
-<p><strong>Buenas prácticas:</strong></p>
+<div class="admonition important">
+<p class="admonition-title">Buenas Prácticas</p>
 <ul>
 <li>Usa <code>const</code> siempre que el valor no cambie.</li>
 <li>Usa <code>let</code> cuando necesites cambiar el valor de la variable.</li>
 <li>Evita <code>var</code> para prevenir errores relacionados con el alcance.</li>
 </ul>
+</div>
 <hr />
 <h4 id="122-tipos-de-datos-primitivos"><strong>1.2.2 Tipos de Datos Primitivos</strong></h4>
 <p>JavaScript tiene los siguientes tipos de datos básicos:</p>
 <ol>
 <li>
 <p><strong>String (Cadenas):</strong> Representa texto.
-    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">mensaje</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Hola, mundo!&quot;</span><span class="p">;</span>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">mensaje</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Hola, mundo!&quot;</span><span class="p">;</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">mensaje</span><span class="p">);</span><span class="w"> </span><span class="c1">// &quot;string&quot;</span>
-</code></pre></div></p>
+</code></pre></div></td></tr></table></div></p>
 </li>
 <li>
 <p><strong>Number (Números):</strong> Incluye enteros y decimales.
-    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">entero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">entero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
 <span class="kd">let</span><span class="w"> </span><span class="nx">decimal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14</span><span class="p">;</span>
-</code></pre></div></p>
+</code></pre></div></td></tr></table></div></p>
 </li>
 <li>
 <p><strong>Boolean (Booleanos):</strong> Valores <code>true</code> o <code>false</code>.
-    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">esActivo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">esActivo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
 <span class="kd">let</span><span class="w"> </span><span class="nx">esMayor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span><span class="w"> </span><span class="c1">// true</span>
-</code></pre></div></p>
+</code></pre></div></td></tr></table></div></p>
 </li>
 <li>
 <p><strong>Undefined:</strong> Indica que una variable ha sido declarada pero no tiene valor.
-    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">indefinido</span><span class="p">;</span>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">indefinido</span><span class="p">;</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">indefinido</span><span class="p">);</span><span class="w"> </span><span class="c1">// undefined</span>
-</code></pre></div></p>
+</code></pre></div></td></tr></table></div></p>
 </li>
 <li>
 <p><strong>Null:</strong> Representa un valor intencionalmente vacío.
-    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">vacio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
-</code></pre></div></p>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">vacio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
 </li>
 <li>
 <p><strong>Symbol (Símbolos):</strong> Valores únicos e inmutables, utilizados principalmente en programación avanzada.
-    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Symbol</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">);</span>
-</code></pre></div></p>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Symbol</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div></p>
 </li>
 <li>
 <p><strong>BigInt:</strong> Representa números enteros muy grandes.
-    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">numeroGrande</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1234567890123456789012345678901234567890n</span><span class="p">;</span>
-</code></pre></div></p>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">numeroGrande</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1234567890123456789012345678901234567890n</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
 </li>
 </ol>
 <hr />
 <h4 id="123-operadores-basicos"><strong>1.2.3 Operadores Básicos</strong></h4>
 <p><strong>Operadores Aritméticos:</strong>
 - Suma: <code>+</code>
-    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// 8</span>
-</code></pre></div>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// 8</span>
+</code></pre></div></td></tr></table></div>
 - Resta: <code>-</code>
-    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">6</span><span class="p">;</span><span class="w"> </span><span class="c1">// 4</span>
-</code></pre></div>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">6</span><span class="p">;</span><span class="w"> </span><span class="c1">// 4</span>
+</code></pre></div></td></tr></table></div>
 - Multiplicación: <code>*</code>
-    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 8</span>
-</code></pre></div>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 8</span>
+</code></pre></div></td></tr></table></div>
 - División: <code>/</code>
-    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">9</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// 3</span>
-</code></pre></div>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">9</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// 3</span>
+</code></pre></div></td></tr></table></div>
 - Resto o módulo: <code>%</code>
-    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">resto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// 1</span>
-</code></pre></div></p>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">resto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// 1</span>
+</code></pre></div></td></tr></table></div></p>
 <p><strong>Operadores de Comparación:</strong>
 - Igualdad estricta: <code>===</code>
-    <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">5</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;5&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// false</span>
-</code></pre></div>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">5</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;5&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// false</span>
+</code></pre></div></td></tr></table></div>
 - Diferente: <code>!==</code>
-    <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">10</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
-</code></pre></div>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">10</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
+</code></pre></div></td></tr></table></div>
 - Mayor que: <code>&gt;</code>
-    <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">7</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">3</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
-</code></pre></div>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">7</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">3</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
+</code></pre></div></td></tr></table></div>
 - Menor que: <code>&lt;</code>
-    <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">2</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
-</code></pre></div></p>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">2</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
+</code></pre></div></td></tr></table></div></p>
 <p><strong>Operadores Lógicos:</strong>
 - AND (<code>&amp;&amp;</code>): Devuelve <code>true</code> si ambos operandos son verdaderos.
-    <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="kc">true</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span><span class="w"> </span><span class="c1">// false</span>
-</code></pre></div>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="kc">true</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span><span class="w"> </span><span class="c1">// false</span>
+</code></pre></div></td></tr></table></div>
 - OR (<code>||</code>): Devuelve <code>true</code> si al menos uno de los operandos es verdadero.
-    <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="kc">true</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
-</code></pre></div>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="kc">true</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
+</code></pre></div></td></tr></table></div>
 - NOT (<code>!</code>): Invierte el valor lógico.
-    <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="o">!</span><span class="kc">true</span><span class="p">);</span><span class="w"> </span><span class="c1">// false</span>
-</code></pre></div></p>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="o">!</span><span class="kc">true</span><span class="p">);</span><span class="w"> </span><span class="c1">// false</span>
+</code></pre></div></td></tr></table></div></p>
 <hr />
 <h4 id="124-ejercicio-practico"><strong>1.2.4 Ejercicio Práctico</strong></h4>
-<ol>
-<li>
-<p><strong>Crea un programa que haga lo siguiente:</strong></p>
-</li>
-<li>
-<p>Declara dos variables, <code>a</code> y <code>b</code>, con valores numéricos.</p>
-</li>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+</div>
+<ul>
+<li>Declara dos variables, <code>a</code> y <code>b</code>, con valores numéricos.</li>
 <li>Calcula la suma, resta, multiplicación, división y módulo de ambas variables.</li>
 <li>
 <p>Muestra los resultados en la consola.</p>
 <details class="example">
-<summary>Mostrar soluciones</summary>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
+<summary>Mostrar solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Operaciones matemáticas básicas</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
 <span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span>
 
 <span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Suma:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="p">);</span>
@@ -2427,7 +2427,7 @@ rm<span class="w"> </span>archivo.js
 <span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Multiplicación:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">b</span><span class="p">);</span>
 <span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;División:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">b</span><span class="p">);</span>
 <span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Módulo:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="nx">b</span><span class="p">);</span>
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 </details>
 </li>
 <li>
@@ -2436,7 +2436,7 @@ rm<span class="w"> </span>archivo.js
 <li>
 <p>Crea un programa que solicite al usuario dos números utilizando <code>prompt</code>, realice las operaciones matemáticas básicas y muestre los resultados con <code>alert</code>.</p>
 </li>
-</ol>
+</ul>
 <p>??? example "Solución reto adicional"</p>
 <div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="err">```</span><span class="nt">javascript</span>
 <span class="w">        </span><span class="nt">let</span><span class="w"> </span><span class="nt">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">parseFloat</span><span class="o">(</span><span class="nt">prompt</span><span class="o">(</span><span class="s2">&quot;Introduce el primer número:&quot;</span><span class="o">));</span>
