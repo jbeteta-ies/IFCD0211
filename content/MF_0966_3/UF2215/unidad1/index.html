@@ -2442,26 +2442,70 @@ rm<span class="w"> </span>archivo.js
 </code></pre></div></td></tr></table></div>
 </details>
 </div>
-<ol>
-<li>
-<p><strong>Reto adicional:</strong></p>
+<p><strong>Reto Adicional: Operaciones Matemáticas Avanzadas</strong></p>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Declara dos variables, <code>num1</code> y <code>num2</code>, con valores numéricos.</li>
+<li>Calcula la suma, resta, multiplicación, división y módulo de ambas variables, y guarda los resultados en variables independientes.</li>
+<li>Muestra los resultados:<ul>
+<li>Primero, cada operación en una línea individual.</li>
+<li>Luego, todos los resultados concatenados en una única línea.</li>
+</ul>
 </li>
-<li>
-<p>Crea un programa que solicite al usuario dos números utilizando <code>prompt</code>, realice las operaciones matemáticas básicas y muestre los resultados con <code>alert</code>.</p>
-</li>
-</ol>
-<p>??? example "Solución reto adicional"</p>
-<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="err">```</span><span class="nt">javascript</span>
-<span class="w">        </span><span class="nt">let</span><span class="w"> </span><span class="nt">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">parseFloat</span><span class="o">(</span><span class="nt">prompt</span><span class="o">(</span><span class="s2">&quot;Introduce el primer número:&quot;</span><span class="o">));</span>
-<span class="w">        </span><span class="nt">let</span><span class="w"> </span><span class="nt">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">parseFloat</span><span class="o">(</span><span class="nt">prompt</span><span class="o">(</span><span class="s2">&quot;Introduce el segundo número:&quot;</span><span class="o">));</span>
+</ul>
+<details class="example">
+<summary>Diagrama de flujo</summary>
+<pre class="mermaid"><code>flowchart TD
+    Start[Inicio -&gt; Declarar variables num1=10 y num2=5]
+    CalculoSuma["suma = num1 + num2"]
+    CalculoResta["resta = num1 - num2"]
+    CalculoMultiplicacion["multiplicacion = num1 * num2"]
+    CalculoDivision["division = num1 / num2"]
+    CalculoModulo["modulo = num1 % num2"]
+    MostrarResultadosInd["Mostrar resultados individuales"]
+    MostrarResultadoConcat["Mostrar resultados concatenados&lt;br&gt;`console.log(\`Resultados: suma=${suma}, resta=${resta}, mult=${multiplicacion}, div=${division}, módulo=${modulo}\`);`"]
+    End[Fin]
 
-<span class="w">        </span><span class="nt">console</span><span class="p">.</span><span class="nc">log</span><span class="o">(</span><span class="s2">&quot;Suma: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">(</span><span class="nt">num1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nt">num2</span><span class="o">));</span>
-<span class="w">        </span><span class="nt">console</span><span class="p">.</span><span class="nc">log</span><span class="o">(</span><span class="s2">&quot;Resta: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">(</span><span class="nt">num1</span><span class="w"> </span><span class="nt">-</span><span class="w"> </span><span class="nt">num2</span><span class="o">));</span>
-<span class="w">        </span><span class="nt">console</span><span class="p">.</span><span class="nc">log</span><span class="o">(</span><span class="s2">&quot;Multiplicación: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">(</span><span class="nt">num1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nt">num2</span><span class="o">));</span>
-<span class="w">        </span><span class="nt">console</span><span class="p">.</span><span class="nc">log</span><span class="o">(</span><span class="s2">&quot;División: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">(</span><span class="nt">num1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nt">num2</span><span class="o">));</span>
-<span class="w">    </span><span class="err">```</span>
-</code></pre></div>
+    Start --&gt; CalculoSuma --&gt; CalculoResta --&gt; CalculoMultiplicacion --&gt; CalculoDivision --&gt; CalculoModulo
+    CalculoModulo --&gt; MostrarResultadosInd --&gt; MostrarResultadoConcat --&gt; End</code></pre>
+</details>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Operaciones matemáticas avanzadas</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span>
 
+<span class="kd">let</span><span class="w"> </span><span class="nx">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">num2</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">resta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">num2</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">multiplicacion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">num2</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">division</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">num2</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">modulo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="nx">num2</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Suma:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">suma</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Resta:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">resta</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Multiplicación:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">multiplicacion</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;División:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">division</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Módulo:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">modulo</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Resultados: suma=</span><span class="si">${</span><span class="nx">suma</span><span class="si">}</span><span class="sb">, resta=</span><span class="si">${</span><span class="nx">resta</span><span class="si">}</span><span class="sb">, mult=</span><span class="si">${</span><span class="nx">multiplicacion</span><span class="si">}</span><span class="sb">, div=</span><span class="si">${</span><span class="nx">division</span><span class="si">}</span><span class="sb">, módulo=</span><span class="si">${</span><span class="nx">modulo</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
 <h3 id="bateria-de-ejercicios"><strong>Batería de Ejercicios</strong></h3>
 <h4 id="ejercicio-1-declaracion-y-uso-de-variables"><strong>Ejercicio 1: Declaración y uso de variables</strong></h4>
 <ol>
