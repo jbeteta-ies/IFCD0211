@@ -3091,81 +3091,17 @@ rm<span class="w"> </span>archivo.js
 <h3 id="que-es-un-if-else"><strong>¿Qué es un if-else?</strong></h3>
 <p>La estructura <strong>if-else</strong> permite tomar decisiones en función de una condición. Evalúa si una expresión lógica es <code>true</code> o <code>false</code> y ejecuta el bloque correspondiente.</p>
 <h3 id="sintaxis-de-if-else"><strong>Sintaxis de if-else</strong></h3>
-<div class="admonition question">
-<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
-<ul>
-<li>Declara dos variables, <code>num1</code> y <code>num2</code>, con valores numéricos.</li>
-<li>Calcula la suma, resta, multiplicación, división y módulo de ambas variables, y guarda los resultados en variables independientes.</li>
-<li>Muestra los resultados:<ul>
-<li>Primero, cada operación en una línea individual.</li>
-<li>Luego, todos los resultados concatenados en una única línea.</li>
-</ul>
-</li>
-</ul>
-<details class="example">
-<summary>Diagrama de flujo</summary>
-<pre class="mermaid"><code>flowchart TD
-    Start[Inicio -&gt; Declarar variables num1=10 y num2=5]
-    CalculoSuma["suma = num1 + num2"]
-    CalculoResta["resta = num1 - num2"]
-    CalculoMultiplicacion["multiplicacion = num1 * num2"]
-    CalculoDivision["division = num1 / num2"]
-    CalculoModulo["modulo = num1 % num2"]
-    MostrarResultadosInd["Mostrar resultados individuales"]
-    MostrarResultadoConcat["`Mostrar concatenados:
-                console.log(Resultados: suma=${suma}, resta=${resta}, mult=${multiplicacion}, div=${division}, módulo=${modulo});`"]
-    End[Fin]
-
-    Start --&gt; CalculoSuma --&gt; CalculoResta --&gt; CalculoMultiplicacion --&gt; CalculoDivision --&gt; CalculoModulo
-    CalculoModulo --&gt; MostrarResultadosInd --&gt; MostrarResultadoConcat --&gt; End</code></pre>
-</details>
-<details class="example">
-<summary>Solución</summary>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Operaciones matemáticas avanzadas</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span>
-
-<span class="kd">let</span><span class="w"> </span><span class="nx">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">num2</span><span class="p">;</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">resta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">num2</span><span class="p">;</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">multiplicacion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">num2</span><span class="p">;</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">division</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">num2</span><span class="p">;</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">modulo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="nx">num2</span><span class="p">;</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Suma:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">suma</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Resta:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">resta</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Multiplicación:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">multiplicacion</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;División:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">division</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Módulo:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">modulo</span><span class="p">);</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Resultados: suma=</span><span class="si">${</span><span class="nx">suma</span><span class="si">}</span><span class="sb">, resta=</span><span class="si">${</span><span class="nx">resta</span><span class="si">}</span><span class="sb">, mult=</span><span class="si">${</span><span class="nx">multiplicacion</span><span class="si">}</span><span class="sb">, div=</span><span class="si">${</span><span class="nx">division</span><span class="si">}</span><span class="sb">, módulo=</span><span class="si">${</span><span class="nx">modulo</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Estructura If-Else</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">condición</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Código a ejecutar si la condición es verdadera</span>
+<span class="w">    </span><span class="c1">// Código si la condición es verdadera</span>
 <span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Código a ejecutar si la condición es falsa</span>
+<span class="w">    </span><span class="c1">// Código si la condición es falsa</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-</div>
-<h3 id="ejemplo_1"><strong>Ejemplo</strong></h3>
+<p><strong>Ejemplo</strong></p>
 <p>Programa que evalua si una variable numérica que simula la edad de una persona es mayor o menor de edad.</p>
 <div class="admonition example">
 <p class="admonition-title">Ejemplo de If-Else</p>
@@ -3195,63 +3131,869 @@ rm<span class="w"> </span>archivo.js
 <hr />
 <h3 id="ejercicios-de-if-else"><strong>Ejercicios de If-Else</strong></h3>
 <h4 id="ejercicio-1-comparar-numeros"><strong>Ejercicio 1: Comparar números</strong></h4>
+<div class="admonition note">
+<p class="admonition-title">Instrucciones</p>
+<p>Lo vamos a solucionar en 4 pasos, viendo en cada uno de ellos una parte de la solución.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente paso a paso:</p>
 <ul>
-<li>Solicita al usuario dos números y determina cuál es mayor, menor o si son iguales.</li>
+<li><strong>Paso 1:</strong> Determina si dos números son iguales.</li>
+<li><strong>Paso 2:</strong> Evalúa si el primer número es mayor que el segundo.</li>
+<li><strong>Paso 3:</strong> Evalúa si el segundo número es mayor que el primero.</li>
+<li><strong>Paso 4:</strong> Combina todas las evaluaciones en un único programa.</li>
+</ul>
+</div>
+<p><strong>Paso 1: Determinar si dos números son iguales</strong></p>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Solicita al usuario que introduzca dos números.</li>
+<li>Determina si los números son iguales.</li>
+<li>Muestra un mensaje indicando que los números son iguales.</li>
 </ul>
 <details class="example">
 <summary>Solución</summary>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Paso 1: Determinar si son iguales</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el primer número: &quot;</span><span class="p">));</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el segundo número: &quot;</span><span class="p">));</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">num1</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">num2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Los números son iguales.&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<hr />
+<p><strong>Paso 2: Evaluar si el primer número es mayor que el segundo</strong></p>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Solicita al usuario que introduzca dos números.</li>
+<li>Evalúa si el primer número es mayor que el segundo.</li>
+<li>Muestra un mensaje indicando que el primer número es mayor.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Paso 2: El primero es mayor</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
 
 <span class="kd">let</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el primer número: &quot;</span><span class="p">));</span>
 <span class="kd">let</span><span class="w"> </span><span class="nx">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el segundo número: &quot;</span><span class="p">));</span>
 
 <span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">num1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">num2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">num1</span><span class="si">}</span><span class="sb"> es mayor que </span><span class="si">${</span><span class="nx">num2</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">num1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">num2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">num1</span><span class="si">}</span><span class="sb"> es menor que </span><span class="si">${</span><span class="nx">num2</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">num1</span><span class="si">}</span><span class="sb"> y </span><span class="si">${</span><span class="nx">num2</span><span class="si">}</span><span class="sb"> son iguales`</span><span class="p">);</span>
 <span class="p">}</span>
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 </details>
+</div>
 <hr />
-<h4 id="ejercicio-2-numero-positivo-o-negativo"><strong>Ejercicio 2: Número positivo o negativo</strong></h4>
+<p><strong>Paso 3: Evaluar si el segundo número es mayor que el primero</strong></p>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
 <ul>
-<li>Solicita un número y determina si es positivo, negativo o cero.</li>
+<li>Solicita al usuario que introduzca dos números.</li>
+<li>Evalúa si el segundo número es mayor que el primero.</li>
+<li>Muestra un mensaje indicando que el segundo número es mayor.</li>
 </ul>
 <details class="example">
 <summary>Solución</summary>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Paso 3: El segundo es mayor</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el primer número: &quot;</span><span class="p">));</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el segundo número: &quot;</span><span class="p">));</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">num2</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">num1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">num2</span><span class="si">}</span><span class="sb"> es mayor que </span><span class="si">${</span><span class="nx">num1</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<hr />
+<p><strong>Paso 4: Combinar todas las evaluaciones</strong></p>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Solicita al usuario que introduzca dos números.</li>
+<li>Evalúa si los números son iguales, si el primero es mayor o si el segundo es mayor.</li>
+<li>Muestra un mensaje correspondiente para cada caso.</li>
+</ul>
+<details class="example">
+<summary>Diagrama</summary>
+<pre class="mermaid"><code>flowchart TD
+    A[Inicio] --&gt; B[Solicitar el primer número]
+    B --&gt; C[Solicitar el segundo número]
+    C --&gt; D{¿num1 es igual a num2?}
+
+    D --&gt;|Sí| E["Los números son iguales"]
+    D --&gt;|No| F{¿num1 es mayor que num2?}
+
+    F --&gt;|Sí| G["num1 es mayor que num2"]
+    F --&gt;|No| H["num2 es mayor que num1"]
+
+    E --&gt; I[Fin]
+    G --&gt; I
+    H --&gt; I</code></pre>
+</details>
+<details class="example" open="open">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Paso 4: Todo junto</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el primer número: &quot;</span><span class="p">));</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el segundo número: &quot;</span><span class="p">));</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">num1</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">num2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Los números son iguales.&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">num1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">num2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">num1</span><span class="si">}</span><span class="sb"> es mayor que </span><span class="si">${</span><span class="nx">num2</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">num2</span><span class="si">}</span><span class="sb"> es mayor que </span><span class="si">${</span><span class="nx">num1</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<hr />
+<h4 id="ejercicio-2-numero-positivo-o-negativo"><strong>Ejercicio 2: Número positivo o negativo</strong></h4>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente paso a paso:</p>
+<ul>
+<li><strong>Paso 1:</strong> Determina si un número es igual a cero.</li>
+<li><strong>Paso 2:</strong> Evalúa si un número es positivo.</li>
+<li><strong>Paso 3:</strong> Evalúa si un número es negativo.</li>
+<li><strong>Paso 4:</strong> Combina todas las evaluaciones en un único programa.</li>
+</ul>
+</div>
+<hr />
+<h3 id="paso-1-determinar-si-un-numero-es-cero"><strong>Paso 1: Determinar si un número es cero</strong></h3>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Solicita al usuario que introduzca un número.</li>
+<li>Determina si el número es igual a cero.</li>
+<li>Muestra un mensaje indicando que el número es cero.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Paso 1: Número es cero</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce un número: &quot;</span><span class="p">));</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">numero</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El número es cero.&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<hr />
+<h3 id="paso-2-determinar-si-un-numero-es-positivo"><strong>Paso 2: Determinar si un número es positivo</strong></h3>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Solicita al usuario que introduzca un número.</li>
+<li>Evalúa si el número es positivo.</li>
+<li>Muestra un mensaje indicando que el número es positivo.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Paso 2: Número positivo</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
 
 <span class="kd">let</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce un número: &quot;</span><span class="p">));</span>
 
 <span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">numero</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El número es positivo&quot;</span><span class="p">);</span>
-<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">numero</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El número es negativo&quot;</span><span class="p">);</span>
-<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El número es cero&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El número es positivo.&quot;</span><span class="p">);</span>
 <span class="p">}</span>
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 </details>
+</div>
 <hr />
-<h4 id="ejercicio-3-verificacion-de-edad"><strong>Ejercicio 3: Verificación de edad</strong></h4>
+<h3 id="paso-3-determinar-si-un-numero-es-negativo"><strong>Paso 3: Determinar si un número es negativo</strong></h3>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
 <ul>
-<li>Solicita al usuario su edad y determina si es mayor o menor de edad.</li>
+<li>Solicita al usuario que introduzca un número.</li>
+<li>Evalúa si el número es negativo.</li>
+<li>Muestra un mensaje indicando que el número es negativo.</li>
 </ul>
 <details class="example">
 <summary>Solución</summary>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Paso 3: Número negativo</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce un número: &quot;</span><span class="p">));</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">numero</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El número es negativo.&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<hr />
+<h3 id="paso-4-combinar-todas-las-evaluaciones"><strong>Paso 4: Combinar todas las evaluaciones</strong></h3>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Solicita al usuario que introduzca un número.</li>
+<li>Evalúa si el número es positivo, negativo o igual a cero.</li>
+<li>Muestra un mensaje correspondiente para cada caso.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Paso 4: Todo junto</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce un número: &quot;</span><span class="p">));</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">numero</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El número es positivo.&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">numero</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El número es negativo.&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El número es cero.&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="example">
+<summary>Diagrama de Flujo</summary>
+<pre class="mermaid"><code>flowchart TD
+    A[Inicio] --&gt; B[Solicitar un número]
+    B --&gt; C{¿Número &gt; 0?}
+
+    C --&gt;|Sí| D["El número es positivo"]
+    C --&gt;|No| E{¿Número &lt; 0?}
+
+    E --&gt;|Sí| F["El número es negativo"]
+    E --&gt;|No| G["El número es cero"]
+
+    D --&gt; H[Fin]
+    F --&gt; H
+    G --&gt; H</code></pre>
+</details>
+</div>
+<hr />
+<h4 id="ejercicio-3-verificar-credenciales-de-acceso"><strong>Ejercicio 3: Verificar credenciales de acceso</strong></h4>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Solicita al usuario que introduzca un nombre de usuario y una contraseña.</li>
+<li>Compara las entradas con dos constantes predefinidas: <code>USER</code> y <code>PASSWORD</code>.</li>
+<li>Si coinciden, muestra el mensaje "Acceso correcto".</li>
+<li>Si no coinciden, muestra el mensaje "Acceso incorrecto" en rojo.</li>
+<li>Para el color rojo pudes utilizar la librería <code>chalk</code>. <code>pip install chalk</code> </li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Verificar credenciales</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">chalk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;chalk&quot;</span><span class="p">);</span>
+
+<span class="c1">// Constantes predefinidas</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">USER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;admin&quot;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">PASSWORD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;12345&quot;</span><span class="p">;</span>
+
+<span class="c1">// Solicitar credenciales al usuario</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">login</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce tu nombre de usuario: &quot;</span><span class="p">);</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">pwd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce tu contraseña: &quot;</span><span class="p">);</span>
+
+<span class="c1">// Verificar credenciales</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">login</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">USER</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">pwd</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">PASSWORD</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Acceso correcto&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">chalk</span><span class="p">.</span><span class="nx">red</span><span class="p">(</span><span class="s2">&quot;Acceso incorrecto&quot;</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="info">
+<summary>Explicación del código</summary>
+<ol>
+<li><strong>Constantes</strong>:<ul>
+<li>Se definen <code>USER</code> y <code>PASSWORD</code> como las credenciales válidas.</li>
+</ul>
+</li>
+<li><strong>Entrada del Usuario</strong>:<ul>
+<li><code>prompt</code> solicita al usuario el nombre de usuario (<code>login</code>) y la contraseña (<code>pwd</code>).</li>
+</ul>
+</li>
+<li><strong>Verificación</strong>:<ul>
+<li>Se compara si ambas entradas coinciden con las constantes.</li>
+<li>Si ambas coinciden, se muestra "Acceso correcto".</li>
+<li>Si no coinciden, se muestra "Acceso incorrecto" con texto en rojo</li>
+</ul>
+</li>
+</ol>
+</details>
+</div>
+<p><strong>Explicación del Código:</strong></p>
+<ol>
+<li><strong>Constantes</strong>:<ul>
+<li>Se definen <code>USER</code> y <code>PASSWORD</code> como las credenciales válidas.</li>
+</ul>
+</li>
+<li><strong>Entrada del Usuario</strong>:<ul>
+<li><code>prompt</code> solicita al usuario el nombre de usuario (<code>login</code>) y la contraseña (<code>pwd</code>).</li>
+</ul>
+</li>
+<li><strong>Verificación</strong>:<ul>
+<li>Se compara si ambas entradas coinciden con las constantes.</li>
+<li>Si ambas coinciden, se muestra "Acceso correcto".</li>
+<li>Si no coinciden, se muestra "Acceso incorrecto" con texto en rojo utilizando el código ANSI <code>\x1b[31m</code> para el color rojo y <code>\x1b[0m</code> para reiniciar el color.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h4 id="tratamiento-de-cadenas-en-if-else">Tratamiento de cadenas en IF-ELSE</h4>
+<p>Vamos a ver un programa con las siguientes características:</p>
+<ul>
+<li>Solicita al usuario que introduzca dos cadenas.</li>
+<li>Compara las cadenas considerando mayúsculas y minúsculas (<code>ana</code> es distinto de <code>ANA</code>).</li>
+<li>Utiliza funciones como <code>toUpperCase</code> o <code>toLowerCase</code> para compararlas ignorando mayúsculas y minúsculas.</li>
+<li>Comprueba si una cadena tiene un número de caracteres entre un mínimo y un máximo.</li>
+<li>Explica que, según el orden lexicográfico, <code>"ana"</code> es menor que <code>"ANA"</code>.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Solución</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Comparación de cadenas</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+
+<span class="c1">// Solicitar cadenas al usuario</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">cadena1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce la primera cadena: &quot;</span><span class="p">);</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">cadena2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce la segunda cadena: &quot;</span><span class="p">);</span>
+
+<span class="c1">// Comparación directa (sensible a mayúsculas y minúsculas)</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">cadena1</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">cadena2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Las cadenas son iguales (sensible a mayúsculas).&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Las cadenas son distintas (sensible a mayúsculas).&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Comparación ignorando mayúsculas y minúsculas</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">cadena1</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">()</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">cadena2</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Las cadenas son iguales (ignorando mayúsculas).&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Las cadenas son distintas (ignorando mayúsculas).&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Verificar longitud entre un mínimo y un máximo</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">minLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">maxLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">cadena1</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="nx">minLength</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">cadena1</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nx">maxLength</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`La primera cadena tiene una longitud válida (entre </span><span class="si">${</span><span class="nx">minLength</span><span class="si">}</span><span class="sb"> y </span><span class="si">${</span><span class="nx">maxLength</span><span class="si">}</span><span class="sb">).`</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`La primera cadena no tiene una longitud válida (entre </span><span class="si">${</span><span class="nx">minLength</span><span class="si">}</span><span class="sb"> y </span><span class="si">${</span><span class="nx">maxLength</span><span class="si">}</span><span class="sb">).`</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Comparación lexicográfica</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="s2">&quot;ana&quot;</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="s2">&quot;ANA&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;&quot;ana&quot; es menor que &quot;ANA&quot; en orden lexicográfico.&#39;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;&quot;ana&quot; no es menor que &quot;ANA&quot; en orden lexicográfico.&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<hr />
+<h3 id="explicacion-del-codigo"><strong>Explicación del Código</strong></h3>
+<ol>
+<li>
+<p><strong>Comparación Directa (Sensible a Mayúsculas y Minúsculas)</strong>:</p>
+<ul>
+<li>La comparación <code>cadena1 === cadena2</code> verifica si las cadenas son exactamente iguales, considerando diferencias entre mayúsculas y minúsculas. Por ejemplo, <code>"ana" !== "ANA"</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Comparación Ignorando Mayúsculas y Minúsculas</strong>:</p>
+<ul>
+<li>Se utilizan las funciones <code>toLowerCase()</code> o <code>toUpperCase()</code> para convertir ambas cadenas a un formato uniforme antes de compararlas. Esto hace que <code>"ana" === "ANA"</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Verificar Longitud</strong>:</p>
+<ul>
+<li>Se usa <code>cadena1.length</code> para verificar si la longitud de la primera cadena está entre los límites definidos (<code>minLength</code> y <code>maxLength</code>).</li>
+</ul>
+</li>
+<li>
+<p><strong>Orden Lexicográfico</strong>:</p>
+<ul>
+<li>En JavaScript, las cadenas se comparan según su valor Unicode. En el caso de <code>"ana"</code> y <code>"ANA"</code>, las letras minúsculas tienen valores Unicode mayores que las mayúsculas. Por lo tanto:<ul>
+<li><code>"ana" &lt; "ANA"</code> es <code>false</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h3 id="operadores-logicos-en-javascript"><strong>Operadores Lógicos en JavaScript</strong></h3>
+<p>En JavaScript, los operadores lógicos se usan para combinar condiciones o modificar su resultado. Los tres operadores principales son:</p>
+<ul>
+<li><strong><code>&amp;&amp;</code> (AND o Y):</strong> Evalúa si <strong>todas las condiciones</strong> son verdaderas.</li>
+<li><strong><code>||</code> (OR o O):</strong> Evalúa si <strong>al menos una condición</strong> es verdadera.</li>
+<li><strong><code>!</code> (NOT o NO):</strong> Invierte el valor lógico de una condición (de verdadero a falso y viceversa).</li>
+</ul>
+<hr />
+<h3 id="tablas-de-verdad"><strong>Tablas de Verdad</strong></h3>
+<h4 id="1-operador-and">1. <strong>Operador <code>&amp;&amp;</code> (AND)</strong></h4>
+<p>El operador <code>&amp;&amp;</code> retorna <code>true</code> solo si <strong>todas las condiciones</strong> son <code>true</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Condición A</th>
+<th>Condición B</th>
+<th>A &amp;&amp; B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>true</code></td>
+<td><code>true</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>true</code></td>
+<td><code>false</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td><code>true</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td><code>false</code></td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="2-operador-or">2. <strong>Operador <code>||</code> (OR)</strong></h4>
+<p>El operador <code>||</code> retorna <code>true</code> si <strong>al menos una condición</strong> es <code>true</code>.</p>
+<p>| Condición A | Condición B | A || B |
+|-------------|-------------|--------|
+| <code>true</code>      | <code>true</code>      | <code>true</code> |
+| <code>true</code>      | <code>false</code>     | <code>true</code> |
+| <code>false</code>     | <code>true</code>      | <code>true</code> |
+| <code>false</code>     | <code>false</code>     | <code>false</code>|</p>
+<hr />
+<h4 id="3-operador-not">3. <strong>Operador <code>!</code> (NOT)</strong></h4>
+<p>El operador <code>!</code> invierte el valor lógico de la condición.</p>
+<table>
+<thead>
+<tr>
+<th>Condición</th>
+<th>!Condición</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>true</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="ejemplos-de-operadores-logicos"><strong>Ejemplos de Operadores Lógicos</strong></h4>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Ejemplo</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&amp;&amp;</code></td>
+<td><code>5 &gt; 3 &amp;&amp; 10 &gt; 8</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>&amp;&amp;</code></td>
+<td><code>5 &gt; 3 &amp;&amp; 10 &lt; 8</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>||</code></td>
+<td><code>5 &gt; 3 || 10 &lt; 8</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>||</code></td>
+<td><code>5 &lt; 3 || 10 &lt; 8</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>!</code></td>
+<td><code>!(5 &gt; 3)</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>!</code></td>
+<td><code>!(5 &lt; 3)</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>Mixto</td>
+<td><code>5 &gt; 3 &amp;&amp; (10 &lt; 8 || 2 === 2)</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>Mixto</td>
+<td><code>!(5 &gt; 3 &amp;&amp; 10 &gt; 8)</code></td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="notas-clave"><strong>Notas Clave</strong></h4>
+<ol>
+<li><strong>Precedencia de Operadores</strong>:</li>
+<li><code>!</code> tiene mayor precedencia que <code>&amp;&amp;</code> y <code>||</code>.</li>
+<li>
+<p>Agrupa condiciones con paréntesis para asegurarte de que se evalúan en el orden esperado.</p>
+<ul>
+<li>Ejemplo: <code>!(A &amp;&amp; B)</code> no es lo mismo que <code>!A &amp;&amp; B</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cortocircuito</strong>:</p>
+</li>
+<li>En <code>&amp;&amp;</code>, si la primera condición es <code>false</code>, las demás no se evalúan.</li>
+<li>En <code>||</code>, si la primera condición es <code>true</code>, las demás no se evalúan.</li>
+</ol>
+<hr />
+<h4 id="leyes-de-de-morgan"><strong>Leyes de De Morgan</strong></h4>
+<p>Las <strong>Leyes de De Morgan</strong> son reglas fundamentales en lógica y álgebra booleana. Estas leyes ayudan a simplificar expresiones lógicas y a entender cómo se relacionan los operadores <code>&amp;&amp;</code> (AND), <code>||</code> (OR) y <code>!</code> (NOT).</p>
+<hr />
+<h5 id="las-dos-leyes-de-de-morgan"><strong>Las dos leyes de De Morgan</strong></h5>
+<ol>
+<li>
+<p><strong>Primera ley:</strong>
+    &gt; La negación de una conjunción (<code>A &amp;&amp; B</code>) es equivalente a la disyunción de las negaciones (<code>!A || !B</code>).</p>
+<p><strong>Formalmente:</strong>
+<div class="highlight"><pre><span></span><code>!(A &amp;&amp; B) ≡ !A || !B
+</code></pre></div></p>
+<p><strong>Ejemplo en JavaScript:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">B</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="nx">A</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">B</span><span class="p">));</span><span class="w">  </span><span class="c1">// true</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="o">!</span><span class="nx">A</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">!</span><span class="nx">B</span><span class="p">);</span><span class="w">   </span><span class="c1">// true (equivalente por De Morgan)</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+</ol>
+<hr />
+<ol>
+<li>
+<p><strong>Segunda ley:</strong>
+    &gt; La negación de una disyunción (<code>A || B</code>) es equivalente a la conjunción de las negaciones (<code>!A &amp;&amp; !B</code>).</p>
+<p><strong>Formalmente:</strong>
+<div class="highlight"><pre><span></span><code>!(A || B) ≡ !A &amp;&amp; !B
+</code></pre></div></p>
+<p><strong>Ejemplo en JavaScript:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">B</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="nx">A</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">B</span><span class="p">));</span><span class="w">  </span><span class="c1">// false</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="o">!</span><span class="nx">A</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="nx">B</span><span class="p">);</span><span class="w">   </span><span class="c1">// false (equivalente por De Morgan)</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+</ol>
+<hr />
+<h5 id="como-entender-las-leyes-de-de-morgan"><strong>Cómo entender las leyes de De Morgan</strong></h5>
+<ol>
+<li>
+<p><strong>Primera Ley (<code>!(A &amp;&amp; B) ≡ !A || !B</code>)</strong>:</p>
+<ul>
+<li>Si <strong>NO</strong> se cumplen ambas condiciones (A y B), entonces <strong>AL MENOS UNA</strong> de las condiciones debe ser falsa.</li>
+</ul>
+</li>
+<li>
+<p><strong>Segunda Ley (<code>!(A || B) ≡ !A &amp;&amp; !B</code>)</strong>:</p>
+<ul>
+<li>Si <strong>NO</strong> se cumple ninguna de las condiciones (A o B), entonces <strong>AMBAS</strong> condiciones deben ser falsas.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h5 id="tablas-de-verdad_1"><strong>Tablas de Verdad</strong></h5>
+<ul>
+<li>Primera Ley (<code>!(A &amp;&amp; B) ≡ !A || !B</code>)</li>
+</ul>
+<p>| A     | B     | A &amp;&amp; B | !(A &amp;&amp; B) | !A    | !B    | !A || !B |
+|-------|-------|--------|-----------|-------|-------|----------|
+| true  | true  | true   | false     | false | false | false    |
+| true  | false | false  | true      | false | true  | true     |
+| false | true  | false  | true      | true  | false | true     |
+| false | false | false  | true      | true  | true  | true     |</p>
+<ul>
+<li>Segunda Ley (<code>!(A || B) ≡ !A &amp;&amp; !B</code>)</li>
+</ul>
+<p>| A     | B     | A || B | !(A || B) | !A    | !B    | !A &amp;&amp; !B |
+|-------|-------|--------|-----------|-------|-------|----------|
+| true  | true  | true   | false     | false | false | false    |
+| true  | false | true   | false     | false | true  | false    |
+| false | true  | true   | false     | true  | false | false    |
+| false | false | false  | true      | true  | true  | true     |</p>
+<hr />
+<p><strong>Ejemplos prácticos</strong></p>
+<ul>
+<li>Ejemplo 1: Verificar si ninguna condición es verdadera
+Si queremos verificar si ni <code>A</code> ni <code>B</code> son verdaderos, podemos usar:</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">B</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="nx">A</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">B</span><span class="p">));</span><span class="w">  </span><span class="c1">// true</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="o">!</span><span class="nx">A</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="nx">B</span><span class="p">);</span><span class="w">   </span><span class="c1">// true (equivalente)</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="por-que-son-importantes-las-leyes-de-de-morgan"><strong>¿Por qué son importantes las Leyes de De Morgan?</strong></h4>
+<ol>
+<li>
+<p><strong>Simplificación de expresiones</strong>:</p>
+<ul>
+<li>Estas leyes permiten reescribir expresiones lógicas de manera más comprensible o adecuada para ciertos contextos.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optimización del código</strong>:</p>
+<ul>
+<li>Ayudan a escribir condiciones más eficientes o claras.</li>
+</ul>
+</li>
+<li>
+<p><strong>Comprensión de la lógica booleana</strong>:</p>
+<ul>
+<li>Son una base fundamental en programación, especialmente en algoritmos, bases de datos y sistemas digitales.</li>
+</ul>
+</li>
+</ol>
+<h4 id="ejercicio-4-validar-acceso-segun-edad-y-rol"><strong>Ejercicio 4: Validar acceso según edad y rol</strong></h4>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Solicita al usuario que introduzca su edad y su rol.</li>
+<li>Permite el acceso solo si:<ul>
+<li>El usuario tiene 18 años o más <strong>y</strong> es administrador.</li>
+<li><strong>O</strong> si tiene menos de 18 años pero el rol es "invitado".</li>
+<li><strong>Y</strong> se asegura de que el rol no esté vacío.</li>
+</ul>
+</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Validar acceso según edad y rol</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
 
 <span class="kd">let</span><span class="w"> </span><span class="nx">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce tu edad: &quot;</span><span class="p">));</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">rol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce tu rol (admin/invitado): &quot;</span><span class="p">).</span><span class="nx">trim</span><span class="p">();</span>
 
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">edad</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">18</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Eres mayor de edad&quot;</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="nx">edad</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">18</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">rol</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;admin&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="nx">edad</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">18</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">rol</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;invitado&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">rol</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Acceso permitido&quot;</span><span class="p">);</span>
 <span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Eres menor de edad&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Acceso denegado&quot;</span><span class="p">);</span>
 <span class="p">}</span>
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 </details>
+</div>
+<hr />
+<h4 id="ejercicio-5-determinar-si-un-numero-cumple-multiples-condiciones"><strong>Ejercicio 5: Determinar si un número cumple múltiples condiciones</strong></h4>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Solicita al usuario que introduzca un número.</li>
+<li>Determina si el número cumple <strong>al menos una</strong> de las siguientes condiciones:<ul>
+<li>Es divisible por 2 <strong>y</strong> mayor que 10.</li>
+<li><strong>O</strong> es divisible por 3 pero <strong>no</strong> mayor que 50.</li>
+<li><strong>Y</strong> que el número no sea negativo.</li>
+</ul>
+</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Validar número con múltiples condiciones</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce un número: &quot;</span><span class="p">));</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="nx">numero</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">10</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="nx">numero</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="p">(</span><span class="nx">numero</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">50</span><span class="p">))</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El número cumple al menos una condición&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El número no cumple ninguna condición&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<hr />
+<h4 id="ejercicio-6-validar-si-un-texto-cumple-criterios-mixtos"><strong>Ejercicio 6: Validar si un texto cumple criterios mixtos</strong></h4>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Solicita al usuario que introduzca una cadena de texto.</li>
+<li>Determina si la cadena cumple <strong>todas</strong> las siguientes condiciones:<ul>
+<li>Tiene entre 5 y 15 caracteres.</li>
+<li><strong>O</strong> comienza con la letra "A" pero <strong>no</strong> termina con la letra "Z".</li>
+<li><strong>Y</strong> no contiene espacios en blanco.</li>
+</ul>
+</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Validar texto con múltiples condiciones</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce una cadena de texto: &quot;</span><span class="p">).</span><span class="nx">trim</span><span class="p">();</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="nx">texto</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">texto</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">15</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="nx">texto</span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="nx">texto</span><span class="p">.</span><span class="nx">endsWith</span><span class="p">(</span><span class="s2">&quot;Z&quot;</span><span class="p">))</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="nx">texto</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El texto cumple las condiciones&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El texto no cumple las condiciones&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
 <hr />
 <h3 id="132-if-else-anidado"><strong>1.3.2 If-Else Anidado</strong></h3>
 <h4 id="que-es-un-if-else-anidado"><strong>¿Qué es un if-else anidado?</strong></h4>
@@ -3270,7 +4012,7 @@ rm<span class="w"> </span>archivo.js
 ```
 </code></pre></div>
 
-<h4 id="ejemplo_2"><strong>Ejemplo</strong></h4>
+<h4 id="ejemplo_1"><strong>Ejemplo</strong></h4>
 <div class="codehilite"><pre><span></span><code><span class="nt">En</span><span class="w"> </span><span class="nt">este</span><span class="w"> </span><span class="nt">ejemplo</span><span class="o">,</span><span class="w"> </span><span class="nt">se</span><span class="w"> </span><span class="nt">evalúa</span><span class="w"> </span><span class="nt">la</span><span class="w"> </span><span class="nt">calificación</span><span class="w"> </span><span class="nt">de</span><span class="w"> </span><span class="nt">un</span><span class="w"> </span><span class="nt">estudiante</span><span class="w"> </span><span class="nt">y</span><span class="w"> </span><span class="nt">se</span><span class="w"> </span><span class="nt">asigna</span><span class="w"> </span><span class="nt">una</span><span class="w"> </span><span class="nt">letra</span><span class="w"> </span><span class="nt">según</span><span class="w"> </span><span class="nt">el</span><span class="w"> </span><span class="nt">rango</span><span class="o">:</span>
 
 <span class="err">```</span><span class="nt">javascript</span>
@@ -3326,7 +4068,7 @@ rm<span class="w"> </span>archivo.js
 ```
 </code></pre></div>
 
-<h5 id="ejemplo_3"><strong>Ejemplo</strong></h5>
+<h5 id="ejemplo_2"><strong>Ejemplo</strong></h5>
 <p>En este ejemplo, se muestra en la consola los números del 1 al 5:</p>
 <div class="codehilite"><pre><span></span><code>```<span class="nv">javascript</span>
 <span class="k">for</span><span class="w"> </span><span class="ss">(</span><span class="nv">let</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="c1">; i &lt;= 5; i++) {</span>
@@ -3346,7 +4088,7 @@ rm<span class="w"> </span>archivo.js
 ```
 </code></pre></div>
 
-<h5 id="ejemplo_4"><strong>Ejemplo</strong></h5>
+<h5 id="ejemplo_3"><strong>Ejemplo</strong></h5>
 <p>En este ejemplo, se muestra en la consola los números del 1 al 5:</p>
 <div class="codehilite"><pre><span></span><code>```<span class="nv">javascript</span>
 <span class="nv">let</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="c1">;</span>
@@ -3368,7 +4110,7 @@ rm<span class="w"> </span>archivo.js
 ```
 </code></pre></div>
 
-<h5 id="ejemplo_5"><strong>Ejemplo</strong></h5>
+<h5 id="ejemplo_4"><strong>Ejemplo</strong></h5>
 <p>En este ejemplo, se muestra en la consola los números del 1 al 5:</p>
 <div class="codehilite"><pre><span></span><code>```<span class="nv">javascript</span>
 <span class="nv">let</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="c1">;</span>
@@ -3431,7 +4173,7 @@ rm<span class="w"> </span>archivo.js
 <h3 id="for-anidado"><strong>For Anidado</strong></h3>
 <h4 id="que-es-un-for-anidado"><strong>¿Qué es un for anidado?</strong></h4>
 <p>Un bucle <code>for</code> anidado se utiliza para ejecutar iteraciones dentro de iteraciones, como al recorrer matrices bidimensionales.</p>
-<h5 id="ejemplo_6"><strong>Ejemplo</strong></h5>
+<h5 id="ejemplo_5"><strong>Ejemplo</strong></h5>
 <p>Este ejemplo muestra una tabla de multiplicar del 1 al 10:</p>
 <div class="codehilite"><pre><span></span><code>```javascript
 for<span class="w"> </span>(let<span class="w"> </span>i<span class="w"> </span>=<span class="w"> </span>1;<span class="w"> </span>i<span class="w"> </span><span class="err">&lt;</span>=<span class="w"> </span>3;<span class="w"> </span>i++)<span class="w"> </span>{
