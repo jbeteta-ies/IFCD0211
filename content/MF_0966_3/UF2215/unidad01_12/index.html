@@ -1,0 +1,2346 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jbeteta-ies.github.io/IFCD0211/content/MF_0966_3/UF2215/unidad01_12/">
+      
+      
+        <link rel="prev" href="../unidad01_11/">
+      
+      
+        <link rel="next" href="../unidad01_13/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>1.2 Variables, Tipos de Datos y Operadores - Certificado de Profesionalidad IFCD0211</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unidad-1-configuracion-del-entorno-y-fundamentos-de-javascript" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Certificado de Profesionalidad IFCD0211" class="md-header__button md-logo" aria-label="Certificado de Profesionalidad IFCD0211" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Certificado de Profesionalidad IFCD0211
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              1.2 Variables, Tipos de Datos y Operadores
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Certificado de Profesionalidad IFCD0211" class="md-nav__button md-logo" aria-label="Certificado de Profesionalidad IFCD0211" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Certificado de Profesionalidad IFCD0211
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Normativa
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Normativa
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../normativa19/IFCD0211/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Normativa General
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../normativa19/MF0966_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MF0966_3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../normativa19/MF0967_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MF0967_3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../normativa19/MF0968_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MF0968_3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../normativa19/MP0459/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MP0459
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../normativa19/ucs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unidades de Competencia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Contenidos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Contenidos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MF0966_3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            MF0966_3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UF2213/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF2213
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UF2214/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF2214
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_3" id="__nav_3_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UF2215
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            UF2215
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_3_2" id="__nav_3_1_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    T01 Fundamentos de JS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            T01 Fundamentos de JS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad01_11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.1 Configuración del entorno de desarrollo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    1.2 Variables, Tipos de Datos y Operadores
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    1.2 Variables, Tipos de Datos y Operadores
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#12-variables-tipos-de-datos-y-operadores" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Variables, Tipos de Datos y Operadores
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2 Variables, Tipos de Datos y Operadores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-declaracion-de-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.1 Declaración de Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-tipos-de-datos-primitivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.2 Tipos de Datos Primitivos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-operadores-basicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.3 Operadores Básicos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124-ejercicio-practico" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.4 Ejercicio Práctico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-1-suma-resta-y-multiplicacion-combinadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 1: Suma, resta y multiplicación combinadas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-2-promedio-de-tres-numeros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 2: Promedio de tres números
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-3-area-de-un-rectangulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 3: Área de un rectángulo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-4-perimetro-y-area-de-un-circulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 4: Perímetro y área de un círculo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-5-calculo-del-iva" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 5: Cálculo del IVA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explicacion-funciones-de-manipulacion-de-cadenas-en-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explicación: Funciones de Manipulación de Cadenas en JavaScript
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios-de-manipulacion-de-cadenas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios de Manipulación de Cadenas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejercicios de Manipulación de Cadenas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-6-concatenar-cadenas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 6: Concatenar cadenas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-7-longitud-de-una-cadena" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 7: Longitud de una cadena
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-8-convertir-a-mayusculas-y-minusculas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 8: Convertir a mayúsculas y minúsculas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-9-extraer-parte-de-una-cadena" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 9: Extraer parte de una cadena
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-10-reemplazar-palabras-en-una-frase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 10: Reemplazar palabras en una frase
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uso-de-prompt-sync-en-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uso de prompt-sync en Node.js
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Uso de prompt-sync en Node.js">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instalacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalación:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-11-solicitar-el-nombre-del-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 11: Solicitar el nombre del usuario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-12-calculadora-basica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 12: Calculadora básica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-extra-resolver-una-ecuacion-de-segundo-grado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio Extra: Resolver una ecuación de segundo grado
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad01_13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.3 Estructuras básicas condicionales
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad01_14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.4 Bucles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad01_15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.5 Uso avanzado de Números, cadenas y fechas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad01_16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.6 Ejercicios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T02 Funciones y manejo de errores
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MF0967_3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            MF0967_3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MF_0967_3/UF2216/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF2216
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MF_0967_3/UF2217/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF2217
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MF_0967_3/UF2218/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF2218
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MF0968_3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            MF0968_3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MF_0968_3/UF1643/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF1643
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MF_0968_3/UF1644/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF1644
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MP0459
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            MP0459
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MP0459/Practicas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prácticas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#12-variables-tipos-de-datos-y-operadores" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Variables, Tipos de Datos y Operadores
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2 Variables, Tipos de Datos y Operadores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-declaracion-de-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.1 Declaración de Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-tipos-de-datos-primitivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.2 Tipos de Datos Primitivos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-operadores-basicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.3 Operadores Básicos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124-ejercicio-practico" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.4 Ejercicio Práctico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-1-suma-resta-y-multiplicacion-combinadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 1: Suma, resta y multiplicación combinadas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-2-promedio-de-tres-numeros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 2: Promedio de tres números
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-3-area-de-un-rectangulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 3: Área de un rectángulo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-4-perimetro-y-area-de-un-circulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 4: Perímetro y área de un círculo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-5-calculo-del-iva" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 5: Cálculo del IVA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explicacion-funciones-de-manipulacion-de-cadenas-en-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explicación: Funciones de Manipulación de Cadenas en JavaScript
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios-de-manipulacion-de-cadenas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios de Manipulación de Cadenas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejercicios de Manipulación de Cadenas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-6-concatenar-cadenas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 6: Concatenar cadenas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-7-longitud-de-una-cadena" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 7: Longitud de una cadena
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-8-convertir-a-mayusculas-y-minusculas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 8: Convertir a mayúsculas y minúsculas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-9-extraer-parte-de-una-cadena" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 9: Extraer parte de una cadena
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-10-reemplazar-palabras-en-una-frase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 10: Reemplazar palabras en una frase
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uso-de-prompt-sync-en-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uso de prompt-sync en Node.js
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Uso de prompt-sync en Node.js">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instalacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalación:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-11-solicitar-el-nombre-del-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 11: Solicitar el nombre del usuario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-12-calculadora-basica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 12: Calculadora básica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-extra-resolver-una-ecuacion-de-segundo-grado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio Extra: Resolver una ecuación de segundo grado
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="unidad-1-configuracion-del-entorno-y-fundamentos-de-javascript">Unidad 1: Configuración del Entorno y Fundamentos de JavaScript</h1>
+<h2 id="12-variables-tipos-de-datos-y-operadores"><strong>1.2 Variables, Tipos de Datos y Operadores</strong></h2>
+<div class="admonition note">
+<p class="admonition-title">Objetivos</p>
+<ol>
+<li>Comprender cómo declarar y usar variables en JavaScript.</li>
+<li>Conocer los diferentes tipos de datos y aprender a trabajar con operadores básicos para realizar operaciones.</li>
+</ol>
+</div>
+<h4 id="121-declaracion-de-variables"><strong>1.2.1 Declaración de Variables</strong></h4>
+<p><strong>¿Qué es una variable?</strong>  </p>
+<p>Una variable es un espacio en la memoria que se utiliza para almacenar datos que pueden ser usados y manipulados en un programa.</p>
+<p><strong>Formas de declarar variables en JavaScript:</strong></p>
+<ol>
+<li><strong><code>let</code>:</strong> Permite declarar variables que pueden ser modificadas.
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Juan&quot;</span><span class="p">;</span>
+<span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Ana&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Esto es válido</span>
+</code></pre></div></td></tr></table></div></li>
+<li><strong><code>const</code>:</strong> Se utiliza para declarar constantes, es decir, valores que no cambian.
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.1416</span><span class="p">;</span>
+<span class="c1">// pi = 3; // Esto generará un error</span>
+</code></pre></div></td></tr></table></div></li>
+<li><strong><code>var</code>:</strong> Declaración más antigua. Evita su uso en favor de <code>let</code> y <code>const</code> debido a problemas de alcance.
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">25</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Buenas Prácticas</p>
+<ul>
+<li>Usa <code>const</code> siempre que el valor no cambie.</li>
+<li>Usa <code>let</code> cuando necesites cambiar el valor de la variable.</li>
+<li>Evita <code>var</code> para prevenir errores relacionados con el alcance.</li>
+</ul>
+</div>
+<hr />
+<h4 id="122-tipos-de-datos-primitivos"><strong>1.2.2 Tipos de Datos Primitivos</strong></h4>
+<p>JavaScript tiene los siguientes tipos de datos básicos:</p>
+<ol>
+<li>
+<p><strong>String (Cadenas):</strong> Representa texto.
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">mensaje</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Hola, mundo!&quot;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">mensaje</span><span class="p">);</span><span class="w"> </span><span class="c1">// &quot;string&quot;</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p><strong>Number (Números):</strong> Incluye enteros y decimales.
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">entero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">decimal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p><strong>Boolean (Booleanos):</strong> Valores <code>true</code> o <code>false</code>.
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">esActivo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">esMayor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span><span class="w"> </span><span class="c1">// true</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p><strong>Undefined:</strong> Indica que una variable ha sido declarada pero no tiene valor.
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">indefinido</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">indefinido</span><span class="p">);</span><span class="w"> </span><span class="c1">// undefined</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p><strong>Null:</strong> Representa un valor intencionalmente vacío.
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">vacio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p><strong>Symbol (Símbolos):</strong> Valores únicos e inmutables, utilizados principalmente en programación avanzada.
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Symbol</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p><strong>BigInt:</strong> Representa números enteros muy grandes.
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">numeroGrande</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1234567890123456789012345678901234567890n</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+</ol>
+<hr />
+<h4 id="123-operadores-basicos"><strong>1.2.3 Operadores Básicos</strong></h4>
+<p><strong>Operadores Aritméticos:</strong>
+- Suma: <code>+</code>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// 8</span>
+</code></pre></div></td></tr></table></div>
+- Resta: <code>-</code>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">6</span><span class="p">;</span><span class="w"> </span><span class="c1">// 4</span>
+</code></pre></div></td></tr></table></div>
+- Multiplicación: <code>*</code>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 8</span>
+</code></pre></div></td></tr></table></div>
+- División: <code>/</code>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">9</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// 3</span>
+</code></pre></div></td></tr></table></div>
+- Resto o módulo: <code>%</code>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">resto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// 1</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Operadores de Comparación:</strong>
+- Igualdad estricta: <code>===</code>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">5</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;5&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// false</span>
+</code></pre></div></td></tr></table></div>
+- Diferente: <code>!==</code>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">10</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
+</code></pre></div></td></tr></table></div>
+- Mayor que: <code>&gt;</code>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">7</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">3</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
+</code></pre></div></td></tr></table></div>
+- Menor que: <code>&lt;</code>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">2</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Operadores Lógicos:</strong>
+- AND (<code>&amp;&amp;</code>): Devuelve <code>true</code> si ambos operandos son verdaderos.
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="kc">true</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span><span class="w"> </span><span class="c1">// false</span>
+</code></pre></div></td></tr></table></div>
+- OR (<code>||</code>): Devuelve <code>true</code> si al menos uno de los operandos es verdadero.
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="kc">true</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
+</code></pre></div></td></tr></table></div>
+- NOT (<code>!</code>): Invierte el valor lógico.
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="o">!</span><span class="kc">true</span><span class="p">);</span><span class="w"> </span><span class="c1">// false</span>
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h4 id="124-ejercicio-practico"><strong>1.2.4 Ejercicio Práctico</strong></h4>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Declara dos variables, <code>a</code> y <code>b</code>, con valores numéricos.</li>
+<li>Calcula la suma, resta, multiplicación, división y módulo de ambas variables.   </li>
+<li>Muestra los resultados en la consola.</li>
+</ul>
+<details class="example">
+<summary>Diagrama de flujo</summary>
+<pre class="mermaid"><code>flowchart TD
+    Start[Inicio -&gt; Declarar variables a=10 y b=5] 
+    Suma["`Mostrar suma: console.log(a + b);`"]
+    Resta["`Mostrar resta: console.log(a - b);`"]
+    Multiplicacion["`Mostrar multiplicación: console.log(a * b);`"]
+    Division["`Mostrar división: console.log(a / b);`"]
+    Modulo["`Mostrar módulo: console.log(a % b);`"]
+    End[Fin]
+
+    Start --&gt; Suma --&gt; Resta --&gt; Multiplicacion --&gt; Division --&gt; Modulo --&gt; End</code></pre>
+</details>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Operaciones matemáticas básicas</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span>
+
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Suma:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Resta:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">b</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Multiplicación:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">b</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;División:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">b</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Módulo:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="nx">b</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<p><strong>Reto Adicional: Operaciones Matemáticas Avanzadas</strong></p>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Declara dos variables, <code>num1</code> y <code>num2</code>, con valores numéricos.</li>
+<li>Calcula la suma, resta, multiplicación, división y módulo de ambas variables, y guarda los resultados en variables independientes.</li>
+<li>Muestra los resultados:<ul>
+<li>Primero, cada operación en una línea individual.</li>
+<li>Luego, todos los resultados concatenados en una única línea.</li>
+</ul>
+</li>
+</ul>
+<details class="example">
+<summary>Diagrama de flujo</summary>
+<pre class="mermaid"><code>flowchart TD
+    Start[Inicio -&gt; Declarar variables num1=10 y num2=5]
+    CalculoSuma["suma = num1 + num2"]
+    CalculoResta["resta = num1 - num2"]
+    CalculoMultiplicacion["multiplicacion = num1 * num2"]
+    CalculoDivision["division = num1 / num2"]
+    CalculoModulo["modulo = num1 % num2"]
+    MostrarResultadosInd["Mostrar resultados individuales"]
+    MostrarResultadoConcat["`Mostrar concatenados:
+                console.log(Resultados: suma=${suma}, resta=${resta}, mult=${multiplicacion}, div=${division}, módulo=${modulo});`"]
+    End[Fin]
+
+    Start --&gt; CalculoSuma --&gt; CalculoResta --&gt; CalculoMultiplicacion --&gt; CalculoDivision --&gt; CalculoModulo
+    CalculoModulo --&gt; MostrarResultadosInd --&gt; MostrarResultadoConcat --&gt; End</code></pre>
+</details>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Operaciones matemáticas avanzadas</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">num2</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">resta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">num2</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">multiplicacion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">num2</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">division</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">num2</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">modulo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="nx">num2</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Suma:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">suma</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Resta:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">resta</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Multiplicación:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">multiplicacion</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;División:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">division</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Módulo:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">modulo</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Resultados: suma=</span><span class="si">${</span><span class="nx">suma</span><span class="si">}</span><span class="sb">, resta=</span><span class="si">${</span><span class="nx">resta</span><span class="si">}</span><span class="sb">, mult=</span><span class="si">${</span><span class="nx">multiplicacion</span><span class="si">}</span><span class="sb">, div=</span><span class="si">${</span><span class="nx">division</span><span class="si">}</span><span class="sb">, módulo=</span><span class="si">${</span><span class="nx">modulo</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<hr />
+<h4 id="ejercicio-1-suma-resta-y-multiplicacion-combinadas"><strong>Ejercicio 1: Suma, resta y multiplicación combinadas</strong></h4>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Declara tres variables, <code>a</code>, <code>b</code> y <code>c</code>, con valores numéricos.</li>
+<li>Calcula la suma de <code>a</code> y <code>b</code>.</li>
+<li>Multiplica el resultado de la suma por <code>c</code>.</li>
+<li>Muestra los resultados.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Suma, Resta y Multiplicación</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">producto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">suma</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">c</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Suma:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">suma</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Producto:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">producto</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<hr />
+<h4 id="ejercicio-2-promedio-de-tres-numeros"><strong>Ejercicio 2: Promedio de tres números</strong></h4>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Declara tres variables, <code>x</code>, <code>y</code> y <code>z</code>, con valores numéricos.</li>
+<li>Calcula el promedio de estos números.</li>
+<li>Muestra el resultado.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Promedio de Tres Números</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">8</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">6</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">promedio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">z</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Promedio:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">promedio</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<hr />
+<h4 id="ejercicio-3-area-de-un-rectangulo"><strong>Ejercicio 3: Área de un rectángulo</strong></h4>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Declara dos variables <code>largo</code> y <code>ancho</code> con valores numéricos.</li>
+<li>Calcula el área del rectángulo.</li>
+<li>Muestra el resultado.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Área de un Rectángulo</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">largo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">7</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">ancho</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4</span><span class="p">;</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">area</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">largo</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">ancho</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Área del rectángulo:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">area</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<hr />
+<h4 id="ejercicio-4-perimetro-y-area-de-un-circulo"><strong>Ejercicio 4: Perímetro y área de un círculo</strong></h4>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Declara una variable <code>radio</code> con un valor numérico.</li>
+<li>Calcula el perímetro y el área del círculo.</li>
+<li>Muestra ambos resultados.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Círculo: Perímetro y Área</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">radio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">perimetro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">radio</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">area</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">radio</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">radio</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Perímetro del círculo:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">perimetro</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Área del círculo:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">area</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<hr />
+<h4 id="ejercicio-5-calculo-del-iva"><strong>Ejercicio 5: Cálculo del IVA</strong></h4>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Declara una variable <code>precio</code> con un valor numérico y otra <code>iva</code> con un porcentaje.</li>
+<li>Calcula el importe del IVA y el precio total.</li>
+<li>Muestra el IVA y el total.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Cálculo del IVA</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">precio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">100</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">iva</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">21</span><span class="p">;</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">importeIVA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">precio</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">iva</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">100</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">precioTotal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">precio</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">importeIVA</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;IVA:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">importeIVA</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Precio total:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">precioTotal</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<hr />
+<h4 id="explicacion-funciones-de-manipulacion-de-cadenas-en-javascript">Explicación: Funciones de Manipulación de Cadenas en JavaScript</h4>
+<p>En esta sección aprenderemos algunas funciones básicas para manipular cadenas en JavaScript. Estas funciones te permitirán realizar tareas comunes como concatenar texto, convertir mayúsculas/minúsculas y mucho más.</p>
+<ol>
+<li>
+<p><strong>Concatenar cadenas:</strong> </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li>Combina dos o más cadenas en una sola utilizando el operador <code>+</code> o las plantillas de cadenas (template strings) con backticks (``).</li>
+<li>Ejemplo:
+    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Juan&quot;</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">apellido</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Pérez&quot;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;tu nombre es: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">apellido</span><span class="p">);</span><span class="w"> </span><span class="c1">// Juan Pérez</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`tu nombre es: </span><span class="si">${</span><span class="nx">nombre</span><span class="si">}</span><span class="sb"> </span><span class="si">${</span><span class="nx">apellido</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span><span class="w"> </span><span class="c1">// Juan Pérez</span>
+</code></pre></div></li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Obtener la longitud de una cadena (<code>.length</code>):</strong></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li>Devuelve el número de caracteres de una cadena, incluidos los espacios.</li>
+<li>Ejemplo:
+    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">frase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Hola, mundo&quot;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">frase</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span><span class="w"> </span><span class="c1">// 11</span>
+</code></pre></div></li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Convertir a mayúsculas (<code>.toUpperCase()</code>):</strong></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li>Convierte todos los caracteres de la cadena a mayúsculas.</li>
+<li>Ejemplo:
+    <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;hola&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">texto</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">());</span><span class="w"> </span><span class="c1">// HOLA</span>
+</code></pre></div></li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Convertir a minúsculas (<code>.toLowerCase()</code>):</strong></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li>Convierte todos los caracteres de la cadena a minúsculas.</li>
+<li>Ejemplo:
+    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;HOLA&quot;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">texto</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">());</span><span class="w"> </span><span class="c1">// hola</span>
+</code></pre></div></li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Extraer parte de una cadena (<code>.slice()</code>):</strong></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li>Devuelve una sección de la cadena especificando el índice de inicio y final.</li>
+<li>Ejemplo:
+    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">mensaje</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;JavaScript&quot;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">mensaje</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">));</span><span class="w"> </span><span class="c1">// Java</span>
+</code></pre></div></li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Reemplazar texto en una cadena (<code>.replace()</code>):</strong></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li>Reemplaza una parte de la cadena con otra.</li>
+<li>Ejemplo:
+    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">frase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;El cielo es azul&quot;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">frase</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s2">&quot;azul&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;verde&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// El cielo es verde</span>
+</code></pre></div></li>
+</ul>
+</div>
+</li>
+</ol>
+<hr />
+<h3 id="ejercicios-de-manipulacion-de-cadenas">Ejercicios de Manipulación de Cadenas</h3>
+<h4 id="ejercicio-6-concatenar-cadenas"><strong>Ejercicio 6: Concatenar cadenas</strong></h4>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Declara dos variables <code>nombre</code> y <code>edad</code>.</li>
+<li>Crea una nueva variable concatenando ambas cadenas: <code>mi nombre es [nombre] y tengo [edad] años</code>.</li>
+<li>Muestra la cadena completa.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Concatenar Cadenas</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Juan&quot;</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">30</span><span class="p">;</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">cadenaCompleta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`Mi nombre es </span><span class="si">${</span><span class="nx">nombre</span><span class="si">}</span><span class="sb"> y tengo </span><span class="si">${</span><span class="nx">edad</span><span class="si">}</span><span class="sb"> años`</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Resultado:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">cadenaCompleta</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<hr />
+<h4 id="ejercicio-7-longitud-de-una-cadena"><strong>Ejercicio 7: Longitud de una cadena</strong></h4>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Declara una variable <code>frase</code> con una oración: <code>Hola, ¿cómo estás?</code>.</li>
+<li>Calcula la longitud de la cadena.</li>
+<li>Muestra el resultado.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Longitud de una Cadena</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">frase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Hola, ¿cómo estás?&quot;</span><span class="p">;</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">longitud</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">frase</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Longitud de la cadena:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">longitud</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<hr />
+<h4 id="ejercicio-8-convertir-a-mayusculas-y-minusculas"><strong>Ejercicio 8: Convertir a mayúsculas y minúsculas</strong></h4>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Declara una variable <code>texto</code>: <code>JavaScript es divertido</code>.</li>
+<li>Convierte el texto a mayúsculas y a minúsculas.</li>
+<li>Muestra ambos resultados.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Mayúsculas y Minúsculas</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;JavaScript es divertido&quot;</span><span class="p">;</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">textoMayus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">texto</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">();</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">textoMinus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">texto</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">();</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;En mayúsculas:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">textoMayus</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;En minúsculas:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">textoMinus</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<hr />
+<h4 id="ejercicio-9-extraer-parte-de-una-cadena"><strong>Ejercicio 9: Extraer parte de una cadena</strong></h4>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Declara una variable <code>mensaje</code> con una oración: <code>JavaScript es muy poderoso</code>.</li>
+<li>Extrae una parte de la cadena (primeras 10 letras).</li>
+<li>Muestra la parte extraída.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Extraer Parte de una Cadena</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">mensaje</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;JavaScript es muy poderoso&quot;</span><span class="p">;</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">parte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">mensaje</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Parte extraída:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">parte</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<hr />
+<h4 id="ejercicio-10-reemplazar-palabras-en-una-frase"><strong>Ejercicio 10: Reemplazar palabras en una frase</strong></h4>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Declara una variable <code>frase</code> con el texto: <code>"El cielo es azul y el mar también es azul"</code>.</li>
+<li>Usa <code>.replace()</code> para cambiar la primera ocurrencias de la palabra <code>"azul"</code> por <code>"verde"</code>.</li>
+<li>Muestra la frase modificada </li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Reemplazar Palabras en una Frase</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">frase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;El cielo es azul y el mar también es azul&quot;</span><span class="p">;</span>
+
+<span class="c1">// Reemplazar solo la primera ocurrencia</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">nuevaFrase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">frase</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s2">&quot;azul&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;verde&quot;</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Frase modificada (una ocurrencia):&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">nuevaFrase</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<h3 id="uso-de-prompt-sync-en-nodejs"><strong>Uso de <code>prompt-sync</code> en Node.js</strong></h3>
+<p>ES6 introdujo el método <code>prompt</code> para solicitar datos al usuario en el navegador, pero en Node.js no está disponible por defecto. Para interactuar con el usuario en Node.js, puedes utilizar la biblioteca <code>prompt-sync</code>. Es la manera que tenemos en Node.js de solicitar datos al usuario de forma sincrónica.</p>
+<p><strong><code>prompt-sync</code></strong> es una biblioteca que facilita las entradas sincronizadas en Node.js.</p>
+<h4 id="instalacion">Instalación:</h4>
+<div class="highlight"><pre><span></span><code><span class="sb">`</span>npm<span class="w"> </span>install<span class="w"> </span>prompt-sync<span class="sb">`</span>
+</code></pre></div>
+<h4 id="ejemplo">Ejemplo:</h4>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Uso de prompt-sync</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;¿Qué edad tienes? &quot;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`¡Hola, tienes </span><span class="si">${</span><span class="nx">edad</span><span class="si">}</span><span class="sb"> años`</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="ejercicio-11-solicitar-el-nombre-del-usuario"><strong>Ejercicio 11: Solicitar el nombre del usuario</strong></h3>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Solicita al usuario su nombre utilizando la biblioteca <code>prompt-sync</code>.</li>
+<li>Muestra un saludo personalizado en la consola, como: "¡Hola, [nombre]!".</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Solicitar el Nombre del Usuario</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+
+<span class="c1">// Solicitar el nombre al usuario</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;¿Cómo te llamas? &quot;</span><span class="p">);</span>
+
+<span class="c1">// Mostrar saludo personalizado</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`¡Hola, </span><span class="si">${</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">!`</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<hr />
+<h3 id="ejercicio-12-calculadora-basica"><strong>Ejercicio 12: Calculadora básica</strong></h3>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Solicita al usuario dos números utilizando la biblioteca <code>prompt-sync</code>.</li>
+<li>Realiza las operaciones matemáticas básicas: suma, resta, multiplicación y división.</li>
+<li>Muestra los resultados de todas las operaciones en la consola.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Calculadora Básica</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+
+<span class="c1">// Solicitar números al usuario</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el primer número: &quot;</span><span class="p">));</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el segundo número: &quot;</span><span class="p">));</span>
+
+<span class="c1">// Realizar operaciones matemáticas básicas</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">num2</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">resta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">num2</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">multiplicacion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">num2</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">division</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">num2</span><span class="p">;</span>
+
+<span class="c1">// Mostrar los resultados</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Resultados:&quot;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Suma: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">suma</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Resta: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">resta</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Multiplicación: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">multiplicacion</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;División: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">division</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<h3 id="ejercicio-extra-resolver-una-ecuacion-de-segundo-grado"><strong>Ejercicio Extra: Resolver una ecuación de segundo grado</strong></h3>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Solicita al usuario los coeficientes <code>a</code>, <code>b</code> y <code>c</code> de una ecuación de segundo grado de la forma: ( ax^2 + bx + c = 0 ).</li>
+<li>Calcula las raíces de la ecuación utilizando la fórmula general:
+  [
+  x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+  ]</li>
+<li>Muestra las dos raíces en la consola (si existen).</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Resolver Ecuación de Segundo Grado</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+
+<span class="c1">// Solicitar coeficientes al usuario</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el coeficiente a: &quot;</span><span class="p">));</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el coeficiente b: &quot;</span><span class="p">));</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el coeficiente c: &quot;</span><span class="p">));</span>
+
+<span class="c1">// Calcular el discriminante</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">discriminante</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">c</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">discriminante</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Dos raíces reales</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">raiz1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="o">-</span><span class="nx">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="nx">discriminante</span><span class="p">))</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">a</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">raiz2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="o">-</span><span class="nx">b</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="nx">discriminante</span><span class="p">))</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">a</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Las raíces de la ecuación son:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Raíz 1:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">raiz1</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Raíz 2:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">raiz2</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">discriminante</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Una única raíz</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">raiz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="nx">b</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">a</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;La ecuación tiene una raíz única:&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Raíz:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">raiz</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Raíces complejas</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;La ecuación no tiene raíces reales.&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<hr />
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>

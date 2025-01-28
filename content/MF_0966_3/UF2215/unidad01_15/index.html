@@ -1,0 +1,2083 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jbeteta-ies.github.io/IFCD0211/content/MF_0966_3/UF2215/unidad01_15/">
+      
+      
+        <link rel="prev" href="../unidad01_14/">
+      
+      
+        <link rel="next" href="../unidad01_16/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>1.5 Uso avanzado de Números, cadenas y fechas - Certificado de Profesionalidad IFCD0211</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unidad-1-uso-avanzado-de-numeros-cadenas-y-fechas" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Certificado de Profesionalidad IFCD0211" class="md-header__button md-logo" aria-label="Certificado de Profesionalidad IFCD0211" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Certificado de Profesionalidad IFCD0211
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              1.5 Uso avanzado de Números, cadenas y fechas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Certificado de Profesionalidad IFCD0211" class="md-nav__button md-logo" aria-label="Certificado de Profesionalidad IFCD0211" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Certificado de Profesionalidad IFCD0211
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Normativa
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Normativa
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../normativa19/IFCD0211/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Normativa General
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../normativa19/MF0966_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MF0966_3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../normativa19/MF0967_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MF0967_3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../normativa19/MF0968_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MF0968_3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../normativa19/MP0459/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MP0459
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../normativa19/ucs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unidades de Competencia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Contenidos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Contenidos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MF0966_3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            MF0966_3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UF2213/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF2213
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UF2214/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF2214
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_3" id="__nav_3_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UF2215
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            UF2215
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_3_2" id="__nav_3_1_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    T01 Fundamentos de JS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            T01 Fundamentos de JS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad01_11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.1 Configuración del entorno de desarrollo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad01_12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.2 Variables, Tipos de Datos y Operadores
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad01_13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.3 Estructuras básicas condicionales
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad01_14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.4 Bucles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    1.5 Uso avanzado de Números, cadenas y fechas
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    1.5 Uso avanzado de Números, cadenas y fechas
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#15-uso-avanzado-de-numeros-cadenas-y-fechas" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5 Uso Avanzado de Números, Cadenas y Fechas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.5 Uso Avanzado de Números, Cadenas y Fechas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151-clase-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.1 Clase Number
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.5.1 Clase Number">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#propiedades-de-la-clase-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      Propiedades de la Clase Number
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodos-de-la-clase-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      Métodos de la Clase Number
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-completo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo Completo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios-clase-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios: Clase Number
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152-biblioteca-math" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.2 Biblioteca Math
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.5.2 Biblioteca Math">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constantes-de-math" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constantes de Math
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodos-de-math" class="md-nav__link">
+    <span class="md-ellipsis">
+      Métodos de Math
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-completo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo Completo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios-biblioteca-math" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios: Biblioteca Math
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad01_16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.6 Ejercicios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T02 Funciones y manejo de errores
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MF0967_3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            MF0967_3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MF_0967_3/UF2216/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF2216
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MF_0967_3/UF2217/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF2217
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MF_0967_3/UF2218/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF2218
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MF0968_3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            MF0968_3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MF_0968_3/UF1643/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF1643
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MF_0968_3/UF1644/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF1644
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MP0459
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            MP0459
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MP0459/Practicas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prácticas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#15-uso-avanzado-de-numeros-cadenas-y-fechas" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5 Uso Avanzado de Números, Cadenas y Fechas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.5 Uso Avanzado de Números, Cadenas y Fechas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151-clase-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.1 Clase Number
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.5.1 Clase Number">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#propiedades-de-la-clase-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      Propiedades de la Clase Number
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodos-de-la-clase-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      Métodos de la Clase Number
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-completo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo Completo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios-clase-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios: Clase Number
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152-biblioteca-math" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.2 Biblioteca Math
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.5.2 Biblioteca Math">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constantes-de-math" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constantes de Math
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodos-de-math" class="md-nav__link">
+    <span class="md-ellipsis">
+      Métodos de Math
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-completo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo Completo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios-biblioteca-math" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios: Biblioteca Math
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="unidad-1-uso-avanzado-de-numeros-cadenas-y-fechas"><strong>Unidad 1: Uso Avanzado de Números, Cadenas y Fechas</strong></h1>
+<h2 id="15-uso-avanzado-de-numeros-cadenas-y-fechas"><strong>1.5 Uso Avanzado de Números, Cadenas y Fechas</strong></h2>
+<p>En este tema exploraremos las clases y bibliotecas integradas de JavaScript para trabajar con números, cadenas y fechas, sus métodos y propiedades principales, y cómo aplicar estas herramientas en escenarios prácticos.</p>
+<h3 id="151-clase-number"><strong>1.5.1 Clase <code>Number</code></strong></h3>
+<p>La clase <code>Number</code> en JavaScript representa valores numéricos y proporciona una serie de propiedades y métodos útiles para trabajar con números.</p>
+<h4 id="propiedades-de-la-clase-number"><strong>Propiedades de la Clase <code>Number</code></strong></h4>
+<ol>
+<li>
+<p><strong><code>Number.MAX_VALUE</code></strong>: El número positivo más grande que se puede representar en JavaScript.
+    <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nx">MAX_VALUE</span><span class="p">);</span><span class="w"> </span><span class="c1">// Ejemplo: 1.7976931348623157e+308</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong><code>Number.MIN_VALUE</code></strong>: El número positivo más pequeño mayor que 0.
+    <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nx">MIN_VALUE</span><span class="p">);</span><span class="w"> </span><span class="c1">// Ejemplo: 5e-324</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong><code>Number.POSITIVE_INFINITY</code></strong>: Representa el infinito positivo.
+    <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nx">POSITIVE_INFINITY</span><span class="p">);</span><span class="w"> </span><span class="c1">// Infinity</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong><code>Number.NEGATIVE_INFINITY</code></strong>: Representa el infinito negativo.
+    <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nx">NEGATIVE_INFINITY</span><span class="p">);</span><span class="w"> </span><span class="c1">// -Infinity</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong><code>Number.NaN</code></strong>: Representa un valor que no es un número (Not-a-Number).
+    <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="kc">NaN</span><span class="p">);</span><span class="w"> </span><span class="c1">// NaN</span>
+</code></pre></div></p>
+</li>
+</ol>
+<details class="info">
+<summary>Nota</summary>
+<p>El valor <code>NaN</code> suele aparecer como resultado de operaciones inválidas, como dividir 0 entre 0.</p>
+</details>
+<h4 id="metodos-de-la-clase-number"><strong>Métodos de la Clase <code>Number</code></strong></h4>
+<ol>
+<li>
+<p><strong><code>Number.isNaN(valor)</code></strong>: Comprueba si un valor es <code>NaN</code>.
+    <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nb">isNaN</span><span class="p">(</span><span class="kc">NaN</span><span class="p">));</span><span class="w"> </span><span class="c1">// true</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nb">isNaN</span><span class="p">(</span><span class="mf">10</span><span class="p">));</span><span class="w">  </span><span class="c1">// false</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong><code>Number.isInteger(valor)</code></strong>: Determina si un valor es un número entero.
+    <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nx">isInteger</span><span class="p">(</span><span class="mf">42</span><span class="p">));</span><span class="w">    </span><span class="c1">// true</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nx">isInteger</span><span class="p">(</span><span class="mf">42.5</span><span class="p">));</span><span class="w"> </span><span class="c1">// false</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong><code>toFixed(decimales)</code></strong>: Redondea un número al número de decimales especificado y lo convierte en una cadena.
+    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14159</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="mf">2</span><span class="p">));</span><span class="w"> </span><span class="c1">// &quot;3.14&quot;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong><code>toString(base)</code></strong>: Convierte un número en una cadena con la base especificada (binaria, octal, decimal, hexadecimal, etc.).
+    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">255</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="mf">16</span><span class="p">));</span><span class="w"> </span><span class="c1">// &quot;ff&quot; (hexadecimal)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="mf">2</span><span class="p">));</span><span class="w">  </span><span class="c1">// &quot;11111111&quot; (binario)</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong><code>parseInt(cadena, base)</code></strong>: Convierte una cadena en un número entero según la base indicada.
+    <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">parseInt</span><span class="p">(</span><span class="s2">&quot;1010&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">));</span><span class="w"> </span><span class="c1">// 10 (binario a decimal)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">parseInt</span><span class="p">(</span><span class="s2">&quot;FF&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">16</span><span class="p">));</span><span class="w"> </span><span class="c1">// 255 (hexadecimal a decimal)</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong><code>parseFloat(cadena)</code></strong>: Convierte una cadena en un número decimal.
+    <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">parseFloat</span><span class="p">(</span><span class="s2">&quot;3.14&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// 3.14</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">parseFloat</span><span class="p">(</span><span class="s2">&quot;123abc&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// 123</span>
+</code></pre></div></p>
+</li>
+</ol>
+<h4 id="ejemplo-completo"><strong>Ejemplo Completo</strong></h4>
+<details class="example">
+<summary>Ejemplo de uso de la Clase <code>Number</code></summary>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">123.456</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Valor original:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">valor</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Redondeado a 2 decimales:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">valor</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="mf">2</span><span class="p">));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;¿Es un entero?:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">Number</span><span class="p">.</span><span class="nx">isInteger</span><span class="p">(</span><span class="nx">valor</span><span class="p">));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Máximo valor representable:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">Number</span><span class="p">.</span><span class="nx">MAX_VALUE</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Valor en hexadecimal:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">valor</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="mf">16</span><span class="p">));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Número desde cadena:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="s2">&quot;123.45&quot;</span><span class="p">));</span>
+</code></pre></div>
+</details>
+<hr />
+<h3 id="ejercicios-clase-number"><strong>Ejercicios: Clase <code>Number</code></strong></h3>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 1: Propiedades y Métodos de Number</p>
+<ul>
+<li>Declara un número y muestra:<ul>
+<li>Su valor redondeado a 2 decimales.</li>
+<li>Su representación en binario y hexadecimal.</li>
+<li>Si es un entero o no.</li>
+</ul>
+</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">42.789</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Redondeado a 2 decimales:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">numero</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="mf">2</span><span class="p">));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;En binario:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">numero</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="mf">2</span><span class="p">));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;En hexadecimal:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">numero</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="mf">16</span><span class="p">));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;¿Es un entero?:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">Number</span><span class="p">.</span><span class="nx">isInteger</span><span class="p">(</span><span class="nx">numero</span><span class="p">));</span>
+</code></pre></div>
+</details>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 2: Conversión de bases</p>
+<ul>
+<li>Escribe un programa que convierta un número en distintas bases: binario, octal y hexadecimal.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">255</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Binario:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">numero</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="mf">2</span><span class="p">));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Octal:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">numero</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="mf">8</span><span class="p">));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hexadecimal:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">numero</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="mf">16</span><span class="p">));</span>
+</code></pre></div>
+</details>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 3: Validar valores numéricos</p>
+<ul>
+<li>Dado un valor, verifica si es un número válido o <code>NaN</code>.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">valor1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">NaN</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">valor2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">42</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;¿Es NaN (valor1)?:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">Number</span><span class="p">.</span><span class="nb">isNaN</span><span class="p">(</span><span class="nx">valor1</span><span class="p">));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;¿Es NaN (valor2)?:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">Number</span><span class="p">.</span><span class="nb">isNaN</span><span class="p">(</span><span class="nx">valor2</span><span class="p">));</span>
+</code></pre></div>
+</details>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 4: Convertir binario a decimal</p>
+<ul>
+<li>Crea una función que reciba una cadena con un número binario y devuelva su valor en decimal.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">binarioADecimal</span><span class="p">(</span><span class="nx">binario</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">binario</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Binario 1010 a decimal:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">binarioADecimal</span><span class="p">(</span><span class="s2">&quot;1010&quot;</span><span class="p">));</span>
+</code></pre></div>
+</details>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 5: Cálculo de porcentaje</p>
+<ul>
+<li>Calcula el porcentaje de un valor usando números decimales. Por ejemplo, el 15% de 200.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">200</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">porcentaje</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">15</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">total</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">porcentaje</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">100</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El 15% de 200 es:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">resultado</span><span class="p">);</span>
+</code></pre></div>
+</details>
+</div>
+<hr />
+<h3 id="152-biblioteca-math"><strong>1.5.2 Biblioteca <code>Math</code></strong></h3>
+<p>La biblioteca <code>Math</code> proporciona una serie de constantes y funciones para realizar operaciones matemáticas comunes.</p>
+<h4 id="constantes-de-math"><strong>Constantes de <code>Math</code></strong></h4>
+<ol>
+<li><strong><code>Math.PI</code></strong>: Representa el valor de π.
+    <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="p">);</span><span class="w"> </span><span class="c1">// 3.141592653589793</span>
+</code></pre></div></li>
+<li><strong><code>Math.E</code></strong>: Base de los logaritmos naturales.
+    <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">E</span><span class="p">);</span><span class="w"> </span><span class="c1">// 2.718281828459045</span>
+</code></pre></div></li>
+<li><strong><code>Math.LN10</code></strong>: Logaritmo natural de 10.
+    <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">LN10</span><span class="p">);</span><span class="w"> </span><span class="c1">// 2.302585092994046</span>
+</code></pre></div></li>
+</ol>
+<h4 id="metodos-de-math"><strong>Métodos de <code>Math</code></strong></h4>
+<ol>
+<li><strong><code>Math.sqrt(x)</code></strong>: Calcula la raíz cuadrada de un número.
+    <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="mf">16</span><span class="p">));</span><span class="w"> </span><span class="c1">// 4</span>
+</code></pre></div></li>
+<li><strong><code>Math.pow(base, exponente)</code></strong>: Calcula una potencia.
+    <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">));</span><span class="w"> </span><span class="c1">// 8</span>
+</code></pre></div></li>
+<li><strong><code>Math.abs(x)</code></strong>: Devuelve el valor absoluto de un número.
+    <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="o">-</span><span class="mf">5</span><span class="p">));</span><span class="w"> </span><span class="c1">// 5</span>
+</code></pre></div></li>
+<li><strong><code>Math.round(x)</code></strong>: Redondea un número al entero más cercano.
+    <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="mf">4.5</span><span class="p">));</span><span class="w"> </span><span class="c1">// 5</span>
+</code></pre></div></li>
+<li><strong><code>Math.floor(x)</code> y <code>Math.ceil(x)</code></strong>:<ul>
+<li><code>Math.floor(x)</code>: Redondea hacia abajo.</li>
+<li><code>Math.ceil(x)</code>: Redondea hacia arriba.
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="mf">4.7</span><span class="p">));</span><span class="w"> </span><span class="c1">// 4</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="mf">4.2</span><span class="p">));</span><span class="w">  </span><span class="c1">// 5</span>
+</code></pre></div></li>
+</ul>
+</li>
+<li><strong><code>Math.random()</code></strong>: Genera un número aleatorio entre 0 y 1 (exclusivo).
+    <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">());</span><span class="w"> </span><span class="c1">// Ejemplo: 0.5487</span>
+</code></pre></div></li>
+<li><strong><code>Math.min(...valores)</code> y <code>Math.max(...valores)</code></strong>:<ul>
+<li><code>Math.min</code>: Devuelve el menor valor.</li>
+<li><code>Math.max</code>: Devuelve el mayor valor.
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">min</span><span class="p">(</span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">7</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">9</span><span class="p">));</span><span class="w"> </span><span class="c1">// 2</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">7</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">9</span><span class="p">));</span><span class="w"> </span><span class="c1">// 9</span>
+</code></pre></div></li>
+</ul>
+</li>
+</ol>
+<h4 id="ejemplo-completo_1"><strong>Ejemplo Completo</strong></h4>
+<details class="example">
+<summary>Ejemplo con la biblioteca Math</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">base</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">exponente</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Potencia:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="nx">base</span><span class="p">,</span><span class="w"> </span><span class="nx">exponente</span><span class="p">));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Raíz cuadrada de 25:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="mf">25</span><span class="p">));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Número aleatorio entre 0 y 1:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">());</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Redondeado hacia abajo (4.7):&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="mf">4.7</span><span class="p">));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Redondeado hacia arriba (4.2):&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="mf">4.2</span><span class="p">));</span>
+</code></pre></div>
+</details>
+<hr />
+<h3 id="ejercicios-biblioteca-math"><strong>Ejercicios: Biblioteca <code>Math</code></strong></h3>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 1: Generar número aleatorio</p>
+<ul>
+<li>Escribe un programa que genere un número aleatorio entre 1 y 100.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">aleatorio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">100</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Número aleatorio entre 1 y 100:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">aleatorio</span><span class="p">);</span>
+</code></pre></div>
+</details>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 2: Redondeo de números</p>
+<ul>
+<li>Solicita al usuario un número decimal y muestra:<ul>
+<li>Su valor redondeado hacia abajo.</li>
+<li>Su valor redondeado hacia arriba.</li>
+<li>Su valor redondeado al entero más cercano.</li>
+</ul>
+</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce un número decimal: &quot;</span><span class="p">));</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Redondeado hacia abajo:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">numero</span><span class="p">));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Redondeado hacia arriba:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="nx">numero</span><span class="p">));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Redondeado al más cercano:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">numero</span><span class="p">));</span>
+</code></pre></div>
+</details>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 3: Calcular área de un círculo</p>
+<ul>
+<li>Solicita al usuario el radio de un círculo y calcula:<ul>
+<li>Su área usando la fórmula: <code>Área = π * radio^2</code>.</li>
+</ul>
+</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">radio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el radio del círculo: &quot;</span><span class="p">));</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">area</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="nx">radio</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El área del círculo es:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">area</span><span class="p">);</span>
+</code></pre></div>
+</details>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 4: Valor absoluto</p>
+<ul>
+<li>Solicita un número al usuario y muestra su valor absoluto.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce un número: &quot;</span><span class="p">));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El valor absoluto es:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">numero</span><span class="p">));</span>
+</code></pre></div>
+</details>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 5: Comparar números</p>
+<ul>
+<li>Solicita al usuario tres números y muestra:<ul>
+<li>El menor de los tres.</li>
+<li>El mayor de los tres.</li>
+</ul>
+</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el primer número: &quot;</span><span class="p">));</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el segundo número: &quot;</span><span class="p">));</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">num3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el tercer número: &quot;</span><span class="p">));</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El menor número es:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">min</span><span class="p">(</span><span class="nx">num1</span><span class="p">,</span><span class="w"> </span><span class="nx">num2</span><span class="p">,</span><span class="w"> </span><span class="nx">num3</span><span class="p">));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El mayor número es:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">num1</span><span class="p">,</span><span class="w"> </span><span class="nx">num2</span><span class="p">,</span><span class="w"> </span><span class="nx">num3</span><span class="p">));</span>
+</code></pre></div>
+</details>
+</div>
+<hr />
+<hr />
+<p>Autor: Javier Beteta LLuna
+Fecha: 2025-01-20
+Keywords: MF_0966_3, UF2215, Programación, JavaScript, Números, Fechas, Cadenas
+Form Module: MF_0966_3 - Consulta y manipulación de información contenida en gestores de datos
+Form Unit: UF 2215 - Herramientas de sistemas gestores de bases de datos. Pasarelas y medios de conexión
+Unit: 01 - Configuración del Entorno y Fundamentos de JavaScript</p>
+<hr />
+<h1 id="unidad-1-uso-avanzado-de-numeros-cadenas-y-fechas_1"><strong>Unidad 1: Uso Avanzado de Números, Cadenas y Fechas</strong></h1>
+<hr />
+<h2 id="15-uso-avanzado-de-numeros-cadenas-y-fechas_1"><strong>1.5 Uso Avanzado de Números, Cadenas y Fechas</strong></h2>
+<p>En este tema exploraremos las clases y bibliotecas integradas de JavaScript para trabajar con números, cadenas y fechas, sus métodos y propiedades principales, y cómo aplicar estas herramientas en escenarios prácticos.</p>
+<h3 id="151-clase-number_1"><strong>1.5.1 Clase <code>Number</code></strong></h3>
+<p>[Contenido actual de la sección 1.5.1]</p>
+<hr />
+<h3 id="152-biblioteca-math_1"><strong>1.5.2 Biblioteca <code>Math</code></strong></h3>
+<p>[Contenido actual de la sección 1.5.2]</p>
+<hr />
+<h3 id="153-clase-string"><strong>1.5.3 Clase <code>String</code></strong></h3>
+<p>La clase <code>String</code> se utiliza para trabajar con cadenas de texto en JavaScript. Proporciona numerosas propiedades y métodos que facilitan la manipulación de texto.</p>
+<h4 id="propiedades-de-la-clase-string"><strong>Propiedades de la Clase <code>String</code></strong></h4>
+<ol>
+<li><strong><code>length</code></strong>: Devuelve el número de caracteres en una cadena.
+    <code>javascript linenums=1
+    let texto = "Hola, mundo";
+    console.log(texto.length); // 11</code></li>
+</ol>
+<h4 id="metodos-comunes-de-string"><strong>Métodos Comunes de <code>String</code></strong></h4>
+<ol>
+<li><strong><code>toUpperCase()</code></strong> y <strong><code>toLowerCase()</code></strong>:</li>
+<li>
+<p>Convierte una cadena a mayúsculas o minúsculas respectivamente.
+    <code>javascript linenums=1
+    let texto = "JavaScript";
+    console.log(texto.toUpperCase()); // "JAVASCRIPT"
+    console.log(texto.toLowerCase()); // "javascript"</code></p>
+</li>
+<li>
+<p><strong><code>charAt(pos)</code></strong>: Devuelve el carácter en una posición específica.
+    <code>javascript linenums=1
+    let texto = "Hola";
+    console.log(texto.charAt(1)); // "o"</code></p>
+</li>
+<li>
+<p><strong><code>includes(subcadena)</code></strong>: Verifica si una subcadena está presente en la cadena.
+    <code>javascript linenums=1
+    let texto = "Hola, mundo";
+    console.log(texto.includes("mundo")); // true</code></p>
+</li>
+<li>
+<p><strong><code>indexOf(subcadena)</code></strong>: Devuelve la posición de la primera aparición de una subcadena.
+    <code>javascript linenums=1
+    let texto = "Hola, mundo";
+    console.log(texto.indexOf("mundo")); // 6</code></p>
+</li>
+<li>
+<p><strong><code>slice(inicio, fin)</code></strong>: Extrae una sección de la cadena.
+    <code>javascript linenums=1
+    let texto = "Hola, mundo";
+    console.log(texto.slice(0, 4)); // "Hola"</code></p>
+</li>
+<li>
+<p><strong><code>replace(buscar, reemplazo)</code></strong>: Reemplaza una subcadena por otra.
+    <code>javascript linenums=1
+    let texto = "El cielo es azul";
+    console.log(texto.replace("azul", "rojo")); // "El cielo es rojo"</code></p>
+</li>
+<li>
+<p><strong><code>split(separador)</code></strong>: Divide una cadena en un array según un separador.
+    <code>javascript linenums=1
+    let texto = "manzana,banana,naranja";
+    console.log(texto.split(",")); // ["manzana", "banana", "naranja"]</code></p>
+</li>
+<li>
+<p><strong><code>trim()</code></strong>: Elimina espacios en blanco al inicio y al final de una cadena.
+    <code>javascript linenums=1
+    let texto = "   Hola   ";
+    console.log(texto.trim()); // "Hola"</code></p>
+</li>
+</ol>
+<h4 id="ejemplos-completos"><strong>Ejemplos Completos</strong></h4>
+<details class="example">
+<summary>Ejemplo con la Clase <code>String</code></summary>
+<p>```javascript linenums=1
+let frase = "  Aprende JavaScript, es genial!  ";</p>
+<p>console.log("Longitud:", frase.length);
+console.log("En mayúsculas:", frase.toUpperCase());
+console.log("Primera palabra:", frase.slice(2, 9));
+console.log("¿Incluye 'genial'?:", frase.includes("genial"));
+console.log("Sin espacios alrededor:", frase.trim());
+```</p>
+</details>
+<hr />
+<div class="admonition note">
+<p class="admonition-title">Trocear una cadena por espacios</p>
+<p>Dividir texto por espacios" 
+    - Declara una cadena con el texto "nombre apellido1 apellido2". 
+    - Muestra cada parte del texto (nombre, apellido1, apellido2) en líneas separadas sin utilizar arrays.</p>
+<details class="example">
+<summary>Otro ejemplo de la case <code>Sttring</code></summary>
+<p>```javascript linenums=1 title="Dividir texto por espacios"
+const texto = "nombre apellido1 apellido2";</p>
+<p>let inicio = 0;
+let espacio = texto.indexOf(" ");</p>
+<p>while (espacio !== -1) {
+    console.log(texto.slice(inicio, espacio));
+    inicio = espacio + 1;
+    espacio = texto.indexOf(" ", inicio);
+}</p>
+<p>// Imprime la última parte de la cadena
+console.log(texto.slice(inicio));
+```</p>
+</details>
+</div>
+<h3 id="ejercicios-clase-string"><strong>Ejercicios: Clase <code>String</code></strong></h3>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 1: Manipulación básica de cadenas</p>
+<ul>
+<li>Declara una cadena con el texto: <code>"Bienvenido a JavaScript"</code>.</li>
+<li>Convierte todo el texto a mayúsculas.</li>
+<li>Extrae la palabra <code>"JavaScript"</code>.</li>
+<li>Reemplaza la palabra <code>"Bienvenido"</code> por <code>"Hola"</code>.</li>
+</ul>
+<details class="example">
+<summary>Solución del ejercicio</summary>
+<p>```javascript linenums=1
+let texto = "Bienvenido a JavaScript";</p>
+<p>console.log("En mayúsculas:", texto.toUpperCase());
+console.log("Extraer 'JavaScript':", texto.slice(13));
+console.log("Reemplazar 'Bienvenido':", texto.replace("Bienvenido", "Hola"));
+```</p>
+</details>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 2: Contar palabras</p>
+<ul>
+<li>Escribe un programa que cuente el número de palabras en una cadena ingresada por el usuario.</li>
+</ul>
+<details class="example">
+<summary>Solución del ejercicio</summary>
+<p>```javascript linenums=1
+const prompt = require("prompt-sync")();</p>
+<p>let frase = prompt("Introduce una frase: ");
+let palabras = frase.trim().split(" ").length;</p>
+<p>console.log("Número de palabras:", palabras);
+```</p>
+</details>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 3: Verificar contenido</p>
+<ul>
+<li>Solicita al usuario una frase y verifica si contiene la palabra <code>"JavaScript"</code>.</li>
+</ul>
+<details class="example">
+<summary>Solución del ejercicio</summary>
+<p>```javascript linenums=1
+const prompt = require("prompt-sync")();</p>
+<p>let frase = prompt("Introduce una frase: ");
+console.log("¿Contiene 'JavaScript'?:", frase.includes("JavaScript"));
+```</p>
+</details>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 4: Formatear una lista</p>
+<ul>
+<li>Dada una cadena con elementos separados por comas, conviértela en una lista con viñetas.</li>
+</ul>
+<details class="example">
+<summary>Solución del ejercicio</summary>
+<p>```javascript linenums=1
+let lista = "manzana,banana,naranja";
+let elementos = lista.split(",");</p>
+<p>console.log("Lista con viñetas:");
+elementos.forEach(item =&gt; console.log("-", item));
+```</p>
+</details>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 5: Eliminar espacios</p>
+<ul>
+<li>Solicita al usuario una frase y elimina todos los espacios en blanco.</li>
+</ul>
+<details class="example">
+<summary>Solución del ejercicio</summary>
+<p>```javascript linenums=1
+const prompt = require("prompt-sync")();</p>
+<p>let frase = prompt("Introduce una frase: ");
+console.log("Sin espacios:", frase.replace(/\s/g, ""));
+```</p>
+</details>
+</div>
+<hr />
+<hr />
+<p>Autor: Javier Beteta LLuna
+Fecha: 2025-01-20
+Keywords: MF_0966_3, UF2215, Programación, JavaScript, Números, Fechas, Cadenas
+Form Module: MF_0966_3 - Consulta y manipulación de información contenida en gestores de datos
+Form Unit: UF 2215 - Herramientas de sistemas gestores de bases de datos. Pasarelas y medios de conexión
+Unit: 01 - Configuración del Entorno y Fundamentos de JavaScript</p>
+<hr />
+<h1 id="unidad-1-uso-avanzado-de-numeros-cadenas-y-fechas_2"><strong>Unidad 1: Uso Avanzado de Números, Cadenas y Fechas</strong></h1>
+<hr />
+<h2 id="15-uso-avanzado-de-numeros-cadenas-y-fechas_2"><strong>1.5 Uso Avanzado de Números, Cadenas y Fechas</strong></h2>
+<p>En este tema exploraremos las clases y bibliotecas integradas de JavaScript para trabajar con números, cadenas y fechas, sus métodos y propiedades principales, y cómo aplicar estas herramientas en escenarios prácticos.</p>
+<h3 id="151-clase-number_2"><strong>1.5.1 Clase <code>Number</code></strong></h3>
+<p>[Contenido actual de la sección 1.5.1]</p>
+<hr />
+<h3 id="152-biblioteca-math_2"><strong>1.5.2 Biblioteca <code>Math</code></strong></h3>
+<p>[Contenido actual de la sección 1.5.2]</p>
+<hr />
+<h3 id="153-clase-string_1"><strong>1.5.3 Clase <code>String</code></strong></h3>
+<p>[Contenido actual de la sección 1.5.3]</p>
+<hr />
+<h3 id="154-clase-date"><strong>1.5.4 Clase <code>Date</code></strong></h3>
+<p>La clase <code>Date</code> en JavaScript permite trabajar con fechas y horas, ofreciendo métodos para obtener, establecer y manipular valores temporales.</p>
+<h4 id="creacion-de-fechas"><strong>Creación de Fechas</strong></h4>
+<ol>
+<li>
+<p><strong>Fecha actual:</strong>
+    <code>javascript linenums=1
+    const ahora = new Date();
+    console.log("Fecha y hora actuales:", ahora);</code></p>
+</li>
+<li>
+<p><strong>Fecha específica:</strong>
+    <code>javascript linenums=1
+    const fechaEspecifica = new Date(2025, 0, 20); // Año, mes (0-indexado), día
+    console.log("Fecha específica:", fechaEspecifica);</code></p>
+</li>
+<li>
+<p><strong>Desde una cadena:</strong>
+    <code>javascript linenums=1
+    const fechaCadena = new Date("2025-01-20T15:30:00");
+    console.log("Fecha desde cadena:", fechaCadena);</code></p>
+</li>
+</ol>
+<h4 id="metodos-comunes-de-date"><strong>Métodos Comunes de <code>Date</code></strong></h4>
+<ol>
+<li>
+<p><strong><code>getFullYear()</code></strong>: Obtiene el año.
+    <code>javascript linenums=1
+    console.log(ahora.getFullYear()); // Ejemplo: 2025</code></p>
+</li>
+<li>
+<p><strong><code>getMonth()</code></strong>: Obtiene el mes (0-indexado).
+    <code>javascript linenums=1
+    console.log(ahora.getMonth()); // Ejemplo: 0 para enero</code></p>
+</li>
+<li>
+<p><strong><code>getDate()</code></strong>: Obtiene el día del mes.
+    <code>javascript linenums=1
+    console.log(ahora.getDate()); // Ejemplo: 20</code></p>
+</li>
+<li>
+<p><strong><code>getDay()</code></strong>: Obtiene el día de la semana (0 es domingo).
+    <code>javascript linenums=1
+    console.log(ahora.getDay()); // Ejemplo: 1 para lunes</code></p>
+</li>
+<li>
+<p><strong><code>getHours()</code></strong>, <strong><code>getMinutes()</code></strong>, <strong><code>getSeconds()</code></strong>: Obtienen la hora, minutos y segundos.
+    <code>javascript linenums=1
+    console.log(ahora.getHours(), ahora.getMinutes(), ahora.getSeconds());</code></p>
+</li>
+<li>
+<p><strong><code>toLocaleDateString()</code></strong>: Formatea la fecha en el formato local.
+    <code>javascript linenums=1
+    console.log(ahora.toLocaleDateString()); // Ejemplo: "20/01/2025"</code></p>
+</li>
+</ol>
+<h4 id="comparar-fechas"><strong>Comparar Fechas</strong></h4>
+<p>Puedes comparar fechas usando operadores como <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>.</p>
+<p>```javascript linenums=1
+const fecha1 = new Date("2025-01-20");
+const fecha2 = new Date("2025-01-25");</p>
+<p>console.log("¿Fecha1 es anterior a Fecha2?:", fecha1 &lt; fecha2); // true
+console.log("¿Son iguales?:", fecha1.getTime() === fecha2.getTime()); // false
+```</p>
+<h4 id="ejemplo-completo_2"><strong>Ejemplo Completo</strong></h4>
+<details class="example">
+<summary>Ejemplo con la Clase <code>Date</code></summary>
+<p>```javascript linenums=1
+const ahora = new Date();</p>
+<p>console.log("Fecha y hora actuales:", ahora);
+console.log("Año:", ahora.getFullYear());
+console.log("Mes:", ahora.getMonth() + 1); // Se suma 1 porque es 0-indexado
+console.log("Día del mes:", ahora.getDate());
+console.log("Hora actual:", ahora.getHours(), ":", ahora.getMinutes());
+console.log("Formato local:", ahora.toLocaleDateString());
+```</p>
+</details>
+<hr />
+<h3 id="ejercicios-clase-date"><strong>Ejercicios: Clase <code>Date</code></strong></h3>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 1: Obtener fecha y hora actuales</p>
+<ul>
+<li>Crea un programa que muestre:<ul>
+<li>La fecha actual en formato local.</li>
+<li>La hora actual (hora:minutos).</li>
+</ul>
+</li>
+</ul>
+<details class="example">
+<summary>Solución del ejercicio</summary>
+<p>```javascript linenums=1 title="Fecha y hora actuales"
+const ahora = new Date();</p>
+<p>console.log("Fecha actual:", ahora.toLocaleDateString());
+console.log("Hora actual:", ahora.getHours() + ":" + ahora.getMinutes());
+```</p>
+</details>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 2: Comparar dos fechas</p>
+<ul>
+<li>Solicita al usuario dos fechas en formato <code>YYYY-MM-DD</code>.</li>
+<li>Compara ambas fechas e indica cuál es anterior o si son iguales.</li>
+</ul>
+<details class="example">
+<summary>Solución del ejercicio</summary>
+<p>```javascript linenums=1 title="Comparar fechas"
+const prompt = require("prompt-sync")();</p>
+<p>let fecha1 = new Date(prompt("Introduce la primera fecha (YYYY-MM-DD): "));
+let fecha2 = new Date(prompt("Introduce la segunda fecha (YYYY-MM-DD): "));</p>
+<p>if (fecha1 &lt; fecha2) {
+    console.log("La primera fecha es anterior.");
+} else if (fecha1 &gt; fecha2) {
+    console.log("La segunda fecha es anterior.");
+} else {
+    console.log("Ambas fechas son iguales.");
+}
+```</p>
+</details>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 3: Calcular días entre dos fechas</p>
+<ul>
+<li>Solicita al usuario dos fechas en formato <code>YYYY-MM-DD</code>.</li>
+<li>Calcula la diferencia en días entre ambas fechas.</li>
+</ul>
+<details class="example">
+<summary>Solución del ejercicio</summary>
+<p>```javascript linenums=1 title="Días entre fechas"
+const prompt = require("prompt-sync")();</p>
+<p>let fecha1 = new Date(prompt("Introduce la primera fecha (YYYY-MM-DD): "));
+let fecha2 = new Date(prompt("Introduce la segunda fecha (YYYY-MM-DD): "));</p>
+<p>let diferencia = Math.abs(fecha2 - fecha1); // Diferencia en milisegundos
+let dias = diferencia / (1000 * 60 * 60 * 24); // Convertir a días</p>
+<p>console.log("Diferencia en días:", dias);
+```</p>
+</details>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 4: Crear fecha a partir de valores</p>
+<ul>
+<li>Solicita al usuario que introduzca el año, mes y día por separado.</li>
+<li>Crea un objeto <code>Date</code> con esos valores y muestra la fecha en formato local.</li>
+</ul>
+<details class="example">
+<summary>Solución del ejercicio</summary>
+<p>```javascript linenums=1 title="Crear fecha a partir de valores"
+const prompt = require("prompt-sync")();</p>
+<p>let anio = parseInt(prompt("Introduce el año: "));
+let mes = parseInt(prompt("Introduce el mes (1-12): ")) - 1; // Restar 1 porque es 0-indexado
+let dia = parseInt(prompt("Introduce el día: "));</p>
+<p>let fecha = new Date(anio, mes, dia);
+console.log("Fecha creada:", fecha.toLocaleDateString());
+```</p>
+</details>
+</div>
+<hr />
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>

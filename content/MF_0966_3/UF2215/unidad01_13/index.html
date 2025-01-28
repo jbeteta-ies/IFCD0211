@@ -1,0 +1,3656 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jbeteta-ies.github.io/IFCD0211/content/MF_0966_3/UF2215/unidad01_13/">
+      
+      
+        <link rel="prev" href="../unidad01_12/">
+      
+      
+        <link rel="next" href="../unidad01_14/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>1.3 Estructuras básicas condicionales - Certificado de Profesionalidad IFCD0211</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unidad-1-configuracion-del-entorno-y-fundamentos-de-javascript" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Certificado de Profesionalidad IFCD0211" class="md-header__button md-logo" aria-label="Certificado de Profesionalidad IFCD0211" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Certificado de Profesionalidad IFCD0211
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              1.3 Estructuras básicas condicionales
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Certificado de Profesionalidad IFCD0211" class="md-nav__button md-logo" aria-label="Certificado de Profesionalidad IFCD0211" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Certificado de Profesionalidad IFCD0211
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Normativa
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Normativa
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../normativa19/IFCD0211/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Normativa General
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../normativa19/MF0966_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MF0966_3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../normativa19/MF0967_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MF0967_3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../normativa19/MF0968_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MF0968_3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../normativa19/MP0459/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MP0459
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../normativa19/ucs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unidades de Competencia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Contenidos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Contenidos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MF0966_3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            MF0966_3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UF2213/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF2213
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UF2214/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF2214
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_3" id="__nav_3_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UF2215
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            UF2215
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_3_2" id="__nav_3_1_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    T01 Fundamentos de JS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            T01 Fundamentos de JS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad01_11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.1 Configuración del entorno de desarrollo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad01_12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.2 Variables, Tipos de Datos y Operadores
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    1.3 Estructuras básicas condicionales
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    1.3 Estructuras básicas condicionales
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#13-estructuras-condicionales-y-de-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3. Estructuras condicionales y de control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3. Estructuras condicionales y de control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-un-if-else" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es un if-else?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sintaxis-de-if-else" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sintaxis de if-else
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios-de-if-else" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios de If-Else
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejercicios de If-Else">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-1-comparar-numeros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 1: Comparar números
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-2-numero-positivo-o-negativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 2: Número positivo o negativo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-1-determinar-si-un-numero-es-cero" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 1: Determinar si un número es cero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-2-determinar-si-un-numero-es-positivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 2: Determinar si un número es positivo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-3-determinar-si-un-numero-es-negativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 3: Determinar si un número es negativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-4-combinar-todas-las-evaluaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 4: Combinar todas las evaluaciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paso 4: Combinar todas las evaluaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-3-verificar-credenciales-de-acceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 3: Verificar credenciales de acceso
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tratamiento-de-cadenas-en-if-else" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tratamiento de cadenas en IF-ELSE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explicacion-del-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explicación del Código
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operadores-logicos-en-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operadores Lógicos en JavaScript
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tablas-de-verdad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tablas de Verdad
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tablas de Verdad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-operador-and" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Operador &amp;&amp; (AND)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-operador-or" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Operador || (OR)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-operador-not" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Operador ! (NOT)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-de-operadores-logicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplos de Operadores Lógicos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notas-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notas Clave
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leyes-de-de-morgan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leyes de De Morgan
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Leyes de De Morgan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#las-dos-leyes-de-de-morgan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Las dos leyes de De Morgan
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-entender-las-leyes-de-de-morgan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cómo entender las leyes de De Morgan
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tablas-de-verdad_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tablas de Verdad
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que-son-importantes-las-leyes-de-de-morgan" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Por qué son importantes las Leyes de De Morgan?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-4-validar-acceso-segun-edad-y-rol" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 4: Validar acceso según edad y rol
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-5-determinar-si-un-numero-cumple-multiples-condiciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 5: Determinar si un número cumple múltiples condiciones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-6-validar-si-un-texto-cumple-criterios-mixtos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 6: Validar si un texto cumple criterios mixtos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-if-else-anidado" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.2 If-Else Anidado
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3.2 If-Else Anidado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-un-if-else-anidado" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es un if-else anidado?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sintaxis-de-if-else-anidado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sintaxis de if-else anidado
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-if-else-anidado_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.2 If-Else Anidado
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3.2 If-Else Anidado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-un-if-else-anidado_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es un if-else anidado?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sintaxis-de-if-else-anidado_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sintaxis de if-else anidado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios-de-if-else-anidado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios de If-Else Anidado
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejercicios de If-Else Anidado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.3 Switch
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3.3 Switch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-un-switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es un switch?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sintaxis-de-switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sintaxis de switch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134-operador-ternario" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.4 Operador Ternario
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3.4 Operador Ternario">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-el-operador-ternario" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es el operador ternario?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad01_14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.4 Bucles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad01_15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.5 Uso avanzado de Números, cadenas y fechas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad01_16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.6 Ejercicios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T02 Funciones y manejo de errores
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MF0967_3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            MF0967_3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MF_0967_3/UF2216/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF2216
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MF_0967_3/UF2217/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF2217
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MF_0967_3/UF2218/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF2218
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MF0968_3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            MF0968_3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MF_0968_3/UF1643/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF1643
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MF_0968_3/UF1644/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF1644
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MP0459
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            MP0459
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MP0459/Practicas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prácticas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#13-estructuras-condicionales-y-de-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3. Estructuras condicionales y de control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3. Estructuras condicionales y de control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-un-if-else" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es un if-else?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sintaxis-de-if-else" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sintaxis de if-else
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios-de-if-else" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios de If-Else
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejercicios de If-Else">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-1-comparar-numeros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 1: Comparar números
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-2-numero-positivo-o-negativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 2: Número positivo o negativo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-1-determinar-si-un-numero-es-cero" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 1: Determinar si un número es cero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-2-determinar-si-un-numero-es-positivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 2: Determinar si un número es positivo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-3-determinar-si-un-numero-es-negativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 3: Determinar si un número es negativo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-4-combinar-todas-las-evaluaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 4: Combinar todas las evaluaciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paso 4: Combinar todas las evaluaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-3-verificar-credenciales-de-acceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 3: Verificar credenciales de acceso
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tratamiento-de-cadenas-en-if-else" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tratamiento de cadenas en IF-ELSE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explicacion-del-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explicación del Código
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operadores-logicos-en-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operadores Lógicos en JavaScript
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tablas-de-verdad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tablas de Verdad
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tablas de Verdad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-operador-and" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Operador &amp;&amp; (AND)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-operador-or" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Operador || (OR)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-operador-not" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Operador ! (NOT)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-de-operadores-logicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplos de Operadores Lógicos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notas-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notas Clave
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leyes-de-de-morgan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leyes de De Morgan
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Leyes de De Morgan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#las-dos-leyes-de-de-morgan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Las dos leyes de De Morgan
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-entender-las-leyes-de-de-morgan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cómo entender las leyes de De Morgan
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tablas-de-verdad_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tablas de Verdad
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que-son-importantes-las-leyes-de-de-morgan" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Por qué son importantes las Leyes de De Morgan?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-4-validar-acceso-segun-edad-y-rol" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 4: Validar acceso según edad y rol
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-5-determinar-si-un-numero-cumple-multiples-condiciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 5: Determinar si un número cumple múltiples condiciones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-6-validar-si-un-texto-cumple-criterios-mixtos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 6: Validar si un texto cumple criterios mixtos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-if-else-anidado" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.2 If-Else Anidado
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3.2 If-Else Anidado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-un-if-else-anidado" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es un if-else anidado?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sintaxis-de-if-else-anidado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sintaxis de if-else anidado
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-if-else-anidado_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.2 If-Else Anidado
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3.2 If-Else Anidado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-un-if-else-anidado_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es un if-else anidado?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sintaxis-de-if-else-anidado_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sintaxis de if-else anidado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios-de-if-else-anidado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios de If-Else Anidado
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejercicios de If-Else Anidado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.3 Switch
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3.3 Switch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-un-switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es un switch?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sintaxis-de-switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sintaxis de switch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134-operador-ternario" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.4 Operador Ternario
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3.4 Operador Ternario">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-el-operador-ternario" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es el operador ternario?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="unidad-1-configuracion-del-entorno-y-fundamentos-de-javascript">Unidad 1: Configuración del Entorno y Fundamentos de JavaScript</h1>
+<h2 id="13-estructuras-condicionales-y-de-control">1.3. Estructuras condicionales y de control</h2>
+<h3 id="que-es-un-if-else"><strong>¿Qué es un if-else?</strong></h3>
+<p>La estructura <strong>if-else</strong> permite tomar decisiones en función de una condición. Evalúa si una expresión lógica es <code>true</code> o <code>false</code> y ejecuta el bloque correspondiente.</p>
+<h3 id="sintaxis-de-if-else"><strong>Sintaxis de if-else</strong></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">condición</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Código si la condición es verdadera</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Código si la condición es falsa</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Ejemplo</strong></p>
+<p>Programa que evalua si una variable numérica que simula la edad de una persona es mayor o menor de edad.</p>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de If-Else</p>
+<p>En el siguiente ejemplo, se evalúa si una persona es mayor de edad:</p>
+<details class="example">
+<summary>diagrama de flujo</summary>
+<pre class="mermaid"><code>flowchart TD
+    A[Inicio] --&gt; B[Definir edad = 18]
+    B --&gt; C{edad &gt;= 18}
+    C --&gt;|Sí| D["Eres mayor de edad"]
+    C --&gt;|No| E["Eres menor de edad"]
+    D --&gt; F[Fin]
+    E --&gt; F[Fin]</code></pre>
+</details>
+<details class="example" open="open">
+<summary>Código javascript del ejemplo</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">18</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">edad</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">18</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Eres mayor de edad&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Eres menor de edad&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+</div>
+<hr />
+<h3 id="ejercicios-de-if-else"><strong>Ejercicios de If-Else</strong></h3>
+<h4 id="ejercicio-1-comparar-numeros"><strong>Ejercicio 1: Comparar números</strong></h4>
+<div class="admonition note">
+<p class="admonition-title">Instrucciones</p>
+<p>Lo vamos a solucionar en 4 pasos, viendo en cada uno de ellos una parte de la solución.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente paso a paso:</p>
+<ul>
+<li><strong>Paso 1:</strong> Determina si dos números son iguales.</li>
+<li><strong>Paso 2:</strong> Evalúa si el primer número es mayor que el segundo.</li>
+<li><strong>Paso 3:</strong> Evalúa si el segundo número es mayor que el primero.</li>
+<li><strong>Paso 4:</strong> Combina todas las evaluaciones en un único programa.</li>
+</ul>
+</div>
+<p><strong>Paso 1: Determinar si dos números son iguales</strong></p>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Solicita al usuario que introduzca dos números.</li>
+<li>Determina si los números son iguales.</li>
+<li>Muestra un mensaje indicando que los números son iguales.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Paso 1: Determinar si son iguales</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el primer número: &quot;</span><span class="p">));</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el segundo número: &quot;</span><span class="p">));</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">num1</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">num2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Los números son iguales.&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<hr />
+<p><strong>Paso 2: Evaluar si el primer número es mayor que el segundo</strong></p>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Solicita al usuario que introduzca dos números.</li>
+<li>Evalúa si el primer número es mayor que el segundo.</li>
+<li>Muestra un mensaje indicando que el primer número es mayor.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Paso 2: El primero es mayor</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el primer número: &quot;</span><span class="p">));</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el segundo número: &quot;</span><span class="p">));</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">num1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">num2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">num1</span><span class="si">}</span><span class="sb"> es mayor que </span><span class="si">${</span><span class="nx">num2</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<hr />
+<p><strong>Paso 3: Evaluar si el segundo número es mayor que el primero</strong></p>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Solicita al usuario que introduzca dos números.</li>
+<li>Evalúa si el segundo número es mayor que el primero.</li>
+<li>Muestra un mensaje indicando que el segundo número es mayor.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Paso 3: El segundo es mayor</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el primer número: &quot;</span><span class="p">));</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el segundo número: &quot;</span><span class="p">));</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">num2</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">num1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">num2</span><span class="si">}</span><span class="sb"> es mayor que </span><span class="si">${</span><span class="nx">num1</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<hr />
+<p><strong>Paso 4: Combinar todas las evaluaciones</strong></p>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Solicita al usuario que introduzca dos números.</li>
+<li>Evalúa si los números son iguales, si el primero es mayor o si el segundo es mayor.</li>
+<li>Muestra un mensaje correspondiente para cada caso.</li>
+</ul>
+<details class="example">
+<summary>Diagrama</summary>
+<pre class="mermaid"><code>flowchart TD
+    A[Inicio] --&gt; B[Solicitar el primer número]
+    B --&gt; C[Solicitar el segundo número]
+    C --&gt; D{¿num1 es igual a num2?}
+
+    D --&gt;|Sí| E["Los números son iguales"]
+    D --&gt;|No| F{¿num1 es mayor que num2?}
+
+    F --&gt;|Sí| G["num1 es mayor que num2"]
+    F --&gt;|No| H["num2 es mayor que num1"]
+
+    E --&gt; I[Fin]
+    G --&gt; I
+    H --&gt; I</code></pre>
+</details>
+<details class="example" open="open">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Paso 4: Todo junto</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el primer número: &quot;</span><span class="p">));</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el segundo número: &quot;</span><span class="p">));</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">num1</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">num2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Los números son iguales.&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">num1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">num2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">num1</span><span class="si">}</span><span class="sb"> es mayor que </span><span class="si">${</span><span class="nx">num2</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">num2</span><span class="si">}</span><span class="sb"> es mayor que </span><span class="si">${</span><span class="nx">num1</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<hr />
+<h4 id="ejercicio-2-numero-positivo-o-negativo"><strong>Ejercicio 2: Número positivo o negativo</strong></h4>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente paso a paso:</p>
+<ul>
+<li><strong>Paso 1:</strong> Determina si un número es igual a cero.</li>
+<li><strong>Paso 2:</strong> Evalúa si un número es positivo.</li>
+<li><strong>Paso 3:</strong> Evalúa si un número es negativo.</li>
+<li><strong>Paso 4:</strong> Combina todas las evaluaciones en un único programa.</li>
+</ul>
+</div>
+<hr />
+<h3 id="paso-1-determinar-si-un-numero-es-cero"><strong>Paso 1: Determinar si un número es cero</strong></h3>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Solicita al usuario que introduzca un número.</li>
+<li>Determina si el número es igual a cero.</li>
+<li>Muestra un mensaje indicando que el número es cero.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Paso 1: Número es cero</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce un número: &quot;</span><span class="p">));</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">numero</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El número es cero.&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<hr />
+<h3 id="paso-2-determinar-si-un-numero-es-positivo"><strong>Paso 2: Determinar si un número es positivo</strong></h3>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Solicita al usuario que introduzca un número.</li>
+<li>Evalúa si el número es positivo.</li>
+<li>Muestra un mensaje indicando que el número es positivo.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Paso 2: Número positivo</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce un número: &quot;</span><span class="p">));</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">numero</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El número es positivo.&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<hr />
+<h3 id="paso-3-determinar-si-un-numero-es-negativo"><strong>Paso 3: Determinar si un número es negativo</strong></h3>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Solicita al usuario que introduzca un número.</li>
+<li>Evalúa si el número es negativo.</li>
+<li>Muestra un mensaje indicando que el número es negativo.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Paso 3: Número negativo</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce un número: &quot;</span><span class="p">));</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">numero</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El número es negativo.&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<hr />
+<h3 id="paso-4-combinar-todas-las-evaluaciones"><strong>Paso 4: Combinar todas las evaluaciones</strong></h3>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Solicita al usuario que introduzca un número.</li>
+<li>Evalúa si el número es positivo, negativo o igual a cero.</li>
+<li>Muestra un mensaje correspondiente para cada caso.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Paso 4: Todo junto</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce un número: &quot;</span><span class="p">));</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">numero</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El número es positivo.&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">numero</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El número es negativo.&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El número es cero.&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="example">
+<summary>Diagrama de Flujo</summary>
+<pre class="mermaid"><code>flowchart TD
+    A[Inicio] --&gt; B[Solicitar un número]
+    B --&gt; C{¿Número &gt; 0?}
+
+    C --&gt;|Sí| D["El número es positivo"]
+    C --&gt;|No| E{¿Número &lt; 0?}
+
+    E --&gt;|Sí| F["El número es negativo"]
+    E --&gt;|No| G["El número es cero"]
+
+    D --&gt; H[Fin]
+    F --&gt; H
+    G --&gt; H</code></pre>
+</details>
+</div>
+<hr />
+<h4 id="ejercicio-3-verificar-credenciales-de-acceso"><strong>Ejercicio 3: Verificar credenciales de acceso</strong></h4>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Solicita al usuario que introduzca un nombre de usuario y una contraseña.</li>
+<li>Compara las entradas con dos constantes predefinidas: <code>USER</code> y <code>PASSWORD</code>.</li>
+<li>Si coinciden, muestra el mensaje "Acceso correcto".</li>
+<li>Si no coinciden, muestra el mensaje "Acceso incorrecto" en rojo.</li>
+<li>Para el color rojo pudes utilizar la librería <code>chalk</code>. <code>pip install chalk</code> </li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Verificar credenciales</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">chalk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;chalk&quot;</span><span class="p">);</span>
+
+<span class="c1">// Constantes predefinidas</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">USER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;admin&quot;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">PASSWORD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;12345&quot;</span><span class="p">;</span>
+
+<span class="c1">// Solicitar credenciales al usuario</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">login</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce tu nombre de usuario: &quot;</span><span class="p">);</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">pwd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce tu contraseña: &quot;</span><span class="p">);</span>
+
+<span class="c1">// Verificar credenciales</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">login</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">USER</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">pwd</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">PASSWORD</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Acceso correcto&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">chalk</span><span class="p">.</span><span class="nx">red</span><span class="p">(</span><span class="s2">&quot;Acceso incorrecto&quot;</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="info">
+<summary>Explicación del código</summary>
+<ol>
+<li><strong>Constantes</strong>:<ul>
+<li>Se definen <code>USER</code> y <code>PASSWORD</code> como las credenciales válidas.</li>
+</ul>
+</li>
+<li><strong>Entrada del Usuario</strong>:<ul>
+<li><code>prompt</code> solicita al usuario el nombre de usuario (<code>login</code>) y la contraseña (<code>pwd</code>).</li>
+</ul>
+</li>
+<li><strong>Verificación</strong>:<ul>
+<li>Se compara si ambas entradas coinciden con las constantes.</li>
+<li>Si ambas coinciden, se muestra "Acceso correcto".</li>
+<li>Si no coinciden, se muestra "Acceso incorrecto" con texto en rojo</li>
+</ul>
+</li>
+</ol>
+</details>
+</div>
+<hr />
+<h4 id="tratamiento-de-cadenas-en-if-else">Tratamiento de cadenas en IF-ELSE</h4>
+<p>Vamos a ver un programa con las siguientes características:</p>
+<ul>
+<li>Solicita al usuario que introduzca dos cadenas.</li>
+<li>Compara las cadenas considerando mayúsculas y minúsculas (<code>ana</code> es distinto de <code>ANA</code>).</li>
+<li>Utiliza funciones como <code>toUpperCase</code> o <code>toLowerCase</code> para compararlas ignorando mayúsculas y minúsculas.</li>
+<li>Comprueba si una cadena tiene un número de caracteres entre un mínimo y un máximo.</li>
+<li>Explica que, según el orden lexicográfico, <code>"ana"</code> es menor que <code>"ANA"</code>.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Solución</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Comparación de cadenas</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+
+<span class="c1">// Solicitar cadenas al usuario</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">cadena1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce la primera cadena: &quot;</span><span class="p">);</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">cadena2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce la segunda cadena: &quot;</span><span class="p">);</span>
+
+<span class="c1">// Comparación directa (sensible a mayúsculas y minúsculas)</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">cadena1</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">cadena2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Las cadenas son iguales (sensible a mayúsculas).&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Las cadenas son distintas (sensible a mayúsculas).&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Comparación ignorando mayúsculas y minúsculas</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">cadena1</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">()</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">cadena2</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Las cadenas son iguales (ignorando mayúsculas).&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Las cadenas son distintas (ignorando mayúsculas).&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Verificar longitud entre un mínimo y un máximo</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">minLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">maxLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">cadena1</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="nx">minLength</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">cadena1</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nx">maxLength</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`La primera cadena tiene una longitud válida (entre </span><span class="si">${</span><span class="nx">minLength</span><span class="si">}</span><span class="sb"> y </span><span class="si">${</span><span class="nx">maxLength</span><span class="si">}</span><span class="sb">).`</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`La primera cadena no tiene una longitud válida (entre </span><span class="si">${</span><span class="nx">minLength</span><span class="si">}</span><span class="sb"> y </span><span class="si">${</span><span class="nx">maxLength</span><span class="si">}</span><span class="sb">).`</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Comparación lexicográfica</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="s2">&quot;ana&quot;</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="s2">&quot;ANA&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;&quot;ana&quot; es menor que &quot;ANA&quot; en orden lexicográfico.&#39;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;&quot;ana&quot; no es menor que &quot;ANA&quot; en orden lexicográfico.&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<hr />
+<h3 id="explicacion-del-codigo"><strong>Explicación del Código</strong></h3>
+<ol>
+<li>
+<p><strong>Comparación Directa (Sensible a Mayúsculas y Minúsculas)</strong>:</p>
+<ul>
+<li>La comparación <code>cadena1 === cadena2</code> verifica si las cadenas son exactamente iguales, considerando diferencias entre mayúsculas y minúsculas. Por ejemplo, <code>"ana" !== "ANA"</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Comparación Ignorando Mayúsculas y Minúsculas</strong>:</p>
+<ul>
+<li>Se utilizan las funciones <code>toLowerCase()</code> o <code>toUpperCase()</code> para convertir ambas cadenas a un formato uniforme antes de compararlas. Esto hace que <code>"ana" === "ANA"</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Verificar Longitud</strong>:</p>
+<ul>
+<li>Se usa <code>cadena1.length</code> para verificar si la longitud de la primera cadena está entre los límites definidos (<code>minLength</code> y <code>maxLength</code>).</li>
+</ul>
+</li>
+<li>
+<p><strong>Orden Lexicográfico</strong>:</p>
+<ul>
+<li>En JavaScript, las cadenas se comparan según su valor Unicode. En el caso de <code>"ana"</code> y <code>"ANA"</code>, las letras minúsculas tienen valores Unicode mayores que las mayúsculas. Por lo tanto:<ul>
+<li><code>"ana" &lt; "ANA"</code> es <code>false</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h3 id="operadores-logicos-en-javascript"><strong>Operadores Lógicos en JavaScript</strong></h3>
+<p>En JavaScript, los operadores lógicos se usan para combinar condiciones o modificar su resultado. Los tres operadores principales son:</p>
+<ul>
+<li><strong><code>&amp;&amp;</code> (AND o Y):</strong> Evalúa si <strong>todas las condiciones</strong> son verdaderas.</li>
+<li><strong><code>||</code> (OR o O):</strong> Evalúa si <strong>al menos una condición</strong> es verdadera.</li>
+<li><strong><code>!</code> (NOT o NO):</strong> Invierte el valor lógico de una condición (de verdadero a falso y viceversa).</li>
+</ul>
+<hr />
+<h3 id="tablas-de-verdad"><strong>Tablas de Verdad</strong></h3>
+<h4 id="1-operador-and">1. <strong>Operador <code>&amp;&amp;</code> (AND)</strong></h4>
+<p>El operador <code>&amp;&amp;</code> retorna <code>true</code> solo si <strong>todas las condiciones</strong> son <code>true</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Condición A</th>
+<th>Condición B</th>
+<th>A &amp;&amp; B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>true</code></td>
+<td><code>true</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>true</code></td>
+<td><code>false</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td><code>true</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td><code>false</code></td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="2-operador-or">2. <strong>Operador <code>||</code> (OR)</strong></h4>
+<p>El operador <code>||</code> retorna <code>true</code> si <strong>al menos una condición</strong> es <code>true</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Condición A</th>
+<th>Condición B</th>
+<th>A <code>\|\|</code> B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>true</code></td>
+<td><code>true</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>true</code></td>
+<td><code>false</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td><code>true</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td><code>false</code></td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="3-operador-not">3. <strong>Operador <code>!</code> (NOT)</strong></h4>
+<p>El operador <code>!</code> invierte el valor lógico de la condición.</p>
+<table>
+<thead>
+<tr>
+<th>Condición</th>
+<th>!Condición</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>true</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>false</code></td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="ejemplos-de-operadores-logicos"><strong>Ejemplos de Operadores Lógicos</strong></h4>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Ejemplo</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&amp;&amp;</code></td>
+<td><code>5 &gt; 3 &amp;&amp; 10 &gt; 8</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>&amp;&amp;</code></td>
+<td><code>5 &gt; 3 &amp;&amp; 10 &lt; 8</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>||</code></td>
+<td><code>5 &gt; 3 || 10 &lt; 8</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>||</code></td>
+<td><code>5 &lt; 3 || 10 &lt; 8</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>!</code></td>
+<td><code>!(5 &gt; 3)</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>!</code></td>
+<td><code>!(5 &lt; 3)</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>Mixto</td>
+<td><code>5 &gt; 3 &amp;&amp; (10 &lt; 8 || 2 === 2)</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>Mixto</td>
+<td><code>!(5 &gt; 3 &amp;&amp; 10 &gt; 8)</code></td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="notas-clave"><strong>Notas Clave</strong></h4>
+<ol>
+<li>
+<p><strong>Precedencia de Operadores</strong>:</p>
+<div class="codehilite"><pre><span></span><code> - `!` tiene mayor precedencia que `&amp;&amp;` y `||`.
+ - Agrupa condiciones con paréntesis para asegurarte de que se evalúan en el orden esperado.
+         - Ejemplo: `!(A &amp;&amp; B)` no es lo mismo que `!A &amp;&amp; B`.
+</code></pre></div>
+
+</li>
+<li>
+<p><strong>Cortocircuito</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">En</span><span class="w"> </span><span class="n n-Quoted">`&amp;&amp;`</span><span class="p">,</span><span class="w"> </span><span class="n">si</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">primera</span><span class="w"> </span><span class="n">condición</span><span class="w"> </span><span class="n">es</span><span class="w"> </span><span class="n n-Quoted">`false`</span><span class="p">,</span><span class="w"> </span><span class="n">las</span><span class="w"> </span><span class="n">demás</span><span class="w"> </span><span class="k">no</span><span class="w"> </span><span class="n">se</span><span class="w"> </span><span class="n">evalúan</span><span class="p">.</span>
+<span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">En</span><span class="w"> </span><span class="n n-Quoted">`||`</span><span class="p">,</span><span class="w"> </span><span class="n">si</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">primera</span><span class="w"> </span><span class="n">condición</span><span class="w"> </span><span class="n">es</span><span class="w"> </span><span class="n n-Quoted">`true`</span><span class="p">,</span><span class="w"> </span><span class="n">las</span><span class="w"> </span><span class="n">demás</span><span class="w"> </span><span class="k">no</span><span class="w"> </span><span class="n">se</span><span class="w"> </span><span class="n">evalúan</span><span class="p">.</span>
+</code></pre></div>
+
+</li>
+</ol>
+<hr />
+<h4 id="leyes-de-de-morgan"><strong>Leyes de De Morgan</strong></h4>
+<p>Las <strong>Leyes de De Morgan</strong> son reglas fundamentales en lógica y álgebra booleana. Estas leyes ayudan a simplificar expresiones lógicas y a entender cómo se relacionan los operadores <code>&amp;&amp;</code> (AND), <code>||</code> (OR) y <code>!</code> (NOT).</p>
+<hr />
+<h5 id="las-dos-leyes-de-de-morgan"><strong>Las dos leyes de De Morgan</strong></h5>
+<ol>
+<li>
+<p><strong>Primera ley:</strong>
+    &gt; La negación de una conjunción (<code>A &amp;&amp; B</code>) es equivalente a la disyunción de las negaciones (<code>!A || !B</code>).</p>
+<p><strong>Formalmente:</strong>
+<div class="highlight"><pre><span></span><code>!(A &amp;&amp; B) ≡ !A || !B
+</code></pre></div></p>
+<p><strong>Ejemplo en JavaScript:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">B</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="nx">A</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">B</span><span class="p">));</span><span class="w">  </span><span class="c1">// true</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="o">!</span><span class="nx">A</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">!</span><span class="nx">B</span><span class="p">);</span><span class="w">   </span><span class="c1">// true (equivalente por De Morgan)</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+</ol>
+<hr />
+<ol>
+<li>
+<p><strong>Segunda ley:</strong>
+    &gt; La negación de una disyunción (<code>A || B</code>) es equivalente a la conjunción de las negaciones (<code>!A &amp;&amp; !B</code>).</p>
+<p><strong>Formalmente:</strong>
+<div class="highlight"><pre><span></span><code>!(A || B) ≡ !A &amp;&amp; !B
+</code></pre></div></p>
+<p><strong>Ejemplo en JavaScript:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">B</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="nx">A</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">B</span><span class="p">));</span><span class="w">  </span><span class="c1">// false</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="o">!</span><span class="nx">A</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="nx">B</span><span class="p">);</span><span class="w">   </span><span class="c1">// false (equivalente por De Morgan)</span>
+</code></pre></div></td></tr></table></div></p>
+</li>
+</ol>
+<hr />
+<h5 id="como-entender-las-leyes-de-de-morgan"><strong>Cómo entender las leyes de De Morgan</strong></h5>
+<ol>
+<li>
+<p><strong>Primera Ley (<code>!(A &amp;&amp; B) ≡ !A || !B</code>)</strong>:</p>
+<ul>
+<li>Si <strong>NO</strong> se cumplen ambas condiciones (A y B), entonces <strong>AL MENOS UNA</strong> de las condiciones debe ser falsa.</li>
+</ul>
+</li>
+<li>
+<p><strong>Segunda Ley (<code>!(A || B) ≡ !A &amp;&amp; !B</code>)</strong>:</p>
+<ul>
+<li>Si <strong>NO</strong> se cumple ninguna de las condiciones (A o B), entonces <strong>AMBAS</strong> condiciones deben ser falsas.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h5 id="tablas-de-verdad_1"><strong>Tablas de Verdad</strong></h5>
+<ul>
+<li>Primera Ley (<code>!(A &amp;&amp; B) ≡ !A || !B</code>)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>A &amp;&amp; B</th>
+<th>!(A &amp;&amp; B)</th>
+<th>!A</th>
+<th>!B</th>
+<th>!A <code>\|\|</code> !B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>true</td>
+<td>true</td>
+<td>true</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+</tr>
+<tr>
+<td>true</td>
+<td>false</td>
+<td>false</td>
+<td>true</td>
+<td>false</td>
+<td>true</td>
+<td>true</td>
+</tr>
+<tr>
+<td>false</td>
+<td>true</td>
+<td>false</td>
+<td>true</td>
+<td>true</td>
+<td>false</td>
+<td>true</td>
+</tr>
+<tr>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+<td>true</td>
+<td>true</td>
+<td>true</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Segunda Ley (<code>!(A || B) ≡ !A &amp;&amp; !B</code>)</li>
+</ul>
+<p>| A     | B     | A || B | !(A <code>\|\|</code> B) | !A    | !B    | !A &amp;&amp; !B |
+|-------|-------|--------|-----------|-------|-------|----------|
+| true  | true  | true   | false     | false | false | false    |
+| true  | false | true   | false     | false | true  | false    |
+| false | true  | true   | false     | true  | false | false    |
+| false | false | false  | true      | true  | true  | true     |</p>
+<hr />
+<p><strong>Ejemplos prácticos</strong></p>
+<ul>
+<li>Ejemplo 1: Verificar si ninguna condición es verdadera
+Si queremos verificar si ni <code>A</code> ni <code>B</code> son verdaderos, podemos usar:</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">B</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="nx">A</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">B</span><span class="p">));</span><span class="w">  </span><span class="c1">// true</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="o">!</span><span class="nx">A</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="nx">B</span><span class="p">);</span><span class="w">   </span><span class="c1">// true (equivalente)</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="por-que-son-importantes-las-leyes-de-de-morgan"><strong>¿Por qué son importantes las Leyes de De Morgan?</strong></h4>
+<ol>
+<li>
+<p><strong>Simplificación de expresiones</strong>:</p>
+<ul>
+<li>Estas leyes permiten reescribir expresiones lógicas de manera más comprensible o adecuada para ciertos contextos.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optimización del código</strong>:</p>
+<ul>
+<li>Ayudan a escribir condiciones más eficientes o claras.</li>
+</ul>
+</li>
+<li>
+<p><strong>Comprensión de la lógica booleana</strong>:</p>
+<ul>
+<li>Son una base fundamental en programación, especialmente en algoritmos, bases de datos y sistemas digitales.</li>
+</ul>
+</li>
+</ol>
+<h4 id="ejercicio-4-validar-acceso-segun-edad-y-rol"><strong>Ejercicio 4: Validar acceso según edad y rol</strong></h4>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Solicita al usuario que introduzca su edad y su rol.</li>
+<li>Permite el acceso solo si:<ul>
+<li>El usuario tiene 18 años o más <strong>y</strong> es administrador.</li>
+<li><strong>O</strong> si tiene menos de 18 años pero el rol es "invitado".</li>
+<li><strong>Y</strong> se asegura de que el rol no esté vacío.</li>
+</ul>
+</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Validar acceso según edad y rol</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce tu edad: &quot;</span><span class="p">));</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">rol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce tu rol (admin/invitado): &quot;</span><span class="p">).</span><span class="nx">trim</span><span class="p">();</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="nx">edad</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">18</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">rol</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;admin&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="nx">edad</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">18</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">rol</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;invitado&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">rol</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Acceso permitido&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Acceso denegado&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<hr />
+<h4 id="ejercicio-5-determinar-si-un-numero-cumple-multiples-condiciones"><strong>Ejercicio 5: Determinar si un número cumple múltiples condiciones</strong></h4>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Solicita al usuario que introduzca un número.</li>
+<li>Determina si el número cumple <strong>al menos una</strong> de las siguientes condiciones:<ul>
+<li>Es divisible por 2 <strong>y</strong> mayor que 10.</li>
+<li><strong>O</strong> es divisible por 3 pero <strong>no</strong> mayor que 50.</li>
+<li><strong>Y</strong> que el número no sea negativo.</li>
+</ul>
+</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Validar número con múltiples condiciones</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce un número: &quot;</span><span class="p">));</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="nx">numero</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">10</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="nx">numero</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="p">(</span><span class="nx">numero</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">50</span><span class="p">))</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El número cumple al menos una condición&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El número no cumple ninguna condición&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<hr />
+<h4 id="ejercicio-6-validar-si-un-texto-cumple-criterios-mixtos"><strong>Ejercicio 6: Validar si un texto cumple criterios mixtos</strong></h4>
+<div class="admonition question">
+<p class="admonition-title">Crea un programa que haga lo siguiente:</p>
+<ul>
+<li>Solicita al usuario que introduzca una cadena de texto.</li>
+<li>Determina si la cadena cumple <strong>todas</strong> las siguientes condiciones:<ul>
+<li>Tiene entre 5 y 15 caracteres.</li>
+<li><strong>O</strong> comienza con la letra "A" pero <strong>no</strong> termina con la letra "Z".</li>
+<li><strong>Y</strong> no contiene espacios en blanco.</li>
+</ul>
+</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Validar texto con múltiples condiciones</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce una cadena de texto: &quot;</span><span class="p">).</span><span class="nx">trim</span><span class="p">();</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="nx">texto</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">texto</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">15</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="nx">texto</span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="nx">texto</span><span class="p">.</span><span class="nx">endsWith</span><span class="p">(</span><span class="s2">&quot;Z&quot;</span><span class="p">))</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="nx">texto</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El texto cumple las condiciones&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El texto no cumple las condiciones&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<hr />
+<h3 id="132-if-else-anidado"><strong>1.3.2 If-Else Anidado</strong></h3>
+<h4 id="que-es-un-if-else-anidado"><strong>¿Qué es un if-else anidado?</strong></h4>
+<p>Es una estructura que permite evaluar múltiples condiciones utilizando un <strong>if-else</strong> dentro de otro <strong>if-else</strong>.</p>
+<h4 id="sintaxis-de-if-else-anidado"><strong>Sintaxis de if-else anidado</strong></h4>
+<div class="codehilite"><pre><span></span><code>```<span class="nv">javascript</span>
+<span class="k">if</span><span class="w"> </span><span class="ss">(</span><span class="nv">condici</span>ó<span class="nv">n1</span><span class="ss">)</span><span class="w"> </span>{
+<span class="w">    </span><span class="o">//</span><span class="w"> </span><span class="nv">C</span>ó<span class="nv">digo</span><span class="w"> </span><span class="nv">si</span><span class="w"> </span><span class="nv">condici</span>ó<span class="nv">n1</span><span class="w"> </span><span class="nv">es</span><span class="w"> </span><span class="nv">verdadera</span>
+}<span class="w"> </span><span class="k">else</span><span class="w"> </span>{
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="ss">(</span><span class="nv">condici</span>ó<span class="nv">n2</span><span class="ss">)</span><span class="w"> </span>{
+<span class="w">        </span><span class="o">//</span><span class="w"> </span><span class="nv">C</span>ó<span class="nv">digo</span><span class="w"> </span><span class="nv">si</span><span class="w"> </span><span class="nv">condici</span>ó<span class="nv">n2</span><span class="w"> </span><span class="nv">es</span><span class="w"> </span><span class="nv">verdadera</span>
+<span class="w">    </span>}<span class="w"> </span><span class="k">else</span><span class="w"> </span>{
+<span class="w">        </span><span class="o">//</span><span class="w"> </span><span class="nv">C</span>ó<span class="nv">digo</span><span class="w"> </span><span class="nv">si</span><span class="w"> </span><span class="nv">ninguna</span><span class="w"> </span><span class="nv">condici</span>ó<span class="nv">n</span><span class="w"> </span><span class="nv">es</span><span class="w"> </span><span class="nv">verdadera</span>
+<span class="w">    </span>}
+}
+```
+</code></pre></div>
+
+<h3 id="132-if-else-anidado_1"><strong>1.3.2 If-Else Anidado</strong></h3>
+<h4 id="que-es-un-if-else-anidado_1"><strong>¿Qué es un if-else anidado?</strong></h4>
+<p>Un <strong>if-else anidado</strong> permite evaluar múltiples condiciones de manera jerárquica. Es una estructura donde un bloque <code>if</code> o <code>else</code> contiene otro bloque <code>if</code> o <code>else</code> en su interior.</p>
+<h4 id="sintaxis-de-if-else-anidado_1"><strong>Sintaxis de if-else anidado</strong></h4>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Sintaxis de If-Else Anidado</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">condición1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Código si condición1 es verdadera</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">condición2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Código si condición2 es verdadera</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Código si ninguna condición es verdadera</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h4 id="ejemplo"><strong>Ejemplo</strong></h4>
+<div class="admonition note">
+<p class="admonition-title">Ejemplo de If-Else Anidado</p>
+<p>En este ejemplo, se evalúa la calificación de un estudiante y se asigna una letra según el rango:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Calificación con If-Else Anidado</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">nota</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">75</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">nota</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">90</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Tu calificación es A&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">nota</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">80</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Tu calificación es B&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Tu calificación es C&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<details class="example">
+<summary>Diagrama de flujo</summary>
+<pre class="mermaid"><code>flowchart TD
+    A[Inicio] --&gt; B{¿Nota &gt;= 90?}
+    B --&gt;|Sí| C[Calificación: A]
+    B --&gt;|No| D{¿Nota &gt;= 80?}
+    D --&gt;|Sí| E[Calificación: B]
+    D --&gt;|No| F[Calificación: C]
+    C --&gt; G[Fin]
+    E --&gt; G
+    F --&gt; G</code></pre>
+</details>
+</div>
+<hr />
+<h3 id="ejercicios-de-if-else-anidado"><strong>Ejercicios de If-Else Anidado</strong></h3>
+<h4 id="ejercicios"><strong>Ejercicios</strong></h4>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 1: Clasificación de edades</p>
+<ul>
+<li>Crea un programa que solicite al usuario su edad.</li>
+<li>Según la edad introducida, muestra:<ul>
+<li>"Niño" si la edad es menor a 12.</li>
+<li>"Adolescente" si la edad está entre 12 y 17.</li>
+<li>"Adulto" si la edad es 18 o mayor.</li>
+</ul>
+</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Clasificación de edades</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce tu edad: &quot;</span><span class="p">));</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">edad</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">12</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Niño&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">edad</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">17</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Adolescente&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Adulto&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<hr />
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 2: Determinar un descuento</p>
+<ul>
+<li>Crea un programa que solicite el importe de una compra.</li>
+<li>Calcula y muestra el descuento según las siguientes reglas:<ul>
+<li>20% si el importe es mayor o igual a 100.</li>
+<li>10% si el importe está entre 50 y 99.</li>
+<li>Sin descuento si el importe es menor a 50.</li>
+</ul>
+</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Determinación de descuentos</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">importe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el importe de tu compra: &quot;</span><span class="p">));</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">importe</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">100</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Descuento del 20% aplicado&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">importe</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">50</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Descuento del 10% aplicado&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Sin descuento&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<hr />
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 3: Clasificación de temperaturas</p>
+<ul>
+<li>Crea un programa que solicite una temperatura en grados Celsius.</li>
+<li>Clasifica la temperatura según los siguientes rangos:<ul>
+<li>"Frío" si es menor a 10°C.</li>
+<li>"Templado" si está entre 10°C y 25°C.</li>
+<li>"Calor" si es mayor a 25°C.</li>
+</ul>
+</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Clasificación de temperaturas</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">temperatura</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce la temperatura en grados Celsius: &quot;</span><span class="p">));</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">temperatura</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Frío&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">temperatura</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">25</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Templado&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Calor&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<hr />
+<h3 id="133-switch"><strong>1.3.3 Switch</strong></h3>
+<h4 id="que-es-un-switch"><strong>¿Qué es un switch?</strong></h4>
+<p>El <strong>switch</strong> es una estructura de control que permite evaluar una expresión y ejecutar diferentes bloques de código según su valor. Es útil cuando se tienen múltiples condiciones basadas en el mismo valor.</p>
+<h4 id="sintaxis-de-switch"><strong>Sintaxis de switch</strong></h4>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Sintaxis de Switch</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="nx">expresión</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="nx">valor1</span><span class="o">:</span>
+<span class="w">        </span><span class="c1">// Código para el caso valor1</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="nx">valor2</span><span class="o">:</span>
+<span class="w">        </span><span class="c1">// Código para el caso valor2</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">default</span><span class="o">:</span>
+<span class="w">        </span><span class="c1">// Código si ningún caso coincide</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Nota:</strong> El uso de <code>break</code> asegura que el programa salga del bloque <code>switch</code> después de ejecutar el caso correspondiente.</p>
+<hr />
+<h4 id="ejemplo_1"><strong>Ejemplo</strong></h4>
+<div class="admonition note">
+<p class="admonition-title">Ejemplo de Switch</p>
+<p>En este ejemplo, se determina el día de la semana según un número introducido:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Día de la semana con Switch</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">dia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span>
+
+<span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="nx">dia</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mf">1</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Lunes&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mf">2</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Martes&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mf">3</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Miércoles&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mf">4</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Jueves&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mf">5</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Viernes&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">default</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Fin de semana&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<details class="example">
+<summary>Diagrama de flujo</summary>
+<pre class="mermaid"><code>flowchart TD
+    A[Inicio] --&gt; B{¿Día = 1?}
+    B --&gt;|Sí| C[Lunes]
+    B --&gt;|No| D{¿Día = 2?}
+    D --&gt;|Sí| E[Martes]
+    D --&gt;|No| F{¿Día = 3?}
+    F --&gt;|Sí| G[Miércoles]
+    F --&gt;|No| H{¿Día = 4?}
+    H --&gt;|Sí| I[Jueves]
+    H --&gt;|No| J{¿Día = 5?}
+    J --&gt;|Sí| K[Viernes]
+    J --&gt;|No| L[Fin de semana]
+    C --&gt; M[Fin]
+    E --&gt; M
+    G --&gt; M
+    I --&gt; M
+    K --&gt; M
+    L --&gt; M</code></pre>
+</details>
+</div>
+<hr />
+<h4 id="ejercicios_1"><strong>Ejercicios</strong></h4>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 1: Clasificación de vehículos</p>
+<ul>
+<li>Crea un programa que solicite al usuario el tipo de vehículo ("coche", "moto" o "camión").</li>
+<li>Muestra un mensaje con el número de ruedas típico para ese tipo de vehículo:<ul>
+<li>"Coche": 4 ruedas.</li>
+<li>"Moto": 2 ruedas.</li>
+<li>"Camión": más de 4 ruedas.</li>
+</ul>
+</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Clasificación de vehículos</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">tipo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el tipo de vehículo: &quot;</span><span class="p">).</span><span class="nx">toLowerCase</span><span class="p">();</span>
+
+<span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="nx">tipo</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s2">&quot;coche&quot;</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Un coche tiene 4 ruedas.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s2">&quot;moto&quot;</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Una moto tiene 2 ruedas.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s2">&quot;camión&quot;</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Un camión tiene más de 4 ruedas.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">default</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Tipo de vehículo no reconocido.&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<hr />
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 2: Meses del año</p>
+<ul>
+<li>Crea un programa que solicite al usuario un número del 1 al 12.</li>
+<li>Muestra el nombre del mes correspondiente:<ul>
+<li>1: Enero, 2: Febrero, etc.</li>
+<li>Si el número no está en el rango, muestra un mensaje de error.</li>
+</ul>
+</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Meses del año</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">mes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce un número del 1 al 12: &quot;</span><span class="p">));</span>
+
+<span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="nx">mes</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mf">1</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Enero&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mf">2</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Febrero&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mf">3</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Marzo&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mf">4</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Abril&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mf">5</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Mayo&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mf">6</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Junio&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mf">7</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Julio&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mf">8</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Agosto&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mf">9</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Septiembre&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mf">10</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Octubre&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mf">11</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Noviembre&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mf">12</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Diciembre&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">default</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Número fuera de rango.&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<hr />
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 3: Clasificación de frutas</p>
+<ul>
+<li>Crea un programa que solicite al usuario el nombre de una fruta ("manzana", "plátano", "naranja").</li>
+<li>Muestra un mensaje indicando el color típico de la fruta:<ul>
+<li>"Manzana": Roja o verde.</li>
+<li>"Plátano": Amarillo.</li>
+<li>"Naranja": Naranja.</li>
+</ul>
+</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Clasificación de frutas</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">fruta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el nombre de una fruta: &quot;</span><span class="p">).</span><span class="nx">toLowerCase</span><span class="p">();</span>
+
+<span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="nx">fruta</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s2">&quot;manzana&quot;</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Una manzana puede ser roja o verde.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s2">&quot;plátano&quot;</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Un plátano es amarillo.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s2">&quot;naranja&quot;</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Una naranja es naranja.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">default</span><span class="o">:</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Fruta no reconocida.&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="sb">```javascript linenums=&quot;1&quot; title=&quot;Días de la semana&quot;</span>
+<span class="sb">const prompt = require(&quot;prompt-sync&quot;)();</span>
+
+<span class="sb">let dia = parseInt(prompt(&quot;Introduce un número del 1 al 7: &quot;));</span>
+
+<span class="sb">switch (dia) {</span>
+<span class="sb">    case 1:</span>
+<span class="sb">        console.log(&quot;Lunes&quot;);</span>
+<span class="sb">        break;</span>
+<span class="sb">    case 2:</span>
+<span class="sb">        console.log(&quot;Martes&quot;);</span>
+<span class="sb">        break;</span>
+<span class="sb">    case 3:</span>
+<span class="sb">        console.log(&quot;Miércoles&quot;);</span>
+<span class="sb">        break;</span>
+<span class="sb">    case 4:</span>
+<span class="sb">        console.log(&quot;Jueves&quot;);</span>
+<span class="sb">        break;</span>
+<span class="sb">    case 5:</span>
+<span class="sb">        console.log(&quot;Viernes&quot;);</span>
+<span class="sb">        break;</span>
+<span class="sb">    case 6:</span>
+<span class="sb">        console.log(&quot;Sábado&quot;);</span>
+<span class="sb">        break;</span>
+<span class="sb">    case 7:</span>
+<span class="sb">        console.log(&quot;Domingo&quot;);</span>
+<span class="sb">        break;</span>
+<span class="sb">    default:</span>
+<span class="sb">        console.log(&quot;Número fuera de rango.&quot;);</span>
+<span class="sb">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<hr />
+<h3 id="134-operador-ternario"><strong>1.3.4 Operador Ternario</strong></h3>
+<h4 id="que-es-el-operador-ternario"><strong>¿Qué es el operador ternario?</strong></h4>
+<p>El operador ternario es una forma compacta de escribir una expresión condicional en JavaScript. Tiene la siguiente estructura:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Sintaxis del Operador Ternario</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">condición</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">expresión_si_verdadero</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">expresión_si_falso</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Ejemplo</strong>: Determinar si un número es par o impar.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Número par o impar</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">numero</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s2">&quot;Par&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Impar&quot;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">resultado</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h4 id="ejercicio"><strong>Ejercicio</strong></h4>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio: Calificación rápida</p>
+<ul>
+<li>Crea un programa que solicite al usuario una calificación numérica.</li>
+<li>Muestra "Aprobado" si la calificación es mayor o igual a 5, o "Suspendido" si es menor.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Calificación rápida</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">calificacion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce tu calificación: &quot;</span><span class="p">));</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">calificacion</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">5</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s2">&quot;Aprobado&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Suspendido&quot;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">resultado</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<hr />
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>
