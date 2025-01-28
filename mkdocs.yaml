@@ -3,9 +3,21 @@ site_url: https://jbeteta-ies.github.io/IFCD0211/
 theme:
   name: material
   features:
-    - admonition
+    - content.code.copy
+
 markdown_extensions:
   - admonition
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - codehilite
+  - attr_list
+
 nav:
   - Inicio: index.md
   - Normativa:
@@ -19,7 +31,16 @@ nav:
       - MF0966_3:
           - UF2213: content/MF_0966_3/UF2213.md
           - UF2214: content/MF_0966_3/UF2214.md
-          - UF2215: content/MF_0966_3/UF2215.md
+          - UF2215: 
+            - Introducción: content/MF_0966_3/UF2215.md
+            - T01 Fundamentos de JS: 
+              - 1.1 Configuración del entorno de desarrollo: content/MF_0966_3/UF2215/unidad01_11.md
+              - 1.2 Variables, Tipos de Datos y Operadores: content/MF_0966_3/UF2215/unidad01_12.md
+              - 1.3 Estructuras básicas condicionales: content/MF_0966_3/UF2215/unidad01_13.md
+              - 1.4 Bucles: content/MF_0966_3/UF2215/unidad01_14.md
+              - 1.5 Uso avanzado de Números, cadenas y fechas: content/MF_0966_3/UF2215/unidad01_15.md
+              - 1.6 Ejercicios: content/MF_0966_3/UF2215/unidad01_16.md
+            - T02 Funciones y manejo de errores: content/MF_0966_3/UF2215/unidad2.md
       - MF0967_3:
           - UF2216: content/MF_0967_3/UF2216.md
           - UF2217: content/MF_0967_3/UF2217.md

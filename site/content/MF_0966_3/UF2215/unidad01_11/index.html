@@ -1,0 +1,2079 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jbeteta-ies.github.io/IFCD0211/content/MF_0966_3/UF2215/unidad01_11/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../unidad01_12/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>1.1 Configuración del entorno de desarrollo - Certificado de Profesionalidad IFCD0211</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unidad-1-configuracion-del-entorno-y-fundamentos-de-javascript" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Certificado de Profesionalidad IFCD0211" class="md-header__button md-logo" aria-label="Certificado de Profesionalidad IFCD0211" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Certificado de Profesionalidad IFCD0211
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              1.1 Configuración del entorno de desarrollo
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Certificado de Profesionalidad IFCD0211" class="md-nav__button md-logo" aria-label="Certificado de Profesionalidad IFCD0211" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Certificado de Profesionalidad IFCD0211
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Normativa
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Normativa
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../normativa19/IFCD0211/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Normativa General
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../normativa19/MF0966_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MF0966_3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../normativa19/MF0967_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MF0967_3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../normativa19/MF0968_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MF0968_3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../normativa19/MP0459/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MP0459
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../normativa19/ucs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unidades de Competencia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Contenidos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Contenidos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MF0966_3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            MF0966_3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UF2213/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF2213
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UF2214/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF2214
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_3" id="__nav_3_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UF2215
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            UF2215
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_3_2" id="__nav_3_1_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    T01 Fundamentos de JS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            T01 Fundamentos de JS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    1.1 Configuración del entorno de desarrollo
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    1.1 Configuración del entorno de desarrollo
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-configuracion-del-entorno-de-desarrollo" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Configuración del Entorno de Desarrollo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1 Configuración del Entorno de Desarrollo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#111-instalacion-de-nodejs-y-configuracion-basica" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.1 Instalación de Node.js y configuración básica
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1.1 Instalación de Node.js y configuración básica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-nodejs-y-por-que-lo-necesitamos" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es Node.js y por qué lo necesitamos?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="¿Qué es Node.js y por qué lo necesitamos?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#historia-de-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Historia de Node.js
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modo-de-funcionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modo de Funcionamiento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características Clave
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ventajas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ventajas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitaciones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#casos-de-uso-reales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Casos de Uso Reales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enlaces-a-soluciones-con-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enlaces a Soluciones con Node.js
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recursos-adicionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursos Adicionales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descargar-e-instalar-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descargar e instalar Node.js
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descargar-e-instalar-nodejs-en-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descargar e instalar Node.js en Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validacion-de-la-instalacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validación de la instalación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejecutar-un-primer-script-en-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejecutar un primer script en Node.js
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-uso-de-visual-studio-code-vscode-como-editor-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.2 Uso de Visual Studio Code (VSCode) como editor principal
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1.2 Uso de Visual Studio Code (VSCode) como editor principal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduccion-a-vscode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducción a VSCode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instalacion-y-configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalación y configuración
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-basica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración básica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-y-ejecucion-de-un-programa-en-vscode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creación y ejecución de un programa en VSCode
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-introduccion-al-uso-de-la-consola-y-ejecucion-de-programas" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.3 Introducción al uso de la consola y ejecución de programas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1.3 Introducción al uso de la consola y ejecución de programas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-la-consola" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es la consola?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comandos-basicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandos básicos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uso-del-repl-de-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uso del REPL de Node.js
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actividad-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actividad Práctica
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Actividad Práctica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reto-extra" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reto Extra
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluación
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad01_12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.2 Variables, Tipos de Datos y Operadores
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad01_13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.3 Estructuras básicas condicionales
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad01_14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.4 Bucles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad01_15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.5 Uso avanzado de Números, cadenas y fechas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad01_16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.6 Ejercicios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T02 Funciones y manejo de errores
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MF0967_3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            MF0967_3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MF_0967_3/UF2216/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF2216
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MF_0967_3/UF2217/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF2217
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MF_0967_3/UF2218/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF2218
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MF0968_3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            MF0968_3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MF_0968_3/UF1643/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF1643
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MF_0968_3/UF1644/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF1644
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MP0459
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            MP0459
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MP0459/Practicas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prácticas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-configuracion-del-entorno-de-desarrollo" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Configuración del Entorno de Desarrollo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1 Configuración del Entorno de Desarrollo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#111-instalacion-de-nodejs-y-configuracion-basica" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.1 Instalación de Node.js y configuración básica
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1.1 Instalación de Node.js y configuración básica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-nodejs-y-por-que-lo-necesitamos" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es Node.js y por qué lo necesitamos?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="¿Qué es Node.js y por qué lo necesitamos?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#historia-de-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Historia de Node.js
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modo-de-funcionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modo de Funcionamiento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características Clave
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ventajas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ventajas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitaciones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#casos-de-uso-reales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Casos de Uso Reales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enlaces-a-soluciones-con-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enlaces a Soluciones con Node.js
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recursos-adicionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursos Adicionales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descargar-e-instalar-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descargar e instalar Node.js
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descargar-e-instalar-nodejs-en-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descargar e instalar Node.js en Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validacion-de-la-instalacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validación de la instalación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejecutar-un-primer-script-en-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejecutar un primer script en Node.js
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-uso-de-visual-studio-code-vscode-como-editor-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.2 Uso de Visual Studio Code (VSCode) como editor principal
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1.2 Uso de Visual Studio Code (VSCode) como editor principal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduccion-a-vscode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducción a VSCode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instalacion-y-configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalación y configuración
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-basica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración básica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-y-ejecucion-de-un-programa-en-vscode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creación y ejecución de un programa en VSCode
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-introduccion-al-uso-de-la-consola-y-ejecucion-de-programas" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.3 Introducción al uso de la consola y ejecución de programas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1.3 Introducción al uso de la consola y ejecución de programas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-la-consola" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es la consola?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comandos-basicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandos básicos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uso-del-repl-de-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uso del REPL de Node.js
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actividad-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actividad Práctica
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Actividad Práctica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reto-extra" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reto Extra
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluación
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="unidad-1-configuracion-del-entorno-y-fundamentos-de-javascript">Unidad 1: Configuración del Entorno y Fundamentos de JavaScript</h1>
+<h2 id="11-configuracion-del-entorno-de-desarrollo">1.1 Configuración del Entorno de Desarrollo</h2>
+<h3 id="objetivos"><strong>Objetivos</strong></h3>
+<ol>
+<li>Configurar un entorno de desarrollo para escribir y ejecutar código en JavaScript.</li>
+<li>Familiarizarse con herramientas clave: Node.js, Visual Studio Code (VSCode) y la consola.</li>
+<li>Ejecutar un programa básico en JavaScript para validar la configuración.</li>
+</ol>
+<hr />
+<h3 id="111-instalacion-de-nodejs-y-configuracion-basica"><strong>1.1.1 Instalación de Node.js y configuración básica</strong></h3>
+<h4 id="que-es-nodejs-y-por-que-lo-necesitamos"><strong>¿Qué es Node.js y por qué lo necesitamos?</strong></h4>
+<p>Node.js es un entorno de ejecución para JavaScript construido sobre el motor <strong>V8</strong> de Google Chrome. Permite ejecutar JavaScript en el lado del servidor, fuera del navegador. Esto lo convierte en una herramienta fundamental para el desarrollo de aplicaciones modernas, como servidores web, herramientas de línea de comandos y aplicaciones de tiempo real.</p>
+<hr />
+<h5 id="historia-de-nodejs"><strong>Historia de Node.js</strong></h5>
+<ul>
+<li><strong>Lanzamiento inicial:</strong> Node.js fue creado por <strong>Ryan Dahl</strong> y lanzado en <strong>2009</strong>.</li>
+<li><strong>Motivación:</strong> Ryan Dahl desarrolló Node.js para solucionar problemas comunes en los servidores web tradicionales, como la falta de eficiencia al manejar múltiples conexiones simultáneas.</li>
+<li><strong>Primera versión estable:</strong> La versión 0.10 fue lanzada en marzo de 2013, marcando el inicio de su adopción masiva.</li>
+<li><strong>Ecosistema en crecimiento:</strong> Desde 2015, el desarrollo de Node.js es administrado por la <strong>Node.js Foundation</strong>, que posteriormente se fusionó con la <strong>JS Foundation</strong> en 2019 para formar la <strong>OpenJS Foundation</strong>.</li>
+<li><strong>Licencia:</strong> Node.js está disponible bajo la licencia <strong>MIT</strong>, lo que permite su uso, modificación y distribución de forma gratuita, incluso en proyectos comerciales.</li>
+</ul>
+<hr />
+<h5 id="modo-de-funcionamiento"><strong>Modo de Funcionamiento</strong></h5>
+<p><strong>Modelo de ejecución asíncrono:</strong> Node.js utiliza un modelo basado en eventos que permite manejar múltiples solicitudes al mismo tiempo sin bloquear el servidor. Esto lo hace ideal para aplicaciones que requieren un manejo intensivo de entradas y salidas (I/O).</p>
+<p><strong>Motor V8:</strong> Node.js está construido sobre el motor V8 de Google Chrome, que convierte el código JavaScript en código máquina, asegurando un rendimiento óptimo.</p>
+<p><strong>Ejecución concurrente:</strong> Aunque utiliza un solo hilo, Node.js puede manejar múltiples conexiones simultáneamente mediante un bucle de eventos (<code>event loop</code>) y callbacks.</p>
+<hr />
+<h5 id="caracteristicas-clave"><strong>Características Clave</strong></h5>
+<ul>
+<li><strong>Modelo No Bloqueante:</strong> Las operaciones I/O no bloquean el flujo del programa, lo que permite manejar múltiples tareas de manera eficiente.</li>
+<li><strong>Compatibilidad Cross-Platform:</strong> Funciona en sistemas operativos como Windows, macOS y Linux.</li>
+<li><strong>Ecosistema de Paquetes (NPM):</strong> Node.js incluye el administrador de paquetes más grande del mundo, NPM, que cuenta con más de un millón de paquetes.</li>
+<li><strong>Aplicaciones en Tiempo Real:</strong> Ideal para aplicaciones como chats, juegos en línea y transmisiones en tiempo real.</li>
+<li><strong>Escalabilidad:</strong> Gracias a su arquitectura basada en eventos, Node.js puede manejar un gran número de conexiones simultáneamente.</li>
+</ul>
+<hr />
+<h5 id="ventajas"><strong>Ventajas</strong></h5>
+<ul>
+<li><strong>Velocidad:</strong> Su motor V8 es altamente eficiente.</li>
+<li><strong>Ecosistema Extenso:</strong> La comunidad de NPM ofrece soluciones para casi cualquier tarea.</li>
+<li><strong>Reutilización de Conocimientos:</strong> Permite usar JavaScript en el frontend y el backend.</li>
+<li><strong>Ideal para Microservicios:</strong> Su arquitectura ligera es adecuada para diseñar aplicaciones modulares.</li>
+</ul>
+<h5 id="limitaciones"><strong>Limitaciones</strong></h5>
+<ul>
+<li><strong>Operaciones Intensivas en CPU:</strong> Node.js no es la mejor opción para tareas que requieren un alto procesamiento, como cálculos complejos.</li>
+<li><strong>Callback Hell:</strong> Aunque mitiga esto con Promises y <code>async/await</code>, el uso intensivo de callbacks puede hacer que el código sea difícil de mantener.</li>
+</ul>
+<hr />
+<h5 id="casos-de-uso-reales"><strong>Casos de Uso Reales</strong></h5>
+<ul>
+<li><strong>Netflix:</strong> Utiliza Node.js para mejorar la velocidad de carga de su interfaz de usuario.</li>
+<li><strong>Uber:</strong> Emplea Node.js para manejar solicitudes en tiempo real.</li>
+<li><strong>PayPal:</strong> Mejoró el rendimiento de sus aplicaciones migrando a Node.js.</li>
+</ul>
+<hr />
+<h5 id="enlaces-a-soluciones-con-nodejs"><strong>Enlaces a Soluciones con Node.js</strong></h5>
+<ul>
+<li><strong><a href="https://expressjs.com">Express.js</a>:</strong> Framework minimalista para construir aplicaciones web y APIs.</li>
+<li><strong><a href="https://socket.io">Socket.io</a>:</strong> Biblioteca para crear aplicaciones en tiempo real como chats y juegos.</li>
+<li><strong><a href="https://nestjs.com">NestJS</a>:</strong> Framework para desarrollar aplicaciones backend modulares y escalables.</li>
+<li><strong><a href="https://www.electronjs.org">Electron</a>:</strong> Herramienta para crear aplicaciones de escritorio multiplataforma con Node.js.</li>
+<li><strong><a href="https://strapi.io">Strapi</a>:</strong> CMS basado en Node.js para crear APIs rápidas y personalizables.</li>
+</ul>
+<hr />
+<h5 id="recursos-adicionales"><strong>Recursos Adicionales</strong></h5>
+<ul>
+<li><strong>Documentación oficial de Node.js:</strong> <a href="https://nodejs.org/en/docs/">https://nodejs.org/en/docs/</a></li>
+<li><strong>Guía para principiantes:</strong> <a href="https://www.freecodecamp.org/news/get-started-with-nodejs/">https://www.freecodecamp.org/news/learn-node-js-beginners-guide/</a></li>
+<li><strong>Tutorial en video:</strong> <a href="https://www.youtube.com/watch?v=zb3Qk8SG5Ms&amp;list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU">Net Ninja - Curso de Node.js</a></li>
+</ul>
+<hr />
+<h4 id="descargar-e-instalar-nodejs"><strong>Descargar e instalar Node.js</strong></h4>
+<ol>
+<li>Accede al sitio oficial de Node.js: <a href="https://nodejs.org">https://nodejs.org</a>.</li>
+<li>Selecciona la versión <strong>LTS (Long Term Support)</strong>.</li>
+<li>Descarga y sigue el proceso de instalación según tu sistema operativo.</li>
+</ol>
+<h4 id="descargar-e-instalar-nodejs-en-windows"><strong>Descargar e instalar Node.js en Windows</strong></h4>
+<ol>
+<li>
+<p><strong>Accede al sitio oficial de Node.js:</strong></p>
+<ul>
+<li>Ve a <a href="https://nodejs.org">https://nodejs.org</a>.</li>
+<li>
+<p>Encontrarás dos opciones principales de descarga:</p>
+<div class="admonition info">
+<p class="admonition-title">Versiones de Node.js</p>
+<ul>
+<li><strong>LTS (Long Term Support):</strong> Recomendado para la mayoría de los usuarios, ya que es más estable.</li>
+<li><strong>Current:</strong> Incluye las últimas características, pero podría ser menos estable.</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Selecciona LTS</strong> para garantizar estabilidad en el curso.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Descarga el instalador:</strong></p>
+<ul>
+<li>Haz clic en el botón de descarga que corresponde a tu sistema operativo (Windows detectará automáticamente la versión adecuada, ya sea de 32 o 64 bits).</li>
+</ul>
+</li>
+<li>
+<p><strong>Ejecuta el instalador:</strong></p>
+<ul>
+<li>Busca el archivo descargado (generalmente estará en la carpeta <code>Descargas</code>) y haz doble clic para abrirlo.</li>
+</ul>
+</li>
+<li>
+<p><strong>Sigue los pasos del asistente de instalación:</strong></p>
+<ul>
+<li>
+<p><strong>Pantalla de bienvenida:</strong></p>
+<div class="admonition info">
+<p class="admonition-title">Asistente de instalación de Node.js</p>
+<ul>
+<li>Haz clic en <code>Next</code> para continuar.</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Acuerdo de licencia:</strong></p>
+<div class="admonition info">
+<p class="admonition-title">Lee los términos de la licencia</p>
+<ul>
+<li>Lee los términos de la licencia y haz clic en <code>I accept the terms in the License Agreement</code>, luego en <code>Next</code>.</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Carpeta de instalación:</strong></p>
+<div class="admonition info">
+<p class="admonition-title">Selecciona la carpeta de instalación</p>
+<ul>
+<li>Selecciona la carpeta donde deseas instalar Node.js (por defecto es <code>C:\Program Files\nodejs</code>).</li>
+<li>Se recomienda dejar la ubicación predeterminada y hacer clic en <code>Next</code>.</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Componentes a instalar:</strong></p>
+<div class="admonition info">
+<p class="admonition-title">Selecciona los componentes</p>
+<ul>
+<li>Asegúrate de que todas las opciones estén seleccionadas:</li>
+</ul>
+<details class="note" open="open">
+<summary>Componentes a instalar</summary>
+<ul>
+<li><strong>Node.js runtime:</strong> El núcleo del entorno de ejecución.</li>
+<li><strong>npm package manager:</strong> Administrador de paquetes para instalar bibliotecas.</li>
+<li><strong>Add to PATH:</strong> Agrega Node.js a las variables de entorno del sistema (muy importante).</li>
+<li><strong>Online documentation shortcuts:</strong> Acceso rápido a la documentación en línea.</li>
+</ul>
+</details>
+<ul>
+<li>Haz clic en <code>Next</code>.</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Herramientas adicionales para la compilación nativa (opcional):</strong></p>
+<div class="admonition info">
+<p class="admonition-title">Herramientas adicionales</p>
+<ul>
+<li>En algunos casos, el instalador puede ofrecer la opción de instalar herramientas adicionales como <strong>Python</strong> o compiladores de C++ necesarios para algunos paquetes.</li>
+<li>Si aparece esta opción, selecciona el checkbox y haz clic en <code>Next</code>.</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Instalación:</strong></p>
+<div class="admonition info">
+<p class="admonition-title">Proceso de instalación</p>
+<ul>
+<li>Haz clic en <code>Install</code> y espera a que el instalador copie los archivos necesarios.</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Finalización:</strong></p>
+<div class="admonition info">
+<p class="admonition-title">Finalización de la instalación</p>
+<ul>
+<li>Una vez terminada la instalación, marca la opción de "Automatically install necessary tools" (si está disponible) y haz clic en <code>Finish</code>.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="validacion-de-la-instalacion"><strong>Validación de la instalación</strong></h4>
+<ol>
+<li>Abre la terminal o consola de comandos.</li>
+<li>
+<p>Ejecuta los siguientes comandos para verificar que Node.js y npm están instalados correctamente:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Comandos de verificación</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>node<span class="w"> </span>-v
+npm<span class="w"> </span>-v
+</code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p>Deberías ver los números de versión correspondientes.</p>
+</li>
+</ol>
+<h4 id="ejecutar-un-primer-script-en-nodejs"><strong>Ejecutar un primer script en Node.js</strong></h4>
+<ol>
+<li>Crea un archivo <code>hello.js</code> con el siguiente contenido:</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Hola Mundo!</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;¡Hola, mundo!&quot;</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>En la consola, navega hasta el directorio donde guardaste el archivo y ejecuta:</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejecutar programa hello.js</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">   </span>node<span class="w"> </span>hello.js
+</code></pre></div></td></tr></table></div>
+<hr />
+<h3 id="112-uso-de-visual-studio-code-vscode-como-editor-principal"><strong>1.1.2 Uso de Visual Studio Code (VSCode) como editor principal</strong></h3>
+<h4 id="introduccion-a-vscode"><strong>Introducción a VSCode</strong></h4>
+<p>Visual Studio Code es uno de los editores más populares para desarrollo, con soporte para múltiples lenguajes y extensiones.</p>
+<h4 id="instalacion-y-configuracion"><strong>Instalación y configuración</strong></h4>
+<ol>
+<li>Descarga desde el sitio oficial: <a href="https://code.visualstudio.com">https://code.visualstudio.com</a>.</li>
+<li>Instálalo y abre la aplicación.</li>
+</ol>
+<h4 id="configuracion-basica"><strong>Configuración básica</strong></h4>
+<ol>
+<li>Personaliza el tema visual desde las opciones de configuración.</li>
+<li>
+<p>Instala las siguientes extensiones recomendadas:</p>
+<div class="admonition info">
+<p class="admonition-title">Extensiones Recomendadas</p>
+<ul>
+<li><strong>Live Server:</strong> Permite visualizar páginas web en tiempo real.</li>
+<li><strong>Prettier:</strong> Formateo automático del código.</li>
+<li><strong>ESLint:</strong> Detección de errores y problemas en el código.</li>
+<li><strong>JavaScript (ES6) Code Snippets:</strong> Accesos rápidos para escribir código.</li>
+</ul>
+</div>
+</li>
+</ol>
+<h4 id="creacion-y-ejecucion-de-un-programa-en-vscode"><strong>Creación y ejecución de un programa en VSCode</strong></h4>
+<ol>
+<li>Abre un nuevo proyecto en VSCode.</li>
+<li>Crea un archivo <code>app.js</code> con el siguiente contenido:</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Programa de ejemplo</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">saludo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;¡Hola desde VSCode!&quot;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">saludo</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>
+<p>Ejecuta el programa desde la terminal integrada de VSCode:</p>
+<div class="admonition info">
+<p class="admonition-title">Ejecutar programa en VSCode</p>
+<ul>
+<li>Abre la terminal integrada con <code>Ctrl + \</code>.</li>
+<li>Escribe: 
+    <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejecutar programa app.js</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>node<span class="w"> </span>app.js
+</code></pre></div></td></tr></table></div></li>
+</ul>
+</div>
+</li>
+</ol>
+<hr />
+<h3 id="113-introduccion-al-uso-de-la-consola-y-ejecucion-de-programas"><strong>1.1.3 Introducción al uso de la consola y ejecución de programas</strong></h3>
+<h4 id="que-es-la-consola"><strong>¿Qué es la consola?</strong></h4>
+<p>La consola es una herramienta para interactuar con el sistema operativo y ejecutar comandos.</p>
+<h4 id="comandos-basicos"><strong>Comandos básicos</strong></h4>
+<ol>
+<li>Navegar entre carpetas:</li>
+</ol>
+<p><div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>nombre-de-la-carpeta
+</code></pre></div>
+2. Listar archivos:</p>
+<div class="codehilite"><pre><span></span><code><span class="o">!!!</span><span class="w"> </span><span class="n">info</span><span class="w"> </span><span class="s2">&quot;Comandos para listar archivos&quot;</span>
+<span class="w">     </span><span class="o">-</span><span class="w"> </span><span class="n">En</span><span class="w"> </span><span class="n">Windows</span><span class="o">:</span><span class="w"> </span><span class="n n-Quoted">`dir`</span>
+<span class="w">     </span><span class="o">-</span><span class="w"> </span><span class="n">En</span><span class="w"> </span><span class="n">macOS</span><span class="o">/</span><span class="n">Linux</span><span class="o">:</span><span class="w"> </span><span class="n n-Quoted">`ls`</span>
+</code></pre></div>
+
+<ol>
+<li>Crear y eliminar archivos:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>touch<span class="w"> </span>archivo.js
+rm<span class="w"> </span>archivo.js
+</code></pre></div>
+<h4 id="uso-del-repl-de-nodejs"><strong>Uso del REPL de Node.js</strong></h4>
+<ol>
+<li>Inicia el entorno interactivo ejecutando:
+   <div class="highlight"><pre><span></span><code>node
+</code></pre></div></li>
+<li>Escribe comandos simples:</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo en el REPL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hola desde el REPL&quot;</span><span class="p">);</span>
+<span class="mf">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h3 id="actividad-practica"><strong>Actividad Práctica</strong></h3>
+<ol>
+<li>Configura el entorno completo instalando Node.js y VSCode.</li>
+<li>Crea una carpeta llamada <code>proyecto_inicial</code>.</li>
+<li>
+<p>Dentro de la carpeta, crea un archivo <code>index.js</code> con este código:</p>
+<div class="admonition example">
+<p class="admonition-title">Código de ejemplo</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Programa de bienvenida</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Estudiante&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`¡Bienvenido, </span><span class="si">${</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">, a la programación con JavaScript!`</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<ol>
+<li>Ejecuta el programa en la consola.</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejecutar programa index.js</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>node<span class="w"> </span>index.js
+</code></pre></div></td></tr></table></div>
+</li>
+</ol>
+<h4 id="reto-extra"><strong>Reto Extra</strong></h4>
+<ol>
+<li>Investiga cómo instalar un paquete de npm.</li>
+<li>Instala <code>chalk</code> y úsalo para cambiar el color del texto en la consola:
+   <div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>chalk
+</code></pre></div></li>
+<li>Código de ejemplo:
+   <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Uso de chalk</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">chalk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;chalk&#39;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">chalk</span><span class="p">.</span><span class="nx">green</span><span class="p">(</span><span class="s2">&quot;¡Texto en color verde!&quot;</span><span class="p">));</span>
+</code></pre></div></td></tr></table></div></li>
+</ol>
+<hr />
+<h3 id="evaluacion"><strong>Evaluación</strong></h3>
+<p>Los estudiantes pueden:</p>
+<details class="important">
+<summary>Evaluación</summary>
+<ol>
+<li>Ejecutar scripts básicos en Node.js.</li>
+<li>Crear y ejecutar programas en VSCode.</li>
+<li>Usar la consola para navegar y gestionar archivos.</li>
+</ol>
+</details>
+<hr />
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>

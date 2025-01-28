@@ -38,22 +38,52 @@ Aprender los fundamentos de la programación utilizando JavaScript, con un enfoq
 
 ### **Unidad 1: Configuración del Entorno y Fundamentos de JavaScript (20 horas)**
 
-- **1.1** Configuración del entorno de desarrollo (5h)
+**1.1 Configuración del Entorno de Desarrollo**
+- Instalación de Node.js y configuración básica.
+- Uso de VSCode como editor principal.
+- Introducción al uso de la consola y ejecución de programas con Node.js.
 
-       - Instalación de Node.js y configuración básica.
-       - Uso de VSCode como editor principal.
-       - Introducción al uso de la consola y ejecución de programas con Node.js.
+**1.2 Variables, Tipos de Datos y Operadores**
+- Declaración de variables (`let`, `const`, `var`).
+- Tipos de datos primitivos: cadenas, números, booleanos, etc.
+- Operadores básicos: aritméticos, lógicos y relacionales.
 
-- **1.2** Variables, tipos de datos y operadores (10h)
-       
-       - Declaración de variables (`let`, `const` y `var`).
-       - Tipos de datos primitivos: cadenas, números, booleanos, etc.
-       - Operadores básicos: aritméticos, lógicos, y relacionales.
+**1.3 Estructuras Básicas de Control**
+- Condicionales (`if`, `else`, `else if`).
+- Bucles (`for`, `while`, `do-while`).
+- Uso del `switch`.
 
-- **1.3** Estructuras básicas de control (5h)
-       
-       - Condicionales (`if`, `else`, `else if`).
-       - Bucles (`for`, `while`, `do while`).
+**1.4 Bucles**
+- Introducción a los bucles.
+- Bucle `for`.
+- Bucle `while`.
+- Bucle `do-while`.
+- Errores comunes en bucles.
+- Uso avanzado de `break` y `continue`.
+
+**1.5 Uso Avanzado de Números, Cadenas y Fechas**
+
+### **1.5.1 Clase `Number`**
+- Propiedades: `MAX_VALUE`, `MIN_VALUE`, `NaN`, etc.
+- Métodos: `toFixed()`, `parseInt()`, `parseFloat()`.
+
+### **1.5.2 Biblioteca `Math`**
+- Constantes: `PI`, `E`, `LN10`.
+- Métodos: `sqrt()`, `pow()`, `random()`, etc.
+
+### **1.5.3 Clase `String`**
+- Métodos: `toUpperCase()`, `slice()`, `replace()`, etc.
+
+### **1.5.4 Clase `Date`**
+- Creación de fechas: actual, específica, desde cadena.
+- Métodos: `getFullYear()`, `getMonth()`, `toLocaleDateString()`.
+
+### **1.5.6 Ejercicios**
+- Marcador de tenis simplificado.
+- Fechas de pago.
+- Simulador de intereses compuestos.
+
+---
 
 **Objetivo:** Familiarizar a los alumnos con el entorno de desarrollo, la sintaxis básica de JavaScript y las estructuras fundamentales de control.
 
