@@ -1468,48 +1468,55 @@
 </code></pre></div></p>
 </li>
 </ol>
-<details class="info">
-<summary>Nota</summary>
+<div class="admonition important">
+<p class="admonition-title">Importante</p>
 <p>El valor <code>NaN</code> suele aparecer como resultado de operaciones inválidas, como dividir 0 entre 0.</p>
-</details>
+</div>
 <h4 id="metodos-de-la-clase-number"><strong>Métodos de la Clase <code>Number</code></strong></h4>
 <ol>
 <li>
 <p><strong><code>Number.isNaN(valor)</code></strong>: Comprueba si un valor es <code>NaN</code>.
-    <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nb">isNaN</span><span class="p">(</span><span class="kc">NaN</span><span class="p">));</span><span class="w"> </span><span class="c1">// true</span>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nb">isNaN</span><span class="p">(</span><span class="kc">NaN</span><span class="p">));</span><span class="w"> </span><span class="c1">// true</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nb">isNaN</span><span class="p">(</span><span class="mf">10</span><span class="p">));</span><span class="w">  </span><span class="c1">// false</span>
-</code></pre></div></p>
+</code></pre></div></td></tr></table></div></p>
 </li>
 <li>
 <p><strong><code>Number.isInteger(valor)</code></strong>: Determina si un valor es un número entero.
-    <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nx">isInteger</span><span class="p">(</span><span class="mf">42</span><span class="p">));</span><span class="w">    </span><span class="c1">// true</span>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nx">isInteger</span><span class="p">(</span><span class="mf">42</span><span class="p">));</span><span class="w">    </span><span class="c1">// true</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Number</span><span class="p">.</span><span class="nx">isInteger</span><span class="p">(</span><span class="mf">42.5</span><span class="p">));</span><span class="w"> </span><span class="c1">// false</span>
-</code></pre></div></p>
+</code></pre></div></td></tr></table></div></p>
 </li>
 <li>
 <p><strong><code>toFixed(decimales)</code></strong>: Redondea un número al número de decimales especificado y lo convierte en una cadena.
-    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14159</span><span class="p">;</span>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14159</span><span class="p">;</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="mf">2</span><span class="p">));</span><span class="w"> </span><span class="c1">// &quot;3.14&quot;</span>
-</code></pre></div></p>
+</code></pre></div></td></tr></table></div></p>
 </li>
 <li>
 <p><strong><code>toString(base)</code></strong>: Convierte un número en una cadena con la base especificada (binaria, octal, decimal, hexadecimal, etc.).
-    <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">255</span><span class="p">;</span>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">255</span><span class="p">;</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="mf">16</span><span class="p">));</span><span class="w"> </span><span class="c1">// &quot;ff&quot; (hexadecimal)</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="mf">2</span><span class="p">));</span><span class="w">  </span><span class="c1">// &quot;11111111&quot; (binario)</span>
-</code></pre></div></p>
+</code></pre></div></td></tr></table></div></p>
 </li>
 <li>
 <p><strong><code>parseInt(cadena, base)</code></strong>: Convierte una cadena en un número entero según la base indicada.
-    <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">parseInt</span><span class="p">(</span><span class="s2">&quot;1010&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">));</span><span class="w"> </span><span class="c1">// 10 (binario a decimal)</span>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">parseInt</span><span class="p">(</span><span class="s2">&quot;1010&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">));</span><span class="w"> </span><span class="c1">// 10 (binario a decimal)</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">parseInt</span><span class="p">(</span><span class="s2">&quot;FF&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">16</span><span class="p">));</span><span class="w"> </span><span class="c1">// 255 (hexadecimal a decimal)</span>
-</code></pre></div></p>
+</code></pre></div></td></tr></table></div></p>
 </li>
 <li>
 <p><strong><code>parseFloat(cadena)</code></strong>: Convierte una cadena en un número decimal.
-    <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">parseFloat</span><span class="p">(</span><span class="s2">&quot;3.14&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// 3.14</span>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">parseFloat</span><span class="p">(</span><span class="s2">&quot;3.14&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// 3.14</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">parseFloat</span><span class="p">(</span><span class="s2">&quot;123abc&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// 123</span>
-</code></pre></div></p>
+</code></pre></div></td></tr></table></div></p>
 </li>
 </ol>
 <h4 id="ejemplo-completo"><strong>Ejemplo Completo</strong></h4>
