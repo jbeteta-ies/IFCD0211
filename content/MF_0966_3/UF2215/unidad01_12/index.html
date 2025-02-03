@@ -1182,45 +1182,82 @@
 </ol>
 <hr />
 <h4 id="123-operadores-basicos"><strong>1.2.3 Operadores Básicos</strong></h4>
-<p><strong>Operadores Aritméticos:</strong>
-- Suma: <code>+</code>
+<ul>
+<li>
+<p>asignación: <code>=</code>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Juan&quot;</span><span class="p">;</span>
+<span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Ana&quot;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">nombre</span><span class="p">);</span><span class="w"> </span><span class="c1">// Ana</span>
+</code></pre></div></td></tr></table></div>
+<strong>Operadores Aritméticos:</strong></p>
+</li>
+<li>
+<p>Suma: <code>+</code>
     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// 8</span>
-</code></pre></div></td></tr></table></div>
-- Resta: <code>-</code>
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>Resta: <code>-</code>
     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">6</span><span class="p">;</span><span class="w"> </span><span class="c1">// 4</span>
-</code></pre></div></td></tr></table></div>
-- Multiplicación: <code>*</code>
+</code></pre></div></td></tr></table></div></li>
+<li>Multiplicación: <code>*</code>
     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 8</span>
-</code></pre></div></td></tr></table></div>
-- División: <code>/</code>
+</code></pre></div></td></tr></table></div></li>
+<li>División: <code>/</code>
     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">9</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// 3</span>
-</code></pre></div></td></tr></table></div>
-- Resto o módulo: <code>%</code>
+</code></pre></div></td></tr></table></div></li>
+<li>Resto o módulo: <code>%</code>
     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">resto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// 1</span>
-</code></pre></div></td></tr></table></div></p>
-<p><strong>Operadores de Comparación:</strong>
-- Igualdad estricta: <code>===</code>
+</code></pre></div></td></tr></table></div></li>
+<li>Autoincremento: <code>++</code>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">contador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="nx">contador</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="c1">// 1</span>
+</code></pre></div></td></tr></table></div></li>
+<li>Autoincremento: <code>--</code>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">contador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="nx">contador</span><span class="o">--</span><span class="p">;</span><span class="w"> </span><span class="c1">// -1</span>
+</code></pre></div></td></tr></table></div></li>
+<li>Preincremento: <code>++variable</code>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">contador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">++</span><span class="nx">contador</span><span class="p">;</span><span class="w"> </span><span class="c1">// 1</span>
+</code></pre></div></td></tr></table></div></li>
+<li>Predecremento: <code>--variable</code>
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">contador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">--</span><span class="nx">contador</span><span class="p">;</span><span class="w"> </span><span class="c1">// -1</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<p><strong>Operadores de Comparación:</strong></p>
+<ul>
+<li>Igualdad estricta: <code>===</code>
     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">5</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;5&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// false</span>
-</code></pre></div></td></tr></table></div>
-- Diferente: <code>!==</code>
+</code></pre></div></td></tr></table></div></li>
+<li>Diferente: <code>!==</code>
     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">10</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
-</code></pre></div></td></tr></table></div>
-- Mayor que: <code>&gt;</code>
+</code></pre></div></td></tr></table></div></li>
+<li>Mayor que: <code>&gt;</code>
     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">7</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">3</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
-</code></pre></div></td></tr></table></div>
-- Menor que: <code>&lt;</code>
+</code></pre></div></td></tr></table></div></li>
+<li>Menor que: <code>&lt;</code>
     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">2</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
-</code></pre></div></td></tr></table></div></p>
-<p><strong>Operadores Lógicos:</strong>
-- AND (<code>&amp;&amp;</code>): Devuelve <code>true</code> si ambos operandos son verdaderos.
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<p><strong>Operadores Lógicos:</strong></p>
+<ul>
+<li>AND (<code>&amp;&amp;</code>): Devuelve <code>true</code> si ambos operandos son verdaderos.
     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="kc">true</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span><span class="w"> </span><span class="c1">// false</span>
-</code></pre></div></td></tr></table></div>
-- OR (<code>||</code>): Devuelve <code>true</code> si al menos uno de los operandos es verdadero.
+</code></pre></div></td></tr></table></div></li>
+<li>OR (<code>||</code>): Devuelve <code>true</code> si al menos uno de los operandos es verdadero.
     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="kc">true</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
-</code></pre></div></td></tr></table></div>
-- NOT (<code>!</code>): Invierte el valor lógico.
+</code></pre></div></td></tr></table></div></li>
+<li>NOT (<code>!</code>): Invierte el valor lógico.
     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="o">!</span><span class="kc">true</span><span class="p">);</span><span class="w"> </span><span class="c1">// false</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div></li>
+</ul>
 <hr />
 <h4 id="124-ejercicio-practico"><strong>1.2.4 Ejercicio Práctico</strong></h4>
 <div class="admonition question">
