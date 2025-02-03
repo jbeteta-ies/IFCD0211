@@ -662,23 +662,6 @@ console.log(!A && !B);   // true (equivalente)
 
 ### **1.3.2 If-Else Anidado**
 
-#### **¿Qué es un if-else anidado?**
-Es una estructura que permite evaluar múltiples condiciones utilizando un **if-else** dentro de otro **if-else**.
-
-#### **Sintaxis de if-else anidado**
-    ```javascript
-    if (condición1) {
-        // Código si condición1 es verdadera
-    } else {
-        if (condición2) {
-            // Código si condición2 es verdadera
-        } else {
-            // Código si ninguna condición es verdadera
-        }
-    }
-    ```
-
-### **1.3.2 If-Else Anidado**
 
 #### **¿Qué es un if-else anidado?**
 Un **if-else anidado** permite evaluar múltiples condiciones de manera jerárquica. Es una estructura donde un bloque `if` o `else` contiene otro bloque `if` o `else` en su interior.

@@ -1,11 +1,13 @@
 ---
-# Author: Javier Beteta
-# Date: 2025-01-20
-# Keywords: MF_0966_3, UF2215, Programación, JavaScript, Bases de Datos, CMS
-# Description: Unidad Formativa 2215 - Herramientas de sistemas gestores de bases de datos. Pasarelas y medios de conexión
+Author: Javier Beteta
+Date: 2025-01-20
+Keywords: MF_0966_3, UF2215, Programación, JavaScript, Bases de Datos, CMS
+Description: Unidad Formativa 2215 - Herramientas de sistemas gestores de bases de datos. Pasarelas y medios de conexión
 ---
 
-### Unidad Formativa 3: Herramientas de sistemas gestores de bases de datos. Pasarelas y medios de conexión
+# Unidad Formativa 3: UF2215 
+
+## Herramientas de sistemas gestores de bases de datos. Pasarelas y medios de conexión
 
 | **Campo**                | **Detalle**                                                                 |
 |---------------------------|-----------------------------------------------------------------------------|
@@ -25,35 +27,34 @@ En este módulo vamos a realizar las siguientes modificaciones aprovechando los 
 | **Duración**             | 70 horas                                                                   |
 
 
-#### Contenidos Reducidos (100 horas)
+## Contenidos Reducidos (100 horas)
 
-# **Curso: Introducción a la Programación con JavaScript (100 horas)**
-
-## **Objetivo General**
+### **Objetivo General**
 Aprender los fundamentos de la programación utilizando JavaScript, con un enfoque inicial en lógica y estructuras del lenguaje, para luego integrar con HTML en el desarrollo de páginas web.
 
----
-
-## **Contenidos Reducidos**
 
 ### **Unidad 1: Configuración del Entorno y Fundamentos de JavaScript (20 horas)**
 
 **1.1 Configuración del Entorno de Desarrollo**
+
 - Instalación de Node.js y configuración básica.
 - Uso de VSCode como editor principal.
 - Introducción al uso de la consola y ejecución de programas con Node.js.
 
 **1.2 Variables, Tipos de Datos y Operadores**
+
 - Declaración de variables (`let`, `const`, `var`).
 - Tipos de datos primitivos: cadenas, números, booleanos, etc.
 - Operadores básicos: aritméticos, lógicos y relacionales.
 
 **1.3 Estructuras Básicas de Control**
+
 - Condicionales (`if`, `else`, `else if`).
 - Bucles (`for`, `while`, `do-while`).
 - Uso del `switch`.
 
 **1.4 Bucles**
+
 - Introducción a los bucles.
 - Bucle `for`.
 - Bucle `while`.
@@ -63,25 +64,18 @@ Aprender los fundamentos de la programación utilizando JavaScript, con un enfoq
 
 **1.5 Uso Avanzado de Números, Cadenas y Fechas**
 
-### **1.5.1 Clase `Number`**
-- Propiedades: `MAX_VALUE`, `MIN_VALUE`, `NaN`, etc.
-- Métodos: `toFixed()`, `parseInt()`, `parseFloat()`.
+- Clase `Number`
+- Biblioteca `Math`
+- Clase `String`
+- Clase `Date`
+- Ejercicios Prácticos
 
-### **1.5.2 Biblioteca `Math`**
-- Constantes: `PI`, `E`, `LN10`.
-- Métodos: `sqrt()`, `pow()`, `random()`, etc.
+**1.6 Ejercicios Prácticos**
 
-### **1.5.3 Clase `String`**
-- Métodos: `toUpperCase()`, `slice()`, `replace()`, etc.
+- Tenis
+- Fechas de pago
+- Adivinanzas
 
-### **1.5.4 Clase `Date`**
-- Creación de fechas: actual, específica, desde cadena.
-- Métodos: `getFullYear()`, `getMonth()`, `toLocaleDateString()`.
-
-### **1.5.6 Ejercicios**
-- Marcador de tenis simplificado.
-- Fechas de pago.
-- Simulador de intereses compuestos.
 
 ---
 
@@ -89,21 +83,37 @@ Aprender los fundamentos de la programación utilizando JavaScript, con un enfoq
 
 ---
 
-### **Unidad 2: Funciones y Manejo de Errores (20 horas)**
-- **2.1** Funciones en JavaScript (12h)
-       - Declaración y uso de funciones.
-       - Parámetros y valores de retorno.
-       - Funciones anónimas y flecha (`arrow functions`).
-       - Alcance de las variables: local y global.
-- **2.2** Manejo de errores (3h)
-       - Uso de bloques `try`, `catch` y `finally`.
-       - Lanzar errores con `throw`.
-- **2.3** Métodos básicos de entrada/salida (5h)
-       - Uso de `prompt`, `alert`, y `console.log`.
-       - Interacción básica con el usuario.
+# **Unidad 2: Funciones y Manejo de Errores (20 horas)**
 
-**Objetivo:** Modularizar código utilizando funciones, manejar errores y trabajar con entradas/salidas básicas.
+# **Unidad 2: Funciones y Manejo de Errores**
 
+## **2.1 Funciones en JavaScript (12h)**
+- Declaración y uso de funciones.
+- Parámetros y valores de retorno.
+- Funciones anónimas.
+- Funciones como expresiones.
+- Paso de parámetros por valor y por referencia.
+- Alcance de las variables: local y global.
+- Funciones recursivas (introducción).
+- Retorno de funciones.
+- Funciones anónimas autoejecutadas (IIFE).
+- Funciones flecha (`arrow functions`).
+
+## **2.2 Manejo de Errores en JavaScript (3h)**
+- Uso de bloques `try`, `catch` y `finally`.
+- Lanzar errores con `throw`.
+- Tipos de errores comunes en JavaScript (sintaxis, referencia, tipo, etc.).
+- Personalización de mensajes de error.
+
+## **2.3 Asincronía en JavaScript (5h)**
+- Callbacks y su problema (`callback hell`).
+- Promesas (`Promise`).
+- `async/await` y su uso en JavaScript.
+
+        - Redirección de salida en terminal (`>`, `2>`, `2>&1`).
+
+
+**Objetivo:** Modularizar código utilizando funciones, manejar errores. Conocer y aplicar conceptos básicos de asincronía en JavaScript.
 ---
 
 ### **Unidad 3: Arrays, Objetos y Clases (30 horas)**
@@ -166,12 +176,12 @@ Aprender los fundamentos de la programación utilizando JavaScript, con un enfoq
 
 ### **Materiales de apoyo**
 1. **MDN Web Docs (JavaScript):**
-   - [Guía de JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript).
+        - [Guía de JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript).
 2. **FreeCodeCamp:**
-   - [Curso de JavaScript Básico](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/).
+        - [Curso de JavaScript Básico](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/).
 3. **Ejercicios prácticos interactivos:**
-   - [Exercism.io - JavaScript](https://exercism.io/tracks/javascript).
-   - [Codewars](https://www.codewars.com/).
+        - [Exercism.io - JavaScript](https://exercism.io/tracks/javascript).
+        - [Codewars](https://www.codewars.com/).
 
 ---
 

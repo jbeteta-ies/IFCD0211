@@ -20,7 +20,7 @@ Unit: 01 - Configuración del Entorno y Fundamentos de JavaScript
         - Lleva el conteo de juegos ganados, y cuando un jugador llega a 6 juegos, suma un set.
 
     ??? example "Solución del ejercicio"
-        ```javascript linenums=1 title="Marcador de tenis"
+        ```javascript linenums="1" title="Marcador de tenis"
         const prompt = require("prompt-sync")();
 
         const jugador1 = prompt("Nombre del jugador 1: ");
@@ -90,7 +90,7 @@ Unit: 01 - Configuración del Entorno y Fundamentos de JavaScript
     - Muestra las fechas de pago correspondientes.
 
     ??? example "Solución del ejercicio"
-        ```javascript linenums=1 title="Fechas de pago"
+        ```javascript linenums="1" title="Fechas de pago"
         const prompt = require("prompt-sync")();
 
         const importe = parseFloat(prompt("Introduce el importe de la factura: "));
@@ -117,7 +117,7 @@ Unit: 01 - Configuración del Entorno y Fundamentos de JavaScript
         - Finaliza cuando el usuario acierta e indica cuántos intentos realizó.
 
     ??? example "Solución del ejercicio"
-        ```javascript linenums=1 title="Juego de adivinanzas"
+        ```javascript linenums="1" title="Juego de adivinanzas"
         const prompt = require("prompt-sync")();
 
         const numeroSecreto = Math.floor(Math.random() * 100) + 1;

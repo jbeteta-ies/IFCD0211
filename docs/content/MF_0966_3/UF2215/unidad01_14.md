@@ -9,7 +9,7 @@ Unit: 01 - Configuración del Entorno y Fundamentos de JavaScript
 
 # Unidad 1: Configuración del Entorno y Fundamentos de JavaScript
 
-## 1.4. Bucles**
+## **1.4. Bucles**
 
 #### **¿Qué son los bucles?**
 Los bucles son estructuras de control que permiten repetir un bloque de código varias veces. Son especialmente útiles para automatizar tareas repetitivas y evitar escribir múltiples líneas de código de manera manual.
@@ -17,7 +17,7 @@ Los bucles son estructuras de control que permiten repetir un bloque de código 
 ##### **Ejemplo práctico**
 Supongamos que queremos imprimir los números del 1 al 10 en la consola. Sin un bucle, tendríamos que escribir:
 
-```javascript
+```javascript linenums="1"
 console.log(1);
 console.log(2);
 console.log(3);
@@ -26,16 +26,17 @@ console.log(3);
 
 Con un bucle, podemos reducir este código a:
 
-```javascript
+```javascript linenums="1"
 for (let i = 1; i <= 10; i++) {
     console.log(i);
 }
 ```
 
-#### **¿Cuándo utilizar cada tipo de bucle?**
-- **`for`**: Se utiliza cuando sabemos de antemano cuántas iteraciones queremos realizar.
-- **`while`**: Ideal para cuando no sabemos exactamente cuántas veces se repetirá el bloque, pero tenemos una condición que lo determina.
-- **`do-while`**: Similar a `while`, pero asegura que el bloque de código se ejecutará al menos una vez.
+!!! important
+    #### **¿Cuándo utilizar cada tipo de bucle?**
+    - **`for`**: Se utiliza cuando sabemos de antemano cuántas iteraciones queremos realizar.
+    - **`while`**: Ideal para cuando no sabemos exactamente cuántas veces se repetirá el bloque, pero tenemos una condición que lo determina.
+    - **`do-while`**: Similar a `while`, pero asegura que el bloque de código se ejecutará al menos una vez.
 
 ---
 
@@ -202,6 +203,7 @@ do {
 - Crea un programa que calcule y muestre todos los números primos entre 1 y 100.
 
 ```terminal
+1
 2
 3
 5
@@ -210,7 +212,7 @@ do {
 13
 17
 ...
-97
+100
 ```
 
 ??? example "Solución ejercicio 8 con bucle for"
@@ -387,7 +389,7 @@ Los bucles son herramientas muy útiles, pero también pueden generar errores si
 Un bucle infinito ocurre cuando la condición para salir del bucle nunca se cumple, haciendo que el programa se ejecute indefinidamente.
 
 ##### **Ejemplo de bucle infinito con `while`**
-```javascript
+```javascript linenums="1"
 let i = 0;
 while (i < 10) {
     console.log(i);
@@ -395,7 +397,7 @@ while (i < 10) {
 }
 ```
 ##### **Solución**
-```javascript
+```javascript linenums="1"
 let i = 0;
 while (i < 10) {
     console.log(i);
@@ -409,14 +411,14 @@ while (i < 10) {
 Esto ocurre cuando la condición inicial no se cumple, por lo que el bucle no se ejecuta ni una sola vez.
 
 ##### **Ejemplo de bucle que nunca se ejecuta con `for`**
-```javascript
+```javascript linenums="1"
 for (let i = 10; i < 5; i++) {
     console.log(i); // Nunca entra al bucle
 }
 ```
 ##### **Solución**
 Asegúrate de que la condición inicial permita al menos una iteración.
-```javascript
+```javascript linenums="1"
 for (let i = 5; i < 10; i++) {
     console.log(i); // Se ejecutará correctamente
 }
@@ -428,7 +430,7 @@ for (let i = 5; i < 10; i++) {
 Cambiar la variable que controla el bucle puede generar resultados inesperados o bucles infinitos.
 
 ##### **Ejemplo de error al modificar la variable de control**
-```javascript
+```javascript linenums="1"
 for (let i = 0; i < 5; i++) {
     console.log(i);
     i++; // Modificar `i` dentro del bucle genera resultados inesperados
@@ -436,7 +438,7 @@ for (let i = 0; i < 5; i++) {
 ```
 ##### **Solución**
 Deja que el incremento de la variable de control lo maneje el propio bucle.
-```javascript
+```javascript linenums="1"
 for (let i = 0; i < 5; i++) {
     console.log(i); // Incremento manejado automáticamente por el bucle
 }
@@ -448,7 +450,7 @@ for (let i = 0; i < 5; i++) {
 Un error común es escribir mal la condición, lo que puede generar resultados inesperados o bucles infinitos.
 
 ##### **Ejemplo de condición incorrecta**
-```javascript
+```javascript linenums="1"
 let i = 0;
 while (i = 10) { // Error: asignación en lugar de comparación
     console.log(i);
@@ -457,7 +459,7 @@ while (i = 10) { // Error: asignación en lugar de comparación
 ```
 ##### **Solución**
 Usa el operador de comparación `===` o `==` según corresponda.
-```javascript
+```javascript linenums="1"
 let i = 0;
 while (i === 10) {
     console.log(i);
@@ -471,7 +473,7 @@ while (i === 10) {
 Usar `break` o `return` de forma incorrecta puede terminar el bucle antes de lo esperado o generar errores en el flujo del programa.
 
 ##### **Ejemplo de uso incorrecto de `break`**
-```javascript
+```javascript linenums="1"
 for (let i = 0; i < 5; i++) {
     console.log(i);
     if (i === 2) {
@@ -481,7 +483,7 @@ for (let i = 0; i < 5; i++) {
 ```
 ##### **Solución**
 Usa `break` solo cuando sea necesario salir del bucle en condiciones específicas.
-```javascript
+```javascript linenums="1"
 for (let i = 0; i < 5; i++) {
     if (i === 2) {
         continue; // Salta a la siguiente iteración
@@ -496,7 +498,7 @@ for (let i = 0; i < 5; i++) {
 Si no se inicializan correctamente las variables utilizadas en la condición o dentro del bucle, pueden generarse errores o resultados inesperados.
 
 ##### **Ejemplo de variable mal inicializada**
-```javascript
+```javascript linenums="1"
 let suma;
 for (let i = 0; i < 5; i++) {
     suma += i; // Error: `suma` no tiene un valor inicial
@@ -504,7 +506,7 @@ for (let i = 0; i < 5; i++) {
 ```
 ##### **Solución**
 Inicializa las variables antes de usarlas.
-```javascript
+```javascript linenums="1"
 let suma = 0;
 for (let i = 0; i < 5; i++) {
     suma += i;
@@ -522,7 +524,7 @@ Las instrucciones `break` y `continue` pueden ser útiles en ciertas situaciones
 - Sirve para terminar un bucle de forma inmediata, sin importar si la condición del bucle aún es verdadera.
 
 ##### **Ejemplo**
-```javascript
+```javascript linenums="1"
 for (let i = 1; i <= 10; i++) {
     if (i === 5) {
         break; // El bucle termina en 5
@@ -535,7 +537,7 @@ for (let i = 1; i <= 10; i++) {
 - Sirve para saltar a la siguiente iteración del bucle, ignorando el resto del código dentro del mismo.
 
 ##### **Ejemplo**
-```javascript
+```javascript linenums="1"
 for (let i = 1; i <= 10; i++) {
     if (i % 2 === 0) {
         continue; // Ignora números pares
@@ -553,7 +555,7 @@ for (let i = 1; i <= 10; i++) {
 ##### **Alternativa sin `break` y `continue`**
 En lugar de usar `break` o `continue`, se pueden reestructurar las condiciones del bucle:
 
-```javascript
+```javascript linenums="1"
 for (let i = 1; i <= 10; i++) {
     if (i % 2 !== 0) {
         console.log(i); // Solo imprime números impares

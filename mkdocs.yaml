@@ -6,6 +6,8 @@ theme:
     - content.code.copy
 
 markdown_extensions:
+  - toc:
+      toc_depth: 0
   - admonition
   - pymdownx.details
   - pymdownx.tabbed:
@@ -20,19 +22,20 @@ markdown_extensions:
 
 nav:
   - Inicio: index.md
-  - Normativa:
-      - Normativa General: normativa19/IFCD0211.md
-      - MF0966_3: normativa19/MF0966_3.md
-      - MF0967_3: normativa19/MF0967_3.md
-      - MF0968_3: normativa19/MF0968_3.md
-      - MP0459: normativa19/MP0459.md
-      - Unidades de Competencia: normativa19/ucs.md
   - Contenidos:
       - MF0966_3:
-          - UF2213: content/MF_0966_3/UF2213.md
-          - UF2214: content/MF_0966_3/UF2214.md
+          - UF2213: 
+            - Introducción: https://jbeteta-ies.github.io/BBDD/temas/T01/T01_BBDD.html
+            - Modelo Entidad-Relación: https://jbeteta-ies.github.io/BBDD/temas/T02/T02_EER.html
+            - Modelo Relacional: https://jbeteta-ies.github.io/BBDD/temas/T03/T03_MODELO_RELACIONAL.html
+          - UF2214: 
+            - Modelo Físico (I) Introducción: https://jbeteta-ies.github.io/BBDD/temas/T04/BD_T4_SQL_01.html
+            - Modelo Físico (II) Simple SQL: https://jbeteta-ies.github.io/BBDD/temas/T04/BD_T4_SQL_02.html
+            - Modelo Físco (III) SQL Avanzado: https://jbeteta-ies.github.io/BBDD/temas/T04/BD_T4_SQL_03.html
+            - Modelo Físico (IV) Transacciones: https://jbeteta-ies.github.io/BBDD/temas/T04/BD_T4_SQL_04.html
+            - Modelo Físico (V) Procedimientos almacenados: https://jbeteta-ies.github.io/BBDD/temas/T04/BD_T4_SQL_05.html
           - UF2215: 
-            - Introducción: content/MF_0966_3/UF2215.md
+            - Introducción: content/MF_0966_3/UF2215/index.md
             - T01 Fundamentos de JS: 
               - 1.1 Configuración del entorno de desarrollo: content/MF_0966_3/UF2215/unidad01_11.md
               - 1.2 Variables, Tipos de Datos y Operadores: content/MF_0966_3/UF2215/unidad01_12.md

@@ -321,7 +321,7 @@ La consola es una herramienta para interactuar con el sistema operativo y ejecut
    ```
 3. Código de ejemplo:
    ```javascript linenums="1" title="Uso de chalk"
-   const chalk = require('chalk');
+   import chalk from 'chalk';
    console.log(chalk.green("¡Texto en color verde!"));
    ```
 

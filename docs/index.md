@@ -3,22 +3,22 @@
 
 ## Normativa
 
-- [Normativa General](normativa/IFCD0211.md)
+- [Normativa General](normativa19/IFCD0211.md)
 
 Módulos:
 
-- [MF0966_3: Consulta y manipulación de información contenida en gestores de datos](normativa/MF0966_3)
-- [MF0967_3: Creación y gestión de repositorios de contenidos](normativa/MF0967_3)
-- [MF0968_3: Administración de sistemas de gestión de información](normativa/MF0968_3)
-- [MP0459: Prácticas Profesionales No Laborales](normativa/MP0459)
+- [MF0966_3: Consulta y manipulación de información contenida en gestores de datos](normativa19/MF0966_3.md)
+- [MF0967_3: Creación y gestión de repositorios de contenidos](normativa19/MF0967_3.md)
+- [MF0968_3: Administración de sistemas de gestión de información](normativa19/MF0968_3.md)
+- [MP0459: Prácticas Profesionales No Laborales](normativa19/MP0459.md)
 
 Unidades de Competencia:
 
-- [Unidades de Competencia](normativa/ucs)
+- [Unidades de Competencia](normativa19/ucs.md)
 
 ## Estado del arte
 
-### Lenguajes de progrmación
+### Lenguajes de programación
 
 ![Lenguajes de programación](normativa19/img/redmonk-language-rankings-jun-2024.png)
 
@@ -47,16 +47,3 @@ Ahora pensad que la normativa de este curso es de 2013 [BOE-A-2013-9707](https:/
 
 
 
-## Contenidos
-- [MF0966_3](content/MF_0966_3/UF2213)
-    - [UF2213: Modelos de datos](content/MF_0966_3/UF2213/UF2213)
-    - [UF2214: Implementación y uso de una base de datos](content/MF_0966_3/UF2214)
-    - [UF2215: Herramientas de sistemas gestores](content/MF_0966_3/UF2215)
-- [MF0967_3](content/MF_0967_3/UF2216)
-    - [UF2216: Repositorios de contenidos](content/MF_0967_3/UF2216)
-    - [UF2217: Lenguaje XML](content/MF_0967_3/UF2217)
-    - [UF2218: Desarrollo de un gestor de contenidos](content/MF_0967_3/UF2218)
-- [MF0968_3](content/MF_0968_3/UF1643)
-    - [UF1643: Gestión y control de sistemas de información](content/MF_0968_3/UF1643)
-    - [UF1644: Canales de distribución y publicación](content/MF_0968_3/UF1644)
-- [MP0459: Prácticas Profesionales No Laborales](content/MP0459/Practicas)
