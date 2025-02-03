@@ -1079,9 +1079,109 @@
 <h1 id="unidad-2-funciones-y-manejo-de-errores"><strong>Unidad 2: Funciones y Manejo de Errores</strong></h1>
 <h2 id="23-asincronia-en-javascript"><strong>2.3 Asincronía en JavaScript</strong></h2>
 <p>JavaScript es un lenguaje de programación <strong>monohilo</strong>, lo que significa que ejecuta una sola operación a la vez en su hilo principal. Sin embargo, permite manejar tareas <strong>asincrónicas</strong> mediante <strong>callbacks, promesas y <code>async/await</code></strong>, evitando bloqueos en la ejecución del código.</p>
+<h3 id="231-concurrencia-y-paralelismo-en-javascript"><strong>2.3.1 Concurrencia y Paralelismo en JavaScript</strong></h3>
+<p>En programación, <strong>concurrencia</strong> y <strong>paralelismo</strong> son dos conceptos clave cuando se trabaja con tareas asíncronas:</p>
+<ul>
+<li><strong>Concurrencia</strong>: Es la capacidad de manejar múltiples tareas a la vez, pero no necesariamente ejecutándolas simultáneamente.</li>
+<li><strong>Paralelismo</strong>: Implica la ejecución de múltiples tareas al mismo tiempo en diferentes hilos o núcleos de procesamiento.</li>
+</ul>
+<p>Nótese la diferencia: que varias tareas <strong>progresen</strong> simultáneamente no tiene porque significar que sucedan al mismo tiempo. Mientras que la concurrencia aborda un problema más general, el paralelismo es un sub-caso de la concurrencia donde las cosas suceden exactamente al mismo tiempo.</p>
+<p>Mucha gente aún sigue creyendo que la concurrencia implica necesariamente más de un <em>thread</em>. <strong>Esto no es cierto</strong>. El entrelazado (o multiplexado), por ejemplo, es un mecanismo común para implementar concurrencia en escenarios donde los recursos son limitados. Piensa en cualquier sistema operativo moderno haciendo multitarea con un único <em>core</em>. Simplemente trocea las tareas en tareas más pequeñas y las entrelaza, de modo que cada una de ellas se ejecutará durante un breve instante. Sin embargo, a largo plazo, la impresión es que todas progresan a la vez.</p>
+<p>JavaScript utiliza un <strong>modelo basado en eventos</strong> con un <strong>bucle de eventos (Event Loop)</strong> para manejar la concurrencia, en lugar de múltiples hilos de ejecución como otros lenguajes.</p>
+<p><img alt="Concurrencia y paralelismo" src="../img/sync01.png" /></p>
+<ul>
+<li><strong>Escenario 1</strong>: no es ni concurrente ni paralelo. Es simplemente una ejecución secuencial, primero una tarea, después la siguiente.</li>
+<li><strong>Escenario 2</strong>, <strong>3</strong> y <strong>4</strong>: son escenarios donde se ilustra la concurrencia bajo distintas técnicas:
+         1.  <strong>Escenario 3</strong>: muestra como la concurrencia puede conseguirse con un único <em>thread</em>. Pequeñas porciones de cada tarea se entrelazan para que ambas mantengan un progreso constante. Esto es posible siempre y cuando las tareas puedan descompuestas en subtareas mas simples.
+         2.  <strong>Escenario 2</strong> y <strong>4</strong>: ilustran paralelismo, utilizando multiples <em>threads</em> donde las tareas o subtareas corren en paralelo exactamente al mismo tiempo. A nivel de <em>thread</em>, el escenario <strong>2</strong> es secuencial, mientras que <strong>4</strong> aplica entrelazado.</li>
+</ul>
 <hr />
-<h3 id="231-callbacks"><strong>2.3.1 Callbacks</strong></h3>
-<p>Un <strong>callback</strong> es una función que se pasa como argumento a otra función y se ejecuta después de que dicha función haya terminado su ejecución. Se usan para manejar operaciones asincrónicas como la lectura de archivos, consultas a bases de datos o peticiones HTTP.</p>
+<h3 id="naturaleza-de-io-bloqueante-vs-no-bloqueante"><strong>Naturaleza de I/O Bloqueante vs No Bloqueante</strong></h3>
+<p>Cuando un programa interactúa con operaciones de entrada/salida (I/O), puede hacerlo de dos maneras:</p>
+<ul>
+<li><strong>I/O Bloqueante</strong>: La ejecución del programa se detiene hasta que la operación de I/O finaliza.</li>
+<li><strong>I/O No Bloqueante</strong>: Permite que el programa siga ejecutando otras tareas mientras la operación de I/O se completa en segundo plano.</li>
+</ul>
+<p>JavaScript implementa <strong>I/O no bloqueante</strong>, lo que significa que puede manejar múltiples operaciones asíncronas sin detener la ejecución del programa.</p>
+<p><img alt="I/O Bloqueante vs No Bloqueante" src="../img/sync02.png" /></p>
+<p>Síncrono vs Asíncrono se refiere a cuando tendrá lugar la respuesta:</p>
+<ul>
+<li><strong>Síncrono</strong>: es frecuente emplear 'bloqueante' y 'síncrono' como sinónimos, dando a entender que toda la operación de entrada/salida se ejecuta de forma secuencial y, por tanto, debemos esperar a que se complete para procesar el resultado.</li>
+<li><strong>Asíncrono</strong>: la finalización de la operación <em>I/O</em> se señaliza más tarde, mediante un mecanismo específico como por ejemplo un <em>callback</em>, una promesa o un evento (se explicarán después), lo que hace posible que la respuesta sea procesada en diferido. Como se puede adivinar, su comportamiento es no bloqueante ya que la llamda <em>I/O</em> devuelve inmediatamente.</li>
+</ul>
+<p><img alt="Síncrono vs Asíncrono" src="../img/sync03.png" /></p>
+<p>Según la clasificación anterior, podemos tener operaciones <em>I/O</em> de tipo:</p>
+<ul>
+<li>Síncronas y Bloqueantes. Toda la operación se hace de una vez, bloqueando el flujo de ejecución:
+         1.  El <em>thread</em> es bloqueado mientras espera.
+         2.  La respuesta se procesa inmediatamente después de terminar la operación.</li>
+<li>Síncronas y No-Bloqueantes. Similar a la anterior pero usando alguna técnica de <em>polling</em> para evitar el bloqueo en la primera fase:
+         1.  La llamada devuelve inmediatamente, el <em>thread</em> no se bloquea. Se necesitarán sucesivos intentos hasta completar la operación.
+         2.  La respuesta se procesa inmediatamente después de terminar la operación.</li>
+<li>Asíncronas y No-Bloqueantes:
+         1.  La petición devuelve inmediatamente para evitar el bloqueo.
+         2.  Se envía una notificación una vez que la operación se ha completado. Es entonces cuando la función que procesará la respuesta (<em>callback</em>) se encola para ser ejecutada en algún momento en nuestra aplicación.</li>
+</ul>
+<hr />
+<h3 id="el-modelo-de-javascript-event-loop-y-paralelismo"><strong>El Modelo de JavaScript: Event Loop y Paralelismo</strong></h3>
+<p>JavaScript usa un <strong>bucle de eventos (Event Loop)</strong> para gestionar la ejecución de código asíncrono.</p>
+<p>Gracias a esta solución, Javascript es áltamente concurrente a pesar de emplear un único <em>thread</em>. Ya conocemos el significado de <em>asíncrono</em> y <em>no bloqueante</em>, pero ¿qué es el <em>loop</em> de eventos? Este mecanismo será explicado en el siguiente capítulo. Antes, a modo de repaso, veamos el aspecto de una operación <em>I/O</em> asíncrona en Javascript:</p>
+<p>Modelo: 
+<img alt="Modelo de JavaScript" src="../img/modelo01.png" /></p>
+<p>Paso a paso:</p>
+<p><img alt="Modelo de JavaScript paso 1" src="../img/modelo02.png" />
+<img alt="Modelo de JavaScript paso 2" src="../img/modelo03.png" />
+<img alt="Modelo de JavaScript paso 3" src="../img/modelo04.png" />
+<img alt="Modelo de JavaScript paso 4" src="../img/modelo05.png" /></p>
+<h4 id="el-loop-de-eventos">El loop de eventos</h4>
+<ol>
+<li><strong>Heap</strong>: Donde se almacenan los objetos y datos.</li>
+<li><strong>Call Stack (Pila de llamadas)</strong>: Donde se ejecuta el código de forma secuencial.</li>
+<li><strong>Web APIs (para código asíncrono)</strong>: Maneja operaciones como <code>setTimeout()</code>, eventos de usuario, o peticiones HTTP.</li>
+<li><strong>Task Queue (Cola de tareas)</strong>: Donde se encolan las funciones de callback hasta que el <code>Call Stack</code> esté libre.</li>
+<li><strong>Event Loop</strong>: Coordina el flujo de ejecución y mueve las tareas desde la <code>Task Queue</code> al <code>Call Stack</code> cuando este último está vacío.</li>
+</ol>
+<p><img alt="Event Loop" src="../img/event_loop_tick_animated_es.gif" /></p>
+<p>De esta forma, podemos entender <strong>la cola como el almacén de los mensajes (notificaciones) y sus <em>callbacks</em> asociados</strong> mientras que <strong>el <em>loop </em>de eventos es el mecanismo para despacharlos</strong>. Este mecanismo sigue un comportamiento síncrono: cada mensaje debe ser procesado de forma completa para que pueda comenzar el siguiente.</p>
+<p>Una de las implicaciones más relevantes de este bucle de eventos es que <strong>los <em>callbacks</em> no serán despachados tan pronto como sean encolados</strong>, sino que deben esperar su turno. Este tiempo de espera dependerá del numero de mensajes pendientes de procesar (por delante en la cola) así como del tiempo que se tardará en cada uno de ellos. Aunque pueda parecer obvio, esto explica la razón por la cual la finalización de una operación asíncrona no puede predecirse con seguridad, sino que se atiende en modo <em>best effort</em>.</p>
+<p>El <em>loop</em> de eventos no está libre de problemas, y podrían darse situaciones comprometidas en los siguientes casos:</p>
+<ul>
+<li>La pila de llamadas no se vacía ya que nuestra aplicación hace uso intensivo de ella. No habrá <em>tick</em> en el bucle de eventos y por tanto los mensajes no se procesan.</li>
+<li>El flujo de mensajes que se van encolando es mayor que el de mensajes procesados. Demasiados eventos a la vez.</li>
+<li>Un <em>callback</em> requiere procesamiento intensivo y acapara la pila. De nuevo bloqueamos los <em>ticks</em> del bucle de eventos y el resto de mensajes no se despachan.</li>
+</ul>
+<p>Lo más probable es que un cuello de botella se produzca como consecuencia de una mezcla de factores. En cualquier caso, acabarían <strong>retrasando el flujo de ejecución</strong>. Y por tanto retrasando el renderizado, el procesado de eventos, etc. La experiencia de usuario se degradaría y la aplicación dejaría de responder de forma fluida. Para evitar esta situación, recuerda siempre <strong>mantener los <em>callbacks</em> lo más ligeros posible</strong>. En general, evita código que acapare la CPU y permite que el <em>loop</em> de eventos se ejecute a buen ritmo.</p>
+<details class="example">
+<summary>Ejemplo de cómo funciona el Event Loop</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo del Event Loop</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Inicio&quot;</span><span class="p">);</span>
+
+<span class="nx">setTimeout</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Mensaje dentro de setTimeout&quot;</span><span class="p">);</span>
+<span class="p">},</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Fin&quot;</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p><strong>Salida esperada:</strong>
+<div class="highlight"><pre><span></span><code>Inicio
+Fin
+Mensaje dentro de setTimeout
+</code></pre></div></p>
+<p>Incluso con un tiempo de espera de <code>0</code>, la función en <code>setTimeout</code> se ejecuta después porque se encola en la <code>Task Queue</code> y solo se ejecuta cuando el <code>Call Stack</code> está vacío.</p>
+<h3 id="nota-sobre-paralelismo-en-javascript"><strong>Nota sobre Paralelismo en JavaScript</strong></h3>
+<p>Aunque JavaScript es monohilo, puede ejecutar tareas en paralelo a través de <strong>Web Workers</strong> o <strong>módulos como <code>Worker Threads</code> en Node.js</strong>, lo que permite aprovechar múltiples núcleos de CPU.</p>
+<p>Esto no es lo mismo que el <strong>Event Loop</strong>, ya que los <strong>Web Workers</strong> ejecutan código en hilos separados sin acceso al <code>Call Stack</code> principal.</p>
+<hr />
+<h3 id="232-callbacks"><strong>2.3.2 Callbacks</strong></h3>
+<p>Los <em>callbacks</em> son la pieza clave para que Javascript pueda funcionar de forma asíncrona. De hecho, el resto de patrones asíncronos en Javascript está basado en <em>callbacks</em> de un modo u otro, simplemente añaden azúcar sintáctico para trabajar con ellos más cómodamente.</p>
+<p>Un <em>callback</em> no es más que <strong>una función que se pasa como argumento de otra función</strong>, y que será invocada para completar algún tipo de acción. En nuestro contexto asíncrono, un <em>callback</em> representa el '<em>¿Qué quieres hacer una vez que tu operación asíncrona termine?</em>'. Por tanto, es el trozo de código que será ejecutado una vez que una operación asíncrona notifique que ha terminado. Esta ejecución se hará en algún momento futuro, gracias al mecanismo que implementa el bucle de eventos.</p>
+<p>Fíjate en el siguiente ejemplo sencillo utilizando un callback:</p>
 <details class="example">
 <summary>Ejemplo de callback</summary>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Uso de un callback</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -1176,14 +1276,40 @@
 </details>
 <p>Para evitar este problema, se introdujeron las <strong>Promesas</strong>.</p>
 <hr />
-<h3 id="232-promesas-en-javascript"><strong>2.3.2 Promesas en JavaScript</strong></h3>
+<h3 id="233-promesas-en-javascript"><strong>2.3.3 Promesas en JavaScript</strong></h3>
+<p>Una promesa es un objeto que representa <strong>el resultado de una operación asíncrona</strong>. Este resultado podría estar disponible <strong>ahora</strong> o en el <strong>futuro</strong>. Las promesas se basan en <em><strong>callbacks</strong> </em>pero añaden azúcar para un mejor manejo y sintaxis. Las promesas son especiales en términos de asincronía ya que añaden un nuevo nivel de prioridad que estudiaremos a continuación.</p>
+<p>Cuando llamamos a una función asíncrona implementada con este patrón, nos devolverá inmediatamente una promesa como garantía de que la operación asíncrona finalizará en algún momento, ya sea con éxito o con fallo. Una vez que tengamos el objeto promesa en nuestro poder, registramos un par de <em>callbacks</em>: uno para indicarle a la promesa '<em>que debe hacer en caso de que todo vaya bien</em>' (resolución de la promesa o <em>resolve</em>) y otro para determinar '<em>que hacer en caso de fallo</em>' (rechazo de la promesa o <em>reject</em>).</p>
+<p>A resumidas cuentas, una promesa es un objeto al que le <strong>adjuntamos <em>callbacks</em>, en lugar de pasarlos directamente a la función asíncrona</strong>. La forma en que registramos esos dos <em>callbacks</em> es mediante el método <em>.then(resolveCallback, rejectCallback)</em>. En terminología de promesas, decimos que una promesa se resuelve con éxito (<em>resolved</em>) o se rechaza con fallo (<em>rejected</em>). Echa un vistazo al siguiente ejemplo:</p>
 <p>Una <strong>promesa</strong> es un objeto que representa un valor que puede estar disponible <strong>ahora, en el futuro o nunca</strong>. Las promesas tienen tres estados:</p>
 <ul>
 <li><strong>Pendiente (<code>pending</code>)</strong>: La operación aún no ha finalizado.</li>
 <li><strong>Resuelta (<code>fulfilled</code>)</strong>: La operación se completó con éxito.</li>
 <li><strong>Rechazada (<code>rejected</code>)</strong>: Ocurrió un error.</li>
 </ul>
-<details class="example">
+<details class="example" open="open">
+<summary>Sintaxis de la promesa</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Sintaxis de una Promesa</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">currentURL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">URL</span><span class="p">.</span><span class="nx">toString</span><span class="p">();</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">promise</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="nx">currentURL</span><span class="p">);</span>
+
+<span class="nx">promise</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">),</span><span class="w"> </span><span class="nx">e</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Error capturado:  </span><span class="si">${</span><span class="nx">e</span><span class="si">}</span><span class="sb">`</span><span class="p">));</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p>Es más legible de esta manera:</p>
+<details class="example" open="open">
+<summary>Sintaxis de la promesa más legible</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Sintaxis de una Promesa</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">fetch</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">URL</span><span class="p">.</span><span class="nx">toString</span><span class="p">())</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">),</span>
+<span class="w">        </span><span class="nx">e</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Error capturado:  </span><span class="si">${</span><span class="nx">e</span><span class="si">}</span><span class="sb">`</span><span class="p">));</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p>En el ejemplo anterior, pedimos al servidor que nos provea una URL utilizando la función asíncrona fetch y nos devuelve una promesa. Configuramos la promesa con dos callbacks: uno para resolver la promesa, que mostrará la página por consola en caso de éxito, y otro para rechazarla en caso de fallo que mostrará el error asociado.</p>
+<p><strong>Creando una Promesa</strong></p>
+<details class="example" open="open">
 <summary>Ejemplo de Promesa</summary>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Uso de Promesas</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -1219,12 +1345,41 @@
 </code></pre></div></td></tr></table></div>
 </details>
 <hr />
-<h3 id="233-asyncawait-manejo-de-codigo-asincrono-de-forma-mas-clara"><strong>2.3.3 <code>async/await</code>: Manejo de Código Asíncrono de Forma Más Clara</strong></h3>
+<h3 id="234-asyncawait-manejo-de-codigo-asincrono-de-forma-mas-clara"><strong>2.3.4 <code>async/await</code>: Manejo de Código Asíncrono de Forma Más Clara</strong></h3>
+<p>Las promesas supusieron un gran salto en Javascript al introducir una mejora sustancial sobre los <em>callbacks</em> y un manejo más elegante de nuestras tareas asíncronas. Sin embargo, también pueden llegar a ser tediosas y verbosas a medida que se requieren más y más <em>.then()</em>. <strong>Las palabras clave <em>async </em>y <em>await </em>surgieron para simplificar el manejo de las promesas</strong>. Son puro azúcar para hacer las promesas más amigables, escribir código más sencillo, reducir el anidamiento y mejorar la trazabilidad al depurar. Pero recuerda, <em>async </em>\ <em>await </em>y las promesas son lo mismo en el fondo.</p>
+<p>La etiqueta <em>async</em> declara una función como asíncrona e indica que una promesa será automáticamente devuelta. Podemos declarar como <em>async </em>tanto funciones con nombre, anónimas, o funciones flecha. Por otro lado, <em>await </em>debe ser usado siempre dentro de una función declarada como <em>async </em>y esperará automáticamente (de forma asíncrona y no bloqueante) a que una promesa se resuelva.</p>
 <p><code>async/await</code> es una forma más sencilla y clara de manejar operaciones asincrónicas sin caer en la anidación de callbacks o el uso complejo de <code>.then()</code> y <code>.catch()</code>.</p>
 <p>Para usarlo:
 - Se define una función con la palabra clave <code>async</code>.
 - Se usa <code>await</code> para esperar el resultado de una promesa.</p>
-<details class="example">
+<details class="example" open="open">
+<summary>Sintaxis de <code>async/await</code> AJAX</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Uso de async/await</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">checkServerWithSugar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">url</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="sb">`Estado del servidor: </span><span class="si">${</span><span class="nx">response</span><span class="p">.</span><span class="nx">status</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">200</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s2">&quot;OK&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;NOT OK&quot;</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="sb">`Manejo intero del error. Error original: </span><span class="si">${</span><span class="nx">e</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">checkServerWithSugar</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">URL</span><span class="p">.</span><span class="nx">toString</span><span class="p">())</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">))</span>
+<span class="w">    </span><span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">e</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Error Capturado Fuera de la función async: </span><span class="si">${</span><span class="nx">e</span><span class="si">}</span><span class="sb">`</span><span class="p">));</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="example" open="open">
 <summary>Ejemplo con <code>async/await</code></summary>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Uso de async/await</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
