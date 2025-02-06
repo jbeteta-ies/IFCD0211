@@ -1421,14 +1421,18 @@ rm<span class="w"> </span>archivo.js
 <ol>
 <li>Investiga cómo instalar un paquete de npm.</li>
 <li>Instala <code>chalk</code> y úsalo para cambiar el color del texto en la consola:
-   <div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>chalk
+   <div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>chalk@4
 </code></pre></div></li>
 <li>Código de ejemplo:
    <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Uso de chalk</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="nx">chalk</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;chalk&#39;</span><span class="p">;</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">chalk</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;chalk&#39;</span><span class="p">);</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">chalk</span><span class="p">.</span><span class="nx">green</span><span class="p">(</span><span class="s2">&quot;¡Texto en color verde!&quot;</span><span class="p">));</span>
 </code></pre></div></td></tr></table></div></li>
 </ol>
+<div class="admonition important">
+<p class="admonition-title">Version de <code>chalk</code></p>
+<p>Asegúrate de instalar la versión 4 de <code>chalk</code> para evitar problemas de compatibilidad.</p>
+</div>
 <hr />
 <h3 id="evaluacion"><strong>Evaluación</strong></h3>
 <p>Los estudiantes pueden:</p>
