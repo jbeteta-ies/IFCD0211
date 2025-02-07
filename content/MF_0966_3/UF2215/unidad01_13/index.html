@@ -1865,7 +1865,7 @@
 <th>!(A &amp;&amp; B)</th>
 <th>!A</th>
 <th>!B</th>
-<th>!A <code>\|\|</code> !B</th>
+<th>!A &#124;&#124; !B</th>
 </tr>
 </thead>
 <tbody>
@@ -1910,12 +1910,57 @@
 <ul>
 <li>Segunda Ley (<code>!(A || B) ≡ !A &amp;&amp; !B</code>)</li>
 </ul>
-<p>| A     | B     | A || B | !(A <code>\|\|</code> B) | !A    | !B    | !A &amp;&amp; !B |
-|-------|-------|--------|-----------|-------|-------|----------|
-| true  | true  | true   | false     | false | false | false    |
-| true  | false | true   | false     | false | true  | false    |
-| false | true  | true   | false     | true  | false | false    |
-| false | false | false  | true      | true  | true  | true     |</p>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>A &#124;&#124; B</th>
+<th>!(A &#124;&#124; B)</th>
+<th>!A</th>
+<th>!B</th>
+<th>!A &amp;&amp; !B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>true</td>
+<td>true</td>
+<td>true</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+</tr>
+<tr>
+<td>true</td>
+<td>false</td>
+<td>true</td>
+<td>false</td>
+<td>false</td>
+<td>true</td>
+<td>false</td>
+</tr>
+<tr>
+<td>false</td>
+<td>true</td>
+<td>true</td>
+<td>false</td>
+<td>true</td>
+<td>false</td>
+<td>false</td>
+</tr>
+<tr>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+<td>true</td>
+<td>true</td>
+<td>true</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <p><strong>Ejemplos prácticos</strong></p>
 <ul>
