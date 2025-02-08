@@ -1105,21 +1105,31 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">2</span><span class="p">);</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">3</span><span class="p">);</span>
-<span class="c1">// ... y así hasta 10</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">4</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">5</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">6</span><span class="p">);</span>
+<span class="p">...</span>
+<span class="p">...</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">100</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p>Con un bucle, podemos reducir este código a:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">100</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <div class="admonition important">
-<p class="admonition-title">Important</p>
-<h4 id="cuando-utilizar-cada-tipo-de-bucle"><strong>¿Cuándo utilizar cada tipo de bucle?</strong></h4>
+<p class="admonition-title">Tipos de bucles en JavaScript</p>
+<h4 id="tipos-de-bucles-en-js-y-cuando-utilizarlos"><strong>Tipos de bucles en JS y cuándo utilizarlos</strong></h4>
 <ul>
 <li><strong><code>for</code></strong>: Se utiliza cuando sabemos de antemano cuántas iteraciones queremos realizar.</li>
 <li><strong><code>while</code></strong>: Ideal para cuando no sabemos exactamente cuántas veces se repetirá el bloque, pero tenemos una condición que lo determina.</li>
@@ -1129,28 +1139,30 @@
 <hr />
 <h3 id="bucle-for"><strong>Bucle For</strong></h3>
 <h4 id="que-es-un-bucle-for"><strong>¿Qué es un bucle for?</strong></h4>
-<p>El bucle <code>for</code> se utiliza para repetir un bloque de código un número específico de veces. Consiste en tres partes:</p>
+<p>El bucle <code>for</code> se utiliza para repetir un bloque de código un número específico de veces. Consiste en tres partes: <code>for (inicialización; condición; actualización) {bloque de instrucciones;}</code>.</p>
 <ol>
-<li><strong>Inicialización</strong>: Se define la variable de control que se usará para contar las iteraciones. Esto se realiza solo una vez al inicio del bucle.</li>
 <li>
-<p>Ejemplo: <code>let i = 1;</code> establece que el contador comienza en 1.</p>
+<p><strong>Inicialización</strong>: Se define la variable de control que se usará para contar las iteraciones. Esto se realiza solo una vez al inicio del bucle.
+         - Ejemplo: <code>let i = 1;</code> establece que el contador comienza en 1.</p>
 </li>
 <li>
 <p><strong>Condición</strong>: Es la expresión lógica que se evalúa antes de cada iteración. Mientras sea <code>true</code>, el bucle continuará ejecutándose.</p>
-</li>
-<li>
-<p>Ejemplo: <code>i &lt;= 5</code> asegura que el bucle se detendrá cuando <code>i</code> sea mayor a 5.</p>
+<ul>
+<li>Ejemplo: <code>i &lt;= 5</code> asegura que el bucle se detendrá cuando <code>i</code> sea mayor a 5.</li>
+</ul>
 </li>
 <li>
 <p><strong>Actualización</strong>: Es la operación que modifica la variable de control al final de cada iteración. Generalmente, se incrementa o decrementa.</p>
-</li>
+<ul>
 <li>Ejemplo: <code>i++</code> incrementa el valor de <code>i</code> en 1 después de cada iteración.</li>
+</ul>
+</li>
 </ol>
 <h4 id="sintaxis-de-for"><strong>Sintaxis de for</strong></h4>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Sintaxis de For</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="nx">inicialización</span><span class="p">;</span><span class="w"> </span><span class="nx">condición</span><span class="p">;</span><span class="w"> </span><span class="nx">actualización</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Código a ejecutar en cada iteración</span>
+<span class="w">    </span><span class="c1">// blque de óódigo a ejecutar en cada iteración</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="ejemplo"><strong>Ejemplo</strong></h4>
