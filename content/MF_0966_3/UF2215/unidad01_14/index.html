@@ -1697,12 +1697,63 @@ console.log("Número de vocales:", contador);</p>
 </details>
 </div>
 <h4 id="bucles-anidados"><strong>bucles anidados</strong></h4>
+<p>Los bucles anidados son bucles que se encuentran dentro de otros bucles. Son útiles para realizar tareas más complejas que requieren múltiples iteraciones. 
+Sintaxis de un bucle <code>for</code> anidado:</p>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bucle For Anidado</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span><span class="w"> </span><span class="nx">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="nx">j</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+Este tipo de bucles se utilizan comúnmente para recorrer matrices, tablas, realizar cálculos matriciales, entre otros.</p>
+<p>Sistaxis de un bucle <code>while</code> anidado:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bucle While Anidado</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="nx">j</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">j</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Este tipo de bucles se utilizan comúnmente cuando no se conoce el número exacto de iteraciones y se necesita una condición de salida más compleja.</p>
+<p>También podemos encontrar bucles anidados mixtos como un bucle <code>for</code> dentro de un bucle <code>do-while</code> o viceversa.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bucle Mixto Anidado</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span><span class="w"> </span><span class="nx">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="nx">j</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition info">
+<p class="admonition-title">Nota</p>
+<p>Es importante tener en cuenta que los bucles anidados pueden aumentar la complejidad del código y hacerlo más difícil de entender. Por lo tanto, es recomendable utilizarlos con moderación y asegurarse de que sean necesarios para la tarea en cuestión.</p>
+</div>
 <div class="admonition question">
 <p class="admonition-title">Ejercicio 8: Números primos</p>
-</div>
 <ul>
-<li>
-<p>Crea un programa que calcule y muestre todos los números primos entre 1 y 100.</p>
+<li>Crea un programa que calcule y muestre todos los números primos entre 1 y 100.</li>
+</ul>
 <div class="highlight"><pre><span></span><code>1
 2
 3
@@ -1770,8 +1821,7 @@ console.log("Número de vocales:", contador);</p>
 <span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">num</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">100</span><span class="p">);</span>
 </code></pre></div>
 </details>
-</li>
-</ul>
+</div>
 <hr />
 <div class="admonition question">
 <p class="admonition-title">Ejercicio 9, triángulo rectángulo</p>
@@ -2109,7 +2159,7 @@ console.log("Número de vocales:", contador);</p>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="ejercicios-de-bucles_1">Ejercicios de Bucles</h3>
+<h3 id="ejercicios-de-bucles-en-este-caso-debes-determinar-que-tipo-de-bucle-es-el-mas-adecuado-para-cada-ejercicio">Ejercicios de Bucles, en este caso debes determinar qué tipo de bucle es el más adecuado para cada ejercicio.</h3>
 <h4 id="ejercicio-1-pin-de-seguridad"><strong>Ejercicio 1: PIN de seguridad</strong></h4>
 <ul>
 <li>Crea un programa que solicite al usuario un PIN de seguridad de 4 dígitos. Si el PIN ingresado no es correcto, el programa debe mostrar un mensaje de error y permitir al usuario intentarlo nuevamente. El programa debe finalizar cuando el PIN ingresado sea correcto. O si el usuario ha intentado 3 veces. </li>
