@@ -1302,6 +1302,10 @@
 <p>Las funciones expresadas se usan cuando queremos definir una función y almacenarla en una variable para luego ejecutarla en un momento determinado.</p>
 <h3 id="215-paso-de-parametros-por-valor-y-por-referencia"><strong>2.1.5 Paso de Parámetros por Valor y por Referencia</strong></h3>
 <p>En JavaScript, los <strong>tipos primitivos</strong> (números, cadenas, booleanos) se pasan por <strong>valor</strong>, mientras que los <strong>objetos</strong> y <strong>arrays</strong> se pasan por <strong>referencia</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Nota</p>
+<p>Pasar por valor significa que se crea una copia del valor original, mientras que pasar por referencia significa que se comparte la misma referencia en memoria. En los casos de los tipos primitivos, cualquier cambio dentro de la función no afectará a la variable original. Por tanto el paso es por valor.</p>
+</div>
 <div class="admonition example">
 <p class="admonition-title">Ejemplo de paso por valor</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Paso por valor</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -1320,6 +1324,10 @@
 <span class="nx">cambiarValor</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Fuera de la función:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">x</span><span class="p">);</span><span class="w"> </span><span class="c1">// x sigue siendo 10</span>
 </code></pre></div></td></tr></table></div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Nota</p>
+<p>En el caso de los objetos y arrays, si modificamos el objeto dentro de la función, los cambios se reflejarán fuera de la función. Por tanto en este caso se pasa siempre por referencia.</p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Ejemplo de paso por referencia</p>
