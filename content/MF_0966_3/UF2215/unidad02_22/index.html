@@ -1199,8 +1199,8 @@
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Cuando el código dentro de <code>try</code> genera un error, la ejecución se <strong>detiene</strong> y se pasa automáticamente al bloque <code>catch</code>, donde podemos manejar el error.</p>
-<details class="example">
-<summary>Ejemplo básico de <code>try...catch</code></summary>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo básico de <code>try...catch</code></p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Captura de error con try...catch</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1213,12 +1213,12 @@
 <span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Se ha producido un error:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-</details>
+</div>
 <hr />
 <h3 id="222-uso-del-bloque-finally"><strong>2.2.2 Uso del Bloque <code>finally</code></strong></h3>
 <p>El bloque <code>finally</code> se ejecuta <strong>siempre</strong>, independientemente de si hubo o no un error.</p>
-<details class="example">
-<summary>Ejemplo con <code>finally</code></summary>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo con <code>finally</code></p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Uso de try...catch...finally</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1235,12 +1235,12 @@
 <span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Este mensaje siempre se mostrará.&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-</details>
+</div>
 <hr />
 <h3 id="223-lanzar-errores-con-throw"><strong>2.2.3 Lanzar Errores con <code>throw</code></strong></h3>
 <p>Podemos <strong>generar errores manualmente</strong> usando <code>throw</code>. Esto es útil cuando queremos validar datos y detener la ejecución si no son correctos.</p>
-<details class="example">
-<summary>Ejemplo con <code>throw</code></summary>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo con <code>throw</code></p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Lanzamiento de errores con throw</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1265,7 +1265,7 @@
 <span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Error detectado:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-</details>
+</div>
 <h3 id="223-tipos-de-errores-comunes-en-javascript"><strong>2.2.3 Tipos de Errores Comunes en JavaScript</strong></h3>
 <p>JavaScript tiene varios tipos de errores que pueden ocurrir durante la ejecución de un programa. Algunos de los errores más comunes son:</p>
 <ul>
@@ -1275,8 +1275,8 @@
 <li><strong><code>RangeError</code></strong>: Se produce cuando un valor numérico está fuera del rango permitido.</li>
 <li><strong><code>EvalError</code></strong>: Relacionado con el uso incorrecto de <code>eval()</code> (aunque es poco común en código moderno).</li>
 </ul>
-<details class="example">
-<summary>Ejemplo de errores comunes</summary>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de errores comunes</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Errores comunes en JavaScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1311,12 +1311,12 @@
 <span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;TypeError detectado:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-</details>
+</div>
 <hr />
 <h3 id="224-personalizacion-de-mensajes-de-error"><strong>2.2.4 Personalización de Mensajes de Error</strong></h3>
 <p>Podemos personalizar los errores en JavaScript lanzando mensajes descriptivos mediante <code>throw</code>. Esto es útil cuando queremos manejar errores específicos en nuestro código.</p>
-<details class="example">
-<summary>Ejemplo de personalización de errores</summary>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de personalización de errores</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Lanzar errores personalizados</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1343,7 +1343,7 @@
 <span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Error personalizado:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-</details>
+</div>
 <p>Los mensajes de error personalizados permiten que el código sea más claro y fácil de depurar.</p>
 <hr />
 <hr />
