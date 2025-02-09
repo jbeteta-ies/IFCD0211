@@ -1203,8 +1203,8 @@
 </details>
 <h3 id="211-declaracion-y-uso-de-funciones"><strong>2.1.1 Declaración y Uso de Funciones</strong></h3>
 <p>Las funciones en JavaScript se pueden declarar utilizando la palabra clave <code>function</code>. Estas permiten organizar el código en bloques reutilizables.</p>
-<details class="example">
-<summary>Ejemplo de función simple</summary>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de función simple</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Función que muestra un mensaje</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1215,10 +1215,10 @@
 
 <span class="nx">saludar</span><span class="p">();</span><span class="w"> </span><span class="c1">// Llamada a la función</span>
 </code></pre></div></td></tr></table></div>
-</details>
+</div>
 <p>Las funciones pueden aceptar parámetros para hacerlas más dinámicas:</p>
-<details class="example">
-<summary>Ejemplo con parámetros</summary>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo con parámetros</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Función con parámetros</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1231,12 +1231,12 @@
 <span class="nx">saludar</span><span class="p">(</span><span class="s2">&quot;Carlos&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Salida: Hola, Carlos!</span>
 <span class="nx">saludar</span><span class="p">(</span><span class="s2">&quot;María&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Salida: Hola, María!</span>
 </code></pre></div></td></tr></table></div>
-</details>
+</div>
 <hr />
 <h3 id="212-parametros-y-valores-de-retorno"><strong>2.1.2 Parámetros y Valores de Retorno</strong></h3>
 <p>Las funciones pueden devolver valores utilizando la palabra clave <code>return</code>. Esto permite que el resultado de una función pueda ser utilizado posteriormente en el programa.</p>
-<details class="example">
-<summary>Ejemplo con valor de retorno</summary>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo con valor de retorno</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Función que retorna un valor</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1249,10 +1249,10 @@
 <span class="kd">let</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">sumar</span><span class="p">(</span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">);</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;La suma es:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">resultado</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
-</details>
+</div>
 <p>Si una función no tiene <code>return</code>, devuelve <code>undefined</code> de forma implícita.</p>
-<details class="example">
-<summary>Ejemplo de función sin retorno</summary>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de función sin retorno</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Función sin return</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1265,12 +1265,12 @@
 <span class="kd">let</span><span class="w"> </span><span class="nx">mensaje</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">mostrarMensaje</span><span class="p">();</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">mensaje</span><span class="p">);</span><span class="w"> </span><span class="c1">// undefined</span>
 </code></pre></div></td></tr></table></div>
-</details>
+</div>
 <hr />
 <h3 id="213-funciones-anonimas"><strong>2.1.3 Funciones Anónimas</strong></h3>
 <p>Las funciones anónimas son aquellas que no tienen un nombre definido. Se suelen asignar a variables:</p>
-<details class="example">
-<summary>Ejemplo de función anónima</summary>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de función anónima</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Función anónima asignada a una variable</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1281,13 +1281,13 @@
 
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">multiplicar</span><span class="p">(</span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">));</span><span class="w"> </span><span class="c1">// Salida: 20</span>
 </code></pre></div></td></tr></table></div>
-</details>
+</div>
 <p>Las funciones anónimas son útiles para definir comportamientos que solo se usan en un contexto específico.</p>
 <hr />
 <h3 id="214-funciones-como-expresiones"><strong>2.1.4 Funciones como Expresiones</strong></h3>
 <p>En JavaScript, las funciones pueden ser declaradas como expresiones y asignadas a variables.</p>
-<details class="example" open="open">
-<summary>Ejemplo de función como expresión</summary>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de función como expresión</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Función como expresión</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1298,12 +1298,12 @@
 
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">suma</span><span class="p">(</span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">));</span><span class="w"> </span><span class="c1">// Salida: 7</span>
 </code></pre></div></td></tr></table></div>
-</details>
+</div>
 <p>Las funciones expresadas se usan cuando queremos definir una función y almacenarla en una variable para luego ejecutarla en un momento determinado.</p>
 <h3 id="215-paso-de-parametros-por-valor-y-por-referencia"><strong>2.1.5 Paso de Parámetros por Valor y por Referencia</strong></h3>
 <p>En JavaScript, los <strong>tipos primitivos</strong> (números, cadenas, booleanos) se pasan por <strong>valor</strong>, mientras que los <strong>objetos</strong> y <strong>arrays</strong> se pasan por <strong>referencia</strong>.</p>
-<details class="example" open="open">
-<summary>Ejemplo de paso por valor</summary>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de paso por valor</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Paso por valor</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1320,9 +1320,9 @@
 <span class="nx">cambiarValor</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Fuera de la función:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">x</span><span class="p">);</span><span class="w"> </span><span class="c1">// x sigue siendo 10</span>
 </code></pre></div></td></tr></table></div>
-</details>
-<details class="example" open="open">
-<summary>Ejemplo de paso por referencia</summary>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de paso por referencia</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Paso por referencia</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1337,15 +1337,15 @@
 <span class="nx">modificarObjeto</span><span class="p">(</span><span class="nx">persona</span><span class="p">);</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Después de la función:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">persona</span><span class="p">.</span><span class="nx">nombre</span><span class="p">);</span><span class="w"> </span><span class="c1">// &quot;Modificado&quot;</span>
 </code></pre></div></td></tr></table></div>
-</details>
+</div>
 <h3 id="216-alcance-de-las-variables-local-y-global"><strong>2.1.6 Alcance de las Variables: Local y Global</strong></h3>
 <p>Las variables en JavaScript pueden tener <strong>ámbito global</strong> o <strong>ámbito local</strong> dependiendo de dónde sean declaradas.</p>
 <ul>
 <li><strong>Variables globales</strong>: Son accesibles desde cualquier parte del código.</li>
 <li><strong>Variables locales</strong>: Solo existen dentro de la función donde fueron declaradas.</li>
 </ul>
-<details class="example" open="open">
-<summary>Ejemplo de variables globales y locales</summary>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de variables globales y locales</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ámbito de variables</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1368,14 +1368,14 @@
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">global</span><span class="p">);</span><span class="w"> </span><span class="c1">// Funciona</span>
 <span class="c1">// console.log(local); // Error: local no está definida fuera de la función</span>
 </code></pre></div></td></tr></table></div>
-</details>
+</div>
 <hr />
 <h3 id="217-funciones-recursivas-introduccion"><strong>2.1.7 Funciones recursivas (Introducción)</strong></h3>
 <p>Una función recursiva es aquella que se llama a sí misma dentro de su propio cuerpo. Es una técnica muy poderosa y útil en programación, especialmente para resolver problemas que se pueden dividir en subproblemas más pequeños.</p>
 <p>Algunos ejemplos típicos de resolución de problemas mediante funciones recursivas son el cálculo de factoriales, la serie de Fibonacci, la búsqueda de elementos en árboles, entre otros.</p>
 <p>Vamos a ver como ejercicios prácticos algunos ejemplos de funciones recursivas.</p>
-<details class="example" open="open">
-<summary>Ejemplo de función recursiva: Factorial</summary>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de función recursiva: Factorial</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Función recursiva: Factorial</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1394,11 +1394,11 @@
 
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">factorial</span><span class="p">(</span><span class="mf">5</span><span class="p">));</span><span class="w"> </span><span class="c1">// 5! = 120</span>
 </code></pre></div></td></tr></table></div>
-</details>
+</div>
 <h3 id="218-retorno-de-funciones"><strong>2.1.8 Retorno de Funciones</strong></h3>
 <p>Las funciones en JavaScript pueden devolver un valor mediante la palabra clave <code>return</code>. Esto permite que el resultado de una función pueda ser utilizado posteriormente en el programa.</p>
-<details class="example">
-<summary>Ejemplo de retorno en funciones</summary>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de retorno en funciones</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Uso del return en funciones</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1411,10 +1411,10 @@
 <span class="kd">let</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">sumar</span><span class="p">(</span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">);</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El resultado de la suma es:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">resultado</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
-</details>
+</div>
 <p>Cuando una función no tiene <code>return</code>, devuelve <code>undefined</code> de forma implícita.</p>
-<details class="example">
-<summary>Ejemplo de función sin retorno</summary>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de función sin retorno</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Función sin return</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1427,7 +1427,7 @@
 <span class="kd">let</span><span class="w"> </span><span class="nx">mensaje</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">mostrarMensaje</span><span class="p">();</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">mensaje</span><span class="p">);</span><span class="w"> </span><span class="c1">// undefined</span>
 </code></pre></div></td></tr></table></div>
-</details>
+</div>
 <p>Las funciones pueden retornar distintos tipos de valores:</p>
 <ol>
 <li>
@@ -1495,28 +1495,28 @@
 <hr />
 <h3 id="219-funciones-anonimas-autoejecutadas-iife"><strong>2.1.9 Funciones Anónimas Autoejecutadas (IIFE)</strong></h3>
 <p>Las funciones anónimas autoejecutadas (IIFE, Immediately Invoked Function Expressions) son funciones que se ejecutan inmediatamente después de ser definidas. Se usan para evitar contaminar el ámbito global y encapsular variables.</p>
-<details class="example">
-<summary>Ejemplo de función autoejecutada</summary>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de función autoejecutada</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">IIFE básica</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Esta función se ejecuta inmediatamente&quot;</span><span class="p">);</span>
 <span class="p">})();</span>
 </code></pre></div></td></tr></table></div>
-</details>
+</div>
 <p>También pueden recibir parámetros:</p>
-<details class="example">
-<summary>IIFE con parámetros</summary>
+<div class="admonition example">
+<p class="admonition-title">IIFE con parámetros</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">IIFE con parámetros</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hola, &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">nombre</span><span class="p">);</span>
 <span class="p">})(</span><span class="s2">&quot;Carlos&quot;</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
-</details>
+</div>
 <p>En este punto podemos añadir la <code>función cierre</code> o <code>closure</code> que es una función anidada dentro de otra función que tiene acceso a las variables de la función exterior. Veamos un ejemplo con una función <code>contador</code> con un atributo <code>valor</code> y métodos <code>getValor</code> y <code>incrementar</code> y <code>decrementar</code>:</p>
-<details class="example" open="open">
-<summary>Ejemplo de función cierre</summary>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de función cierre</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Función cierre</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1561,7 +1561,7 @@
 <span class="nx">miContador</span><span class="p">.</span><span class="nx">decrementar</span><span class="p">();</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">miContador</span><span class="p">.</span><span class="nx">getValor</span><span class="p">());</span><span class="w"> </span><span class="c1">// 1</span>
 </code></pre></div></td></tr></table></div>
-</details>
+</div>
 <p>Este patrón de diseño es muy útil para proteger variables y métodos de ser accedidos desde fuera de la función. Su principal diferencia con los objetos (clases) es que no se pueden crear instancias de la función <code>contador</code> y solo se puede acceder a sus métodos a través de la función <code>contador</code>.</p>
 <hr />
 <h3 id="2110-funciones-flecha-arrow-functions"><strong>2.1.10 Funciones Flecha (<code>Arrow Functions</code>)</strong></h3>
@@ -1572,8 +1572,8 @@
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sumar</span><span class="p">(</span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">));</span><span class="w"> </span><span class="c1">// Salida: 8</span>
 </code></pre></div></td></tr></table></div>
 <p>Si la función tiene una sola línea, el <code>return</code> es implícito. Si tiene varias líneas, se necesita escribir un bloque con <code>{}</code> y <code>return</code>:</p>
-<details class="example">
-<summary>Ejemplo con varias líneas</summary>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo con varias líneas</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Función flecha con varias líneas</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1584,7 +1584,7 @@
 <span class="p">};</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">multiplicar</span><span class="p">(</span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">));</span><span class="w"> </span><span class="c1">// Salida: 20</span>
 </code></pre></div></td></tr></table></div>
-</details>
+</div>
 <p>Las funciones flecha <strong>no tienen su propio <code>this</code></strong>, lo que las hace útiles en ciertos casos (aunque esto se verá más adelante).</p>
 <hr />
 <h3 id="ejercicios-funciones-en-javascript"><strong>Ejercicios: Funciones en JavaScript</strong></h3>
