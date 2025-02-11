@@ -772,16 +772,228 @@
   
   
   
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_3_3" id="__nav_2_1_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    T02 Arrays y Objetos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            T02 Arrays y Objetos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../unidad2/" class="md-nav__link">
+      <a href="../unidad02_21/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    T02 Funciones y manejo de errores
+    2.1 Arrays
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad02_22/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2 Objetos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad02_23/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.3 Persistencia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad02_24.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.4 Clases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_3_4" id="__nav_2_1_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    T03 Funciones y manejo de errores
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            T03 Funciones y manejo de errores
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad03_31/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.1 Funciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad03_32/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.2 Manejo de errores
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad03_33/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.3 Asincronía en JS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1865,7 +2077,7 @@
 <th>!(A &amp;&amp; B)</th>
 <th>!A</th>
 <th>!B</th>
-<th>!A <code>\|\|</code> !B</th>
+<th>!A &#124;&#124; !B</th>
 </tr>
 </thead>
 <tbody>
@@ -1910,12 +2122,57 @@
 <ul>
 <li>Segunda Ley (<code>!(A || B) ≡ !A &amp;&amp; !B</code>)</li>
 </ul>
-<p>| A     | B     | A || B | !(A <code>\|\|</code> B) | !A    | !B    | !A &amp;&amp; !B |
-|-------|-------|--------|-----------|-------|-------|----------|
-| true  | true  | true   | false     | false | false | false    |
-| true  | false | true   | false     | false | true  | false    |
-| false | true  | true   | false     | true  | false | false    |
-| false | false | false  | true      | true  | true  | true     |</p>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>A &#124;&#124; B</th>
+<th>!(A &#124;&#124; B)</th>
+<th>!A</th>
+<th>!B</th>
+<th>!A &amp;&amp; !B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>true</td>
+<td>true</td>
+<td>true</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+</tr>
+<tr>
+<td>true</td>
+<td>false</td>
+<td>true</td>
+<td>false</td>
+<td>false</td>
+<td>true</td>
+<td>false</td>
+</tr>
+<tr>
+<td>false</td>
+<td>true</td>
+<td>true</td>
+<td>false</td>
+<td>true</td>
+<td>false</td>
+<td>false</td>
+</tr>
+<tr>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+<td>true</td>
+<td>true</td>
+<td>true</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <p><strong>Ejemplos prácticos</strong></p>
 <ul>
@@ -2387,7 +2644,7 @@ Si queremos verificar si ni <code>A</code> ni <code>B</code> son verdaderos, pod
 <span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s2">&quot;moto&quot;</span><span class="o">:</span>
 <span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Una moto tiene 2 ruedas.&quot;</span><span class="p">);</span>
 <span class="w">        </span><span class="k">break</span><span class="p">;</span>
-<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s2">&quot;camión&quot;</span><span class="o">:</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s2">&quot;camionn&quot;</span><span class="o">:</span>
 <span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Un camión tiene más de 4 ruedas.&quot;</span><span class="p">);</span>
 <span class="w">        </span><span class="k">break</span><span class="p">;</span>
 <span class="w">    </span><span class="k">default</span><span class="o">:</span>
@@ -2529,37 +2786,7 @@ Si queremos verificar si ni <code>A</code> ni <code>B</code> son verdaderos, pod
 <span class="normal">14</span>
 <span class="normal">15</span>
 <span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
 
 <span class="kd">let</span><span class="w"> </span><span class="nx">fruta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce el nombre de una fruta: &quot;</span><span class="p">).</span><span class="nx">toLowerCase</span><span class="p">();</span>
 
@@ -2567,7 +2794,7 @@ Si queremos verificar si ni <code>A</code> ni <code>B</code> son verdaderos, pod
 <span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s2">&quot;manzana&quot;</span><span class="o">:</span>
 <span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Una manzana puede ser roja o verde.&quot;</span><span class="p">);</span>
 <span class="w">        </span><span class="k">break</span><span class="p">;</span>
-<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s2">&quot;plátano&quot;</span><span class="o">:</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s2">&quot;platano&quot;</span><span class="o">:</span>
 <span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Un plátano es amarillo.&quot;</span><span class="p">);</span>
 <span class="w">        </span><span class="k">break</span><span class="p">;</span>
 <span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s2">&quot;naranja&quot;</span><span class="o">:</span>
@@ -2576,36 +2803,6 @@ Si queremos verificar si ni <code>A</code> ni <code>B</code> son verdaderos, pod
 <span class="w">    </span><span class="k">default</span><span class="o">:</span>
 <span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Fruta no reconocida.&quot;</span><span class="p">);</span>
 <span class="p">}</span>
-<span class="sb">```javascript linenums=&quot;1&quot; title=&quot;Días de la semana&quot;</span>
-<span class="sb">const prompt = require(&quot;prompt-sync&quot;)();</span>
-
-<span class="sb">let dia = parseInt(prompt(&quot;Introduce un número del 1 al 7: &quot;));</span>
-
-<span class="sb">switch (dia) {</span>
-<span class="sb">    case 1:</span>
-<span class="sb">        console.log(&quot;Lunes&quot;);</span>
-<span class="sb">        break;</span>
-<span class="sb">    case 2:</span>
-<span class="sb">        console.log(&quot;Martes&quot;);</span>
-<span class="sb">        break;</span>
-<span class="sb">    case 3:</span>
-<span class="sb">        console.log(&quot;Miércoles&quot;);</span>
-<span class="sb">        break;</span>
-<span class="sb">    case 4:</span>
-<span class="sb">        console.log(&quot;Jueves&quot;);</span>
-<span class="sb">        break;</span>
-<span class="sb">    case 5:</span>
-<span class="sb">        console.log(&quot;Viernes&quot;);</span>
-<span class="sb">        break;</span>
-<span class="sb">    case 6:</span>
-<span class="sb">        console.log(&quot;Sábado&quot;);</span>
-<span class="sb">        break;</span>
-<span class="sb">    case 7:</span>
-<span class="sb">        console.log(&quot;Domingo&quot;);</span>
-<span class="sb">        break;</span>
-<span class="sb">    default:</span>
-<span class="sb">        console.log(&quot;Número fuera de rango.&quot;);</span>
-<span class="sb">}</span>
 </code></pre></div></td></tr></table></div>
 </details>
 </div>
@@ -2613,7 +2810,7 @@ Si queremos verificar si ni <code>A</code> ni <code>B</code> son verdaderos, pod
 <h3 id="134-operador-ternario"><strong>1.3.4 Operador Ternario</strong></h3>
 <h4 id="que-es-el-operador-ternario"><strong>¿Qué es el operador ternario?</strong></h4>
 <p>El operador ternario es una forma compacta de escribir una expresión condicional en JavaScript. Tiene la siguiente estructura:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Sintaxis del Operador Ternario</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">condición</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">expresión_si_verdadero</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">expresión_si_falso</span><span class="p">;</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Sintaxis del Operador Ternario</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">condición</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">valor_si_verdadero</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">valor_si_falso</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <p><strong>Ejemplo</strong>: Determinar si un número es par o impar.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Número par o impar</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>

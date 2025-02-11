@@ -94,7 +94,14 @@ JavaScript tiene los siguientes tipos de datos básicos:
 
 #### **1.2.3 Operadores Básicos**
 
+- asignación: `=`
+    ```javascript linenums="1"
+    let nombre = "Juan";
+    nombre = "Ana";
+    console.log(nombre); // Ana
+    ```
 **Operadores Aritméticos:**
+
 - Suma: `+`
     ```javascript linenums="1"
     let resultado = 5 + 3; // 8
@@ -115,8 +122,29 @@ JavaScript tiene los siguientes tipos de datos básicos:
     ```javascript linenums="1"
     let resto = 10 % 3; // 1
     ```
+- Autoincremento: `++`
+    ```javascript linenums="1"
+    let contador = 0;
+    contador++; // 1
+    ```
+- Autoincremento: `--`
+    ```javascript linenums="1"
+    let contador = 0;
+    contador--; // -1
+    ```
+- Preincremento: `++variable`
+    ```javascript linenums="1"
+    let contador = 0;
+    let resultado = ++contador; // 1
+    ```
+- Predecremento: `--variable`
+    ```javascript linenums="1"
+    let contador = 0;
+    let resultado = --contador; // -1
+    ```
 
 **Operadores de Comparación:**
+
 - Igualdad estricta: `===`
     ```javascript linenums="1"
     console.log(5 === "5"); // false
@@ -135,6 +163,7 @@ JavaScript tiene los siguientes tipos de datos básicos:
     ```
 
 **Operadores Lógicos:**
+
 - AND (`&&`): Devuelve `true` si ambos operandos son verdaderos.
     ```javascript linenums="1"
     console.log(true && false); // false

@@ -21,19 +21,24 @@ Supongamos que queremos imprimir los números del 1 al 10 en la consola. Sin un 
 console.log(1);
 console.log(2);
 console.log(3);
-// ... y así hasta 10
+console.log(4);
+console.log(5);
+console.log(6);
+...
+...
+console.log(100);
 ```
 
 Con un bucle, podemos reducir este código a:
 
 ```javascript linenums="1"
-for (let i = 1; i <= 10; i++) {
+for (let i = 1; i <= 100; i++) {
     console.log(i);
 }
 ```
 
-!!! important
-    #### **¿Cuándo utilizar cada tipo de bucle?**
+!!! important "Tipos de bucles en JavaScript"
+    #### **Tipos de bucles en JS y cuándo utilizarlos**
     - **`for`**: Se utiliza cuando sabemos de antemano cuántas iteraciones queremos realizar.
     - **`while`**: Ideal para cuando no sabemos exactamente cuántas veces se repetirá el bloque, pero tenemos una condición que lo determina.
     - **`do-while`**: Similar a `while`, pero asegura que el bloque de código se ejecutará al menos una vez.
@@ -43,21 +48,21 @@ for (let i = 1; i <= 10; i++) {
 ### **Bucle For**
 
 #### **¿Qué es un bucle for?**
-El bucle `for` se utiliza para repetir un bloque de código un número específico de veces. Consiste en tres partes:
+El bucle `for` se utiliza para repetir un bloque de código un número específico de veces. Consiste en tres partes: `for (inicialización; condición; actualización) {bloque de instrucciones;}`.
 
 1. **Inicialización**: Se define la variable de control que se usará para contar las iteraciones. Esto se realiza solo una vez al inicio del bucle.
-   - Ejemplo: `let i = 1;` establece que el contador comienza en 1.
+         - Ejemplo: `let i = 1;` establece que el contador comienza en 1.
 
 2. **Condición**: Es la expresión lógica que se evalúa antes de cada iteración. Mientras sea `true`, el bucle continuará ejecutándose.
-   - Ejemplo: `i <= 5` asegura que el bucle se detendrá cuando `i` sea mayor a 5.
+     - Ejemplo: `i <= 5` asegura que el bucle se detendrá cuando `i` sea mayor a 5.
 
 3. **Actualización**: Es la operación que modifica la variable de control al final de cada iteración. Generalmente, se incrementa o decrementa.
-   - Ejemplo: `i++` incrementa el valor de `i` en 1 después de cada iteración.
+     - Ejemplo: `i++` incrementa el valor de `i` en 1 después de cada iteración.
 
 #### **Sintaxis de for**
 ```javascript linenums="1" title="Sintaxis de For"
 for (inicialización; condición; actualización) {
-    // Código a ejecutar en cada iteración
+    // blque de óódigo a ejecutar en cada iteración
 }
 ```
 
@@ -165,218 +170,549 @@ do {
 !!! important "Importante"
     Todos los ejercicios deben resolverse utilizando los tres tipos de bucles: `for`, `while` y `do-while`. Esto ayuda a practicar y entender las diferencias y aplicaciones de cada tipo de bucle.
 
-#### **Ejercicio 1: Línea de asteriscos**
-- Usa un bucle para imprimir una línea de 10 asteriscos (`**********`). Resuelve este ejercicio utilizando los tres tipos de bucles: `for`, `while` y `do-while`.
-
-```terminal
-**********
-```
-
-??? example "Solución ejercicio 1 con bucle for"
-    ```javascript
-    for (let i = 1; i <= 10; i++) {
-        console.log("*");
-    }
-    ```
-
-??? example "Solución ejercicio 1 con bucle while"
-    ```javascript
-    let i = 1;
-    while (i <= 10) {
-        console.log("*");
-        i++;
-    }
-    ```
-
-??? example "Solución ejercicio 1 con bucle do-while"
-    ```javascript
-    let i = 1;
-    do {
-        console.log("*");
-        i++;
-    } while (i <= 10);
-    ```
-
----
-
-#### **Ejercicio 8: Números primos del 1 al 100**
-- Crea un programa que calcule y muestre todos los números primos entre 1 y 100.
-
-```terminal
-1
-2
-3
-5
-7
-11
-13
-17
-...
-100
-```
-
-??? example "Solución ejercicio 8 con bucle for"
-    ```javascript
-    for (let num = 2; num <= 100; num++) {
-        let esPrimo = true;
-        for (let i = 2; i < num; i++) {
-            if (num % i === 0) {
-                esPrimo = false;
-                break;
-            }
-        }
-        if (esPrimo) {
-            console.log(num);
-        }
-    }
-    ```
-
-??? example "Solución ejercicio 8 con bucle while"
-    ```javascript
-    let num = 2;
-    while (num <= 100) {
-        let esPrimo = true;
-        let i = 2;
-        while (i < num) {
-            if (num % i === 0) {
-                esPrimo = false;
-                break;
-            }
-            i++;
-        }
-        if (esPrimo) {
-            console.log(num);
-        }
-        num++;
-    }
-    ```
-
-??? example "Solución ejercicio 8 con bucle do-while"
-    ```javascript
-    let num = 2;
-    do {
-        let esPrimo = true;
-        let i = 2;
-        do {
-            if (num % i === 0) {
-                esPrimo = false;
-                break;
-            }
-            i++;
-        } while (i < num);
-        if (esPrimo) {
-            console.log(num);
-        }
-        num++;
-    } while (num <= 100);
-    ```
-
----
-
-#### **Ejercicio 9: Triángulo rectángulo**
-- Usa un bucle para imprimir un triángulo rectángulo de asteriscos:
-
-```terminal
-*
-**
-***
-****
-*****
-```
-
-??? example "Solución ejercicio 9 con bucle for"
-    ```javascript
-    for (let i = 1; i <= 5; i++) {
-        let linea = "";
-        for (let j = 1; j <= i; j++) {
-            linea += "*";
-        }
-        console.log(linea);
-    }
-    ```
-
-??? example "Solución ejercicio 9 con bucle while"
-    ```javascript
-    let i = 1;
-    while (i <= 5) {
-        let linea = "";
-        let j = 1;
-        while (j <= i) {
-            linea += "*";
-            j++;
-        }
-        console.log(linea);
-        i++;
-    }
-    ```
-
-??? example "Solución ejercicio 9 con bucle do-while"
-    ```javascript
-    let i = 1;
-    do {
-        let linea = "";
-        let j = 1;
-        do {
-            linea += "*";
-            j++;
-        } while (j <= i);
-        console.log(linea);
-        i++;
-    } while (i <= 5);
-    ```
-
-??? question "Reto adicional"
-    - Intenta imprimir el triángulo al revés.
-    - Ejemplo:
+!!! question "Ejercicio 1: Imprimir un asterisco"
+    - Usa un bucle para imprimir un * (`*`) en 10 veces. Resuelve este ejercicio utilizando los tres tipos de bucles: `for`, `while` y `do-while`.
 
     ```terminal
-    *****
-    ****
-    ***
-    **
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
+    *
     *
     ```
 
----
+    ??? example "Solución ejercicio 1 con bucle for"
+        ```javascript
+        for (let i = 1; i <= 10; i++) {
+            console.log("*");
+        }
+        ```
 
-#### **Ejercicio 10: Tabla de multiplicar**
-- Crea un programa que solicite al usuario un número y escriba la tabla de multiplicar del 1 al 10 en el siguiente formato:
+    ??? example "Solución ejercicio 1 con bucle while"
+        ```javascript
+        let i = 1;
+        while (i <= 10) {
+            console.log("*");
+            i++;
+        }
+        ```
 
-```terminal
-2 * 1 = 2
-2 * 2 = 4
-...
-2 * 10 = 20
+    ??? example "Solución ejercicio 1 con bucle do-while"
+        ```javascript
+        let i = 1;
+        do {
+            console.log("*");
+            i++;
+        } while (i <= 10);
+        ```
+
+    !!! question "Reto adicional"
+        - Modifica el ejercicio, de manera que tengamos una constante `N` que determine cuántas veces se imprime el asterisco.
+
+
+!!! question "Ejercicio 2: Imprimir una secuencia de números"
+    - Escribe un programa que imprima en la consola los números del 1 al 10, uno por línea.
+
+    ??? example "Solución"
+        ```javascript linenums="1" title="Imprimir números del 1 al 10"
+        for (let i = 1; i <= 10; i++) {
+            console.log(i);
+        }
+        ```
+
+    ??? example "Solucion con bucle while"
+        ```javascript linenums="1" title="Imprimir números del 1 al 10"
+        let i = 1;
+        while (i <= 10) {
+            console.log(i);
+            i++;
+        }
+        ```
+
+    ??? example "Solución con bucle do-while"
+        ```javascript linenums="1" title="Imprimir números del 1 al 10" 
+        let i = 1;
+        do {
+            console.log(i);
+            i++;
+        } while (i <= 10);
+        ```
+
+    !!! question "Retos adicional"
+        - Modifica el programa para que imprima los números del 10 al 1, en orden descendente.
+        - Define una constante `N` que determine cuántos números se imprimirán.
+
+!!! question "Ejercicio 3: Suma de los primeros 100 números"
+    - Crea un programa que calcule la suma de los números del 1 al 100.
+
+    ??? example "Solución"
+        ```javascript linenums="1" title="Suma de los primeros N números"
+        const prompt = require("prompt-sync")();
+        let N = parseInt(prompt("Introduce un número: "));
+        let suma = 0;
+        for (let i = 1; i <= 100; i++) {
+            suma += i;
+        }
+        console.log("La suma es:", suma);
+        ```
+
+    ??? example "Solución con bucle while"
+        ```javascript linenums="1" title="Suma de los primeros N números"
+        const prompt = require("prompt-sync")();
+        let N = parseInt(prompt("Introduce un número: "));
+        let suma = 0;
+        let i = 1;
+        while (i <= 100) {
+            suma += i;
+            i++;
+        }
+        console.log("La suma es:", suma);
+        ```
+
+    ??? example "Solución con bucle do-while"
+        ```javascript linenums="1" title="Suma de los primeros N números"
+        const prompt = require("prompt-sync")();
+        let N = parseInt(prompt("Introduce un número: "));
+        let suma = 0;
+        let i = 1;
+        do {
+            suma += i;
+            i++;
+        } while (i <= 100);
+        console.log("La suma es:", suma);
+        ```
+
+    !!! question "Reto adicional"
+        - Modifica el programa para que solicite al usuario un número `N` y calcule la suma de los números del 1 al `N`.
+
+!!! question "Ejercicio 4: Tabla de multiplicar"
+    - Desarrolla un programa que pida al usuario un número entero y muestre en la consola la tabla de multiplicar de ese número del 1 al 10. El formato debe ser:
+
+    ```terminal
+    2 x 1 = 2
+    2 x 2 = 4
+    ...
+    ...
+    2 x 10 = 20
+    ```
+
+    ??? example "Solución"
+        ```javascript linenums="1" title="Tabla de multiplicar"
+        const prompt = require("prompt-sync")();
+        let num = parseInt(prompt("Introduce un número: "));
+        for (let i = 1; i <= 10; i++) {
+            console.log(`${num} x ${i} = ${num * i}`);
+        }
+        ```
+
+    ??? example "Solución con bucle while"
+        ```javascript linenums="1" title="Tabla de multiplicar"
+        const prompt = require("prompt-sync")();
+        let num = parseInt(prompt("Introduce un número: "));
+        let i = 1;
+        while (i <= 10) {
+            console.log(`${num} x ${i} = ${num * i}`);
+            i++;
+        }
+        ```
+
+    ??? example "Solución con bucle do-while"
+        ```javascript linenums="1" title="Tabla de multiplicar"
+        const prompt = require("prompt-sync")();
+        let num = parseInt(prompt("Introduce un número: "));
+        let i = 1;
+        do {
+            console.log(`${num} x ${i} = ${num * i}`);
+            i++;
+        } while (i <= 10);
+        ```
+
+    !!! question "Reto adicional"
+        - Modifica el programa tenga dos constantes `MIN` y `MAX`. Por ejemlo, si `MIN = 5` y `MAX = 15`, el programa mostrará la tabla de multiplicar del 5 al 15.
+
+!!! question "Ejercicio 5: Números pares entre 1 y N"
+    - Escribe un programa que simprima en la consola todos los números pares desde 1 hasta 100.
+
+    ??? example "Solución"
+        ```javascript linenums="1" title="Números pares hasta N"
+        const prompt = require("prompt-sync")();
+        let N = parseInt(prompt("Introduce un número: "));
+        for (let i = 2; i <= 100; i += 2) {
+            console.log(i);
+        }
+        ```
+    
+    ??? example "Solución con bucle while"
+        ```javascript linenums="1" title="Números pares hasta N"
+        const prompt = require("prompt-sync")();
+        let N = parseInt(prompt("Introduce un número: "));
+        let i = 2;
+        while (i <= 100) {
+            console.log(i);
+            i += 2;
+        }
+        ```
+    
+    ??? example "Solución con bucle do-while"
+        ```javascript linenums="1" title="Números pares hasta N"
+        const prompt = require("prompt-sync")();
+        let N = parseInt(prompt("Introduce un número: "));
+        let i = 2;
+        do {
+            console.log(i);
+            i += 2;
+        } while (i <= 100);
+        ```
+
+
+    !!! question "Reto adicional"
+        - Modifica el programa para que solicite al usuario un número `N` y muestre los números pares desde 1 hasta `N`.
+
+!!! question "Ejercicio 6: Invertir una cadena"
+    - Crea un programa que pida al usuario una cadena de texto y luego imprima la cadena invertida.
+    - Aunque aún no hemos vista arrays, saber que con la expresión `texto[i]` se puede acceder a cada carácter de la cadena (la i debe estar entre 0 y la longitud de la cadena(`length`)).
+
+    ??? example "Solución"
+        ```javascript linenums="1" title="Invertir una cadena"
+        const prompt = require("prompt-sync")();
+        let texto = prompt("Introduce una cadena: ");
+        let invertida = "";
+        for (let i = texto.length - 1; i >= 0; i--) {
+            invertida += texto[i];
+        }
+        console.log("Cadena invertida:", invertida);
+        ```
+    
+    ??? example "Solución con bucle while"
+        ```javascript linenums="1" title="Invertir una cadena"
+        const prompt = require("prompt-sync")();
+        let texto = prompt("Introduce una cadena: ");
+        let invertida = "";
+        let i = texto.length - 1;
+        while (i >= 0) {
+            invertida += texto[i];
+            i--;
+        }
+        console.log("Cadena invertida:", invertida);
+        ```
+
+    ??? example "Solución con bucle do-while"
+        ```javascript linenums="1" title="Invertir una cadena"
+        const prompt = require("prompt-sync")();
+        let texto = prompt("Introduce una cadena: ");
+        let invertida = "";
+        let i = texto.length - 1;
+        do {
+            invertida += texto[i];
+            i--;
+        } while (i >= 0);
+        console.log("Cadena invertida:", invertida);
+        ```
+
+!!! question "Ejercicio 7: Contar vocales en una cadena"
+    - Desarrolla un programa que solicite al usuario una cadena de texto y cuente cuántas vocales contiene.
+    - Para saber si una letra es una vocal podemos utilizar un `if` o utilizar el método [`includes()`](https://www.w3schools.com/Jsref/jsref_includes.asp) de los strings.
+
+    ??? example "Solución"
+        ```javascript linenums="1" title="Contar vocales en una cadena"
+        const prompt = require("prompt-sync")();
+        let texto = prompt("Introduce una cadena: ").toLowerCase();
+        let contador = 0;
+        let vocales = "aeiou";
+        for (let i = 0; i < texto.length; i++) {
+            if (vocales.includes(texto[i])) {
+                contador++;
+            }
+        }
+        console.log("Número de vocales:", contador);
+        
+    ??? example "Solución con bucle while"
+        ```javascript linenums="1" title="Contar vocales en una cadena"
+        const prompt = require("prompt-sync")();
+        let texto = prompt("Introduce una cadena: ").toLowerCase();
+        let contador = 0;
+        let vocales = "aeiou";
+        let i = 0;
+        while (i < texto.length) {
+            if (vocales.includes(texto[i])) {
+                contador++;
+            }
+            i++;
+        }
+        console.log("Número de vocales:", contador);
+        ```
+
+    ??? example "Solución con bucle do-while"
+        ```javascript linenums="1" title="Contar vocales en una cadena"
+        const prompt = require("prompt-sync")();
+        let texto = prompt("Introduce una cadena: ").toLowerCase();
+        let contador = 0;
+        let vocales = "aeiou";
+        let i = 0;
+        do {
+            if (vocales.includes(texto[i])) {
+                contador++;
+            }
+            i++;
+        } while (i < texto.length);
+        console.log("Número de vocales:", contador);
+        ```
+
+#### **bucles anidados**
+
+Los bucles anidados son bucles que se encuentran dentro de otros bucles. Son útiles para realizar tareas más complejas que requieren múltiples iteraciones. 
+Sintaxis de un bucle `for` anidado:
+
+```javascript linenums="1" title="Bucle For Anidado"
+for (let i = 1; i <= 5; i++) {
+    for (let j = 1; j <= 3; j++) {
+        console.log(i, j);
+    }
+}
+```
+Este tipo de bucles se utilizan comúnmente para recorrer matrices, tablas, realizar cálculos matriciales, entre otros.
+
+Sistaxis de un bucle `while` anidado:
+
+```javascript linenums="1" title="Bucle While Anidado"
+let i = 1;
+while (i <= 5) {
+    let j = 1;
+    while (j <= 3) {
+        console.log(i, j);
+        j++;
+    }
+    i++;
+}
 ```
 
-??? example "Solución ejercicio 10 con bucle for"
-    ```javascript
-    const numero = 2; // Reemplazar por el número deseado
-    for (let i = 1; i <= 10; i++) {
-        console.log(`${numero} * ${i} = ${numero * i}`);
+Este tipo de bucles se utilizan comúnmente cuando no se conoce el número exacto de iteraciones y se necesita una condición de salida más compleja.
+
+También podemos encontrar bucles anidados mixtos como un bucle `for` dentro de un bucle `do-while` o viceversa.
+
+```javascript linenums="1" title="Bucle Mixto Anidado"
+let i = 1;
+do {
+    for (let j = 1; j <= 3; j++) {
+        console.log(i, j);
     }
+    i++;
+} while (i <= 5);
+```
+
+!!! info "Nota"
+    Es importante tener en cuenta que los bucles anidados pueden aumentar la complejidad del código y hacerlo más difícil de entender. Por lo tanto, es recomendable utilizarlos con moderación y asegurarse de que sean necesarios para la tarea en cuestión.
+
+
+!!! question "Ejercicio 8: Números primos"
+    - Crea un programa que calcule y muestre todos los números primos entre 1 y 100.
+
+    ```terminal
+    1
+    2
+    3
+    5
+    7
+    11
+    13
+    17
+    ...
+    100
     ```
 
-??? example "Solución ejercicio 10 con bucle while"
-    ```javascript
-    const numero = 2; // Reemplazar por el número deseado
-    let i = 1;
-    while (i <= 10) {
-        console.log(`${numero} * ${i} = ${numero * i}`);
-        i++;
-    }
+    ??? example "Solución ejercicio 8 con bucle for"
+        ```javascript
+        for (let num = 2; num <= 100; num++) {
+            let esPrimo = true;
+            for (let i = 2; i < num; i++) {
+                if (num % i === 0) {
+                    esPrimo = false;
+                    break;
+                }
+            }
+            if (esPrimo) {
+                console.log(num);
+            }
+        }
+        ```
+
+    ??? example "Solución ejercicio 8 con bucle while"
+        ```javascript
+        let num = 2;
+        while (num <= 100) {
+            let esPrimo = true;
+            let i = 2;
+            while (i < num) {
+                if (num % i === 0) {
+                    esPrimo = false;
+                    break;
+                }
+                i++;
+            }
+            if (esPrimo) {
+                console.log(num);
+            }
+            num++;
+        }
+        ```
+
+    ??? example "Solución ejercicio 8 con bucle do-while"
+        ```javascript
+        let num = 2;
+        do {
+            let esPrimo = true;
+            let i = 2;
+            do {
+                if (num % i === 0) {
+                    esPrimo = false;
+                    break;
+                }
+                i++;
+            } while (i < num);
+            if (esPrimo) {
+                console.log(num);
+            }
+            num++;
+        } while (num <= 100);
+        ```
+
+---
+
+!!! question "Ejercicio 9, triángulo rectángulo"
+    - Usa un bucle para imprimir un triángulo rectángulo de asteriscos:
+
+    ```terminal
+    *
+    **
+    ***
+    ****
+    *****
     ```
 
-??? example "Solución ejercicio 10 con bucle do-while"
-    ```javascript
-    const numero = 2; // Reemplazar por el número deseado
-    let i = 1;
-    do {
-        console.log(`${numero} * ${i} = ${numero * i}`);
-        i++;
-    } while (i <= 10);
-    ```
+    ??? example "Solución ejercicio 9 con bucle for"
+        ```javascript
+        for (let i = 1; i <= 5; i++) {
+            let linea = "";
+            for (let j = 1; j <= i; j++) {
+                linea += "*";
+            }
+            console.log(linea);
+        }
+        ```
 
+    ??? example "Solución ejercicio 9 con bucle while"
+        ```javascript
+        let i = 1;
+        while (i <= 5) {
+            let linea = "";
+            let j = 1;
+            while (j <= i) {
+                linea += "*";
+                j++;
+            }
+            console.log(linea);
+            i++;
+        }
+        ```
+
+    ??? example "Solución ejercicio 9 con bucle do-while"
+        ```javascript
+        let i = 1;
+        do {
+            let linea = "";
+            let j = 1;
+            do {
+                linea += "*";
+                j++;
+            } while (j <= i);
+            console.log(linea);
+            i++;
+        } while (i <= 5);
+        ```
+
+    ??? question "Reto adicional"
+        - Intenta imprimir el triángulo al revés.
+        - Ejemplo:
+
+        ```terminal
+        *****
+        ****
+        ***
+        **
+        *
+        ```
+
+    ---
+
+!!! question "Ejercicio 10: Tablero ajedrez"
+    - Crea un programa que imprima un tablero de ajedrez de 8x8 en la consola, utilizando los caracteres `#` y ` ` (espacio en blanco).
+
+    ```terminal
+    # # # #
+     # # # #
+    # # # #
+     # # # #    
+    # # # #
+     # # # #
+    # # # #
+     # # # #
+    ```
+    ??? example "Solución con for"
+        ```javascript
+        for (let i = 1; i <= 8; i++) {
+            let linea = "";
+            for (let j = 1; j <= 8; j++) {
+                if ((i + j) % 2 === 0) {
+                    linea += "#";
+                } else {
+                    linea += " ";
+                }
+            }
+            console.log(linea);
+        }
+        ```
+
+    ??? example "Solución con while"
+        ```javascript
+        let i = 1;
+        while (i <= 8) {
+            let linea = "";
+            let j = 1;
+            while (j <= 8) {
+                if ((i + j) % 2 === 0) {
+                    linea += "#";
+                } else {
+                    linea += " ";
+                }
+                j++;
+            }
+            console.log(linea);
+            i++;
+        }
+        ```
+    ??? example "Solución con do-while"
+        ```javascript
+        let i = 1;
+        do {
+            let linea = "";
+            let j = 1;
+            do {
+                if ((i + j) % 2 === 0) {
+                    linea += "#";
+                } else {
+                    linea += " ";
+                }
+                j++;
+            } while (j <= 8);
+            console.log(linea);
+            i++;
+        } while (i <= 8);
+        ```
 ---
 
 ### **Errores Comunes en Bucles**
@@ -561,5 +897,72 @@ for (let i = 1; i <= 10; i++) {
         console.log(i); // Solo imprime números impares
     }
 }
+```
+
+### Ejercicios de Bucles, en este caso debes determinar qué tipo de bucle es el más adecuado para cada ejercicio.
+
+#### **Ejercicio 1: PIN de seguridad**
+- Crea un programa que solicite al usuario un PIN de seguridad de 4 dígitos. Si el PIN ingresado no es correcto, el programa debe mostrar un mensaje de error y permitir al usuario intentarlo nuevamente. El programa debe finalizar cuando el PIN ingresado sea correcto. O si el usuario ha intentado 3 veces. 
+- Ampliación: Si el usuario ha intentado 3 veces, el programa debe bloquearse durante 30 segundos antes de permitir nuevos intentos, investiga como bloquear el rograma 30 segundos.
+
+```terminal
+Introduce tu PIN de 4 dígitos: 1234
+PIN incorrecto. Inténtalo de nuevo.
+Introduce tu PIN de 4 dígitos: 5678
+PIN incorrecto. Inténtalo de nuevo.
+Introduce tu PIN de 4 dígitos: 9999
+PIN incorrecto. Inténtalo de nuevo.
+El programa se bloqueará durante 30 segundos.
+```
+
+#### **Ejercicio 2: Adivina el número**
+- Crea un programa que genere un número aleatorio entre 1 y 100. Luego, solicita al usuario que adivine el número. Si el número ingresado es mayor que el número generado, muestra un mensaje indicando que el número es demasiado alto. Si el número ingresado es menor que el número generado, muestra un mensaje indicando que el número es demasiado bajo. El programa debe continuar solicitando al usuario que adivine el número hasta que lo adivine correctamente.
+- Investiga como generar [números aleatorios](https://www.w3schools.com/js/js_random.asp) en JavaScript. 
+
+```terminal
+Adivina el número entre 1 y 100: 50
+El número es demasiado bajo. Inténtalo de nuevo.
+Adivina el número entre 1 y 100: 75
+El número es demasiado alto. Inténtalo de nuevo.
+Adivina el número entre 1 y 100: 60
+¡Felicidades! Has adivinado el número.
+```
+
+#### **Ejercicio 3: Calculadora de factorial**
+- Crea un programa que solicite al usuario un número entero positivo y calcule su factorial. El factorial de un número `n` se define como el producto de todos los enteros positivos menores o iguales a `n`.
+- Por ejemplo, el factorial de 5 (`5!`) es `5 x 4 x 3 x 2 x 1 = 120`.
+
+```terminal
+Introduce un número entero positivo: 5
+El factorial de 5 es: 120
+```
+
+#### **Ejercicio 4: Validación entrada de datos**
+- Crea un programa que solicite al usuario un número entero positivo. Si el usuario ingresa un valor no numérico o un número negativo, el programa debe mostrar un mensaje de error y solicitar al usuario que ingrese un número válido. El programa debe continuar solicitando al usuario que ingrese un número válido hasta que lo haga.
+
+```terminal
+Introduce un número entero positivo: hola
+Error: Debes introducir un número entero positivo.
+Introduce un número entero positivo: -5
+Error: Debes introducir un número entero positivo.
+Introduce un número entero positivo: 10
+Número válido: 10
+```
+
+#### **Ejercicio 5: Validación de datos con operación**
+- Pide al usuario que introduzca un número entero y positivo. Si es correcto que lo sume en un acumulador. Si el usuario introduce un número negativo o no entero, debe mostrar un mensaje de error y solicitar al usuario que introduzca un número válido. El programa finalizará cuando el usuario introduzca un `0`, en ese caso mostrará el total acumulado
+- Ampliación: Calcula también la media de los números introducidos.
+
+```terminal
+Introduce un número entero positivo: 5
+Introduce un número entero positivo: 10
+Introduce un número entero positivo: hola
+Error: Debes introducir un número entero positivo.
+Introduce un número entero positivo: -5
+Error: Debes introducir un número entero positivo.
+Introduce un número entero positivo: 15
+Introduce un número entero positivo: 0
+Total acumulado: 30
+Media de los números introducidos: 10
 ```
 

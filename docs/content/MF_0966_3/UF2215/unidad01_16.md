@@ -18,8 +18,10 @@ Unit: 01 - Configuración del Entorno y Fundamentos de JavaScript
         - Permite ingresar quién gana cada punto y actualiza el marcador.
         - Llega a "deuce" cuando ambos tienen 40 puntos.
         - Lleva el conteo de juegos ganados, y cuando un jugador llega a 6 juegos, suma un set.
+        - Finaliza cuando un jugador gana 2 sets.
 
-    ??? example "Solución del ejercicio"
+    ??? example "Solución del ejercicio **pendiente**"
+        <!--
         ```javascript linenums="1" title="Marcador de tenis"
         const prompt = require("prompt-sync")();
 
@@ -79,6 +81,7 @@ Unit: 01 - Configuración del Entorno y Fundamentos de JavaScript
             }
         }
         ```
+        -->
 
 ### **Fechas de pago**
 
@@ -89,7 +92,8 @@ Unit: 01 - Configuración del Entorno y Fundamentos de JavaScript
         - Una opción para calcular fechas de pago: a 30 días, a 30 y 60 días, o a 30, 60 y 90 días.
     - Muestra las fechas de pago correspondientes.
 
-    ??? example "Solución del ejercicio"
+    ??? example "Solución del ejercicio **pendiente**"
+        <!--
         ```javascript linenums="1" title="Fechas de pago"
         const prompt = require("prompt-sync")();
 
@@ -107,39 +111,37 @@ Unit: 01 - Configuración del Entorno y Fundamentos de JavaScript
 
         console.log(pagos);
         ```
+        -->
 
-### **Juego de adivinanzas**
+### **codificación/decodificación**
 
-!!! question "Ejercicio 3: Juego de adivinanzas"
-    - Diseña un juego donde el programa genere un número aleatorio entre 1 y 100.
-        - El usuario debe intentar adivinarlo.
-        - El programa debe indicar si el número ingresado es mayor o menor que el número objetivo.
-        - Finaliza cuando el usuario acierta e indica cuántos intentos realizó.
+!!! question "Ejercicio 3: Codificación de cadenas"
+    - Diseña un programa que permita codificar y decodificar cadenas de texto.
+        - Solicita una cadena de texto 
+        - Codifica y decodifica la cadena según la cadena de codificación.
+        - La cadena de codificación será: `ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz` por `DEFGHIJKLMNOPQRSTUVWXYZABCdefghijklmnopqrstuvwxyzabc`.
 
-    ??? example "Solución del ejercicio"
-        ```javascript linenums="1" title="Juego de adivinanzas"
+    ??? example "Solución del ejercicio **pendiente**"
+        <!--    
+        ```javascript linenums="1" title="Codificación de cadenas"
         const prompt = require("prompt-sync")();
-
-        const numeroSecreto = Math.floor(Math.random() * 100) + 1;
-        let intentos = 0;
-        let adivinado = false;
-
-        console.log("Adivina el número (entre 1 y 100):");
-
-        while (!adivinado) {
-            const intento = parseInt(prompt("Introduce tu número: "));
-            intentos++;
-
-            if (intento === numeroSecreto) {
-                console.log(`¡Correcto! El número era ${numeroSecreto}. Lo adivinaste en ${intentos} intentos.`);
-                adivinado = true;
-            } else if (intento < numeroSecreto) {
-                console.log("El número es mayor.");
-            } else {
-                console.log("El número es menor.");
-            }
+        const original = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        const codificado = "DEFGHIJKLMNOPQRSTUVWXYZABCdefghijklmnopqrstuvwxyzabc";
+        let resultado = "";
+        const texto = prompt("Introduce un texto: ");
+        for (let i = 0; i < texto.length; i++) {
+            const index = original.indexOf(texto[i]);
+            resultado += index === -1 ? texto[i] : codificado[index];
         }
+        console.log(`Texto codificado: ${resultado}`);
+        let decodificado = "";
+        for (let i = 0; i < resultado.length; i++) {
+            const index = codificado.indexOf(resultado[i]);
+            decodificado += index === -1 ? resultado[i] : original[index];
+        }
+        console.log(`Texto decodificado: ${decodificado}`);
         ```
-
+        -->
+    
 ---
 

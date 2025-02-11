@@ -317,13 +317,16 @@ La consola es una herramienta para interactuar con el sistema operativo y ejecut
 1. Investiga cómo instalar un paquete de npm.
 2. Instala `chalk` y úsalo para cambiar el color del texto en la consola:
    ```bash
-   npm install chalk
+   npm install chalk@4
    ```
 3. Código de ejemplo:
    ```javascript linenums="1" title="Uso de chalk"
-   import chalk from 'chalk';
+   const chalk = require('chalk');
    console.log(chalk.green("¡Texto en color verde!"));
    ```
+
+!!! important "Version de `chalk`"
+      Asegúrate de instalar la versión 4 de `chalk` para evitar problemas de compatibilidad.
 
 ---
 

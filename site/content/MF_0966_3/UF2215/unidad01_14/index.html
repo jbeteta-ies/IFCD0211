@@ -772,16 +772,228 @@
   
   
   
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_3_3" id="__nav_2_1_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    T02 Arrays y Objetos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            T02 Arrays y Objetos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../unidad2/" class="md-nav__link">
+      <a href="../unidad02_21/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    T02 Funciones y manejo de errores
+    2.1 Arrays
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad02_22/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2 Objetos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad02_23/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.3 Persistencia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad02_24.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.4 Clases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_3_4" id="__nav_2_1_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    T03 Funciones y manejo de errores
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            T03 Funciones y manejo de errores
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad03_31/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.1 Funciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad03_32/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.2 Manejo de errores
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad03_33/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.3 Asincronía en JS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1105,21 +1317,31 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">2</span><span class="p">);</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">3</span><span class="p">);</span>
-<span class="c1">// ... y así hasta 10</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">4</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">5</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">6</span><span class="p">);</span>
+<span class="p">...</span>
+<span class="p">...</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">100</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p>Con un bucle, podemos reducir este código a:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">100</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <div class="admonition important">
-<p class="admonition-title">Important</p>
-<h4 id="cuando-utilizar-cada-tipo-de-bucle"><strong>¿Cuándo utilizar cada tipo de bucle?</strong></h4>
+<p class="admonition-title">Tipos de bucles en JavaScript</p>
+<h4 id="tipos-de-bucles-en-js-y-cuando-utilizarlos"><strong>Tipos de bucles en JS y cuándo utilizarlos</strong></h4>
 <ul>
 <li><strong><code>for</code></strong>: Se utiliza cuando sabemos de antemano cuántas iteraciones queremos realizar.</li>
 <li><strong><code>while</code></strong>: Ideal para cuando no sabemos exactamente cuántas veces se repetirá el bloque, pero tenemos una condición que lo determina.</li>
@@ -1129,28 +1351,30 @@
 <hr />
 <h3 id="bucle-for"><strong>Bucle For</strong></h3>
 <h4 id="que-es-un-bucle-for"><strong>¿Qué es un bucle for?</strong></h4>
-<p>El bucle <code>for</code> se utiliza para repetir un bloque de código un número específico de veces. Consiste en tres partes:</p>
+<p>El bucle <code>for</code> se utiliza para repetir un bloque de código un número específico de veces. Consiste en tres partes: <code>for (inicialización; condición; actualización) {bloque de instrucciones;}</code>.</p>
 <ol>
-<li><strong>Inicialización</strong>: Se define la variable de control que se usará para contar las iteraciones. Esto se realiza solo una vez al inicio del bucle.</li>
 <li>
-<p>Ejemplo: <code>let i = 1;</code> establece que el contador comienza en 1.</p>
+<p><strong>Inicialización</strong>: Se define la variable de control que se usará para contar las iteraciones. Esto se realiza solo una vez al inicio del bucle.
+         - Ejemplo: <code>let i = 1;</code> establece que el contador comienza en 1.</p>
 </li>
 <li>
 <p><strong>Condición</strong>: Es la expresión lógica que se evalúa antes de cada iteración. Mientras sea <code>true</code>, el bucle continuará ejecutándose.</p>
-</li>
-<li>
-<p>Ejemplo: <code>i &lt;= 5</code> asegura que el bucle se detendrá cuando <code>i</code> sea mayor a 5.</p>
+<ul>
+<li>Ejemplo: <code>i &lt;= 5</code> asegura que el bucle se detendrá cuando <code>i</code> sea mayor a 5.</li>
+</ul>
 </li>
 <li>
 <p><strong>Actualización</strong>: Es la operación que modifica la variable de control al final de cada iteración. Generalmente, se incrementa o decrementa.</p>
-</li>
+<ul>
 <li>Ejemplo: <code>i++</code> incrementa el valor de <code>i</code> en 1 después de cada iteración.</li>
+</ul>
+</li>
 </ol>
 <h4 id="sintaxis-de-for"><strong>Sintaxis de for</strong></h4>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Sintaxis de For</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="nx">inicialización</span><span class="p">;</span><span class="w"> </span><span class="nx">condición</span><span class="p">;</span><span class="w"> </span><span class="nx">actualización</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Código a ejecutar en cada iteración</span>
+<span class="w">    </span><span class="c1">// blque de óódigo a ejecutar en cada iteración</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="ejemplo"><strong>Ejemplo</strong></h4>
@@ -1252,11 +1476,21 @@
 <p class="admonition-title">Importante</p>
 <p>Todos los ejercicios deben resolverse utilizando los tres tipos de bucles: <code>for</code>, <code>while</code> y <code>do-while</code>. Esto ayuda a practicar y entender las diferencias y aplicaciones de cada tipo de bucle.</p>
 </div>
-<h4 id="ejercicio-1-linea-de-asteriscos"><strong>Ejercicio 1: Línea de asteriscos</strong></h4>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 1: Imprimir un asterisco</p>
 <ul>
-<li>Usa un bucle para imprimir una línea de 10 asteriscos (<code>**********</code>). Resuelve este ejercicio utilizando los tres tipos de bucles: <code>for</code>, <code>while</code> y <code>do-while</code>.</li>
+<li>Usa un bucle para imprimir un * (<code>*</code>) en 10 veces. Resuelve este ejercicio utilizando los tres tipos de bucles: <code>for</code>, <code>while</code> y <code>do-while</code>.</li>
 </ul>
-<div class="highlight"><pre><span></span><code>**********
+<div class="highlight"><pre><span></span><code>*
+*
+*
+*
+*
+*
+*
+*
+*
+*
 </code></pre></div>
 <details class="example">
 <summary>Solución ejercicio 1 con bucle for</summary>
@@ -1283,8 +1517,452 @@
 <span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span>
 </code></pre></div>
 </details>
-<hr />
-<h4 id="ejercicio-8-numeros-primos-del-1-al-100"><strong>Ejercicio 8: Números primos del 1 al 100</strong></h4>
+<div class="admonition question">
+<p class="admonition-title">Reto adicional</p>
+<ul>
+<li>Modifica el ejercicio, de manera que tengamos una constante <code>N</code> que determine cuántas veces se imprime el asterisco.</li>
+</ul>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 2: Imprimir una secuencia de números</p>
+<ul>
+<li>Escribe un programa que imprima en la consola los números del 1 al 10, uno por línea.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Imprimir números del 1 al 10</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="example">
+<summary>Solucion con bucle while</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Imprimir números del 1 al 10</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="example">
+<summary>Solución con bucle do-while</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Imprimir números del 1 al 10</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<div class="admonition question">
+<p class="admonition-title">Retos adicional</p>
+<ul>
+<li>Modifica el programa para que imprima los números del 10 al 1, en orden descendente.</li>
+<li>Define una constante <code>N</code> que determine cuántos números se imprimirán.</li>
+</ul>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 3: Suma de los primeros 100 números</p>
+<ul>
+<li>Crea un programa que calcule la suma de los números del 1 al 100.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Suma de los primeros N números</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce un número: &quot;</span><span class="p">));</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">100</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">suma</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">i</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;La suma es:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">suma</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="example">
+<summary>Solución con bucle while</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Suma de los primeros N números</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce un número: &quot;</span><span class="p">));</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">100</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">suma</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">i</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;La suma es:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">suma</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="example">
+<summary>Solución con bucle do-while</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Suma de los primeros N números</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce un número: &quot;</span><span class="p">));</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">suma</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">i</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">100</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;La suma es:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">suma</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<div class="admonition question">
+<p class="admonition-title">Reto adicional</p>
+<ul>
+<li>Modifica el programa para que solicite al usuario un número <code>N</code> y calcule la suma de los números del 1 al <code>N</code>.</li>
+</ul>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 4: Tabla de multiplicar</p>
+<ul>
+<li>Desarrolla un programa que pida al usuario un número entero y muestre en la consola la tabla de multiplicar de ese número del 1 al 10. El formato debe ser:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>2 x 1 = 2
+2 x 2 = 4
+...
+...
+2 x 10 = 20
+</code></pre></div>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Tabla de multiplicar</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce un número: &quot;</span><span class="p">));</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">num</span><span class="si">}</span><span class="sb"> x </span><span class="si">${</span><span class="nx">i</span><span class="si">}</span><span class="sb"> = </span><span class="si">${</span><span class="nx">num</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">i</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="example">
+<summary>Solución con bucle while</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Tabla de multiplicar</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce un número: &quot;</span><span class="p">));</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">num</span><span class="si">}</span><span class="sb"> x </span><span class="si">${</span><span class="nx">i</span><span class="si">}</span><span class="sb"> = </span><span class="si">${</span><span class="nx">num</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">i</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="example">
+<summary>Solución con bucle do-while</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Tabla de multiplicar</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce un número: &quot;</span><span class="p">));</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">num</span><span class="si">}</span><span class="sb"> x </span><span class="si">${</span><span class="nx">i</span><span class="si">}</span><span class="sb"> = </span><span class="si">${</span><span class="nx">num</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">i</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<div class="admonition question">
+<p class="admonition-title">Reto adicional</p>
+<ul>
+<li>Modifica el programa tenga dos constantes <code>MIN</code> y <code>MAX</code>. Por ejemlo, si <code>MIN = 5</code> y <code>MAX = 15</code>, el programa mostrará la tabla de multiplicar del 5 al 15.</li>
+</ul>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 5: Números pares entre 1 y N</p>
+<ul>
+<li>Escribe un programa que simprima en la consola todos los números pares desde 1 hasta 100.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Números pares hasta N</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce un número: &quot;</span><span class="p">));</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">100</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mf">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="example">
+<summary>Solución con bucle while</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Números pares hasta N</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce un número: &quot;</span><span class="p">));</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">100</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">i</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="example">
+<summary>Solución con bucle do-while</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Números pares hasta N</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce un número: &quot;</span><span class="p">));</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+<span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">i</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">100</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<div class="admonition question">
+<p class="admonition-title">Reto adicional</p>
+<ul>
+<li>Modifica el programa para que solicite al usuario un número <code>N</code> y muestre los números pares desde 1 hasta <code>N</code>.</li>
+</ul>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 6: Invertir una cadena</p>
+<ul>
+<li>Crea un programa que pida al usuario una cadena de texto y luego imprima la cadena invertida.</li>
+<li>Aunque aún no hemos vista arrays, saber que con la expresión <code>texto[i]</code> se puede acceder a cada carácter de la cadena (la i debe estar entre 0 y la longitud de la cadena(<code>length</code>)).</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Invertir una cadena</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce una cadena: &quot;</span><span class="p">);</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">invertida</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">texto</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">--</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">invertida</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">texto</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Cadena invertida:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">invertida</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="example">
+<summary>Solución con bucle while</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Invertir una cadena</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce una cadena: &quot;</span><span class="p">);</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">invertida</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">texto</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">invertida</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">texto</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+<span class="w">    </span><span class="nx">i</span><span class="o">--</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Cadena invertida:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">invertida</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="example">
+<summary>Solución con bucle do-while</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Invertir una cadena</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce una cadena: &quot;</span><span class="p">);</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">invertida</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">texto</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">invertida</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">texto</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+<span class="w">    </span><span class="nx">i</span><span class="o">--</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Cadena invertida:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">invertida</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 7: Contar vocales en una cadena</p>
+<ul>
+<li>Desarrolla un programa que solicite al usuario una cadena de texto y cuente cuántas vocales contiene.</li>
+<li>Para saber si una letra es una vocal podemos utilizar un <code>if</code> o utilizar el método <a href="https://www.w3schools.com/Jsref/jsref_includes.asp"><code>includes()</code></a> de los strings.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<p>```javascript linenums="1" title="Contar vocales en una cadena"
+const prompt = require("prompt-sync")();
+let texto = prompt("Introduce una cadena: ").toLowerCase();
+let contador = 0;
+let vocales = "aeiou";
+for (let i = 0; i &lt; texto.length; i++) {
+    if (vocales.includes(texto[i])) {
+        contador++;
+    }
+}
+console.log("Número de vocales:", contador);</p>
+</details>
+<details class="example">
+<summary>Solución con bucle while</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Contar vocales en una cadena</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce una cadena: &quot;</span><span class="p">).</span><span class="nx">toLowerCase</span><span class="p">();</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">contador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">vocales</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;aeiou&quot;</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">texto</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">vocales</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">texto</span><span class="p">[</span><span class="nx">i</span><span class="p">]))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">contador</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Número de vocales:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">contador</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="example">
+<summary>Solución con bucle do-while</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Contar vocales en una cadena</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce una cadena: &quot;</span><span class="p">).</span><span class="nx">toLowerCase</span><span class="p">();</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">contador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">vocales</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;aeiou&quot;</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">vocales</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">texto</span><span class="p">[</span><span class="nx">i</span><span class="p">]))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">contador</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">texto</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Número de vocales:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">contador</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<h4 id="bucles-anidados"><strong>bucles anidados</strong></h4>
+<p>Los bucles anidados son bucles que se encuentran dentro de otros bucles. Son útiles para realizar tareas más complejas que requieren múltiples iteraciones. 
+Sintaxis de un bucle <code>for</code> anidado:</p>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bucle For Anidado</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span><span class="w"> </span><span class="nx">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="nx">j</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+Este tipo de bucles se utilizan comúnmente para recorrer matrices, tablas, realizar cálculos matriciales, entre otros.</p>
+<p>Sistaxis de un bucle <code>while</code> anidado:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bucle While Anidado</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="nx">j</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">j</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Este tipo de bucles se utilizan comúnmente cuando no se conoce el número exacto de iteraciones y se necesita una condición de salida más compleja.</p>
+<p>También podemos encontrar bucles anidados mixtos como un bucle <code>for</code> dentro de un bucle <code>do-while</code> o viceversa.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bucle Mixto Anidado</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span><span class="w"> </span><span class="nx">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="nx">j</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition info">
+<p class="admonition-title">Nota</p>
+<p>Es importante tener en cuenta que los bucles anidados pueden aumentar la complejidad del código y hacerlo más difícil de entender. Por lo tanto, es recomendable utilizarlos con moderación y asegurarse de que sean necesarios para la tarea en cuestión.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 8: Números primos</p>
 <ul>
 <li>Crea un programa que calcule y muestre todos los números primos entre 1 y 100.</li>
 </ul>
@@ -1355,8 +2033,10 @@
 <span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">num</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">100</span><span class="p">);</span>
 </code></pre></div>
 </details>
+</div>
 <hr />
-<h4 id="ejercicio-9-triangulo-rectangulo"><strong>Ejercicio 9: Triángulo rectángulo</strong></h4>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 9, triángulo rectángulo</p>
 <ul>
 <li>Usa un bucle para imprimir un triángulo rectángulo de asteriscos:</li>
 </ul>
@@ -1421,43 +2101,75 @@
 </code></pre></div>
 </details>
 <hr />
-<h4 id="ejercicio-10-tabla-de-multiplicar"><strong>Ejercicio 10: Tabla de multiplicar</strong></h4>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 10: Tablero ajedrez</p>
 <ul>
-<li>Crea un programa que solicite al usuario un número y escriba la tabla de multiplicar del 1 al 10 en el siguiente formato:</li>
+<li>Crea un programa que imprima un tablero de ajedrez de 8x8 en la consola, utilizando los caracteres <code>#</code> y <code></code> (espacio en blanco).</li>
 </ul>
-<div class="highlight"><pre><span></span><code>2 * 1 = 2
-2 * 2 = 4
-...
-2 * 10 = 20
+<div class="highlight"><pre><span></span><code># # # #
+ # # # #
+# # # #
+ # # # #    
+# # # #
+ # # # #
+# # # #
+ # # # #
 </code></pre></div>
 <details class="example">
-<summary>Solución ejercicio 10 con bucle for</summary>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// Reemplazar por el número deseado</span>
-<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">numero</span><span class="si">}</span><span class="sb"> * </span><span class="si">${</span><span class="nx">i</span><span class="si">}</span><span class="sb"> = </span><span class="si">${</span><span class="nx">numero</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">i</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<summary>Solución con for</summary>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">8</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">linea</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">8</span><span class="p">;</span><span class="w"> </span><span class="nx">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="nx">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">j</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">linea</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s2">&quot;#&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">linea</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s2">&quot; &quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">linea</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
 </details>
 <details class="example">
-<summary>Solución ejercicio 10 con bucle while</summary>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// Reemplazar por el número deseado</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
-<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">numero</span><span class="si">}</span><span class="sb"> * </span><span class="si">${</span><span class="nx">i</span><span class="si">}</span><span class="sb"> = </span><span class="si">${</span><span class="nx">numero</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">i</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<summary>Solución con while</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">8</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">linea</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">8</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="nx">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">j</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">linea</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s2">&quot;#&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">linea</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s2">&quot; &quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="nx">j</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">linea</span><span class="p">);</span>
 <span class="w">    </span><span class="nx">i</span><span class="o">++</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 </details>
 <details class="example">
-<summary>Solución ejercicio 10 con bucle do-while</summary>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// Reemplazar por el número deseado</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<summary>Solución con do-while</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
 <span class="k">do</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">numero</span><span class="si">}</span><span class="sb"> * </span><span class="si">${</span><span class="nx">i</span><span class="si">}</span><span class="sb"> = </span><span class="si">${</span><span class="nx">numero</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">i</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">linea</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="w">    </span><span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="nx">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">j</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">linea</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s2">&quot;#&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">linea</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s2">&quot; &quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="nx">j</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">8</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">linea</span><span class="p">);</span>
 <span class="w">    </span><span class="nx">i</span><span class="o">++</span><span class="p">;</span>
-<span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">8</span><span class="p">);</span>
 </code></pre></div>
 </details>
+</div>
 <hr />
 <h3 id="errores-comunes-en-bucles"><strong>Errores Comunes en Bucles</strong></h3>
 <p>Los bucles son herramientas muy útiles, pero también pueden generar errores si no se utilizan correctamente. A continuación, se explican algunos de los errores más comunes:</p>
@@ -1659,6 +2371,67 @@
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<h3 id="ejercicios-de-bucles-en-este-caso-debes-determinar-que-tipo-de-bucle-es-el-mas-adecuado-para-cada-ejercicio">Ejercicios de Bucles, en este caso debes determinar qué tipo de bucle es el más adecuado para cada ejercicio.</h3>
+<h4 id="ejercicio-1-pin-de-seguridad"><strong>Ejercicio 1: PIN de seguridad</strong></h4>
+<ul>
+<li>Crea un programa que solicite al usuario un PIN de seguridad de 4 dígitos. Si el PIN ingresado no es correcto, el programa debe mostrar un mensaje de error y permitir al usuario intentarlo nuevamente. El programa debe finalizar cuando el PIN ingresado sea correcto. O si el usuario ha intentado 3 veces. </li>
+<li>Ampliación: Si el usuario ha intentado 3 veces, el programa debe bloquearse durante 30 segundos antes de permitir nuevos intentos, investiga como bloquear el rograma 30 segundos.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>Introduce tu PIN de 4 dígitos: 1234
+PIN incorrecto. Inténtalo de nuevo.
+Introduce tu PIN de 4 dígitos: 5678
+PIN incorrecto. Inténtalo de nuevo.
+Introduce tu PIN de 4 dígitos: 9999
+PIN incorrecto. Inténtalo de nuevo.
+El programa se bloqueará durante 30 segundos.
+</code></pre></div>
+<h4 id="ejercicio-2-adivina-el-numero"><strong>Ejercicio 2: Adivina el número</strong></h4>
+<ul>
+<li>Crea un programa que genere un número aleatorio entre 1 y 100. Luego, solicita al usuario que adivine el número. Si el número ingresado es mayor que el número generado, muestra un mensaje indicando que el número es demasiado alto. Si el número ingresado es menor que el número generado, muestra un mensaje indicando que el número es demasiado bajo. El programa debe continuar solicitando al usuario que adivine el número hasta que lo adivine correctamente.</li>
+<li>Investiga como generar <a href="https://www.w3schools.com/js/js_random.asp">números aleatorios</a> en JavaScript. </li>
+</ul>
+<div class="highlight"><pre><span></span><code>Adivina el número entre 1 y 100: 50
+El número es demasiado bajo. Inténtalo de nuevo.
+Adivina el número entre 1 y 100: 75
+El número es demasiado alto. Inténtalo de nuevo.
+Adivina el número entre 1 y 100: 60
+¡Felicidades! Has adivinado el número.
+</code></pre></div>
+<h4 id="ejercicio-3-calculadora-de-factorial"><strong>Ejercicio 3: Calculadora de factorial</strong></h4>
+<ul>
+<li>Crea un programa que solicite al usuario un número entero positivo y calcule su factorial. El factorial de un número <code>n</code> se define como el producto de todos los enteros positivos menores o iguales a <code>n</code>.</li>
+<li>Por ejemplo, el factorial de 5 (<code>5!</code>) es <code>5 x 4 x 3 x 2 x 1 = 120</code>.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>Introduce un número entero positivo: 5
+El factorial de 5 es: 120
+</code></pre></div>
+<h4 id="ejercicio-4-validacion-entrada-de-datos"><strong>Ejercicio 4: Validación entrada de datos</strong></h4>
+<ul>
+<li>Crea un programa que solicite al usuario un número entero positivo. Si el usuario ingresa un valor no numérico o un número negativo, el programa debe mostrar un mensaje de error y solicitar al usuario que ingrese un número válido. El programa debe continuar solicitando al usuario que ingrese un número válido hasta que lo haga.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>Introduce un número entero positivo: hola
+Error: Debes introducir un número entero positivo.
+Introduce un número entero positivo: -5
+Error: Debes introducir un número entero positivo.
+Introduce un número entero positivo: 10
+Número válido: 10
+</code></pre></div>
+<h4 id="ejercicio-5-validacion-de-datos-con-operacion"><strong>Ejercicio 5: Validación de datos con operación</strong></h4>
+<ul>
+<li>Pide al usuario que introduzca un número entero y positivo. Si es correcto que lo sume en un acumulador. Si el usuario introduce un número negativo o no entero, debe mostrar un mensaje de error y solicitar al usuario que introduzca un número válido. El programa finalizará cuando el usuario introduzca un <code>0</code>, en ese caso mostrará el total acumulado</li>
+<li>Ampliación: Calcula también la media de los números introducidos.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>Introduce un número entero positivo: 5
+Introduce un número entero positivo: 10
+Introduce un número entero positivo: hola
+Error: Debes introducir un número entero positivo.
+Introduce un número entero positivo: -5
+Error: Debes introducir un número entero positivo.
+Introduce un número entero positivo: 15
+Introduce un número entero positivo: 0
+Total acumulado: 30
+Media de los números introducidos: 10
+</code></pre></div>
 
 
 

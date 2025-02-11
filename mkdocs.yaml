@@ -43,7 +43,15 @@ nav:
               - 1.4 Bucles: content/MF_0966_3/UF2215/unidad01_14.md
               - 1.5 Uso avanzado de Números, cadenas y fechas: content/MF_0966_3/UF2215/unidad01_15.md
               - 1.6 Ejercicios: content/MF_0966_3/UF2215/unidad01_16.md
-            - T02 Funciones y manejo de errores: content/MF_0966_3/UF2215/unidad2.md
+            - T02 Arrays y Objetos: 
+              - 2.1 Arrays: content/MF_0966_3/UF2215/unidad02_21.md
+              - 2.2 Objetos: content/MF_0966_3/UF2215/unidad02_22.md
+              - 2.3 Persistencia: content/MF_0966_3/UF2215/unidad02_23.md
+              - 2.4 Clases: content/MF_0966_3/UF2215/unidad02_24.md
+            - T03 Funciones y manejo de errores: 
+              - 3.1 Funciones: content/MF_0966_3/UF2215/unidad03_31.md
+              - 3.2 Manejo de errores: content/MF_0966_3/UF2215/unidad03_32.md
+              - 3.3 Asincronía en JS: content/MF_0966_3/UF2215/unidad03_33.md
       - MF0967_3:
           - UF2216: content/MF_0967_3/UF2216.md
           - UF2217: content/MF_0967_3/UF2217.md

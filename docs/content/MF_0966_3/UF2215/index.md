@@ -27,11 +27,11 @@ En este módulo vamos a realizar las siguientes modificaciones aprovechando los 
 | **Duración**             | 70 horas                                                                   |
 
 
+
 ## Contenidos Reducidos (100 horas)
 
 ### **Objetivo General**
 Aprender los fundamentos de la programación utilizando JavaScript, con un enfoque inicial en lógica y estructuras del lenguaje, para luego integrar con HTML en el desarrollo de páginas web.
-
 
 ### **Unidad 1: Configuración del Entorno y Fundamentos de JavaScript (20 horas)**
 
@@ -76,18 +76,34 @@ Aprender los fundamentos de la programación utilizando JavaScript, con un enfoq
 - Fechas de pago
 - Adivinanzas
 
+---
+
+### **Unidad 2: Arrays, Objetos y Clases (30 horas)**
+
+- **2.1** Arrays y su manipulación (8h)
+       - Creación y uso de arrays.
+       - Métodos comunes: `push`, `pop`, `shift`, `unshift`, `slice`, `splice`, etc.
+       - Iteración de arrays: `for`, `forEach`, `map`, `filter`, `reduce`.
+- **2.2** Objetos y su uso (7h)
+       - Declarando objetos
+       - Métodos
+       - La palabra clave `this`
+       - Constructores de objetos
+       - El operador `new`
+       - Herencia y prototipos
+- **2.3** Persistencia JS con JSON (7h)
+       - Introducción a JSON.
+       - Serialización y deserialización de objetos.
+       - Almacenamiento de datos en archivos JSON.
+
+
+**Objetivo:** Trabajar con estructuras más complejas como arrays, objetos y clases para modelar datos y estructuras reales.
 
 ---
 
-**Objetivo:** Familiarizar a los alumnos con el entorno de desarrollo, la sintaxis básica de JavaScript y las estructuras fundamentales de control.
+### **Unidad 3: Funciones y Manejo de Errores (20 horas)**
 
----
-
-# **Unidad 2: Funciones y Manejo de Errores (20 horas)**
-
-# **Unidad 2: Funciones y Manejo de Errores**
-
-## **2.1 Funciones en JavaScript (12h)**
+## **3.1 Funciones en JavaScript (12h)**
 - Declaración y uso de funciones.
 - Parámetros y valores de retorno.
 - Funciones anónimas.
@@ -99,39 +115,19 @@ Aprender los fundamentos de la programación utilizando JavaScript, con un enfoq
 - Funciones anónimas autoejecutadas (IIFE).
 - Funciones flecha (`arrow functions`).
 
-## **2.2 Manejo de Errores en JavaScript (3h)**
+## **3.2 Manejo de Errores en JavaScript (3h)**
 - Uso de bloques `try`, `catch` y `finally`.
 - Lanzar errores con `throw`.
 - Tipos de errores comunes en JavaScript (sintaxis, referencia, tipo, etc.).
 - Personalización de mensajes de error.
 
-## **2.3 Asincronía en JavaScript (5h)**
+## **3.3 Asincronía en JavaScript (5h)**
 - Callbacks y su problema (`callback hell`).
 - Promesas (`Promise`).
 - `async/await` y su uso en JavaScript.
 
-        - Redirección de salida en terminal (`>`, `2>`, `2>&1`).
-
-
-**Objetivo:** Modularizar código utilizando funciones, manejar errores. Conocer y aplicar conceptos básicos de asincronía en JavaScript.
----
-
-### **Unidad 3: Arrays, Objetos y Clases (30 horas)**
-- **3.1** Arrays y su manipulación (8h)
-       - Creación y uso de arrays.
-       - Métodos comunes: `push`, `pop`, `shift`, `unshift`, `slice`, `splice`, etc.
-       - Iteración de arrays: `for`, `forEach`, `map`, `filter`, `reduce`.
-- **3.2** Objetos y su uso (7h)
-       - Concepto de objeto y sus propiedades.
-       - Creación y manipulación de objetos.
-       - Métodos en objetos.
-- **3.3** Clases en JavaScript (15h)
-       - Declaración de clases y uso.
-       - Constructores.
-       - Métodos y atributos.
-       - Herencia básica.
-
-**Objetivo:** Trabajar con estructuras más complejas como arrays, objetos y clases para modelar datos y estructuras reales.
+## **3.4 Ejemplo práctico con Async/Await**
+- Creación de un microservicio REST con Express.
 
 ---
 

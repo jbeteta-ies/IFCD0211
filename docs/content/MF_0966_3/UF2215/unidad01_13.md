@@ -537,7 +537,7 @@ Las **Leyes de De Morgan** son reglas fundamentales en lógica y álgebra boolea
 
 - Primera Ley (`!(A && B) ≡ !A || !B`)
 
-| A     | B     | A && B | !(A && B) | !A    | !B    | !A `\|\|` !B |
+| A     | B     | A && B | !(A && B) | !A    | !B    | !A &#124;&#124; !B |
 |-------|-------|--------|-----------|-------|-------|----------|
 | true  | true  | true   | false     | false | false | false    |
 | true  | false | false  | true      | false | true  | true     |
@@ -546,7 +546,8 @@ Las **Leyes de De Morgan** son reglas fundamentales en lógica y álgebra boolea
 
 - Segunda Ley (`!(A || B) ≡ !A && !B`)
 
-| A     | B     | A || B | !(A `\|\|` B) | !A    | !B    | !A && !B |
+
+| A     | B     | A &#124;&#124; B | !(A &#124;&#124; B) | !A    | !B    | !A && !B |
 |-------|-------|--------|-----------|-------|-------|----------|
 | true  | true  | true   | false     | false | false | false    |
 | true  | false | true   | false     | false | true  | false    |
@@ -896,7 +897,7 @@ switch (expresión) {
             case "moto":
                 console.log("Una moto tiene 2 ruedas.");
                 break;
-            case "camión":
+            case "camionn":
                 console.log("Un camión tiene más de 4 ruedas.");
                 break;
             default:
@@ -979,7 +980,7 @@ switch (expresión) {
             case "manzana":
                 console.log("Una manzana puede ser roja o verde.");
                 break;
-            case "plátano":
+            case "platano":
                 console.log("Un plátano es amarillo.");
                 break;
             case "naranja":
@@ -987,36 +988,6 @@ switch (expresión) {
                 break;
             default:
                 console.log("Fruta no reconocida.");
-        }
-        ```javascript linenums="1" title="Días de la semana"
-        const prompt = require("prompt-sync")();
-
-        let dia = parseInt(prompt("Introduce un número del 1 al 7: "));
-
-        switch (dia) {
-            case 1:
-                console.log("Lunes");
-                break;
-            case 2:
-                console.log("Martes");
-                break;
-            case 3:
-                console.log("Miércoles");
-                break;
-            case 4:
-                console.log("Jueves");
-                break;
-            case 5:
-                console.log("Viernes");
-                break;
-            case 6:
-                console.log("Sábado");
-                break;
-            case 7:
-                console.log("Domingo");
-                break;
-            default:
-                console.log("Número fuera de rango.");
         }
         ```
 
@@ -1028,7 +999,7 @@ switch (expresión) {
 El operador ternario es una forma compacta de escribir una expresión condicional en JavaScript. Tiene la siguiente estructura:
 
 ```javascript linenums="1" title="Sintaxis del Operador Ternario"
-condición ? expresión_si_verdadero : expresión_si_falso;
+let resultado = (condición) ? valor_si_verdadero : valor_si_falso;
 ```
 
 **Ejemplo**: Determinar si un número es par o impar.
