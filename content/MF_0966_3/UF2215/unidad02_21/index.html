@@ -1489,10 +1489,12 @@
 </div>
 <h4 id="splice-agregar-o-eliminar-elementos"><strong><code>splice()</code> - Agregar o eliminar elementos</strong></h4>
 <p>Permite agregar, eliminar o reemplazar elementos en una posición específica.</p>
-<p><strong>Parámetros:</strong>
-1. <strong>Índice de inicio</strong>: Posición donde se comenzará la modificación.
-2. <strong>Número de elementos a eliminar</strong>: Define cuántos elementos se eliminan desde el índice indicado.
-3. <strong>Elementos a agregar (opcional)</strong>: Elementos que se agregarán en la posición indicada.</p>
+<p><strong>Parámetros:</strong></p>
+<ol>
+<li><strong>Índice de inicio</strong>: Posición donde se comenzará la modificación.</li>
+<li><strong>Número de elementos a eliminar</strong>: Define cuántos elementos se eliminan desde el índice indicado.</li>
+<li><strong>Elementos a agregar (opcional)</strong>: Elementos que se agregarán en la posición indicada.</li>
+</ol>
 <div class="admonition example">
 <p class="admonition-title">Ejemplo de <code>splice()</code></p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo de splice()</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -1595,9 +1597,23 @@
 </div>
 <hr />
 <h3 id="metodos-avanzados-de-arrays"><strong>Métodos Avanzados de Arrays</strong></h3>
-<p>Estos métodos permiten realizar operaciones más avanzadas sobre los arrays.</p>
+<p>Estos métodos permiten realizar operaciones más avanzadas sobre los arrays. En estos métodos necesitamos definir una función que se aplicará a cada elemento del array, seguramente cuando veamos las <code>funciones</code>y las <code>funciones flecha</code> en el tema siguiente te resultará más sencillo entender estos métodos.</p>
 <h4 id="some-verificar-si-algun-elemento-cumple-una-condicion"><strong><code>some()</code> - Verificar si algún elemento cumple una condición</strong></h4>
-<p>Devuelve <code>true</code> si al menos un elemento cumple la condición dada.</p>
+<p>Devuelve <code>true</code> si al menos un elemento cumple la condición dada. Sería como un <code>OR</code> lógico a todos los elementos, devolviendo <code>true</code> si al menos uno cumple la condición.</p>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de <code>some()</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo de some()</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">ages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">18</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">];</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">checkAdult</span><span class="p">(</span><span class="nx">age</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">age</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">18</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nx">ages</span><span class="p">.</span><span class="nx">some</span><span class="p">(</span><span class="nx">checkAdult</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p>El mismo ejemplo utilizando una función flecha.</p>
 <div class="admonition example">
 <p class="admonition-title">Ejemplo de <code>some()</code></p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo de some()</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -1611,6 +1627,20 @@
 <p>Devuelve <code>true</code> si todos los elementos cumplen la condición dada.</p>
 <div class="admonition example">
 <p class="admonition-title">Ejemplo de <code>every()</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo de some()</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">ages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">18</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">];</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">checkAdult</span><span class="p">(</span><span class="nx">age</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">age</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">18</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nx">ages</span><span class="p">.</span><span class="nx">every</span><span class="p">(</span><span class="nx">checkAdult</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p>El mismo ejemplo utilizando una función flecha.</p>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de <code>every()</code></p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo de every()</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">edades</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span><span class="w"> </span><span class="mf">40</span><span class="p">];</span>
@@ -1620,6 +1650,22 @@
 </div>
 <h4 id="filter-filtrar-elementos-de-un-array"><strong><code>filter()</code> - Filtrar elementos de un array</strong></h4>
 <p>Devuelve un nuevo array con los elementos que cumplen una condición.</p>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de <code>filter()</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo de some()</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">ages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span><span class="w"> </span><span class="mf">40</span><span class="p">];</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">checkAdult</span><span class="p">(</span><span class="nx">age</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">age</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">18</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">mayoresDe18</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ages</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">checkAdult</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">mayoresDe18</span><span class="p">);</span><span class="w"> </span><span class="c1">// [20, 30, 40]</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p>El mismo ejemplo utilizando una función flecha.</p>
 <div class="admonition example">
 <p class="admonition-title">Ejemplo de <code>filter()</code></p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo de filter()</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -1634,6 +1680,20 @@
 <div class="admonition example">
 <p class="admonition-title">Ejemplo de <code>forEach()</code></p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo de forEach()</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">frutas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Manzana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Banana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Cereza&quot;</span><span class="p">];</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">mostrarFruta</span><span class="p">(</span><span class="nx">fruta</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fruta</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">frutas</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">mostrarFruta</span><span class="p">);</span><span class="w"> </span><span class="c1">// Manzana, Banana, Cereza</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p>Con una función flecha:</p>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de <code>forEach()</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo de forEach()</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">frutas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Manzana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Banana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Cereza&quot;</span><span class="p">];</span>
 <span class="nx">frutas</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">fruta</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fruta</span><span class="p">));</span>
 </code></pre></div></td></tr></table></div>
@@ -1644,19 +1704,44 @@
 <p class="admonition-title">Ejemplo de <code>map()</code></p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo de map()</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span><span class="w"> </span><span class="mf">40</span><span class="p">];</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">doblarNumero</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">numerosDobles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numeros</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">doblarNumero</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numerosDobles</span><span class="p">);</span><span class="w"> </span><span class="c1">// [20, 40, 60, 80]</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p>Utilizando una función flecha</p>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de <code>map()</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo de map()</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">edades</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span><span class="w"> </span><span class="mf">40</span><span class="p">];</span>
 <span class="kd">let</span><span class="w"> </span><span class="nx">edadesDobladas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">edades</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">edad</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">edad</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">edadesDobladas</span><span class="p">);</span><span class="w"> </span><span class="c1">// [20, 40, 60, 80]</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <h3 id="metodo-reduce-en-arrays"><strong>Método <code>reduce()</code> en Arrays</strong></h3>
-<p>El método <code>reduce()</code> permite recorrer un array y <strong>acumular</strong> un resultado a partir de los elementos. Se utiliza comúnmente para sumar valores, calcular promedios o transformar datos de una colección.</p>
+<p>El método <code>reduce()</code> permite recorrer un array y <strong>acumular</strong> un resultado a partir de los elementos. Se utiliza comúnmente para sumar valores, calcular promedios o transformar datos de una colección. És como una función de agregación en SQL, o un <code>reduce</code> en Excel.</p>
 <h4 id="sintaxis-de-reduce"><strong>Sintaxis de <code>reduce()</code></strong></h4>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Sintaxis de reduce()</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">sumar</span><span class="p">(</span><span class="nx">acumulador</span><span class="p">,</span><span class="w"> </span><span class="nx">elementoActual</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">acumulador</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">elementoActual</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">array</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="nx">sumar</span><span class="p">,</span><span class="w"> </span><span class="nx">valorInicial</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+Utilizando una función flecha
 <div class="highlight"><pre><span></span><code><span class="nx">array</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acumulador</span><span class="p">,</span><span class="w"> </span><span class="nx">elementoActual</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">// Operación sobre cada elemento</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">nuevoAcumulador</span><span class="p">;</span>
 <span class="p">},</span><span class="w"> </span><span class="nx">valorInicial</span><span class="p">);</span>
-</code></pre></div>
+</code></pre></div></p>
 <ul>
 <li><strong><code>acumulador</code></strong>: Es el valor acumulado en cada iteración.</li>
 <li><strong><code>elementoActual</code></strong>: Es el elemento actual del array en la iteración.</li>
@@ -1667,12 +1752,48 @@
 <p class="admonition-title">Ejemplo de uso de <code>reduce()</code></p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Suma de elementos con reduce()</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span><span class="w"> </span><span class="mf">40</span><span class="p">];</span>
+<span class="c1">// definimos una función que sumará dos números</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">sumar</span><span class="p">(</span><span class="nx">acumulador</span><span class="p">,</span><span class="w"> </span><span class="nx">num</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">acumulador</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">num</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">// llamamos a reduce con la función sumar y el valor inicial 0</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numeros</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="nx">sumar</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Suma total:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">suma</span><span class="p">);</span><span class="w"> </span><span class="c1">// 100</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p>El mismo ejemplo pero con la función flecha</p>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de uso de <code>reduce()</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Suma de elementos con reduce()</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span><span class="w"> </span><span class="mf">40</span><span class="p">];</span>
 <span class="kd">let</span><span class="w"> </span><span class="nx">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numeros</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acumulador</span><span class="p">,</span><span class="w"> </span><span class="nx">num</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">acumulador</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">num</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Suma total:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">suma</span><span class="p">);</span><span class="w"> </span><span class="c1">// 100</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <h4 id="ejemplo-contar-elementos-con-una-condicion"><strong>Ejemplo: Contar elementos con una condición</strong></h4>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de contar elementos con <code>reduce</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Contar elementos con reduce()</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">respuestas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">];</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">contarInsatisfechos</span><span class="p">(</span><span class="nx">contador</span><span class="p">,</span><span class="w"> </span><span class="nx">respuesta</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">respuesta</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">contador</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">contador</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">insatisfechos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">respuestas</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="nx">contarInsatisfechos</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Número de clientes insatisfechos:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">insatisfechos</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p>El miso ejemplo con la función flecha</p>
 <div class="admonition example">
 <p class="admonition-title">Ejemplo de contar elementos con <code>reduce()</code></p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Contar elementos con reduce()</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
