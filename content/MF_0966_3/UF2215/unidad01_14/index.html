@@ -1837,17 +1837,26 @@
 </ul>
 <details class="example">
 <summary>Solución</summary>
-<p>```javascript linenums="1" title="Contar vocales en una cadena"
-const prompt = require("prompt-sync")();
-let texto = prompt("Introduce una cadena: ").toLowerCase();
-let contador = 0;
-let vocales = "aeiou";
-for (let i = 0; i &lt; texto.length; i++) {
-    if (vocales.includes(texto[i])) {
-        contador++;
-    }
-}
-console.log("Número de vocales:", contador);</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Contar vocales en una cadena</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;prompt-sync&quot;</span><span class="p">)();</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Introduce una cadena: &quot;</span><span class="p">).</span><span class="nx">toLowerCase</span><span class="p">();</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">contador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">vocales</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;aeiou&quot;</span><span class="p">;</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">texto</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">vocales</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">texto</span><span class="p">[</span><span class="nx">i</span><span class="p">]))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">contador</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Número de vocales:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">contador</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
 </details>
 <details class="example">
 <summary>Solución con bucle while</summary>
