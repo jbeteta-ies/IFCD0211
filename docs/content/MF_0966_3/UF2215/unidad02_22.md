@@ -4,10 +4,10 @@ Fecha: 2025-01-20
 Keywords: MF_0966_3, UF2215, Programación, JavaScript, Objetos, Clases
 Form Module: MF_0966_3 - Consulta y manipulación de información contenida en gestores de datos
 Form Unit: UF 2215 - Herramientas de sistemas gestores de bases de datos. Pasarelas y medios de conexión
-Unit: 03 - Arrays, Objetos y Clases
+Unit: 02 - Arrays, Objetos y Clases
 ---
 
-# **Unidad 3: Arrays, Objetos y Clases**
+# **Unidad 2: Arrays, Objetos y Clases**
 
 ## **2.2 Objetos y su uso**
 
@@ -382,10 +382,37 @@ A continuación, se presentan una serie de ejercicios que ponen en práctica los
 
 ### **Clases en JavaScript**
 
-Desde ES6, JavaScript permite definir objetos mediante `class`. La 
+Desde ES6, JavaScript permite definir objetos mediante `class`. Las clases proporcionan una sintaxis más clara y sencilla para crear objetos y manejar herencia.
 
-??? example "Declaración de una clase"
-    ```javascript linenums="1" title="Definición de una clase"
+### **Sintaxis de una Clase**
+Una clase en JavaScript se declara utilizando la palabra clave `class`.
+
+!!! example "Sintaxis básica de una clase"
+    ```javascript linenums="1" title="Sintaxis de class"
+    class Empleado {
+        let nombre = "Carlos Pérez";
+        let edad = 35;
+        let puesto = "Desarrollador";
+    }
+    ```
+- **`class`**: Define una nueva clase.
+
+Ahora para utilizar esta clase, podemos crear un empleado y mostrar o modificar su edad:
+!!! example "Creación de una instancia de una clase"
+    ``` javascript linenums="1" title="Uso de una clase"
+    let emp = new Empleado();
+    console.log(emp.nombre); // Carlos Pérez
+    emp.edad = 36;
+    console.log(emp.edad); // 36
+    ```
+
+---
+
+### **El Constructor**
+El constructor es un método que se ejecuta cuando se crea una nueva instancia de la clase. Todas las clases tiene un constructor por defecto, pero podemos definir uno personalizado. La ventaja es que nos permite inicializar las propiedades de un objeto.
+
+??? example "Uso del constructor"
+    ```javascript linenums="1" title="Constructor en clase"
     class Empleado {
         constructor(nombre, edad, puesto) {
             this.nombre = nombre;
@@ -393,10 +420,143 @@ Desde ES6, JavaScript permite definir objetos mediante `class`. La
             this.puesto = puesto;
         }
     }
-    
-    let emp1 = new Empleado("Carlos Pérez", 35, "Desarrollador");
-    console.log(emp1.nombre); // Carlos Pérez
+    let emp = new Empleado("Carlos Pérez", 35, "Desarrollador");
     ```
+
+- **`constructor`**: Método especial para inicializar las propiedades de un objeto.
+
+El uso de la clase sería el mismo pero podemos inicializar las propiedades:
+!! example "Creación de una instancia de una clase"
+    ``` javascript linenums="1" title="Uso de una clase"
+    let emp = new Empleado("Carlos Pérez", 35, "Desarrollador");
+    console.log(emp.nombre); // Carlos Pérez
+    emp.edad = 36;
+    console.log(emp.edad); // 36
+    ```
+---
+
+### **Propiedades y Métodos**
+Podemos añadir propiedades y métodos a una clase.
+
+??? example "Propiedades y métodos"
+    ```javascript linenums="1" title="Propiedades y métodos en clase"
+    class Empleado {
+        constructor(nombre, edad, puesto) {
+            this.nombre = nombre;
+            this.edad = edad;
+            this.puesto = puesto;
+        }
+        saludar() {
+            console.log(`Hola, soy ${this.nombre}`);
+        }
+    }
+    ```
+
+---
+
+### **Getters y Setters**
+Los `getters` y `setters` permiten acceder y modificar propiedades de forma controlada. la diferencia entre una propiedad **_nombre** (con guion bajo, usada como convención para propiedades internas o privadas) y una propiedad **nombre** (pública). Aunque JavaScript no tiene propiedades privadas reales, esta convención ayuda a indicar que la propiedad no debería ser modificada directamente. 
+
+??? example "Uso de getters y setters"
+    ```javascript linenums="1" title="Getters y Setters"
+    class Empleado {
+        constructor(nombre, edad, puesto) {
+            this._nombre = nombre;
+            this.edad = edad;
+            this.puesto = puesto;
+        }
+        get nombre() {
+            return this._nombre;
+        }
+        set nombre(nuevoNombre) {
+            this._nombre = nuevoNombre;
+        }
+    }
+    ```
+
+---
+
+### **Herencia con `extends` y `super`**
+Podemos crear clases que hereden propiedades y métodos de otras clases usando `extends`. De esta manera, una clase hija puede reutilizar la estructura de una clase padre, no teniendo que redefinir todos los métodos y propiedades. Esto nos permite en programación crear lo que conocemos como una `jeraquía de clases`. Esto nos permite racionalizar el código y hacerlo más mantenible.
+
+??? example "Ejemplo de herencia"
+    ```javascript linenums="1" title="Herencia con extends y super"
+    class Empleado {
+        constructor(nombre, edad, puesto) {
+            this.nombre = nombre;
+            this.edad = edad;
+            this.puesto = puesto;
+        }
+    }
+    class Director extends Empleado {
+        constructor(nombre, edad, puesto, departamento) {
+            super(nombre, edad, puesto);
+            this.departamento = departamento;
+        }
+    }
+    ```
+
+Una de las ventajas de la herencia es que los objetos creados con la clase hija `Director` pueden acceder a los métodos y propiedades de la clase padre `Empleado`, y podemos tratar una objeto `Director`  como un objeto `Empleado`.
+
+!!! example "Uso de la herencia"
+    ```javascript linenums="1" title="Uso de la herencia"
+    function tratarEmpleado(emp) {
+        console.log(emp.nombre);
+        console.log(emp.edad);
+        console.log(emp.puesto);
+    }
+    let dir = new Director("Ana López", 50, "Directora", "Marketing");
+    let emp = new Empleado("Carlos Pérez", 35, "Desarrollador");
+    console.log(dir.nombre); // Ana López
+    console.log(dir.puesto); // Directora
+    tratarEmpleado(emp); // Carlos Pérez, 35, Desarrollador
+    traerEmpleado(dir); // Ana López, 50, Directora
+    ```
+
+---
+
+### **Ejemplo Completo: Figura, Rectángulo y Círculo**
+
+```javascript linenums="1" title="Ejemplo completo de clases"
+class Figura {
+    constructor(nombre) {
+        this._nombre = nombre;
+    }
+    get nombre() {
+        return this._nombre;
+    }
+    area() { throw "Método no implementado"; }
+    perimetro() { throw "Método no implementado"; }
+}
+class Rectangulo extends Figura {
+    constructor(nombre, ancho, alto) {
+        super(nombre);
+        this.ancho = ancho;
+        this.alto = alto;
+    }
+    area() { return this.ancho * this.alto; }
+    perimetro() { return 2 * (this.ancho + this.alto); }
+}
+class Circulo extends Figura {
+    constructor(nombre, radio) {
+        super(nombre);
+        this.radio = radio;
+    }
+    area() { return Math.PI * this.radio ** 2; }
+    perimetro() { return 2 * Math.PI * this.radio; }
+}
+```
+
+Ahora podemos ver un ejemplo de uso de la jeraquía de clases:
+```javascript linenums="1" title="Uso de la jeraquía de clases"
+let r = new Rectangulo('Rectangulo', 10, 5);
+let c = new Circulo('Círculo', 5);
+console.log("Área del rectángulo:", r.nombre(), r.area());
+console.log("Perímetro del rectángulo:", r.nombre(), r.perimetro());
+console.log("Área del círculo:", c.nombre(), c.area());
+console.log("Perímetro del círculo:", c.nombre(), c.perimetro());
+```
+
 
 ### **¿Cuándo Usar `class` o Prototipos?**
 
@@ -404,3 +564,16 @@ Desde ES6, JavaScript permite definir objetos mediante `class`. La
 - **Los prototipos** permiten más flexibilidad en algunos casos avanzados.
 
 En general, **`class` es recomendado** para la mayoría de proyectos modernos, ya que es más claro y se asemeja a la sintaxis de otros lenguajes orientados a objetos.
+
+
+### **Ejercicios sobre Clases y Herencia**
+
+!!! question "Ejercicio 1: Crear una jerarquía de Vehículos"
+    - Crea una clase `Vehiculo` con propiedades `marca`, `modelo`, `velocidad` y un método `arrancar()`.
+    - Crea dos clases que hereden de `Vehiculo`: `Coche` (con propiedad `puertas`) y `Moto` (con propiedad `cilindrada`).
+    - Implementa los métodos necesarios para cada subclase.
+
+!!! question "Ejercicio 2: Crear una jerarquía de Animales"
+    - Crea una clase `Animal` con propiedades `nombre` y `edad`.
+    - Crea dos subclases: `Perro` (con método `ladrar()`) y `Gato` (con método `maullar()`).
+    - Implementa un método `presentarse()` en la superclase y úsalo en las subclases.

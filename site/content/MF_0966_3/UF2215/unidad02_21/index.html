@@ -1308,7 +1308,7 @@
                   
 
 
-<h1 id="unidad-3-arrays-objetos-y-clases"><strong>Unidad 3: Arrays, Objetos y Clases</strong></h1>
+<h1 id="unidad-2-arrays-objetos-y-clases"><strong>Unidad 2: Arrays, Objetos y Clases</strong></h1>
 <h2 id="31-arrays-en-javascript"><strong>3.1 Arrays en JavaScript</strong></h2>
 <h3 id="creacion-de-un-array"><strong>Creación de un Array</strong></h3>
 <p>Un array en JavaScript es una colección ordenada de elementos. Se puede crear de diferentes maneras:</p>
@@ -1392,6 +1392,41 @@
 <span class="go">Banana</span>
 <span class="go">Cereza</span>
 </code></pre></div></p>
+</div>
+<h4 id="recorrer-un-array-con-forof"><strong>Recorrer un array con <code>for...of</code></strong></h4>
+<p>Una forma más moderna de recorrer un array es utilizando un bucle <code>for...of</code>, que nos permite acceder directamente a los valores sin necesidad de los índices.</p>
+<p>La sintaxis es:</p>
+<div class="admonition example">
+<p class="admonition-title">Sintaxis de <code>for...of</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Sintaxis de for...of</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">elemento</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">array</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Acceder al elemento</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p>Me permite iterar sobre arrays, strings, mapas, sets, etc. Objetos <code>iterables</code>. Veamos un par de ejemplos:</p>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo recorrido array con <code>for...of</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Recorrido con `for..of`</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">frutas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Manzana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Banana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Cereza&quot;</span><span class="p">];</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">fruta</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">frutas</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fruta</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo recorrido de un <code>string</code> con <code>for...of</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Recorrido de un `string` con `for...of`</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">mensaje</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Hola Mundo&quot;</span><span class="p">;</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">letra</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">mensaje</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">letra</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 </div>
 <h4 id="buscar-un-elemento-con-while-y-una-variable-bandera"><strong>Buscar un elemento con <code>while</code> y una variable bandera</strong></h4>
 <p>Una <strong>variable bandera</strong> es una variable booleana (<code>true</code> o <code>false</code>) que utilizamos para indicar si una condición se ha cumplido dentro de un bucle. Se usa comúnmente cuando buscamos un valor en un array o cuando queremos detener un proceso una vez que se ha encontrado un resultado.</p>
@@ -1627,7 +1662,7 @@
 <p>Devuelve <code>true</code> si todos los elementos cumplen la condición dada.</p>
 <div class="admonition example">
 <p class="admonition-title">Ejemplo de <code>every()</code></p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo de some()</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo de every()</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -1652,7 +1687,7 @@
 <p>Devuelve un nuevo array con los elementos que cumplen una condición.</p>
 <div class="admonition example">
 <p class="admonition-title">Ejemplo de <code>filter()</code></p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo de some()</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo de filter()</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -1726,7 +1761,7 @@
 </code></pre></div></td></tr></table></div>
 </div>
 <h3 id="metodo-reduce-en-arrays"><strong>Método <code>reduce()</code> en Arrays</strong></h3>
-<p>El método <code>reduce()</code> permite recorrer un array y <strong>acumular</strong> un resultado a partir de los elementos. Se utiliza comúnmente para sumar valores, calcular promedios o transformar datos de una colección. És como una función de agregación en SQL, o un <code>reduce</code> en Excel.</p>
+<p>El método <code>reduce()</code> permite recorrer un array y <strong>acumular</strong> un resultado a partir de los elementos. Se utiliza comúnmente para sumar valores, calcular promedios o transformar datos de una colección. Es como una función de agregación en SQL, o un <code>reduce</code> en Excel.</p>
 <h4 id="sintaxis-de-reduce"><strong>Sintaxis de <code>reduce()</code></strong></h4>
 <p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Sintaxis de reduce()</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -1812,11 +1847,11 @@ Utilizando una función flecha
 </code></pre></div></td></tr></table></div>
 </div>
 <p><code>reduce()</code> es una herramienta poderosa cuando se necesita transformar un array en un único valor acumulado.</p>
-<h3 id="foreach-vs-for-vs-forof-en-arrays"><strong>forEach vs for vs for...of en Arrays</strong></h3>
+<h3 id="foreach-vs-for-vs-forof-en-arrays"><strong><code>forEach</code> vs <code>for</code> vs <code>for...of</code> en Arrays</strong></h3>
 <p>Existen varias formas de recorrer un array en JavaScript, cada una con sus ventajas y desventajas:</p>
 <ul>
 <li><strong><code>forEach()</code></strong>: Es más limpio y legible cuando solo necesitamos aplicar una función a cada elemento.</li>
-<li><strong>El bucle <code>for</code></strong>: Ofrece más flexibilidad, ya que permite controlar el índice y usar <code>break</code> o <code>continue</code>.</li>
+<li><strong>El bucle <code>for</code></strong>: Ofrece más flexibilidad, ya que podemos acceder a los índices y modificar el array. Es útil cuando necesitamos hacer varias operaciones en cada iteración.</li>
 <li><strong>El bucle <code>for...of</code></strong>: Es una sintaxis más moderna para iterar sobre los valores de un array sin necesidad de acceder a los índices.</li>
 </ul>
 <h4 id="ejemplo-comparativo-foreach-vs-for-vs-forof"><strong>Ejemplo Comparativo: <code>forEach</code> vs <code>for</code> vs <code>for...of</code></strong></h4>
@@ -1866,7 +1901,7 @@ Utilizando una función flecha
 </tr>
 <tr>
 <td><code>for</code></td>
-<td>Cuando necesitamos acceder a los índices, modificar el array o salir del bucle con <code>break</code>.</td>
+<td>Cuando necesitamos acceder a los índices, modificar el array. Hay que realizar diversas operaciones en cada iteración</td>
 </tr>
 <tr>
 <td><code>for...of</code></td>
@@ -2087,7 +2122,7 @@ Utilizando una función flecha
 <ul>
 <li>
 <ol>
-<li>Modifica el código para pedir al usuario los elementos a agregar hasta que ponga un 0.</li>
+<li>Modifica el código para pedir al usuario los elementos a agregar hasta que ponga un 0. Si escribe -1 eliminamos el último elemento. En cada iteración mostramos el array.</li>
 </ol>
 </li>
 </ul>
@@ -2114,7 +2149,7 @@ Utilizando una función flecha
 <ul>
 <li>
 <ol>
-<li>Modifica el código para que el usuario introduza un mínimo y máximo para filtrar.</li>
+<li>Modifica el código para que el usuario introduza un mínimo y máximo para filtrar. Ejemplo, si pone 10,20 sacaremos sólo los valores que están entre 10 y 20.</li>
 </ol>
 </li>
 </ul>
@@ -2140,7 +2175,7 @@ Utilizando una función flecha
 <ul>
 <li>
 <ol>
-<li>Modifica con un array de cambios (dolares, yenes y libras) con el valor de cada uno respecto al euro. Pide al usuario a qué moneda quiere cambiar los precios. Y muestra los precios en la moneda seleccionada.</li>
+<li>Modifica con un array de cambios (1-dolares, 2-yenes y 3-libras) con el valor de cada uno respecto al euro. Pide al usuario a qué moneda quiere cambiar los precios [1,2 o 3]. Y muestra los precios en la moneda seleccionada.</li>
 </ol>
 </li>
 </ul>
@@ -2172,6 +2207,11 @@ Utilizando una función flecha
 <li>Modifica el código para que muestre los nombres con su longitud.</li>
 </ol>
 </li>
+<li>
+<ol>
+<li>Modifica el código para conseguir un array con el orden inverso.</li>
+</ol>
+</li>
 </ul>
 </div>
 </div>
@@ -2179,7 +2219,7 @@ Utilizando una función flecha
 <div class="admonition question">
 <p class="admonition-title">Ejercicio 7: Uso de <code>splice()</code> para modificar un array</p>
 <ul>
-<li>Dado un array de colores, usa <code>splice()</code> para eliminar el segundo elemento y agregar un nuevo color en su lugar.</li>
+<li>Dado un array de colores <code>[rojo, verde, azul, amarillo]</code>, usa <code>splice()</code> para eliminar el segundo elemento y agregar un nuevo color en su lugar.</li>
 </ul>
 <details class="example">
 <summary>Solución</summary>
@@ -2195,7 +2235,7 @@ Utilizando una función flecha
 <ul>
 <li>
 <ol>
-<li>Modifica el código para que el usuario pueda elegir el color a elagregar y en qué posición lo quiere. Si el color está repetido, mostrar un mensaje de error.</li>
+<li>Modifica el código para que el usuario pueda elegir el color a agregar y en qué posición lo quiere. Si el color está repetido, mostrar un mensaje de error.</li>
 </ol>
 </li>
 <li>
@@ -2310,7 +2350,11 @@ Utilizando una función flecha
 <span class="normal">20</span>
 <span class="normal">21</span>
 <span class="normal">22</span>
-<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">candidatos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Luis&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Carlos&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;María&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Pedro&quot;</span><span class="p">];</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">candidatos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Luis&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Carlos&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;María&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Pedro&quot;</span><span class="p">];</span>
 <span class="kd">let</span><span class="w"> </span><span class="nx">votos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
 <span class="w">    </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span>
 <span class="w">    </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span>
@@ -2330,10 +2374,23 @@ Utilizando una función flecha
 <span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">candidatos</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">resultados</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span><span class="w"> </span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="nx">candidatos</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span><span class="w"> </span><span class="nx">votos</span><span class="o">:</span><span class="w"> </span><span class="nx">conteo</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="w"> </span><span class="p">});</span>
 <span class="p">}</span>
+<span class="c1">// esta función devuelve: 0 si a es menor que b, 1 si a es mayor que b y 0 si son iguales</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">compararVotos</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">b</span><span class="p">.</span><span class="nx">votos</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">a</span><span class="p">.</span><span class="nx">votos</span><span class="p">;</span>
+<span class="p">}</span>
 
-<span class="nx">resultados</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">b</span><span class="p">.</span><span class="nx">votos</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">a</span><span class="p">.</span><span class="nx">votos</span><span class="p">);</span>
+<span class="nx">resultados</span><span class="p">.</span><span class="nx">sort</span><span class="p">(</span><span class="nx">compararVotos</span><span class="p">);</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Resultados de la elección:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">resultados</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
+<p>Explicación del código:
+La función <code>compararVotos(a,b)</code> es una función que:</p>
+<p>Resta b.votos - a.votos, lo que significa que:</p>
+<div class="codehilite"><pre><span></span><code>- Si b.votos es mayor que a.votos, devuelve un valor positivo, colocando b antes que a.
+- Si b.votos es menor que a.votos, devuelve un valor negativo, colocando a antes que b.
+- Si son iguales, mantiene su orden original.
+</code></pre></div>
+
+<p>El efecto es ordenar el array en orden descendente según la propiedad votos de los objetos.</p>
 </details>
 <hr />
 <h4 id="solucion-con-metodos-de-arrays"><strong>Solución con Métodos de Arrays</strong></h4>

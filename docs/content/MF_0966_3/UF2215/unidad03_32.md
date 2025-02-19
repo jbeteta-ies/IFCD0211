@@ -4,12 +4,12 @@ Fecha: 2025-01-20
 Keywords: MF_0966_3, UF2215, Programación, JavaScript, Manejo de errores, Try Catch
 Form Module: MF_0966_3 - Consulta y manipulación de información contenida en gestores de datos
 Form Unit: UF 2215 - Herramientas de sistemas gestores de bases de datos. Pasarelas y medios de conexión
-Unit: 02 - Funciones y Manejo de Errores
+Unit: 03 - Funciones y Manejo de Errores
 ---
 
-# **Unidad 2: Funciones y Manejo de Errores**
+# **Unidad 3: Funciones y Manejo de Errores**
 
-## **2.2 Manejo de Errores en JavaScript**
+## **3.2 Manejo de Errores en JavaScript**
 
 JavaScript proporciona mecanismos para **manejar errores y prevenir que un programa falle completamente** cuando ocurre un problema inesperado. 
 
@@ -17,7 +17,7 @@ El uso de `try...catch` nos permite **capturar errores** y tomar decisiones sobr
 
 ---
 
-### **2.2.1 El Bloque `try...catch`**
+### **3.2.1 El Bloque `try...catch`**
 
 La estructura básica para manejar errores en JavaScript es:
 
@@ -43,7 +43,7 @@ Cuando el código dentro de `try` genera un error, la ejecución se **detiene** 
 
 ---
 
-### **2.2.2 Uso del Bloque `finally`**
+### **3.2.2 Uso del Bloque `finally`**
 
 El bloque `finally` se ejecuta **siempre**, independientemente de si hubo o no un error.
 
@@ -61,7 +61,7 @@ El bloque `finally` se ejecuta **siempre**, independientemente de si hubo o no u
 
 ---
 
-### **2.2.3 Lanzar Errores con `throw`**
+### **3.2.3 Lanzar Errores con `throw`**
 
 Podemos **generar errores manualmente** usando `throw`. Esto es útil cuando queremos validar datos y detener la ejecución si no son correctos.
 
@@ -81,7 +81,7 @@ Podemos **generar errores manualmente** usando `throw`. Esto es útil cuando que
     }
     ```
 
-### **2.2.3 Tipos de Errores Comunes en JavaScript**
+### **3.2.3 Tipos de Errores Comunes en JavaScript**
 
 JavaScript tiene varios tipos de errores que pueden ocurrir durante la ejecución de un programa. Algunos de los errores más comunes son:
 
@@ -114,7 +114,7 @@ JavaScript tiene varios tipos de errores que pueden ocurrir durante la ejecució
 
 ---
 
-### **2.2.4 Personalización de Mensajes de Error**
+### **3.2.4 Personalización de Mensajes de Error**
 
 Podemos personalizar los errores en JavaScript lanzando mensajes descriptivos mediante `throw`. Esto es útil cuando queremos manejar errores específicos en nuestro código.
 

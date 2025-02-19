@@ -341,3 +341,137 @@ Los estudiantes pueden:
     3. Usar la consola para navegar y gestionar archivos.
 
 ---
+
+## Crear un proyecto con npm
+
+### crear un proyecto nuevo
+
+Para crear un proyecto nuevo con npm, se debe seguir los siguientes pasos (desde el terminal), si estamos en VSCode, podemos abrir la terminal integrada y si ya hamos creado la carpeta ir al  paso 3:
+
+1. Crear una carpeta para el proyecto:
+
+    ```bash
+    mkdir mi-proyecto
+    ```
+
+2. Ingresar a la carpeta del proyecto:
+
+    ```bash
+      cd mi-proyecto
+      ```
+3. Inicializar el proyecto con npm:
+
+    ```bash
+    npm init -y
+    ```
+
+    Este comando creará un archivo `package.json` con la configuración predeterminada:
+
+      ```json
+      {
+         "name": "mi-proyecto",
+         "version": "1.0.0",
+         "description": "",
+         "main": "index.js",
+         "scripts": {
+         "test": "echo \"Error: no test specified\" && exit 1"
+         },
+         "keywords": [],
+         "author": "",
+         "license": "ISC"
+      }
+      ```
+
+4. Crear un archivo `index.js` con el siguiente contenido:
+
+    ```javascript linenums="1" title="Uso de lodash"
+    console.log("¡Hola desde el proyecto!");
+    ```
+
+### Como poner en marcha el proyecto
+
+Para ejecutar el proyecto, se debe seguir los siguientes pasos:
+
+1. Modificar el archivo `package.json` para agregar un script de inicio:
+
+    ```json linenums="1" title="Script de inicio"
+    "scripts": {
+      "start": "node index.js"
+      "test": "echo \"Error: no test specified\" && exit 1"
+    }
+    ```
+
+2. Ejecutar el script de inicio:
+
+    ```bash linenums="1" title="Ejecutar script de inicio"
+    npm start
+    ```
+
+De esta manera nos debe aparecer en la consola el mensaje `¡Hola desde el proyecto!`.
+
+## Como hacer debug en VSCode
+
+Para hacer debug en VSCode, se debe seguir los siguientes pasos:
+
+1. Ir a la opción de `Run and Debug` en la barra lateral izquierda.
+3. Hacer clic en el link `create a launch.json file`.
+2. Seleccionar `Node.js` en la lista de entornos de ejecución.
+4. Se creará un archivo `launch.json` con la configuración de depuración.
+
+    ```json linenums="1" title="Configuración de depuración"
+    {
+      "version": "0.2.0",
+      "configurations": [
+        {
+          "type": "node",
+          "request": "launch",
+          "name": "Launch Program",
+          "skipFiles": ["<node_internals>/**"],
+          "program": "${workspaceFolder}/index.js"
+        }
+      ]
+    }
+    ```
+
+    Ahora podemos dar clic en el botón de `Run` para iniciar la depuración.
+
+### Cómo hacer debug si utilizamos la librería `prompt-sync`
+
+1. Instalar la librería `prompt-sync`:
+
+    ```bash
+    npm install prompt-sync
+    ```
+
+2. Modificar el archivo `index.js` para utilizar la librería:
+
+    ```javascript linenums="1" title="Uso de prompt-sync"
+    const prompt = require('prompt-sync')();
+    const nombre = prompt('¿Cuál es tu nombre? ');
+    console.log(`¡Hola, ${nombre}!`);
+    ```
+
+3. Modificar el fichero `launch.json` para que se pueda ejecutar el programa:
+
+    ```json linenums="1" title="Configuración de depuración con prompt-sync"
+    {
+      "version": "0.2.0",
+      "configurations": [
+        {
+          "type": "node",
+          "request": "launch",
+          "name": "Launch Program",
+          "skipFiles": ["<node_internals>/**"],
+          "program": "${workspaceFolder}/index.js",
+          "console": "integratedTerminal"
+        }
+      ]
+    }
+    ```
+
+   Ahora podemos añadir un punto de interrupción en el código y ejecutar el programa en modo de depuración.
+
+---
+
+!!! exercise "Ejercicio Práctico"
+    Siguiendlo los pasos anteriores, crea un proyecto nuevo con npm, agrega un script de inicio y realiza la depuración en VSCode. Asegurate de que el programa funcione correctamente y que puedas depurarlo.

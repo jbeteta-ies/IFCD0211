@@ -252,8 +252,6 @@ do {
 
     ??? example "Solución"
         ```javascript linenums="1" title="Suma de los primeros N números"
-        const prompt = require("prompt-sync")();
-        let N = parseInt(prompt("Introduce un número: "));
         let suma = 0;
         for (let i = 1; i <= 100; i++) {
             suma += i;
@@ -263,8 +261,6 @@ do {
 
     ??? example "Solución con bucle while"
         ```javascript linenums="1" title="Suma de los primeros N números"
-        const prompt = require("prompt-sync")();
-        let N = parseInt(prompt("Introduce un número: "));
         let suma = 0;
         let i = 1;
         while (i <= 100) {
@@ -276,8 +272,6 @@ do {
 
     ??? example "Solución con bucle do-while"
         ```javascript linenums="1" title="Suma de los primeros N números"
-        const prompt = require("prompt-sync")();
-        let N = parseInt(prompt("Introduce un número: "));
         let suma = 0;
         let i = 1;
         do {
@@ -289,6 +283,7 @@ do {
 
     !!! question "Reto adicional"
         - Modifica el programa para que solicite al usuario un número `N` y calcule la suma de los números del 1 al `N`.
+        - Calcula ahora la suma y la media de los números divisibles por 3 entre 0 y N. Recuerda que para saber si es divisible por 3: `i % 3 === 0`. Y para calcular la media tienes que *contar* cuántos números divisibles hay.
 
 !!! question "Ejercicio 4: Tabla de multiplicar"
     - Desarrolla un programa que pida al usuario un número entero y muestre en la consola la tabla de multiplicar de ese número del 1 al 10. El formato debe ser:
@@ -372,10 +367,11 @@ do {
 
     !!! question "Reto adicional"
         - Modifica el programa para que solicite al usuario un número `N` y muestre los números pares desde 1 hasta `N`.
+        - Modifica el programa para que saque los números en una línea separados por una ','
 
 !!! question "Ejercicio 6: Invertir una cadena"
     - Crea un programa que pida al usuario una cadena de texto y luego imprima la cadena invertida.
-    - Aunque aún no hemos vista arrays, saber que con la expresión `texto[i]` se puede acceder a cada carácter de la cadena (la i debe estar entre 0 y la longitud de la cadena(`length`)).
+    - Aunque aún no hemos vista arrays, saber que con la expresión `texto[i]` se puede acceder a cada carácter de la cadena (la i debe estar entre 0 y la longitud de la cadena(`length - 1`)).
 
     ??? example "Solución"
         ```javascript linenums="1" title="Invertir una cadena"
@@ -413,6 +409,9 @@ do {
         } while (i >= 0);
         console.log("Cadena invertida:", invertida);
         ```
+    
+    !!! question "Reto adicional"
+        - Modifica el programa para que cree un palíndromo concatenando la cadena original con la cadena invertida;
 
 !!! question "Ejercicio 7: Contar vocales en una cadena"
     - Desarrolla un programa que solicite al usuario una cadena de texto y cuente cuántas vocales contiene.
@@ -430,6 +429,7 @@ do {
             }
         }
         console.log("Número de vocales:", contador);
+        ```
         
     ??? example "Solución con bucle while"
         ```javascript linenums="1" title="Contar vocales en una cadena"
@@ -532,7 +532,6 @@ do {
             for (let i = 2; i < num; i++) {
                 if (num % i === 0) {
                     esPrimo = false;
-                    break;
                 }
             }
             if (esPrimo) {
@@ -550,7 +549,6 @@ do {
             while (i < num) {
                 if (num % i === 0) {
                     esPrimo = false;
-                    break;
                 }
                 i++;
             }
@@ -570,7 +568,6 @@ do {
             do {
                 if (num % i === 0) {
                     esPrimo = false;
-                    break;
                 }
                 i++;
             } while (i < num);

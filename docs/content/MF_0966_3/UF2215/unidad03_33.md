@@ -7,14 +7,14 @@ Form Unit: UF 2215 - Herramientas de sistemas gestores de bases de datos. Pasare
 Unit: 02 - Funciones y Manejo de Errores
 ---
 
-# **Unidad 2: Funciones y Manejo de Errores**
+# **Unidad 3: Funciones y Manejo de Errores**
 
-## **2.3 Asincronía en JavaScript**
+## **3.3 Asincronía en JavaScript**
 
 JavaScript es un lenguaje de programación **monohilo**, lo que significa que ejecuta una sola operación a la vez en su hilo principal. Sin embargo, permite manejar tareas **asincrónicas** mediante **callbacks, promesas y `async/await`**, evitando bloqueos en la ejecución del código.
 
 
-### **2.3.1 Concurrencia y Paralelismo en JavaScript**
+### **3.3.1 Concurrencia y Paralelismo en JavaScript**
 
 En programación, **concurrencia** y **paralelismo** son dos conceptos clave cuando se trabaja con tareas asíncronas:
 
@@ -139,7 +139,7 @@ Esto no es lo mismo que el **Event Loop**, ya que los **Web Workers** ejecutan c
 ---
 
 
-### **2.3.2 Callbacks**
+### **3.3.2 Callbacks**
 
 Los *callbacks* son la pieza clave para que Javascript pueda funcionar de forma asíncrona. De hecho, el resto de patrones asíncronos en Javascript está basado en *callbacks* de un modo u otro, simplemente añaden azúcar sintáctico para trabajar con ellos más cómodamente.
 
@@ -205,7 +205,7 @@ Para evitar este problema, se introdujeron las **Promesas**.
 
 ---
 
-### **2.3.3 Promesas en JavaScript**
+### **3.3.3 Promesas en JavaScript**
 
 Una promesa es un objeto que representa **el resultado de una operación asíncrona**. Este resultado podría estar disponible **ahora** o en el **futuro**. Las promesas se basan en ***callbacks** *pero añaden azúcar para un mejor manejo y sintaxis. Las promesas son especiales en términos de asincronía ya que añaden un nuevo nivel de prioridad que estudiaremos a continuación.
 
@@ -263,7 +263,7 @@ En el ejemplo anterior, pedimos al servidor que nos provea una URL utilizando la
 
 ---
 
-### **2.3.4 `async/await`: Manejo de Código Asíncrono de Forma Más Clara**
+### **3.3.4 `async/await`: Manejo de Código Asíncrono de Forma Más Clara**
 
 Las promesas supusieron un gran salto en Javascript al introducir una mejora sustancial sobre los *callbacks* y un manejo más elegante de nuestras tareas asíncronas. Sin embargo, también pueden llegar a ser tediosas y verbosas a medida que se requieren más y más *.then()*. **Las palabras clave *async *y *await *surgieron para simplificar el manejo de las promesas**. Son puro azúcar para hacer las promesas más amigables, escribir código más sencillo, reducir el anidamiento y mejorar la trazabilidad al depurar. Pero recuerda, *async *\ *await *y las promesas son lo mismo en el fondo.
 

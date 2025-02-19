@@ -4,12 +4,12 @@ Fecha: 2025-01-20
 Keywords: MF_0966_3, UF2215, Programación, JavaScript, Funciones, Errores
 Form Module: MF_0966_3 - Consulta y manipulación de información contenida en gestores de datos
 Form Unit: UF 2215 - Herramientas de sistemas gestores de bases de datos. Pasarelas y medios de conexión
-Unit: 02 - Funciones y Manejo de Errores
+Unit: 03 - Funciones y Manejo de Errores
 ---
 
-# **Unidad 2: Funciones y Manejo de Errores**
+# **Unidad 3: Funciones y Manejo de Errores**
 
-## **2.1 Funciones en JavaScript**
+## **3.1 Funciones en JavaScript**
 
 Las funciones son bloques de código reutilizables que permiten organizar y estructurar mejor nuestros programas. Nos ayudan a reducir la repetición de código y mejorar la legibilidad.
 
@@ -27,7 +27,7 @@ Cuando declaramos una función en JavaScript, esta **no se ejecuta inmediatament
     mensaje();
     ```
 
-### **2.1.1 Declaración y Uso de Funciones**
+### **3.1.1 Declaración y Uso de Funciones**
 
 Las funciones en JavaScript se pueden declarar utilizando la palabra clave `function`. Estas permiten organizar el código en bloques reutilizables.
 
@@ -54,7 +54,7 @@ Las funciones pueden aceptar parámetros para hacerlas más dinámicas:
 
 ---
 
-### **2.1.2 Parámetros y Valores de Retorno**
+### **3.1.2 Parámetros y Valores de Retorno**
 
 Las funciones pueden devolver valores utilizando la palabra clave `return`. Esto permite que el resultado de una función pueda ser utilizado posteriormente en el programa.
 
@@ -82,7 +82,7 @@ Si una función no tiene `return`, devuelve `undefined` de forma implícita.
 
 ---
 
-### **2.1.3 Funciones Anónimas**
+### **3.1.3 Funciones Anónimas**
 
 Las funciones anónimas son aquellas que no tienen un nombre definido. Se suelen asignar a variables:
 
@@ -100,7 +100,7 @@ Las funciones anónimas son útiles para definir comportamientos que solo se usa
 ---
 
 
-### **2.1.4 Funciones como Expresiones**
+### **3.1.4 Funciones como Expresiones**
 
 En JavaScript, las funciones pueden ser declaradas como expresiones y asignadas a variables.
 
@@ -115,7 +115,7 @@ En JavaScript, las funciones pueden ser declaradas como expresiones y asignadas 
 
 Las funciones expresadas se usan cuando queremos definir una función y almacenarla en una variable para luego ejecutarla en un momento determinado.
 
-### **2.1.5 Paso de Parámetros por Valor y por Referencia**
+### **3.1.5 Paso de Parámetros por Valor y por Referencia**
 
 En JavaScript, los **tipos primitivos** (números, cadenas, booleanos) se pasan por **valor**, mientras que los **objetos** y **arrays** se pasan por **referencia**.
 
@@ -148,7 +148,7 @@ En JavaScript, los **tipos primitivos** (números, cadenas, booleanos) se pasan 
     console.log("Después de la función:", persona.nombre); // "Modificado"
     ```
 
-### **2.1.6 Alcance de las Variables: Local y Global**
+### **3.1.6 Alcance de las Variables: Local y Global**
 
 Las variables en JavaScript pueden tener **ámbito global** o **ámbito local** dependiendo de dónde sean declaradas.
 
@@ -172,7 +172,7 @@ Las variables en JavaScript pueden tener **ámbito global** o **ámbito local** 
 
 ---
 
-### **2.1.7 Funciones recursivas (Introducción)**
+### **3.1.7 Funciones recursivas (Introducción)**
 
 Una función recursiva es aquella que se llama a sí misma dentro de su propio cuerpo. Es una técnica muy poderosa y útil en programación, especialmente para resolver problemas que se pueden dividir en subproblemas más pequeños.
 
@@ -194,7 +194,7 @@ Vamos a ver como ejercicios prácticos algunos ejemplos de funciones recursivas.
     ```
 
 
-### **2.1.8 Retorno de Funciones**
+### **3.1.8 Retorno de Funciones**
 
 Las funciones en JavaScript pueden devolver un valor mediante la palabra clave `return`. Esto permite que el resultado de una función pueda ser utilizado posteriormente en el programa.
 
@@ -266,7 +266,7 @@ El uso adecuado de `return` permite que las funciones sean más reutilizables y 
 
 ---
 
-### **2.1.9 Funciones Anónimas Autoejecutadas (IIFE)**
+### **3.1.9 Funciones Anónimas Autoejecutadas (IIFE)**
 
 Las funciones anónimas autoejecutadas (IIFE, Immediately Invoked Function Expressions) son funciones que se ejecutan inmediatamente después de ser definidas. Se usan para evitar contaminar el ámbito global y encapsular variables.
 
@@ -318,7 +318,7 @@ Este patrón de diseño es muy útil para proteger variables y métodos de ser a
 
 ---
 
-### **2.1.10 Funciones Flecha (`Arrow Functions`)**
+### **3.1.10 Funciones Flecha (`Arrow Functions`)**
 
 Las funciones flecha (`=>`) son una forma más concisa de escribir funciones en JavaScript. Se utilizan sobre todo en funciones cortas y expresiones de retorno rápido.
 

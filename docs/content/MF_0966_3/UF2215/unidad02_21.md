@@ -4,10 +4,10 @@ Fecha: 2025-01-20
 Keywords: MF_0966_3, UF2215, Programación, JavaScript, Arrays
 Form Module: MF_0966_3 - Consulta y manipulación de información contenida en gestores de datos
 Form Unit: UF 2215 - Herramientas de sistemas gestores de bases de datos. Pasarelas y medios de conexión
-Unit: 03 - Arrays, Objetos y Clases
+Unit: 02 - Arrays, Objetos y Clases
 ---
 
-# **Unidad 3: Arrays, Objetos y Clases**
+# **Unidad 2: Arrays, Objetos y Clases**
 
 ## **3.1 Arrays en JavaScript**
 
@@ -88,6 +88,36 @@ Podemos usar `length` para recorrer un array completamente con un bucle `for`.
     Manzana
     Banana
     Cereza
+    ```
+
+#### **Recorrer un array con `for...of`**
+
+Una forma más moderna de recorrer un array es utilizando un bucle `for...of`, que nos permite acceder directamente a los valores sin necesidad de los índices.
+
+La sintaxis es:
+!!! example "Sintaxis de `for...of`"
+    ```javascript linenums="1" title="Sintaxis de for...of"
+    for (let elemento of array) {
+        // Acceder al elemento
+    }
+    ```
+
+Me permite iterar sobre arrays, strings, mapas, sets, etc. bbjetos `iterables`. Veamos un par de ejemplos:
+
+!!! example "Ejemplo recorrido array con `for...of`"
+    ```javascript linenums="1" title="Recorrido con `for..of`"
+    let frutas = ["Manzana", "Banana", "Cereza"];
+    for (let fruta of frutas) {
+        console.log(fruta);
+    }
+    ```
+
+!!! example "Ejemplo recorrido de un `string` con `for...of`"
+    ```javascript linenums="1" title="Recorrido de un `string` con `for...of`"
+    let mensaje = "Hola Mundo";
+    for (let letra of mensaje) {
+        console.log(letra);
+    }
     ```
 
 
@@ -289,7 +319,7 @@ El mismo ejemplo utilizando una función flecha.
 Devuelve `true` si todos los elementos cumplen la condición dada.
 
 !!! example "Ejemplo de `every()`"
-    ```javascript linenums="1" title="Ejemplo de some()"
+    ```javascript linenums="1" title="Ejemplo de every()"
     const ages = [3, 10, 18, 20];
     function checkAdult(age) {
         return age > 18;
@@ -308,7 +338,7 @@ El mismo ejemplo utilizando una función flecha.
 Devuelve un nuevo array con los elementos que cumplen una condición.
 
 !!! example "Ejemplo de `filter()`"
-    ```javascript linenums="1" title="Ejemplo de some()"
+    ```javascript linenums="1" title="Ejemplo de filter()"
     const ages = [10, 20, 30, 40];
     function checkAdult(age) {
         return age > 18;
@@ -365,7 +395,7 @@ Utilizando una función flecha
 
 ### **Método `reduce()` en Arrays**
 
-El método `reduce()` permite recorrer un array y **acumular** un resultado a partir de los elementos. Se utiliza comúnmente para sumar valores, calcular promedios o transformar datos de una colección. És como una función de agregación en SQL, o un `reduce` en Excel.
+El método `reduce()` permite recorrer un array y **acumular** un resultado a partir de los elementos. Se utiliza comúnmente para sumar valores, calcular promedios o transformar datos de una colección. Es como una función de agregación en SQL, o un `reduce` en Excel.
 
 #### **Sintaxis de `reduce()`**
 ```javascript linenums="1" title="Sintaxis de reduce()"
@@ -433,12 +463,12 @@ El miso ejemplo con la función flecha
 
 `reduce()` es una herramienta poderosa cuando se necesita transformar un array en un único valor acumulado.
 
-### **forEach vs for vs for...of en Arrays**
+### **`forEach` vs `for` vs `for...of` en Arrays**
 
 Existen varias formas de recorrer un array en JavaScript, cada una con sus ventajas y desventajas:
 
 - **`forEach()`**: Es más limpio y legible cuando solo necesitamos aplicar una función a cada elemento.
-- **El bucle `for`**: Ofrece más flexibilidad, ya que permite controlar el índice y usar `break` o `continue`.
+- **El bucle `for`**: Ofrece más flexibilidad, ya que podemos acceder a los índices y modificar el array. Es útil cuando necesitamos hacer varias operaciones en cada iteración.
 - **El bucle `for...of`**: Es una sintaxis más moderna para iterar sobre los valores de un array sin necesidad de acceder a los índices.
 
 #### **Ejemplo Comparativo: `forEach` vs `for` vs `for...of`**
@@ -466,7 +496,7 @@ Existen varias formas de recorrer un array en JavaScript, cada una con sus venta
 | Método      | Cuándo Usarlo |
 |------------|------------------------------------------------|
 | `forEach()` | Cuando solo queremos ejecutar una acción sobre cada elemento sin modificar el array ni necesitar el índice. |
-| `for`       | Cuando necesitamos acceder a los índices, modificar el array o salir del bucle con `break`. |
+| `for`       | Cuando necesitamos acceder a los índices, modificar el array. Hay que realizar diversas operaciones en cada iteración|
 | `for...of`  | Cuando queremos recorrer directamente los valores del array sin preocuparnos por los índices. |
 
 El `forEach()` es conveniente para realizar tareas simples sobre cada elemento, `for` nos da más control sobre la iteración, y `for...of` es una alternativa moderna y clara para recorrer los valores del array directamente.
@@ -600,7 +630,7 @@ A continuación, se presentan una serie de ejercicios que ponen en práctica los
         console.log(numeros);
         ```
     !!! exercise "Retos"
-        - 1. Modifica el código para pedir al usuario los elementos a agregar hasta que ponga un 0.
+        - 1. Modifica el código para pedir al usuario los elementos a agregar hasta que ponga un 0. Si escribe -1 eliminamos el último elemento. En cada iteración mostramos el array.
 
 ---
 
@@ -616,7 +646,7 @@ A continuación, se presentan una serie de ejercicios que ponen en práctica los
         ```
 
     !!! exercise "Retos"
-        - 1. Modifica el código para que el usuario introduza un mínimo y máximo para filtrar.
+        - 1. Modifica el código para que el usuario introduza un mínimo y máximo para filtrar. Ejemplo, si pone 10,20 sacaremos sólo los valores que están entre 10 y 20.
 
 ---
 
@@ -630,7 +660,7 @@ A continuación, se presentan una serie de ejercicios que ponen en práctica los
         console.log(preciosDolares);
         ```
     !!! exercise "Retos"
-        - 1. Modifica con un array de cambios (dolares, yenes y libras) con el valor de cada uno respecto al euro. Pide al usuario a qué moneda quiere cambiar los precios. Y muestra los precios en la moneda seleccionada.
+        - 1. Modifica con un array de cambios (1-dolares, 2-yenes y 3-libras) con el valor de cada uno respecto al euro. Pide al usuario a qué moneda quiere cambiar los precios [1,2 o 3]. Y muestra los precios en la moneda seleccionada.
         
 
 ---
@@ -647,10 +677,11 @@ A continuación, se presentan una serie de ejercicios que ponen en práctica los
     !!! exercise "Retos"
         - 1. Modifica el código para que muestre los nombres en mayúsculas.
         - 2. Modifica el código para que muestre los nombres con su longitud.
+        - 3. Modifica el código para conseguir un array con el orden inverso.
 ---
 
 !!! question "Ejercicio 7: Uso de `splice()` para modificar un array"
-    - Dado un array de colores, usa `splice()` para eliminar el segundo elemento y agregar un nuevo color en su lugar.
+    - Dado un array de colores `[rojo, verde, azul, amarillo]`, usa `splice()` para eliminar el segundo elemento y agregar un nuevo color en su lugar.
     
     ??? example "Solución"
         ```javascript linenums="1" title="Uso de splice()"
@@ -659,7 +690,7 @@ A continuación, se presentan una serie de ejercicios que ponen en práctica los
         console.log(colores); // ["Rojo", "Amarillo", "Azul"]
         ```
     !!! exercise "Retos"
-        - 1. Modifica el código para que el usuario pueda elegir el color a elagregar y en qué posición lo quiere. Si el color está repetido, mostrar un mensaje de error.
+        - 1. Modifica el código para que el usuario pueda elegir el color a agregar y en qué posición lo quiere. Si el color está repetido, mostrar un mensaje de error.
         - 2. Modifica el código para que el usuario pueda elegir el color a eliminar. Si el color no se encuntra dar un mensaje de error.
         
 
@@ -744,10 +775,25 @@ Usaremos bucles para contar los votos y ordenar los resultados.
     for (let i = 0; i < candidatos.length; i++) {
         resultados.push({ nombre: candidatos[i], votos: conteo[i] });
     }
+    // esta función devuelve: 0 si a es menor que b, 1 si a es mayor que b y 0 si son iguales
+    function compararVotos(a, b) {
+        return b.votos - a.votos;
+    }
     
-    resultados.sort((a, b) => b.votos - a.votos);
+    resultados.sort(compararVotos);
     console.log("Resultados de la elección:", resultados);
     ```
+
+    Explicación del código:
+    La función `compararVotos(a,b)` es una función que:
+
+    Resta b.votos - a.votos, lo que significa que:
+    
+        - Si b.votos es mayor que a.votos, devuelve un valor positivo, colocando b antes que a.
+        - Si b.votos es menor que a.votos, devuelve un valor negativo, colocando a antes que b.
+        - Si son iguales, mantiene su orden original.
+    
+    El efecto es ordenar el array en orden descendente según la propiedad votos de los objetos.
 
 ---
 

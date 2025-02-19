@@ -4,12 +4,12 @@ Fecha: 2025-01-20
 Keywords: MF_0966_3, UF2215, Programación, JavaScript, Asincronía, Callbacks, Promesas, Async/Await
 Form Module: MF_0966_3 - Consulta y manipulación de información contenida en gestores de datos
 Form Unit: UF 2215 - Herramientas de sistemas gestores de bases de datos. Pasarelas y medios de conexión
-Unit: 02 - Funciones y Manejo de Errores
+Unit: 03 - Funciones y Manejo de Errores
 ---
 
-# **Unidad 2: Funciones y Manejo de Errores**
+# **Unidad 3: Funciones y Manejo de Errores**
 
-## **2.4 Ejemplo práctico con Async/Await**
+## **3.4 Ejemplo práctico con Async/Await**
 
 Este microservicio proporciona información sobre ciudades españolas almacenadas en un archivo **JSON**.
 
