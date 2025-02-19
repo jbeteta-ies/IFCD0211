@@ -590,9 +590,9 @@ A continuación, se presentan una serie de ejercicios que ponen en práctica los
         ```
 
     !!! exercise "Retos"
-        - 1. Modifica el código anterior para que muestre los nombres en orden inverso.
-        - 2. Modifica el código para que muestre solo los nombres que empiecen con la letra "A".
-        - 3. Utiliza forEach para mostrar los nombres en lugar de un bucle `for`.
+        - a. Modifica el código anterior para que muestre los nombres en orden inverso.
+        - b. Modifica el código para que muestre solo los nombres que empiecen con la letra "A".
+        - c. Utiliza forEach para mostrar los nombres en lugar de un bucle `for`.
 
 ---
 
@@ -675,9 +675,9 @@ A continuación, se presentan una serie de ejercicios que ponen en práctica los
         ```
 
     !!! exercise "Retos"
-        - 1. Modifica el código para que muestre los nombres en mayúsculas.
-        - 2. Modifica el código para que muestre los nombres con su longitud.
-        - 3. Modifica el código para conseguir un array con el orden inverso.
+        - a. Modifica el código para que muestre los nombres en mayúsculas.
+        - b. Modifica el código para que muestre los nombres con su longitud.
+        - c. Modifica el código para conseguir un array con el orden inverso.
 ---
 
 !!! question "Ejercicio 7: Uso de `splice()` para modificar un array"
@@ -690,8 +690,8 @@ A continuación, se presentan una serie de ejercicios que ponen en práctica los
         console.log(colores); // ["Rojo", "Amarillo", "Azul"]
         ```
     !!! exercise "Retos"
-        - 1. Modifica el código para que el usuario pueda elegir el color a agregar y en qué posición lo quiere. Si el color está repetido, mostrar un mensaje de error.
-        - 2. Modifica el código para que el usuario pueda elegir el color a eliminar. Si el color no se encuntra dar un mensaje de error.
+        - a. Modifica el código para que el usuario pueda elegir el color a agregar y en qué posición lo quiere. Si el color está repetido, mostrar un mensaje de error.
+        - b. Modifica el código para que el usuario pueda elegir el color a eliminar. Si el color no se encuntra dar un mensaje de error.
         
 
 ---
