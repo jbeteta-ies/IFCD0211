@@ -1308,7 +1308,7 @@
                   
 
 
-<h1 id="unidad-3-arrays-objetos-y-clases"><strong>Unidad 3: Arrays, Objetos y Clases</strong></h1>
+<h1 id="unidad-2-arrays-objetos-y-clases"><strong>Unidad 2: Arrays, Objetos y Clases</strong></h1>
 <h2 id="22-objetos-y-su-uso"><strong>2.2 Objetos y su uso</strong></h2>
 <h3 id="introduccion-a-los-objetos-en-javascript"><strong>Introducción a los Objetos en JavaScript</strong></h3>
 <p>Los objetos en JavaScript son estructuras de datos que permiten agrupar información en un mismo lugar. Son clave en el desarrollo de aplicaciones ya que representan entidades del mundo real, como por ejemplo: usuarios, productos o empleados. </p>
@@ -1843,10 +1843,78 @@
 </details>
 </div>
 <h3 id="clases-en-javascript"><strong>Clases en JavaScript</strong></h3>
-<p>Desde ES6, JavaScript permite definir objetos mediante <code>class</code>. La </p>
+<p>Desde ES6, JavaScript permite definir objetos mediante <code>class</code>. Las clases proporcionan una sintaxis más clara y sencilla para crear objetos y manejar herencia.</p>
+<h3 id="sintaxis-de-una-clase"><strong>Sintaxis de una Clase</strong></h3>
+<p>Una clase en JavaScript se declara utilizando la palabra clave <code>class</code>.</p>
+<div class="admonition example">
+<p class="admonition-title">Sintaxis básica de una clase</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Sintaxis de class</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nx">Empleado</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Carlos Pérez&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">35</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">puesto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Desarrollador&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<ul>
+<li><strong><code>class</code></strong>: Define una nueva clase.</li>
+</ul>
+<p>Ahora para utilizar esta clase, podemos crear un empleado y mostrar o modificar su edad:</p>
+<div class="admonition example">
+<p class="admonition-title">Creación de una instancia de una clase</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Uso de una clase</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">emp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Empleado</span><span class="p">();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">emp</span><span class="p">.</span><span class="nx">nombre</span><span class="p">);</span><span class="w"> </span><span class="c1">// Carlos Pérez</span>
+<span class="nx">emp</span><span class="p">.</span><span class="nx">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">36</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">emp</span><span class="p">.</span><span class="nx">edad</span><span class="p">);</span><span class="w"> </span><span class="c1">// 36</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<hr />
+<h3 id="el-constructor"><strong>El Constructor</strong></h3>
+<p>El constructor es un método que se ejecuta cuando se crea una nueva instancia de la clase. Todas las clases tiene un constructor por defecto, pero podemos definir uno personalizado. La ventaja es que nos permite inicializar las propiedades de un objeto.</p>
 <details class="example">
-<summary>Declaración de una clase</summary>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Definición de una clase</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<summary>Uso del constructor</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Constructor en clase</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nx">Empleado</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">nombre</span><span class="p">,</span><span class="w"> </span><span class="nx">edad</span><span class="p">,</span><span class="w"> </span><span class="nx">puesto</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nombre</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">edad</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">puesto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">puesto</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">emp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Empleado</span><span class="p">(</span><span class="s2">&quot;Carlos Pérez&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">35</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Desarrollador&quot;</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<ul>
+<li><strong><code>constructor</code></strong>: Método especial para inicializar las propiedades de un objeto.</li>
+</ul>
+<p>El uso de la clase sería el mismo pero podemos inicializar las propiedades:
+!! example "Creación de una instancia de una clase"
+    <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Uso de una clase</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">emp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Empleado</span><span class="p">(</span><span class="s2">&quot;Carlos Pérez&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">35</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Desarrollador&quot;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">emp</span><span class="p">.</span><span class="nx">nombre</span><span class="p">);</span><span class="w"> </span><span class="c1">// Carlos Pérez</span>
+<span class="nx">emp</span><span class="p">.</span><span class="nx">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">36</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">emp</span><span class="p">.</span><span class="nx">edad</span><span class="p">);</span><span class="w"> </span><span class="c1">// 36</span>
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h3 id="propiedades-y-metodos"><strong>Propiedades y Métodos</strong></h3>
+<p>Podemos añadir propiedades y métodos a una clase.</p>
+<details class="example">
+<summary>Propiedades y métodos</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Propiedades y métodos en clase</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -1861,18 +1929,194 @@
 <span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">edad</span><span class="p">;</span>
 <span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">puesto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">puesto</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">saludar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Hola, soy </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
-
-<span class="kd">let</span><span class="w"> </span><span class="nx">emp1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Empleado</span><span class="p">(</span><span class="s2">&quot;Carlos Pérez&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">35</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Desarrollador&quot;</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">emp1</span><span class="p">.</span><span class="nx">nombre</span><span class="p">);</span><span class="w"> </span><span class="c1">// Carlos Pérez</span>
 </code></pre></div></td></tr></table></div>
 </details>
+<hr />
+<h3 id="getters-y-setters"><strong>Getters y Setters</strong></h3>
+<p>Los <code>getters</code> y <code>setters</code> permiten acceder y modificar propiedades de forma controlada. la diferencia entre una propiedad <strong>_nombre</strong> (con guion bajo, usada como convención para propiedades internas o privadas) y una propiedad <strong>nombre</strong> (pública). Aunque JavaScript no tiene propiedades privadas reales, esta convención ayuda a indicar que la propiedad no debería ser modificada directamente. </p>
+<details class="example">
+<summary>Uso de getters y setters</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Getters y Setters</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nx">Empleado</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">nombre</span><span class="p">,</span><span class="w"> </span><span class="nx">edad</span><span class="p">,</span><span class="w"> </span><span class="nx">puesto</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">_nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nombre</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">edad</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">puesto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">puesto</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">nombre</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">_nombre</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">set</span><span class="w"> </span><span class="nx">nombre</span><span class="p">(</span><span class="nx">nuevoNombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">_nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nuevoNombre</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h3 id="herencia-con-extends-y-super"><strong>Herencia con <code>extends</code> y <code>super</code></strong></h3>
+<p>Podemos crear clases que hereden propiedades y métodos de otras clases usando <code>extends</code>. De esta manera, una clase hija puede reutilizar la estructura de una clase padre, no teniendo que redefinir todos los métodos y propiedades. Esto nos permite en programación crear lo que conocemos como una <code>jeraquía de clases</code>. Esto nos permite racionalizar el código y hacerlo más mantenible.</p>
+<details class="example">
+<summary>Ejemplo de herencia</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Herencia con extends y super</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nx">Empleado</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">nombre</span><span class="p">,</span><span class="w"> </span><span class="nx">edad</span><span class="p">,</span><span class="w"> </span><span class="nx">puesto</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nombre</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">edad</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">puesto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">puesto</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">class</span><span class="w"> </span><span class="nx">Director</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">Empleado</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">nombre</span><span class="p">,</span><span class="w"> </span><span class="nx">edad</span><span class="p">,</span><span class="w"> </span><span class="nx">puesto</span><span class="p">,</span><span class="w"> </span><span class="nx">departamento</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">super</span><span class="p">(</span><span class="nx">nombre</span><span class="p">,</span><span class="w"> </span><span class="nx">edad</span><span class="p">,</span><span class="w"> </span><span class="nx">puesto</span><span class="p">);</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">departamento</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">departamento</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p>Una de las ventajas de la herencia es que los objetos creados con la clase hija <code>Director</code> pueden acceder a los métodos y propiedades de la clase padre <code>Empleado</code>, y podemos tratar una objeto <code>Director</code>  como un objeto <code>Empleado</code>.</p>
+<div class="admonition example">
+<p class="admonition-title">Uso de la herencia</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Uso de la herencia</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">tratarEmpleado</span><span class="p">(</span><span class="nx">emp</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">emp</span><span class="p">.</span><span class="nx">nombre</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">emp</span><span class="p">.</span><span class="nx">edad</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">emp</span><span class="p">.</span><span class="nx">puesto</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Director</span><span class="p">(</span><span class="s2">&quot;Ana López&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">50</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Directora&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Marketing&quot;</span><span class="p">);</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">emp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Empleado</span><span class="p">(</span><span class="s2">&quot;Carlos Pérez&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">35</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Desarrollador&quot;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">dir</span><span class="p">.</span><span class="nx">nombre</span><span class="p">);</span><span class="w"> </span><span class="c1">// Ana López</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">dir</span><span class="p">.</span><span class="nx">puesto</span><span class="p">);</span><span class="w"> </span><span class="c1">// Directora</span>
+<span class="nx">tratarEmpleado</span><span class="p">(</span><span class="nx">emp</span><span class="p">);</span><span class="w"> </span><span class="c1">// Carlos Pérez, 35, Desarrollador</span>
+<span class="nx">traerEmpleado</span><span class="p">(</span><span class="nx">dir</span><span class="p">);</span><span class="w"> </span><span class="c1">// Ana López, 50, Directora</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<hr />
+<h3 id="ejemplo-completo-figura-rectangulo-y-circulo"><strong>Ejemplo Completo: Figura, Rectángulo y Círculo</strong></h3>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo completo de clases</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nx">Figura</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">_nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nombre</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">get</span><span class="w"> </span><span class="nx">nombre</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">_nombre</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">area</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="s2">&quot;Método no implementado&quot;</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">perimetro</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="s2">&quot;Método no implementado&quot;</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">class</span><span class="w"> </span><span class="nx">Rectangulo</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">Figura</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">nombre</span><span class="p">,</span><span class="w"> </span><span class="nx">ancho</span><span class="p">,</span><span class="w"> </span><span class="nx">alto</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">super</span><span class="p">(</span><span class="nx">nombre</span><span class="p">);</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">ancho</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ancho</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">alto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">alto</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">area</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">ancho</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">alto</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">perimetro</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">ancho</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">alto</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">class</span><span class="w"> </span><span class="nx">Circulo</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">Figura</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">nombre</span><span class="p">,</span><span class="w"> </span><span class="nx">radio</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">super</span><span class="p">(</span><span class="nx">nombre</span><span class="p">);</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">radio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">radio</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">area</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">radio</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">perimetro</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">radio</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Ahora podemos ver un ejemplo de uso de la jeraquía de clases:
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Uso de la jeraquía de clases</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Rectangulo</span><span class="p">(</span><span class="s1">&#39;Rectangulo&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Circulo</span><span class="p">(</span><span class="s1">&#39;Círculo&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Área del rectángulo:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="p">.</span><span class="nx">nombre</span><span class="p">(),</span><span class="w"> </span><span class="nx">r</span><span class="p">.</span><span class="nx">area</span><span class="p">());</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Perímetro del rectángulo:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="p">.</span><span class="nx">nombre</span><span class="p">(),</span><span class="w"> </span><span class="nx">r</span><span class="p">.</span><span class="nx">perimetro</span><span class="p">());</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Área del círculo:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">c</span><span class="p">.</span><span class="nx">nombre</span><span class="p">(),</span><span class="w"> </span><span class="nx">c</span><span class="p">.</span><span class="nx">area</span><span class="p">());</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Perímetro del círculo:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">c</span><span class="p">.</span><span class="nx">nombre</span><span class="p">(),</span><span class="w"> </span><span class="nx">c</span><span class="p">.</span><span class="nx">perimetro</span><span class="p">());</span>
+</code></pre></div></td></tr></table></div></p>
 <h3 id="cuando-usar-class-o-prototipos"><strong>¿Cuándo Usar <code>class</code> o Prototipos?</strong></h3>
 <ul>
 <li><strong><code>class</code></strong> es más intuitivo y fácil de leer.</li>
 <li><strong>Los prototipos</strong> permiten más flexibilidad en algunos casos avanzados.</li>
 </ul>
 <p>En general, <strong><code>class</code> es recomendado</strong> para la mayoría de proyectos modernos, ya que es más claro y se asemeja a la sintaxis de otros lenguajes orientados a objetos.</p>
+<h3 id="ejercicios-sobre-clases-y-herencia"><strong>Ejercicios sobre Clases y Herencia</strong></h3>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 1: Crear una jerarquía de Vehículos</p>
+<ul>
+<li>Crea una clase <code>Vehiculo</code> con propiedades <code>marca</code>, <code>modelo</code>, <code>velocidad</code> y un método <code>arrancar()</code>.</li>
+<li>Crea dos clases que hereden de <code>Vehiculo</code>: <code>Coche</code> (con propiedad <code>puertas</code>) y <code>Moto</code> (con propiedad <code>cilindrada</code>).</li>
+<li>Implementa los métodos necesarios para cada subclase.</li>
+</ul>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 2: Crear una jerarquía de Animales</p>
+<ul>
+<li>Crea una clase <code>Animal</code> con propiedades <code>nombre</code> y <code>edad</code>.</li>
+<li>Crea dos subclases: <code>Perro</code> (con método <code>ladrar()</code>) y <code>Gato</code> (con método <code>maullar()</code>).</li>
+<li>Implementa un método <code>presentarse()</code> en la superclase y úsalo en las subclases.</li>
+</ul>
+</div>
 
 
 

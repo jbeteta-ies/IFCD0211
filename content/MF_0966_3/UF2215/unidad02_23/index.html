@@ -1308,7 +1308,386 @@
                   
 
 
-  <h1>2.3 Persistencia</h1>
+<h1 id="unidad-2-arrays-objetos-y-clases"><strong>Unidad 2: Arrays, Objetos y Clases</strong></h1>
+<h2 id="23-persistencia-en-javascript-con-json"><strong>2.3 Persistencia en JavaScript con JSON</strong></h2>
+<h3 id="introduccion"><strong>Introducción</strong></h3>
+<p>En JavaScript, la persistencia de datos es fundamental cuando queremos almacenar información de manera duradera. Para ello, uno de los formatos más utilizados es <strong>JSON</strong> (<strong>JavaScript Object Notation</strong>), que permite representar estructuras de datos de manera clara, sencilla y compatible con distintos sistemas.</p>
+<p>Este formato es ampliamente usado en el intercambio de datos entre aplicaciones web, APIs y almacenamiento en archivos.</p>
+<hr />
+<h3 id="que-es-json"><strong>¿Qué es JSON?</strong></h3>
+<p><strong>JSON (JavaScript Object Notation)</strong> es un formato de texto para el intercambio de datos, basado en la sintaxis de objetos de JavaScript. Es independiente del lenguaje y fácil de leer tanto por humanos como por máquinas.</p>
+<ul>
+<li>Se estructura en <strong>pares clave-valor</strong>.</li>
+<li>Permite almacenar datos en forma de <strong>objetos</strong> y <strong>arrays</strong>.</li>
+<li>Es compatible con múltiples lenguajes de programación.</li>
+</ul>
+<p><strong>Ejemplo de un objeto en JSON:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo de JSON</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Carlos Pérez&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;edad&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">35</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;puesto&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Desarrollador&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;habilidades&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;JavaScript&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;HTML&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;CSS&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h3 id="como-utilizar-json-en-javascript"><strong>¿Cómo utilizar JSON en JavaScript?</strong></h3>
+<p>JavaScript proporciona dos métodos fundamentales para trabajar con JSON:</p>
+<ul>
+<li><code>JSON.stringify()</code> → Convierte un objeto JavaScript a una cadena JSON.</li>
+<li><code>JSON.parse()</code> → Convierte una cadena JSON a un objeto JavaScript.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de uso de <code>JSON.stringify()</code> y <code>JSON.parse()</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Trabajando con JSON</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">empleado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Ana López&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">edad</span><span class="o">:</span><span class="w"> </span><span class="mf">28</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">puesto</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Analista&quot;</span>
+<span class="p">};</span>
+
+<span class="c1">// Convertimos el objeto a JSON</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">jsonString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">empleado</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">jsonString</span><span class="p">);</span>
+
+<span class="c1">// Convertimos el JSON de nuevo a un objeto</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">objetoRecuperado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">jsonString</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">objetoRecuperado</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<hr />
+<h3 id="leyendo-un-json-externo"><strong>Leyendo un JSON externo</strong></h3>
+<p>Podemos leer archivos JSON externos utilizando <code>fetch()</code> en JavaScript.
+Este JSON lo utilizaremos estos datos de ejemplo, que lo puedes encontrar en <a href="https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json">este enlace</a>.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;squadName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Super hero squad&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;homeTown&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Metro City&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;formed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2016</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;secretBase&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Super tower&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;active&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;members&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Molecule Man&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;age&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">29</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;secretIdentity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Dan Jukes&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;powers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;Radiation resistance&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;Turning tiny&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;Radiation blast&quot;</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Madame Uppercut&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;age&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">39</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;secretIdentity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Jane Wilson&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;powers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;Million tonne punch&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;Damage resistance&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;Superhuman reflexes&quot;</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Eternal Flame&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;age&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1000000</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;secretIdentity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Unknown&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;powers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;Immortality&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;Heat Immunity&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;Inferno&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;Teleportation&quot;</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Lectura de un JSON externo</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Leyendo JSON externo</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">response</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="s1">&#39;Error al cargar el JSON&#39;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+<span class="w">    </span><span class="p">})</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Equipo: </span><span class="si">${</span><span class="nx">data</span><span class="p">.</span><span class="nx">squadName</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Ciudad: </span><span class="si">${</span><span class="nx">data</span><span class="p">.</span><span class="nx">homeTown</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Formado en: </span><span class="si">${</span><span class="nx">data</span><span class="p">.</span><span class="nx">formed</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Miembros del equipo:&#39;</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">data</span><span class="p">.</span><span class="nx">members</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">member</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`- Nombre: </span><span class="si">${</span><span class="nx">member</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="w">            </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`  Edad: </span><span class="si">${</span><span class="nx">member</span><span class="p">.</span><span class="nx">age</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="w">            </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`  Identidad secreta: </span><span class="si">${</span><span class="nx">member</span><span class="p">.</span><span class="nx">secretIdentity</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="w">            </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;  Poderes:&#39;</span><span class="p">);</span>
+<span class="w">            </span><span class="nx">member</span><span class="p">.</span><span class="nx">powers</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">power</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`    * </span><span class="si">${</span><span class="nx">power</span><span class="si">}</span><span class="sb">`</span><span class="p">));</span>
+<span class="w">        </span><span class="p">});</span>
+<span class="w">    </span><span class="p">})</span>
+<span class="w">    </span><span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error al cargar el JSON:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">));</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p>Este ejemplo muestra la información básica del equipo de superhéroes, así como los detalles de cada miembro, incluyendo su edad, identidad secreta y lista de poderes."</p>
+<h3 id="ejemplo-completo-aplicacion-interactiva-con-json"><strong>Ejemplo Completo: Aplicación Interactiva con JSON</strong></h3>
+<p>Vamos a desarrollar una aplicación que cargue la información del JSON de superhéroes en un array, notifique al usuario y permita ver los detalles de cada superhéroe mediante un menú interactivo.</p>
+<details class="example">
+<summary>Aplicación interactiva con JSON</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Aplicación JSON Interactiva</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">cargarSuperheroes</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json&#39;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">response</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="s1">&#39;Error al cargar el JSON&#39;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// Cargar datos en un array</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">superheroes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">data</span><span class="p">.</span><span class="nx">members</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// Informar al usuario</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`¡Datos cargados correctamente!`</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Equipo: </span><span class="si">${</span><span class="nx">data</span><span class="p">.</span><span class="nx">squadName</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Ciudad: </span><span class="si">${</span><span class="nx">data</span><span class="p">.</span><span class="nx">homeTown</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Formado en: </span><span class="si">${</span><span class="nx">data</span><span class="p">.</span><span class="nx">formed</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Número de miembros: </span><span class="si">${</span><span class="nx">superheroes</span><span class="p">.</span><span class="nx">length</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Menú interactivo</span>
+<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">indice</span><span class="p">;</span>
+<span class="w">        </span><span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">indice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="sb">`Introduce un índice entre 0 y </span><span class="si">${</span><span class="nx">superheroes</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="si">}</span><span class="sb"> para ver un superhéroe (introduce otro número para salir):`</span><span class="p">));</span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">indice</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">indice</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">superheroes</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="kd">const</span><span class="w"> </span><span class="nx">hero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">superheroes</span><span class="p">[</span><span class="nx">indice</span><span class="p">];</span>
+<span class="w">                </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`\nInformación del superhéroe:`</span><span class="p">);</span>
+<span class="w">                </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Nombre: </span><span class="si">${</span><span class="nx">hero</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="w">                </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Edad: </span><span class="si">${</span><span class="nx">hero</span><span class="p">.</span><span class="nx">age</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="w">                </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Identidad secreta: </span><span class="si">${</span><span class="nx">hero</span><span class="p">.</span><span class="nx">secretIdentity</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="w">                </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Poderes:`</span><span class="p">);</span>
+<span class="w">                </span><span class="nx">hero</span><span class="p">.</span><span class="nx">powers</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">power</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`- </span><span class="si">${</span><span class="nx">power</span><span class="si">}</span><span class="sb">`</span><span class="p">));</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Saliendo de la aplicación...&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">indice</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">indice</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">superheroes</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error al cargar o procesar el JSON:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">cargarSuperheroes</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p><strong>¿Qué hace esta aplicación?</strong></p>
+<ol>
+<li>Carga el archivo JSON externo con <code>fetch</code>.</li>
+<li>Informa al usuario sobre el contenido del archivo.</li>
+<li>Muestra un menú que permite introducir un índice para ver información detallada de un superhéroe.</li>
+<li>Finaliza cuando el usuario introduce un índice no válido.</li>
+</ol>
+<p>Este ejemplo muestra cómo cargar datos JSON, almacenarlos en un array, recorrerlos y mostrarlos de forma interactiva mediante un menú simple."</p>
+<hr />
+<h3 id="almacenar-un-objeto-json-en-un-fichero-local"><strong>Almacenar un objeto JSON en un fichero local</strong></h3>
+<p>Para almacenar datos en un archivo local usando Node.js, podemos usar el módulo <code>fs</code>.</p>
+<div class="admonition example">
+<p class="admonition-title">Almacenando JSON en un archivo</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Guardar JSON en archivo</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">fs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">empleados</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;codigo&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">101</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;nombre&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Carlos Pérez&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;edad&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">35</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;sueldo&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">2500</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;codigo&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">102</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;nombre&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Ana López&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;edad&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">28</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;sueldo&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">2200</span><span class="w"> </span><span class="p">}</span>
+<span class="p">];</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">jsonData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">empleados</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span>
+
+<span class="nx">fs</span><span class="p">.</span><span class="nx">writeFileSync</span><span class="p">(</span><span class="s1">&#39;empleados.json&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">jsonData</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;utf-8&#39;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Archivo JSON guardado exitosamente.&#39;</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<hr />
+<h3 id="leer-un-json-desde-un-fichero-local"><strong>Leer un JSON desde un fichero local</strong></h3>
+<p>Podemos leer un archivo JSON localmente usando Node.js.</p>
+<div class="admonition example">
+<p class="admonition-title">Leyendo un archivo JSON local</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Leer JSON desde archivo</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">fs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">datos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="s1">&#39;empleados.json&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;utf-8&#39;</span><span class="p">);</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">empleados</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">datos</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">empleados</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<hr />
+<h3 id="ejercicio-propuesto"><strong>Ejercicio Propuesto</strong></h3>
+<p>Se proporciona el siguiente archivo JSON con información de empleados:</p>
+<p><strong><code>empleados.json</code></strong>
+<div class="highlight"><pre><span></span><code><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;codigo&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Carlos Pérez&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;edad&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">35</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;sueldo&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2500</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;codigo&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">102</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Ana López&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;edad&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">28</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;sueldo&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2200</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;codigo&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">103</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Luis García&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;edad&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;sueldo&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3000</span><span class="w"> </span><span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div></p>
+<p><strong>Requisitos del ejercicio:</strong></p>
+<ol>
+<li>Leer el archivo JSON y convertirlo a un array de objetos.</li>
+<li>Solicitar al usuario un <strong>código de empleado</strong>.</li>
+<li>Mostrar la información del empleado correspondiente.</li>
+<li>Permitir al usuario modificar la <strong>edad</strong> o el <strong>sueldo</strong>.</li>
+<li>Guardar de nuevo el array modificado en el archivo JSON.</li>
+</ol>
+<details class="example">
+<summary>Posible solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Solución del ejercicio</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">fs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;prompt-sync&#39;</span><span class="p">)();</span>
+
+<span class="c1">// Leer el archivo JSON</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">datos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="s1">&#39;empleados.json&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;utf-8&#39;</span><span class="p">);</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">empleados</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">datos</span><span class="p">);</span>
+
+<span class="c1">// Pedir código de empleado</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">codigo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s1">&#39;Introduce el código del empleado: &#39;</span><span class="p">));</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">empleado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">empleados</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">emp</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">emp</span><span class="p">.</span><span class="nx">codigo</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">codigo</span><span class="p">);</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">empleado</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Empleado encontrado: </span><span class="si">${</span><span class="nx">empleado</span><span class="p">.</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">, Edad: </span><span class="si">${</span><span class="nx">empleado</span><span class="p">.</span><span class="nx">edad</span><span class="si">}</span><span class="sb">, Sueldo: </span><span class="si">${</span><span class="nx">empleado</span><span class="p">.</span><span class="nx">sueldo</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Permitir modificar edad o sueldo</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">opcion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s1">&#39;¿Quieres modificar la edad (e) o el sueldo (s)?: &#39;</span><span class="p">).</span><span class="nx">toLowerCase</span><span class="p">();</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">opcion</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;e&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">nuevaEdad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s1">&#39;Introduce la nueva edad: &#39;</span><span class="p">));</span>
+<span class="w">        </span><span class="nx">empleado</span><span class="p">.</span><span class="nx">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nuevaEdad</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">opcion</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;s&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">nuevoSueldo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s1">&#39;Introduce el nuevo sueldo: &#39;</span><span class="p">));</span>
+<span class="w">        </span><span class="nx">empleado</span><span class="p">.</span><span class="nx">sueldo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nuevoSueldo</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Guardar los cambios en el archivo JSON</span>
+<span class="w">    </span><span class="nx">fs</span><span class="p">.</span><span class="nx">writeFileSync</span><span class="p">(</span><span class="s1">&#39;empleados.json&#39;</span><span class="p">,</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">empleados</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">),</span><span class="w"> </span><span class="s1">&#39;utf-8&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Datos actualizados correctamente.&#39;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Empleado no encontrado.&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p>Este ejercicio permite comprender cómo leer, modificar y guardar datos en formato JSON utilizando JavaScript y Node.js."</p>
 
 
 
@@ -1316,7 +1695,8 @@
 
 
 
-
+  
+  
 
 
 

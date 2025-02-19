@@ -1308,10 +1308,10 @@
                   
 
 
-<h1 id="unidad-2-funciones-y-manejo-de-errores"><strong>Unidad 2: Funciones y Manejo de Errores</strong></h1>
-<h2 id="23-asincronia-en-javascript"><strong>2.3 Asincronía en JavaScript</strong></h2>
+<h1 id="unidad-3-funciones-y-manejo-de-errores"><strong>Unidad 3: Funciones y Manejo de Errores</strong></h1>
+<h2 id="33-asincronia-en-javascript"><strong>3.3 Asincronía en JavaScript</strong></h2>
 <p>JavaScript es un lenguaje de programación <strong>monohilo</strong>, lo que significa que ejecuta una sola operación a la vez en su hilo principal. Sin embargo, permite manejar tareas <strong>asincrónicas</strong> mediante <strong>callbacks, promesas y <code>async/await</code></strong>, evitando bloqueos en la ejecución del código.</p>
-<h3 id="231-concurrencia-y-paralelismo-en-javascript"><strong>2.3.1 Concurrencia y Paralelismo en JavaScript</strong></h3>
+<h3 id="331-concurrencia-y-paralelismo-en-javascript"><strong>3.3.1 Concurrencia y Paralelismo en JavaScript</strong></h3>
 <p>En programación, <strong>concurrencia</strong> y <strong>paralelismo</strong> son dos conceptos clave cuando se trabaja con tareas asíncronas:</p>
 <ul>
 <li><strong>Concurrencia</strong>: Es la capacidad de manejar múltiples tareas a la vez, pero no necesariamente ejecutándolas simultáneamente.</li>
@@ -1414,7 +1414,7 @@ Mensaje dentro de setTimeout
 <p>Aunque JavaScript es monohilo, puede ejecutar tareas en paralelo a través de <strong>Web Workers</strong> o <strong>módulos como <code>Worker Threads</code> en Node.js</strong>, lo que permite aprovechar múltiples núcleos de CPU.</p>
 <p>Esto no es lo mismo que el <strong>Event Loop</strong>, ya que los <strong>Web Workers</strong> ejecutan código en hilos separados sin acceso al <code>Call Stack</code> principal.</p>
 <hr />
-<h3 id="232-callbacks"><strong>2.3.2 Callbacks</strong></h3>
+<h3 id="332-callbacks"><strong>3.3.2 Callbacks</strong></h3>
 <p>Los <em>callbacks</em> son la pieza clave para que Javascript pueda funcionar de forma asíncrona. De hecho, el resto de patrones asíncronos en Javascript está basado en <em>callbacks</em> de un modo u otro, simplemente añaden azúcar sintáctico para trabajar con ellos más cómodamente.</p>
 <p>Un <em>callback</em> no es más que <strong>una función que se pasa como argumento de otra función</strong>, y que será invocada para completar algún tipo de acción. En nuestro contexto asíncrono, un <em>callback</em> representa el '<em>¿Qué quieres hacer una vez que tu operación asíncrona termine?</em>'. Por tanto, es el trozo de código que será ejecutado una vez que una operación asíncrona notifique que ha terminado. Esta ejecución se hará en algún momento futuro, gracias al mecanismo que implementa el bucle de eventos.</p>
 <p>Fíjate en el siguiente ejemplo sencillo utilizando un callback:</p>
@@ -1512,7 +1512,7 @@ Mensaje dentro de setTimeout
 </div>
 <p>Para evitar este problema, se introdujeron las <strong>Promesas</strong>.</p>
 <hr />
-<h3 id="233-promesas-en-javascript"><strong>2.3.3 Promesas en JavaScript</strong></h3>
+<h3 id="333-promesas-en-javascript"><strong>3.3.3 Promesas en JavaScript</strong></h3>
 <p>Una promesa es un objeto que representa <strong>el resultado de una operación asíncrona</strong>. Este resultado podría estar disponible <strong>ahora</strong> o en el <strong>futuro</strong>. Las promesas se basan en <em><strong>callbacks</strong> </em>pero añaden azúcar para un mejor manejo y sintaxis. Las promesas son especiales en términos de asincronía ya que añaden un nuevo nivel de prioridad que estudiaremos a continuación.</p>
 <p>Cuando llamamos a una función asíncrona implementada con este patrón, nos devolverá inmediatamente una promesa como garantía de que la operación asíncrona finalizará en algún momento, ya sea con éxito o con fallo. Una vez que tengamos el objeto promesa en nuestro poder, registramos un par de <em>callbacks</em>: uno para indicarle a la promesa '<em>que debe hacer en caso de que todo vaya bien</em>' (resolución de la promesa o <em>resolve</em>) y otro para determinar '<em>que hacer en caso de fallo</em>' (rechazo de la promesa o <em>reject</em>).</p>
 <p>A resumidas cuentas, una promesa es un objeto al que le <strong>adjuntamos <em>callbacks</em>, en lugar de pasarlos directamente a la función asíncrona</strong>. La forma en que registramos esos dos <em>callbacks</em> es mediante el método <em>.then(resolveCallback, rejectCallback)</em>. En terminología de promesas, decimos que una promesa se resuelve con éxito (<em>resolved</em>) o se rechaza con fallo (<em>rejected</em>). Echa un vistazo al siguiente ejemplo:</p>
@@ -1581,7 +1581,7 @@ Mensaje dentro de setTimeout
 </code></pre></div></td></tr></table></div>
 </div>
 <hr />
-<h3 id="234-asyncawait-manejo-de-codigo-asincrono-de-forma-mas-clara"><strong>2.3.4 <code>async/await</code>: Manejo de Código Asíncrono de Forma Más Clara</strong></h3>
+<h3 id="334-asyncawait-manejo-de-codigo-asincrono-de-forma-mas-clara"><strong>3.3.4 <code>async/await</code>: Manejo de Código Asíncrono de Forma Más Clara</strong></h3>
 <p>Las promesas supusieron un gran salto en Javascript al introducir una mejora sustancial sobre los <em>callbacks</em> y un manejo más elegante de nuestras tareas asíncronas. Sin embargo, también pueden llegar a ser tediosas y verbosas a medida que se requieren más y más <em>.then()</em>. <strong>Las palabras clave <em>async </em>y <em>await </em>surgieron para simplificar el manejo de las promesas</strong>. Son puro azúcar para hacer las promesas más amigables, escribir código más sencillo, reducir el anidamiento y mejorar la trazabilidad al depurar. Pero recuerda, <em>async </em>\ <em>await </em>y las promesas son lo mismo en el fondo.</p>
 <p>La etiqueta <em>async</em> declara una función como asíncrona e indica que una promesa será automáticamente devuelta. Podemos declarar como <em>async </em>tanto funciones con nombre, anónimas, o funciones flecha. Por otro lado, <em>await </em>debe ser usado siempre dentro de una función declarada como <em>async </em>y esperará automáticamente (de forma asíncrona y no bloqueante) a que una promesa se resuelva.</p>
 <p><code>async/await</code> es una forma más sencilla y clara de manejar operaciones asincrónicas sin caer en la anidación de callbacks o el uso complejo de <code>.then()</code> y <code>.catch()</code>.</p>

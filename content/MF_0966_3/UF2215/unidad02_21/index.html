@@ -1308,7 +1308,7 @@
                   
 
 
-<h1 id="unidad-3-arrays-objetos-y-clases"><strong>Unidad 3: Arrays, Objetos y Clases</strong></h1>
+<h1 id="unidad-2-arrays-objetos-y-clases"><strong>Unidad 2: Arrays, Objetos y Clases</strong></h1>
 <h2 id="31-arrays-en-javascript"><strong>3.1 Arrays en JavaScript</strong></h2>
 <h3 id="creacion-de-un-array"><strong>Creación de un Array</strong></h3>
 <p>Un array en JavaScript es una colección ordenada de elementos. Se puede crear de diferentes maneras:</p>
@@ -1392,6 +1392,41 @@
 <span class="go">Banana</span>
 <span class="go">Cereza</span>
 </code></pre></div></p>
+</div>
+<h4 id="recorrer-un-array-con-forof"><strong>Recorrer un array con <code>for...of</code></strong></h4>
+<p>Una forma más moderna de recorrer un array es utilizando un bucle <code>for...of</code>, que nos permite acceder directamente a los valores sin necesidad de los índices.</p>
+<p>La sintaxis es:</p>
+<div class="admonition example">
+<p class="admonition-title">Sintaxis de <code>for...of</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Sintaxis de for...of</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">elemento</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">array</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Acceder al elemento</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p>Me permite iterar sobre arrays, strings, mapas, sets, etc. Objetos <code>iterables</code>. Veamos un par de ejemplos:</p>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo recorrido array con <code>for...of</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Recorrido con `for..of`</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">frutas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Manzana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Banana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Cereza&quot;</span><span class="p">];</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">fruta</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">frutas</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fruta</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo recorrido de un <code>string</code> con <code>for...of</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Recorrido de un `string` con `for...of`</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">mensaje</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Hola Mundo&quot;</span><span class="p">;</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">letra</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">mensaje</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">letra</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 </div>
 <h4 id="buscar-un-elemento-con-while-y-una-variable-bandera"><strong>Buscar un elemento con <code>while</code> y una variable bandera</strong></h4>
 <p>Una <strong>variable bandera</strong> es una variable booleana (<code>true</code> o <code>false</code>) que utilizamos para indicar si una condición se ha cumplido dentro de un bucle. Se usa comúnmente cuando buscamos un valor en un array o cuando queremos detener un proceso una vez que se ha encontrado un resultado.</p>
