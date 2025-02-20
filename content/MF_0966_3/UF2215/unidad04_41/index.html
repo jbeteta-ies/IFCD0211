@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://jbeteta-ies.github.io/IFCD0211/content/MF_0966_3/UF2215/unidad03_34/">
+        <link rel="canonical" href="https://jbeteta-ies.github.io/IFCD0211/content/MF_0966_3/UF2215/unidad04_41/">
       
       
-        <link rel="prev" href="../unidad03_33/">
+        <link rel="prev" href="../unidad03_34/">
       
       
-        <link rel="next" href="../unidad04_41/">
+        <link rel="next" href="../unidad04_42/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>3.4 Introducción API REST - Certificado de Profesionalidad IFCD0211</title>
+        <title>4.1 Introducción al DOM - Certificado de Profesionalidad IFCD0211</title>
       
     
     
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              3.4 Introducción API REST
+              4.1 Introducción al DOM
             
           </span>
         </div>
@@ -887,19 +887,17 @@
                 
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3_4" >
         
           
           <label class="md-nav__link" for="__nav_2_1_3_4" id="__nav_2_1_3_4_label" tabindex="0">
@@ -913,7 +911,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_3_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_3_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1_3_4">
             <span class="md-nav__icon md-icon"></span>
             T03 Funciones y manejo de errores
@@ -987,17 +985,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../unidad03_34/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1006,7 +997,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1024,17 +1014,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3_5" checked>
         
           
           <label class="md-nav__link" for="__nav_2_1_3_5" id="__nav_2_1_3_5_label" tabindex="0">
@@ -1048,7 +1040,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_3_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_3_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1_3_5">
             <span class="md-nav__icon md-icon"></span>
             T04 DOM y Eventos
@@ -1059,10 +1051,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../unidad04_41/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1071,6 +1070,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1435,54 +1435,76 @@
                   
 
 
-<h1 id="unidad-3-funciones-y-manejo-de-errores"><strong>Unidad 3: Funciones y Manejo de Errores</strong></h1>
-<h2 id="34-ejemplo-practico-con-asyncawait"><strong>3.4 Ejemplo práctico con Async/Await</strong></h2>
-<p>Este microservicio proporciona información sobre ciudades españolas almacenadas en un archivo <strong>JSON</strong>.</p>
-<h3 id="introduccion-a-las-api-rest"><strong>📌 Introducción a las API REST</strong></h3>
-<p>Este microservicio sigue el concepto de <strong>API REST (Representational State Transfer)</strong>, un estilo arquitectónico que permite la comunicación entre sistemas a través de HTTP. </p>
-<h3 id="caracteristicas-de-una-api-rest"><strong>Características de una API REST</strong></h3>
-<ul>
-<li><strong>Basado en recursos</strong>: Cada entidad (en este caso, ciudades) es un recurso accesible mediante una URL única.</li>
-<li><strong>Uso de métodos HTTP estándar</strong>: Se utilizan métodos como:</li>
-<li><code>GET</code> para obtener datos.</li>
-<li><code>POST</code> para enviar datos (no implementado en este ejemplo).</li>
-<li><code>PUT</code> para actualizar datos.</li>
-<li><code>DELETE</code> para eliminar recursos.</li>
-<li><strong>Formato de datos JSON</strong>: Los datos se envían y reciben en formato JSON, lo que facilita la interoperabilidad con otros sistemas.</li>
-</ul>
-<p>Este microservicio REST proporciona información sobre <strong>ciudades españolas</strong> mediante dos endpoints:</p>
-<ol>
-<li><strong><code>GET /ciudades</code></strong> → Devuelve la lista completa de ciudades.</li>
-<li><strong><code>GET /ciudades/:codigo</code></strong> → Devuelve la información de una ciudad específica según su código.</li>
-</ol>
-<h2 id="1-archivo-json-con-los-datos-ciudadesjson"><strong>1️⃣ Archivo JSON con los datos (<code>ciudades.json</code>)</strong></h2>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">ciudades.json</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">[</span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;codigo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MAD&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Madrid&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;poblacion&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3223000</span><span class="w"> </span><span class="p">},</span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;codigo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BCN&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Barcelona&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;poblacion&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1620000</span><span class="w"> </span><span class="p">},</span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;codigo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;VAL&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Valencia&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;poblacion&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">791000</span><span class="w"> </span><span class="p">},</span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;codigo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SEV&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sevilla&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;poblacion&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">688000</span><span class="w"> </span><span class="p">},</span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;codigo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ZAR&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Zaragoza&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;poblacion&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">674000</span><span class="w"> </span><span class="p">},</span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;codigo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MAL&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Málaga&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;poblacion&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">574000</span><span class="w"> </span><span class="p">},</span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;codigo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MUR&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Murcia&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;poblacion&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">460000</span><span class="w"> </span><span class="p">},</span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;codigo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PAL&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Palma de Mallorca&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;poblacion&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">415000</span><span class="w"> </span><span class="p">},</span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;codigo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BIL&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Bilbao&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;poblacion&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">345000</span><span class="w"> </span><span class="p">},</span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;codigo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;VGO&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Vigo&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;poblacion&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">296000</span><span class="w"> </span><span class="p">}</span>
-<span class="p">]</span>
-</code></pre></div></td></tr></table></div>
+<h1 id="4-integracion-de-js-con-html-y-dom"><strong>4. Integración de JS con HTML y DOM</strong></h1>
+<h2 id="40-aspectos-previos"><strong>4.0 Aspectos previos</strong></h2>
+<h3 id="401-que-es-un-servicio-web"><strong>4.0.1 ¿Qué es un Servicio Web?</strong></h3>
+<p>Un <strong>servicio web</strong> es una aplicación que responde a <strong>peticiones HTTP</strong> realizadas por un cliente (normalmente un navegador) y devuelve información en forma de páginas web, datos JSON o cualquier otro contenido.</p>
 <hr />
-<h2 id="2-servidor-nodejs-con-express-y-asyncawait-serverjs"><strong>2️⃣ Servidor Node.js con Express y Async/Await (<code>server.js</code>)</strong></h2>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">server.js</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<h3 id="402-estructura-basica-de-una-peticion-web"><strong>4.0.2 Estructura Básica de una Petición Web</strong></h3>
+<p>Cuando un usuario accede a una página web, el proceso que ocurre es el siguiente:</p>
+<ol>
+<li><strong>El usuario introduce una URL en su navegador</strong>.</li>
+<li><strong>El navegador envía una petición HTTP</strong> al servidor correspondiente.</li>
+<li><strong>El servidor recibe la petición</strong> y genera una respuesta (un archivo HTML, datos de una base de datos, etc.).</li>
+<li><strong>El navegador recibe la respuesta</strong>, interpreta el código HTML y ejecuta cualquier JavaScript incluido.</li>
+</ol>
+<p>Este flujo es <strong>sin memoria</strong>: cada petición es independiente y el servidor no recuerda estados anteriores (a menos que se use almacenamiento en cookies o bases de datos).</p>
+<hr />
+<h3 id="403-que-es-una-url-y-como-funciona-http"><strong>4.0.3 ¿Qué es una URL y cómo funciona HTTP?</strong></h3>
+<ul>
+<li><strong>URL (Uniform Resource Locator):</strong> Dirección única que identifica un recurso en la web (ejemplo: <code>https://www.ejemplo.com/productos</code>).</li>
+<li><strong>HTTP (HyperText Transfer Protocol):</strong> Protocolo que define cómo se comunican los navegadores con los servidores web.</li>
+<li><strong>Métodos HTTP más comunes:</strong><ul>
+<li><code>GET</code>: Solicita información (ejemplo: cargar una página).</li>
+<li><code>POST</code>: Envía datos al servidor (ejemplo: un formulario).</li>
+<li><code>PUT</code>: Actualiza información en el servidor.</li>
+<li><code>DELETE</code>: Elimina datos en el servidor.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="404-frontend-vs-backend"><strong>4.0.4 Frontend vs Backend</strong></h3>
+<p>La programación web se divide en <strong>dos partes principales</strong>:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Frontend (Cliente)</strong></th>
+<th><strong>Backend (Servidor)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Se ejecuta en el navegador del usuario.</td>
+<td>Se ejecuta en el servidor web.</td>
+</tr>
+<tr>
+<td>Usa HTML, CSS y JavaScript.</td>
+<td>Usa lenguajes como PHP, Node.js, Python, etc.</td>
+</tr>
+<tr>
+<td>Se encarga de la apariencia y la interacción con el usuario.</td>
+<td>Se encarga de la lógica del negocio y la base de datos.</td>
+</tr>
+</tbody>
+</table>
+<p>JavaScript es el <strong>único lenguaje que puede trabajar en ambos lados</strong>:<br />
+- En el <strong>frontend</strong> (en el navegador) para la interacción con el usuario.<br />
+- En el <strong>backend</strong> (con Node.js) para la gestión de datos y lógica del servidor.</p>
+<hr />
+<h3 id="405-caso-de-uso-carga-de-una-pagina-web-con-codigo-de-ejemplo"><strong>4.0.5 Caso de Uso: Carga de una Página Web con Código de Ejemplo</strong></h3>
+<p>Para entender mejor cómo funciona una petición HTTP en una aplicación web, veamos un <strong>caso práctico</strong> donde un usuario accede a una página de productos y el servidor responde generando un <strong>HTML dinámico</strong> con los datos de una base de datos.</p>
+<h4 id="paso-1-peticion-get-desde-el-navegador"><strong>📌 Paso 1: Petición GET desde el Navegador</strong></h4>
+<p>Cuando el usuario escribe <code>www.ejemplo.com/productos</code> en la barra de direcciones, el navegador <strong>envía una petición HTTP GET</strong> al servidor:</p>
+<div class="highlight"><pre><span></span><code>GET /productos HTTP/1.1
+Host: www.ejemplo.com
+User-Agent: Mozilla/5.0
+Accept: text/html
+</code></pre></div>
+<h4 id="paso-2-servidor-nodejs-recibe-la-peticion"><strong>📌 Paso 2: Servidor Node.js recibe la petición</strong></h4>
+<p>En el backend, el servidor <strong>recoge la petición GET</strong> y consulta la base de datos para obtener los productos:</p>
+<details class="example">
+<summary>Servidor Node.js con Express</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Servidor Node.js que responde con HTML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -1520,126 +1542,308 @@
 <span class="normal">36</span>
 <span class="normal">37</span>
 <span class="normal">38</span>
-<span class="normal">39</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">express</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;express&quot;</span><span class="p">);</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">fs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;fs/promises&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Uso de fs con promesas para async/await</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">express</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">mysql</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mysql2&#39;</span><span class="p">);</span>
 <span class="kd">const</span><span class="w"> </span><span class="nx">app</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">express</span><span class="p">();</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">PORT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3000</span><span class="p">;</span>
 
-<span class="c1">// Función para leer el JSON de ciudades</span>
-<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">cargarCiudades</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="s2">&quot;ciudades.json&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;utf-8&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&quot;Error al leer el archivo JSON&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">);</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">[];</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-
-<span class="c1">// 📌 Endpoint para obtener todas las ciudades</span>
-<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;/ciudades&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">ciudades</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">cargarCiudades</span><span class="p">();</span>
-<span class="w">    </span><span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">(</span><span class="nx">ciudades</span><span class="p">);</span>
+<span class="c1">// Conexión a la base de datos</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">conexion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">mysql</span><span class="p">.</span><span class="nx">createConnection</span><span class="p">({</span>
+<span class="w">    </span><span class="nx">host</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">user</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;root&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">password</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">database</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;tienda&#39;</span>
 <span class="p">});</span>
 
-<span class="c1">// 📌 Endpoint para obtener una ciudad por su código</span>
-<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;/ciudades/:codigo&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">codigo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">codigo</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">();</span>
-<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">ciudades</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">cargarCiudades</span><span class="p">();</span>
-<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">ciudad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ciudades</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">c</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">c</span><span class="p">.</span><span class="nx">codigo</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">codigo</span><span class="p">);</span>
+<span class="c1">// Ruta para manejar la petición GET /productos</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/productos&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">conexion</span><span class="p">.</span><span class="nx">query</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM productos&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">,</span><span class="w"> </span><span class="nx">resultados</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">500</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="s2">&quot;Error en la base de datos&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="k">return</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
 
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">ciudad</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">(</span><span class="nx">ciudad</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">404</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span><span class="w"> </span><span class="nx">error</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Ciudad no encontrada&quot;</span><span class="w"> </span><span class="p">});</span>
-<span class="w">    </span><span class="p">}</span>
+<span class="w">        </span><span class="c1">// Construcción del HTML con los datos de la BD</span>
+<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">html</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`</span>
+<span class="sb">            &lt;!DOCTYPE html&gt;</span>
+<span class="sb">            &lt;html lang=&quot;es&quot;&gt;</span>
+<span class="sb">            &lt;head&gt;</span>
+<span class="sb">                &lt;meta charset=&quot;UTF-8&quot;&gt;</span>
+<span class="sb">                &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span>
+<span class="sb">                &lt;title&gt;Lista de Productos&lt;/title&gt;</span>
+<span class="sb">            &lt;/head&gt;</span>
+<span class="sb">            &lt;body&gt;</span>
+<span class="sb">                &lt;h1&gt;Lista de Productos&lt;/h1&gt;</span>
+<span class="sb">                &lt;table border=&quot;1&quot;&gt;</span>
+<span class="sb">                    &lt;tr&gt;</span>
+<span class="sb">                        &lt;th&gt;ID&lt;/th&gt;</span>
+<span class="sb">                        &lt;th&gt;Nombre&lt;/th&gt;</span>
+<span class="sb">                        &lt;th&gt;Precio&lt;/th&gt;</span>
+<span class="sb">                    &lt;/tr&gt;`</span><span class="p">;</span>
+
+<span class="w">        </span><span class="nx">resultados</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">producto</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">html</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="sb">`</span>
+<span class="sb">                    &lt;tr&gt;</span>
+<span class="sb">                        &lt;td&gt;</span><span class="si">${</span><span class="nx">producto</span><span class="p">.</span><span class="nx">id</span><span class="si">}</span><span class="sb">&lt;/td&gt;</span>
+<span class="sb">                        &lt;td&gt;</span><span class="si">${</span><span class="nx">producto</span><span class="p">.</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">&lt;/td&gt;</span>
+<span class="sb">                        &lt;td&gt;</span><span class="si">${</span><span class="nx">producto</span><span class="p">.</span><span class="nx">precio</span><span class="si">}</span><span class="sb">€&lt;/td&gt;</span>
+<span class="sb">                    &lt;/tr&gt;`</span><span class="p">;</span>
+<span class="w">        </span><span class="p">});</span>
+
+<span class="w">        </span><span class="nx">html</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="sb">`</span>
+<span class="sb">                &lt;/table&gt;</span>
+<span class="sb">            &lt;/body&gt;</span>
+<span class="sb">            &lt;/html&gt;`</span><span class="p">;</span>
+
+<span class="w">        </span><span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">html</span><span class="p">);</span>
+<span class="w">    </span><span class="p">});</span>
 <span class="p">});</span>
 
 <span class="c1">// Iniciar servidor</span>
-<span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="nx">PORT</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Servidor ejecutándose en http://localhost:</span><span class="si">${</span><span class="nx">PORT</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mf">3000</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Servidor ejecutándose en http://localhost:3000&#39;</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div></td></tr></table></div>
-<hr />
-<h2 id="3-como-ejecutar-el-microservicio"><strong>3️⃣ Cómo Ejecutar el Microservicio</strong></h2>
-<h3 id="1-instalar-nodejs-y-express"><strong>📌 1. Instalar Node.js y Express</strong></h3>
-<p>Ejecuta los siguientes comandos:
-<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>init<span class="w"> </span>-y
-npm<span class="w"> </span>install<span class="w"> </span>express
-</code></pre></div></p>
-<h3 id="2-crear-los-archivos"><strong>📌 2. Crear los archivos</strong></h3>
-<ul>
-<li>Guarda el archivo <strong><code>ciudades.json</code></strong> con los datos.</li>
-<li>Guarda el archivo <strong><code>server.js</code></strong> con el código del servidor.</li>
-</ul>
-<h3 id="3-iniciar-el-servidor"><strong>📌 3. Iniciar el servidor</strong></h3>
-<p>Ejecuta el siguiente comando:
-<div class="highlight"><pre><span></span><code>node<span class="w"> </span>server.js
-</code></pre></div></p>
-<hr />
-<h2 id="4-pruebas-con-el-servidor"><strong>4️⃣ Pruebas con el Servidor</strong></h2>
-<h3 id="obtener-todas-las-ciudades"><strong>✔ Obtener todas las ciudades</strong></h3>
-<p>📌 <strong>Ruta:</strong> <code>http://localhost:3000/ciudades</code></p>
-<p>📌 <strong>Ejemplo de respuesta:</strong>
-<div class="highlight"><pre><span></span><code><span class="p">[</span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;codigo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MAD&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Madrid&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;poblacion&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3223000</span><span class="w"> </span><span class="p">},</span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;codigo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BCN&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Barcelona&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;poblacion&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1620000</span><span class="w"> </span><span class="p">}</span>
-<span class="p">]</span>
-</code></pre></div></p>
-<h3 id="obtener-una-ciudad-por-codigo"><strong>✔ Obtener una ciudad por código</strong></h3>
-<p>📌 <strong>Ruta:</strong> <code>http://localhost:3000/ciudades/MAD</code></p>
-<p>📌 <strong>Ejemplo de respuesta:</strong>
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nt">&quot;codigo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MAD&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Madrid&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;poblacion&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3223000</span><span class="w"> </span><span class="p">}</span>
-</code></pre></div></p>
-<h3 id="ciudad-no-encontrada"><strong>❌ Ciudad no encontrada</strong></h3>
-<p>📌 <strong>Ruta:</strong> <code>http://localhost:3000/ciudades/XYZ</code></p>
-<p>📌 <strong>Respuesta:</strong>
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Ciudad no encontrada&quot;</span><span class="w"> </span><span class="p">}</span>
-</code></pre></div></p>
-<hr />
-<hr />
-<h2 id="5-como-acceder-a-los-servicios-rest"><strong>5️⃣ Cómo acceder a los servicios REST</strong></h2>
-<p>Existen varias formas de probar y consumir servicios REST. Aquí te mostramos tres métodos: <strong>desde un plugin de VSCode</strong>, <strong>desde un navegador web</strong> y <strong>con Postman</strong>.</p>
-<h3 id="opcion-1-usar-una-extension-de-vscode-rest-client"><strong>✔ Opción 1: Usar una Extensión de VSCode (REST Client)</strong></h3>
-<ol>
-<li><strong>Instalar la extensión REST Client</strong> en VSCode.</li>
-<li>Crear un archivo con extensión <code>.http</code> o <code>.rest</code>.</li>
-<li>Escribir la petición:</li>
-</ol>
-<div class="highlight"><pre><span></span><code><span class="err">GET http://localhost:3000/ciudades</span>
+</details>
+<h4 id="paso-3-el-servidor-envia-la-respuesta-al-navegador"><strong>📌 Paso 3: El servidor envía la respuesta al navegador</strong></h4>
+<p>Una vez que la base de datos devuelve los productos, el servidor genera un documento HTML y lo <strong>envía como respuesta</strong>:</p>
+<div class="highlight"><pre><span></span><code>HTTP/1.1 200 OK
+Content-Type: text/html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;es&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Lista de Productos&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Lista de Productos&lt;/h1&gt;
+    &lt;table border=&quot;1&quot;&gt;
+        &lt;tr&gt;
+            &lt;th&gt;ID&lt;/th&gt;
+            &lt;th&gt;Nombre&lt;/th&gt;
+            &lt;th&gt;Precio&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;Camisa&lt;/td&gt;
+            &lt;td&gt;25€&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;Pantalón&lt;/td&gt;
+            &lt;td&gt;40€&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre></div>
-<ol>
-<li>Hacer clic en <strong>Send Request</strong> para ver la respuesta en JSON.</li>
-</ol>
-<h3 id="opcion-2-desde-el-navegador-chrome"><strong>✔ Opción 2: Desde el navegador Chrome</strong></h3>
-<p>Si solo necesitas probar las peticiones <code>GET</code>, puedes hacerlo desde el navegador:</p>
-<ol>
-<li>Abre <strong>Google Chrome</strong>.</li>
-<li>Escribe en la barra de direcciones:
-   <div class="highlight"><pre><span></span><code>http://localhost:3000/ciudades
-</code></pre></div></li>
-<li>Verás la respuesta en formato JSON en pantalla.</li>
-<li>Para buscar una ciudad específica:
-   <div class="highlight"><pre><span></span><code>http://localhost:3000/ciudades/MAD
-</code></pre></div></li>
-</ol>
-<p>Esto mostrará la información de la ciudad de <strong>Madrid</strong>.</p>
-<h3 id="opcion-3-usar-postman-para-probar-la-api"><strong>✔ Opción 3: Usar Postman para probar la API</strong></h3>
-<ol>
-<li><strong>Descargar e instalar Postman</strong> desde <a href="https://www.postman.com/">postman.com</a>.</li>
-<li>Abrir Postman y crear una <strong>nueva solicitud (<code>New Request</code>)</strong>.</li>
-<li>Seleccionar el método <strong>GET</strong> e ingresar la URL:
-   <div class="highlight"><pre><span></span><code>http://localhost:3000/ciudades
-</code></pre></div></li>
-<li>Hacer clic en <strong>Send</strong> y ver la respuesta JSON.</li>
-<li>Para buscar una ciudad específica, cambia la URL:
-   <div class="highlight"><pre><span></span><code>http://localhost:3000/ciudades/MAD
-</code></pre></div></li>
-<li>Si deseas probar otros métodos como <code>POST</code> o <code>PUT</code>, puedes enviar datos JSON en el <strong>Body</strong>.</li>
-</ol>
+<h4 id="paso-4-el-navegador-renderiza-la-pagina"><strong>📌 Paso 4: El navegador renderiza la página</strong></h4>
+<p>El navegador recibe el HTML y lo interpreta para mostrar la lista de productos en pantalla.</p>
+<p>Este flujo explica <strong>cómo funciona una aplicación web desde la petición hasta la respuesta</strong>. Una vez comprendido este proceso, podemos empezar a integrar <strong>JavaScript en el navegador</strong> para mejorar la interactividad de la página web.</p>
+<h2 id="41-introduccion-a-html"><strong>4.1. Introducción a HTML</strong></h2>
+<h3 id="411-que-es-html-y-para-que-sirve"><strong>4.1.1 ¿Qué es HTML y para qué sirve?</strong></h3>
+<p><strong>HTML (HyperText Markup Language)</strong> es el lenguaje estándar utilizado para la creación de páginas web. Define la estructura y el contenido de un documento web mediante etiquetas.</p>
+<p>📌 <strong>Diferencias clave:</strong>
+- <strong>HTML</strong> define la estructura.
+- <strong>CSS</strong> gestiona la apariencia.
+- <strong>JavaScript</strong> controla la interactividad.</p>
+<details class="example">
+<summary>Ejemplo básico de HTML</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo básico</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mi primera página<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hola, mundo!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Este es un documento HTML básico.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="ejercicio-1-crear-un-documento-html-basico"><strong>Ejercicio 1: Crear un documento HTML básico</strong></h3>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio</p>
+<ul>
+<li>Crea un archivo HTML desde cero.</li>
+<li>Incluye un título en el <code>&lt;head&gt;</code>.</li>
+<li>En el <code>&lt;body&gt;</code>, agrega un encabezado y un párrafo.</li>
+</ul>
+</div>
 <hr />
-<h2 id="conclusion"><strong>Conclusión</strong></h2>
-<p>Este microservicio muestra cómo utilizar <strong>async/await en Node.js</strong> para manejar archivos JSON de manera asíncrona y proporcionar datos a través de una API sencilla con <strong>Express.js</strong>. 🚀</p>
+<h2 id="412-estructura-basica-de-un-documento-html"><strong>4.1.2 Estructura Básica de un Documento HTML</strong></h2>
+<p>Un documento HTML tiene una estructura fundamental:</p>
+<p>📌 <strong>Elementos esenciales:</strong>
+- <code>&lt;!DOCTYPE html&gt;</code> → Indica que el documento es HTML5.
+- <code>&lt;html&gt;</code> → Contenedor principal.
+- <code>&lt;head&gt;</code> → Información meta y enlaces a CSS.
+- <code>&lt;body&gt;</code> → Contenido visible.</p>
+<details class="example">
+<summary>Estructura HTML</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Estructura de HTML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ejemplo de estructura<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Encabezado Principal<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Este es un párrafo de ejemplo.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="ejercicio-2-analizar-la-estructura-de-html"><strong>Ejercicio 2: Analizar la estructura de HTML</strong></h3>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio</p>
+<ul>
+<li>Identifica cada parte del código HTML anterior.</li>
+<li>Modifica el título y el contenido visible del <code>&lt;body&gt;</code>.</li>
+</ul>
+</div>
+<hr />
+<h2 id="413-etiquetas-html-basicas"><strong>4.1.3 Etiquetas HTML Básicas</strong></h2>
+<p>📌 <strong>Principales etiquetas HTML:</strong>
+- <strong>Encabezados</strong>: <code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>
+- <strong>Párrafos</strong>: <code>&lt;p&gt;</code>
+- <strong>Enlaces</strong>: <code>&lt;a href="url"&gt;Texto&lt;/a&gt;</code>
+- <strong>Imágenes</strong>: <code>&lt;img src="imagen.jpg" alt="Descripción"&gt;</code>
+- <strong>Listas</strong>: <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code>
+- <strong>Tablas</strong>: <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code>, <code>&lt;th&gt;</code>
+- <strong>División de contenido</strong>: <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code></p>
+<details class="example">
+<summary>Ejemplo de etiquetas HTML</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo de etiquetas</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Título Principal<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Este es un párrafo de texto.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.google.com&quot;</span><span class="p">&gt;</span>Ir a Google<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;imagen.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Descripción de la imagen&quot;</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="ejercicio-3-crear-una-pagina-con-etiquetas-basicas"><strong>Ejercicio 3: Crear una página con etiquetas básicas</strong></h3>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio</p>
+<ul>
+<li>Crea una lista de 3 elementos.</li>
+<li>Agrega una tabla con 2 filas y 2 columnas.</li>
+<li>Inserta una imagen y un enlace a otra web.</li>
+</ul>
+</div>
+<hr />
+<h2 id="414-atributos-en-html"><strong>4.1.4 Atributos en HTML</strong></h2>
+<p>Los <strong>atributos</strong> en HTML proporcionan información adicional a las etiquetas.</p>
+<p>📌 <strong>Ejemplos de atributos comunes:</strong>
+- <code>id</code> → Identificador único.
+- <code>class</code> → Agrupación de elementos.
+- <code>style</code> → Estilos en línea.
+- <code>alt</code> → Descripción de imágenes.
+- <code>href</code> → URL en enlaces.</p>
+<details class="example">
+<summary>Ejemplo de atributos en HTML</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Uso de atributos</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;intro&quot;</span><span class="p">&gt;</span>Este es un párrafo con un id.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.example.com&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;Visita el sitio&quot;</span><span class="p">&gt;</span>Ir al sitio<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;imagen.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Descripción de la imagen&quot;</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="ejercicio-4-aplicar-atributos-en-html"><strong>Ejercicio 4: Aplicar atributos en HTML</strong></h3>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio</p>
+<ul>
+<li>Agrega un <code>id</code> a un párrafo.</li>
+<li>Usa <code>class</code> en un grupo de elementos.</li>
+<li>Inserta una imagen con <code>alt</code>.</li>
+</ul>
+</div>
+<hr />
+<h2 id="415-formularios-en-html"><strong>4.1.5 Formularios en HTML</strong></h2>
+<p>Los formularios permiten la interacción con el usuario.</p>
+<p>📌 <strong>Elementos fundamentales:</strong>
+- <code>&lt;form&gt;</code> → Contenedor del formulario.
+- <code>&lt;input&gt;</code> → Campos de entrada.
+- <code>&lt;label&gt;</code> → Etiquetas asociadas.
+- <code>&lt;button&gt;</code> → Botón de envío.
+- <code>&lt;select&gt;</code> → Listas desplegables.</p>
+<details class="example">
+<summary>Ejemplo de formulario</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Formulario HTML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;/submit&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;post&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;nombre&quot;</span><span class="p">&gt;</span>Nombre:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;nombre&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;nombre&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span><span class="p">&gt;</span>Enviar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="ejercicio-5-crear-un-formulario-basico"><strong>Ejercicio 5: Crear un formulario básico</strong></h3>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio</p>
+<ul>
+<li>Crea un formulario con nombre, email y botón de envío.</li>
+<li>Agrega una lista desplegable con 3 opciones.</li>
+</ul>
+</div>
+<hr />
+<h2 id="ejercicio-final-construccion-de-una-pagina-completa"><strong>Ejercicio Final: Construcción de una Página Completa</strong></h2>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio Final</p>
+<ul>
+<li>Crea una página HTML completa que incluya:</li>
+<li>Un título y subtítulo.</li>
+<li>Una imagen.</li>
+<li>Una tabla con datos.</li>
+<li>Un formulario con campos de texto, email y botón de envío.</li>
+<li>Usa atributos correctamente (<code>id</code>, <code>class</code>, <code>alt</code>).</li>
+</ul>
+</div>
+<hr />
+<p>Este material proporciona una <strong>base sólida en HTML</strong> antes de comenzar con <strong>JavaScript y el DOM</strong>.</p>
 
 
 
