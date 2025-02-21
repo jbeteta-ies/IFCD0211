@@ -1440,7 +1440,7 @@
 <h3 id="401-que-es-un-servicio-web"><strong>4.0.1 ¿Qué es un Servicio Web?</strong></h3>
 <p>Un <strong>servicio web</strong> es una aplicación que responde a <strong>peticiones HTTP</strong> realizadas por un cliente (normalmente un navegador) y devuelve información en forma de páginas web, datos JSON o cualquier otro contenido.</p>
 <hr />
-<h3 id="402-estructura-basica-de-una-peticion-web"><strong>4.0.2 Estructura Básica de una Petición Web</strong></h3>
+<h3 id="402-estructura-basica-de-una-peticion-web"><strong>4.0.2 Estructura Básica de una <code>Petición Web</code></strong></h3>
 <p>Cuando un usuario accede a una página web, el proceso que ocurre es el siguiente:</p>
 <ol>
 <li><strong>El usuario introduce una URL en su navegador</strong>.</li>
@@ -1448,7 +1448,31 @@
 <li><strong>El servidor recibe la petición</strong> y genera una respuesta (un archivo HTML, datos de una base de datos, etc.).</li>
 <li><strong>El navegador recibe la respuesta</strong>, interpreta el código HTML y ejecuta cualquier JavaScript incluido.</li>
 </ol>
+<p>El servidor responde con un <strong>código de estado HTTP</strong> , estos son los más comunes:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Código</strong></th>
+<th style="text-align: left;"><strong>Descripción</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">200</td>
+<td style="text-align: left;">OK</td>
+</tr>
+<tr>
+<td style="text-align: center;">404</td>
+<td style="text-align: left;">No encontrado</td>
+</tr>
+<tr>
+<td style="text-align: center;">500</td>
+<td style="text-align: left;">Error interno</td>
+</tr>
+</tbody>
+</table>
 <p>Este flujo es <strong>sin memoria</strong>: cada petición es independiente y el servidor no recuerda estados anteriores (a menos que se use almacenamiento en cookies o bases de datos).</p>
+<p><a href="https://www.youtube.com/watch?v=inNR5enqRq0">Vídeo explicativo</a></p>
 <hr />
 <h3 id="403-que-es-una-url-y-como-funciona-http"><strong>4.0.3 ¿Qué es una URL y cómo funciona HTTP?</strong></h3>
 <ul>
@@ -1459,6 +1483,7 @@
 <li><code>POST</code>: Envía datos al servidor (ejemplo: un formulario).</li>
 <li><code>PUT</code>: Actualiza información en el servidor.</li>
 <li><code>DELETE</code>: Elimina datos en el servidor.</li>
+<li><code>HEAD</code>: Solicita solo los encabezados de una respuesta.</li>
 </ul>
 </li>
 </ul>
@@ -1502,8 +1527,8 @@ Accept: text/html
 </code></pre></div>
 <h4 id="paso-2-servidor-nodejs-recibe-la-peticion"><strong>📌 Paso 2: Servidor Node.js recibe la petición</strong></h4>
 <p>En el backend, el servidor <strong>recoge la petición GET</strong> y consulta la base de datos para obtener los productos:</p>
-<details class="example">
-<summary>Servidor Node.js con Express</summary>
+<div class="admonition example">
+<p class="admonition-title">Servidor Node.js con Express</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Servidor Node.js que responde con HTML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1624,7 +1649,7 @@ Accept: text/html
 <span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Servidor ejecutándose en http://localhost:3000&#39;</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div></td></tr></table></div>
-</details>
+</div>
 <h4 id="paso-3-el-servidor-envia-la-respuesta-al-navegador"><strong>📌 Paso 3: El servidor envía la respuesta al navegador</strong></h4>
 <p>Una vez que la base de datos devuelve los productos, el servidor genera un documento HTML y lo <strong>envía como respuesta</strong>:</p>
 <div class="highlight"><pre><span></span><code>HTTP/1.1 200 OK
@@ -1662,15 +1687,19 @@ Content-Type: text/html
 <h4 id="paso-4-el-navegador-renderiza-la-pagina"><strong>📌 Paso 4: El navegador renderiza la página</strong></h4>
 <p>El navegador recibe el HTML y lo interpreta para mostrar la lista de productos en pantalla.</p>
 <p>Este flujo explica <strong>cómo funciona una aplicación web desde la petición hasta la respuesta</strong>. Una vez comprendido este proceso, podemos empezar a integrar <strong>JavaScript en el navegador</strong> para mejorar la interactividad de la página web.</p>
+<p><img alt="Página web con la lista de productos" src="../img/lista_prodcutos.png" />
+<a href="../html/articulos.html">Enlace a la página de productos</a></p>
 <h2 id="41-introduccion-a-html"><strong>4.1. Introducción a HTML</strong></h2>
 <h3 id="411-que-es-html-y-para-que-sirve"><strong>4.1.1 ¿Qué es HTML y para qué sirve?</strong></h3>
 <p><strong>HTML (HyperText Markup Language)</strong> es el lenguaje estándar utilizado para la creación de páginas web. Define la estructura y el contenido de un documento web mediante etiquetas.</p>
-<p>📌 <strong>Diferencias clave:</strong>
-- <strong>HTML</strong> define la estructura.
-- <strong>CSS</strong> gestiona la apariencia.
-- <strong>JavaScript</strong> controla la interactividad.</p>
-<details class="example">
-<summary>Ejemplo básico de HTML</summary>
+<p><strong>Diferencias clave:</strong></p>
+<ul>
+<li><strong>HTML</strong> define la estructura y contenido.</li>
+<li><strong>CSS</strong> gestiona la apariencia.</li>
+<li><strong>JavaScript</strong> controla la interactividad.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo mínimo de HTML</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo básico</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1691,26 +1720,51 @@ Content-Type: text/html
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
-</details>
-<h3 id="ejercicio-1-crear-un-documento-html-basico"><strong>Ejercicio 1: Crear un documento HTML básico</strong></h3>
+</div>
+<h3 id="ejercicio-1-crear-un-documento-html-minimo"><strong>Ejercicio 1: Crear un documento HTML mínimo</strong></h3>
 <div class="admonition question">
 <p class="admonition-title">Ejercicio</p>
 <ul>
 <li>Crea un archivo HTML desde cero.</li>
-<li>Incluye un título en el <code>&lt;head&gt;</code>.</li>
-<li>En el <code>&lt;body&gt;</code>, agrega un encabezado y un párrafo.</li>
+<li>Incluye un título en el <code>&lt;head&gt;</code>, <code>Mi primera página web</code>.</li>
+<li>En el <code>&lt;body&gt;</code>, agrega un encabezado y un párrafo, con tu nombre y la fecha.</li>
 </ul>
+<details class="exemple">
+<summary>Ejemplo de HTML</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo de HTML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Mi primera página web<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Javier Beteta<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>20 de enero de 2025<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</details>
 </div>
 <hr />
 <h2 id="412-estructura-basica-de-un-documento-html"><strong>4.1.2 Estructura Básica de un Documento HTML</strong></h2>
 <p>Un documento HTML tiene una estructura fundamental:</p>
-<p>📌 <strong>Elementos esenciales:</strong>
-- <code>&lt;!DOCTYPE html&gt;</code> → Indica que el documento es HTML5.
-- <code>&lt;html&gt;</code> → Contenedor principal.
-- <code>&lt;head&gt;</code> → Información meta y enlaces a CSS.
-- <code>&lt;body&gt;</code> → Contenido visible.</p>
-<details class="example">
-<summary>Estructura HTML</summary>
+<p>📌 <strong>Elementos esenciales:</strong></p>
+<ul>
+<li><code>&lt;!DOCTYPE html&gt;</code> → Indica que el documento es HTML5.</li>
+<li><code>&lt;html&gt;</code> → Contenedor principal.</li>
+<li><code>&lt;head&gt;</code> → Información meta y enlaces a CSS.</li>
+<li><code>&lt;body&gt;</code> → Contenido visible.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Estructura básica HTML, lo mínimo necesario</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Estructura de HTML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1733,25 +1787,192 @@ Content-Type: text/html
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
-</details>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Vscode Snippet</p>
+<p>Para crear rápidamente la estructura básica de un documento HTML en Visual Studio Code, puedes usar el comando <code>!</code> seguido de la tecla <code>Tab</code>.
+<code>Pruebaló en tu editor de código.</code>
+- Crea un nuevo documento con extensión <code>.html</code>.
+- Escribe <code>!</code> y presiona la tecla <code>Tab</code>.
+- Se generará automáticamente la estructura básica de un documento HTML.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Estructura de HTML con Snippet</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;IE=edge&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Document<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</div>
 <h3 id="ejercicio-2-analizar-la-estructura-de-html"><strong>Ejercicio 2: Analizar la estructura de HTML</strong></h3>
 <div class="admonition question">
 <p class="admonition-title">Ejercicio</p>
 <ul>
-<li>Identifica cada parte del código HTML anterior.</li>
-<li>Modifica el título y el contenido visible del <code>&lt;body&gt;</code>.</li>
+<li>Crea una página nueva utilizando la estructura básica de HTML.</li>
+<li>Agrega un título en el <code>&lt;head&gt;</code>, <em>Mi segunda página web</em> </li>
+<li>Y un encabezado en el <code>&lt;body&gt;</code>, con tu nombre y la fecha.</li>
 </ul>
 </div>
 <hr />
 <h2 id="413-etiquetas-html-basicas"><strong>4.1.3 Etiquetas HTML Básicas</strong></h2>
-<p>📌 <strong>Principales etiquetas HTML:</strong>
-- <strong>Encabezados</strong>: <code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>
-- <strong>Párrafos</strong>: <code>&lt;p&gt;</code>
-- <strong>Enlaces</strong>: <code>&lt;a href="url"&gt;Texto&lt;/a&gt;</code>
-- <strong>Imágenes</strong>: <code>&lt;img src="imagen.jpg" alt="Descripción"&gt;</code>
-- <strong>Listas</strong>: <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code>
-- <strong>Tablas</strong>: <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code>, <code>&lt;th&gt;</code>
-- <strong>División de contenido</strong>: <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code></p>
+<p>El lenguaje HTML utiliza <strong>etiquetas</strong> para definir la estructura y el contenido de un documento web. Viene del lenguaje de marcado SGML (Standard Generalized Markup Language). Donde todos los elementos de un documento HTML están rodeados por etiquetas. </p>
+<p>Las etiquetas se defininen con el siguiente formato:
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">etiqueta</span><span class="p">&gt;</span>Contenido<span class="p">&lt;/</span><span class="nt">etiqueta</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<p>Donde tienes una etiqueta de apertura <code>&lt;etiqueta&gt;</code> y una de cierre <code>&lt;/etiqueta&gt;</code>. El contenido es lo que se muestra en la página web (si está en el <em>body</em>). HTML5 permite que algunas etiquetas no tengan cierre, como <code>&lt;img&gt;</code> o <code>&lt;br&gt;</code>.</p>
+<p>Lo que sí que tenemos que tener en cuenta es que las etiquetas deben estar anidadas correctamente, es decir, no se pueden solapar. Por ejemplo, esto no sería correcto:
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Este es un párrafo <span class="p">&lt;</span><span class="nt">b</span><span class="p">&gt;</span>con una palabra en negrita<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;/</span><span class="nt">b</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<div class="admonition note">
+<p class="admonition-title">Anidación de etiquetas</p>
+<p>Las etiquetas deben cerrarse en el orden inverso al que se abrieron. Por ejemplo, si abrimos una etiqueta <code>&lt;div&gt;</code>, debemos cerrarla antes de cerrar la etiqueta <code>&lt;body&gt;</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Este es un párrafo dentro de un div.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<p>En la estructura básica ya vimos que la etiqueta <code>&lt;html&gt;</code> es el contenedor principal, y dentro de ella se encuentran <code>&lt;head&gt;</code> y <code>&lt;body&gt;</code>. Dentro de <code>&lt;head&gt;</code> se colocan metadatos y enlaces a CSS, mientras que <code>&lt;body&gt;</code> contiene el contenido visible de la página. </p>
+<p>Hay que manejarse con cuidado aunque hoy en día la mayoría de editores de código nos ayudan a cerrar las etiquetas automáticamente, y detectan errores de anidación. Ten en cuenta que los navegadores también intentan corregir errores, pero es mejor evitarlos, ya que el rsultado puede ser inesperado.</p>
+<p>📌 <strong>Principales etiquetas HTML:</strong></p>
+<p><strong>Encabezados</strong></p>
+<p><code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>: Títulos de mayor a menor tamaño.
+Los encabezados son importantes para la <strong>semántica</strong> de la página, ya que indican la jerarquía de la información. Es recomendable usarlos de forma coherente. Normalmente utilizamos un solo <code>&lt;h1&gt;</code> por página, y luego los demás encabezados según la jerarquía de la información.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Encabezado Principal<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Subtítulo<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Subtítulo 2<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Si vemos el ejemplo de la estructura básica, el título de la página se coloca en un <code>&lt;h1&gt;</code>, ya que es el título principal de la página. Lo veremos con un tamaño de letra mayor y en negrita. El resto de encabezados se utilizan para jerarquizar la información, y sevisualizarán cada vez más pequeños.</p>
+<p><strong>Párrafos</strong></p>
+<p><code>&lt;p&gt;</code>: Párrafos de texto.
+Los párrafos son la forma más común de mostrar texto en una página web. Se utilizan para agrupar texto y darle formato.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Este es un párrafo de texto.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">VSCode snippet <code>etiqueta</code></p>
+<p>Para crear rápidamente una etiqueta de párrafo en Visual Studio Code, puedes usar el comando <code>p</code> seguido de la tecla <code>Tab</code>.
+<code>Pruebaló en tu editor de código.</code>
+- Escribe <code>p</code> y presiona la tecla <code>Tab</code>.
+- Se generará automáticamente la etiqueta de párrafo.
+- Esto es útil para crear rápidamente etiquetas HTML.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo de etiqueta de párrafo</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">VSCode snippet <code>Lorem</code></p>
+<p>Si quieres escribir un párrafo de texto, puedes usar el comando <code>lorem</code> seguido de la tecla <code>Tab</code>, incluso si quieres indicar el número de palabras, pueds hacerlo de la siguiente manera <code>lorem5</code>.
+<code>Pruebaló en tu editor de código.</code>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo de lorem ipsum</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+Por último, prueba a escribir <code>p*5&gt;lorem5</code> y presiona la tecla <code>Tab</code> para ver qué sucede.</p>
+</div>
+<p><strong>Enlaces</strong></p>
+<p>Los se utilizan para enlazar a otras páginas web o a otros recursos. Se definen con la etiqueta <code>&lt;a&gt;</code> y el atributo <code>href</code> que indica la URL de destino. Las páginas o recursos enlazados pueden estar en la misma página, en la misma web o en cualquier otro sitio de Internet.</p>
+<p><em>Los enlaces internos a la misma página</em> se utilizan para navegar por la misma página o por otras páginas de la misma web. Se definen con la etiqueta <code>&lt;a&gt;</code> y el atributo <code>href</code> que indica la URL de destino. Un ejemplo de enlace interno sería:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#seccion2&quot;</span><span class="p">&gt;</span>Ir a la sección 2<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Para ello debemos haber definido un identificador en la sección de destino, de la siguiente manera:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;seccion2&quot;</span><span class="p">&gt;</span>Sección 2<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><em>Los enlaces internos a otras páginas de la misma web</em> se utilizan para navegar por otras páginas de la misma web. Se definen con la etiqueta <code>&lt;a&gt;</code> y el atributo <code>href</code> que indica la URL de destino. Un ejemplo de enlace interno sería:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;pagina2.html&quot;</span><span class="p">&gt;</span>Ir a la página 2<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Con estos enlaces utilizaremos siempre rutas relativas, es decir, la ruta desde la página actual a la página de destino. Si la página de destino está en la misma carpeta que la página actual, solo necesitamos el nombre del archivo. Si está en una carpeta diferente, necesitamos la ruta relativa a la página actual. Por ejemplo si tenemos esta estructura de web:</p>
+<div class="highlight"><pre><span></span><code>web/
+├── index.html
+├── pagina2.html
+└── carpeta/
+    └── pagina3.html
+</code></pre></div>
+<p>Si de la página index creamos enlaces a las páginas 2 y 3, serían de la siguiente manera:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;pagina2.html&quot;</span><span class="p">&gt;</span>Ir a la página 2<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;carpeta/pagina3.html&quot;</span><span class="p">&gt;</span>Ir a la página 3<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>En el priemr caso al estar en la misma página no necesitamos indicar la ruta, en el segundo caso al estar en una carpeta diferente, indicamos la ruta relativa a la página actual. Como es descender en una carpeta, indicamos el nombre de la carpeta y el archivo.</p>
+<p>En cambio de la página 3 a la página index, sería de la siguiente manera:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;../index.html&quot;</span><span class="p">&gt;</span>Ir a la página principal<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>En este caso tenemos que subir un nivel, por lo que utilizamos <code>../</code> para indicar que subimos un nivel y luego indicamos el nombre del archivo.</p>
+<div class="admonition note">
+<p class="admonition-title">sobre las <em>rutas relativas</em></p>
+<p>Es conveniente utilizar rutas relativas siempre que sea posible, ya que si cambiamos la estructura de la web, los enlaces seguirán funcionando correctamente. Si utilizamos rutas absolutas, si cambiamos la estructura de la web, los enlaces dejarán de funcionar.
+Por tanto debemos ser capaces de manejar las rutas relativas con soltura, debemos prácticar con ellas y estar seguros de saber movernos por la estructura de la web.
+Las rutas absolutas pueden dar al traste con la web si cambiamos la web de sitio, por lo que es mejor evitarlas. De esta manera nuestra web será más robusta y fácil de mantener.</p>
+</div>
+<p><em>Los enlaces externos</em> se utilizan para enlazar a otras páginas web o a otros recursos. Se definen con la etiqueta <code>&lt;a&gt;</code> y el atributo <code>href</code> que indica la URL de destino. Un ejemplo de enlace externo sería:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.google.com&quot;</span><span class="p">&gt;</span>Ir a Google<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>En este caso el enlace nos llevará a la página de Google. Aquí utilizamos una ruta absoluta, ya que no tenemos control sobre la página de destino. En este caso, la ruta absoluta es la única opción. A esta ruta se le denomina también FQDN (Fully Qualified Domain Name), y es única para cada página web. Puede ser un enlace a una web general como la anterior, o a una página concreta de una web, como por ejemplo:</p>
+<p><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.ejemlo.com/documents/docs.html&quot;</span><span class="p">&gt;</span>Documetación<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+En este caso el enlace nos llevará a la página de documentación de la web de ejemplo, pero podría ser un recurso como una imagen, un archivo PDF, etc.</p>
+<p><strong>Imágenes</strong></p>
+<p>En una página web, las imágenes se insertan con la etiqueta <code>&lt;img&gt;</code>. El atributo <code>src</code> indica la URL de la imagen y el atributo <code>alt</code> proporciona una descripción alternativa para la imagen. Hoy en día las imágenes son votales en una página web, ya que aportan información visual y atraen la atención del usuario. De momento vamos a ver solo como incluir de manera sencilla una imagen en nuestra página web, en módulos posteriores veremos cómo trabajar con ellas.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;imagen.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Descripción de la imagen&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>El atributo <code>src</code> indica la URL de la imagen, que puede ser una ruta relativa o absoluta. Seguiremos el mismo criterio que con los enlaces, si la ruta in interna utilizaremos una ruta relativa, si es externa una ruta absoluta. El atributo <code>alt</code> proporciona una descripción alternativa para la imagen, que se mostrará si la imagen no se puede cargar o si el usuario utiliza un lector de pantalla.</p>
+<p><strong>Listas</strong></p>
+<p><em>Listas no ordenadas</em> <code>&lt;ul&gt;</code>: Elementos sin orden específico.
+Las listas no ordenadas se utilizan para agrupar elementos sin un orden específico. Se definen con la etiqueta <code>&lt;ul&gt;</code> y cada elemento de la lista se define con la etiqueta <code>&lt;li&gt;</code>. Un ejemplo de lista no ordenada sería:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Elemento 1<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Elemento 2<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Elemento 3<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Hay que tener presente que por defecto las listas no ordenadas se muestran con viñetas y cada elemento en una línea diferente. Para cambiar el estilo de las viñetas utilizamos CSS que veremos en módulos posteriores.</p>
+<p><em>Listas ordenadas</em> <code>&lt;ol&gt;</code>: Elementos con un orden específico.
+Las listas ordenadas se utilizan para agrupar elementos con un orden específico. Se definen con la etiqueta <code>&lt;ol&gt;</code> y cada elemento de la lista se define con la etiqueta <code>&lt;li&gt;</code>. Un ejemplo de lista ordenada sería:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Elemento 1<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Elemento 2<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Elemento 3<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>En este caso en vez de viñetas, se muestran los elementos con números, y cada elemento en una línea diferente. Lo mismo que en el caso de las listas no ordenadas, para cambiar el estilo de los números utilizamos CSS.</p>
+<p><strong>Tablas</strong></p>
+<p>Las tablas se utilizan para mostrar datos en forma de filas y columnas. Se definen con las etiquetas <code>&lt;table&gt;</code> para la tabla en sí, <code>&lt;tr&gt;</code> para las filas y <code>&lt;td&gt;</code> para las celdas. También se pueden utilizar las etiquetas <code>&lt;th&gt;</code> para las celdas de cabecera. Un ejemplo de tabla sería:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Nombre<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Edad<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Javier<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>30<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>María<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>25<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>En este caso tenemos una tabla con dos filas y dos columnas, la primera fila es la cabecera de la tabla, y las siguientes filas son los datos de la tabla. Las celdas de cabecera se definen con la etiqueta <code>&lt;th&gt;</code>, y las celdas de datos con la etiqueta <code>&lt;td&gt;</code>. Las tablas son muy útiles para mostrar datos de forma ordenada y estructurada. </p>
+<p><strong>División de contenido</strong></p>
+<p><code>&lt;div&gt;</code> y <code>&lt;span&gt;</code>: Contenedores genéricos.
+Las etiquetas <code>&lt;div&gt;</code> y <code>&lt;span&gt;</code> se utilizan para agrupar elementos y aplicar estilos. <code>&lt;div&gt;</code> se utiliza para agrupar elementos en bloques, mientras que <code>&lt;span&gt;</code> se utiliza para agrupar elementos en línea. Un ejemplo de uso sería:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Este es un párrafo dentro de un div.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Hay un texto encerrado ... <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Este es un texto en línea.<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> en esta línea <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>EL primero me permite agrupar elementos en bloques, de esta manera y como veremos más adelante puedo aplicar estilos a todos los elementos que estén dentro del div.</p>
+<p>El segundo me permite agrupar elementos en línea, de esta manera puedo aplicar estilos a un texto o a un enlace, por ejemplo.</p>
 <details class="example">
 <summary>Ejemplo de etiquetas HTML</summary>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo de etiquetas</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -1760,48 +1981,78 @@ Content-Type: text/html
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Título Principal<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Este es un párrafo de texto.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.google.com&quot;</span><span class="p">&gt;</span>Ir a Google<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;imagen.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Descripción de la imagen&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Logo HTML5&quot;</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </details>
 <h3 id="ejercicio-3-crear-una-pagina-con-etiquetas-basicas"><strong>Ejercicio 3: Crear una página con etiquetas básicas</strong></h3>
 <div class="admonition question">
 <p class="admonition-title">Ejercicio</p>
 <ul>
-<li>Crea una lista de 3 elementos.</li>
-<li>Agrega una tabla con 2 filas y 2 columnas.</li>
-<li>Inserta una imagen y un enlace a otra web.</li>
+<li>Crea una estructura de carpetas para un sitio web.<ul>
+<li>web/<ul>
+<li>index.html</li>
+<li>about.html</li>
+<li>contact.html</li>
+<li>img/<ul>
+<li>logo.png</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Crea un archivo <code>index.html</code> con:<ul>
+<li>Un título y subtítulo.</li>
+<li>Un párrafo de texto.</li>
+<li>Un enlace a <code>about.html</code>.</li>
+<li>Una imagen de <code>logo.png</code>.</li>
+<li>Una tabla con artículos, con 3 columnas: ID, Nombre y Precio.</li>
+</ul>
+</li>
+<li>Crea un archivo <code>about.html</code> con:<ul>
+<li>Un título </li>
+<li>Crea dos divs con un subtítulo y un párrafo de texto (de más de 200 palabras).</li>
+<li>Un enlace a <code>contact.html</code>.</li>
+</ul>
+</li>
+<li>Crea un archivo <code>contact.html</code> con:<ul>
+<li>Un título y subtítulo.</li>
+<li>Un párrafo de texto.</li>
+<li>Un enlace a <code>index.html</code>.</li>
+</ul>
+</li>
 </ul>
 </div>
 <hr />
 <h2 id="414-atributos-en-html"><strong>4.1.4 Atributos en HTML</strong></h2>
 <p>Los <strong>atributos</strong> en HTML proporcionan información adicional a las etiquetas.</p>
-<p>📌 <strong>Ejemplos de atributos comunes:</strong>
+<p><strong>Ejemplos de atributos comunes:</strong>
 - <code>id</code> → Identificador único.
 - <code>class</code> → Agrupación de elementos.
 - <code>style</code> → Estilos en línea.
 - <code>alt</code> → Descripción de imágenes.
 - <code>href</code> → URL en enlaces.</p>
-<details class="example">
-<summary>Ejemplo de atributos en HTML</summary>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de atributos en HTML</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Uso de atributos</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;intro&quot;</span><span class="p">&gt;</span>Este es un párrafo con un id.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.example.com&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;Visita el sitio&quot;</span><span class="p">&gt;</span>Ir al sitio<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;imagen.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Descripción de la imagen&quot;</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
-</details>
+</div>
 <h3 id="ejercicio-4-aplicar-atributos-en-html"><strong>Ejercicio 4: Aplicar atributos en HTML</strong></h3>
 <div class="admonition question">
 <p class="admonition-title">Ejercicio</p>
 <ul>
-<li>Agrega un <code>id</code> a un párrafo.</li>
-<li>Usa <code>class</code> en un grupo de elementos.</li>
+<li>Agrega atributo <code>id</code> los <code>divs</code> y párrafos del ejercicio anterior .</li>
+<li>Usa <code>style="color:red;"</code> en un div del ejercicio anterior.</li>
 <li>Inserta una imagen con <code>alt</code>.</li>
 </ul>
 </div>
 <hr />
 <h2 id="415-formularios-en-html"><strong>4.1.5 Formularios en HTML</strong></h2>
-<p>Los formularios permiten la interacción con el usuario.</p>
+<p>Los formularios permiten la interacción con el usuario. En este caso vamos a hacer una presentación básica de los formularios en HTML, ya que en módulos posteriores veremos cómo trabajar con ellos de manera más avanzada.</p>
 <p>📌 <strong>Elementos fundamentales:</strong>
 - <code>&lt;form&gt;</code> → Contenedor del formulario.
 - <code>&lt;input&gt;</code> → Campos de entrada.
@@ -1826,7 +2077,6 @@ Content-Type: text/html
 <p class="admonition-title">Ejercicio</p>
 <ul>
 <li>Crea un formulario con nombre, email y botón de envío.</li>
-<li>Agrega una lista desplegable con 3 opciones.</li>
 </ul>
 </div>
 <hr />
@@ -1838,12 +2088,12 @@ Content-Type: text/html
 <li>Un título y subtítulo.</li>
 <li>Una imagen.</li>
 <li>Una tabla con datos.</li>
-<li>Un formulario con campos de texto, email y botón de envío.</li>
+<li>Un formulario con campos Nombre, apellidos, teléfono y email con un botón de envío.</li>
 <li>Usa atributos correctamente (<code>id</code>, <code>class</code>, <code>alt</code>).</li>
 </ul>
 </div>
 <hr />
-<p>Este material proporciona una <strong>base sólida en HTML</strong> antes de comenzar con <strong>JavaScript y el DOM</strong>.</p>
+<p>Este material proporciona una <strong>base en HTML</strong> antes de comenzar con <strong>JavaScript y el DOM</strong>. En el siguiente módulo trabajaremos la <code>programación en la parte del cliente</code> y dedicaremos más tiempo a la interacción con el usuario y la manipulación del contenido de la página web.</p>
 
 
 
