@@ -1666,8 +1666,8 @@ Content-Type: text/html
 <h4 id="paso-4-el-navegador-renderiza-la-pagina"><strong>📌 Paso 4: El navegador renderiza la página</strong></h4>
 <p>El navegador recibe el HTML y lo interpreta para mostrar la lista de productos en pantalla.</p>
 <p>Este flujo explica <strong>cómo funciona una aplicación web desde la petición hasta la respuesta</strong>. Una vez comprendido este proceso, podemos empezar a integrar <strong>JavaScript en el navegador</strong> para mejorar la interactividad de la página web.</p>
-<p><img alt="Página web con la lista de productos" src="../img/lista_prodcutos.png" />
-<a href="../html/articulos.html">Enlace a la página de productos</a></p>
+<p><img alt="Página web con la lista de productos" src="../img/lista_prodcutos.png" /></p>
+<p><a href="../html/articulos.html">Enlace a la página de productos</a></p>
 <h2 id="41-introduccion-a-html"><strong>4.1. Introducción a HTML</strong></h2>
 <h3 id="411-que-es-html-y-para-que-sirve"><strong>4.1.1 ¿Qué es HTML y para qué sirve?</strong></h3>
 <p><strong>HTML (HyperText Markup Language)</strong> es el lenguaje estándar utilizado para la creación de páginas web. Define la estructura y el contenido de un documento web mediante etiquetas.</p>
@@ -1733,7 +1733,7 @@ Content-Type: text/html
 </details>
 </div>
 <hr />
-<h2 id="412-estructura-basica-de-un-documento-html"><strong>4.1.2 Estructura Básica de un Documento HTML</strong></h2>
+<h2 id="412-estructura-basica-de-un-documento-html"><strong>4.1.2 Estructura básica de un documento HTML</strong></h2>
 <p>Un documento HTML tiene una estructura fundamental:</p>
 <p>📌 <strong>Elementos esenciales:</strong></p>
 <ul>
@@ -1768,12 +1768,14 @@ Content-Type: text/html
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Vscode Snippet</p>
+<p class="admonition-title">VSCode Snippet</p>
 <p>Para crear rápidamente la estructura básica de un documento HTML en Visual Studio Code, puedes usar el comando <code>!</code> seguido de la tecla <code>Tab</code>.
-<code>Pruebaló en tu editor de código.</code>
-- Crea un nuevo documento con extensión <code>.html</code>.
-- Escribe <code>!</code> y presiona la tecla <code>Tab</code>.
-- Se generará automáticamente la estructura básica de un documento HTML.</p>
+<code>Pruebaló en tu editor de código.</code></p>
+<ul>
+<li>Crea un nuevo documento con extensión <code>.html</code>.</li>
+<li>Escribe <code>!</code> y presiona la tecla <code>Tab</code>.</li>
+<li>Se generará automáticamente la estructura básica de un documento HTML.</li>
+</ul>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Estructura de HTML con Snippet</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -1799,6 +1801,42 @@ Content-Type: text/html
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </div>
+<p>Si analizamos la estructura básica de un documento HTML, vemos que el contenedor principal es la etiqueta <code>&lt;html&gt;</code>, que contiene <strong>dos</strong> secciones principales: <code>&lt;head&gt;</code> y <code>&lt;body&gt;</code>. En <code>&lt;head&gt;</code> se colocan metadatos y enlaces a CSS, mientras que <code>&lt;body&gt;</code> contiene el contenido visible de la página.</p>
+<p>Las etiquetas <code>&lt;meta&gt;</code> proporcionan información adicional al navegador sobre cómo se debe manejar la página. A continuación, se explica cada una:</p>
+<ul>
+<li>
+<ol>
+<li><code>&lt;meta charset="UTF-8"&gt;</code></li>
+<li><strong><code>charset</code></strong>: Define el conjunto de caracteres que usará el documento HTML.</li>
+<li><strong><code>UTF-8</code></strong>: Es un estándar de codificación de caracteres que soporta prácticamente todos los caracteres y símbolos de todos los idiomas.</li>
+<li><strong>¿Para qué sirve?</strong><br />
+    Garantiza que los caracteres especiales (como tildes, ñ, caracteres chinos, árabes, etc.) se muestren correctamente.</li>
+</ol>
+</li>
+<li>
+<ol>
+<li><code>&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;</code></li>
+<li><strong><code>http-equiv</code></strong>: Permite que la metaetiqueta actúe como un encabezado HTTP.</li>
+<li><strong><code>X-UA-Compatible</code></strong>: Indica a Internet Explorer cómo debe interpretar la página.</li>
+<li><strong><code>IE=edge</code></strong>: Le dice a Internet Explorer que use la última versión disponible de su motor de renderizado.</li>
+<li><strong>¿Para qué sirve?</strong><br />
+    Evita que versiones antiguas de IE usen modos de compatibilidad obsoletos, asegurando una mejor representación de la página.</li>
+</ol>
+</li>
+<li>
+<ol>
+<li><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></li>
+<li><strong><code>name="viewport"</code></strong>: Define la configuración de la ventana gráfica (viewport) para dispositivos móviles.</li>
+<li><strong><code>content</code></strong>: Especifica cómo debe ajustarse la página en diferentes tamaños de pantalla.</li>
+<li><strong><code>width=device-width</code></strong>: Hace que el ancho del viewport sea igual al ancho del dispositivo.</li>
+<li><strong><code>initial-scale=1.0</code></strong>: Establece el nivel de zoom inicial en 1 (sin zoom por defecto).</li>
+<li><strong>¿Para qué sirve?</strong><br />
+    Hace que la página sea responsive, asegurando que se vea correctamente en dispositivos móviles y tabletas.</li>
+</ol>
+</li>
+</ul>
+<h2 id="resumen">🎯 <strong>Resumen</strong></h2>
+<p>Estas etiquetas <code>&lt;meta&gt;</code> mejoran la accesibilidad, compatibilidad y adaptación de la página en distintos navegadores y dispositivos. Son esenciales para cualquier página web moderna.</p>
 <h3 id="ejercicio-2-analizar-la-estructura-de-html"><strong>Ejercicio 2: Analizar la estructura de HTML</strong></h3>
 <div class="admonition question">
 <p class="admonition-title">Ejercicio</p>
