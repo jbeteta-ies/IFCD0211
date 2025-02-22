@@ -1801,40 +1801,34 @@ Content-Type: text/html
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 </div>
-<p>Si analizamos la estructura básica de un documento HTML, vemos que el contenedor principal es la etiqueta <code>&lt;html&gt;</code>, que contiene <strong>dos</strong> secciones principales: <code>&lt;head&gt;</code> y <code>&lt;body&gt;</code>. En <code>&lt;head&gt;</code> se colocan metadatos y enlaces a CSS, mientras que <code>&lt;body&gt;</code> contiene el contenido visible de la página.</p>
+<p>Si analizamos la estructura básica de un documento HTML, vemos que el contenedor principal es la etiqueta <code>&lt;html&gt;</code>, que contiene <strong>dos</strong> secciones principales: <code>&lt;head&gt;</code> y <code>&lt;body&gt;</code>. En <code>&lt;head&gt;</code> se colocan metadatos y enlaces a <code>CSS</code>, mientras que <code>&lt;body&gt;</code> contiene el contenido visible de la página.</p>
 <p>Las etiquetas <code>&lt;meta&gt;</code> proporcionan información adicional al navegador sobre cómo se debe manejar la página. A continuación, se explica cada una:</p>
-<ul>
-<li>
 <ol>
-<li><code>&lt;meta charset="UTF-8"&gt;</code></li>
+<li><code>&lt;meta charset="UTF-8"&gt;</code><ul>
 <li><strong><code>charset</code></strong>: Define el conjunto de caracteres que usará el documento HTML.</li>
 <li><strong><code>UTF-8</code></strong>: Es un estándar de codificación de caracteres que soporta prácticamente todos los caracteres y símbolos de todos los idiomas.</li>
 <li><strong>¿Para qué sirve?</strong><br />
     Garantiza que los caracteres especiales (como tildes, ñ, caracteres chinos, árabes, etc.) se muestren correctamente.</li>
-</ol>
+</ul>
 </li>
-<li>
-<ol>
-<li><code>&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;</code></li>
+<li><code>&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;</code><ul>
 <li><strong><code>http-equiv</code></strong>: Permite que la metaetiqueta actúe como un encabezado HTTP.</li>
 <li><strong><code>X-UA-Compatible</code></strong>: Indica a Internet Explorer cómo debe interpretar la página.</li>
 <li><strong><code>IE=edge</code></strong>: Le dice a Internet Explorer que use la última versión disponible de su motor de renderizado.</li>
 <li><strong>¿Para qué sirve?</strong><br />
     Evita que versiones antiguas de IE usen modos de compatibilidad obsoletos, asegurando una mejor representación de la página.</li>
-</ol>
+</ul>
 </li>
-<li>
-<ol>
-<li><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></li>
+<li><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code><ul>
 <li><strong><code>name="viewport"</code></strong>: Define la configuración de la ventana gráfica (viewport) para dispositivos móviles.</li>
 <li><strong><code>content</code></strong>: Especifica cómo debe ajustarse la página en diferentes tamaños de pantalla.</li>
 <li><strong><code>width=device-width</code></strong>: Hace que el ancho del viewport sea igual al ancho del dispositivo.</li>
 <li><strong><code>initial-scale=1.0</code></strong>: Establece el nivel de zoom inicial en 1 (sin zoom por defecto).</li>
 <li><strong>¿Para qué sirve?</strong><br />
     Hace que la página sea responsive, asegurando que se vea correctamente en dispositivos móviles y tabletas.</li>
-</ol>
-</li>
 </ul>
+</li>
+</ol>
 <h2 id="resumen">🎯 <strong>Resumen</strong></h2>
 <p>Estas etiquetas <code>&lt;meta&gt;</code> mejoran la accesibilidad, compatibilidad y adaptación de la página en distintos navegadores y dispositivos. Son esenciales para cualquier página web moderna.</p>
 <h3 id="ejercicio-2-analizar-la-estructura-de-html"><strong>Ejercicio 2: Analizar la estructura de HTML</strong></h3>
