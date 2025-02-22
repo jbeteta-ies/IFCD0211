@@ -1829,8 +1829,10 @@ Content-Type: text/html
 </ul>
 </li>
 </ol>
-<h2 id="resumen">🎯 <strong>Resumen</strong></h2>
+<div class="admonition note">
+<p class="admonition-title">Importancia de las metaetiquetas</p>
 <p>Estas etiquetas <code>&lt;meta&gt;</code> mejoran la accesibilidad, compatibilidad y adaptación de la página en distintos navegadores y dispositivos. Son esenciales para cualquier página web moderna.</p>
+</div>
 <h3 id="ejercicio-2-analizar-la-estructura-de-html"><strong>Ejercicio 2: Analizar la estructura de HTML</strong></h3>
 <div class="admonition question">
 <p class="admonition-title">Ejercicio</p>
@@ -1852,15 +1854,15 @@ Content-Type: text/html
 </code></pre></div></p>
 <div class="admonition note">
 <p class="admonition-title">Anidación de etiquetas</p>
-<p>Las etiquetas deben cerrarse en el orden inverso al que se abrieron. Por ejemplo, si abrimos una etiqueta <code>&lt;div&gt;</code>, debemos cerrarla antes de cerrar la etiqueta <code>&lt;body&gt;</code>.</p>
+<p>Las etiquetas deben cerrarse en el orden inverso al que se abrieron. Por ejemplo, si abrimos una etiqueta <code>&lt;div&gt;</code> y una etiqueta <code>&lt;p&gt;</code>, debemos cerrar <code>&lt;/p&gt;</code> antes de cerrar la etiqueta <code>&lt;/div&gt;</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Este es un párrafo dentro de un div.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
 </div>
 <p>En la estructura básica ya vimos que la etiqueta <code>&lt;html&gt;</code> es el contenedor principal, y dentro de ella se encuentran <code>&lt;head&gt;</code> y <code>&lt;body&gt;</code>. Dentro de <code>&lt;head&gt;</code> se colocan metadatos y enlaces a CSS, mientras que <code>&lt;body&gt;</code> contiene el contenido visible de la página. </p>
-<p>Hay que manejarse con cuidado aunque hoy en día la mayoría de editores de código nos ayudan a cerrar las etiquetas automáticamente, y detectan errores de anidación. Ten en cuenta que los navegadores también intentan corregir errores, pero es mejor evitarlos, ya que el rsultado puede ser inesperado.</p>
-<p>📌 <strong>Principales etiquetas HTML:</strong></p>
+<p>Hay que manejarse con cuidado: aunque hoy en día la mayoría de editores de código nos ayudan a cerrar las etiquetas automáticamente, y detectan errores de anidación. Ten en cuenta que los navegadores también intentan corregir errores, pero es mejor evitarlos, ya que el rsultado puede ser inesperado.</p>
+<p><strong>Principales etiquetas HTML:</strong></p>
 <p><strong>Encabezados</strong></p>
 <p><code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>: Títulos de mayor a menor tamaño.
 Los encabezados son importantes para la <strong>semántica</strong> de la página, ya que indican la jerarquía de la información. Es recomendable usarlos de forma coherente. Normalmente utilizamos un solo <code>&lt;h1&gt;</code> por página, y luego los demás encabezados según la jerarquía de la información.</p>
@@ -1893,14 +1895,14 @@ Los párrafos son la forma más común de mostrar texto en una página web. Se u
 Por último, prueba a escribir <code>p*5&gt;lorem5</code> y presiona la tecla <code>Tab</code> para ver qué sucede.</p>
 </div>
 <p><strong>Enlaces</strong></p>
-<p>Los se utilizan para enlazar a otras páginas web o a otros recursos. Se definen con la etiqueta <code>&lt;a&gt;</code> y el atributo <code>href</code> que indica la URL de destino. Las páginas o recursos enlazados pueden estar en la misma página, en la misma web o en cualquier otro sitio de Internet.</p>
-<p><em>Los enlaces internos a la misma página</em> se utilizan para navegar por la misma página o por otras páginas de la misma web. Se definen con la etiqueta <code>&lt;a&gt;</code> y el atributo <code>href</code> que indica la URL de destino. Un ejemplo de enlace interno sería:</p>
+<p>Se utilizan para enlazar a otras páginas web o a otros recursos. Se definen con la etiqueta <code>&lt;a&gt;</code> y el atributo <code>href</code> que indica la URL de destino. Las páginas o recursos enlazados pueden estar en la misma página, en la misma web o en cualquier otro sitio de Internet.</p>
+<p><em><strong>Los enlaces internos a la misma página</strong></em> se utilizan para navegar por la misma página o por otras páginas de la misma web. Se definen con la etiqueta <code>&lt;a&gt;</code> y el atributo <code>href</code> que indica la URL de destino. Un ejemplo de enlace interno sería:</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#seccion2&quot;</span><span class="p">&gt;</span>Ir a la sección 2<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>Para ello debemos haber definido un identificador en la sección de destino, de la siguiente manera:</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;seccion2&quot;</span><span class="p">&gt;</span>Sección 2<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
 </code></pre></div>
-<p><em>Los enlaces internos a otras páginas de la misma web</em> se utilizan para navegar por otras páginas de la misma web. Se definen con la etiqueta <code>&lt;a&gt;</code> y el atributo <code>href</code> que indica la URL de destino. Un ejemplo de enlace interno sería:</p>
+<p><em><strong>Los enlaces internos a otras páginas de la misma web</strong></em> se utilizan para navegar por otras páginas de la misma web. Se definen con la etiqueta <code>&lt;a&gt;</code> y el atributo <code>href</code> que indica la URL de destino. Un ejemplo de enlace interno sería:</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;pagina2.html&quot;</span><span class="p">&gt;</span>Ir a la página 2<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>Con estos enlaces utilizaremos siempre rutas relativas, es decir, la ruta desde la página actual a la página de destino. Si la página de destino está en la misma carpeta que la página actual, solo necesitamos el nombre del archivo. Si está en una carpeta diferente, necesitamos la ruta relativa a la página actual. Por ejemplo si tenemos esta estructura de web:</p>
@@ -1914,7 +1916,7 @@ Por último, prueba a escribir <code>p*5&gt;lorem5</code> y presiona la tecla <c
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;pagina2.html&quot;</span><span class="p">&gt;</span>Ir a la página 2<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;carpeta/pagina3.html&quot;</span><span class="p">&gt;</span>Ir a la página 3<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </code></pre></div>
-<p>En el priemr caso al estar en la misma página no necesitamos indicar la ruta, en el segundo caso al estar en una carpeta diferente, indicamos la ruta relativa a la página actual. Como es descender en una carpeta, indicamos el nombre de la carpeta y el archivo.</p>
+<p>En el primer caso al estar en la misma página no necesitamos indicar la ruta, en el segundo caso al estar en una carpeta diferente, indicamos la ruta relativa a la página actual. Como es descender en una carpeta, indicamos el nombre de la carpeta y el archivo.</p>
 <p>En cambio de la página 3 a la página index, sería de la siguiente manera:</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;../index.html&quot;</span><span class="p">&gt;</span>Ir a la página principal<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </code></pre></div>
@@ -1925,7 +1927,7 @@ Por último, prueba a escribir <code>p*5&gt;lorem5</code> y presiona la tecla <c
 Por tanto debemos ser capaces de manejar las rutas relativas con soltura, debemos prácticar con ellas y estar seguros de saber movernos por la estructura de la web.
 Las rutas absolutas pueden dar al traste con la web si cambiamos la web de sitio, por lo que es mejor evitarlas. De esta manera nuestra web será más robusta y fácil de mantener.</p>
 </div>
-<p><em>Los enlaces externos</em> se utilizan para enlazar a otras páginas web o a otros recursos. Se definen con la etiqueta <code>&lt;a&gt;</code> y el atributo <code>href</code> que indica la URL de destino. Un ejemplo de enlace externo sería:</p>
+<p><em><strong>Los enlaces externos</strong></em> se utilizan para enlazar a otras páginas web o a otros recursos. Se definen con la etiqueta <code>&lt;a&gt;</code> y el atributo <code>href</code> que indica la URL de destino. Un ejemplo de enlace externo sería:</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.google.com&quot;</span><span class="p">&gt;</span>Ir a Google<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>En este caso el enlace nos llevará a la página de Google. Aquí utilizamos una ruta absoluta, ya que no tenemos control sobre la página de destino. En este caso, la ruta absoluta es la única opción. A esta ruta se le denomina también FQDN (Fully Qualified Domain Name), y es única para cada página web. Puede ser un enlace a una web general como la anterior, o a una página concreta de una web, como por ejemplo:</p>
@@ -2037,12 +2039,14 @@ Las etiquetas <code>&lt;div&gt;</code> y <code>&lt;span&gt;</code> se utilizan p
 <hr />
 <h2 id="414-atributos-en-html"><strong>4.1.4 Atributos en HTML</strong></h2>
 <p>Los <strong>atributos</strong> en HTML proporcionan información adicional a las etiquetas.</p>
-<p><strong>Ejemplos de atributos comunes:</strong>
-- <code>id</code> → Identificador único.
-- <code>class</code> → Agrupación de elementos.
-- <code>style</code> → Estilos en línea.
-- <code>alt</code> → Descripción de imágenes.
-- <code>href</code> → URL en enlaces.</p>
+<p><strong>Ejemplos de atributos comunes:</strong></p>
+<ul>
+<li><code>id</code> → Identificador único.</li>
+<li><code>class</code> → Agrupación de elementos.</li>
+<li><code>style</code> → Estilos en línea.</li>
+<li><code>alt</code> → Descripción de imágenes.</li>
+<li><code>href</code> → URL en enlaces.</li>
+</ul>
 <div class="admonition example">
 <p class="admonition-title">Ejemplo de atributos en HTML</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Uso de atributos</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -2064,14 +2068,14 @@ Las etiquetas <code>&lt;div&gt;</code> y <code>&lt;span&gt;</code> se utilizan p
 <hr />
 <h2 id="415-formularios-en-html"><strong>4.1.5 Formularios en HTML</strong></h2>
 <p>Los formularios permiten la interacción con el usuario. En este caso vamos a hacer una presentación básica de los formularios en HTML, ya que en módulos posteriores veremos cómo trabajar con ellos de manera más avanzada.</p>
-<p>📌 <strong>Elementos fundamentales:</strong>
+<p><strong>Elementos fundamentales:</strong>
 - <code>&lt;form&gt;</code> → Contenedor del formulario.
 - <code>&lt;input&gt;</code> → Campos de entrada.
 - <code>&lt;label&gt;</code> → Etiquetas asociadas.
 - <code>&lt;button&gt;</code> → Botón de envío.
 - <code>&lt;select&gt;</code> → Listas desplegables.</p>
-<details class="example">
-<summary>Ejemplo de formulario</summary>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de formulario</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Formulario HTML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -2082,12 +2086,36 @@ Las etiquetas <code>&lt;div&gt;</code> y <code>&lt;span&gt;</code> se utilizan p
     <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span><span class="p">&gt;</span>Enviar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
-</details>
+</div>
 <h3 id="ejercicio-5-crear-un-formulario-basico"><strong>Ejercicio 5: Crear un formulario básico</strong></h3>
 <div class="admonition question">
 <p class="admonition-title">Ejercicio</p>
 <ul>
 <li>Crea un formulario con nombre, email y botón de envío.</li>
+</ul>
+</div>
+<h3 id="etiquetas-estructurales-en-html5">Etiquetas estructurales en HTML5</h3>
+<p>Aquí tienes una lista de las etiquetas estructurales más comunes en HTML5 (recuerda que existen más etiquetas, pero estas son las más utilizadas) no es necesario usarlas todas en todas las páginas, pero es importante conocerlas y saber cuándo utilizarlas.:</p>
+<ul>
+<li><code>&lt;header&gt;</code> → Encabezado de la página.</li>
+<li><code>&lt;nav&gt;</code> → Navegación.</li>
+<li><code>&lt;main&gt;</code> → Contenido principal.</li>
+<li><code>&lt;section&gt;</code> → Sección de contenido.</li>
+<li><code>&lt;article&gt;</code> → Artículo independiente.</li>
+<li><code>&lt;aside&gt;</code> → Contenido relacionado.</li>
+<li><code>&lt;footer&gt;</code> → Pie de página.</li>
+</ul>
+<p><img alt="Estructura de una página web con etiquetas estructurales" src="../img/estructura.png" /></p>
+<p>Estas etiquetas estructurales son importantes para la <strong>semántica</strong> de la página, ya que indican la estructura y jerarquía del contenido. Son útiles para la accesibilidad y el SEO, ya que ayudan a los motores de búsqueda a entender la estructura de la página. Antiguamente se utilizaban divs para todo, pero con HTML5 se introdujeron estas etiquetas para mejorar la estructura y la accesibilidad de la página.</p>
+<h3 id="ejercicio-6-crear-una-pagina-con-etiquetas-estructurales"><strong>Ejercicio 6: Crear una página con etiquetas estructurales</strong></h3>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio</p>
+<ul>
+<li>Crea una página con las etiquetas estructurales de HTML5.</li>
+<li>Utiliza todas las etiquetas del listado.</li>
+<li>Agrega contenido a cada sección.</li>
+<li>Visauliza la página en el navegador ¿Qué ocurre? </li>
+<li>Modifica las etiquetas estructurales por <code>divs</code> ¿Qué ocurre?, ¿Se visualiza igual?</li>
 </ul>
 </div>
 <hr />
@@ -2096,11 +2124,18 @@ Las etiquetas <code>&lt;div&gt;</code> y <code>&lt;span&gt;</code> se utilizan p
 <p class="admonition-title">Ejercicio Final</p>
 <ul>
 <li>Crea una página HTML completa que incluya:</li>
-<li>Un título y subtítulo.</li>
-<li>Una imagen.</li>
-<li>Una tabla con datos.</li>
-<li>Un formulario con campos Nombre, apellidos, teléfono y email con un botón de envío.</li>
-<li>Usa atributos correctamente (<code>id</code>, <code>class</code>, <code>alt</code>).</li>
+<li>Un título (Nombre del colegio) y subtítulo (1DAW). </li>
+<li>Una imagen (Imagen o logo del centro).</li>
+<li>Una tabla con datos, como el horario de clases del grupo de estudiantes.
+        - Programación 8h
+        - Bases de Datos 5h
+        - Lenguaje de Marcas 3h
+        - Sistemas Informáticos 6h
+        - Entornos de Desarrollo 5h
+        - Inglés 3h</li>
+<li>Un lista con los profesores de cada asignatura.</li>
+<li>Un formulario (para que los alumnos puedan escribir sugerencias) con campos Nombre, apellidos, teléfono, un área de texto para escribir la sugerencia y un botón de envío.</li>
+<li>Usa atributos correctamente (pon <code>id</code> a los elementos estructurales que utilices).</li>
 </ul>
 </div>
 <hr />
