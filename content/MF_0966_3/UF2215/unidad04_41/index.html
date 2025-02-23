@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://jbeteta-ies.github.io/IFCD0211/content/MF_0966_3/UF2215/unidad04_41/">
       
       
-        <link rel="prev" href="../unidad03_34/">
+        <link rel="prev" href="../unidad04_40/">
       
       
         <link rel="next" href="../unidad04_42/">
@@ -22,7 +22,7 @@
     
     
       
-        <title>4.1 Introducción al DOM - Certificado de Profesionalidad IFCD0211</title>
+        <title>4.1 Introducción a HTML - Certificado de Profesionalidad IFCD0211</title>
       
     
     
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              4.1 Introducción al DOM
+              4.1 Introducción a HTML
             
           </span>
         </div>
@@ -1030,6 +1030,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad04_40/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.0 Aspectos previos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1044,7 +1065,7 @@
         
   
   <span class="md-ellipsis">
-    4.1 Introducción al DOM
+    4.1 Introducción a HTML
   </span>
   
 
@@ -1066,7 +1087,7 @@
         
   
   <span class="md-ellipsis">
-    4.2 Eventos
+    4.2 DOM y eventos
   </span>
   
 
@@ -1415,259 +1436,6 @@
 
 
 <h1 id="4-integracion-de-js-con-html-y-dom"><strong>4. Integración de JS con HTML y DOM</strong></h1>
-<h2 id="40-aspectos-previos"><strong>4.0 Aspectos previos</strong></h2>
-<h3 id="401-que-es-un-servicio-web"><strong>4.0.1 ¿Qué es un Servicio Web?</strong></h3>
-<p>Un <strong>servicio web</strong> es una aplicación que responde a <strong>peticiones HTTP</strong> realizadas por un cliente (normalmente un navegador) y devuelve información en forma de páginas web, datos JSON o cualquier otro contenido.</p>
-<hr />
-<h3 id="402-estructura-basica-de-una-peticion-web"><strong>4.0.2 Estructura Básica de una <code>Petición Web</code></strong></h3>
-<p>Cuando un usuario accede a una página web, el proceso que ocurre es el siguiente:</p>
-<ol>
-<li><strong>El usuario introduce una URL en su navegador</strong>.</li>
-<li><strong>El navegador envía una petición HTTP</strong> al servidor correspondiente.</li>
-<li><strong>El servidor recibe la petición</strong> y genera una respuesta (un archivo HTML, datos de una base de datos, etc.).</li>
-<li><strong>El navegador recibe la respuesta</strong>, interpreta el código HTML y ejecuta cualquier JavaScript incluido.</li>
-</ol>
-<p>El servidor responde con un <strong>código de estado HTTP</strong> , estos son los más comunes:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;"><strong>Código</strong></th>
-<th style="text-align: left;"><strong>Descripción</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">200</td>
-<td style="text-align: left;">OK</td>
-</tr>
-<tr>
-<td style="text-align: center;">404</td>
-<td style="text-align: left;">No encontrado</td>
-</tr>
-<tr>
-<td style="text-align: center;">500</td>
-<td style="text-align: left;">Error interno</td>
-</tr>
-</tbody>
-</table>
-<p>Este flujo es <strong>sin memoria</strong>: cada petición es independiente y el servidor no recuerda estados anteriores (a menos que se use almacenamiento en cookies o bases de datos).</p>
-<p><a href="https://www.youtube.com/watch?v=inNR5enqRq0">Vídeo explicativo</a></p>
-<hr />
-<h3 id="403-que-es-una-url-y-como-funciona-http"><strong>4.0.3 ¿Qué es una URL y cómo funciona HTTP?</strong></h3>
-<ul>
-<li><strong>URL (Uniform Resource Locator):</strong> Dirección única que identifica un recurso en la web (ejemplo: <code>https://www.ejemplo.com/productos</code>).</li>
-<li><strong>HTTP (HyperText Transfer Protocol):</strong> Protocolo que define cómo se comunican los navegadores con los servidores web.</li>
-<li><strong>Métodos HTTP más comunes:</strong><ul>
-<li><code>GET</code>: Solicita información (ejemplo: cargar una página).</li>
-<li><code>POST</code>: Envía datos al servidor (ejemplo: un formulario).</li>
-<li><code>PUT</code>: Actualiza información en el servidor.</li>
-<li><code>DELETE</code>: Elimina datos en el servidor.</li>
-<li><code>HEAD</code>: Solicita solo los encabezados de una respuesta.</li>
-</ul>
-</li>
-</ul>
-<hr />
-<h3 id="404-frontend-vs-backend"><strong>4.0.4 Frontend vs Backend</strong></h3>
-<p>La programación web se divide en <strong>dos partes principales</strong>:</p>
-<table>
-<thead>
-<tr>
-<th><strong>Frontend (Cliente)</strong></th>
-<th><strong>Backend (Servidor)</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Se ejecuta en el navegador del usuario.</td>
-<td>Se ejecuta en el servidor web.</td>
-</tr>
-<tr>
-<td>Usa HTML, CSS y JavaScript.</td>
-<td>Usa lenguajes como PHP, Node.js, Python, etc.</td>
-</tr>
-<tr>
-<td>Se encarga de la apariencia y la interacción con el usuario.</td>
-<td>Se encarga de la lógica del negocio y la base de datos.</td>
-</tr>
-</tbody>
-</table>
-<p>JavaScript es el <strong>único lenguaje que puede trabajar en ambos lados</strong>:<br />
-- En el <strong>frontend</strong> (en el navegador) para la interacción con el usuario.<br />
-- En el <strong>backend</strong> (con Node.js) para la gestión de datos y lógica del servidor.</p>
-<hr />
-<h3 id="405-caso-de-uso-carga-de-una-pagina-web-con-codigo-de-ejemplo"><strong>4.0.5 Caso de Uso: Carga de una Página Web con Código de Ejemplo</strong></h3>
-<p>Para entender mejor cómo funciona una petición HTTP en una aplicación web, veamos un <strong>caso práctico</strong> donde un usuario accede a una página de productos y el servidor responde generando un <strong>HTML dinámico</strong> con los datos de una base de datos.</p>
-<h4 id="paso-1-peticion-get-desde-el-navegador"><strong>📌 Paso 1: Petición GET desde el Navegador</strong></h4>
-<p>Cuando el usuario escribe <code>www.ejemplo.com/productos</code> en la barra de direcciones, el navegador <strong>envía una petición HTTP GET</strong> al servidor:</p>
-<div class="highlight"><pre><span></span><code>GET /productos HTTP/1.1
-Host: www.ejemplo.com
-User-Agent: Mozilla/5.0
-Accept: text/html
-</code></pre></div>
-<h4 id="paso-2-servidor-nodejs-recibe-la-peticion"><strong>📌 Paso 2: Servidor Node.js recibe la petición</strong></h4>
-<p>En el backend, el servidor <strong>recoge la petición GET</strong> y consulta la base de datos para obtener los productos:</p>
-<div class="admonition example">
-<p class="admonition-title">Servidor Node.js con Express</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Servidor Node.js que responde con HTML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">express</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">);</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">mysql</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mysql2&#39;</span><span class="p">);</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">app</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">express</span><span class="p">();</span>
-
-<span class="c1">// Conexión a la base de datos</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">conexion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">mysql</span><span class="p">.</span><span class="nx">createConnection</span><span class="p">({</span>
-<span class="w">    </span><span class="nx">host</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">user</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;root&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">password</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">database</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;tienda&#39;</span>
-<span class="p">});</span>
-
-<span class="c1">// Ruta para manejar la petición GET /productos</span>
-<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/productos&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">conexion</span><span class="p">.</span><span class="nx">query</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM productos&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">,</span><span class="w"> </span><span class="nx">resultados</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mf">500</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="s2">&quot;Error en la base de datos&quot;</span><span class="p">);</span>
-<span class="w">            </span><span class="k">return</span><span class="p">;</span>
-<span class="w">        </span><span class="p">}</span>
-
-<span class="w">        </span><span class="c1">// Construcción del HTML con los datos de la BD</span>
-<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">html</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`</span>
-<span class="sb">            &lt;!DOCTYPE html&gt;</span>
-<span class="sb">            &lt;html lang=&quot;es&quot;&gt;</span>
-<span class="sb">            &lt;head&gt;</span>
-<span class="sb">                &lt;meta charset=&quot;UTF-8&quot;&gt;</span>
-<span class="sb">                &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span>
-<span class="sb">                &lt;title&gt;Lista de Productos&lt;/title&gt;</span>
-<span class="sb">            &lt;/head&gt;</span>
-<span class="sb">            &lt;body&gt;</span>
-<span class="sb">                &lt;h1&gt;Lista de Productos&lt;/h1&gt;</span>
-<span class="sb">                &lt;table border=&quot;1&quot;&gt;</span>
-<span class="sb">                    &lt;tr&gt;</span>
-<span class="sb">                        &lt;th&gt;ID&lt;/th&gt;</span>
-<span class="sb">                        &lt;th&gt;Nombre&lt;/th&gt;</span>
-<span class="sb">                        &lt;th&gt;Precio&lt;/th&gt;</span>
-<span class="sb">                    &lt;/tr&gt;`</span><span class="p">;</span>
-
-<span class="w">        </span><span class="nx">resultados</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">producto</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nx">html</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="sb">`</span>
-<span class="sb">                    &lt;tr&gt;</span>
-<span class="sb">                        &lt;td&gt;</span><span class="si">${</span><span class="nx">producto</span><span class="p">.</span><span class="nx">id</span><span class="si">}</span><span class="sb">&lt;/td&gt;</span>
-<span class="sb">                        &lt;td&gt;</span><span class="si">${</span><span class="nx">producto</span><span class="p">.</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">&lt;/td&gt;</span>
-<span class="sb">                        &lt;td&gt;</span><span class="si">${</span><span class="nx">producto</span><span class="p">.</span><span class="nx">precio</span><span class="si">}</span><span class="sb">€&lt;/td&gt;</span>
-<span class="sb">                    &lt;/tr&gt;`</span><span class="p">;</span>
-<span class="w">        </span><span class="p">});</span>
-
-<span class="w">        </span><span class="nx">html</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="sb">`</span>
-<span class="sb">                &lt;/table&gt;</span>
-<span class="sb">            &lt;/body&gt;</span>
-<span class="sb">            &lt;/html&gt;`</span><span class="p">;</span>
-
-<span class="w">        </span><span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">html</span><span class="p">);</span>
-<span class="w">    </span><span class="p">});</span>
-<span class="p">});</span>
-
-<span class="c1">// Iniciar servidor</span>
-<span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mf">3000</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Servidor ejecutándose en http://localhost:3000&#39;</span><span class="p">);</span>
-<span class="p">});</span>
-</code></pre></div></td></tr></table></div>
-</div>
-<h4 id="paso-3-el-servidor-envia-la-respuesta-al-navegador"><strong>📌 Paso 3: El servidor envía la respuesta al navegador</strong></h4>
-<p>Una vez que la base de datos devuelve los productos, el servidor genera un documento HTML y lo <strong>envía como respuesta</strong>:</p>
-<div class="highlight"><pre><span></span><code>HTTP/1.1 200 OK
-Content-Type: text/html
-
-&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;es&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-    &lt;title&gt;Lista de Productos&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;Lista de Productos&lt;/h1&gt;
-    &lt;table border=&quot;1&quot;&gt;
-        &lt;tr&gt;
-            &lt;th&gt;ID&lt;/th&gt;
-            &lt;th&gt;Nombre&lt;/th&gt;
-            &lt;th&gt;Precio&lt;/th&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td&gt;1&lt;/td&gt;
-            &lt;td&gt;Camisa&lt;/td&gt;
-            &lt;td&gt;25€&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td&gt;2&lt;/td&gt;
-            &lt;td&gt;Pantalón&lt;/td&gt;
-            &lt;td&gt;40€&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/table&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre></div>
-<h4 id="paso-4-el-navegador-renderiza-la-pagina"><strong>📌 Paso 4: El navegador renderiza la página</strong></h4>
-<p>El navegador recibe el HTML y lo interpreta para mostrar la lista de productos en pantalla.</p>
-<p>Este flujo explica <strong>cómo funciona una aplicación web desde la petición hasta la respuesta</strong>. Una vez comprendido este proceso, podemos empezar a integrar <strong>JavaScript en el navegador</strong> para mejorar la interactividad de la página web.</p>
-<p><img alt="Página web con la lista de productos" src="../img/lista_prodcutos.png" /></p>
-<p><a href="../html/articulos.html">Enlace a la página de productos</a></p>
 <h2 id="41-introduccion-a-html"><strong>4.1. Introducción a HTML</strong></h2>
 <h3 id="411-que-es-html-y-para-que-sirve"><strong>4.1.1 ¿Qué es HTML y para qué sirve?</strong></h3>
 <p><strong>HTML (HyperText Markup Language)</strong> es el lenguaje estándar utilizado para la creación de páginas web. Define la estructura y el contenido de un documento web mediante etiquetas.</p>
