@@ -274,6 +274,13 @@ Concatena uno o más arrays y devuelve un nuevo array.
 #### **`indexOf()` - Encontrar la posición de un elemento**
 Devuelve el primer índice donde se encuentra el elemento en el array, o `-1` si no existe.
 
+Esta función tiene dos parámetros opcionales: 
+
+- **`fromIndex`**: Índice donde comenzar la búsqueda.
+- **`searchElement`**: Elemento a buscar.
+
+Veamos un ejemplo de búsqueda de un elemento en un array.
+
 !!! example "Ejemplo de `indexOf()`"
     ```javascript linenums="1" title="Ejemplo de indexOf()"
     let numeros = [10, 20, 30, 40, 20];
@@ -281,13 +288,34 @@ Devuelve el primer índice donde se encuentra el elemento en el array, o `-1` si
     console.log(numeros.indexOf(100)); // -1
     ```
 
+Ahora un ejemplo de búsqueda a partir de un índice específico.
+
+!!! example "Ejemplo de `indexOf()` con `fromIndex`"
+    ```javascript linenums="1" title="Ejemplo de indexOf() con fromIndex"
+    let numeros = [10, 20, 30, 40, 20];
+    console.log(numeros.indexOf(20, 2)); // 4
+    ```
+
 #### **`lastIndexOf()` - Encontrar la última aparición de un elemento**
 Devuelve el último índice donde se encuentra el elemento en el array.
+
+Este método también tiene dos parámetros opcionales:
+
+- **`fromIndex`**: Índice donde comenzar la búsqueda.
+- **`searchElement`**: Elemento a buscar.
 
 !!! example "Ejemplo de `lastIndexOf()`"
     ```javascript linenums="1" title="Ejemplo de lastIndexOf()"
     let numeros = [10, 20, 30, 40, 20];
     console.log(numeros.lastIndexOf(20)); // 4
+    ```
+
+Ahora veamos un ejemplo de búsqueda a partir de un índice específico.
+
+!!! example "Ejemplo de `lastIndexOf()` con `fromIndex`"
+    ```javascript linenums="1" title="Ejemplo de lastIndexOf() con fromIndex"
+    let numeros = [10, 20, 30, 40, 20];
+    console.log(numeros.lastIndexOf(20, 2)); // 1
     ```
 
 ---

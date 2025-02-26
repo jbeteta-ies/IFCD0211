@@ -1,0 +1,2884 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jbeteta-ies.github.io/IFCD0211/content/MF_0966_3/UF2215/unidad04_42/">
+      
+      
+        <link rel="prev" href="../unidad04_41/">
+      
+      
+        <link rel="next" href="../unidad04_43/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>4.2 DOM y eventos - Certificado de Profesionalidad IFCD0211</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Certificado de Profesionalidad IFCD0211" class="md-header__button md-logo" aria-label="Certificado de Profesionalidad IFCD0211" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Certificado de Profesionalidad IFCD0211
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              4.2 DOM y eventos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Certificado de Profesionalidad IFCD0211" class="md-nav__button md-logo" aria-label="Certificado de Profesionalidad IFCD0211" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Certificado de Profesionalidad IFCD0211
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Contenidos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Contenidos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MF0966_3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            MF0966_3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_1" id="__nav_2_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UF2213
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            UF2213
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://jbeteta-ies.github.io/BBDD/temas/T01/T01_BBDD.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://jbeteta-ies.github.io/BBDD/temas/T02/T02_EER.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo Entidad-Relación
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://jbeteta-ies.github.io/BBDD/temas/T03/T03_MODELO_RELACIONAL.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo Relacional
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UF2214
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            UF2214
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://jbeteta-ies.github.io/BBDD/temas/T04/BD_T4_SQL_01.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo Físico (I) Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://jbeteta-ies.github.io/BBDD/temas/T04/BD_T4_SQL_02.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo Físico (II) Simple SQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://jbeteta-ies.github.io/BBDD/temas/T04/BD_T4_SQL_03.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo Físco (III) SQL Avanzado
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://jbeteta-ies.github.io/BBDD/temas/T04/BD_T4_SQL_04.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo Físico (IV) Transacciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://jbeteta-ies.github.io/BBDD/temas/T04/BD_T4_SQL_05.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo Físico (V) Procedimientos almacenados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_3" id="__nav_2_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    UF2215
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            UF2215
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_3_2" id="__nav_2_1_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    T01 Fundamentos de JS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            T01 Fundamentos de JS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad01_11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.1 Configuración del entorno de desarrollo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad01_12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.2 Variables, Tipos de Datos y Operadores
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad01_13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.3 Estructuras básicas condicionales
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad01_14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.4 Bucles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad01_15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.5 Uso avanzado de Números, cadenas y fechas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad01_16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.6 Ejercicios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_3_3" id="__nav_2_1_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    T02 Arrays y Objetos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            T02 Arrays y Objetos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad02_21/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.1 Arrays
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad02_22/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2 Objetos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad02_23/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.3 Persistencia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_3_4" id="__nav_2_1_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    T03 Funciones y manejo de errores
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            T03 Funciones y manejo de errores
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad03_31/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.1 Funciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad03_32/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.2 Manejo de errores
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad03_33/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.3 Asincronía en JS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad03_34/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.4 Introducción API REST
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_3_5" id="__nav_2_1_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    T04 DOM y Eventos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_3_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            T04 DOM y Eventos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad04_40/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.0 Aspectos previos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad04_41/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.1 Introducción a HTML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    4.2 DOM y eventos
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad04_43/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.3 Ejercicios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MF0967_3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            MF0967_3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MF_0967_3/UF2216/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF2216
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MF_0967_3/UF2217/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF2217
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MF_0967_3/UF2218/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF2218
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MF0968_3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            MF0968_3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MF_0968_3/UF1643/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF1643
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MF_0968_3/UF1644/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UF1644
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MP0459
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            MP0459
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MP0459/Practicas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prácticas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="unidad-42-introduccion-al-dom-document-object-model"><strong>Unidad 4.2: Introducción al DOM (Document Object Model)</strong></h1>
+<h2 id="421-el-objeto-window-en-javascript"><strong>4.2.1 El Objeto <code>window</code> en JavaScript</strong></h2>
+<p>El objeto <code>window</code> representa la ventana del navegador y es el objeto global en el que se ejecuta JavaScript en el cliente.</p>
+<p>📌 <strong>Propiedades principales:</strong></p>
+<ul>
+<li><code>window.innerWidth</code>, <code>window.innerHeight</code>: Dimensiones de la ventana.</li>
+<li><code>window.location</code>: Información sobre la URL actual.</li>
+<li><code>window.history</code>: Acceso al historial de navegación.</li>
+</ul>
+<p>📌 <strong>Métodos útiles:</strong></p>
+<h3 id="alertmensaje"><strong><code>alert(mensaje)</code></strong></h3>
+<p>Muestra un cuadro de alerta con un mensaje.
+- <strong>Parámetros:</strong>
+  - <code>mensaje</code> <em>(string)</em>: Texto a mostrar en la alerta.
+- <strong>Valor de retorno:</strong> <code>undefined</code> (no devuelve ningún valor).</p>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo práctico: alert()</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo de alert()</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Bienvenido al sistema&quot;</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<h3 id="promptmensaje-valorpordefecto"><strong><code>prompt(mensaje, valorPorDefecto)</code></strong></h3>
+<p>Solicita una entrada de texto al usuario.</p>
+<ul>
+<li><strong>Parámetros:</strong><ul>
+<li><code>mensaje</code> <em>(string)</em>: Texto de la solicitud.</li>
+<li><code>valorPorDefecto</code> <em>(string, opcional)</em>: Texto inicial en el campo de entrada.</li>
+</ul>
+</li>
+<li><strong>Valor de retorno:</strong> La cadena ingresada por el usuario o <code>null</code> si se cancela.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo práctico: prompt()</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo de prompt()</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;¿Cuál es tu nombre?&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Usuario&quot;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Nombre ingresado: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">nombre</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<h3 id="confirmmensaje"><strong><code>confirm(mensaje)</code></strong></h3>
+<p>Muestra un cuadro de diálogo con opciones "Aceptar" o "Cancelar".</p>
+<ul>
+<li><strong>Parámetros:</strong><ul>
+<li><code>mensaje</code> <em>(string)</em>: Texto del cuadro de confirmación.</li>
+</ul>
+</li>
+<li><strong>Valor de retorno:</strong> <code>true</code> si el usuario presiona "Aceptar", <code>false</code> si presiona "Cancelar".</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo práctico: confirm()</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo de confirm()</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">continuar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">confirm</span><span class="p">(</span><span class="s2">&quot;¿Deseas continuar?&quot;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Confirmación: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">continuar</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<h3 id="settimeoutfuncion-tiempo"><strong><code>setTimeout(función, tiempo)</code></strong></h3>
+<p>Ejecuta una función después de un tiempo específico.</p>
+<ul>
+<li><strong>Parámetros:</strong><ul>
+<li><code>función</code> <em>(function)</em>: Función a ejecutar después del tiempo.</li>
+<li><code>tiempo</code> <em>(número)</em>: Tiempo en milisegundos.</li>
+</ul>
+</li>
+<li><strong>Valor de retorno:</strong> Un identificador del temporizador que puede usarse con <code>clearTimeout()</code>.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo práctico: setTimeout()</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo de setTimeout()</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">setTimeout</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Este mensaje aparece después de 3 segundos&quot;</span><span class="p">);</span>
+<span class="p">},</span><span class="w"> </span><span class="mf">3000</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<h3 id="setintervalfuncion-tiempo"><strong><code>setInterval(función, tiempo)</code></strong></h3>
+<p>Ejecuta repetidamente una función a intervalos regulares.</p>
+<ul>
+<li><strong>Parámetros:</strong><ul>
+<li><code>función</code> <em>(function)</em>: Función a ejecutar.</li>
+<li><code>tiempo</code> <em>(número)</em>: Intervalo en milisegundos.</li>
+</ul>
+</li>
+<li><strong>Valor de retorno:</strong> Un identificador del temporizador que puede usarse con <code>clearInterval()</code>.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo práctico: setInterval()</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo de setInterval()</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">contador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">intervalo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">setInterval</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">contador</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Contador: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">contador</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">contador</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">5</span><span class="p">)</span><span class="w"> </span><span class="nx">clearInterval</span><span class="p">(</span><span class="nx">intervalo</span><span class="p">);</span>
+<span class="p">},</span><span class="w"> </span><span class="mf">1000</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<h2 id="423-como-accede-javascript-al-dom"><strong>4.2.3 Cómo accede JavaScript al DOM</strong></h2>
+<p>JavaScript puede acceder y modificar el contenido de una página web mediante el <strong>Document Object Model (DOM)</strong>. Para ello, es importante entender cómo se integran los scripts en una página HTML.</p>
+<p>📌 <strong>Métodos para incluir JavaScript en HTML:</strong></p>
+<ul>
+<li>
+<p><strong><code>&lt;script&gt;</code> en <code>&lt;head&gt;</code></strong>: Se ejecuta antes de que se cargue el cuerpo del documento, lo que puede generar errores si intentamos acceder a elementos aún no cargados.</p>
+</li>
+<li>
+<p><strong><code>&lt;script&gt;</code> antes del cierre de <code>&lt;body&gt;</code></strong>: Se recomienda en la mayoría de los casos, ya que garantiza que el DOM esté completamente cargado antes de ejecutar el script.</p>
+</li>
+<li>
+<p><strong>Atributos <code>defer</code> y <code>async</code> en <code>&lt;script&gt;</code></strong>:</p>
+<ul>
+<li><code>defer</code>: El script se descarga en segundo plano y se ejecuta cuando el documento HTML ha sido completamente analizado.</li>
+<li><code>async</code>: El script se descarga y ejecuta de inmediato, sin esperar a que termine de cargarse el HTML, lo que puede causar problemas de sincronización.</li>
+</ul>
+</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de inclusión de JavaScript</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo de script en HTML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ejemplo de script<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">defer</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;script.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hola, mundo!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<hr />
+<details class="question">
+<summary>Ejercicio práctico</summary>
+<ul>
+<li>Crea un documento HTML</li>
+<li>Pon un <code>alert()</code> en el <code>&lt;head&gt;</code>, otro al final del  <code>&lt;body&gt;</code> y otro en un fichero externo.</li>
+<li>Comprueba el orden en que se muestran los mensajes.</li>
+</ul>
+</details>
+<h2 id="424-ejemplo-base-de-html-para-manipulacion-del-dom"><strong>4.2.4 Ejemplo base de HTML para manipulación del DOM</strong></h2>
+<p>A lo largo de esta unidad, trabajaremos con una <strong>página de ejemplo</strong> que contendrá información sobre un empleado. Usaremos esta estructura para practicar la manipulación del DOM.</p>
+<div class="admonition example">
+<p class="admonition-title">Código base de HTML</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Página de Empleado</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Información del Empleado<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Datos del Empleado<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Nombre:<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;nombre&quot;</span><span class="p">&gt;</span>Carlos Pérez<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Edad:<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;edad&quot;</span><span class="p">&gt;</span>35<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Puesto:<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;puesto&quot;</span><span class="p">&gt;</span>Desarrollador Web<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cambiar-info&quot;</span><span class="p">&gt;</span>Actualizar Información<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;script.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p>Este documento <code>HTML</code> servirá como base para los ejemplos de los siguientes puntos. Nos permitirá practicar cómo <strong>localizar, modificar, agregar y eliminar contenido dinámicamente</strong>, además de <strong>manejar eventos en el DOM</strong>.</p>
+<h2 id="425-modificacion-del-contenido-de-elementos"><strong>4.2.5 Modificación del contenido de elementos</strong></h2>
+<p>Para modificar el contenido de los elementos en el DOM, JavaScript proporciona tres propiedades principales: <code>innerText</code>, <code>textContent</code> y <code>innerHTML</code>. A continuación, se explica cada una y cuándo utilizarlas.</p>
+<h3 id="innertext"><strong><code>innerText</code></strong></h3>
+<p>Devuelve o establece el <strong>texto visible</strong> dentro de un elemento. No incluye elementos HTML ni el contenido oculto con CSS (<code>display: none</code>).</p>
+<p>📌 <strong>Uso recomendado:</strong> Cuando solo queremos obtener o modificar el <strong>texto visible</strong> del usuario.</p>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de <code>innerText</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo de innerText</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">titulo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;nombre&quot;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">titulo</span><span class="p">.</span><span class="nx">innerText</span><span class="p">);</span><span class="w"> </span><span class="c1">// Carlos Pérez</span>
+<span class="nx">titulo</span><span class="p">.</span><span class="nx">innerText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Ana López&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Cambia el texto visible</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<h3 id="textcontent"><strong><code>textContent</code></strong></h3>
+<p>Similar a <code>innerText</code>, pero devuelve todo el texto dentro del nodo, <strong>incluyendo texto oculto con CSS</strong>.</p>
+<p>📌 <strong>Uso recomendado:</strong> Cuando se necesita obtener el contenido completo, sin importar la visibilidad del elemento.</p>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de <code>textContent</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo de textContent</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">descripcion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;puesto&quot;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">descripcion</span><span class="p">.</span><span class="nx">textContent</span><span class="p">);</span><span class="w"> </span><span class="c1">// Desarrollador Web</span>
+<span class="nx">descripcion</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Ingeniero de Software&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Modifica el texto sin afectar la estructura HTML</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<h3 id="innerhtml"><strong><code>innerHTML</code></strong></h3>
+<p>Permite acceder o modificar el <strong>contenido HTML</strong> dentro de un elemento. A diferencia de <code>innerText</code> y <code>textContent</code>, <strong>interpreta y procesa etiquetas HTML</strong>.</p>
+<p>📌 <strong>Uso recomendado:</strong> Cuando es necesario agregar o modificar contenido con etiquetas HTML.</p>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de <code>innerHTML</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo de innerHTML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">contenedor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;puesto&quot;</span><span class="p">);</span>
+<span class="nx">contenedor</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&lt;strong&gt;Gerente de Proyecto&lt;/strong&gt;&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Inserta contenido con formato HTML</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p><strong>📢 Precaución con <code>innerHTML</code>:</strong> Si el contenido proviene de fuentes externas o de usuarios, usar <code>innerHTML</code> sin validación puede generar problemas de seguridad (inyección de código).</p>
+<p><strong>4.2.6 Ejercicio: Modificar contenido con <code>innerText</code>, <code>textContent</code> e <code>innerHTML</code></strong></p>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio: Aplicar diferentes métodos para modificar contenido</p>
+<ol>
+<li>Crea un documento HTML que contenga tres elementos:</li>
+<li>Un encabezado <code>&lt;h1&gt;</code> con el id <code>titulo</code>.</li>
+<li>Un párrafo <code>&lt;p&gt;</code> con el id <code>descripcion</code>.</li>
+<li>Un <code>div</code> con el id <code>contenido</code>.</li>
+<li>Usa los siguientes métodos para modificar cada uno:</li>
+<li><code>innerText</code> para cambiar el título a "Bienvenido al curso de JavaScript".</li>
+<li><code>textContent</code> para cambiar el texto del párrafo a "Aprenderás a modificar el DOM con JavaScript".</li>
+<li><code>innerHTML</code> para agregar contenido con etiquetas HTML dentro del <code>div</code>.</li>
+<li>Agrega un botón en el HTML que, al hacer clic, ejecute los cambios.</li>
+</ol>
+</div>
+<details class="example">
+<summary>Solución del ejercicio</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Modificar contenido dinámicamente</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;modificar&quot;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;titulo&quot;</span><span class="p">).</span><span class="nx">innerText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Bienvenido al curso de JavaScript&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;descripcion&quot;</span><span class="p">).</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Aprenderás a modificar el DOM con JavaScript&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;contenido&quot;</span><span class="p">).</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&lt;strong&gt;Contenido modificado dinámicamente&lt;/strong&gt;&quot;</span><span class="p">;</span>
+<span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<hr />
+<h2 id="427-modificacion-de-atributos-y-estilos"><strong>4.2.7 Modificación de atributos y estilos</strong></h2>
+<p>JavaScript permite modificar los atributos y estilos de los elementos del DOM de diversas maneras.</p>
+<h3 id="modificar-atributos"><strong>Modificar atributos</strong></h3>
+<p>Estos métodos permiten cambiar o eliminar atributos de los elementos HTML.</p>
+<ul>
+<li><strong><code>setAttribute(atributo, valor)</code></strong>: Establece un atributo con el valor especificado.</li>
+<li><strong><code>getAttribute(atributo)</code></strong>: Obtiene el valor de un atributo.</li>
+<li><strong><code>removeAttribute(atributo)</code></strong>: Elimina un atributo de un elemento.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de modificación de atributos</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Modificar atributos de un enlace</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">enlace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;miEnlace&quot;</span><span class="p">);</span>
+<span class="nx">enlace</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&quot;href&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;https://www.google.com&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Modifica la URL</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">enlace</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">&quot;href&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// Obtiene la URL</span>
+<span class="nx">enlace</span><span class="p">.</span><span class="nx">removeAttribute</span><span class="p">(</span><span class="s2">&quot;target&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Elimina el atributo target</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<h3 id="modificar-estilos-con-javascript"><strong>Modificar estilos con JavaScript</strong></h3>
+<p>Podemos cambiar los estilos de los elementos con dos métodos:</p>
+<ul>
+<li><strong><code>.style.property</code></strong>: Modifica un estilo individual.</li>
+<li><strong><code>.classList</code></strong>: Añade, quita o alterna clases CSS.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de modificación de estilos</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Cambiar color de fondo</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;lightblue&quot;</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de modificación de clases</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Agregar y quitar clases</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">boton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;miBoton&quot;</span><span class="p">);</span>
+<span class="nx">boton</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;resaltado&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Agrega una clase CSS</span>
+<span class="nx">boton</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s2">&quot;resaltado&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Elimina la clase</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p>Hay un método adicional, <code>classList.toggle()</code>, que <strong>agrega o quita una clase</strong> según su presencia en el elemento. Se utiliza para <strong>alternar estilos</strong>. Por ejemplo, si una clase <code>activo</code> cambia el color de fondo, <code>classList.toggle("activo")</code> cambiará el color al hacer clic.</p>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de <code>classList.toggle()</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Alternar una clase</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">&lt;</span><span class="nx">style</span><span class="o">&gt;</span>
+<span class="p">.</span><span class="nx">activo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">background</span><span class="o">-</span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="nx">lightblue</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="o">&lt;</span><span class="err">/style&gt;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">boton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;miBoton&quot;</span><span class="p">);</span>
+<span class="nx">boton</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">toggle</span><span class="p">(</span><span class="s2">&quot;activo&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Alterna la clase activo</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio: Modificar atributos y estilos</p>
+<ul>
+<li>Cambia el <code>src</code> de una imagen.</li>
+<li>Modifica el color de un botón al hacer clic.</li>
+<li>Agrega y quita clases CSS dinámicamente.</li>
+</ul>
+</div>
+<hr />
+<h2 id="428-creacion-y-eliminacion-de-elementos-en-el-dom"><strong>4.2.8 Creación y eliminación de elementos en el DOM</strong></h2>
+<h3 id="crear-elementos-dinamicamente"><strong>Crear elementos dinámicamente</strong></h3>
+<ul>
+<li><strong><code>document.createElement(etiqueta)</code></strong>: Crea un nuevo elemento.</li>
+<li><strong><code>appendChild(nodo)</code></strong>: Añade un elemento al final de otro.</li>
+<li><strong><code>insertBefore(nuevoNodo, nodoExistente)</code></strong>: Inserta un elemento antes de otro existente.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo práctico</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Crear elemento</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">nuevoParrafo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">);</span>
+<span class="nx">nuevoParrafo</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Este es un nuevo elemento añadido dinámicamente.&quot;</span><span class="p">;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">nuevoParrafo</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<h3 id="eliminar-elementos"><strong>Eliminar elementos</strong></h3>
+<ul>
+<li><strong><code>removeChild(nodo)</code></strong>: Elimina un nodo hijo de otro nodo padre.</li>
+<li><strong><code>remove()</code></strong>: Elimina un nodo directamente.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de eliminación de elementos</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Eliminar un elemento</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">elemento</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;elementoAEliminar&quot;</span><span class="p">);</span>
+<span class="nx">elemento</span><span class="p">.</span><span class="nx">remove</span><span class="p">();</span><span class="w"> </span><span class="c1">// Elimina el elemento</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<h3 id="ejercicio-crear-y-eliminar-elementos"><strong>Ejercicio: Crear y eliminar elementos</strong></h3>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio: Crear y eliminar elementos</p>
+<ol>
+<li>Crea una página con una lista de elementos (<code>&lt;ul&gt;</code>).</li>
+<li>Agrega un botón para añadir nuevos elementos a la lista.</li>
+<li>Agrega otro botón para eliminar el último elemento de la lista.</li>
+<li>Usa <code>appendChild()</code> y <code>removeChild()</code>.</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">HTML Base</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code>    <span class="cp">&lt;!DOCTYPE html&gt;</span>
+    <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Lista Dinámica<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Lista de Elementos<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;lista&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Elemento 1<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Elemento 2<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;agregar&quot;</span><span class="p">&gt;</span>Agregar Elemento<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;eliminar&quot;</span><span class="p">&gt;</span>Eliminar Último<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;script.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+<details class="example">
+<summary>Solución en JavaScript</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">script.js</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;agregar&quot;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;lista&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">nuevoElemento</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;li&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">nuevoElemento</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Nuevo Elemento&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">lista</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">nuevoElemento</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;eliminar&quot;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;lista&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">lista</span><span class="p">.</span><span class="nx">children</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">lista</span><span class="p">.</span><span class="nx">removeChild</span><span class="p">(</span><span class="nx">lista</span><span class="p">.</span><span class="nx">lastElementChild</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<p>Este ejercicio permite practicar la creación y eliminación de elementos dinámicos en el DOM.</p>
+<h2 id="429-manejo-de-eventos-en-el-dom"><strong>4.2.9 Manejo de eventos en el DOM</strong></h2>
+<p>Los eventos permiten interactuar con los usuarios y reaccionar a acciones como clics o movimientos del ratón, y del teclado. JavaScript proporciona una forma sencilla de asignar eventos a los elementos del DOM.</p>
+<h3 id="formas-de-asignar-eventos"><strong>Formas de asignar eventos</strong></h3>
+<p>Existen varias maneras de asignar eventos en JavaScript. A continuación, veremos dos métodos principales: </p>
+<h3 id="1-asignacion-de-eventos-en-el-html-metodo-clasico"><strong>1️⃣ Asignación de eventos en el HTML (método clásico)</strong></h3>
+<p>Este método define el evento directamente en el HTML, estableciendo la función a ejecutar en el atributo correspondiente.</p>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de evento en el HTML</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo de evento en HTML</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;saludar()&quot;</span><span class="p">&gt;</span>Saludar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">saludar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;¡Hola, bienvenido!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p>📌 <strong>Desventajas:</strong>
+- Difícil de mantener en proyectos grandes.
+- No permite asignar múltiples eventos al mismo elemento fácilmente.</p>
+<h3 id="2-uso-de-addeventlistener-metodo-recomendado"><strong>2️⃣ Uso de <code>addEventListener()</code> (método recomendado)</strong></h3>
+<p>Este método permite asignar eventos directamente desde JavaScript, manteniendo el código HTML más limpio y estructurado.</p>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de <code>addEventListener()</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo de addEventListener()</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;boton&quot;</span><span class="p">&gt;</span>Saludar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;boton&quot;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;¡Hola, bienvenido!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p>📌 <strong>Ventajas:</strong>
+- Permite asignar múltiples eventos al mismo elemento.
+- Separa la estructura HTML de la lógica en JavaScript.</p>
+<p>Para eliminar un evento asignado con <code>addEventListener()</code>, se utiliza el método <code>removeEventListener()</code>. Este método requiere que la función de evento sea nombrada, lo que puede ser un inconveniente en algunos casos. En el ejemplo anterior:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Eliminar evento con removeEventListener()</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>let boton = document.getElementById(&quot;boton&quot;);
+let saludar = function() {
+    alert(&quot;¡Hola, bienvenido!&quot;);
+};
+boton.addEventListener(&quot;click&quot;, saludar);
+boton.removeEventListener(&quot;click&quot;, saludar);
+</code></pre></div></td></tr></table></div>
+<p>Esta función devuelve <code>true</code> si se eliminó correctamente, y <code>false</code> si el evento no estaba asignado.</p>
+<hr />
+<h3 id="eventos-mas-utilizados"><strong>Eventos más utilizados</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Evento</th>
+<th>Elemento típico</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>click</code></td>
+<td>Botones, enlaces</td>
+<td>Se dispara cuando se hace clic en un elemento.</td>
+</tr>
+<tr>
+<td><code>mouseover</code></td>
+<td>Imágenes, enlaces</td>
+<td>Se activa cuando el ratón pasa sobre un elemento.</td>
+</tr>
+<tr>
+<td><code>change</code></td>
+<td>Formularios</td>
+<td>Se activa cuando cambia el valor de un campo de entrada.</td>
+</tr>
+<tr>
+<td><code>load</code></td>
+<td><code>body</code>, imágenes</td>
+<td>Se ejecuta cuando la página o un recurso ha cargado completamente.</td>
+</tr>
+<tr>
+<td><code>KeyDown</code></td>
+<td><code>document</code></td>
+<td>Se activa cuando se presiona una tecla en cualquier parte del documento.</td>
+</tr>
+<tr>
+<td><code>KeyUp</code></td>
+<td><code>document</code></td>
+<td>Se dispara cuando se suelta una tecla en cualquier parte del documento.</td>
+</tr>
+<tr>
+<td><code>keyPress</code></td>
+<td><code>document</code></td>
+<td>Se activa cuando se presiona una tecla que produce un carácter.</td>
+</tr>
+<tr>
+<td><code>focus</code></td>
+<td>Campos de entrada</td>
+<td>Se activa cuando un elemento recibe el foco.</td>
+</tr>
+<tr>
+<td><code>blur</code></td>
+<td>Campos de entrada</td>
+<td>Se dispara cuando un elemento pierde el foco.</td>
+</tr>
+<tr>
+<td><code>submit</code></td>
+<td>Formularios</td>
+<td>Se activa cuando se envía un formulario.</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://www.w3schools.com/js/js_events.asp">Podemos encontrar más información sobre eventos en W3Schools</a>.</p>
+<hr />
+<p>Ahora explicamos algunos eventos comunes y su uso en JavaScript, sobre el resto profundizaremos en el siguiente módulo.</p>
+<h3 id="el-evento-onload-y-su-uso-en-javascript"><strong>El evento <code>onload</code> y su uso en JavaScript</strong></h3>
+<p>El evento <code>onload</code> se ejecuta cuando el documento HTML ha sido completamente cargado. Se usa comúnmente para inicializar scripts y asegurarse de que todos los elementos del DOM están disponibles antes de interactuar con ellos.</p>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de <code>onload</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Ejemplo de onload</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;inicializar()&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Página cargada<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">        </span><span class="kd">function</span><span class="w"> </span><span class="nx">inicializar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;La página ha cargado correctamente.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<h3 id="uso-recomendado-de-domcontentloaded-en-lugar-de-onload"><strong>Uso recomendado de <code>DOMContentLoaded</code> en lugar de <code>onload</code></strong></h3>
+<p>El evento <code>DOMContentLoaded</code> se dispara cuando el navegador ha terminado de analizar completamente el documento HTML, antes de que se carguen imágenes y otros recursos externos.</p>
+<p>📌 <strong>¿Por qué es mejor <code>DOMContentLoaded</code>?</strong>
+- <code>onload</code> espera a que <strong>todos</strong> los recursos de la página (imágenes, scripts, estilos) se hayan cargado.
+- <code>DOMContentLoaded</code> se activa <strong>antes</strong>, justo después de que el HTML esté listo, lo que mejora el tiempo de respuesta de los scripts.
+- En aplicaciones dinámicas, muchas veces no es necesario esperar a la carga de imágenes o estilos para ejecutar código JavaScript.</p>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de <code>DOMContentLoaded</code></p>
+<p>```javascript linenums="1" title="DOMContentLoaded"
+document.addEventListener("DOMContentLoaded", function() {
+    alert("El DOM está completamente cargado y listo para su manipulación");
+});</p>
+</div>
+<p>📌 <strong>Recomendación:</strong> En lugar de usar <code>onload</code> en el HTML, es mejor utilizar <code>DOMContentLoaded</code> en JavaScript:</p>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de <code>DOMContentLoaded</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">DOMContentLoaded</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;DOMContentLoaded&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;El DOM está completamente cargado y listo para su manipulación&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<hr />
+<h3 id="ejercicio-manejo-de-eventos"><strong>Ejercicio: Manejo de eventos</strong></h3>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio: Manejo de eventos</p>
+<ol>
+<li>Crea una página con un campo de entrada de texto y un botón.</li>
+<li>Al presionar el botón, muestra en un <code>div</code> el contenido del campo de entrada.</li>
+<li>Implementa un evento <code>mouseover</code> en un <code>div</code> para cambiar su color al pasar el cursor.</li>
+<li>Agrega un evento <code>keydown</code> para detectar cuando el usuario escribe.</li>
+</ol>
+</div>
+<p>📌 <strong>Código base HTML:</strong></p>
+<div class="admonition example">
+<p class="admonition-title">HTML Base para el ejercicio</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">HTML Base</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Eventos en el DOM<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Interacción con Eventos<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;entrada&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Escribe algo...&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;mostrar&quot;</span><span class="p">&gt;</span>Mostrar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;resultado&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;margin-top: 20px; padding: 10px; border: 1px solid black;&quot;</span><span class="p">&gt;</span>Aquí aparecerá el texto<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;caja&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;width: 100px; height: 100px; background-color: lightblue; margin-top: 20px;&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;script.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+<details class="example">
+<summary>Solución en JavaScript</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">script.js</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;mostrar&quot;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;entrada&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;resultado&quot;</span><span class="p">).</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">texto</span><span class="p">;</span>
+<span class="p">});</span>
+
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;caja&quot;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;mouseover&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;yellow&quot;</span><span class="p">;</span>
+<span class="p">});</span>
+
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;caja&quot;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;mouseout&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;lightblue&quot;</span><span class="p">;</span>
+<span class="p">});</span>
+
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;entrada&quot;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;keydown&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Tecla presionada: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">event</span><span class="p">.</span><span class="nx">key</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="example">
+<summary>Solución clásica sin <code>addEventListener()</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Solución sin addEventListener</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">onload</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">boton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;mostrar&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">boton</span><span class="p">.</span><span class="nx">onclick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;entrada&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+<span class="w">        </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;resultado&quot;</span><span class="p">).</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">texto</span><span class="p">;</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">caja</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;caja&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">caja</span><span class="p">.</span><span class="nx">onmouseover</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">caja</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;yellow&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">    </span><span class="nx">caja</span><span class="p">.</span><span class="nx">onmouseout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">caja</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;lightblue&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;entrada&quot;</span><span class="p">).</span><span class="nx">onkeydown</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Tecla presionada: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">event</span><span class="p">.</span><span class="nx">key</span><span class="p">);</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="p">};</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<p>Este ejercicio permite practicar la interacción con eventos en el DOM, incluyendo clics, movimiento del ratón y pulsaciones de teclado.</p>
+<h2 id="4211-ejercicio-guiado-seleccion-de-comunidad-y-ciudad"><strong>4.2.11 Ejercicio guiado: Selección de Comunidad y Ciudad</strong></h2>
+<p>En este ejercicio, construiremos un <strong>formulario dinámico</strong> en el que los usuarios seleccionarán una Comunidad Autónoma y, en función de su selección, podrán elegir una ciudad dentro de esa comunidad. Además, el botón de envío solo estará habilitado cuando ambas selecciones sean válidas.</p>
+<p><strong>📌 Objetivos del ejercicio</strong></p>
+<ol>
+<li>Al cargar la página, los selectores estarán vacíos con la opción <code>Seleccione una comunidad</code> y <code>Seleccione una ciudad</code>.</li>
+<li>El selector de ciudad estará deshabilitado hasta que el usuario seleccione una comunidad.</li>
+<li>Al elegir una comunidad, el selector de ciudad se llenará con las capitales de provincia correspondientes.</li>
+<li>Si se cambia la comunidad seleccionada, la lista de ciudades se actualizará y se deseleccionará la opción anterior.</li>
+<li>El botón "Enviar" solo se activará cuando haya una comunidad y ciudad seleccionada.</li>
+<li>Al presionar el botón "Enviar", se mostrará un mensaje con la comunidad y la ciudad seleccionada y el formulario se reiniciará.</li>
+</ol>
+<p><strong>Código base del HTML</strong></p>
+<div class="admonition example">
+<p class="admonition-title">HTML Base para el ejercicio</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">HTML Base</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Selección de Comunidad y Ciudad<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Formulario de Selección<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;comunidad&quot;</span><span class="p">&gt;</span>Comunidad Autónoma:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">select</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;comunidad&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>Seleccione una comunidad<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span> 
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;ciudad&quot;</span><span class="p">&gt;</span>Ciudad:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">select</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;ciudad&quot;</span> <span class="na">disabled</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>Seleccione una ciudad<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;enviar&quot;</span> <span class="na">disabled</span><span class="p">&gt;</span>Enviar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;formulario.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p><strong>Código en JavaScript (formulario.js)</strong></p>
+<details class="example">
+<summary>Solución en JavaScript</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">formulario.js</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;DOMContentLoaded&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// JSON con las comunidades y sus capitales</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">comunidades</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s2">&quot;Valenciana&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Alicante&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Castellón&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Valencia&quot;</span><span class="p">],</span>
+<span class="w">        </span><span class="s2">&quot;Catalana&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Barcelona&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Gerona&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Lérida&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Tarragona&quot;</span><span class="p">],</span>
+<span class="w">        </span><span class="s2">&quot;Madrileña&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Madrid&quot;</span><span class="p">],</span>
+<span class="w">        </span><span class="s2">&quot;Andaluza&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Almería&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Cádiz&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Córdoba&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Granada&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Huelva&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Jaén&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Málaga&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Sevilla&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">comunidadSelect</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;comunidad&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">ciudadSelect</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;ciudad&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">enviarBtn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;enviar&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Llenar el selector de comunidades</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">comunidad</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">comunidades</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">option</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;option&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">option</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">comunidad</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">option</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">comunidad</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">comunidadSelect</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">option</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Evento para actualizar ciudades al seleccionar comunidad</span>
+<span class="w">    </span><span class="nx">comunidadSelect</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;change&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">ciudadSelect</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&lt;option value=&#39;&#39;&gt;Seleccione una ciudad&lt;/option&gt;&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">ciudadSelect</span><span class="p">.</span><span class="nx">disabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">enviarBtn</span><span class="p">.</span><span class="nx">disabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+
+<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">comunidadSeleccionada</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">comunidadSelect</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">comunidadSeleccionada</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">ciudadSelect</span><span class="p">.</span><span class="nx">disabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">            </span><span class="nx">comunidades</span><span class="p">[</span><span class="nx">comunidadSeleccionada</span><span class="p">].</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">ciudad</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="kd">let</span><span class="w"> </span><span class="nx">option</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;option&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="nx">option</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ciudad</span><span class="p">;</span>
+<span class="w">                </span><span class="nx">option</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ciudad</span><span class="p">;</span>
+<span class="w">                </span><span class="nx">ciudadSelect</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">option</span><span class="p">);</span>
+<span class="w">            </span><span class="p">});</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">});</span>
+
+<span class="w">    </span><span class="c1">// Evento para activar el botón cuando se seleccione una ciudad</span>
+<span class="w">    </span><span class="nx">ciudadSelect</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;change&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">enviarBtn</span><span class="p">.</span><span class="nx">disabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="nx">ciudadSelect</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
+<span class="w">    </span><span class="p">});</span>
+
+<span class="w">    </span><span class="c1">// Evento para mostrar alerta y reiniciar formulario al enviar</span>
+<span class="w">    </span><span class="nx">enviarBtn</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">alert</span><span class="p">(</span><span class="sb">`Comunidad: </span><span class="si">${</span><span class="nx">comunidadSelect</span><span class="p">.</span><span class="nx">value</span><span class="si">}</span><span class="sb">\nCiudad: </span><span class="si">${</span><span class="nx">ciudadSelect</span><span class="p">.</span><span class="nx">value</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">comunidadSelect</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">ciudadSelect</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&lt;option value=&#39;&#39;&gt;Seleccione una ciudad&lt;/option&gt;&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">ciudadSelect</span><span class="p">.</span><span class="nx">disabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">enviarBtn</span><span class="p">.</span><span class="nx">disabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="ejercicio-adicional"><strong>📌 Ejercicio adicional</strong></h3>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio adicional: Agregar y eliminar ciudades</p>
+<ul>
+<li><strong>Ampliación del ejercicio</strong>:<ul>
+<li>Añadir un formulario donde el usuario pueda agregar nuevas ciudades a una comunidad existente.</li>
+<li>Implementar un botón "Eliminar" que permita quitar una ciudad seleccionada.</li>
+<li>Al eliminar una ciudad, actualizar la lista de manera dinámica.</li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Con este ejercicio, los alumnos practicarán el uso de <strong>eventos, manipulación dinámica del DOM, deshabilitación de elementos y gestión de selectores</strong> en JavaScript. 🚀</p>
+<h2 id="4211-integracion-con-el-servicio-rest-de-ciudades"><strong>4.2.11 Integración con el servicio REST de ciudades</strong></h2>
+<p>En la <strong>Unidad 3.4</strong> creamos un pequeño servicio REST que permitía recuperar una lista de ciudades o los datos de una ciudad en particular. Ahora vamos a integrarlo en una página web utilizando <strong>JavaScript y el DOM</strong>.</p>
+<p>📌 <strong>Objetivo del ejercicio:</strong>
+1. Crear una página web que cargue la lista de ciudades desde el servicio REST y la muestre en una tabla.
+2. Cada ciudad tendrá un botón en su código que, al hacer clic, mostrará los detalles de la ciudad en una ventana emergente (<code>prompt</code>).
+3. Como mejora opcional, el alumno deberá permitir <strong>añadir y eliminar</strong> ciudades mediante un formulario dinámico.</p>
+<p>📌 <strong>Código base HTML:</strong></p>
+<div class="admonition example">
+<p class="admonition-title">HTML Base para el ejercicio</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">HTML Base</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Lista de Ciudades<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Ciudades Disponibles<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">&quot;1&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Código<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Nombre<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Población<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Acciones<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tbody</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;ciudades-lista&quot;</span><span class="p">&gt;</span>
+            <span class="cm">&lt;!-- Aquí se cargarán las ciudades dinámicamente --&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;ciudades.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p>📌 <strong>Solución en JavaScript:</strong></p>
+<details class="example">
+<summary>Solución en JavaScript</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">ciudades.js</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;DOMContentLoaded&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;http://localhost:3000/ciudades&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// URL del servicio REST</span>
+<span class="w">        </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+<span class="w">        </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">ciudades</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kd">let</span><span class="w"> </span><span class="nx">tabla</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;ciudades-lista&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="nx">ciudades</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">ciudad</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="kd">let</span><span class="w"> </span><span class="nx">fila</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;tr&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="nx">fila</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`</span>
+<span class="sb">                    &lt;td&gt;</span><span class="si">${</span><span class="nx">ciudad</span><span class="p">.</span><span class="nx">codigo</span><span class="si">}</span><span class="sb">&lt;/td&gt;</span>
+<span class="sb">                    &lt;td&gt;</span><span class="si">${</span><span class="nx">ciudad</span><span class="p">.</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">&lt;/td&gt;</span>
+<span class="sb">                    &lt;td&gt;</span><span class="si">${</span><span class="nx">ciudad</span><span class="p">.</span><span class="nx">poblacion</span><span class="si">}</span><span class="sb">&lt;/td&gt;</span>
+<span class="sb">                    &lt;td&gt;&lt;button onclick=&quot;verCiudad(</span><span class="si">${</span><span class="nx">ciudad</span><span class="p">.</span><span class="nx">codigo</span><span class="si">}</span><span class="sb">)&quot;&gt;Ver&lt;/button&gt;&lt;/td&gt;</span>
+<span class="sb">                `</span><span class="p">;</span>
+<span class="w">                </span><span class="nx">tabla</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">fila</span><span class="p">);</span>
+<span class="w">            </span><span class="p">});</span>
+<span class="w">        </span><span class="p">})</span>
+<span class="w">        </span><span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&quot;Error al cargar ciudades:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">));</span>
+<span class="p">});</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">verCiudad</span><span class="p">(</span><span class="nx">codigo</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">fetch</span><span class="p">(</span><span class="sb">`http://localhost:3000/ciudades/</span><span class="si">${</span><span class="nx">codigo</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+<span class="w">        </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">ciudad</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">alert</span><span class="p">(</span><span class="sb">`Código: </span><span class="si">${</span><span class="nx">ciudad</span><span class="p">.</span><span class="nx">codigo</span><span class="si">}</span><span class="sb">\nNombre: </span><span class="si">${</span><span class="nx">ciudad</span><span class="p">.</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">\nPoblación: </span><span class="si">${</span><span class="nx">ciudad</span><span class="p">.</span><span class="nx">poblacion</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="w">        </span><span class="p">})</span>
+<span class="w">        </span><span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&quot;Error al obtener datos de la ciudad:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p><strong>Ejercicio propuesto:</strong></p>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio: Añadir y eliminar ciudades</p>
+<ul>
+<li><strong>Añadir ciudad:</strong> Modifica el código para incluir un formulario con <code>input</code> para ingresar una nueva ciudad y un botón "Agregar".</li>
+<li><strong>Eliminar ciudad:</strong> Agrega un botón "Eliminar" en cada fila de la tabla, que permita eliminar una ciudad de la lista y de la base de datos utilizando <code>fetch()</code> con <code>DELETE</code>.</li>
+</ul>
+</div>
+<p>Con este ejercicio, los alumnos aprenderán a <strong>cargar datos desde una API REST</strong>, <strong>modificar dinámicamente el DOM</strong>, y <strong>agregar funcionalidades interactivas</strong> a una página web. 🚀</p>
+<hr />
+<p>Autor: Javier Beteta LLuna
+Fecha: 2025-01-20
+Keywords: MF_0966_3, UF2215, Programación, JavaScript, DOM, Eventos, Manipulación DOM
+Form Module: MF_0966_3 - Consulta y manipulación de información contenida en gestores de datos
+Form Unit: UF 2215 - Herramientas de sistemas gestores de bases de datos. Pasarelas y medios de conexión
+Unit: 04 - Integración de JavaScript con HTML y el DOM</p>
+<hr />
+<h1 id="unidad-42-introduccion-al-dom-document-object-model_1"><strong>Unidad 4.2: Introducción al DOM (Document Object Model)</strong></h1>
+<h2 id="4212-ejercicios-practicos"><strong>4.2.12 Ejercicios prácticos</strong></h2>
+<p>A continuación, se presentan una serie de ejercicios para reforzar los conocimientos adquiridos sobre <strong>HTML, manipulación del DOM y eventos</strong>.</p>
+<h3 id="ejercicios-de-html"><strong>Ejercicios de HTML</strong></h3>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 1: Crear una lista ordenada</p>
+<ul>
+<li>Crea un documento HTML con una lista ordenada de 5 elementos.</li>
+<li>Agrega una etiqueta <code>&lt;h2&gt;</code> con un título descriptivo.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Lista ordenada</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Lista Ordenada<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Lista de Compras<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Manzanas<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Plátanos<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Leche<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Pan<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Huevos<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 2: Crear una tabla básica</p>
+<ul>
+<li>Construye una tabla HTML con 3 columnas (<code>Nombre</code>, <code>Edad</code>, <code>Ciudad</code>) y 4 filas.</li>
+<li>Añade un encabezado (<code>&lt;thead&gt;</code>) y un cuerpo (<code>&lt;tbody&gt;</code>).</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Tabla básica</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">&quot;1&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Nombre<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Edad<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Ciudad<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Ana<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>30<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Madrid<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Pedro<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>25<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Barcelona<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>María<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>35<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Sevilla<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 3: Crear un formulario de contacto</p>
+<ul>
+<li>Diseña un formulario HTML con los siguientes campos:</li>
+<li>Nombre (campo de texto)</li>
+<li>Correo electrónico (campo de email)</li>
+<li>Mensaje (área de texto)</li>
+<li>Botón de envío</li>
+<li>Usa etiquetas <code>&lt;label&gt;</code> para cada campo.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Formulario de contacto</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;nombre&quot;</span><span class="p">&gt;</span>Nombre:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;nombre&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;nombre&quot;</span> <span class="na">required</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;email&quot;</span><span class="p">&gt;</span>Correo electrónico:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;email&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;email&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;email&quot;</span> <span class="na">required</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;mensaje&quot;</span><span class="p">&gt;</span>Mensaje:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;mensaje&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;mensaje&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span><span class="p">&gt;</span>Enviar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 4: Crear un formulario de registro</p>
+<ul>
+<li>Crea un formulario con:</li>
+<li>Nombre de usuario (campo de texto)</li>
+<li>Contraseña (campo de password)</li>
+<li>Selector de país (<code>&lt;select&gt;</code>) con al menos 5 opciones</li>
+<li>Botón de registro</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+</details>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Formulario de registro</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;usuario&quot;</span><span class="p">&gt;</span>Usuario:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;usuario&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;usuario&quot;</span> <span class="na">required</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;password&quot;</span><span class="p">&gt;</span>Contraseña:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">required</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;pais&quot;</span><span class="p">&gt;</span>País:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">select</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;pais&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;pais&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>España<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>Argentina<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>México<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>Chile<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>Colombia<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span><span class="p">&gt;</span>Registrar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 5: Crear un formulario con radio buttons y checkboxes</p>
+<ul>
+<li>Diseña un formulario con:</li>
+<li>Selección de género (<code>Masculino</code>, <code>Femenino</code>, <code>Otro</code>) usando radio buttons.</li>
+<li>Una lista de intereses con checkboxes (<code>Música</code>, <code>Deportes</code>, <code>Cine</code>).</li>
+<li>Un botón de envío.
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Formulario con radio buttons y checkboxes</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Género:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;masculino&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;genero&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;masculino&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;masculino&quot;</span><span class="p">&gt;</span>Masculino<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;femenino&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;genero&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;femenino&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;femenino&quot;</span><span class="p">&gt;</span>Femenino<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;otro&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;genero&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;otro&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;otro&quot;</span><span class="p">&gt;</span>Otro<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Intereses:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;musica&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;intereses&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;musica&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;musica&quot;</span><span class="p">&gt;</span>Música<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;deportes&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;intereses&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;deportes&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;deportes&quot;</span><span class="p">&gt;</span>Deportes<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cine&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;intereses&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;cine&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;cine&quot;</span><span class="p">&gt;</span>Cine<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span><span class="p">&gt;</span>Enviar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+</div>
+<hr />
+<h3 id="ejercicios-con-javascript-y-dom"><strong>Ejercicios con JavaScript y DOM</strong></h3>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 6: Añadir elementos dinámicamente a una lista</p>
+<ul>
+<li>Modifica el <strong>Ejercicio 1</strong> agregando un campo de entrada y un botón.</li>
+<li>Al hacer clic en el botón, el nuevo elemento se añadirá a la lista.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Añadir elementos dinámicamente</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;agregar&quot;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;miLista&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">nuevoElemento</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;li&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">nuevoElemento</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;nuevoItem&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">lista</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">nuevoElemento</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 7: Modificar dinámicamente una tabla</p>
+<ul>
+<li>Basado en el <strong>Ejercicio 2</strong>, crea un formulario con los mismos campos.</li>
+<li>Al completar el formulario y presionar el botón "Agregar", se añadirá una nueva fila a la tabla.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Modificar tabla dinámicamente</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;agregar&quot;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">tabla</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;miTabla&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">nuevaFila</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tabla</span><span class="p">.</span><span class="nx">insertRow</span><span class="p">(</span><span class="o">-</span><span class="mf">1</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">celda1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nuevaFila</span><span class="p">.</span><span class="nx">insertCell</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">celda2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nuevaFila</span><span class="p">.</span><span class="nx">insertCell</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">celda3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nuevaFila</span><span class="p">.</span><span class="nx">insertCell</span><span class="p">(</span><span class="mf">2</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">celda1</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;nombre&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">celda2</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;edad&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">celda3</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;ciudad&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+<span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 8: Validación de un formulario</p>
+<ul>
+<li>Modifica el <strong>Ejercicio 3</strong> para validar que:<ul>
+<li>El campo de nombre no esté vacío.</li>
+<li>El correo sea válido.</li>
+<li>El mensaje tenga al menos 10 caracteres.</li>
+</ul>
+</li>
+<li>Si hay errores, mostrar un mensaje en pantalla.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Validación de formulario</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;enviar&quot;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;nombre&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;email&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">mensaje</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;mensaje&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">nombre</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">email</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">mensaje</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Por favor, complete todos los campos correctamente.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 9: Manejo de eventos del teclado y ratón</p>
+<ul>
+<li>Modifica el <strong>Ejercicio 4</strong>:</li>
+<li>Cuando el usuario presione una tecla en el campo de contraseña, se mostrará la cantidad de caracteres ingresados.</li>
+<li>Al pasar el ratón sobre el botón de registro, cambiará de color.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Eventos de teclado y ratón</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;password&quot;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;keydown&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">longitud</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;password&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="sb">`Caracteres ingresados: </span><span class="si">${</span><span class="nx">longitud</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;registrar&quot;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;mouseover&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;lightblue&quot;</span><span class="p">;</span>
+<span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Ejercicio 10: Modificación de atributos y clases dinámicamente</p>
+<ul>
+<li>Agrega estilos CSS al formulario del <strong>Ejercicio 5</strong>.</li>
+<li>Crea un botón "Activar Modo Oscuro" que, al hacer clic, cambie la apariencia de la página usando <code>classList.toggle()</code>.</li>
+</ul>
+<details class="example">
+<summary>Solución</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Modificación de atributos y clases</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;modoOscuro&quot;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">toggle</span><span class="p">(</span><span class="s2">&quot;dark-mode&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+<p>Estos ejercicios ayudarán a los alumnos a practicar la <strong>estructura HTML</strong>, la <strong>manipulación del DOM</strong> y el <strong>uso de eventos en JavaScript</strong>. 🚀</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>

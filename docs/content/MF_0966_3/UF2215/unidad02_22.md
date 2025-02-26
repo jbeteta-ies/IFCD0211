@@ -411,7 +411,7 @@ Ahora para utilizar esta clase, podemos crear un empleado y mostrar o modificar 
 ### **El Constructor**
 El constructor es un método que se ejecuta cuando se crea una nueva instancia de la clase. Todas las clases tiene un constructor por defecto, pero podemos definir uno personalizado. La ventaja es que nos permite inicializar las propiedades de un objeto.
 
-??? example "Uso del constructor"
+!!! example "Uso del constructor"
     ```javascript linenums="1" title="Constructor en clase"
     class Empleado {
         constructor(nombre, edad, puesto) {
@@ -426,7 +426,8 @@ El constructor es un método que se ejecuta cuando se crea una nueva instancia d
 - **`constructor`**: Método especial para inicializar las propiedades de un objeto.
 
 El uso de la clase sería el mismo pero podemos inicializar las propiedades:
-!! example "Creación de una instancia de una clase"
+
+!!! example "Creación de una instancia de una clase"
     ``` javascript linenums="1" title="Uso de una clase"
     let emp = new Empleado("Carlos Pérez", 35, "Desarrollador");
     console.log(emp.nombre); // Carlos Pérez
@@ -438,7 +439,7 @@ El uso de la clase sería el mismo pero podemos inicializar las propiedades:
 ### **Propiedades y Métodos**
 Podemos añadir propiedades y métodos a una clase.
 
-??? example "Propiedades y métodos"
+!!! example "Propiedades y métodos"
     ```javascript linenums="1" title="Propiedades y métodos en clase"
     class Empleado {
         constructor(nombre, edad, puesto) {
@@ -457,7 +458,7 @@ Podemos añadir propiedades y métodos a una clase.
 ### **Getters y Setters**
 Los `getters` y `setters` permiten acceder y modificar propiedades de forma controlada. la diferencia entre una propiedad **_nombre** (con guion bajo, usada como convención para propiedades internas o privadas) y una propiedad **nombre** (pública). Aunque JavaScript no tiene propiedades privadas reales, esta convención ayuda a indicar que la propiedad no debería ser modificada directamente. 
 
-??? example "Uso de getters y setters"
+!!! example "Uso de getters y setters"
     ```javascript linenums="1" title="Getters y Setters"
     class Empleado {
         constructor(nombre, edad, puesto) {
@@ -479,7 +480,7 @@ Los `getters` y `setters` permiten acceder y modificar propiedades de forma cont
 ### **Herencia con `extends` y `super`**
 Podemos crear clases que hereden propiedades y métodos de otras clases usando `extends`. De esta manera, una clase hija puede reutilizar la estructura de una clase padre, no teniendo que redefinir todos los métodos y propiedades. Esto nos permite en programación crear lo que conocemos como una `jeraquía de clases`. Esto nos permite racionalizar el código y hacerlo más mantenible.
 
-??? example "Ejemplo de herencia"
+!!! example "Ejemplo de herencia"
     ```javascript linenums="1" title="Herencia con extends y super"
     class Empleado {
         constructor(nombre, edad, puesto) {
@@ -551,10 +552,10 @@ Ahora podemos ver un ejemplo de uso de la jeraquía de clases:
 ```javascript linenums="1" title="Uso de la jeraquía de clases"
 let r = new Rectangulo('Rectangulo', 10, 5);
 let c = new Circulo('Círculo', 5);
-console.log("Área del rectángulo:", r.nombre(), r.area());
-console.log("Perímetro del rectángulo:", r.nombre(), r.perimetro());
-console.log("Área del círculo:", c.nombre(), c.area());
-console.log("Perímetro del círculo:", c.nombre(), c.perimetro());
+console.log("Área del rectángulo:", r.nombre, r.area());
+console.log("Perímetro del rectángulo:", r.nombre, r.perimetro());
+console.log("Área del círculo:", c.nombre, c.area());
+console.log("Perímetro del círculo:", c.nombre, c.perimetro());
 ```
 
 

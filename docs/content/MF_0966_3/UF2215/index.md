@@ -134,9 +134,9 @@ Aprender los fundamentos de la programación utilizando JavaScript, con un enfoq
 ### **Unidad 4: Integración de JavaScript con HTML y el DOM (20 horas)**
 
 - **4.1** Introducción a HTML (5h)
-       - Conceptos básicos de HTML.
-       - Uso de etiquetas comunes: `<div>`, `<span>`, `<form>`, `<input>`.
-       - Crear un archivo HTML básico.
+       - Conceptos de HTML.
+       - Estructura básica de un documento HTML.
+       - Etiquetas y atributos comunes.
 - **4.2** Vinculación de JavaScript con HTML (5h)
        - Uso de etiquetas `<script>` para enlazar archivos JavaScript.
        - Ejecución de código JS en eventos básicos de HTML (`onClick`, `onSubmit`).
