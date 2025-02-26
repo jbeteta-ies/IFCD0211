@@ -2004,8 +2004,8 @@
 <hr />
 <h3 id="el-constructor"><strong>El Constructor</strong></h3>
 <p>El constructor es un método que se ejecuta cuando se crea una nueva instancia de la clase. Todas las clases tiene un constructor por defecto, pero podemos definir uno personalizado. La ventaja es que nos permite inicializar las propiedades de un objeto.</p>
-<details class="example">
-<summary>Uso del constructor</summary>
+<div class="admonition example">
+<p class="admonition-title">Uso del constructor</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Constructor en clase</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -2022,25 +2022,27 @@
 <span class="p">}</span>
 <span class="kd">let</span><span class="w"> </span><span class="nx">emp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Empleado</span><span class="p">(</span><span class="s2">&quot;Carlos Pérez&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">35</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Desarrollador&quot;</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
-</details>
+</div>
 <ul>
 <li><strong><code>constructor</code></strong>: Método especial para inicializar las propiedades de un objeto.</li>
 </ul>
-<p>El uso de la clase sería el mismo pero podemos inicializar las propiedades:
-!! example "Creación de una instancia de una clase"
-    <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Uso de una clase</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<p>El uso de la clase sería el mismo pero podemos inicializar las propiedades:</p>
+<div class="admonition example">
+<p class="admonition-title">Creación de una instancia de una clase</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Uso de una clase</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">emp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Empleado</span><span class="p">(</span><span class="s2">&quot;Carlos Pérez&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">35</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Desarrollador&quot;</span><span class="p">);</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">emp</span><span class="p">.</span><span class="nx">nombre</span><span class="p">);</span><span class="w"> </span><span class="c1">// Carlos Pérez</span>
 <span class="nx">emp</span><span class="p">.</span><span class="nx">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">36</span><span class="p">;</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">emp</span><span class="p">.</span><span class="nx">edad</span><span class="p">);</span><span class="w"> </span><span class="c1">// 36</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
+</div>
 <hr />
 <h3 id="propiedades-y-metodos"><strong>Propiedades y Métodos</strong></h3>
 <p>Podemos añadir propiedades y métodos a una clase.</p>
-<details class="example">
-<summary>Propiedades y métodos</summary>
+<div class="admonition example">
+<p class="admonition-title">Propiedades y métodos</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Propiedades y métodos en clase</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2061,12 +2063,12 @@
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-</details>
+</div>
 <hr />
 <h3 id="getters-y-setters"><strong>Getters y Setters</strong></h3>
 <p>Los <code>getters</code> y <code>setters</code> permiten acceder y modificar propiedades de forma controlada. la diferencia entre una propiedad <strong>_nombre</strong> (con guion bajo, usada como convención para propiedades internas o privadas) y una propiedad <strong>nombre</strong> (pública). Aunque JavaScript no tiene propiedades privadas reales, esta convención ayuda a indicar que la propiedad no debería ser modificada directamente. </p>
-<details class="example">
-<summary>Uso de getters y setters</summary>
+<div class="admonition example">
+<p class="admonition-title">Uso de getters y setters</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Getters y Setters</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2093,12 +2095,12 @@
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-</details>
+</div>
 <hr />
 <h3 id="herencia-con-extends-y-super"><strong>Herencia con <code>extends</code> y <code>super</code></strong></h3>
 <p>Podemos crear clases que hereden propiedades y métodos de otras clases usando <code>extends</code>. De esta manera, una clase hija puede reutilizar la estructura de una clase padre, no teniendo que redefinir todos los métodos y propiedades. Esto nos permite en programación crear lo que conocemos como una <code>jeraquía de clases</code>. Esto nos permite racionalizar el código y hacerlo más mantenible.</p>
-<details class="example">
-<summary>Ejemplo de herencia</summary>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo de herencia</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Herencia con extends y super</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2125,7 +2127,7 @@
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-</details>
+</div>
 <p>Una de las ventajas de la herencia es que los objetos creados con la clase hija <code>Director</code> pueden acceder a los métodos y propiedades de la clase padre <code>Empleado</code>, y podemos tratar una objeto <code>Director</code>  como un objeto <code>Empleado</code>.</p>
 <div class="admonition example">
 <p class="admonition-title">Uso de la herencia</p>
@@ -2216,10 +2218,10 @@
 <span class="normal">5</span>
 <span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Rectangulo</span><span class="p">(</span><span class="s1">&#39;Rectangulo&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span>
 <span class="kd">let</span><span class="w"> </span><span class="nx">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Circulo</span><span class="p">(</span><span class="s1">&#39;Círculo&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Área del rectángulo:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="p">.</span><span class="nx">nombre</span><span class="p">(),</span><span class="w"> </span><span class="nx">r</span><span class="p">.</span><span class="nx">area</span><span class="p">());</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Perímetro del rectángulo:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="p">.</span><span class="nx">nombre</span><span class="p">(),</span><span class="w"> </span><span class="nx">r</span><span class="p">.</span><span class="nx">perimetro</span><span class="p">());</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Área del círculo:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">c</span><span class="p">.</span><span class="nx">nombre</span><span class="p">(),</span><span class="w"> </span><span class="nx">c</span><span class="p">.</span><span class="nx">area</span><span class="p">());</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Perímetro del círculo:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">c</span><span class="p">.</span><span class="nx">nombre</span><span class="p">(),</span><span class="w"> </span><span class="nx">c</span><span class="p">.</span><span class="nx">perimetro</span><span class="p">());</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Área del rectángulo:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="p">.</span><span class="nx">nombre</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="p">.</span><span class="nx">area</span><span class="p">());</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Perímetro del rectángulo:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="p">.</span><span class="nx">nombre</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="p">.</span><span class="nx">perimetro</span><span class="p">());</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Área del círculo:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">c</span><span class="p">.</span><span class="nx">nombre</span><span class="p">,</span><span class="w"> </span><span class="nx">c</span><span class="p">.</span><span class="nx">area</span><span class="p">());</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Perímetro del círculo:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">c</span><span class="p">.</span><span class="nx">nombre</span><span class="p">,</span><span class="w"> </span><span class="nx">c</span><span class="p">.</span><span class="nx">perimetro</span><span class="p">());</span>
 </code></pre></div></td></tr></table></div></p>
 <h3 id="cuando-usar-class-o-prototipos"><strong>¿Cuándo Usar <code>class</code> o Prototipos?</strong></h3>
 <ul>
