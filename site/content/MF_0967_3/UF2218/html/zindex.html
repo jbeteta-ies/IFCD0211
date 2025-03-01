@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Superposición con z-index</title>
+    <style>
+        .div1, .div2, .div3 {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+        }
+
+        .div1 {
+            background-color: red;
+            top: 50px;
+            left: 50px;
+            z-index: 1; /* El div rojo está en el fondo */
+        }
+
+        .div2 {
+            background-color: green;
+            top: 100px;
+            left: 100px;
+            z-index: 2; /* El div verde está encima del rojo */
+        }
+
+        .div3 {
+            background-color: blue;
+            top: 150px;
+            left: 150px;
+            z-index: 3; /* El div azul está encima de los otros dos */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div3"></div>
+
+</body>
+</html>

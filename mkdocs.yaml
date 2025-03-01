@@ -60,7 +60,9 @@ nav:
       - MF0967_3:
           - UF2216: content/MF_0967_3/UF2216.md
           - UF2217: content/MF_0967_3/UF2217.md
-          - UF2218: content/MF_0967_3/UF2218.md
+          - UF2218: 
+            - T01 Introducción al diseño web: content/MF_0967_3/UF2218/unidad01.md
+            - T02 Introducción a CSS: content/MF_0967_3/UF2218/unidad02.md
       - MF0968_3:
           - UF1643: content/MF_0968_3/UF1643.md
           - UF1644: content/MF_0968_3/UF1644.md
