@@ -2448,7 +2448,6 @@ ubicación de los elementos respecto a su contenedor o a otros elementos en la p
 <p><img alt="Ejemplo completo de texto" src="../img/img16.png" /></p>
 <details class="example">
 <summary>Texto</summary>
-</details>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Texto</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2565,6 +2564,7 @@ ubicación de los elementos respecto a su contenedor o a otros elementos en la p
   <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
+</details>
 <hr />
 <h3 id="resumen_4"><strong>Resumen</strong></h3>
 <ul>
@@ -2786,7 +2786,6 @@ comunes son: <strong>nombres</strong>, <strong>valores hexadecimales</strong>, <
 <p><img alt="cover" src="../img/IMG17.png" /></p>
 <details class="example">
 <summary>fondo cover</summary>
-</details>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">fondo cover</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2847,11 +2846,11 @@ comunes son: <strong>nombres</strong>, <strong>valores hexadecimales</strong>, <
   <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
+</details>
 <p><strong>fondo fijo en la parte lateral izquierda y arriba</strong></p>
 <p><img alt="fixed" src="../img/img18.png" /></p>
 <details class="example">
 <summary>fondo</summary>
-</details>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">fondo</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -2916,6 +2915,7 @@ comunes son: <strong>nombres</strong>, <strong>valores hexadecimales</strong>, <
   <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
+</details>
 <hr />
 <h2 id="resumen_5"><strong>Resumen</strong></h2>
 <ul>
@@ -3037,8 +3037,9 @@ comunes son: <strong>nombres</strong>, <strong>valores hexadecimales</strong>, <
 </code></pre></div>
 <p>Aquí, el <strong>elemento <code>div</code></strong> se colocará <strong>50px desde la parte superior</strong> y <strong>100px desde la izquierda</strong> de su contenedor más cercano con <code>position: relative</code>.</p>
 <p><img alt="Ejemplo uso de la propiedad position:sticky" src="../img/img20.png" /></p>
-<p>??? example "propiedad 'position:sticky'
-  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<details class="example">
+<summary>propiedad <code>position:sticky</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -3125,7 +3126,8 @@ comunes son: <strong>nombres</strong>, <strong>valores hexadecimales</strong>, <
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
+</details>
 <hr />
 <h2 id="74-visibility"><strong>7.4 Visibility</strong></h2>
 <p>La propiedad <strong><code>visibility</code></strong> permite <strong>ocultar</strong> un elemento sin eliminarlo del flujo del documento, lo que significa que el espacio del elemento sigue estando reservado en la página, aunque el contenido no se vea.</p>
@@ -3176,52 +3178,53 @@ comunes son: <strong>nombres</strong>, <strong>valores hexadecimales</strong>, <
 <p><img alt="3 divs superpuestos" src="../img/img22.png" /></p>
 <details class="example">
 <summary>Divs superpuestos</summary>
-</details>
 <p>```html linenums=1
-  <!DOCTYPE html></p>
+&lt;!DOCTYPE html&gt;
 <html lang="es">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Ejemplo de Superposición con z-index</title>
-      <style>
-        .div1,
-        .div2,
-        .div3 {
-          position: absolute;
-          width: 200px;
-          height: 200px;
-        }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo de Superposición con z-index</title>
+    <style>
+      .div1,
+      .div2,
+      .div3 {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+      }</p>
+<div class="codehilite"><pre><span></span><code><span class="w">  </span><span class="p">.</span><span class="nc">div1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="w">    </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="k">left</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="k">z-index</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c">/* El div rojo está en el fondo */</span>
+<span class="w">  </span><span class="p">}</span>
 
-        .div1 {
-          background-color: red;
-          top: 50px;
-          left: 50px;
-          z-index: 1; /* El div rojo está en el fondo */
-        }
+<span class="w">  </span><span class="p">.</span><span class="nc">div2</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">green</span><span class="p">;</span>
+<span class="w">    </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="k">left</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="k">z-index</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c">/* El div verde está encima del rojo */</span>
+<span class="w">  </span><span class="p">}</span>
 
-        .div2 {
-          background-color: green;
-          top: 100px;
-          left: 100px;
-          z-index: 2; /* El div verde está encima del rojo */
-        }
+<span class="w">  </span><span class="p">.</span><span class="nc">div3</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
+<span class="w">    </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="k">left</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="k">z-index</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c">/* El div azul está encima de los otros dos */</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="o">&lt;/</span><span class="nt">style</span><span class="o">&gt;</span>
+</code></pre></div>
 
-        .div3 {
-          background-color: blue;
-          top: 150px;
-          left: 150px;
-          z-index: 3; /* El div azul está encima de los otros dos */
-        }
-      </style>
-    </head>
-    <body>
-      <div class="div1"></div>
-      <div class="div2"></div>
-      <div class="div3"></div>
-    </body>
-  </html>
-<p>```</p>
+<p></head>
+  <body>
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div3"></div>
+  </body>
+</html>
+```</p>
+</details>
 <hr />
 <h2 id="ejemplo-practico-diseno-de-una-pagina-con-imagenes-en-linea"><strong>Ejemplo práctico: Diseño de una página con imágenes en línea</strong></h2>
 <p>Vamos a crear un ejemplo con un <strong>layout simple</strong> que tenga una serie de imágenes dentro de un contenedor. Las imágenes se alinearán en línea mientras haya espacio, y cuando no quepan, pasarán a la siguiente línea.</p>
@@ -3229,7 +3232,6 @@ comunes son: <strong>nombres</strong>, <strong>valores hexadecimales</strong>, <
 <p><img alt="Ejemplo de diseño de página con imagenes en línea" src="../img/img23.png" /></p>
 <details class="example">
 <summary>Imagenes eb linea</summary>
-</details>
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -3316,6 +3318,7 @@ comunes son: <strong>nombres</strong>, <strong>valores hexadecimales</strong>, <
   <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
+</details>
 <hr />
 <p>En este ejemplo, hemos usado <strong>flexbox</strong> para hacer que las imágenes se alineen en una fila cuando haya espacio suficiente y, cuando no quepan, se moverán a la siguiente línea. También hemos usado un menú de navegación y un pie de página para completar el diseño.</p>
 <hr />
