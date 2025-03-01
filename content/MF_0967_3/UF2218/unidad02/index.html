@@ -1769,11 +1769,13 @@
 <span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">green</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<p><a href="../img/img14.png">tabla maquetada con pseudoselectores</a></p>
+<p><img alt="tabla maquetada con pseudoselectores" src="../img/img14.png" /></p>
 <details class="example">
 <summary>Tabla maquetada con pseudoselectores</summary>
+<p>Esto es un ejemplo...</p>
 </details>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">tabla maquetada</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
+<p>&lt;!-- 
+  <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">tabla maquetada</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
 <span class="normal">  2</span>
 <span class="normal">  3</span>
 <span class="normal">  4</span>
@@ -1877,7 +1879,8 @@
 <span class="normal">102</span>
 <span class="normal">103</span>
 <span class="normal">104</span>
-<span class="normal">105</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="normal">105</span>
+<span class="normal">106</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span> <span class="p">/&gt;</span>
@@ -1982,7 +1985,8 @@
     <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div>
+--&gt;
+</code></pre></div></td></tr></table></div></p>
 <hr />
 <h4 id="ejemplo-practico-cambiar-el-color-de-un-elemento-al-pasar-el-raton-por-encima">Ejemplo Práctico: Cambiar el color de un elemento al pasar el ratón por encima**</h4>
 <p><strong>HTML Base</strong> </p>
@@ -3177,12 +3181,73 @@ comunes son: <strong>nombres</strong>, <strong>valores hexadecimales</strong>, <
 <summary>Divs superpuestos</summary>
 </details>
 <p>```html linenums=1
-  <!DOCTYPE html></p>
-<html lang="es">
+  &lt;!DOCTYPE html&gt;
+  <html lang="es">
     <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Ejemplo de Superposición con z-index</title>
+      <title>Ejemplo de Superposición con z-indexte caso, <strong>border-radius</strong> redondea las esquinas de la imagen y <strong>box-shadow</strong> agrega una sombra alrededor de la imagen.</p>
+<hr />
+<h3 id="92-gradientes-en-css"><strong>9.2. Gradientes en CSS</strong></h3>
+<p>Los <strong>gradientes</strong> son transiciones suaves entre dos o más colores. Son útiles para crear fondos dinámicos y efectos visuales en las páginas web.</p>
+<h4 id="921-gradiente-lineal"><strong>9.2.1 Gradiente Lineal</strong></h4>
+<p>El gradiente lineal crea una transición de colores a lo largo de una línea recta.</p>
+<h4 id="ejemplo-de-gradiente-lineal"><strong>Ejemplo de Gradiente Lineal</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">linear-gradient</span><span class="p">(</span><span class="kc">to</span><span class="w"> </span><span class="kc">right</span><span class="p">,</span><span class="w"> </span><span class="kc">red</span><span class="p">,</span><span class="w"> </span><span class="kc">yellow</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este código crea un fondo con un gradiente de color <strong>rojo</strong> a <strong>amarillo</strong>, de izquierda a derecha.</p>
+<h4 id="922-gradiente-radial"><strong>9.2.2 Gradiente Radial</strong></h4>
+<p>El gradiente radial crea una transición circular de colores, que se irradia desde un punto central hacia el exterior.</p>
+<h4 id="ejemplo-de-gradiente-radial"><strong>Ejemplo de Gradiente Radial</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">radial-gradient</span><span class="p">(</span><span class="kc">circle</span><span class="p">,</span><span class="w"> </span><span class="kc">red</span><span class="p">,</span><span class="w"> </span><span class="kc">yellow</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este código crea un fondo que irradia de <strong>rojo</strong> a <strong>amarillo</strong> desde el centro hacia afuera.</p>
+<hr />
+<h3 id="93-sombras-en-css"><strong>9.3. Sombras en CSS</strong></h3>
+<p>Las <strong>sombras</strong> se utilizan para dar profundidad a los elementos de la página web. Hay dos tipos principales: sombras para <strong>textos</strong> y sombras para <strong>bloques</strong>.</p>
+<h4 id="931-sombras-de-texto"><strong>9.3.1 Sombras de Texto</strong></h4>
+<p>Las sombras de texto permiten agregar un efecto visual en el texto, haciendo que se vea más destacado.</p>
+<h4 id="ejemplo-de-sombra-de-texto"><strong>Ejemplo de Sombra de Texto</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">text-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este código agrega una sombra de texto a los elementos <strong><code>h1</code></strong>, desplazada <strong>2px</strong> en <strong>horizontal</strong> y <strong>vertical</strong>, con un desenfoque de <strong>4px</strong>.</p>
+<h4 id="932-sombras-de-caja"><strong>9.3.2 Sombras de Caja</strong></h4>
+<p>Las sombras de caja se aplican a los elementos de bloque (como divs, imágenes, etc.), creando la ilusión de profundidad.</p>
+<h4 id="ejemplo-de-sombra-de-caja"><strong>Ejemplo de Sombra de Caja</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este código crea una sombra de caja alrededor del <strong>div</strong> desplazada <strong>10px</strong> en <strong>horizontal</strong> y <strong>vertical</strong>, con un desenfoque de <strong>20px</strong>.</p>
+<hr />
+<h3 id="94-botones-en-css"><strong>9.4. Botones en CSS</strong></h3>
+<p>Los <strong>botones</strong> son uno de los elementos más importantes en la interacción con el usuario. A continuación, vamos a ver cómo diseñar botones atractivos y funcionales.</p>
+<h4 id="941-estilo-basico-de-botones"><strong>9.4.1 Estilo Básico de Botones</strong></h4>
+<p>Podemos crear un botón básico con CSS, controlando su color de fondo, bordes y tipografía.</p>
+<h4 id="ejemplo-de-boton-basico"><strong>Ejemplo de Botón Básico</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">button</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#4caf50</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">cursor</span><span class="p">:</span><span class="w"> </span><span class="kc">pointer</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este código define un <strong>botón verde</strong> con texto blanco y bordes redondeados. La propiedad <strong><code>cursor: pointer</code></strong> cambia el cursor a una mano cuando el usuario pasa sobre el botón.</p>
+<p>Aquíi tienes un ejemplo más elabrado con varios estilos de botones:</p>
+<p><img alt="Ejemplo de botones" src="../img/img13.png" /></p>
+<details class="example">
+<summary>botones</summary>
+</details>
+<p>````html linenums=1 title="Buttons"
+&lt;!DOCTYPE html&gt;
       <style>
         .div1,
         .div2,
@@ -3190,37 +3255,319 @@ comunes son: <strong>nombres</strong>, <strong>valores hexadecimales</strong>, <
           position: absolute;
           width: 200px;
           height: 200px;
-        }
+        }</p>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="p">.</span><span class="nc">div1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="w">      </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">      </span><span class="k">left</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">      </span><span class="k">z-index</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c">/* El div rojo está en el fondo */</span>
+<span class="w">    </span><span class="p">}</span>
 
-        .div1 {
-          background-color: red;
-          top: 50px;
-          left: 50px;
-          z-index: 1; /* El div rojo está en el fondo */
-        }
+<span class="w">    </span><span class="p">.</span><span class="nc">div2</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">green</span><span class="p">;</span>
+<span class="w">      </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">      </span><span class="k">left</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">      </span><span class="k">z-index</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c">/* El div verde está encima del rojo */</span>
+<span class="w">    </span><span class="p">}</span>
 
-        .div2 {
-          background-color: green;
-          top: 100px;
-          left: 100px;
-          z-index: 2; /* El div verde está encima del rojo */
-        }
+<span class="w">    </span><span class="p">.</span><span class="nc">div3</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
+<span class="w">      </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">      </span><span class="k">left</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">      </span><span class="k">z-index</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c">/* El div azul está encima de los otros dos */</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="nt">código</span><span class="w"> </span><span class="nt">crea</span><span class="w"> </span><span class="nt">un</span><span class="w"> </span><span class="nt">fondo</span><span class="w"> </span><span class="nt">que</span><span class="w"> </span><span class="nt">irradia</span><span class="w"> </span><span class="nt">de</span><span class="w"> </span><span class="o">**</span><span class="nt">rojo</span><span class="o">**</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="o">**</span><span class="nt">amarillo</span><span class="o">**</span><span class="w"> </span><span class="nt">desde</span><span class="w"> </span><span class="nt">el</span><span class="w"> </span><span class="nt">centro</span><span class="w"> </span><span class="nt">hacia</span><span class="w"> </span><span class="nt">afuera</span><span class="o">.</span>
+</code></pre></div>
 
-        .div3 {
-          background-color: blue;
-          top: 150px;
-          left: 150px;
-          z-index: 3; /* El div azul está encima de los otros dos */
-        }
-      </style>
-    </head>
+<hr />
+<h3 id="93-sombras-en-css_1"><strong>9.3. Sombras en CSS</strong></h3>
+<p>Las <strong>sombras</strong> se utilizan para dar profundidad a los elementos de la página web. Hay dos tipos principales: sombras para <strong>textos</strong> y sombras para <strong>bloques</strong>.</p>
+<h4 id="931-sombras-de-texto_1"><strong>9.3.1 Sombras de Texto</strong></h4>
+<p>Las sombras de texto permiten agregar un efecto visual en el texto, haciendo que se vea más destacado.</p>
+<h4 id="ejemplo-de-sombra-de-texto_1"><strong>Ejemplo de Sombra de Texto</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">text-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este código agrega una sombra de texto a los elementos <strong><code>h1</code></strong>, desplazada <strong>2px</strong> en <strong>horizontal</strong> y <strong>vertical</strong>, con un desenfoque de <strong>4px</strong>.</p>
+<h4 id="932-sombras-de-caja_1"><strong>9.3.2 Sombras de Caja</strong></h4>
+<p>Las sombras de caja se aplican a los elementos de bloque (como divs, imágenes, etc.), creando la ilusión de profundidad.</p>
+<h4 id="ejemplo-de-sombra-de-caja_1"><strong>Ejemplo de Sombra de Caja</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este código crea una sombra de caja alrededor del <strong>div</strong> desplazada <strong>10px</strong> en <strong>horizontal</strong> y <strong>vertical</strong>, con un desenfoque de <strong>20px</strong>.</p>
+<hr />
+<h3 id="94-botones-en-css_1"><strong>9.4. Botones en CSS</strong></h3>
+<p>Los <strong>botones</strong> son uno de los elementos más importantes en la interacción con el usuario. A continuación, vamos a ver cómo diseñar botones atractivos y funcionales.</p>
+<h4 id="941-estilo-basico-de-botones_1"><strong>9.4.1 Estilo Básico de Botones</strong></h4>
+<p>Podemos crear un botón básico con CSS, controlando su color de fondo, bordes y tipografía.</p>
+<h4 id="ejemplo-de-boton-basico_1"><strong>Ejemplo de Botón Básico</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">button</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#4caf50</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">cursor</span><span class="p">:</span><span class="w"> </span><span class="kc">pointer</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este código define un <strong>botón verde</strong> con texto blanco y bordes redondeados. La propiedad <strong><code>cursor: pointer</code></strong> cambia el cursor a una mano cuando el usuario pasa sobre el botón.</p>
+<p>Aquíi tienes un ejemplo más elabrado con varios estilos de botones:</p>
+<p><img alt="Ejemplo de botones" src="../img/img13.png" /></p>
+<details class="example">
+<summary>botones</summary>
+</details>
+<p>````html linenums=1 title="Buttons"
+&lt;!DOCTYPE html&gt;
+     código crea un fondo que irradia de <strong>rojo</strong> a <strong>amarillo</strong> desde el centro hacia afuera.</p>
+<hr />
+<h3 id="93-sombras-en-css_2"><strong>9.3. Sombras en CSS</strong></h3>
+<p>Las <strong>sombras</strong> se utilizan para dar profundidad a los elementos de la página web. Hay dos tipos principales: sombras para <strong>textos</strong> y sombras para <strong>bloques</strong>.</p>
+<h4 id="931-sombras-de-texto_2"><strong>9.3.1 Sombras de Texto</strong></h4>
+<p>Las sombras de texto permiten agregar un efecto visual en el texto, haciendo que se vea más destacado.</p>
+<h4 id="ejemplo-de-sombra-de-texto_2"><strong>Ejemplo de Sombra de Texto</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">text-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este código agrega una sombra de texto a los elementos <strong><code>h1</code></strong>, desplazada <strong>2px</strong> en <strong>horizontal</strong> y <strong>vertical</strong>, con un desenfoque de <strong>4px</strong>.</p>
+<h4 id="932-sombras-de-caja_2"><strong>9.3.2 Sombras de Caja</strong></h4>
+<p>Las sombras de caja se aplican a los elementos de bloque (como divs, imágenes, etc.), creando la ilusión de profundidad.</p>
+<h4 id="ejemplo-de-sombra-de-caja_2"><strong>Ejemplo de Sombra de Caja</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este código crea una sombra de caja alrededor del <strong>div</strong> desplazada <strong>10px</strong> en <strong>horizontal</strong> y <strong>vertical</strong>, con un desenfoque de <strong>20px</strong>.</p>
+<hr />
+<h3 id="94-botones-en-css_2"><strong>9.4. Botones en CSS</strong></h3>
+<p>Los <strong>botones</strong> son uno de los elementos más importantes en la interacción con el usuario. A continuación, vamos a ver cómo diseñar botones atractivos y funcionales.</p>
+<h4 id="941-estilo-basico-de-botones_2"><strong>9.4.1 Estilo Básico de Botones</strong></h4>
+<p>Podemos crear un botón básico con CSS, controlando su color de fondo, bordes y tipografía.</p>
+<h4 id="ejemplo-de-boton-basico_2"><strong>Ejemplo de Botón Básico</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">button</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#4caf50</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">cursor</span><span class="p">:</span><span class="w"> </span><span class="kc">pointer</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este código define un <strong>botón verde</strong> con texto blanco y bordes redondeados. La propiedad <strong><code>cursor: pointer</code></strong> cambia el cursor a una mano cuando el usuario pasa sobre el botón.</p>
+<p>Aquíi tienes un ejemplo más elabrado con varios estilos de botones:</p>
+<p><img alt="Ejemplo de botones" src="../img/img13.png" /></p>
+<details class="example">
+<summary>botones</summary>
+</details>
+<p>````html linenums=1 title="Buttons"
+&lt;!DOCTYPE html&gt;
     <body>
-      <div class="div1"></div>
-      <div class="div2"></div>
-      <div class="div3"></div>
-    </body>
-  </html>
-<p>```</p>
+      <div class="div1">en CSS**</p>
+<p>Las <strong>sombras</strong> se utilizan para dar profundidad a los elementos de la página web. Hay dos tipos principales: sombras para <strong>textos</strong> y sombras para <strong>bloques</strong>.</p>
+<h4 id="931-sombras-de-texto_3"><strong>9.3.1 Sombras de Texto</strong></h4>
+<p>Las sombras de texto permiten agregar un efecto visual en el texto, haciendo que se vea más destacado.</p>
+<h4 id="ejemplo-de-sombra-de-texto_3"><strong>Ejemplo de Sombra de Texto</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">text-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este código agrega una sombra de texto a los elementos <strong><code>h1</code></strong>, desplazada <strong>2px</strong> en <strong>horizontal</strong> y <strong>vertical</strong>, con un desenfoque de <strong>4px</strong>.</p>
+<h4 id="932-sombras-de-caja_3"><strong>9.3.2 Sombras de Caja</strong></h4>
+<p>Las sombras de caja se aplican a los elementos de bloque (como divs, imágenes, etc.), creando la ilusión de profundidad.</p>
+<h4 id="ejemplo-de-sombra-de-caja_3"><strong>Ejemplo de Sombra de Caja</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este código crea una sombra de caja alrededor del <strong>div</strong> desplazada <strong>10px</strong> en <strong>horizontal</strong> y <strong>vertical</strong>, con un desenfoque de <strong>20px</strong>.</p>
+<hr />
+<h3 id="94-botones-en-css_3"><strong>9.4. Botones en CSS</strong></h3>
+<p>Los <strong>botones</strong> son uno de los elementos más importantes en la interacción con el usuario. A continuación, vamos a ver cómo diseñar botones atractivos y funcionales.</p>
+<h4 id="941-estilo-basico-de-botones_3"><strong>9.4.1 Estilo Básico de Botones</strong></h4>
+<p>Podemos crear un botón básico con CSS, controlando su color de fondo, bordes y tipografía.</p>
+<h4 id="ejemplo-de-boton-basico_3"><strong>Ejemplo de Botón Básico</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">button</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#4caf50</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">cursor</span><span class="p">:</span><span class="w"> </span><span class="kc">pointer</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este código define un <strong>botón verde</strong> con texto blanco y bordes redondeados. La propiedad <strong><code>cursor: pointer</code></strong> cambia el cursor a una mano cuando el usuario pasa sobre el botón.</p>
+<p>Aquíi tienes un ejemplo más elabrado con varios estilos de botones:</p>
+<p><img alt="Ejemplo de botones" src="../img/img13.png" /></p>
+<details class="example">
+<summary>botones</summary>
+</details>
+<p>````html linenums=1 title="Buttons"
+&lt;!DOCTYPE html&gt;
+      <div class="div2">SS**</p>
+<p>Las <strong>sombras</strong> se utilizan para dar profundidad a los elementos de la página web. Hay dos tipos principales: sombras para <strong>textos</strong> y sombras para <strong>bloques</strong>.</p>
+<h4 id="931-sombras-de-texto_4"><strong>9.3.1 Sombras de Texto</strong></h4>
+<p>Las sombras de texto permiten agregar un efecto visual en el texto, haciendo que se vea más destacado.</p>
+<h4 id="ejemplo-de-sombra-de-texto_4"><strong>Ejemplo de Sombra de Texto</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">text-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este código agrega una sombra de texto a los elementos <strong><code>h1</code></strong>, desplazada <strong>2px</strong> en <strong>horizontal</strong> y <strong>vertical</strong>, con un desenfoque de <strong>4px</strong>.</p>
+<h4 id="932-sombras-de-caja_4"><strong>9.3.2 Sombras de Caja</strong></h4>
+<p>Las sombras de caja se aplican a los elementos de bloque (como divs, imágenes, etc.), creando la ilusión de profundidad.</p>
+<h4 id="ejemplo-de-sombra-de-caja_4"><strong>Ejemplo de Sombra de Caja</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este código crea una sombra de caja alrededor del <strong>div</strong> desplazada <strong>10px</strong> en <strong>horizontal</strong> y <strong>vertical</strong>, con un desenfoque de <strong>20px</strong>.</p>
+<hr />
+<h3 id="94-botones-en-css_4"><strong>9.4. Botones en CSS</strong></h3>
+<p>Los <strong>botones</strong> son uno de los elementos más importantes en la interacción con el usuario. A continuación, vamos a ver cómo diseñar botones atractivos y funcionales.</p>
+<h4 id="941-estilo-basico-de-botones_4"><strong>9.4.1 Estilo Básico de Botones</strong></h4>
+<p>Podemos crear un botón básico con CSS, controlando su color de fondo, bordes y tipografía.</p>
+<h4 id="ejemplo-de-boton-basico_4"><strong>Ejemplo de Botón Básico</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">button</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#4caf50</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">cursor</span><span class="p">:</span><span class="w"> </span><span class="kc">pointer</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este código define un <strong>botón verde</strong> con texto blanco y bordes redondeados. La propiedad <strong><code>cursor: pointer</code></strong> cambia el cursor a una mano cuando el usuario pasa sobre el botón.</p>
+<p>Aquíi tienes un ejemplo más elabrado con varios estilos de botones:</p>
+<p><img alt="Ejemplo de botones" src="../img/img13.png" /></p>
+<details class="example">
+<summary>botones</summary>
+</details>
+<p>````html linenums=1 title="Buttons"
+&lt;!DOCTYPE html&gt;
+      <div class="div3">S**</p>
+<p>Las <strong>sombras</strong> se utilizan para dar profundidad a los elementos de la página web. Hay dos tipos principales: sombras para <strong>textos</strong> y sombras para <strong>bloques</strong>.</p>
+<h4 id="931-sombras-de-texto_5"><strong>9.3.1 Sombras de Texto</strong></h4>
+<p>Las sombras de texto permiten agregar un efecto visual en el texto, haciendo que se vea más destacado.</p>
+<h4 id="ejemplo-de-sombra-de-texto_5"><strong>Ejemplo de Sombra de Texto</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">text-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este código agrega una sombra de texto a los elementos <strong><code>h1</code></strong>, desplazada <strong>2px</strong> en <strong>horizontal</strong> y <strong>vertical</strong>, con un desenfoque de <strong>4px</strong>.</p>
+<h4 id="932-sombras-de-caja_5"><strong>9.3.2 Sombras de Caja</strong></h4>
+<p>Las sombras de caja se aplican a los elementos de bloque (como divs, imágenes, etc.), creando la ilusión de profundidad.</p>
+<h4 id="ejemplo-de-sombra-de-caja_5"><strong>Ejemplo de Sombra de Caja</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este código crea una sombra de caja alrededor del <strong>div</strong> desplazada <strong>10px</strong> en <strong>horizontal</strong> y <strong>vertical</strong>, con un desenfoque de <strong>20px</strong>.</p>
+<hr />
+<h3 id="94-botones-en-css_5"><strong>9.4. Botones en CSS</strong></h3>
+<p>Los <strong>botones</strong> son uno de los elementos más importantes en la interacción con el usuario. A continuación, vamos a ver cómo diseñar botones atractivos y funcionales.</p>
+<h4 id="941-estilo-basico-de-botones_5"><strong>9.4.1 Estilo Básico de Botones</strong></h4>
+<p>Podemos crear un botón básico con CSS, controlando su color de fondo, bordes y tipografía.</p>
+<h4 id="ejemplo-de-boton-basico_5"><strong>Ejemplo de Botón Básico</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">button</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#4caf50</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">cursor</span><span class="p">:</span><span class="w"> </span><span class="kc">pointer</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este código define un <strong>botón verde</strong> con texto blanco y bordes redondeados. La propiedad <strong><code>cursor: pointer</code></strong> cambia el cursor a una mano cuando el usuario pasa sobre el botón.</p>
+<p>Aquíi tienes un ejemplo más elabrado con varios estilos de botones:</p>
+<p><img alt="Ejemplo de botones" src="../img/img13.png" /></p>
+<details class="example">
+<summary>botones</summary>
+</details>
+<p>````html linenums=1 title="Buttons"
+&lt;!DOCTYPE html&gt;
+     <strong>sombras</strong> se utilizan para dar profundidad a los elementos de la página web. Hay dos tipos principales: sombras para <strong>textos</strong> y sombras para <strong>bloques</strong>.</p>
+<h4 id="931-sombras-de-texto_6"><strong>9.3.1 Sombras de Texto</strong></h4>
+<p>Las sombras de texto permiten agregar un efecto visual en el texto, haciendo que se vea más destacado.</p>
+<h4 id="ejemplo-de-sombra-de-texto_6"><strong>Ejemplo de Sombra de Texto</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">text-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este código agrega una sombra de texto a los elementos <strong><code>h1</code></strong>, desplazada <strong>2px</strong> en <strong>horizontal</strong> y <strong>vertical</strong>, con un desenfoque de <strong>4px</strong>.</p>
+<h4 id="932-sombras-de-caja_6"><strong>9.3.2 Sombras de Caja</strong></h4>
+<p>Las sombras de caja se aplican a los elementos de bloque (como divs, imágenes, etc.), creando la ilusión de profundidad.</p>
+<h4 id="ejemplo-de-sombra-de-caja_6"><strong>Ejemplo de Sombra de Caja</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este código crea una sombra de caja alrededor del <strong>div</strong> desplazada <strong>10px</strong> en <strong>horizontal</strong> y <strong>vertical</strong>, con un desenfoque de <strong>20px</strong>.</p>
+<hr />
+<h3 id="94-botones-en-css_6"><strong>9.4. Botones en CSS</strong></h3>
+<p>Los <strong>botones</strong> son uno de los elementos más importantes en la interacción con el usuario. A continuación, vamos a ver cómo diseñar botones atractivos y funcionales.</p>
+<h4 id="941-estilo-basico-de-botones_6"><strong>9.4.1 Estilo Básico de Botones</strong></h4>
+<p>Podemos crear un botón básico con CSS, controlando su color de fondo, bordes y tipografía.</p>
+<h4 id="ejemplo-de-boton-basico_6"><strong>Ejemplo de Botón Básico</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">button</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#4caf50</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">cursor</span><span class="p">:</span><span class="w"> </span><span class="kc">pointer</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este código define un <strong>botón verde</strong> con texto blanco y bordes redondeados. La propiedad <strong><code>cursor: pointer</code></strong> cambia el cursor a una mano cuando el usuario pasa sobre el botón.</p>
+<p>Aquíi tienes un ejemplo más elabrado con varios estilos de botones:</p>
+<p><img alt="Ejemplo de botones" src="../img/img13.png" /></p>
+<details class="example">
+<summary>botones</summary>
+</details>
+<p>````html linenums=1 title="Buttons"
+&lt;!DOCTYPE html&gt;
+  s <strong>sombras</strong> se utilizan para dar profundidad a los elementos de la página web. Hay dos tipos principales: sombras para <strong>textos</strong> y sombras para <strong>bloques</strong>.</p>
+<h4 id="931-sombras-de-texto_7"><strong>9.3.1 Sombras de Texto</strong></h4>
+<p>Las sombras de texto permiten agregar un efecto visual en el texto, haciendo que se vea más destacado.</p>
+<h4 id="ejemplo-de-sombra-de-texto_7"><strong>Ejemplo de Sombra de Texto</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">text-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este código agrega una sombra de texto a los elementos <strong><code>h1</code></strong>, desplazada <strong>2px</strong> en <strong>horizontal</strong> y <strong>vertical</strong>, con un desenfoque de <strong>4px</strong>.</p>
+<h4 id="932-sombras-de-caja_7"><strong>9.3.2 Sombras de Caja</strong></h4>
+<p>Las sombras de caja se aplican a los elementos de bloque (como divs, imágenes, etc.), creando la ilusión de profundidad.</p>
+<h4 id="ejemplo-de-sombra-de-caja_7"><strong>Ejemplo de Sombra de Caja</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este código crea una sombra de caja alrededor del <strong>div</strong> desplazada <strong>10px</strong> en <strong>horizontal</strong> y <strong>vertical</strong>, con un desenfoque de <strong>20px</strong>.</p>
+<hr />
+<h3 id="94-botones-en-css_7"><strong>9.4. Botones en CSS</strong></h3>
+<p>Los <strong>botones</strong> son uno de los elementos más importantes en la interacción con el usuario. A continuación, vamos a ver cómo diseñar botones atractivos y funcionales.</p>
+<h4 id="941-estilo-basico-de-botones_7"><strong>9.4.1 Estilo Básico de Botones</strong></h4>
+<p>Podemos crear un botón básico con CSS, controlando su color de fondo, bordes y tipografía.</p>
+<h4 id="ejemplo-de-boton-basico_7"><strong>Ejemplo de Botón Básico</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">button</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#4caf50</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">cursor</span><span class="p">:</span><span class="w"> </span><span class="kc">pointer</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este código define un <strong>botón verde</strong> con texto blanco y bordes redondeados. La propiedad <strong><code>cursor: pointer</code></strong> cambia el cursor a una mano cuando el usuario pasa sobre el botón.</p>
+<p>Aquíi tienes un ejemplo más elabrado con varios estilos de botones:</p>
+<p><img alt="Ejemplo de botones" src="../img/img13.png" /></p>
+<details class="example">
+<summary>botones</summary>
+</details>
+<p><code>`html linenums=1 title="Buttons"
+&lt;!DOCTYPE html&gt;</code></p>
 <hr />
 <h2 id="ejemplo-practico-diseno-de-una-pagina-con-imagenes-en-linea"><strong>Ejemplo práctico: Diseño de una página con imágenes en línea</strong></h2>
 <p>Vamos a crear un ejemplo con un <strong>layout simple</strong> que tenga una serie de imágenes dentro de un contenedor. Las imágenes se alinearán en línea mientras haya espacio, y cuando no quepan, pasarán a la siguiente línea.</p>
@@ -3707,49 +4054,49 @@ El diseño CSS <code>Flexbox</code> debe usarse para un diseño unidimensional, 
 </code></pre></div>
 <p>En este caso, <strong>border-radius</strong> redondea las esquinas de la imagen y <strong>box-shadow</strong> agrega una sombra alrededor de la imagen.</p>
 <hr />
-<h3 id="92-gradientes-en-css"><strong>9.2. Gradientes en CSS</strong></h3>
+<h3 id="92-gradientes-en-css_1"><strong>9.2. Gradientes en CSS</strong></h3>
 <p>Los <strong>gradientes</strong> son transiciones suaves entre dos o más colores. Son útiles para crear fondos dinámicos y efectos visuales en las páginas web.</p>
-<h4 id="921-gradiente-lineal"><strong>9.2.1 Gradiente Lineal</strong></h4>
+<h4 id="921-gradiente-lineal_1"><strong>9.2.1 Gradiente Lineal</strong></h4>
 <p>El gradiente lineal crea una transición de colores a lo largo de una línea recta.</p>
-<h4 id="ejemplo-de-gradiente-lineal"><strong>Ejemplo de Gradiente Lineal</strong></h4>
+<h4 id="ejemplo-de-gradiente-lineal_1"><strong>Ejemplo de Gradiente Lineal</strong></h4>
 <div class="highlight"><pre><span></span><code><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">linear-gradient</span><span class="p">(</span><span class="kc">to</span><span class="w"> </span><span class="kc">right</span><span class="p">,</span><span class="w"> </span><span class="kc">red</span><span class="p">,</span><span class="w"> </span><span class="kc">yellow</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>Este código crea un fondo con un gradiente de color <strong>rojo</strong> a <strong>amarillo</strong>, de izquierda a derecha.</p>
-<h4 id="922-gradiente-radial"><strong>9.2.2 Gradiente Radial</strong></h4>
+<h4 id="922-gradiente-radial_1"><strong>9.2.2 Gradiente Radial</strong></h4>
 <p>El gradiente radial crea una transición circular de colores, que se irradia desde un punto central hacia el exterior.</p>
-<h4 id="ejemplo-de-gradiente-radial"><strong>Ejemplo de Gradiente Radial</strong></h4>
+<h4 id="ejemplo-de-gradiente-radial_1"><strong>Ejemplo de Gradiente Radial</strong></h4>
 <div class="highlight"><pre><span></span><code><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">radial-gradient</span><span class="p">(</span><span class="kc">circle</span><span class="p">,</span><span class="w"> </span><span class="kc">red</span><span class="p">,</span><span class="w"> </span><span class="kc">yellow</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>Este código crea un fondo que irradia de <strong>rojo</strong> a <strong>amarillo</strong> desde el centro hacia afuera.</p>
 <hr />
-<h3 id="93-sombras-en-css"><strong>9.3. Sombras en CSS</strong></h3>
+<h3 id="93-sombras-en-css_3"><strong>9.3. Sombras en CSS</strong></h3>
 <p>Las <strong>sombras</strong> se utilizan para dar profundidad a los elementos de la página web. Hay dos tipos principales: sombras para <strong>textos</strong> y sombras para <strong>bloques</strong>.</p>
-<h4 id="931-sombras-de-texto"><strong>9.3.1 Sombras de Texto</strong></h4>
+<h4 id="931-sombras-de-texto_8"><strong>9.3.1 Sombras de Texto</strong></h4>
 <p>Las sombras de texto permiten agregar un efecto visual en el texto, haciendo que se vea más destacado.</p>
-<h4 id="ejemplo-de-sombra-de-texto"><strong>Ejemplo de Sombra de Texto</strong></h4>
+<h4 id="ejemplo-de-sombra-de-texto_8"><strong>Ejemplo de Sombra de Texto</strong></h4>
 <div class="highlight"><pre><span></span><code><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">text-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>Este código agrega una sombra de texto a los elementos <strong><code>h1</code></strong>, desplazada <strong>2px</strong> en <strong>horizontal</strong> y <strong>vertical</strong>, con un desenfoque de <strong>4px</strong>.</p>
-<h4 id="932-sombras-de-caja"><strong>9.3.2 Sombras de Caja</strong></h4>
+<h4 id="932-sombras-de-caja_8"><strong>9.3.2 Sombras de Caja</strong></h4>
 <p>Las sombras de caja se aplican a los elementos de bloque (como divs, imágenes, etc.), creando la ilusión de profundidad.</p>
-<h4 id="ejemplo-de-sombra-de-caja"><strong>Ejemplo de Sombra de Caja</strong></h4>
+<h4 id="ejemplo-de-sombra-de-caja_8"><strong>Ejemplo de Sombra de Caja</strong></h4>
 <div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>Este código crea una sombra de caja alrededor del <strong>div</strong> desplazada <strong>10px</strong> en <strong>horizontal</strong> y <strong>vertical</strong>, con un desenfoque de <strong>20px</strong>.</p>
 <hr />
-<h3 id="94-botones-en-css"><strong>9.4. Botones en CSS</strong></h3>
+<h3 id="94-botones-en-css_8"><strong>9.4. Botones en CSS</strong></h3>
 <p>Los <strong>botones</strong> son uno de los elementos más importantes en la interacción con el usuario. A continuación, vamos a ver cómo diseñar botones atractivos y funcionales.</p>
-<h4 id="941-estilo-basico-de-botones"><strong>9.4.1 Estilo Básico de Botones</strong></h4>
+<h4 id="941-estilo-basico-de-botones_8"><strong>9.4.1 Estilo Básico de Botones</strong></h4>
 <p>Podemos crear un botón básico con CSS, controlando su color de fondo, bordes y tipografía.</p>
-<h4 id="ejemplo-de-boton-basico"><strong>Ejemplo de Botón Básico</strong></h4>
+<h4 id="ejemplo-de-boton-basico_8"><strong>Ejemplo de Botón Básico</strong></h4>
 <div class="highlight"><pre><span></span><code><span class="nt">button</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#4caf50</span><span class="p">;</span>
 <span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
