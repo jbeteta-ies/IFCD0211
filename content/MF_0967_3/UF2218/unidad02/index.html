@@ -1773,113 +1773,216 @@
 <details class="example">
 <summary>Tabla maquetada con pseudoselectores</summary>
 </details>
-<p>```html linenums=1 title="tabla maquetada"
-  <!DOCTYPE html></p>
-<html lang="es">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Tabla de Alumnos</title>
-      <style>
-        table {
-          width: 100%;
-          border-collapse: collapse;
-        }
-        th,
-        td {
-          padding: 8px;
-          text-align: center;
-          border: 1px solid #ddd;
-        }
-        th {
-          background-color: #4caf50;
-          color: white;
-        }
-        tr:nth-child(even) {
-          background-color: #f2f2f2;
-        }
-        tr:nth-child(odd) {
-          background-color: #ffffff;
-        }
-        tr:last-child {
-          background-color: #f4e1c1;
-          font-weight: bold;
-        }
-        tr:last-child td {
-          background-color: #f4e1c1;
-        }
-        tr:last-child td:first-child::before {
-          content: "Subtotal: ";
-          font-weight: normal;
-        }
-      </style>
-    </head>
-    <body>
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>CSS</th>
-            <th>HTML</th>
-            <th>JS</th>
-            <th>Media</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Ana García</td>
-            <td>8</td>
-            <td>7</td>
-            <td>9</td>
-            <td>8</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>José Martínez</td>
-            <td>6</td>
-            <td>7</td>
-            <td>6</td>
-            <td>6.33</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Pedro Fernández</td>
-            <td>9</td>
-            <td>8</td>
-            <td>9</td>
-            <td>8.67</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Laura Rodríguez</td>
-            <td>7</td>
-            <td>6</td>
-            <td>8</td>
-            <td>7</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>Carlos López</td>
-            <td>6</td>
-            <td>6</td>
-            <td>7</td>
-            <td>6.33</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td><b>Total</b></td>
-            <td>36</td>
-            <td>34</td>
-            <td>39</td>
-            <td>7.47</td>
-          </tr>
-        </tbody>
-      </table>
-    </body>
-  </html>
-<p>```</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">tabla maquetada</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Tabla de Alumnos<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">      </span><span class="nt">table</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+<span class="w">        </span><span class="k">border-collapse</span><span class="p">:</span><span class="w"> </span><span class="kc">collapse</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="nt">th</span><span class="o">,</span>
+<span class="w">      </span><span class="nt">td</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">        </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">        </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#ddd</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="nt">th</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#4caf50</span><span class="p">;</span>
+<span class="w">        </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="nt">tr</span><span class="p">:</span><span class="nd">nth-child</span><span class="o">(</span><span class="nt">even</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#f2f2f2</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="nt">tr</span><span class="p">:</span><span class="nd">nth-child</span><span class="o">(</span><span class="nt">odd</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#ffffff</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="nt">tr</span><span class="p">:</span><span class="nd">last-child</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#f4e1c1</span><span class="p">;</span>
+<span class="w">        </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="kc">bold</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="nt">tr</span><span class="p">:</span><span class="nd">last-child</span><span class="w"> </span><span class="nt">td</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#f4e1c1</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="nt">tr</span><span class="p">:</span><span class="nd">last-child</span><span class="w"> </span><span class="nt">td</span><span class="p">:</span><span class="nd">first-child</span><span class="p">::</span><span class="nd">before</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">content</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Subtotal: &quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="kc">normal</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>ID<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Nombre<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>CSS<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>HTML<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>JS<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Media<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Ana García<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>8<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>7<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>9<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>8<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>José Martínez<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>6<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>7<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>6<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>6.33<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>3<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Pedro Fernández<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>9<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>8<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>9<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>8.67<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>4<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Laura Rodríguez<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>7<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>6<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>8<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>7<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>5<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Carlos López<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>6<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>6<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>7<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>6.33<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">b</span><span class="p">&gt;</span>Total<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>36<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>34<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>39<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>7.47<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
 <hr />
 <h4 id="ejemplo-practico-cambiar-el-color-de-un-elemento-al-pasar-el-raton-por-encima">Ejemplo Práctico: Cambiar el color de un elemento al pasar el ratón por encima**</h4>
 <p><strong>HTML Base</strong> </p>
@@ -2005,466 +2108,497 @@
 <details class="example">
 <summary>CSS Box</summary>
 </details>
-<p>````html linenumbers=1 title="CSS Box"</p>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      #container {
-        border: 1px solid red;
-        background-color: aliceblue;
-      }
-      #content {
-        background-color: antiquewhite;
-        border: 5px solid red;
-        padding: 5px 10px;
-        margin: 10px 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="container">
-      <div id="content">Hello World!</div>
-    </div>
-  </body>
-</html>
-<p><code>--- ## **3.4 Propiedades de Posicionamiento: top, right, bottom, left** Las
-propiedades **`top`**, **`right`**, **`bottom`** y **`left`** se utilizan en el
-contexto de **elementos posicionados** con la propiedad **`position`**. Estas
-propiedades **mueven un elemento dentro de su contenedor** en función de su tipo
-de **posición**. ### **3.4.1 Propiedades de Posicionamiento** Las propiedades de
-**posición** como **`top`**, **`right`**, **`bottom`** y **`left`** definen la
-ubicación de los elementos respecto a su contenedor o a otros elementos en la
-página. Estas propiedades solo se aplican si el elemento tiene una propiedad
-`position` distinta a `static` (por defecto). Las opciones más comunes son
-**`relative`**, **`absolute`**, y **`fixed`**. #### **`top` y `left` con
-`position: absolute`** Cuando un elemento tiene la propiedad `position:
-absolute`, sus valores de `top`, `right`, `bottom` y `left` se utilizan para
-mover el elemento respecto a su contenedor más cercano con `position: relative`.</code>css div { position: absolute; top: 50px; left: 100px; }
-<div class="highlight"><pre><span></span><code>En este ejemplo, el **elemento `div`** será posicionado **50px** desde la parte superior y **100px** desde la parte izquierda de su contenedor más cercano con `position: relative`.
-
-#### **`top` y `left` con `position: relative`**
-
-Cuando un elemento tiene la propiedad `position: relative`, se mueve respecto a su **ubicación original**.
-
-```css
-div {
-  position: relative;
-  top: 20px;
-  left: 30px;
-}
-```
-
-Aquí, el **elemento `div`** se moverá **20px hacia abajo** y **30px hacia la derecha** desde su **posición inicial** en el flujo de la página.
-
-### **3.4.2 Orden de las Propiedades**
-
-En CSS, podemos **definir varias propiedades en una sola línea**. Esto ayuda a escribir código más limpio y eficiente. Cuando se combinan propiedades de **márgenes, relleno y bordes**, los valores siguen un orden estándar:
-
-1. **`top`, `right`, `bottom`, `left`**: Si definimos estas propiedades por separado, lo hacemos en este orden, de arriba a abajo.
-2. **`margin` y `padding`**: Si se definen las propiedades por separado, el orden es: `top`, `right`, `bottom`, `left`.
-
-### **Ejemplo de sintaxis combinada**
-
-```css
-div {
-  margin: 20px 30px 40px 50px; /* top right bottom left */
-  padding: 10px 15px; /* top-bottom left-right */
-  border: 2px solid red;
-}
-```
-
-Aquí, `margin` y `padding` se definen con valores en **sentido horario** (comenzando desde la parte superior) y las **dimensiones del borde** son independientes de este orden.
-
----
-
-### Resumen
-
-En CSS, podemos utilizar las propiedades **padding**, **border** y **margin** para controlar el espaciado y el borde de los elementos. Las propiedades **top**, **right**, **bottom** y **left** permiten ubicar los elementos en el contenedor, mientras que se pueden definir de manera individual o conjunta, dependiendo de las necesidades del diseño.
-
-Puedes ampliar contenido en [w3Schools](https://www.w3schools.com/css/css_boxmodel.asp)
-
----
-
-## **3.5 Unidades de Medida en CSS**
-
-En CSS, las **unidades de medida** son esenciales para definir **tamaños** de elementos, márgenes, rellenos y otros estilos. Existen diferentes tipos de unidades que se pueden utilizar, y la elección de la unidad adecuada depende de la **situación** y el **diseño** que queremos implementar.
-
-### **3.5.1 Unidades Absolutas**
-
-Las **unidades absolutas** están basadas en un valor fijo y no cambian en función del dispositivo o de la resolución de la pantalla.
-
-- **px (píxeles)**: Es la unidad más común y se utiliza para establecer tamaños de elementos fijos. Un píxel es la unidad de medida básica para las pantallas, pero su tamaño puede variar ligeramente en dispositivos con pantallas de alta resolución (como los dispositivos Retina).
-
-  ```css
-  div {
-    width: 300px;
-  }
-  ```
-
-- **cm, mm (centímetros, milímetros)**: Estas unidades están basadas en el tamaño físico y se utilizan muy poco en la web.
-
-  ```css
-  div {
-    width: 10cm;
-  }
-  ```
-
-- **in (pulgadas)**: Similar a cm y mm, se utiliza poco en la web, pero puede ser útil cuando trabajamos con medios físicos como impresión.
-
-  ```css
-  div {
-    width: 2in;
-  }
-  ```
-
-### **3.5.2 Unidades Relativas**
-
-Las **unidades relativas** son más flexibles y se ajustan a factores como el tamaño de la pantalla, el tamaño de fuente o el contenedor del elemento.
-
-- **% (porcentaje)**: El porcentaje se utiliza en relación con el **elemento contenedor**. Por ejemplo, si un contenedor tiene un ancho del 100%, un elemento con `width: 50%` tendrá la mitad del ancho del contenedor.
-
-  ```css
-  div {
-    width: 50%;
-  }
-  ```
-
-- **em**: Esta unidad está relacionada con el tamaño de la **fuente** del elemento. `1em` es igual al tamaño de la fuente del elemento en el que se utiliza. Si el tamaño de la fuente es de 16px, entonces `1em` equivale a 16px.
-
-  ```css
-  p {
-    font-size: 2em; /* 32px si la fuente base es 16px */
-  }
-  ```
-
-- **rem (root em)**: Similar a `em`, pero en lugar de basarse en el tamaño de la fuente del elemento, `rem` se basa en el tamaño de la fuente raíz (`&lt;html&gt;`). Esto lo hace más predecible y fácil de usar en toda la página.
-
-  ```css
-  div {
-    width: 10rem; /* 160px si la fuente raíz es 16px */
-  }
-  ```
-
-- **vw y vh (viewport width y height)**: Estas unidades están basadas en el **tamaño de la ventana del navegador**. `1vw` es el **1% del ancho de la ventana** y `1vh` es el **1% de la altura de la ventana**.
-
-  ```css
-  div {
-    width: 50vw; /* 50% del ancho de la ventana del navegador */
-  }
-  ```
-
----
-
-## **3.6 Propiedades de Tamaño: width, height, left y right**
-
-En CSS, **`width`**, **`height`**, **`left`** y **`right`** son propiedades fundamentales que permiten definir las **dimensiones** de los elementos y su **ubicación** en el diseño.
-
-### **3.6.1 Definir width y height**
-
-- **`width`**: Especifica el ancho de un elemento.
-
-  ```css
-  div {
-    width: 200px;
-  }
-  ```
-
-- **`height`**: Especifica la altura de un elemento.
-
-  ```css
-  div {
-    height: 100px;
-  }
-  ```
-
-### **3.6.2 Unidades para width y height**
-
-Puedes usar cualquier unidad de medida que hemos visto (px, %, em, etc.) para estas propiedades.
-
-#### Ejemplo: Usando diferentes unidades para `width` y `height`:
-
-```css
-div {
-  width: 50%; /* 50% del contenedor */
-  height: 10em; /* 10 veces el tamaño de la fuente */
-}
-```
-
-### **3.6.3 Definir left y right**
-
-Las propiedades **`left`** y **`right`** se utilizan para **posicionar un elemento** en relación con su contenedor (usualmente con **position: absolute** o **position: relative**).
-
-- **`left`**: Define la distancia entre el borde izquierdo de un elemento y el borde izquierdo de su contenedor.
-- **`right`**: Define la distancia entre el borde derecho de un elemento y el borde derecho de su contenedor.
-
-#### Ejemplo: Usando `left` y `right` para posicionar un elemento:
-
-```css
-div {
-  position: absolute;
-  left: 20px; /* 20px desde el borde izquierdo del contenedor */
-  right: 20px; /* 20px desde el borde derecho del contenedor */
-  top: 50px;
-  height: 100px;
-}
-```
-
-### **3.6.4 Definir dimensiones de manera separada**
-
-En algunas situaciones, podemos querer definir solo algunas de las dimensiones de un elemento, sin tener que especificar todas.
-
-#### **1. Definir solo `width` y `height`**
-
-Puedes definir únicamente `width` o `height`, y el otro valor tomará el valor por defecto. Por ejemplo, si solo defines el ancho de un elemento y no defines la altura, el navegador ajustará la altura automáticamente según el contenido.
-
-#### Ejemplo:
-
-```css
-div {
-  width: 200px;
-  /* La altura será automática según el contenido */
-}
-```
-
-#### **2. Definir `top`, `left`, `right` o `bottom`**
-
-Cuando un elemento está posicionado de manera **absoluta** o **relativa**, solo necesitas definir las propiedades de **ubicación** (`top`, `left`, `right`, `bottom`) que quieras usar. Las otras propiedades no se necesitarán.
-
-#### Ejemplo:
-
-```css
-div {
-  position: absolute;
-  top: 10px; /* 10px desde el borde superior */
-  left: 20px; /* 20px desde el borde izquierdo */
-}
-```
-
----
-
-### **Resumen**
-
-En CSS, podemos utilizar diferentes unidades de medida para adaptar los estilos a diferentes dispositivos y situaciones. Es importante entender cómo utilizar **unidades relativas** como **`em`, `rem`, `%`** y **unidades absolutas** como **`px`, `cm`** para lograr un diseño flexible. Además, el uso de las propiedades `width`, `height`, `left`, y `right` junto con diferentes unidades nos permite crear diseños dinámicos y adaptables a cualquier pantalla.
-
----
-
-# **4.1 Propiedades de Fuente**
-
-Las **propiedades de fuente** controlan la tipografía del texto. Son esenciales para definir la apariencia del texto y hacerlo más **legible** y **atractivo**. A continuación, veremos cómo se configuran estas propiedades y qué valores pueden tomar.
-
-### **`font-family`**
-
-La propiedad `font-family` se utiliza para definir la **familia tipográfica** del texto. Puedes especificar una lista de fuentes como alternativas, de modo que si la primera fuente no está disponible, el navegador utilizará la siguiente de la lista.
-
-#### **Valores de `font-family`**
-
-- **Nombres de fuentes**: Se especifican como cadenas de texto. Ejemplo: `&#39;Arial&#39;`, `&#39;Times New Roman&#39;`, etc.
-- **Fuentes genéricas**: Si no se encuentra la fuente exacta, se puede recurrir a fuentes genéricas como `serif`, `sans-serif`, `monospace`, etc.
-
-```css
-p {
-  font-family: &quot;Arial&quot;, sans-serif;
-}
-```
-
-En este ejemplo, si **Arial** no está disponible, se utilizará una fuente **sans-serif** como alternativa.
-
-### **`font-size`**
-
-La propiedad `font-size` define el **tamaño de la fuente** del texto. Los valores pueden ser especificados en varias unidades de medida.
-
-#### **Valores de `font-size`**
-
-- **px (píxeles)**: Una unidad absoluta, muy común en CSS.
-- **em**: Relativo al tamaño de la fuente del elemento padre.
-- **rem**: Relativo al tamaño de la fuente raíz (`&lt;html&gt;`).
-- **%**: Relativo al tamaño de la fuente del elemento contenedor.
-- **vw/vh**: Relativo al tamaño de la ventana del navegador.
-
-```css
-h1 {
-  font-size: 24px;
-}
-```
-
-### **`font-weight`**
-
-La propiedad `font-weight` controla el **grosor** de la fuente. Los valores que puede tomar son:
-
-#### **Valores de `font-weight`**
-
-- **normal**: El grosor predeterminado de la fuente.
-- **bold**: Fuente en negrita.
-- **lighter**: Fuente más delgada que el valor `normal`.
-- **bolder**: Fuente más gruesa que `normal`.
-- **Números**: Se puede usar un valor numérico entre 100 y 900, donde `100` es la más delgada y `900` es la más gruesa.
-
-```css
-p {
-  font-weight: bold;
-}
-```
-
----
-
-# **4.2 Propiedades de Texto**
-
-Estas propiedades afectan el comportamiento y la apariencia del texto, permitiendo modificar **alineación**, **espaciado entre líneas** y **transformación de texto**.
-
-### **`text-align`**
-
-La propiedad `text-align` se utiliza para alinear el texto dentro de su contenedor. Los valores disponibles son:
-
-| Valor     | Descripción                                                                             |
-| --------- | --------------------------------------------------------------------------------------- |
-| `left`    | Alinea el texto a la izquierda (valor predeterminado).                                  |
-| `right`   | Alinea el texto a la derecha.                                                           |
-| `center`  | Alinea el texto al centro.                                                              |
-| `justify` | Alinea el texto de manera justificada (se distribuye a lo largo de todo el contenedor). |
-
-#### **Ejemplo de `text-align`**
-
-```css
-h1 {
-  text-align: center;
-}
-```
-
-Este ejemplo centra el texto del encabezado `h1`. Si el contenido del `h1` fuera un párrafo largo, se alinearía de manera centrada en su contenedor.
-
-### **`line-height`**
-
-La propiedad `line-height` controla la **altura de las líneas** de texto. Es muy útil para mejorar la **legibilidad** de un bloque de texto, especialmente en párrafos con mucho contenido.
-
-#### **Valores de `line-height`**
-
-- **Número**: El valor de `line-height` será multiplicado por el tamaño de la fuente.
-- **Unidad**: Puede ser un valor en **px**, **em**, **rem**, etc.
-- **Porcentaje**: Se calcula como un porcentaje del tamaño de la fuente.
-
-```css
-p {
-  line-height: 1.5; /* 1.5 veces el tamaño de la fuente */
-}
-```
-
-### **`text-transform`**
-
-La propiedad `text-transform` permite modificar la **transformación** del texto (mayúsculas, minúsculas, etc.).
-
-| Valor        | Descripción                                             |
-| ------------ | ------------------------------------------------------- |
-| `uppercase`  | Convierte todo el texto a mayúsculas.                   |
-| `lowercase`  | Convierte todo el texto a minúsculas.                   |
-| `capitalize` | Convierte la primera letra de cada palabra a mayúscula. |
-
-#### **Ejemplo de `text-transform`**
-
-```css
-h1 {
-  text-transform: uppercase;
-}
-```
-
-Este ejemplo convierte todo el texto dentro del `h1` a **mayúsculas**.
-
-![Ejemplo completo de texto](./img/img16.png)
-
-??? example &quot;Texto&quot;
-
-````html linenumbers=1 title=&quot;Texto&quot;
-&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;es&quot;&gt;
-  &lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot; /&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
-    &lt;title&gt;Estilos de Texto&lt;/title&gt;
-    &lt;style&gt;
-      p:nth-child(1) {
-        font-size: 18px;
-        font-family: &quot;Arial&quot;, sans-serif;
-        font-weight: bold;
-        color: #4caf50;
-      }
-
-      p:nth-child(2) {
-        font-size: 16px;
-        font-family: &quot;Times New Roman&quot;, serif;
-        font-style: italic;
-        color: #ff6347;
-      }
-
-      p:nth-child(3) {
-        font-size: 14px;
-        font-family: &quot;Courier New&quot;, monospace;
-        text-decoration: underline;
-        color: #1e90ff;
-      }
-
-      p:nth-child(4) {
-        font-size: 20px;
-        font-family: &quot;Verdana&quot;, sans-serif;
-        text-transform: uppercase;
-        color: #8a2be2;
-      }
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p&gt;
-      Este es el primer párrafo, con un tamaño de fuente de 18px, en **negrita**
-      y de color verde.
-    &lt;/p&gt;
-
-    &lt;p&gt;
-      Este es el segundo párrafo, con un tamaño de fuente de 16px, en
-      **cursiva** y de color tomate.
-    &lt;/p&gt;
-
-    &lt;p&gt;
-      Este es el tercer párrafo, con un tamaño de fuente de 14px, en
-      **monoespaciado** y con subrayado, de color azul.
-    &lt;/p&gt;
-
-    &lt;p&gt;
-      Este es el cuarto párrafo, con un tamaño de fuente de 20px, en
-      **mayúsculas** y de color morado.
-    &lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-
-``` --- ### **Resumen** - **`font-family`** se usa para seleccionar la
-tipografía que se aplicará al texto. - **`font-size`** define el tamaño de la
-fuente, pudiendo utilizarse en diferentes unidades. - **`font-weight`** controla
-el grosor de la fuente, y puede tomar valores como `bold`, `normal` o valores
-numéricos. - **`text-align`** se usa para alinear el texto dentro de su
-contenedor, con valores como `left`, `right`, `center`, y `justify`. -
-**`line-height`** es útil para definir el espaciado entre las líneas de texto. -
-**`text-transform`** permite transformar el texto a mayúsculas, minúsculas o
-capitalizar cada palabra. --- # **5. Propiedades de Colores y Fondos** En este
-punto, abordamos cómo aplicar **colores** y **fondos** a los elementos de una
-página web. Estas propiedades son fundamentales para darle estilo a los
-elementos, asegurando que se vean atractivos y sean fácilmente legibles. Vamos a
-profundizar en cómo se manejan los **colores**, las **imágenes de fondo**, y sus
-propiedades asociadas para crear una web atractiva. ## **5.1 Colores en CSS** En
-CSS, los colores pueden ser definidos de diferentes maneras. Algunas de las más
-comunes son: **nombres**, **valores hexadecimales**, **rgb** y **rgba**. ###
-**Métodos para definir colores** 1. **Nombres de colores**: CSS permite utilizar
-nombres predefinidos para los colores. Algunos ejemplos son **`red`**,
-**`blue`**, **`green`**, entre otros. ```css h1 { color: red; }
-</code></pre></div></p>
-<ol>
-<li><strong>Valores hexadecimales</strong>: Esta forma de definir colores utiliza el sistema hexadecimal. El formato es <strong>#RRGGBB</strong>, donde <strong>RR</strong>, <strong>GG</strong>, y <strong>BB</strong> son valores hexadecimales para el rojo, verde y azul.</li>
-</ol>
-<div class="highlight"><pre><span></span><code><span class="nt">h2</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#3498db</span><span class="p">;</span><span class="w"> </span><span class="c">/* Azul claro */</span>
+<h2 id="css-box-1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23-24-25doctype-html-html-langen-head-meta-charsetutf-8-meta-nameviewport-contentwidthdevice-width-initial-scale10-titledocumenttitle-style-container-border-1px-solid-red-background-color-aliceblue-content-background-color-antiquewhite-border-5px-solid-red-padding-5px-10px-margin-10px-20px-style-head-body-div-idcontainer-div-idcontenthello-worlddiv-div-body-html"><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">CSS Box</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Document<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">      </span><span class="p">#</span><span class="nn">container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="w">        </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">aliceblue</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="p">#</span><span class="nn">content</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">antiquewhite</span><span class="p">;</span>
+<span class="w">        </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="w">        </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">        </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;content&quot;</span><span class="p">&gt;</span>Hello World!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div></h2>
+<h2 id="34-propiedades-de-posicionamiento-top-right-bottom-left"><strong>3.4 Propiedades de Posicionamiento: top, right, bottom, left</strong></h2>
+<p>Las propiedades <strong><code>top</code></strong>, <strong><code>right</code></strong>, <strong><code>bottom</code></strong> y <strong><code>left</code></strong> se utilizan en el
+contexto de <strong>elementos posicionados</strong> con la propiedad <strong><code>position</code></strong>. Estas
+propiedades <strong>mueven un elemento dentro de su contenedor</strong> en función de su tipo
+de <strong>posición</strong>. </p>
+<h3 id="341-propiedades-de-posicionamiento"><strong>3.4.1 Propiedades de Posicionamiento</strong></h3>
+<p>Las propiedades de <strong>posición</strong> como <strong><code>top</code></strong>, <strong><code>right</code></strong>, <strong><code>bottom</code></strong> y <strong><code>left</code></strong> definen la
+ubicación de los elementos respecto a su contenedor o a otros elementos en la página. Estas propiedades solo se aplican si el elemento tiene una propiedad <code>position</code> distinta a <code>static</code> (por defecto). Las opciones más comunes son <strong><code>relative</code></strong>, <strong><code>absolute</code></strong>, y <strong><code>fixed</code></strong>. </p>
+<h4 id="top-y-left-con-position-absolute"><strong><code>top</code> y <code>left</code> con <code>position: absolute</code></strong></h4>
+<p>Cuando un elemento tiene la propiedad <code>position: absolute</code>, sus valores de <code>top</code>, <code>right</code>, <code>bottom</code> y <code>left</code> se utilizan para mover el elemento respecto a su contenedor más cercano con <code>position: relative</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">div</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">absolute</span><span class="p">;</span><span class="w"> </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">left</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="err">````</span>
+
+<span class="nt">En</span><span class="w"> </span><span class="nt">este</span><span class="w"> </span><span class="nt">ejemplo</span><span class="o">,</span><span class="w"> </span><span class="nt">el</span><span class="w"> </span><span class="o">**</span><span class="nt">elemento</span><span class="w"> </span><span class="err">`</span><span class="nt">div</span><span class="err">`</span><span class="o">**</span><span class="w"> </span><span class="nt">será</span><span class="w"> </span><span class="nt">posicionado</span><span class="w"> </span><span class="o">**</span><span class="nt">50px</span><span class="o">**</span><span class="w"> </span><span class="nt">desde</span><span class="w"> </span><span class="nt">la</span><span class="w"> </span><span class="nt">parte</span><span class="w"> </span><span class="nt">superior</span><span class="w"> </span><span class="nt">y</span><span class="w"> </span><span class="o">**</span><span class="nt">100px</span><span class="o">**</span><span class="w"> </span><span class="nt">desde</span><span class="w"> </span><span class="nt">la</span><span class="w"> </span><span class="nt">parte</span><span class="w"> </span><span class="nt">izquierda</span><span class="w"> </span><span class="nt">de</span><span class="w"> </span><span class="nt">su</span><span class="w"> </span><span class="nt">contenedor</span><span class="w"> </span><span class="nt">más</span><span class="w"> </span><span class="nt">cercano</span><span class="w"> </span><span class="nt">con</span><span class="w"> </span><span class="err">`</span><span class="nt">position</span><span class="o">:</span><span class="w"> </span><span class="nt">relative</span><span class="err">`</span><span class="o">.</span>
+
+<span class="err">####</span><span class="w"> </span><span class="o">**</span><span class="err">`</span><span class="nt">top</span><span class="err">`</span><span class="w"> </span><span class="nt">y</span><span class="w"> </span><span class="err">`</span><span class="nt">left</span><span class="err">`</span><span class="w"> </span><span class="nt">con</span><span class="w"> </span><span class="err">`</span><span class="nt">position</span><span class="o">:</span><span class="w"> </span><span class="nt">relative</span><span class="err">`</span><span class="o">**</span>
+
+<span class="nt">Cuando</span><span class="w"> </span><span class="nt">un</span><span class="w"> </span><span class="nt">elemento</span><span class="w"> </span><span class="nt">tiene</span><span class="w"> </span><span class="nt">la</span><span class="w"> </span><span class="nt">propiedad</span><span class="w"> </span><span class="err">`</span><span class="nt">position</span><span class="o">:</span><span class="w"> </span><span class="nt">relative</span><span class="err">`</span><span class="o">,</span><span class="w"> </span><span class="nt">se</span><span class="w"> </span><span class="nt">mueve</span><span class="w"> </span><span class="nt">respecto</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="nt">su</span><span class="w"> </span><span class="o">**</span><span class="nt">ubicación</span><span class="w"> </span><span class="nt">original</span><span class="o">**.</span>
+
+<span class="err">```</span><span class="nt">css</span>
+<span class="nt">div</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">relative</span><span class="p">;</span>
+<span class="w">  </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">left</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
+<p>Aquí, el <strong>elemento <code>div</code></strong> se moverá <strong>20px hacia abajo</strong> y <strong>30px hacia la derecha</strong> desde su <strong>posición inicial</strong> en el flujo de la página.</p>
+<h3 id="342-orden-de-las-propiedades"><strong>3.4.2 Orden de las Propiedades</strong></h3>
+<p>En CSS, podemos <strong>definir varias propiedades en una sola línea</strong>. Esto ayuda a escribir código más limpio y eficiente. Cuando se combinan propiedades de <strong>márgenes, relleno y bordes</strong>, los valores siguen un orden estándar:</p>
 <ol>
-<li><strong>rgb()</strong>: El formato <strong>rgb()</strong> define el color utilizando valores enteros para los tres componentes de color: <strong>rojo</strong>, <strong>verde</strong> y <strong>azul</strong>. Los valores van de <strong>0 a 255</strong>.</li>
+<li><strong><code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code></strong>: Si definimos estas propiedades por separado, lo hacemos en este orden, de arriba a abajo.</li>
+<li><strong><code>margin</code> y <code>padding</code></strong>: Si se definen las propiedades por separado, el orden es: <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code>.</li>
+</ol>
+<h3 id="ejemplo-de-sintaxis-combinada"><strong>Ejemplo de sintaxis combinada</strong></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="w"> </span><span class="mi">40</span><span class="kt">px</span><span class="w"> </span><span class="mi">50</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* top right bottom left */</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">15</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* top-bottom left-right */</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Aquí, <code>margin</code> y <code>padding</code> se definen con valores en <strong>sentido horario</strong> (comenzando desde la parte superior) y las <strong>dimensiones del borde</strong> son independientes de este orden.</p>
+<hr />
+<h3 id="resumen_2">Resumen</h3>
+<p>En CSS, podemos utilizar las propiedades <strong>padding</strong>, <strong>border</strong> y <strong>margin</strong> para controlar el espaciado y el borde de los elementos. Las propiedades <strong>top</strong>, <strong>right</strong>, <strong>bottom</strong> y <strong>left</strong> permiten ubicar los elementos en el contenedor, mientras que se pueden definir de manera individual o conjunta, dependiendo de las necesidades del diseño.</p>
+<p>Puedes ampliar contenido en <a href="https://www.w3schools.com/css/css_boxmodel.asp">w3Schools</a></p>
+<hr />
+<h2 id="35-unidades-de-medida-en-css"><strong>3.5 Unidades de Medida en CSS</strong></h2>
+<p>En CSS, las <strong>unidades de medida</strong> son esenciales para definir <strong>tamaños</strong> de elementos, márgenes, rellenos y otros estilos. Existen diferentes tipos de unidades que se pueden utilizar, y la elección de la unidad adecuada depende de la <strong>situación</strong> y el <strong>diseño</strong> que queremos implementar.</p>
+<h3 id="351-unidades-absolutas"><strong>3.5.1 Unidades Absolutas</strong></h3>
+<p>Las <strong>unidades absolutas</strong> están basadas en un valor fijo y no cambian en función del dispositivo o de la resolución de la pantalla.</p>
+<ul>
+<li><strong>px (píxeles)</strong>: Es la unidad más común y se utiliza para establecer tamaños de elementos fijos. Un píxel es la unidad de medida básica para las pantallas, pero su tamaño puede variar ligeramente en dispositivos con pantallas de alta resolución (como los dispositivos Retina).</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong>cm, mm (centímetros, milímetros)</strong>: Estas unidades están basadas en el tamaño físico y se utilizan muy poco en la web.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">cm</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong>in (pulgadas)</strong>: Similar a cm y mm, se utiliza poco en la web, pero puede ser útil cuando trabajamos con medios físicos como impresión.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">in</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="352-unidades-relativas"><strong>3.5.2 Unidades Relativas</strong></h3>
+<p>Las <strong>unidades relativas</strong> son más flexibles y se ajustan a factores como el tamaño de la pantalla, el tamaño de fuente o el contenedor del elemento.</p>
+<ul>
+<li><strong>% (porcentaje)</strong>: El porcentaje se utiliza en relación con el <strong>elemento contenedor</strong>. Por ejemplo, si un contenedor tiene un ancho del 100%, un elemento con <code>width: 50%</code> tendrá la mitad del ancho del contenedor.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong>em</strong>: Esta unidad está relacionada con el tamaño de la <strong>fuente</strong> del elemento. <code>1em</code> es igual al tamaño de la fuente del elemento en el que se utiliza. Si el tamaño de la fuente es de 16px, entonces <code>1em</code> equivale a 16px.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">em</span><span class="p">;</span><span class="w"> </span><span class="c">/* 32px si la fuente base es 16px */</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong>rem (root em)</strong>: Similar a <code>em</code>, pero en lugar de basarse en el tamaño de la fuente del elemento, <code>rem</code> se basa en el tamaño de la fuente raíz (<code>&lt;html&gt;</code>). Esto lo hace más predecible y fácil de usar en toda la página.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">rem</span><span class="p">;</span><span class="w"> </span><span class="c">/* 160px si la fuente raíz es 16px */</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong>vw y vh (viewport width y height)</strong>: Estas unidades están basadas en el <strong>tamaño de la ventana del navegador</strong>. <code>1vw</code> es el <strong>1% del ancho de la ventana</strong> y <code>1vh</code> es el <strong>1% de la altura de la ventana</strong>.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">vw</span><span class="p">;</span><span class="w"> </span><span class="c">/* 50% del ancho de la ventana del navegador */</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="36-propiedades-de-tamano-width-height-left-y-right"><strong>3.6 Propiedades de Tamaño: width, height, left y right</strong></h2>
+<p>En CSS, <strong><code>width</code></strong>, <strong><code>height</code></strong>, <strong><code>left</code></strong> y <strong><code>right</code></strong> son propiedades fundamentales que permiten definir las <strong>dimensiones</strong> de los elementos y su <strong>ubicación</strong> en el diseño.</p>
+<h3 id="361-definir-width-y-height"><strong>3.6.1 Definir width y height</strong></h3>
+<ul>
+<li><strong><code>width</code></strong>: Especifica el ancho de un elemento.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong><code>height</code></strong>: Especifica la altura de un elemento.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="362-unidades-para-width-y-height"><strong>3.6.2 Unidades para width y height</strong></h3>
+<p>Puedes usar cualquier unidad de medida que hemos visto (px, %, em, etc.) para estas propiedades.</p>
+<h4 id="ejemplo-usando-diferentes-unidades-para-width-y-height">Ejemplo: Usando diferentes unidades para <code>width</code> y <code>height</code>:</h4>
+<div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">%</span><span class="p">;</span><span class="w"> </span><span class="c">/* 50% del contenedor */</span>
+<span class="w">  </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">em</span><span class="p">;</span><span class="w"> </span><span class="c">/* 10 veces el tamaño de la fuente */</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="363-definir-left-y-right"><strong>3.6.3 Definir left y right</strong></h3>
+<p>Las propiedades <strong><code>left</code></strong> y <strong><code>right</code></strong> se utilizan para <strong>posicionar un elemento</strong> en relación con su contenedor (usualmente con <strong>position: absolute</strong> o <strong>position: relative</strong>).</p>
+<ul>
+<li><strong><code>left</code></strong>: Define la distancia entre el borde izquierdo de un elemento y el borde izquierdo de su contenedor.</li>
+<li><strong><code>right</code></strong>: Define la distancia entre el borde derecho de un elemento y el borde derecho de su contenedor.</li>
+</ul>
+<h4 id="ejemplo-usando-left-y-right-para-posicionar-un-elemento">Ejemplo: Usando <code>left</code> y <code>right</code> para posicionar un elemento:</h4>
+<div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">absolute</span><span class="p">;</span>
+<span class="w">  </span><span class="k">left</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* 20px desde el borde izquierdo del contenedor */</span>
+<span class="w">  </span><span class="k">right</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* 20px desde el borde derecho del contenedor */</span>
+<span class="w">  </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="364-definir-dimensiones-de-manera-separada"><strong>3.6.4 Definir dimensiones de manera separada</strong></h3>
+<p>En algunas situaciones, podemos querer definir solo algunas de las dimensiones de un elemento, sin tener que especificar todas.</p>
+<h4 id="1-definir-solo-width-y-height"><strong>1. Definir solo <code>width</code> y <code>height</code></strong></h4>
+<p>Puedes definir únicamente <code>width</code> o <code>height</code>, y el otro valor tomará el valor por defecto. Por ejemplo, si solo defines el ancho de un elemento y no defines la altura, el navegador ajustará la altura automáticamente según el contenido.</p>
+<h4 id="ejemplo">Ejemplo:</h4>
+<div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="c">/* La altura será automática según el contenido */</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="2-definir-top-left-right-o-bottom"><strong>2. Definir <code>top</code>, <code>left</code>, <code>right</code> o <code>bottom</code></strong></h4>
+<p>Cuando un elemento está posicionado de manera <strong>absoluta</strong> o <strong>relativa</strong>, solo necesitas definir las propiedades de <strong>ubicación</strong> (<code>top</code>, <code>left</code>, <code>right</code>, <code>bottom</code>) que quieras usar. Las otras propiedades no se necesitarán.</p>
+<h4 id="ejemplo_1">Ejemplo:</h4>
+<div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">absolute</span><span class="p">;</span>
+<span class="w">  </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* 10px desde el borde superior */</span>
+<span class="w">  </span><span class="k">left</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* 20px desde el borde izquierdo */</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h3 id="resumen_3"><strong>Resumen</strong></h3>
+<p>En CSS, podemos utilizar diferentes unidades de medida para adaptar los estilos a diferentes dispositivos y situaciones. Es importante entender cómo utilizar <strong>unidades relativas</strong> como <strong><code>em</code>, <code>rem</code>, <code>%</code></strong> y <strong>unidades absolutas</strong> como <strong><code>px</code>, <code>cm</code></strong> para lograr un diseño flexible. Además, el uso de las propiedades <code>width</code>, <code>height</code>, <code>left</code>, y <code>right</code> junto con diferentes unidades nos permite crear diseños dinámicos y adaptables a cualquier pantalla.</p>
+<hr />
+<h1 id="41-propiedades-de-fuente"><strong>4.1 Propiedades de Fuente</strong></h1>
+<p>Las <strong>propiedades de fuente</strong> controlan la tipografía del texto. Son esenciales para definir la apariencia del texto y hacerlo más <strong>legible</strong> y <strong>atractivo</strong>. A continuación, veremos cómo se configuran estas propiedades y qué valores pueden tomar.</p>
+<h3 id="font-family"><strong><code>font-family</code></strong></h3>
+<p>La propiedad <code>font-family</code> se utiliza para definir la <strong>familia tipográfica</strong> del texto. Puedes especificar una lista de fuentes como alternativas, de modo que si la primera fuente no está disponible, el navegador utilizará la siguiente de la lista.</p>
+<h4 id="valores-de-font-family"><strong>Valores de <code>font-family</code></strong></h4>
+<ul>
+<li><strong>Nombres de fuentes</strong>: Se especifican como cadenas de texto. Ejemplo: <code>'Arial'</code>, <code>'Times New Roman'</code>, etc.</li>
+<li><strong>Fuentes genéricas</strong>: Si no se encuentra la fuente exacta, se puede recurrir a fuentes genéricas como <code>serif</code>, <code>sans-serif</code>, <code>monospace</code>, etc.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Arial&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>En este ejemplo, si <strong>Arial</strong> no está disponible, se utilizará una fuente <strong>sans-serif</strong> como alternativa.</p>
+<h3 id="font-size"><strong><code>font-size</code></strong></h3>
+<p>La propiedad <code>font-size</code> define el <strong>tamaño de la fuente</strong> del texto. Los valores pueden ser especificados en varias unidades de medida.</p>
+<h4 id="valores-de-font-size"><strong>Valores de <code>font-size</code></strong></h4>
+<ul>
+<li><strong>px (píxeles)</strong>: Una unidad absoluta, muy común en CSS.</li>
+<li><strong>em</strong>: Relativo al tamaño de la fuente del elemento padre.</li>
+<li><strong>rem</strong>: Relativo al tamaño de la fuente raíz (<code>&lt;html&gt;</code>).</li>
+<li><strong>%</strong>: Relativo al tamaño de la fuente del elemento contenedor.</li>
+<li><strong>vw/vh</strong>: Relativo al tamaño de la ventana del navegador.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">24</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="font-weight"><strong><code>font-weight</code></strong></h3>
+<p>La propiedad <code>font-weight</code> controla el <strong>grosor</strong> de la fuente. Los valores que puede tomar son:</p>
+<h4 id="valores-de-font-weight"><strong>Valores de <code>font-weight</code></strong></h4>
+<ul>
+<li><strong>normal</strong>: El grosor predeterminado de la fuente.</li>
+<li><strong>bold</strong>: Fuente en negrita.</li>
+<li><strong>lighter</strong>: Fuente más delgada que el valor <code>normal</code>.</li>
+<li><strong>bolder</strong>: Fuente más gruesa que <code>normal</code>.</li>
+<li><strong>Números</strong>: Se puede usar un valor numérico entre 100 y 900, donde <code>100</code> es la más delgada y <code>900</code> es la más gruesa.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="kc">bold</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h1 id="42-propiedades-de-texto"><strong>4.2 Propiedades de Texto</strong></h1>
+<p>Estas propiedades afectan el comportamiento y la apariencia del texto, permitiendo modificar <strong>alineación</strong>, <strong>espaciado entre líneas</strong> y <strong>transformación de texto</strong>.</p>
+<h3 id="text-align"><strong><code>text-align</code></strong></h3>
+<p>La propiedad <code>text-align</code> se utiliza para alinear el texto dentro de su contenedor. Los valores disponibles son:</p>
+<table>
+<thead>
+<tr>
+<th>Valor</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>left</code></td>
+<td>Alinea el texto a la izquierda (valor predeterminado).</td>
+</tr>
+<tr>
+<td><code>right</code></td>
+<td>Alinea el texto a la derecha.</td>
+</tr>
+<tr>
+<td><code>center</code></td>
+<td>Alinea el texto al centro.</td>
+</tr>
+<tr>
+<td><code>justify</code></td>
+<td>Alinea el texto de manera justificada (se distribuye a lo largo de todo el contenedor).</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ejemplo-de-text-align"><strong>Ejemplo de <code>text-align</code></strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este ejemplo centra el texto del encabezado <code>h1</code>. Si el contenido del <code>h1</code> fuera un párrafo largo, se alinearía de manera centrada en su contenedor.</p>
+<h3 id="line-height"><strong><code>line-height</code></strong></h3>
+<p>La propiedad <code>line-height</code> controla la <strong>altura de las líneas</strong> de texto. Es muy útil para mejorar la <strong>legibilidad</strong> de un bloque de texto, especialmente en párrafos con mucho contenido.</p>
+<h4 id="valores-de-line-height"><strong>Valores de <code>line-height</code></strong></h4>
+<ul>
+<li><strong>Número</strong>: El valor de <code>line-height</code> será multiplicado por el tamaño de la fuente.</li>
+<li><strong>Unidad</strong>: Puede ser un valor en <strong>px</strong>, <strong>em</strong>, <strong>rem</strong>, etc.</li>
+<li><strong>Porcentaje</strong>: Se calcula como un porcentaje del tamaño de la fuente.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">line-height</span><span class="p">:</span><span class="w"> </span><span class="mf">1.5</span><span class="p">;</span><span class="w"> </span><span class="c">/* 1.5 veces el tamaño de la fuente */</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="text-transform"><strong><code>text-transform</code></strong></h3>
+<p>La propiedad <code>text-transform</code> permite modificar la <strong>transformación</strong> del texto (mayúsculas, minúsculas, etc.).</p>
+<table>
+<thead>
+<tr>
+<th>Valor</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>uppercase</code></td>
+<td>Convierte todo el texto a mayúsculas.</td>
+</tr>
+<tr>
+<td><code>lowercase</code></td>
+<td>Convierte todo el texto a minúsculas.</td>
+</tr>
+<tr>
+<td><code>capitalize</code></td>
+<td>Convierte la primera letra de cada palabra a mayúscula.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ejemplo-de-text-transform"><strong>Ejemplo de <code>text-transform</code></strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">text-transform</span><span class="p">:</span><span class="w"> </span><span class="kc">uppercase</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este ejemplo convierte todo el texto dentro del <code>h1</code> a <strong>mayúsculas</strong>.</p>
+<p><img alt="Ejemplo completo de texto" src="../img/img16.png" /></p>
+<details class="example">
+<summary>Texto</summary>
+</details>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Texto</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Estilos de Texto<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">      </span><span class="nt">p</span><span class="p">:</span><span class="nd">nth-child</span><span class="o">(</span><span class="nt">1</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">        </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Arial&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span>
+<span class="w">        </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="kc">bold</span><span class="p">;</span>
+<span class="w">        </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#4caf50</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+
+<span class="w">      </span><span class="nt">p</span><span class="p">:</span><span class="nd">nth-child</span><span class="o">(</span><span class="nt">2</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">        </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Times New Roman&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">serif</span><span class="p">;</span>
+<span class="w">        </span><span class="k">font-style</span><span class="p">:</span><span class="w"> </span><span class="kc">italic</span><span class="p">;</span>
+<span class="w">        </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#ff6347</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+
+<span class="w">      </span><span class="nt">p</span><span class="p">:</span><span class="nd">nth-child</span><span class="o">(</span><span class="nt">3</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">        </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Courier New&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">monospace</span><span class="p">;</span>
+<span class="w">        </span><span class="k">text-decoration</span><span class="p">:</span><span class="w"> </span><span class="kc">underline</span><span class="p">;</span>
+<span class="w">        </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#1e90ff</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+
+<span class="w">      </span><span class="nt">p</span><span class="p">:</span><span class="nd">nth-child</span><span class="o">(</span><span class="nt">4</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">        </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Verdana&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span>
+<span class="w">        </span><span class="k">text-transform</span><span class="p">:</span><span class="w"> </span><span class="kc">uppercase</span><span class="p">;</span>
+<span class="w">        </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#8a2be2</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+      Este es el primer párrafo, con un tamaño de fuente de 18px, en **negrita**
+      y de color verde.
+    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+      Este es el segundo párrafo, con un tamaño de fuente de 16px, en
+      **cursiva** y de color tomate.
+    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+      Este es el tercer párrafo, con un tamaño de fuente de 14px, en
+      **monoespaciado** y con subrayado, de color azul.
+    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+      Este es el cuarto párrafo, con un tamaño de fuente de 20px, en
+      **mayúsculas** y de color morado.
+    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h3 id="resumen_4"><strong>Resumen</strong></h3>
+<ul>
+<li><strong><code>font-family</code></strong> se usa para seleccionar la tipografía que se aplicará al texto. </li>
+<li><strong><code>font-size</code></strong> define el tamaño de la  fuente, pudiendo utilizarse en diferentes unidades. </li>
+<li><strong><code>font-weight</code></strong> controla el grosor de la fuente, y puede tomar valores como <code>bold</code>, <code>normal</code> o valores numéricos. </li>
+<li><strong><code>text-align</code></strong> se usa para alinear el texto dentro de su contenedor, con valores como <code>left</code>, <code>right</code>, <code>center</code>, y <code>justify</code>. </li>
+<li><strong><code>line-height</code></strong> es útil para definir el espaciado entre las líneas de texto. </li>
+<li><strong><code>text-transform</code></strong> permite transformar el texto a mayúsculas, minúsculas o apitalizar cada palabra. </li>
+</ul>
+<hr />
+<h2 id="5-propiedades-de-colores-y-fondos"><strong>5. Propiedades de Colores y Fondos</strong></h2>
+<p>En estepunto, abordamos cómo aplicar <strong>colores</strong> y <strong>fondos</strong> a los elementos de una
+página web. Estas propiedades son fundamentales para darle estilo a los elementos, asegurando que se vean atractivos y sean fácilmente legibles. Vamos a profundizar en cómo se manejan los <strong>colores</strong>, las <strong>imágenes de fondo</strong>, y sus propiedades asociadas para crear una web atractiva. </p>
+<h3 id="51-colores-en-css"><strong>5.1 Colores en CSS</strong></h3>
+<p>En CSS, los colores pueden ser definidos de diferentes maneras. Algunas de las más
+comunes son: <strong>nombres</strong>, <strong>valores hexadecimales</strong>, <strong>rgb</strong> y <strong>rgba</strong>. </p>
+<h3 id="metodos-para-definir-colores"><strong>Métodos para definir colores</strong></h3>
+<ol>
+<li>
+<p><strong>Nombres de colores</strong>: CSS permite utilizar nombres predefinidos para los colores. Algunos ejemplos son <strong><code>red</code></strong>, <strong><code>blue</code></strong>, <strong><code>green</code></strong>, entre otros. 
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">h1</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="err">````</span>
+
+<span class="nt">2</span><span class="o">.</span><span class="w"> </span><span class="o">**</span><span class="nt">Valores</span><span class="w"> </span><span class="nt">hexadecimales</span><span class="o">**:</span><span class="w"> </span><span class="nt">Esta</span><span class="w"> </span><span class="nt">forma</span><span class="w"> </span><span class="nt">de</span><span class="w"> </span><span class="nt">definir</span><span class="w"> </span><span class="nt">colores</span><span class="w"> </span><span class="nt">utiliza</span><span class="w"> </span><span class="nt">el</span><span class="w"> </span><span class="nt">sistema</span><span class="w"> </span><span class="nt">hexadecimal</span><span class="o">.</span><span class="w"> </span><span class="nt">El</span><span class="w"> </span><span class="nt">formato</span><span class="w"> </span><span class="nt">es</span><span class="w"> </span><span class="o">**</span><span class="err">#</span><span class="w"> </span><span class="nt">RRGGBB</span><span class="o">**,</span><span class="w"> </span><span class="nt">donde</span><span class="w"> </span><span class="o">**</span><span class="nt">RR</span><span class="o">**,</span><span class="w"> </span><span class="o">**</span><span class="nt">GG</span><span class="o">**,</span><span class="w"> </span><span class="nt">y</span><span class="w"> </span><span class="o">**</span><span class="nt">BB</span><span class="o">**</span><span class="w"> </span><span class="nt">son</span><span class="w"> </span><span class="nt">valores</span><span class="w"> </span><span class="nt">hexadecimales</span><span class="w"> </span><span class="nt">para</span><span class="w"> </span><span class="nt">el</span><span class="w"> </span><span class="nt">rojo</span><span class="o">,</span><span class="w"> </span><span class="nt">verde</span><span class="w"> </span><span class="nt">y</span><span class="w"> </span><span class="nt">azul</span><span class="o">.</span>
+
+<span class="err">```</span><span class="nt">css</span>
+<span class="nt">h2</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#3498db</span><span class="p">;</span><span class="w"> </span><span class="c">/* Azul claro */</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>rgb()</strong>: El formato <strong>rgb()</strong> define el color utilizando valores enteros para los tres componentes de color: <strong>rojo</strong>, <strong>verde</strong> y <strong>azul</strong>. Los valores van de <strong>0 a 255</strong>.</p>
+</li>
 </ol>
 <div class="highlight"><pre><span></span><code><span class="nt">h3</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nb">rgb</span><span class="p">(</span><span class="mi">52</span><span class="p">,</span><span class="w"> </span><span class="mi">152</span><span class="p">,</span><span class="w"> </span><span class="mi">219</span><span class="p">);</span><span class="w"> </span><span class="c">/* Azul claro en RGB */</span>
@@ -2652,77 +2786,137 @@ nombres predefinidos para los colores. Algunos ejemplos son **`red`**,
 <details class="example">
 <summary>fondo cover</summary>
 </details>
-<p><code>html linenums=1 title="fondo cover"
-    &lt;!DOCTYPE html&gt;
-    &lt;html lang="en"&gt;
-    &lt;head&gt;
-        &lt;meta charset="UTF-8"&gt;
-        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-        &lt;title&gt;Document&lt;/title&gt;
-        &lt;style&gt;
-            body {
-                background-image: url(../img/fondo.jpg);
-                background-size: cover;
-            }
-            div {
-                background-color: lightgray;
-                opacity: 0.60;
-            }
-            p {
-                color:black;
-                font-weight: bold;
-            }
-        &lt;/style&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;div&gt;
-        &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates beatae modi, recusandae voluptatem et dolorem ad sit explicabo quas, saepe assumenda. Soluta ullam, magnam, adipisci expedita minus aliquid, quibusdam quidem esse labore quaerat praesentium perspiciatis ex obcaecati. Velit a dolor architecto tempore nam quam esse tenetur ab repellat. Maxime neque quas error quae dicta fuga soluta natus exercitationem atque asperiores ducimus incidunt officiis ullam eaque enim suscipit temporibus reiciendis perferendis quisquam, obcaecati repudiandae impedit! Possimus praesentium dolorum natus facere quo mollitia, illo quas dolores modi veritatis debitis nisi totam excepturi et necessitatibus a nam non ducimus repellendus? Facilis libero voluptatum 
-        &lt;/p&gt;
-        &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates beatae modi, recusandae voluptatem et dolorem ad sit explicabo quas, saepe assumenda. Soluta ullam, magnam, adipisci expedita minus aliquid, quibusdam quidem esse labore quaerat praesentium perspiciatis ex obcaecati. Velit a dolor architecto tempore nam quam esse tenetur ab repellat. Maxime neque quas error quae dicta fuga soluta natus exercitationem atque asperiores ducimus incidunt officiis ullam eaque enim suscipit temporibus reiciendis perferendis quisquam, obcaecati repudiandae impedit! Possimus praesentium dolorum natus facere quo mollitia, illo quas dolores modi veritatis debitis 
-        &lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/body&gt;
-    &lt;/html&gt;</code></p>
-<p>**fondo fijo en la parte lateral izquierda y arriba</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">fondo cover</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code>  <span class="cp">&lt;!DOCTYPE html&gt;</span>
+  <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Document<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">          </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">              </span><span class="k">background-image</span><span class="p">:</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="sx">../img/fondo.jpg</span><span class="p">);</span>
+<span class="w">              </span><span class="k">background-size</span><span class="p">:</span><span class="w"> </span><span class="kc">cover</span><span class="p">;</span>
+<span class="w">          </span><span class="p">}</span>
+<span class="w">          </span><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
+<span class="w">              </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">lightgray</span><span class="p">;</span>
+<span class="w">              </span><span class="k">opacity</span><span class="p">:</span><span class="w"> </span><span class="mf">0.60</span><span class="p">;</span>
+<span class="w">          </span><span class="p">}</span>
+<span class="w">          </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">              </span><span class="k">color</span><span class="p">:</span><span class="kc">black</span><span class="p">;</span>
+<span class="w">              </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="kc">bold</span><span class="p">;</span>
+<span class="w">          </span><span class="p">}</span>
+<span class="w">      </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates beatae modi, recusandae voluptatem et dolorem ad sit explicabo quas, saepe assumenda. Soluta ullam, magnam, adipisci expedita minus aliquid, quibusdam quidem esse labore quaerat praesentium perspiciatis ex obcaecati. Velit a dolor architecto tempore nam quam esse tenetur ab repellat. Maxime neque quas error quae dicta fuga soluta natus exercitationem atque asperiores ducimus incidunt officiis ullam eaque enim suscipit temporibus reiciendis perferendis quisquam, obcaecati repudiandae impedit! Possimus praesentium dolorum natus facere quo mollitia, illo quas dolores modi veritatis debitis nisi totam excepturi et necessitatibus a nam non ducimus repellendus? Facilis libero voluptatum 
+      <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates beatae modi, recusandae voluptatem et dolorem ad sit explicabo quas, saepe assumenda. Soluta ullam, magnam, adipisci expedita minus aliquid, quibusdam quidem esse labore quaerat praesentium perspiciatis ex obcaecati. Velit a dolor architecto tempore nam quam esse tenetur ab repellat. Maxime neque quas error quae dicta fuga soluta natus exercitationem atque asperiores ducimus incidunt officiis ullam eaque enim suscipit temporibus reiciendis perferendis quisquam, obcaecati repudiandae impedit! Possimus praesentium dolorum natus facere quo mollitia, illo quas dolores modi veritatis debitis 
+      <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>fondo fijo en la parte lateral izquierda y arriba</strong></p>
 <p><img alt="fixed" src="../img/img18.png" /></p>
 <details class="example">
 <summary>fondo</summary>
 </details>
-<p><code>html linenums=1 title="fondo"
-        &lt;!DOCTYPE html&gt;
-    &lt;html lang="en"&gt;
-    &lt;head&gt;
-        &lt;meta charset="UTF-8"&gt;
-        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-        &lt;title&gt;Document&lt;/title&gt;
-        &lt;style&gt;
-            body {
-                background-image: url(../img/fondo.jpg);
-                background-repeat: no-repeat;
-                background-attachment: fixed;
-                background-position: top right;
-            }
-            div {
-                background-color: lightgray;
-                opacity: 0.60;
-            }
-            p {
-                color:black;
-                font-weight: bold;
-            }
-        &lt;/style&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;div&gt;
-        &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates beatae modi, recusandae voluptatem et dolorem ad sit explicabo quas, saepe assumenda. Soluta ullam, magnam, adipisci expedita minus aliquid, quibusdam quidem esse labore quaerat praesentium perspiciatis ex obcaecati. Velit a dolor architecto tempore nam quam esse tenetur ab repellat. Maxime neque quas error quae dicta fuga soluta natus exercitationem atque asperiores ducimus incidunt officiis ullam eaque enim suscipit temporibus reiciendis perferendis quisquam, obcaecati repudiandae impedit! Possimus praesentium dolorum natus facere quo mollitia, illo quas dolores modi veritatis debitis nisi totam excepturi et necessitatibus a nam non ducimus repellendus? Facilis libero voluptatum 
-        &lt;/p&gt;
-        &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates beatae modi, recusandae voluptatem et dolorem ad sit explicabo quas, saepe assumenda. Soluta ullam, magnam, adipisci expedita minus aliquid, quibusdam quidem esse labore quaerat praesentium perspiciatis ex obcaecati. Velit a dolor architecto tempore nam quam esse tenetur ab repellat. Maxime neque quas error quae dicta fuga soluta natus exercitationem atque asperiores ducimus incidunt officiis ullam eaque enim suscipit temporibus reiciendis perferendis quisquam, obcaecati repudiandae impedit! Possimus praesentium dolorum natus facere quo mollitia, illo quas dolores modi veritatis debitis 
-        &lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/body&gt;
-    &lt;/html&gt;</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">fondo</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span></pre></div></td><td class="code"><div><pre><span></span><code>  <span class="cp">&lt;!DOCTYPE html&gt;</span>
+  <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Document<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">          </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">              </span><span class="k">background-image</span><span class="p">:</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="sx">../img/fondo.jpg</span><span class="p">);</span>
+<span class="w">              </span><span class="k">background-repeat</span><span class="p">:</span><span class="w"> </span><span class="kc">no-repeat</span><span class="p">;</span>
+<span class="w">              </span><span class="k">background-attachment</span><span class="p">:</span><span class="w"> </span><span class="kc">fixed</span><span class="p">;</span>
+<span class="w">              </span><span class="k">background-position</span><span class="p">:</span><span class="w"> </span><span class="kc">top</span><span class="w"> </span><span class="kc">right</span><span class="p">;</span>
+<span class="w">          </span><span class="p">}</span>
+<span class="w">          </span><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
+<span class="w">              </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">lightgray</span><span class="p">;</span>
+<span class="w">              </span><span class="k">opacity</span><span class="p">:</span><span class="w"> </span><span class="mf">0.60</span><span class="p">;</span>
+<span class="w">          </span><span class="p">}</span>
+<span class="w">          </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">              </span><span class="k">color</span><span class="p">:</span><span class="kc">black</span><span class="p">;</span>
+<span class="w">              </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="kc">bold</span><span class="p">;</span>
+<span class="w">          </span><span class="p">}</span>
+<span class="w">      </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates beatae modi, recusandae voluptatem et dolorem ad sit explicabo quas, saepe assumenda. Soluta ullam, magnam, adipisci expedita minus aliquid, quibusdam quidem esse labore quaerat praesentium perspiciatis ex obcaecati. Velit a dolor architecto tempore nam quam esse tenetur ab repellat. Maxime neque quas error quae dicta fuga soluta natus exercitationem atque asperiores ducimus incidunt officiis ullam eaque enim suscipit temporibus reiciendis perferendis quisquam, obcaecati repudiandae impedit! Possimus praesentium dolorum natus facere quo mollitia, illo quas dolores modi veritatis debitis nisi totam excepturi et necessitatibus a nam non ducimus repellendus? Facilis libero voluptatum 
+      <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates beatae modi, recusandae voluptatem et dolorem ad sit explicabo quas, saepe assumenda. Soluta ullam, magnam, adipisci expedita minus aliquid, quibusdam quidem esse labore quaerat praesentium perspiciatis ex obcaecati. Velit a dolor architecto tempore nam quam esse tenetur ab repellat. Maxime neque quas error quae dicta fuga soluta natus exercitationem atque asperiores ducimus incidunt officiis ullam eaque enim suscipit temporibus reiciendis perferendis quisquam, obcaecati repudiandae impedit! Possimus praesentium dolorum natus facere quo mollitia, illo quas dolores modi veritatis debitis 
+      <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
 <hr />
-<h2 id="resumen_2"><strong>Resumen</strong></h2>
+<h2 id="resumen_5"><strong>Resumen</strong></h2>
 <ul>
 <li><strong>Colores</strong>: Puedes definir colores usando <strong>nombres</strong>, <strong>hexadecimales</strong>, <strong>rgb</strong> o <strong>rgba</strong>, lo que te permite flexibilidad en el diseño. Además, <strong><code>rgba()</code></strong> permite incluir opacidad en los colores.</li>
 <li><strong>Fondos</strong>: CSS permite trabajar con <strong>colores de fondo</strong>, <strong>imágenes de fondo</strong>, y controlar su <strong>posición</strong>, <strong>tamaño</strong> y <strong>repetición</strong>.</li>
@@ -2842,70 +3036,124 @@ nombres predefinidos para los colores. Algunos ejemplos son **`red`**,
 </code></pre></div>
 <p>Aquí, el <strong>elemento <code>div</code></strong> se colocará <strong>50px desde la parte superior</strong> y <strong>100px desde la izquierda</strong> de su contenedor más cercano con <code>position: relative</code>.</p>
 <p><img alt="Ejemplo uso de la propiedad position:sticky" src="../img/img20.png" /></p>
-<p>??? example "propiedad 'position:sticky'</p>
-<p>```html linenums=1</p>
-<!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      div.sticky {
-        position: sticky;
-        top: 0;
-        padding: 5px;
-        background-color: #cae8ca;
-        border: 2px solid #4caf50;
-      }
-    </style>
-  </head>
-  <body>
-    <p>
-      Try to <b>scroll</b> inside this frame to understand how sticky
+<p>??? example "propiedad 'position:sticky'
+  <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">      </span><span class="nt">div</span><span class="p">.</span><span class="nc">sticky</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">sticky</span><span class="p">;</span>
+<span class="w">        </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">        </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#cae8ca</span><span class="p">;</span>
+<span class="w">        </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#4caf50</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+      Try to <span class="p">&lt;</span><span class="nt">b</span><span class="p">&gt;</span>scroll<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;</span> inside this frame to understand how sticky
       positioning works.
-    </p>
+    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 
-    <div class="sticky">I am sticky!</div>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;sticky&quot;</span><span class="p">&gt;</span>I am sticky!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 
-    <div style="padding-bottom:2000px">
-      <p>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;padding-bottom:2000px&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
         In this example, the sticky element sticks to the top of the page (top:
         0), when you reach its scroll position.
-      </p>
-      <p>Scroll back up to remove the stickyness.</p>
-      <p>
+      <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Scroll back up to remove the stickyness.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
         Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum
         definitiones no quo, maluisset concludaturque et eum, altera fabulas ut
         quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert
         laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no
         molestiae voluptatibus.
-      </p>
-      <p>
+      <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
         Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum
         definitiones no quo, maluisset concludaturque et eum, altera fabulas ut
         quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert
         laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no
         molestiae voluptatibus.
-      </p>
-    </div>
-  </body>
-</html>
-<div class="highlight"><pre><span></span><code>---
-
-## **7.4 Visibility**
-
-La propiedad **`visibility`** permite **ocultar** un elemento sin eliminarlo del flujo del documento, lo que significa que el espacio del elemento sigue estando reservado en la página, aunque el contenido no se vea.
-
-### **Valores de `visibility`**:
-
-| Valor      | Descripción                                                                                               |
-| ---------- | --------------------------------------------------------------------------------------------------------- |
-| `visible`  | El elemento es visible (valor predeterminado).                                                            |
-| `hidden`   | El elemento está oculto, pero sigue ocupando espacio en el diseño.                                        |
-| `collapse` | Similar a `hidden`, pero en el caso de las tablas, también elimina el espacio reservado para el elemento. |
-
-```css
-p {
-  visibility: hidden;
-}
+      <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h2 id="74-visibility"><strong>7.4 Visibility</strong></h2>
+<p>La propiedad <strong><code>visibility</code></strong> permite <strong>ocultar</strong> un elemento sin eliminarlo del flujo del documento, lo que significa que el espacio del elemento sigue estando reservado en la página, aunque el contenido no se vea.</p>
+<h3 id="valores-de-visibility"><strong>Valores de <code>visibility</code></strong>:</h3>
+<table>
+<thead>
+<tr>
+<th>Valor</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>visible</code></td>
+<td>El elemento es visible (valor predeterminado).</td>
+</tr>
+<tr>
+<td><code>hidden</code></td>
+<td>El elemento está oculto, pero sigue ocupando espacio en el diseño.</td>
+</tr>
+<tr>
+<td><code>collapse</code></td>
+<td>Similar a <code>hidden</code>, pero en el caso de las tablas, también elimina el espacio reservado para el elemento.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">visibility</span><span class="p">:</span><span class="w"> </span><span class="kc">hidden</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div>
 <p><img alt="Ejemplo de una página con una imagen oculta" src="../img/img21.png" /></p>
 <p>En este caso, el <strong>párrafo</strong> estará <strong>oculto</strong>, pero seguirá ocupando espacio en el diseño de la página.</p>
@@ -2928,148 +3176,144 @@ p {
 <details class="example">
 <summary>Divs superpuestos</summary>
 </details>
-<p>```html linenums=1</p>
-<!DOCTYPE html>
+<p>```html linenums=1
+  <!DOCTYPE html></p>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ejemplo de Superposición con z-index</title>
-    <style>
-      .div1,
-      .div2,
-      .div3 {
-        position: absolute;
-        width: 200px;
-        height: 200px;
-      }
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Ejemplo de Superposición con z-index</title>
+      <style>
+        .div1,
+        .div2,
+        .div3 {
+          position: absolute;
+          width: 200px;
+          height: 200px;
+        }
 
-      .div1 {
-        background-color: red;
-        top: 50px;
-        left: 50px;
-        z-index: 1; /* El div rojo está en el fondo */
-      }
+        .div1 {
+          background-color: red;
+          top: 50px;
+          left: 50px;
+          z-index: 1; /* El div rojo está en el fondo */
+        }
 
-      .div2 {
-        background-color: green;
-        top: 100px;
-        left: 100px;
-        z-index: 2; /* El div verde está encima del rojo */
-      }
+        .div2 {
+          background-color: green;
+          top: 100px;
+          left: 100px;
+          z-index: 2; /* El div verde está encima del rojo */
+        }
 
-      .div3 {
-        background-color: blue;
-        top: 150px;
-        left: 150px;
-        z-index: 3; /* El div azul está encima de los otros dos */
-      }
-    </style>
-  </head>
-  <body>
-    <div class="div1"></div>
-    <div class="div2"></div>
-    <div class="div3"></div>
-  </body>
-</html>
-<div class="highlight"><pre><span></span><code>---
+        .div3 {
+          background-color: blue;
+          top: 150px;
+          left: 150px;
+          z-index: 3; /* El div azul está encima de los otros dos */
+        }
+      </style>
+    </head>
+    <body>
+      <div class="div1"></div>
+      <div class="div2"></div>
+      <div class="div3"></div>
+    </body>
+  </html>
+<p>```</p>
+<hr />
+<h2 id="ejemplo-practico-diseno-de-una-pagina-con-imagenes-en-linea"><strong>Ejemplo práctico: Diseño de una página con imágenes en línea</strong></h2>
+<p>Vamos a crear un ejemplo con un <strong>layout simple</strong> que tenga una serie de imágenes dentro de un contenedor. Las imágenes se alinearán en línea mientras haya espacio, y cuando no quepan, pasarán a la siguiente línea.</p>
+<h3 id="html-base"><strong>HTML Base:</strong></h3>
+<p><img alt="Ejemplo de diseño de página con imagenes en línea" src="../img/img23.png" /></p>
+<details class="example">
+<summary>Imagenes eb linea</summary>
+</details>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ejemplo de Diseño Web<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">      </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="n">Arial</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
 
-## **Ejemplo práctico: Diseño de una página con imágenes en línea**
+<span class="w">      </span><span class="nt">header</span><span class="o">,</span>
+<span class="w">      </span><span class="nt">footer</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#4caf50</span><span class="p">;</span>
+<span class="w">        </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<span class="w">        </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">        </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
 
-Vamos a crear un ejemplo con un **layout simple** que tenga una serie de imágenes dentro de un contenedor. Las imágenes se alinearán en línea mientras haya espacio, y cuando no quepan, pasarán a la siguiente línea.
+<span class="w">      </span><span class="nt">nav</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#333</span><span class="p">;</span>
+<span class="w">        </span><span class="k">overflow</span><span class="p">:</span><span class="w"> </span><span class="kc">hidden</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
 
-### **HTML Base:**
+<span class="w">      </span><span class="nt">nav</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<span class="w">        </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">        </span><span class="k">text-decoration</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">        </span><span class="k">float</span><span class="p">:</span><span class="w"> </span><span class="kc">left</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
 
-![Ejemplo de diseño de página con imagenes en línea](./img/img23.png)
+<span class="w">      </span><span class="nt">nav</span><span class="w"> </span><span class="nt">a</span><span class="p">:</span><span class="nd">hover</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#ddd</span><span class="p">;</span>
+<span class="w">        </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">black</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
 
-??? example &quot;Imagenes eb linea&quot;
+<span class="w">      </span><span class="p">.</span><span class="nc">imagenes-container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+<span class="w">        </span><span class="k">flex-wrap</span><span class="p">:</span><span class="w"> </span><span class="kc">wrap</span><span class="p">;</span>
+<span class="w">        </span><span class="k">justify-content</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">        </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">        </span><span class="k">margin-top</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
 
-```html
-&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;es&quot;&gt;
-  &lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot; /&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
-    &lt;title&gt;Ejemplo de Diseño Web&lt;/title&gt;
-    &lt;style&gt;
-      body {
-        font-family: Arial, sans-serif;
-      }
+<span class="w">      </span><span class="p">.</span><span class="nc">imagenes-container</span><span class="w"> </span><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">        </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">        </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#ddd</span><span class="p">;</span>
+<span class="w">        </span><span class="k">box-sizing</span><span class="p">:</span><span class="w"> </span><span class="kc">border-box</span><span class="p">;</span>
+<span class="w">        </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+<span class="w">        </span><span class="k">justify-content</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">        </span><span class="k">align-items</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
 
-      header,
-      footer {
-        background-color: #4caf50;
-        color: white;
-        text-align: center;
-        padding: 10px;
-      }
+<span class="w">      </span><span class="nt">img</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+<span class="w">        </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+<span class="w">        </span><span class="k">object-fit</span><span class="p">:</span><span class="w"> </span><span class="kc">cover</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Bienvenido a la Página de Ejemplo<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
 
-      nav {
-        background-color: #333;
-        overflow: hidden;
-      }
+    <span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Inicio<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Productos<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Servicios<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
 
-      nav a {
-        color: white;
-        padding: 14px 20px;
-        text-decoration: none;
-        float: left;
-      }
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;imagenes-container&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;imagen1.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Imagen 1&quot;</span> <span class="p">/&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;imagen2.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Imagen 2&quot;</span> <span class="p">/&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;imagen3.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Imagen 3&quot;</span> <span class="p">/&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;imagen4.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Imagen 4&quot;</span> <span class="p">/&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;imagen5.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Imagen 5&quot;</span> <span class="p">/&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 
-      nav a:hover {
-        background-color: #ddd;
-        color: black;
-      }
-
-      .imagenes-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        margin-top: 20px;
-      }
-
-      .imagenes-container div {
-        width: 200px;
-        height: 200px;
-        border: 2px solid #ddd;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;header&gt;
-      &lt;h1&gt;Bienvenido a la Página de Ejemplo&lt;/h1&gt;
-    &lt;/header&gt;
-
-    &lt;nav&gt;
-      &lt;a href=&quot;#&quot;&gt;Inicio&lt;/a&gt;
-      &lt;a href=&quot;#&quot;&gt;Productos&lt;/a&gt;
-      &lt;a href=&quot;#&quot;&gt;Servicios&lt;/a&gt;
-    &lt;/nav&gt;
-
-    &lt;div class=&quot;imagenes-container&quot;&gt;
-      &lt;div&gt;&lt;img src=&quot;imagen1.jpg&quot; alt=&quot;Imagen 1&quot; /&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;img src=&quot;imagen2.jpg&quot; alt=&quot;Imagen 2&quot; /&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;img src=&quot;imagen3.jpg&quot; alt=&quot;Imagen 3&quot; /&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;img src=&quot;imagen4.jpg&quot; alt=&quot;Imagen 4&quot; /&gt;&lt;/div&gt;
-      &lt;div&gt;&lt;img src=&quot;imagen5.jpg&quot; alt=&quot;Imagen 5&quot; /&gt;&lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;footer&gt;
-      &lt;p&gt;© 2025 Ejemplo de Diseño Web&lt;/p&gt;
-    &lt;/footer&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
+    <span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>© 2025 Ejemplo de Diseño Web<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
 <hr />
 <p>En este ejemplo, hemos usado <strong>flexbox</strong> para hacer que las imágenes se alineen en una fila cuando haya espacio suficiente y, cuando no quepan, se moverán a la siguiente línea. También hemos usado un menú de navegación y un pie de página para completar el diseño.</p>
@@ -3299,7 +3543,7 @@ El diseño CSS <code>Flexbox</code> debe usarse para un diseño unidimensional, 
 <hr />
 <h2 id="85-ejemplo-completo-de-una-pagina-web-con-grid"><strong>8.5 Ejemplo Completo de una Página Web con Grid</strong></h2>
 <p>En este ejemplo, vamos a crear una página web simple que contenga un <strong>encabezado</strong>, un <strong>menú horizontal</strong>, un <strong>cuerpo con una sección lateral</strong> y un <strong>pie de página</strong>. Usaremos <strong>CSS Grid</strong> para organizar todos los elementos de manera estructurada.</p>
-<h3 id="html-base"><strong>HTML Base</strong></h3>
+<h3 id="html-base_1"><strong>HTML Base</strong></h3>
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
