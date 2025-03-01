@@ -22,7 +22,7 @@
     
     
       
-        <title>T01 Introducción a CSS - Certificado de Profesionalidad IFCD0211</title>
+        <title>T02 Introducción a CSS - Certificado de Profesionalidad IFCD0211</title>
       
     
     
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              T01 Introducción a CSS
+              T02 Introducción a CSS
             
           </span>
         </div>
@@ -1283,7 +1283,7 @@
         
   
   <span class="md-ellipsis">
-    T01 Introducción a CSS
+    T02 Introducción a CSS
   </span>
   
 
@@ -1503,31 +1503,36 @@
 <p>Existen varias formas de agregar estilos CSS a una página web:</p>
 <h3 id="11-estilos-en-linea-inline-css"><strong>1.1 Estilos en línea (Inline CSS)</strong></h3>
 <p>Los estilos en línea se aplican directamente en el atributo <code>style</code> de los elementos HTML.</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color: red; font-size: 16px;&quot;</span><span class="p">&gt;</span>Este es un texto con estilo en línea.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color: red; font-size: 16px;&quot;</span><span class="p">&gt;</span>
+  Este es un texto con estilo en línea.
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </code></pre></div>
 <h3 id="12-estilos-internos-internal-css"><strong>1.2 Estilos internos (Internal CSS)</strong></h3>
 <p>Los estilos internos se colocan dentro de una etiqueta <code>&lt;style&gt;</code> en la sección <code>&lt;head&gt;</code> del documento HTML.</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-<span class="w">        </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span><span class="w"> </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<span class="w">    </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
+<span class="w">      </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Este es un texto con estilo interno.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Este es un texto con estilo interno.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 </code></pre></div>
 <h3 id="13-estilos-externos-external-css"><strong>1.3 Estilos externos (External CSS)</strong></h3>
 <p>Los estilos externos se definen en un archivo separado con extensión <code>.css</code>, y se vinculan al documento HTML mediante el atributo <code>link</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;styles.css&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;styles.css&quot;</span> <span class="p">/&gt;</span>
 <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Este es un texto con estilo externo<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Este es un texto con estilo externo<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="kc">blue</span><span class="p">;</span>
-<span class="w">    </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
+<span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="kt">px</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <hr />
@@ -1546,20 +1551,20 @@
 <p>En el ejemplo siguiente los elementos <code>&lt;p&gt;</code>serán hijos de <code>&lt;body&gt;</code>y por tanto heredarán sus reglas.</p>
 <div class="highlight"><pre><span></span><code>/* Ejemplo de herencia en CSS */
 <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-<span class="w">        </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="n">Arial</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">        </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* Los párrafos heredarán esta fuente */</span>
-<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="n">Arial</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* Los párrafos heredarán esta fuente */</span>
+<span class="w">      </span><span class="p">}</span>
 <span class="w">    </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Herencia<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Este párrafo tiene las propiedades CSS de body y de p<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
 <h3 id="22-reglas-de-estilo-en-conflicto-especificidad"><strong>2.2 Reglas de Estilo en Conflicto (Especificidad)</strong></h3>
@@ -1573,90 +1578,94 @@
 <li><strong>Selectores de elementos y pseudoelementos</strong>: Cada selector de tipo de elemento (<code>div</code>, <code>p</code>, <code>a</code>) o pseudoelemento (<code>::before</code>, <code>::after</code>) tiene un valor de <strong>1</strong>.</li>
 <li><strong>Selectores universales</strong> (<code>*</code>) y combinadores como <code>+</code> o <code>&gt;</code> tienen <strong>0</strong> de especificidad.</li>
 </ol>
-<p>El puntaje final de una regla de CSS es una combinación de estos valores, representada en formato <strong>(a, b, c, d)</strong>, donde:
-- <strong>a</strong> es el número de ID.
-- <strong>b</strong> es el número de clases, pseudoclases y atributos.
-- <strong>c</strong> es el número de elementos y pseudoelementos.
-- <strong>d</strong> es el valor de selectores universales o combinadores, que siempre es <strong>0</strong>.</p>
+<p>El puntaje final de una regla de CSS es una combinación de estos valores, representada en formato <strong>(a, b, c, d)</strong>, donde:</p>
+<ul>
+<li><strong>a</strong> es el número de ID.</li>
+<li><strong>b</strong> es el número de clases, pseudoclases y atributos.</li>
+<li><strong>c</strong> es el número de elementos y pseudoelementos.</li>
+<li><strong>d</strong> es el valor de selectores universales o combinadores, que siempre es <strong>0</strong>.</li>
+</ul>
 <h3 id="ejemplos-de-especificidad"><strong>Ejemplos de especificidad</strong></h3>
 <ol>
-<li>
-<p><strong>Selector de tipo de elemento</strong><br />
-   <div class="highlight"><pre><span></span><code><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-   La especificidad es <strong>(0, 0, 1, 0)</strong> porque es un <strong>selector de tipo de elemento</strong> (el <code>&lt;p&gt;</code>).</p>
-</li>
-<li>
-<p><strong>Selector de clase</strong><br />
-   <div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">mi-clase</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-   La especificidad es <strong>(0, 1, 0, 0)</strong> porque es un <strong>selector de clase</strong> (<code>.mi-clase</code>).</p>
-</li>
-<li>
-<p><strong>Selector de ID</strong><br />
-   <div class="highlight"><pre><span></span><code><span class="p">#</span><span class="nn">mi-id</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">green</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-   La especificidad es <strong>(1, 0, 0, 0)</strong> porque es un <strong>selector de ID</strong> (<code>#mi-id</code>).</p>
-</li>
-<li>
-<p><strong>Combinación de selectores</strong><br />
-   <div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="p">.</span><span class="nc">mi-clase</span><span class="w"> </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">yellow</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-   La especificidad es <strong>(0, 1, 1, 0)</strong> porque hay un <strong>selector de clase</strong> (<code>.mi-clase</code>) y un <strong>selector de tipo de elemento</strong> (<code>div</code>, <code>p</code>).</p>
-</li>
-<li>
-<p><strong>Uso de <code>!important</code></strong><br />
-   Aunque <strong><code>!important</code></strong> no afecta la especificidad numérica, <strong>aumenta la prioridad</strong> de la regla sin tener en cuenta la especificidad.</p>
-</li>
+<li><strong>Selector de tipo de elemento</strong></li>
 </ol>
-<p><div class="highlight"><pre><span></span><code><span class="p">#</span><span class="nn">mi-id</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">purple</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-   La especificidad es <strong>(1, 0, 0, 0)</strong>, pero como tiene <strong><code>!important</code></strong>, esta regla tiene la <strong>máxima prioridad</strong>, incluso si hay otras reglas más específicas.</p>
+<p>La especificidad es <strong>(0, 0, 1, 0)</strong> porque es un <strong>selector de tipo de elemento</strong> (el <code>&lt;p&gt;</code>).</p>
+<ol>
+<li><strong>Selector de clase</strong></li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">mi-clase</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>La especificidad es <strong>(0, 1, 0, 0)</strong> porque es un <strong>selector de clase</strong> (<code>.mi-clase</code>).</p>
+<ol>
+<li><strong>Selector de ID</strong></li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="p">#</span><span class="nn">mi-id</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">green</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>La especificidad es <strong>(1, 0, 0, 0)</strong> porque es un <strong>selector de ID</strong> (<code>#mi-id</code>).</p>
+<ol>
+<li><strong>Combinación de selectores</strong></li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="p">.</span><span class="nc">mi-clase</span><span class="w"> </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">yellow</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>La especificidad es <strong>(0, 1, 1, 0)</strong> porque hay un <strong>selector de clase</strong> (<code>.mi-clase</code>) y un <strong>selector de tipo de elemento</strong> (<code>div</code>, <code>p</code>).</p>
+<ol>
+<li><strong>Uso de <code>!important</code></strong><br />
+   Aunque <strong><code>!important</code></strong> no afecta la especificidad numérica, <strong>aumenta la prioridad</strong> de la regla sin tener en cuenta la especificidad.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="p">#</span><span class="nn">mi-id</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">purple</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>La especificidad es <strong>(1, 0, 0, 0)</strong>, pero como tiene <strong><code>!important</code></strong>, esta regla tiene la <strong>máxima prioridad</strong>, incluso si hay otras reglas más específicas.</p>
 <h3 id="que-pasa-cuando-las-reglas-tienen-la-misma-especificidad"><strong>¿Qué pasa cuando las reglas tienen la misma especificidad?</strong></h3>
 <p>Cuando dos reglas tienen la misma especificidad, la <strong>última</strong> regla en el archivo CSS o en la hoja de estilos será la que se aplique. Esto es lo que se conoce como el <strong>orden de aparición</strong>.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">green</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">green</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="nt">p</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>En este caso, el color de los párrafos será <strong>rojo</strong>, porque la segunda regla se encuentra después de la primera, <strong>a pesar de que ambas tienen la misma especificidad</strong>.</p>
 <h3 id="ejemplo-de-como-se-calcula-la-especificidad"><strong>Ejemplo de cómo se calcula la especificidad</strong></h3>
 <h4 id="ejemplo-1"><strong>Ejemplo 1:</strong></h4>
-<p><div class="highlight"><pre><span></span><code><span class="p">#</span><span class="nn">menu</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">green</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="p">#</span><span class="nn">menu</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">green</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="p">.</span><span class="nc">menu</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-- <strong><code>#menu a</code></strong> tiene una especificidad de <strong>(1, 0, 1, 0)</strong>.
-- <strong><code>.menu a</code></strong> tiene una especificidad de <strong>(0, 1, 1, 0)</strong>.</p>
+<ul>
+<li><strong><code>#menu a</code></strong> tiene una especificidad de <strong>(1, 0, 1, 0)</strong>.</li>
+<li><strong><code>.menu a</code></strong> tiene una especificidad de <strong>(0, 1, 1, 0)</strong>.</li>
+</ul>
 <p>En este caso, <strong><code>#menu a</code></strong> es más específico, así que la regla de color será <strong>verde</strong>.</p>
 <h4 id="ejemplo-2"><strong>Ejemplo 2:</strong></h4>
-<p><div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="nt">div</span><span class="w"> </span><span class="nt">p</span><span class="p">.</span><span class="nc">highlight</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">yellow</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">yellow</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-- <strong><code>div p</code></strong> tiene una especificidad de <strong>(0, 0, 2, 0)</strong>.
-- <strong><code>div p.highlight</code></strong> tiene una especificidad de <strong>(0, 1, 2, 0)</strong>.</p>
+<ul>
+<li><strong><code>div p</code></strong> tiene una especificidad de <strong>(0, 0, 2, 0)</strong>.</li>
+<li><strong><code>div p.highlight</code></strong> tiene una especificidad de <strong>(0, 1, 2, 0)</strong>.</li>
+</ul>
 <p>La regla <strong><code>div p.highlight</code></strong> será la que prevalezca, aplicando <strong>color amarillo</strong>.</p>
 <hr />
 <h3 id="resumen"><strong>Resumen</strong></h3>
@@ -1668,14 +1677,14 @@
 <li><strong>Selectores de Elemento</strong>: Selecciona todos los elementos de un tipo específico.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">green</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">green</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <ul>
 <li><strong>Selectores Contextuales</strong>: Seleccionan un elemento solo si está dentro de otro.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="nt">article</span><span class="w"> </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">purple</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">purple</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <ul>
@@ -1683,11 +1692,11 @@
 </ul>
 <div class="highlight"><pre><span></span><code><span class="c">/* Selector de clase */</span>
 <span class="p">.</span><span class="nc">miClase</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">orange</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">orange</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="c">/* Selector de ID */</span>
 <span class="p">#</span><span class="nn">miId</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <hr />
@@ -1699,7 +1708,7 @@
 <p><strong>Ejemplo</strong>: Cambiar el color de un enlace al pasar el ratón por encima.</p>
 <div class="highlight"><pre><span></span><code><span class="c">/* Cambiar el color de los enlaces al pasar el ratón */</span>
 <span class="nt">a</span><span class="p">:</span><span class="nd">hover</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <p><strong>1.2 <code>:active</code></strong></p>
@@ -1707,7 +1716,7 @@
 <p><strong>Ejemplo</strong>: Cambiar el color de un botón cuando se hace clic en él.</p>
 <div class="highlight"><pre><span></span><code><span class="c">/* Cambiar el color de un botón al ser presionado */</span>
 <span class="nt">button</span><span class="p">:</span><span class="nd">active</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">green</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">green</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <p><strong>1.3 <code>:focus</code></strong></p>
@@ -1715,8 +1724,8 @@
 <p><strong>Ejemplo</strong>: Cambiar el borde de un campo de texto cuando está enfocado.</p>
 <div class="highlight"><pre><span></span><code><span class="c">/* Cambiar el borde de un campo de texto cuando tiene el foco */</span>
 <span class="nt">input</span><span class="p">:</span><span class="nd">focus</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">border-color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
-<span class="w">    </span><span class="k">outline</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
+<span class="w">  </span><span class="k">outline</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <p><strong>1.4 <code>:nth-child()</code></strong></p>
@@ -1724,7 +1733,7 @@
 <p><strong>Ejemplo</strong>: Seleccionar el primer párrafo dentro de un contenedor y darle un estilo diferente.</p>
 <div class="highlight"><pre><span></span><code><span class="c">/* Estilizar el primer párrafo dentro de un contenedor */</span>
 <span class="nt">div</span><span class="w"> </span><span class="nt">p</span><span class="p">:</span><span class="nd">nth-child</span><span class="o">(</span><span class="nt">1</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">orange</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">orange</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>Puedes usar valores como <strong><code>odd</code></strong> (impares) o <strong><code>even</code></strong> (pares), o incluso expresar una <strong>fórmula</strong> como <code>2n+1</code> para seleccionar elementos específicos en una secuencia.</p>
@@ -1733,7 +1742,7 @@
 <p><strong>Ejemplo</strong>: Seleccionar el primer elemento de una lista y darle un estilo diferente.</p>
 <div class="highlight"><pre><span></span><code><span class="c">/* Estilizar el primer ítem de una lista */</span>
 <span class="nt">ul</span><span class="w"> </span><span class="nt">li</span><span class="p">:</span><span class="nd">first-child</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="kc">bold</span><span class="p">;</span>
+<span class="w">  </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="kc">bold</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <p><strong>1.6 <code>:last-child</code></strong></p>
@@ -1741,7 +1750,7 @@
 <p><strong>Ejemplo</strong>: Cambiar el estilo del último párrafo de un contenedor.</p>
 <div class="highlight"><pre><span></span><code><span class="c">/* Estilizar el último párrafo dentro de un contenedor */</span>
 <span class="nt">div</span><span class="w"> </span><span class="nt">p</span><span class="p">:</span><span class="nd">last-child</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">font-style</span><span class="p">:</span><span class="w"> </span><span class="kc">italic</span><span class="p">;</span>
+<span class="w">  </span><span class="k">font-style</span><span class="p">:</span><span class="w"> </span><span class="kc">italic</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <p><strong>1.7 <code>:nth-of-type()</code></strong></p>
@@ -1749,7 +1758,7 @@
 <p><strong>Ejemplo</strong>: Seleccionar el segundo párrafo de un contenedor que solo tiene párrafos.</p>
 <div class="highlight"><pre><span></span><code><span class="c">/* Seleccionar el segundo párrafo en un contenedor */</span>
 <span class="nt">div</span><span class="w"> </span><span class="nt">p</span><span class="p">:</span><span class="nd">nth-of-type</span><span class="o">(</span><span class="nt">2</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <p><strong>1.8 <code>:not()</code></strong></p>
@@ -1757,7 +1766,7 @@
 <p><strong>Ejemplo</strong>: Seleccionar todos los párrafos excepto los de clase <code>.excluir</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="c">/* Aplicar estilos a todos los párrafos, excepto los de clase `.excluir` */</span>
 <span class="nt">p</span><span class="p">:</span><span class="nd">not</span><span class="o">(</span><span class="p">.</span><span class="nc">excluir</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">green</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">green</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <hr />
@@ -1765,23 +1774,23 @@
 <p><strong>HTML Base</strong></p>
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ejemplo de Pseudoselectores<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-<span class="w">        </span><span class="c">/* Cambiar color de los elementos al pasar el ratón por encima */</span>
-<span class="w">        </span><span class="p">.</span><span class="nc">miElemento</span><span class="p">:</span><span class="nd">hover</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
-<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="c">/* Cambiar color de los elementos al pasar el ratón por encima */</span>
+<span class="w">      </span><span class="p">.</span><span class="nc">miElemento</span><span class="p">:</span><span class="nd">hover</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
 <span class="w">    </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Prueba de Pseudoselectores<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;miElemento&quot;</span><span class="p">&gt;</span>Pasa el ratón sobre este texto para cambiar su color.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-
-<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;miElemento&quot;</span><span class="p">&gt;</span>
+      Pasa el ratón sobre este texto para cambiar su color.
+    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>En este ejemplo, se usa el pseudoselector <strong><code>:hover</code></strong> para cambiar el color del texto a <strong>rojo</strong> cuando el usuario pasa el ratón sobre el elemento con la clase <code>.miElemento</code>.</p>
@@ -1798,33 +1807,30 @@
 <h3 id="24-la-palabra-clave-important"><strong>2.4 La palabra clave <code>!important</code></strong></h3>
 <p>La palabra clave <code>!important</code> fuerza la aplicación de una regla, incluso si existe una regla más específica.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">black</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">black</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <hr />
 <h2 id="3-el-modelo-de-cajas-de-css"><strong>3. El Modelo de Cajas de CSS</strong></h2>
 <p>El <strong>modelo de cajas</strong> es un concepto esencial en CSS. Cada elemento en una página web se representa como una caja rectangular que consta de varias partes:</p>
 <p><img alt="Modelo de caja" src="../img/img11.png" /></p>
-<p>¡Claro! Aquí tienes el contenido ampliado sobre el <strong>Modelo de Cajas en CSS</strong> con las explicaciones adicionales:</p>
-<hr />
-<h1 id="el-modelo-de-cajas-de-css-ampliado"><strong>El Modelo de Cajas de CSS (Ampliado)</strong></h1>
 <p>En CSS, cada elemento en la página web se representa como una <strong>caja rectangular</strong>. Cada caja se compone de varias áreas que controlan su <strong>tamaño, espaciado y posición</strong>. En este punto ampliamos la explicación de las propiedades más importantes que definen cómo se organizan estos espacios, además de cómo se utilizan las propiedades <strong>top, right, bottom y left</strong> para controlar la <strong>ubicación</strong> de los elementos.</p>
 <h2 id="31-area-de-contenido-y-relleno-padding"><strong>3.1 Área de Contenido y Relleno (Padding)</strong></h2>
 <p>El <strong>contenido</strong> es la parte principal del elemento (por ejemplo, el texto o la imagen), y el <strong>relleno</strong> (padding) es el espacio entre el contenido y el borde del elemento. Esto permite que el contenido no esté directamente contra el borde del contenedor, dándole un respiro visual.</p>
 <h3 id="propiedad-padding"><strong>Propiedad <code>padding</code></strong></h3>
 <p>La propiedad <code>padding</code> puede tener uno o más valores. Si solo se define un valor, este se aplica de manera uniforme a los cuatro lados del elemento.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
-<span class="w">    </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="kc">black</span><span class="p">;</span>
-<span class="w">    </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
-<span class="w">    </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="kc">black</span><span class="p">;</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>Este código aplica <strong>10px de relleno</strong> alrededor del contenido, y un borde de <strong>1px de color negro</strong>. La propiedad <code>width</code> y <code>height</code> definen las dimensiones del contenedor.</p>
 <p>Si se desea aplicar diferentes valores de relleno a cada lado del elemento, podemos usar la siguiente sintaxis:</p>
 <h3 id="propiedad-padding-con-valores-separados"><strong>Propiedad <code>padding</code> con valores separados</strong></h3>
 <div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="w"> </span><span class="mi">40</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="w"> </span><span class="mi">40</span><span class="kt">px</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>En este caso, el orden de los valores es:</p>
@@ -1839,7 +1845,7 @@
 <p>El borde rodea el contenido y el relleno de un elemento. Se puede personalizar su <strong>grosor</strong>, <strong>estilo</strong> y <strong>color</strong>. El borde está <strong>por fuera del padding</strong>, lo que lo convierte en una zona visual importante para separar elementos.</p>
 <h3 id="propiedad-border"><strong>Propiedad <code>border</code></strong></h3>
 <div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>Este código aplica un <strong>borde de 2px</strong> de grosor y <strong>color azul</strong>. Los valores de la propiedad <code>border</code> son:</p>
@@ -1850,31 +1856,31 @@
 </ul>
 <p>Si deseas aplicar cada propiedad por separado, puedes usar las siguientes propiedades: <code>border-width</code>, <code>border-style</code>, <code>border-color</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">border-width</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="p">;</span>
-<span class="w">    </span><span class="k">border-style</span><span class="p">:</span><span class="w"> </span><span class="kc">solid</span><span class="p">;</span>
-<span class="w">    </span><span class="k">border-color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-width</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-style</span><span class="p">:</span><span class="w"> </span><span class="kc">solid</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="propiedades-para-bordes-de-cada-lado"><strong>Propiedades para bordes de cada lado</strong></h3>
 <p>Al igual que con el padding, podemos aplicar <strong>bordes individuales</strong> a cada lado del elemento. Esto se hace con las propiedades <code>border-top</code>, <code>border-right</code>, <code>border-bottom</code>, y <code>border-left</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">border-top</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
-<span class="w">    </span><span class="k">border-right</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">dashed</span><span class="w"> </span><span class="kc">green</span><span class="p">;</span>
-<span class="w">    </span><span class="k">border-bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="kt">px</span><span class="w"> </span><span class="kc">dotted</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
-<span class="w">    </span><span class="k">border-left</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="w"> </span><span class="kc">double</span><span class="w"> </span><span class="kc">black</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-top</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-right</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">dashed</span><span class="w"> </span><span class="kc">green</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="kt">px</span><span class="w"> </span><span class="kc">dotted</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-left</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="w"> </span><span class="kc">double</span><span class="w"> </span><span class="kc">black</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <h2 id="33-margenes-margin"><strong>3.3 Márgenes (Margin)</strong></h2>
 <p>El <strong>margen</strong> es el espacio <strong>exterior</strong> de la caja, separando el elemento de otros elementos. Al igual que el <strong>padding</strong>, se puede aplicar de manera uniforme o con valores diferentes para cada lado.</p>
 <h3 id="propiedad-margin"><strong>Propiedad <code>margin</code></strong></h3>
 <div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>Este código aplica <strong>20px de margen</strong> alrededor de un elemento, separándolo de los elementos cercanos.</p>
 <h3 id="propiedad-margin-con-valores-separados"><strong>Propiedad <code>margin</code> con valores separados</strong></h3>
 <div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="w"> </span><span class="mi">40</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="w"> </span><span class="mi">40</span><span class="kt">px</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>Aquí el orden de los valores es el mismo que para <strong>padding</strong>:</p>
@@ -1887,27 +1893,27 @@
 <hr />
 <h2 id="34-propiedades-de-posicionamiento-top-right-bottom-left"><strong>3.4 Propiedades de Posicionamiento: top, right, bottom, left</strong></h2>
 <p>Las propiedades <strong><code>top</code></strong>, <strong><code>right</code></strong>, <strong><code>bottom</code></strong> y <strong><code>left</code></strong> se utilizan en el contexto de <strong>elementos posicionados</strong> con la propiedad <strong><code>position</code></strong>. Estas propiedades <strong>mueven un elemento dentro de su contenedor</strong> en función de su tipo de <strong>posición</strong>.</p>
-<h3 id="41-propiedades-de-posicionamiento"><strong>4.1 Propiedades de Posicionamiento</strong></h3>
+<h3 id="341-propiedades-de-posicionamiento"><strong>3.4.1 Propiedades de Posicionamiento</strong></h3>
 <p>Las propiedades de <strong>posición</strong> como <strong><code>top</code></strong>, <strong><code>right</code></strong>, <strong><code>bottom</code></strong> y <strong><code>left</code></strong> definen la ubicación de los elementos respecto a su contenedor o a otros elementos en la página. Estas propiedades solo se aplican si el elemento tiene una propiedad <code>position</code> distinta a <code>static</code> (por defecto). Las opciones más comunes son <strong><code>relative</code></strong>, <strong><code>absolute</code></strong>, y <strong><code>fixed</code></strong>.</p>
 <h4 id="top-y-left-con-position-absolute"><strong><code>top</code> y <code>left</code> con <code>position: absolute</code></strong></h4>
 <p>Cuando un elemento tiene la propiedad <code>position: absolute</code>, sus valores de <code>top</code>, <code>right</code>, <code>bottom</code> y <code>left</code> se utilizan para mover el elemento respecto a su contenedor más cercano con <code>position: relative</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">absolute</span><span class="p">;</span>
-<span class="w">    </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
-<span class="w">    </span><span class="k">left</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">absolute</span><span class="p">;</span>
+<span class="w">  </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">left</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>En este ejemplo, el <strong>elemento <code>div</code></strong> será posicionado <strong>50px</strong> desde la parte superior y <strong>100px</strong> desde la parte izquierda de su contenedor más cercano con <code>position: relative</code>.</p>
 <h4 id="top-y-left-con-position-relative"><strong><code>top</code> y <code>left</code> con <code>position: relative</code></strong></h4>
 <p>Cuando un elemento tiene la propiedad <code>position: relative</code>, se mueve respecto a su <strong>ubicación original</strong>.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">relative</span><span class="p">;</span>
-<span class="w">    </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
-<span class="w">    </span><span class="k">left</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">relative</span><span class="p">;</span>
+<span class="w">  </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">left</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>Aquí, el <strong>elemento <code>div</code></strong> se moverá <strong>20px hacia abajo</strong> y <strong>30px hacia la derecha</strong> desde su <strong>posición inicial</strong> en el flujo de la página.</p>
-<h3 id="42-orden-de-las-propiedades"><strong>4.2 Orden de las Propiedades</strong></h3>
+<h3 id="342-orden-de-las-propiedades"><strong>3.4.2 Orden de las Propiedades</strong></h3>
 <p>En CSS, podemos <strong>definir varias propiedades en una sola línea</strong>. Esto ayuda a escribir código más limpio y eficiente. Cuando se combinan propiedades de <strong>márgenes, relleno y bordes</strong>, los valores siguen un orden estándar:</p>
 <ol>
 <li><strong><code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code></strong>: Si definimos estas propiedades por separado, lo hacemos en este orden, de arriba a abajo.</li>
@@ -1915,99 +1921,99 @@
 </ol>
 <h3 id="ejemplo-de-sintaxis-combinada"><strong>Ejemplo de sintaxis combinada</strong></h3>
 <div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="w"> </span><span class="mi">40</span><span class="kt">px</span><span class="w"> </span><span class="mi">50</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* top right bottom left */</span>
-<span class="w">    </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">15</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* top-bottom left-right */</span>
-<span class="w">    </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="w">  </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="w"> </span><span class="mi">40</span><span class="kt">px</span><span class="w"> </span><span class="mi">50</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* top right bottom left */</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">15</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* top-bottom left-right */</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>Aquí, <code>margin</code> y <code>padding</code> se definen con valores en <strong>sentido horario</strong> (comenzando desde la parte superior) y las <strong>dimensiones del borde</strong> son independientes de este orden.</p>
 <hr />
 <h3 id="resumen_2">Resumen</h3>
-<p>En CSS, podemos utilizar las propiedades <strong>padding</strong>, <strong>border</strong> y <strong>margin</strong> para controlar el espaciado y el borde de los elementos. Las propiedades <strong>top</strong>, <strong>right</strong>, <strong>bottom</strong> y <strong>left</strong> permiten ubicar los elementos en el contenedor, mientras que se pueden definir de manera individual o conjunta, dependiendo de las necesidades del diseño.
-Puedes ampliar contenido en <a href="https://www.w3schools.com/css/css_boxmodel.asp">w3Schools</a></p>
+<p>En CSS, podemos utilizar las propiedades <strong>padding</strong>, <strong>border</strong> y <strong>margin</strong> para controlar el espaciado y el borde de los elementos. Las propiedades <strong>top</strong>, <strong>right</strong>, <strong>bottom</strong> y <strong>left</strong> permiten ubicar los elementos en el contenedor, mientras que se pueden definir de manera individual o conjunta, dependiendo de las necesidades del diseño.</p>
+<p>Puedes ampliar contenido en <a href="https://www.w3schools.com/css/css_boxmodel.asp">w3Schools</a></p>
 <hr />
-<h2 id="34-unidades-de-medida-en-css"><strong>3.4 Unidades de Medida en CSS</strong></h2>
+<h2 id="35-unidades-de-medida-en-css"><strong>3.5 Unidades de Medida en CSS</strong></h2>
 <p>En CSS, las <strong>unidades de medida</strong> son esenciales para definir <strong>tamaños</strong> de elementos, márgenes, rellenos y otros estilos. Existen diferentes tipos de unidades que se pueden utilizar, y la elección de la unidad adecuada depende de la <strong>situación</strong> y el <strong>diseño</strong> que queremos implementar.</p>
-<h3 id="341-unidades-absolutas"><strong>3.4.1 Unidades Absolutas</strong></h3>
+<h3 id="351-unidades-absolutas"><strong>3.5.1 Unidades Absolutas</strong></h3>
 <p>Las <strong>unidades absolutas</strong> están basadas en un valor fijo y no cambian en función del dispositivo o de la resolución de la pantalla.</p>
 <ul>
 <li><strong>px (píxeles)</strong>: Es la unidad más común y se utiliza para establecer tamaños de elementos fijos. Un píxel es la unidad de medida básica para las pantallas, pero su tamaño puede variar ligeramente en dispositivos con pantallas de alta resolución (como los dispositivos Retina).</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="kt">px</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <ul>
 <li><strong>cm, mm (centímetros, milímetros)</strong>: Estas unidades están basadas en el tamaño físico y se utilizan muy poco en la web.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">cm</span><span class="p">;</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">cm</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <ul>
 <li><strong>in (pulgadas)</strong>: Similar a cm y mm, se utiliza poco en la web, pero puede ser útil cuando trabajamos con medios físicos como impresión.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">in</span><span class="p">;</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">in</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="342-unidades-relativas"><strong>3.4.2 Unidades Relativas</strong></h3>
+<h3 id="352-unidades-relativas"><strong>3.5.2 Unidades Relativas</strong></h3>
 <p>Las <strong>unidades relativas</strong> son más flexibles y se ajustan a factores como el tamaño de la pantalla, el tamaño de fuente o el contenedor del elemento.</p>
 <ul>
 <li><strong>% (porcentaje)</strong>: El porcentaje se utiliza en relación con el <strong>elemento contenedor</strong>. Por ejemplo, si un contenedor tiene un ancho del 100%, un elemento con <code>width: 50%</code> tendrá la mitad del ancho del contenedor.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <ul>
 <li><strong>em</strong>: Esta unidad está relacionada con el tamaño de la <strong>fuente</strong> del elemento. <code>1em</code> es igual al tamaño de la fuente del elemento en el que se utiliza. Si el tamaño de la fuente es de 16px, entonces <code>1em</code> equivale a 16px.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">em</span><span class="p">;</span><span class="w"> </span><span class="c">/* 32px si la fuente base es 16px */</span>
+<span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">em</span><span class="p">;</span><span class="w"> </span><span class="c">/* 32px si la fuente base es 16px */</span>
 <span class="p">}</span>
 </code></pre></div>
 <ul>
 <li><strong>rem (root em)</strong>: Similar a <code>em</code>, pero en lugar de basarse en el tamaño de la fuente del elemento, <code>rem</code> se basa en el tamaño de la fuente raíz (<code>&lt;html&gt;</code>). Esto lo hace más predecible y fácil de usar en toda la página.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">rem</span><span class="p">;</span><span class="w"> </span><span class="c">/* 160px si la fuente raíz es 16px */</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">rem</span><span class="p">;</span><span class="w"> </span><span class="c">/* 160px si la fuente raíz es 16px */</span>
 <span class="p">}</span>
 </code></pre></div>
 <ul>
 <li><strong>vw y vh (viewport width y height)</strong>: Estas unidades están basadas en el <strong>tamaño de la ventana del navegador</strong>. <code>1vw</code> es el <strong>1% del ancho de la ventana</strong> y <code>1vh</code> es el <strong>1% de la altura de la ventana</strong>.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">vw</span><span class="p">;</span><span class="w"> </span><span class="c">/* 50% del ancho de la ventana del navegador */</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">vw</span><span class="p">;</span><span class="w"> </span><span class="c">/* 50% del ancho de la ventana del navegador */</span>
 <span class="p">}</span>
 </code></pre></div>
 <hr />
-<h2 id="35-propiedades-de-tamano-width-height-left-y-right"><strong>3.5 Propiedades de Tamaño: width, height, left y right</strong></h2>
+<h2 id="36-propiedades-de-tamano-width-height-left-y-right"><strong>3.6 Propiedades de Tamaño: width, height, left y right</strong></h2>
 <p>En CSS, <strong><code>width</code></strong>, <strong><code>height</code></strong>, <strong><code>left</code></strong> y <strong><code>right</code></strong> son propiedades fundamentales que permiten definir las <strong>dimensiones</strong> de los elementos y su <strong>ubicación</strong> en el diseño.</p>
-<h3 id="351-definir-width-y-height"><strong>3.5.1 Definir width y height</strong></h3>
+<h3 id="361-definir-width-y-height"><strong>3.6.1 Definir width y height</strong></h3>
 <ul>
 <li><strong><code>width</code></strong>: Especifica el ancho de un elemento.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <ul>
 <li><strong><code>height</code></strong>: Especifica la altura de un elemento.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="352-unidades-para-width-y-height"><strong>3.5.2 Unidades para width y height</strong></h3>
+<h3 id="362-unidades-para-width-y-height"><strong>3.6.2 Unidades para width y height</strong></h3>
 <p>Puedes usar cualquier unidad de medida que hemos visto (px, %, em, etc.) para estas propiedades.</p>
 <h4 id="ejemplo-usando-diferentes-unidades-para-width-y-height">Ejemplo: Usando diferentes unidades para <code>width</code> y <code>height</code>:</h4>
 <div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">%</span><span class="p">;</span><span class="w"> </span><span class="c">/* 50% del contenedor */</span>
-<span class="w">    </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">em</span><span class="p">;</span><span class="w"> </span><span class="c">/* 10 veces el tamaño de la fuente */</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">%</span><span class="p">;</span><span class="w"> </span><span class="c">/* 50% del contenedor */</span>
+<span class="w">  </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">em</span><span class="p">;</span><span class="w"> </span><span class="c">/* 10 veces el tamaño de la fuente */</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="353-definir-left-y-right"><strong>3.5.3 Definir left y right</strong></h3>
+<h3 id="363-definir-left-y-right"><strong>3.6.3 Definir left y right</strong></h3>
 <p>Las propiedades <strong><code>left</code></strong> y <strong><code>right</code></strong> se utilizan para <strong>posicionar un elemento</strong> en relación con su contenedor (usualmente con <strong>position: absolute</strong> o <strong>position: relative</strong>).</p>
 <ul>
 <li><strong><code>left</code></strong>: Define la distancia entre el borde izquierdo de un elemento y el borde izquierdo de su contenedor.</li>
@@ -2015,131 +2021,947 @@ Puedes ampliar contenido en <a href="https://www.w3schools.com/css/css_boxmodel.
 </ul>
 <h4 id="ejemplo-usando-left-y-right-para-posicionar-un-elemento">Ejemplo: Usando <code>left</code> y <code>right</code> para posicionar un elemento:</h4>
 <div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">absolute</span><span class="p">;</span>
-<span class="w">    </span><span class="k">left</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* 20px desde el borde izquierdo del contenedor */</span>
-<span class="w">    </span><span class="k">right</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* 20px desde el borde derecho del contenedor */</span>
-<span class="w">    </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
-<span class="w">    </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">absolute</span><span class="p">;</span>
+<span class="w">  </span><span class="k">left</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* 20px desde el borde izquierdo del contenedor */</span>
+<span class="w">  </span><span class="k">right</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* 20px desde el borde derecho del contenedor */</span>
+<span class="w">  </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="354-definir-dimensiones-de-manera-separada"><strong>3.5.4 Definir dimensiones de manera separada</strong></h3>
+<h3 id="364-definir-dimensiones-de-manera-separada"><strong>3.6.4 Definir dimensiones de manera separada</strong></h3>
 <p>En algunas situaciones, podemos querer definir solo algunas de las dimensiones de un elemento, sin tener que especificar todas.</p>
 <h4 id="1-definir-solo-width-y-height"><strong>1. Definir solo <code>width</code> y <code>height</code></strong></h4>
 <p>Puedes definir únicamente <code>width</code> o <code>height</code>, y el otro valor tomará el valor por defecto. Por ejemplo, si solo defines el ancho de un elemento y no defines la altura, el navegador ajustará la altura automáticamente según el contenido.</p>
 <h4 id="ejemplo">Ejemplo:</h4>
 <div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
-<span class="w">    </span><span class="c">/* La altura será automática según el contenido */</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="c">/* La altura será automática según el contenido */</span>
 <span class="p">}</span>
 </code></pre></div>
 <h4 id="2-definir-top-left-right-o-bottom"><strong>2. Definir <code>top</code>, <code>left</code>, <code>right</code> o <code>bottom</code></strong></h4>
 <p>Cuando un elemento está posicionado de manera <strong>absoluta</strong> o <strong>relativa</strong>, solo necesitas definir las propiedades de <strong>ubicación</strong> (<code>top</code>, <code>left</code>, <code>right</code>, <code>bottom</code>) que quieras usar. Las otras propiedades no se necesitarán.</p>
 <h4 id="ejemplo_1">Ejemplo:</h4>
 <div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">absolute</span><span class="p">;</span>
-<span class="w">    </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span><span class="w">  </span><span class="c">/* 10px desde el borde superior */</span>
-<span class="w">    </span><span class="k">left</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* 20px desde el borde izquierdo */</span>
+<span class="w">  </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">absolute</span><span class="p">;</span>
+<span class="w">  </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* 10px desde el borde superior */</span>
+<span class="w">  </span><span class="k">left</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* 20px desde el borde izquierdo */</span>
 <span class="p">}</span>
 </code></pre></div>
 <hr />
 <h3 id="resumen_3"><strong>Resumen</strong></h3>
 <p>En CSS, podemos utilizar diferentes unidades de medida para adaptar los estilos a diferentes dispositivos y situaciones. Es importante entender cómo utilizar <strong>unidades relativas</strong> como <strong><code>em</code>, <code>rem</code>, <code>%</code></strong> y <strong>unidades absolutas</strong> como <strong><code>px</code>, <code>cm</code></strong> para lograr un diseño flexible. Además, el uso de las propiedades <code>width</code>, <code>height</code>, <code>left</code>, y <code>right</code> junto con diferentes unidades nos permite crear diseños dinámicos y adaptables a cualquier pantalla.</p>
 <hr />
-<p>Este contenido amplía la explicación sobre <strong>medidas</strong> y <strong>dimensiones</strong> en CSS, detallando cómo utilizarlas y cómo afectan a la disposición de los elementos. Si necesitas más ejemplos o aclaraciones, ¡avísame! 😊</p>
-<hr />
-<h2 id="4-propiedades-de-fuente-y-texto"><strong>4. Propiedades de Fuente y Texto</strong></h2>
-<h3 id="41-propiedades-de-fuente"><strong>4.1 Propiedades de Fuente</strong></h3>
-<p>Las propiedades de fuente controlan la <strong>tipografía</strong> del texto. Las más comunes son:</p>
+<h1 id="41-propiedades-de-fuente"><strong>4.1 Propiedades de Fuente</strong></h1>
+<p>Las <strong>propiedades de fuente</strong> controlan la tipografía del texto. Son esenciales para definir la apariencia del texto y hacerlo más <strong>legible</strong> y <strong>atractivo</strong>. A continuación, veremos cómo se configuran estas propiedades y qué valores pueden tomar.</p>
+<h3 id="font-family"><strong><code>font-family</code></strong></h3>
+<p>La propiedad <code>font-family</code> se utiliza para definir la <strong>familia tipográfica</strong> del texto. Puedes especificar una lista de fuentes como alternativas, de modo que si la primera fuente no está disponible, el navegador utilizará la siguiente de la lista.</p>
+<h4 id="valores-de-font-family"><strong>Valores de <code>font-family</code></strong></h4>
 <ul>
-<li><code>font-family</code>: Define la fuente.</li>
-<li><code>font-size</code>: Define el tamaño de la fuente.</li>
-<li><code>font-weight</code>: Define el grosor del texto.</li>
+<li><strong>Nombres de fuentes</strong>: Se especifican como cadenas de texto. Ejemplo: <code>'Arial'</code>, <code>'Times New Roman'</code>, etc.</li>
+<li><strong>Fuentes genéricas</strong>: Si no se encuentra la fuente exacta, se puede recurrir a fuentes genéricas como <code>serif</code>, <code>sans-serif</code>, <code>monospace</code>, etc.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;Arial&#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span>
-<span class="w">    </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
-<span class="w">    </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="kc">bold</span><span class="p">;</span>
+<span class="w">  </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Arial&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="42-propiedades-de-texto"><strong>4.2 Propiedades de Texto</strong></h3>
-<p>Estas propiedades afectan el comportamiento y la apariencia del texto:</p>
+<p>En este ejemplo, si <strong>Arial</strong> no está disponible, se utilizará una fuente <strong>sans-serif</strong> como alternativa.</p>
+<h3 id="font-size"><strong><code>font-size</code></strong></h3>
+<p>La propiedad <code>font-size</code> define el <strong>tamaño de la fuente</strong> del texto. Los valores pueden ser especificados en varias unidades de medida.</p>
+<h4 id="valores-de-font-size"><strong>Valores de <code>font-size</code></strong></h4>
 <ul>
-<li><code>text-align</code>: Alinea el texto a la izquierda, centro o derecha.</li>
-<li><code>line-height</code>: Define la altura de las líneas de texto.</li>
-<li><code>text-transform</code>: Modifica el estilo del texto (mayúsculas, minúsculas).</li>
+<li><strong>px (píxeles)</strong>: Una unidad absoluta, muy común en CSS.</li>
+<li><strong>em</strong>: Relativo al tamaño de la fuente del elemento padre.</li>
+<li><strong>rem</strong>: Relativo al tamaño de la fuente raíz (<code>&lt;html&gt;</code>).</li>
+<li><strong>%</strong>: Relativo al tamaño de la fuente del elemento contenedor.</li>
+<li><strong>vw/vh</strong>: Relativo al tamaño de la ventana del navegador.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
-<span class="w">    </span><span class="k">line-height</span><span class="p">:</span><span class="w"> </span><span class="mf">1.5</span><span class="p">;</span>
-<span class="w">    </span><span class="k">text-transform</span><span class="p">:</span><span class="w"> </span><span class="kc">uppercase</span><span class="p">;</span>
+<span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">24</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="font-weight"><strong><code>font-weight</code></strong></h3>
+<p>La propiedad <code>font-weight</code> controla el <strong>grosor</strong> de la fuente. Los valores que puede tomar son:</p>
+<h4 id="valores-de-font-weight"><strong>Valores de <code>font-weight</code></strong></h4>
+<ul>
+<li><strong>normal</strong>: El grosor predeterminado de la fuente.</li>
+<li><strong>bold</strong>: Fuente en negrita.</li>
+<li><strong>lighter</strong>: Fuente más delgada que el valor <code>normal</code>.</li>
+<li><strong>bolder</strong>: Fuente más gruesa que <code>normal</code>.</li>
+<li><strong>Números</strong>: Se puede usar un valor numérico entre 100 y 900, donde <code>100</code> es la más delgada y <code>900</code> es la más gruesa.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="kc">bold</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <hr />
-<h2 id="5-propiedades-de-colores-y-fondos"><strong>5. Propiedades de Colores y Fondos</strong></h2>
-<h3 id="51-colores"><strong>5.1 Colores</strong></h3>
-<p>En CSS, los colores pueden ser definidos mediante <strong>nombres</strong>, <strong>valores hexadecimales</strong>, <strong>rgb</strong> o <strong>rgba</strong>.</p>
+<h1 id="42-propiedades-de-texto"><strong>4.2 Propiedades de Texto</strong></h1>
+<p>Estas propiedades afectan el comportamiento y la apariencia del texto, permitiendo modificar <strong>alineación</strong>, <strong>espaciado entre líneas</strong> y <strong>transformación de texto</strong>.</p>
+<h3 id="text-align"><strong><code>text-align</code></strong></h3>
+<p>La propiedad <code>text-align</code> se utiliza para alinear el texto dentro de su contenedor. Los valores disponibles son:</p>
+<table>
+<thead>
+<tr>
+<th>Valor</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>left</code></td>
+<td>Alinea el texto a la izquierda (valor predeterminado).</td>
+</tr>
+<tr>
+<td><code>right</code></td>
+<td>Alinea el texto a la derecha.</td>
+</tr>
+<tr>
+<td><code>center</code></td>
+<td>Alinea el texto al centro.</td>
+</tr>
+<tr>
+<td><code>justify</code></td>
+<td>Alinea el texto de manera justificada (se distribuye a lo largo de todo el contenedor).</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ejemplo-de-text-align"><strong>Ejemplo de <code>text-align</code></strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este ejemplo centra el texto del encabezado <code>h1</code>. Si el contenido del <code>h1</code> fuera un párrafo largo, se alinearía de manera centrada en su contenedor.</p>
+<h3 id="line-height"><strong><code>line-height</code></strong></h3>
+<p>La propiedad <code>line-height</code> controla la <strong>altura de las líneas</strong> de texto. Es muy útil para mejorar la <strong>legibilidad</strong> de un bloque de texto, especialmente en párrafos con mucho contenido.</p>
+<h4 id="valores-de-line-height"><strong>Valores de <code>line-height</code></strong></h4>
+<ul>
+<li><strong>Número</strong>: El valor de <code>line-height</code> será multiplicado por el tamaño de la fuente.</li>
+<li><strong>Unidad</strong>: Puede ser un valor en <strong>px</strong>, <strong>em</strong>, <strong>rem</strong>, etc.</li>
+<li><strong>Porcentaje</strong>: Se calcula como un porcentaje del tamaño de la fuente.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">line-height</span><span class="p">:</span><span class="w"> </span><span class="mf">1.5</span><span class="p">;</span><span class="w"> </span><span class="c">/* 1.5 veces el tamaño de la fuente */</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="text-transform"><strong><code>text-transform</code></strong></h3>
+<p>La propiedad <code>text-transform</code> permite modificar la <strong>transformación</strong> del texto (mayúsculas, minúsculas, etc.).</p>
+<table>
+<thead>
+<tr>
+<th>Valor</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>uppercase</code></td>
+<td>Convierte todo el texto a mayúsculas.</td>
+</tr>
+<tr>
+<td><code>lowercase</code></td>
+<td>Convierte todo el texto a minúsculas.</td>
+</tr>
+<tr>
+<td><code>capitalize</code></td>
+<td>Convierte la primera letra de cada palabra a mayúscula.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ejemplo-de-text-transform"><strong>Ejemplo de <code>text-transform</code></strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">text-transform</span><span class="p">:</span><span class="w"> </span><span class="kc">uppercase</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este ejemplo convierte todo el texto dentro del <code>h1</code> a <strong>mayúsculas</strong>.</p>
+<hr />
+<h3 id="resumen_4"><strong>Resumen</strong></h3>
+<ul>
+<li><strong><code>font-family</code></strong> se usa para seleccionar la tipografía que se aplicará al texto.</li>
+<li><strong><code>font-size</code></strong> define el tamaño de la fuente, pudiendo utilizarse en diferentes unidades.</li>
+<li><strong><code>font-weight</code></strong> controla el grosor de la fuente, y puede tomar valores como <code>bold</code>, <code>normal</code> o valores numéricos.</li>
+<li><strong><code>text-align</code></strong> se usa para alinear el texto dentro de su contenedor, con valores como <code>left</code>, <code>right</code>, <code>center</code>, y <code>justify</code>.</li>
+<li><strong><code>line-height</code></strong> es útil para definir el espaciado entre las líneas de texto.</li>
+<li><strong><code>text-transform</code></strong> permite transformar el texto a mayúsculas, minúsculas o capitalizar cada palabra.</li>
+</ul>
+<hr />
+<p>Aquí tienes el contenido ampliado sobre <strong>colores</strong> y <strong>fondos</strong> en CSS para que puedas copiarlo directamente en tu proyecto:</p>
+<hr />
+<h1 id="5-propiedades-de-colores-y-fondos"><strong>5. Propiedades de Colores y Fondos</strong></h1>
+<p>En este punto, abordamos cómo aplicar <strong>colores</strong> y <strong>fondos</strong> a los elementos de una página web. Estas propiedades son fundamentales para darle estilo a los elementos, asegurando que se vean atractivos y sean fácilmente legibles. Vamos a profundizar en cómo se manejan los <strong>colores</strong>, las <strong>imágenes de fondo</strong>, y sus propiedades asociadas para crear una web atractiva.</p>
+<h2 id="51-colores-en-css"><strong>5.1 Colores en CSS</strong></h2>
+<p>En CSS, los colores pueden ser definidos de diferentes maneras. Algunas de las más comunes son: <strong>nombres</strong>, <strong>valores hexadecimales</strong>, <strong>rgb</strong> y <strong>rgba</strong>.</p>
+<h3 id="metodos-para-definir-colores"><strong>Métodos para definir colores</strong></h3>
+<ol>
+<li><strong>Nombres de colores</strong>: CSS permite utilizar nombres predefinidos para los colores. Algunos ejemplos son <strong><code>red</code></strong>, <strong><code>blue</code></strong>, <strong><code>green</code></strong>, entre otros.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<ol>
+<li><strong>Valores hexadecimales</strong>: Esta forma de definir colores utiliza el sistema hexadecimal. El formato es <strong>#RRGGBB</strong>, donde <strong>RR</strong>, <strong>GG</strong>, y <strong>BB</strong> son valores hexadecimales para el rojo, verde y azul.</li>
+</ol>
 <div class="highlight"><pre><span></span><code><span class="nt">h2</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#3498db</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#3498db</span><span class="p">;</span><span class="w"> </span><span class="c">/* Azul claro */</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="52-fondos"><strong>5.2 Fondos</strong></h3>
-<p>El fondo de un elemento se puede definir usando la propiedad <code>background-color</code> o <code>background-image</code> para agregar imágenes de fondo.</p>
+<ol>
+<li><strong>rgb()</strong>: El formato <strong>rgb()</strong> define el color utilizando valores enteros para los tres componentes de color: <strong>rojo</strong>, <strong>verde</strong> y <strong>azul</strong>. Los valores van de <strong>0 a 255</strong>.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="nt">h3</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nb">rgb</span><span class="p">(</span><span class="mi">52</span><span class="p">,</span><span class="w"> </span><span class="mi">152</span><span class="p">,</span><span class="w"> </span><span class="mi">219</span><span class="p">);</span><span class="w"> </span><span class="c">/* Azul claro en RGB */</span>
+<span class="p">}</span>
+</code></pre></div>
+<ol>
+<li><strong>rgba()</strong>: El formato <strong>rgba()</strong> es similar a <strong>rgb()</strong>, pero agrega un cuarto parámetro de <strong>opacidad</strong>, lo que permite crear colores semitransparentes. Este valor va de <strong>0 (completamente transparente)</strong> a <strong>1 (completamente opaco)</strong>.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="nt">h4</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">52</span><span class="p">,</span><span class="w"> </span><span class="mi">152</span><span class="p">,</span><span class="w"> </span><span class="mi">219</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">);</span><span class="w"> </span><span class="c">/* Azul claro con 50% de opacidad */</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="colores-con-nombre-mas-comunes"><strong>Colores con nombre más comunes</strong></h3>
+<p>Algunos colores con nombre más comunes en CSS incluyen:</p>
+<table>
+<thead>
+<tr>
+<th>Color</th>
+<th>Código de color</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>red</code></td>
+<td>#FF0000</td>
+</tr>
+<tr>
+<td><code>green</code></td>
+<td>#008000</td>
+</tr>
+<tr>
+<td><code>blue</code></td>
+<td>#0000FF</td>
+</tr>
+<tr>
+<td><code>white</code></td>
+<td>#FFFFFF</td>
+</tr>
+<tr>
+<td><code>black</code></td>
+<td>#000000</td>
+</tr>
+<tr>
+<td><code>gray</code></td>
+<td>#808080</td>
+</tr>
+<tr>
+<td><code>yellow</code></td>
+<td>#FFFF00</td>
+</tr>
+<tr>
+<td><code>orange</code></td>
+<td>#FFA500</td>
+</tr>
+<tr>
+<td><code>pink</code></td>
+<td>#FFC0CB</td>
+</tr>
+<tr>
+<td><code>purple</code></td>
+<td>#800080</td>
+</tr>
+<tr>
+<td><code>brown</code></td>
+<td>#A52A2A</td>
+</tr>
+<tr>
+<td><code>cyan</code></td>
+<td>#00FFFF</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="52-fondos-en-css"><strong>5.2 Fondos en CSS</strong></h2>
+<p>El fondo de un elemento se puede definir utilizando las propiedades <strong><code>background-color</code></strong>, <strong><code>background-image</code></strong>, entre otras. A continuación, veremos cómo podemos controlar estos fondos y qué opciones tenemos disponibles.</p>
+<h3 id="propiedad-background-color"><strong>Propiedad <code>background-color</code></strong></h3>
+<p>La propiedad <code>background-color</code> establece el <strong>color de fondo</strong> de un elemento.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">lightblue</span><span class="p">;</span>
-<span class="w">    </span><span class="k">background-image</span><span class="p">:</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="s1">&#39;imagen.jpg&#39;</span><span class="p">);</span>
-<span class="w">    </span><span class="k">background-size</span><span class="p">:</span><span class="w"> </span><span class="kc">cover</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">lightblue</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="propiedad-background-image"><strong>Propiedad <code>background-image</code></strong></h3>
+<p>La propiedad <code>background-image</code> se utiliza para establecer una <strong>imagen de fondo</strong>. Puedes definir la imagen usando una URL que apunte a una imagen, ya sea en línea o alojada en tu servidor.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-image</span><span class="p">:</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="s2">&quot;background.jpg&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="propiedades-adicionales-de-fondo"><strong>Propiedades adicionales de fondo</strong></h3>
+<p>Además de <code>background-color</code> y <code>background-image</code>, hay varias otras propiedades que nos permiten controlar el comportamiento del fondo.</p>
+<ul>
+<li><strong><code>background-position</code></strong>: Define la posición de la imagen de fondo. Se pueden usar valores en <strong>px</strong>, <strong>%</strong>, o palabras clave como <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code>, o <code>center</code>.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-image</span><span class="p">:</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="s2">&quot;background.jpg&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">background-position</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong><code>background-size</code></strong>: Controla el tamaño de la imagen de fondo. Los valores más comunes son <code>cover</code> (cubre todo el contenedor) y <code>contain</code> (ajusta la imagen al tamaño del contenedor).</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-image</span><span class="p">:</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="s2">&quot;background.jpg&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">background-size</span><span class="p">:</span><span class="w"> </span><span class="kc">cover</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong><code>background-attachment</code></strong>: Define si la imagen de fondo se mueve con el contenido al hacer scroll o si permanece fija. Los valores son <code>scroll</code> (predeterminado) o <code>fixed</code> (fija).</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-image</span><span class="p">:</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="s2">&quot;background.jpg&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">background-attachment</span><span class="p">:</span><span class="w"> </span><span class="kc">fixed</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background-size</span><span class="p">:</span><span class="w"> </span><span class="kc">cover</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <hr />
+<h2 id="53-repeticion-de-la-imagen-de-fondo"><strong>5.3 Repetición de la Imagen de Fondo</strong></h2>
+<p>En muchos casos, las imágenes de fondo se repiten para llenar el área disponible. Sin embargo, también puedes <strong>detener</strong> la repetición y ajustar la imagen de fondo de acuerdo a las necesidades del diseño.</p>
+<h3 id="propiedad-background-repeat"><strong>Propiedad <code>background-repeat</code></strong></h3>
+<p>La propiedad <strong><code>background-repeat</code></strong> controla si la imagen de fondo se repite en las direcciones <strong>horizontal</strong> o <strong>vertical</strong>, o si no se repite en absoluto.</p>
+<table>
+<thead>
+<tr>
+<th>Valor</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>repeat</code></td>
+<td>La imagen de fondo se repite tanto horizontal como verticalmente.</td>
+</tr>
+<tr>
+<td><code>no-repeat</code></td>
+<td>La imagen de fondo no se repite.</td>
+</tr>
+<tr>
+<td><code>repeat-x</code></td>
+<td>La imagen se repite solo horizontalmente.</td>
+</tr>
+<tr>
+<td><code>repeat-y</code></td>
+<td>La imagen se repite solo verticalmente.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-image</span><span class="p">:</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="s2">&quot;background.jpg&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">background-repeat</span><span class="p">:</span><span class="w"> </span><span class="kc">no-repeat</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background-position</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este ejemplo muestra una imagen de fondo centrada que <strong>no se repite</strong>.</p>
+<hr />
+<h2 id="54-fondo-fijo"><strong>5.4 Fondo Fijo</strong></h2>
+<p>En algunos casos, querrás que la imagen de fondo se mantenga fija mientras se desplaza el contenido. Esto se puede lograr utilizando la propiedad <strong><code>background-attachment</code></strong>.</p>
+<h3 id="propiedad-background-attachment"><strong>Propiedad <code>background-attachment</code></strong></h3>
+<table>
+<thead>
+<tr>
+<th>Valor</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>scroll</code></td>
+<td>La imagen de fondo se desplaza con el contenido.</td>
+</tr>
+<tr>
+<td><code>fixed</code></td>
+<td>La imagen de fondo permanece fija mientras se hace scroll.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-image</span><span class="p">:</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="s2">&quot;background.jpg&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">background-attachment</span><span class="p">:</span><span class="w"> </span><span class="kc">fixed</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background-size</span><span class="p">:</span><span class="w"> </span><span class="kc">cover</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>En este ejemplo, la imagen de fondo permanecerá fija incluso cuando el usuario haga scroll en la página.</p>
+<hr />
+<h2 id="resumen_5"><strong>Resumen</strong></h2>
+<ul>
+<li><strong>Colores</strong>: Puedes definir colores usando <strong>nombres</strong>, <strong>hexadecimales</strong>, <strong>rgb</strong> o <strong>rgba</strong>, lo que te permite flexibilidad en el diseño. Además, <strong><code>rgba()</code></strong> permite incluir opacidad en los colores.</li>
+<li><strong>Fondos</strong>: CSS permite trabajar con <strong>colores de fondo</strong>, <strong>imágenes de fondo</strong>, y controlar su <strong>posición</strong>, <strong>tamaño</strong> y <strong>repetición</strong>.</li>
+<li><strong>Repetición de Fondo</strong>: Controla cómo la imagen de fondo se repite usando la propiedad <strong><code>background-repeat</code></strong>.</li>
+<li><strong>Fondo Fijo</strong>: Utiliza la propiedad <strong><code>background-attachment</code></strong> para fijar la imagen de fondo durante el desplazamiento de la página.</li>
+</ul>
 <h2 id="6-opacidades"><strong>6. Opacidades</strong></h2>
 <p>La propiedad <strong><code>opacity</code></strong> permite definir la opacidad de un elemento (desde 0.0, completamente transparente, hasta 1.0, completamente opaco).</p>
 <div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">opacity</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5</span><span class="p">;</span>
+<span class="w">  </span><span class="k">opacity</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <hr />
-<h2 id="7-posicionamiento"><strong>7. Posicionamiento</strong></h2>
-<h3 id="71-flotar-float-y-clear"><strong>7.1 Flotar (float y clear)</strong></h3>
-<p>El <strong><code>float</code></strong> permite que un elemento se desplace a la izquierda o derecha dentro de su contenedor, permitiendo que otros elementos fluyan alrededor de él.</p>
+<p>Parece que la herramienta se ha desactivado, pero aquí tienes el contenido ampliado sobre <strong>Posicionamiento en CSS</strong> y el ejemplo completo para que puedas copiarlo directamente.</p>
+<hr />
+<h1 id="7-posicionamiento"><strong>7. Posicionamiento</strong></h1>
+<p>En este punto, vamos a profundizar en las principales propiedades de <strong>posicionamiento</strong> en CSS, las cuales nos permiten <strong>ubicarnos</strong> de manera precisa dentro del diseño de una página web. También veremos cómo <strong>ubicar elementos dentro de un contenedor</strong> para crear diseños más flexibles, como por ejemplo un <strong>layout de imágenes</strong> que se ajusta dinámicamente al tamaño de la pantalla.</p>
+<h2 id="71-flotar-float-y-clear"><strong>7.1 Flotar (float y clear)</strong></h2>
+<p>La propiedad <strong><code>float</code></strong> permite que un elemento se desplace a la izquierda o derecha dentro de su contenedor, permitiendo que otros elementos fluyan alrededor de él. Esto es útil para crear diseños como <strong>galerías de imágenes</strong> o <strong>textos que rodean una imagen</strong>.</p>
+<h3 id="propiedad-float"><strong>Propiedad <code>float</code></strong></h3>
+<p>La propiedad <strong><code>float</code></strong> se usa comúnmente para colocar imágenes o elementos en una <strong>fila</strong> dentro de su contenedor, y los elementos que vienen después fluyen a su alrededor.</p>
+<h4 id="valores-de-float"><strong>Valores de <code>float</code></strong>:</h4>
+<ul>
+<li><strong><code>left</code></strong>: El elemento se coloca a la izquierda del contenedor.</li>
+<li><strong><code>right</code></strong>: El elemento se coloca a la derecha del contenedor.</li>
+<li><strong><code>none</code></strong>: El elemento no flota (valor predeterminado).</li>
+</ul>
+<h4 id="ejemplo-de-float-usar-float-para-alinear-imagenes"><strong>Ejemplo de <code>float</code></strong>: Usar <code>float</code> para alinear imágenes</h4>
 <div class="highlight"><pre><span></span><code><span class="nt">img</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">float</span><span class="p">:</span><span class="w"> </span><span class="kc">left</span><span class="p">;</span>
-<span class="w">    </span><span class="k">margin-right</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">float</span><span class="p">:</span><span class="w"> </span><span class="kc">left</span><span class="p">;</span>
+<span class="w">  </span><span class="k">margin-right</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="kt">px</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>El <strong><code>clear</code></strong> se usa para evitar que los elementos floten alrededor del elemento especificado.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">clear</span><span class="p">:</span><span class="w"> </span><span class="kc">both</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;imagen1.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Imagen 1&quot;</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;imagen2.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Imagen 2&quot;</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;imagen3.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Imagen 3&quot;</span> <span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Aquí, las imágenes se alinearán a la izquierda y quedarán juntas, <strong>fluyendo a la izquierda</strong> dentro de su contenedor. La propiedad <code>margin-right</code> separa las imágenes.</p>
+<h3 id="propiedad-clear"><strong>Propiedad <code>clear</code></strong></h3>
+<p>La propiedad <strong><code>clear</code></strong> se utiliza para evitar que otros elementos floten alrededor de un determinado elemento. Por lo general, se usa para "limpiar" el flujo de los elementos flotantes y garantizar que un contenedor no se solape con los elementos flotantes anteriores.</p>
+<h4 id="valores-de-clear"><strong>Valores de <code>clear</code></strong>:</h4>
+<ul>
+<li><strong><code>both</code></strong>: El elemento no puede estar a la izquierda o derecha de ningún otro elemento flotante.</li>
+<li><strong><code>left</code></strong>: El elemento no puede estar a la izquierda de ningún elemento flotante.</li>
+<li><strong><code>right</code></strong>: El elemento no puede estar a la derecha de ningún elemento flotante.</li>
+</ul>
+<h4 id="ejemplo-de-clear-usar-clear-para-evitar-que-los-elementos-floten-alrededor-de-un-contenedor"><strong>Ejemplo de <code>clear</code></strong>: Usar <code>clear</code> para evitar que los elementos floten alrededor de un contenedor.</h4>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">clearfix</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">clear</span><span class="p">:</span><span class="w"> </span><span class="kc">both</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="72-display"><strong>7.2 Display</strong></h3>
-<p>La propiedad <strong><code>display</code></strong> controla cómo se muestra un elemento. Los valores más comunes son <code>block</code>, <code>inline</code> y <code>inline-block</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">block</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-<h3 id="73-position"><strong>7.3 Position</strong></h3>
-<p>La propiedad <strong><code>position</code></strong> se utiliza para posicionar un elemento de manera absoluta o relativa dentro de su contenedor.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">absolute</span><span class="p">;</span>
-<span class="w">    </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
-<span class="w">    </span><span class="k">left</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-<h3 id="74-visibility"><strong>7.4 Visibility</strong></h3>
-<p>La propiedad <strong><code>visibility</code></strong> permite ocultar un elemento sin eliminarlo del flujo del documento.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">visibility</span><span class="p">:</span><span class="w"> </span><span class="kc">hidden</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-<h3 id="75-z-index"><strong>7.5 Z-index</strong></h3>
-<p>El <strong><code>z-index</code></strong> controla la <strong>profundidad</strong> de los elementos apilados. Se usa con elementos posicionados.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">relative</span><span class="p">;</span>
-<span class="w">    </span><span class="k">z-index</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;clearfix&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Este párrafo no flotará alrededor de los elementos flotantes.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
 <hr />
-<p>Este contenido está listo para copiarse y utilizarse en tu proyecto. Si necesitas más ejemplos o explicaciones, avísame. 😊</p>
+<h2 id="72-display"><strong>7.2 Display</strong></h2>
+<p>La propiedad <strong><code>display</code></strong> controla cómo se muestra un elemento en el flujo de la página. Dependiendo de su valor, se determina si el elemento ocupa una <strong>línea completa</strong>, se coloca de manera <strong>inline</strong> (en línea) o se organiza de otra manera.</p>
+<h3 id="valores-de-display"><strong>Valores de <code>display</code></strong>:</h3>
+<table>
+<thead>
+<tr>
+<th>Valor</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>block</code></td>
+<td>El elemento ocupa todo el ancho disponible, y comienza en una nueva línea.</td>
+</tr>
+<tr>
+<td><code>inline</code></td>
+<td>El elemento se muestra <strong>en línea</strong>, es decir, no genera un salto de línea.</td>
+</tr>
+<tr>
+<td><code>inline-block</code></td>
+<td>El elemento se muestra en línea, pero permite definir <strong>dimensiones</strong> (ancho y alto).</td>
+</tr>
+<tr>
+<td><code>none</code></td>
+<td>El elemento no se muestra en absoluto (no ocupa espacio en el diseño).</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ejemplo-de-display-usar-inline-para-colocar-imagenes-en-linea"><strong>Ejemplo de <code>display</code></strong>: Usar <code>inline</code> para colocar imágenes en línea</h4>
+<div class="highlight"><pre><span></span><code><span class="nt">img</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">inline</span><span class="p">;</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Aquí las imágenes se mostrarán <strong>en línea</strong> una al lado de la otra, sin generar saltos de línea.</p>
+<hr />
+<h2 id="73-position"><strong>7.3 Position</strong></h2>
+<p>La propiedad <strong><code>position</code></strong> es crucial para controlar la ubicación de los elementos en una página. Dependiendo de su valor, un elemento se puede ubicar de manera <strong>relativa</strong>, <strong>absoluta</strong>, <strong>fija</strong> o en su posición predeterminada.</p>
+<h3 id="valores-de-position"><strong>Valores de <code>position</code></strong>:</h3>
+<ul>
+<li><strong><code>static</code></strong>: Es la <strong>posición predeterminada</strong> para todos los elementos. Los elementos se colocan en el flujo normal del documento.</li>
+<li><strong><code>relative</code></strong>: El elemento se coloca en su ubicación original, pero se puede mover <strong>relativamente</strong> a su posición mediante las propiedades <code>top</code>, <code>right</code>, <code>bottom</code> o <code>left</code>.</li>
+<li><strong><code>absolute</code></strong>: El elemento se coloca en relación con el contenedor más cercano que tiene <code>position: relative</code> o <code>position: absolute</code>. Se puede mover utilizando <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code>.</li>
+<li><strong><code>fixed</code></strong>: El elemento se coloca en relación con la ventana del navegador. Permanece fijo incluso cuando el usuario hace scroll.</li>
+<li><strong><code>sticky</code></strong>: El elemento se comporta como <code>relative</code> hasta que se desplaza fuera de su contenedor, momento en el que se comporta como <code>fixed</code>.</li>
+</ul>
+<h4 id="ejemplo-de-position-posicionar-un-elemento-de-manera-absoluta"><strong>Ejemplo de <code>position</code></strong>: Posicionar un elemento de manera absoluta</h4>
+<div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">absolute</span><span class="p">;</span>
+<span class="w">  </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">left</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Aquí, el <strong>elemento <code>div</code></strong> se colocará <strong>50px desde la parte superior</strong> y <strong>100px desde la izquierda</strong> de su contenedor más cercano con <code>position: relative</code>.</p>
+<hr />
+<h2 id="74-visibility"><strong>7.4 Visibility</strong></h2>
+<p>La propiedad <strong><code>visibility</code></strong> permite <strong>ocultar</strong> un elemento sin eliminarlo del flujo del documento, lo que significa que el espacio del elemento sigue estando reservado en la página, aunque el contenido no se vea.</p>
+<h3 id="valores-de-visibility"><strong>Valores de <code>visibility</code></strong>:</h3>
+<table>
+<thead>
+<tr>
+<th>Valor</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>visible</code></td>
+<td>El elemento es visible (valor predeterminado).</td>
+</tr>
+<tr>
+<td><code>hidden</code></td>
+<td>El elemento está oculto, pero sigue ocupando espacio en el diseño.</td>
+</tr>
+<tr>
+<td><code>collapse</code></td>
+<td>Similar a <code>hidden</code>, pero en el caso de las tablas, también elimina el espacio reservado para el elemento.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">visibility</span><span class="p">:</span><span class="w"> </span><span class="kc">hidden</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>En este caso, el <strong>párrafo</strong> estará <strong>oculto</strong>, pero seguirá ocupando espacio en el diseño de la página.</p>
+<hr />
+<h2 id="75-z-index"><strong>7.5 Z-index</strong></h2>
+<p>El <strong><code>z-index</code></strong> se usa para controlar el <strong>apilamiento de los elementos</strong>. Es útil cuando los elementos están posicionados de manera absoluta o relativa, y queremos que un elemento esté por encima de otro.</p>
+<h3 id="valores-de-z-index"><strong>Valores de <code>z-index</code></strong>:</h3>
+<ul>
+<li>El <strong>valor</strong> de <code>z-index</code> puede ser cualquier número entero. Los elementos con valores más altos estarán apilados <strong>por encima</strong> de los elementos con valores más bajos.</li>
+</ul>
+<h4 id="ejemplo-de-z-index"><strong>Ejemplo de <code>z-index</code></strong>:</h4>
+<div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">relative</span><span class="p">;</span>
+<span class="w">  </span><span class="k">z-index</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Aquí, el <strong>elemento <code>div</code></strong> se apilará encima de otros elementos con un <code>z-index</code> más bajo (o sin <code>z-index</code>).</p>
+<hr />
+<h2 id="ejemplo-practico-diseno-de-una-pagina-con-imagenes-en-linea"><strong>Ejemplo práctico: Diseño de una página con imágenes en línea</strong></h2>
+<p>Vamos a crear un ejemplo con un <strong>layout simple</strong> que tenga una serie de imágenes dentro de un contenedor. Las imágenes se alinearán en línea mientras haya espacio, y cuando no quepan, pasarán a la siguiente línea.</p>
+<h3 id="html-base"><strong>HTML Base:</strong></h3>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ejemplo de Diseño Web<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">      </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="n">Arial</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+
+<span class="w">      </span><span class="nt">header</span><span class="o">,</span>
+<span class="w">      </span><span class="nt">footer</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#4caf50</span><span class="p">;</span>
+<span class="w">        </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<span class="w">        </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">        </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+
+<span class="w">      </span><span class="nt">nav</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#333</span><span class="p">;</span>
+<span class="w">        </span><span class="k">overflow</span><span class="p">:</span><span class="w"> </span><span class="kc">hidden</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+
+<span class="w">      </span><span class="nt">nav</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<span class="w">        </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">        </span><span class="k">text-decoration</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">        </span><span class="k">float</span><span class="p">:</span><span class="w"> </span><span class="kc">left</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+
+<span class="w">      </span><span class="nt">nav</span><span class="w"> </span><span class="nt">a</span><span class="p">:</span><span class="nd">hover</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#ddd</span><span class="p">;</span>
+<span class="w">        </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">black</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+
+<span class="w">      </span><span class="p">.</span><span class="nc">imagenes-container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+<span class="w">        </span><span class="k">flex-wrap</span><span class="p">:</span><span class="w"> </span><span class="kc">wrap</span><span class="p">;</span>
+<span class="w">        </span><span class="k">justify-content</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">        </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">        </span><span class="k">margin-top</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+
+<span class="w">      </span><span class="p">.</span><span class="nc">imagenes-container</span><span class="w"> </span><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">        </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">        </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#ddd</span><span class="p">;</span>
+<span class="w">        </span><span class="k">box-sizing</span><span class="p">:</span><span class="w"> </span><span class="kc">border-box</span><span class="p">;</span>
+<span class="w">        </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+<span class="w">        </span><span class="k">justify-content</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">        </span><span class="k">align-items</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+
+<span class="w">      </span><span class="nt">img</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+<span class="w">        </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+<span class="w">        </span><span class="k">object-fit</span><span class="p">:</span><span class="w"> </span><span class="kc">cover</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Bienvenido a la Página de Ejemplo<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Inicio<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Productos<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Servicios<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;imagenes-container&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;imagen1.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Imagen 1&quot;</span> <span class="p">/&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;imagen2.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Imagen 2&quot;</span> <span class="p">/&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;imagen3.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Imagen 3&quot;</span> <span class="p">/&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;imagen4.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Imagen 4&quot;</span> <span class="p">/&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;imagen5.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Imagen 5&quot;</span> <span class="p">/&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>© 2025 Ejemplo de Diseño Web<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr />
+<p>En este ejemplo, hemos usado <strong>flexbox</strong> para hacer que las imágenes se alineen en una fila cuando haya espacio suficiente y, cuando no quepan, se moverán a la siguiente línea. También hemos usado un menú de navegación y un pie de página para completar el diseño.</p>
+<hr />
+<h2 id="8-css-grid">8 CSS Grid</h2>
+<p>El CSS Grid Layout es un sistema de diseño bidimensional que permite organizar los elementos de una página en una cuadrícula. Grid facilita la creación de diseños complejos con una estructura de filas y columnas, proporcionando un control preciso sobre cómo se disponen los elementos dentro de un contenedor.</p>
+<p>Con CSS Grid, podemos crear diseños responsivos, alineación de elementos y controlar la distribución de espacios de manera muy eficiente. En este punto, vamos a profundizar en cómo se configura un contenedor de Grid, cómo definir las filas y las columnas, y cómo organizar los elementos dentro de esta cuadrícula.</p>
+<p>El módulo de diseño de <code>Grid</code> ofrece un sistema de diseño basado en cuadrícula, con filas y columnas. El módulo de diseño de <code>Grid</code> permite a los desarrolladores crear fácilmente diseños web complejos.
+El módulo de diseño de <code>Grid</code> facilita el diseño de una estructura de diseño adaptable, sin utilizar flotación ni posicionamiento.</p>
+<p>Las propiedades de <code>Grid</code> CSS son compatibles con todos los navegadores modernos.</p>
+<div class="admonition note">
+<p class="admonition-title">Grid vs Flexbox</p>
+<p>El diseño de <code>Grid</code> CSS debe usarse para diseños bidimensionales, con filas Y columnas.
+El diseño CSS <code>Flexbox</code> debe usarse para un diseño unidimensional, con filas O columnas.</p>
+</div>
+<p>Ejemplo de maquetación con <code>CSS Grid</code>:</p>
+<p><img alt="Imagen HTML maquetada con Grid" src="../img/img12.png" /></p>
+<div class="admonition example">
+<p class="admonition-title">Página maquetada con Grid</p>
+</div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">CSS Grid</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">      </span><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<span class="w">        </span><span class="k">grid-template-areas</span><span class="p">:</span>
+<span class="w">          </span><span class="s2">&quot;header header&quot;</span>
+<span class="w">          </span><span class="s2">&quot;menu content&quot;</span>
+<span class="w">          </span><span class="s2">&quot;footer footer&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="w"> </span><span class="mi">3</span><span class="n">fr</span><span class="p">;</span>
+<span class="w">        </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">        </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#2196f3</span><span class="p">;</span>
+<span class="w">        </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mf">0.8</span><span class="p">);</span>
+<span class="w">        </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nt">div</span><span class="p">.</span><span class="nc">header</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">grid-area</span><span class="p">:</span><span class="w"> </span><span class="n">header</span><span class="p">;</span>
+<span class="w">        </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nt">div</span><span class="p">.</span><span class="nc">menu</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">grid-area</span><span class="p">:</span><span class="w"> </span><span class="n">menu</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nt">div</span><span class="p">.</span><span class="nc">content</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">grid-area</span><span class="p">:</span><span class="w"> </span><span class="k">content</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nt">div</span><span class="p">.</span><span class="nc">footer</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">grid-area</span><span class="p">:</span><span class="w"> </span><span class="n">footer</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>CSS Grid Layout<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+      The Grid Layout Module offers a grid-based layout system, with rows and
+      columns.
+    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+      The Grid Layout Module makes it easy to design complex and responsive web
+      pages without using floats and positioning:
+    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;header&quot;</span><span class="p">&gt;&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>My Header<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;menu&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Link 1<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;</span><span class="nt">br</span> <span class="p">/&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Link 2<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;</span><span class="nt">br</span> <span class="p">/&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span>
+          <span class="p">&gt;</span>Link 3<span class="p">&lt;/</span><span class="nt">a</span>
+        <span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;content&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Lorem Ipsum<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+          Lorem ipsum odor amet, consectetuer adipiscing elit. Ridiculus sit
+          nisl laoreet facilisis aliquet. Potenti dignissim litora eget montes
+          rhoncus sapien neque urna. Cursus libero sapien integer magnis ligula
+          lobortis quam ut.
+        <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;footer&quot;</span><span class="p">&gt;&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>Footer<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h3 id="81-definicion-de-un-contenedor-grid"><strong>8.1 Definición de un Contenedor Grid</strong></h3>
+<p>Un contenedor <strong>Grid</strong> es el elemento al que se le aplican las propiedades del sistema de cuadrícula. Para declarar un contenedor <strong>Grid</strong>, usamos la propiedad <strong><code>display</code></strong> con el valor <code>grid</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Esto convierte el <strong>contenedor <code>.container</code></strong> en un contenedor <strong>Grid</strong>. A partir de aquí, podemos definir las filas y las columnas que componen la cuadrícula.</p>
+<hr />
+<h2 id="82-definiendo-filas-y-columnas"><strong>8.2 Definiendo Filas y Columnas</strong></h2>
+<p>Las filas y columnas se definen con las propiedades <strong><code>grid-template-rows</code></strong> y <strong><code>grid-template-columns</code></strong>. Estas propiedades nos permiten crear una cuadrícula con un número específico de filas y columnas.</p>
+<h3 id="821-grid-template-columns"><strong>8.2.1 <code>grid-template-columns</code></strong></h3>
+<p>La propiedad <strong><code>grid-template-columns</code></strong> define el número de columnas y sus tamaños. Los valores que puede tomar son las unidades de medida <strong><code>px</code></strong>, <strong><code>em</code></strong>, <strong><code>fr</code></strong> (fracción de espacio disponible), y <strong><code>%</code></strong>.</p>
+<h4 id="ejemplo-de-columnas"><strong>Ejemplo de columnas</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<span class="w">    </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="w"> </span><span class="mi">2</span><span class="n">fr</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>En este caso:</p>
+<ul>
+<li>La <strong>primera columna</strong> tiene un <strong>ancho fijo de 200px</strong>.</li>
+<li>La <strong>segunda columna</strong> ocupa <strong>1 fracción del espacio restante</strong> (1fr).</li>
+<li>La <strong>tercera columna</strong> ocupa <strong>2 fracciones del espacio restante</strong> (2fr).</li>
+</ul>
+<hr />
+<h3 id="822-grid-template-rows"><strong>8.2.2 <code>grid-template-rows</code></strong></h3>
+<p>De manera similar, la propiedad <strong><code>grid-template-rows</code></strong> define las filas del grid. El formato es el mismo que para las columnas, pudiendo usar valores como <strong><code>px</code></strong>, <strong><code>fr</code></strong>, y <strong><code>auto</code></strong> (para tamaños automáticos basados en el contenido).</p>
+<h4 id="ejemplo-de-filas"><strong>Ejemplo de filas</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<span class="w">    </span><span class="k">grid-template-rows</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="w"> </span><span class="kc">auto</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>En este caso:</p>
+<ul>
+<li>La <strong>primera fila</strong> tiene una altura de <strong>100px</strong>.</li>
+<li>La <strong>segunda fila</strong> tiene una altura <strong>automática</strong>, es decir, tomará el espacio necesario según su contenido.</li>
+<li>La <strong>tercera fila</strong> tiene una altura de <strong>200px</strong>.</li>
+</ul>
+<hr />
+<h2 id="83-propiedad-grid-template-areas"><strong>8.3 Propiedad <code>grid-template-areas</code></strong></h2>
+<p>La propiedad <strong><code>grid-template-areas</code></strong> permite organizar las filas y las columnas de manera más visual, asignando nombres a las diferentes áreas de la cuadrícula. Esto facilita la creación de <strong>diseños más intuitivos</strong>.</p>
+<h4 id="ejemplo-de-grid-template-areas"><strong>Ejemplo de <code>grid-template-areas</code></strong></h4>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<span class="w">    </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="w"> </span><span class="mi">2</span><span class="n">fr</span><span class="p">;</span>
+<span class="w">    </span><span class="k">grid-template-rows</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="w"> </span><span class="kc">auto</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="k">grid-template-areas</span><span class="p">:</span>
+<span class="w">        </span><span class="s2">&quot;header header&quot;</span>
+<span class="w">        </span><span class="s2">&quot;menu content&quot;</span>
+<span class="w">        </span><span class="s2">&quot;footer footer&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>En este caso, la propiedad <strong><code>grid-template-areas</code></strong> asigna nombres a las áreas de la cuadrícula, lo que facilita la colocación de los elementos dentro de la cuadrícula.</p>
+<hr />
+<h2 id="84-colocacion-de-elementos-dentro-de-grid"><strong>8.4 Colocación de Elementos dentro de Grid</strong></h2>
+<p>Una vez que hemos definido las <strong>filas</strong> y <strong>columnas</strong>, podemos colocar los elementos dentro de la cuadrícula usando las propiedades <strong><code>grid-column</code></strong> y <strong><code>grid-row</code></strong>.</p>
+<h3 id="841-grid-column"><strong>8.4.1 <code>grid-column</code></strong></h3>
+<p>La propiedad <strong><code>grid-column</code></strong> nos permite especificar <strong>en qué columnas debe aparecer un elemento</strong>. Podemos usar dos valores: el <strong>índice de la columna inicial</strong> y el <strong>índice de la columna final</strong>.</p>
+<h4 id="ejemplo-de-grid-column"><strong>Ejemplo de <code>grid-column</code></strong></h4>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">item</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">grid-column</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>En este caso, el <strong>elemento <code>.item</code></strong> ocupará <strong>las columnas 1 y 2</strong>.</p>
+<h3 id="842-grid-row"><strong>8.4.2 <code>grid-row</code></strong></h3>
+<p>La propiedad <strong><code>grid-row</code></strong> funciona de manera similar, pero para las <strong>filas</strong>. Nos permite definir en qué fila debe comenzar un elemento y en qué fila debe terminar.</p>
+<h4 id="ejemplo-de-grid-row"><strong>Ejemplo de <code>grid-row</code></strong></h4>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">item</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">grid-row</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este ejemplo coloca el <strong>elemento <code>.item</code></strong> en la <strong>primera fila</strong>.</p>
+<hr />
+<h2 id="85-ejemplo-completo-de-una-pagina-web-con-grid"><strong>8.5 Ejemplo Completo de una Página Web con Grid</strong></h2>
+<p>En este ejemplo, vamos a crear una página web simple que contenga un <strong>encabezado</strong>, un <strong>menú horizontal</strong>, un <strong>cuerpo con una sección lateral</strong> y un <strong>pie de página</strong>. Usaremos <strong>CSS Grid</strong> para organizar todos los elementos de manera estructurada.</p>
+<h3 id="html-base_1"><strong>HTML Base</strong></h3>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Página con CSS Grid<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">        </span><span class="c">/* Contenedor principal */</span>
+<span class="w">        </span><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<span class="w">            </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="p">;</span><span class="w"> </span><span class="c">/* Menú lateral y contenido principal */</span>
+<span class="w">            </span><span class="k">grid-template-rows</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="w"> </span><span class="kc">auto</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* Encabezado, cuerpo y pie */</span>
+<span class="w">            </span><span class="k">grid-template-areas</span><span class="p">:</span>
+<span class="w">                </span><span class="s2">&quot;header header&quot;</span>
+<span class="w">                </span><span class="s2">&quot;menu content&quot;</span>
+<span class="w">                </span><span class="s2">&quot;footer footer&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* Espacio entre los elementos */</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="nt">header</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">grid-area</span><span class="p">:</span><span class="w"> </span><span class="n">header</span><span class="p">;</span>
+<span class="w">            </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#4CAF50</span><span class="p">;</span>
+<span class="w">            </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<span class="w">            </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">            </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="nt">nav</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">grid-area</span><span class="p">:</span><span class="w"> </span><span class="n">menu</span><span class="p">;</span>
+<span class="w">            </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#333</span><span class="p">;</span>
+<span class="w">            </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<span class="w">            </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="p">.</span><span class="nc">content</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">grid-area</span><span class="p">:</span><span class="w"> </span><span class="k">content</span><span class="p">;</span>
+<span class="w">            </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#f4f4f4</span><span class="p">;</span>
+<span class="w">            </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="nt">footer</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">grid-area</span><span class="p">:</span><span class="w"> </span><span class="n">footer</span><span class="p">;</span>
+<span class="w">            </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#4CAF50</span><span class="p">;</span>
+<span class="w">            </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<span class="w">            </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">            </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="nt">nav</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">block</span><span class="p">;</span>
+<span class="w">            </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<span class="w">            </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">            </span><span class="k">text-decoration</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="nt">nav</span><span class="w"> </span><span class="nt">a</span><span class="p">:</span><span class="nd">hover</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#ddd</span><span class="p">;</span>
+<span class="w">            </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">black</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Mi Página Web<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Inicio<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Productos<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Servicios<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Contacto<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;content&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Contenido Principal<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Este es el cuerpo de la página donde iría la información principal de la web. Usamos CSS Grid para organizar los elementos.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>© 2025 Mi Página Web<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr />
+<h3 id="explicacion-del-ejemplo"><strong>Explicación del ejemplo:</strong></h3>
+<ul>
+<li><strong><code>grid-template-columns</code></strong>: Define dos columnas. La primera columna tiene un ancho fijo de <strong>200px</strong> (para el menú lateral) y la segunda columna ocupa el resto del espacio disponible (<strong>1fr</strong>).</li>
+<li><strong><code>grid-template-rows</code></strong>: Define tres filas. La primera fila tiene una altura de <strong>100px</strong> (encabezado), la segunda fila tiene una altura <strong>automática</strong> (el contenido) y la tercera fila es para el pie de página (<strong>100px</strong>).</li>
+<li><strong><code>grid-template-areas</code></strong>: Organiza los elementos en áreas nombradas, lo que facilita su disposición dentro de la cuadrícula.</li>
+</ul>
+<hr />
 
 
 
