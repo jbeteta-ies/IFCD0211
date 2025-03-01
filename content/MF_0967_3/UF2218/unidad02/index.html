@@ -2962,6 +2962,292 @@ El diseño CSS <code>Flexbox</code> debe usarse para un diseño unidimensional, 
 <li><strong><code>grid-template-areas</code></strong>: Organiza los elementos en áreas nombradas, lo que facilita su disposición dentro de la cuadrícula.</li>
 </ul>
 <hr />
+<p>Aquí tienes el contenido ampliado sobre <strong>CSS</strong> con todos los puntos solicitados:</p>
+<hr />
+<h2 id="9imagenes-estilos-y-efectos-visuales-en-css"><strong>9.Imágenes, Estilos y Efectos Visuales en CSS</strong></h2>
+<p>En este punto vamos a aprender a manejar <strong>imágenes</strong>, <strong>gradientes</strong>, <strong>sombras</strong> y <strong>botones</strong> con CSS. Además, veremos cómo implementar un sistema de <strong>paginación</strong> y finalmente, vamos a crear un <strong>menú de navegación interactivo</strong> que responda al paso del ratón. Todos estos conceptos son esenciales para mejorar la <strong>experiencia visual</strong> y la <strong>interactividad</strong> en una página web.</p>
+<h3 id="91-imagenes"><strong>9.1. Imágenes</strong></h3>
+<p>Las imágenes juegan un papel crucial en el diseño de una página web. Con CSS podemos modificar su presentación de manera dinámica, mejorando la interacción y el diseño general.</p>
+<h4 id="911-estilos-de-imagenes"><strong>9.1.1 Estilos de Imágenes</strong></h4>
+<p>Las imágenes pueden ser modificadas con diferentes propiedades en CSS, permitiendo cambios en su <strong>tamaño</strong>, <strong>alineación</strong>, <strong>bordes</strong>, y otros aspectos visuales.</p>
+<h4 id="ejemplo-de-alineacion-y-tamano"><strong>Ejemplo de Alineación y Tamaño</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">img</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+<span class="w">    </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="kc">auto</span><span class="p">;</span>
+<span class="w">    </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">block</span><span class="p">;</span>
+<span class="w">    </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kc">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Aquí, la imagen se ajusta al <strong>100% del ancho</strong> del contenedor, manteniendo su proporción original gracias a <code>height: auto</code>, y se <strong>centra</strong> en el contenedor con <code>margin: 0 auto</code>.</p>
+<h4 id="912-filtros-de-imagenes"><strong>9.1.2 Filtros de Imágenes</strong></h4>
+<p>CSS ofrece varios <strong>filtros visuales</strong> para aplicar efectos en las imágenes, como <strong>desenfoque</strong>, <strong>brillo</strong>, <strong>contraste</strong>, entre otros.</p>
+<table>
+<thead>
+<tr>
+<th>Filtro</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>blur()</code></td>
+<td>Aplica desenfoque a la imagen.</td>
+</tr>
+<tr>
+<td><code>brightness()</code></td>
+<td>Modifica el brillo de la imagen.</td>
+</tr>
+<tr>
+<td><code>contrast()</code></td>
+<td>Ajusta el contraste de la imagen.</td>
+</tr>
+<tr>
+<td><code>grayscale()</code></td>
+<td>Convierte la imagen a escala de grises.</td>
+</tr>
+<tr>
+<td><code>sepia()</code></td>
+<td>Aplica un filtro sepia (efecto antiguo).</td>
+</tr>
+<tr>
+<td><code>hue-rotate()</code></td>
+<td>Rota los colores de la imagen.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ejemplo-de-filtro"><strong>Ejemplo de Filtro</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">img</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">filter</span><span class="p">:</span><span class="w"> </span><span class="nb">grayscale</span><span class="p">(</span><span class="mi">100</span><span class="kt">%</span><span class="p">)</span><span class="w"> </span><span class="nb">sepia</span><span class="p">(</span><span class="mi">50</span><span class="kt">%</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>En este ejemplo, la imagen tendrá un <strong>efecto escala de grises</strong> y un <strong>efecto sepia</strong> al mismo tiempo.</p>
+<h4 id="913-imagenes-como-figuras"><strong>9.1.3 Imágenes como Figuras</strong></h4>
+<p>Podemos usar imágenes como figuras decorativas, con bordes redondeados o formas personalizadas.</p>
+<h4 id="ejemplo-de-figuras"><strong>Ejemplo de Figuras</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">img</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* Bordes redondeados */</span>
+<span class="w">    </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="w"> </span><span class="mi">15</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3</span><span class="p">);</span><span class="w"> </span><span class="c">/* Sombra */</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>En este caso, <strong>border-radius</strong> redondea las esquinas de la imagen y <strong>box-shadow</strong> agrega una sombra alrededor de la imagen.</p>
+<hr />
+<h3 id="92-gradientes-en-css"><strong>9.2. Gradientes en CSS</strong></h3>
+<p>Los <strong>gradientes</strong> son transiciones suaves entre dos o más colores. Son útiles para crear fondos dinámicos y efectos visuales en las páginas web.</p>
+<h4 id="921-gradiente-lineal"><strong>9.2.1 Gradiente Lineal</strong></h4>
+<p>El gradiente lineal crea una transición de colores a lo largo de una línea recta.</p>
+<h4 id="ejemplo-de-gradiente-lineal"><strong>Ejemplo de Gradiente Lineal</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">linear-gradient</span><span class="p">(</span><span class="kc">to</span><span class="w"> </span><span class="kc">right</span><span class="p">,</span><span class="w"> </span><span class="kc">red</span><span class="p">,</span><span class="w"> </span><span class="kc">yellow</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este código crea un fondo con un gradiente de color <strong>rojo</strong> a <strong>amarillo</strong>, de izquierda a derecha.</p>
+<h4 id="922-gradiente-radial"><strong>9.2.2 Gradiente Radial</strong></h4>
+<p>El gradiente radial crea una transición circular de colores, que se irradia desde un punto central hacia el exterior.</p>
+<h4 id="ejemplo-de-gradiente-radial"><strong>Ejemplo de Gradiente Radial</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">radial-gradient</span><span class="p">(</span><span class="kc">circle</span><span class="p">,</span><span class="w"> </span><span class="kc">red</span><span class="p">,</span><span class="w"> </span><span class="kc">yellow</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este código crea un fondo que irradia de <strong>rojo</strong> a <strong>amarillo</strong> desde el centro hacia afuera.</p>
+<hr />
+<h3 id="93-sombras-en-css"><strong>9.3. Sombras en CSS</strong></h3>
+<p>Las <strong>sombras</strong> se utilizan para dar profundidad a los elementos de la página web. Hay dos tipos principales: sombras para <strong>textos</strong> y sombras para <strong>bloques</strong>.</p>
+<h4 id="931-sombras-de-texto"><strong>9.3.1 Sombras de Texto</strong></h4>
+<p>Las sombras de texto permiten agregar un efecto visual en el texto, haciendo que se vea más destacado.</p>
+<h4 id="ejemplo-de-sombra-de-texto"><strong>Ejemplo de Sombra de Texto</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">text-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este código agrega una sombra de texto a los elementos <strong><code>h1</code></strong>, desplazada <strong>2px</strong> en <strong>horizontal</strong> y <strong>vertical</strong>, con un desenfoque de <strong>4px</strong>.</p>
+<h4 id="932-sombras-de-caja"><strong>9.3.2 Sombras de Caja</strong></h4>
+<p>Las sombras de caja se aplican a los elementos de bloque (como divs, imágenes, etc.), creando la ilusión de profundidad.</p>
+<h4 id="ejemplo-de-sombra-de-caja"><strong>Ejemplo de Sombra de Caja</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este código crea una sombra de caja alrededor del <strong>div</strong> desplazada <strong>10px</strong> en <strong>horizontal</strong> y <strong>vertical</strong>, con un desenfoque de <strong>20px</strong>.</p>
+<hr />
+<h3 id="94-botones-en-css"><strong>9.4. Botones en CSS</strong></h3>
+<p>Los <strong>botones</strong> son uno de los elementos más importantes en la interacción con el usuario. A continuación, vamos a ver cómo diseñar botones atractivos y funcionales.</p>
+<h4 id="941-estilo-basico-de-botones"><strong>9.4.1 Estilo Básico de Botones</strong></h4>
+<p>Podemos crear un botón básico con CSS, controlando su color de fondo, bordes y tipografía.</p>
+<h4 id="ejemplo-de-boton-basico"><strong>Ejemplo de Botón Básico</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">button</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#4CAF50</span><span class="p">;</span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<span class="w">    </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">    </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="k">cursor</span><span class="p">:</span><span class="w"> </span><span class="kc">pointer</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este código define un <strong>botón verde</strong> con texto blanco y bordes redondeados. La propiedad <strong><code>cursor: pointer</code></strong> cambia el cursor a una mano cuando el usuario pasa sobre el botón.</p>
+<hr />
+<h3 id="95-paginacion-en-css"><strong>9.5. Paginación en CSS</strong></h3>
+<p>La <strong>paginación</strong> es una forma de dividir el contenido extenso en <strong>páginas</strong> más pequeñas. Aquí veremos cómo crear un sistema de paginación utilizando CSS.</p>
+<h4 id="951-estilos-de-paginacion-basica"><strong>9.5.1 Estilos de Paginación Básica</strong></h4>
+<p>En una interfaz de paginación típica, los enlaces de página se muestran como botones numerados. Estos botones pueden ser estilizados con <strong>bordes</strong>, <strong>colores</strong> y <strong>espaciado</strong>.</p>
+<h4 id="ejemplo-de-paginacion"><strong>Ejemplo de Paginación</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Paginación con CSS<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">        </span><span class="p">.</span><span class="nc">pagination</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+<span class="w">            </span><span class="k">justify-content</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">            </span><span class="k">list-style</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">            </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="p">.</span><span class="nc">pagination</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="kt">px</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">            </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">            </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#f4f4f4</span><span class="p">;</span>
+<span class="w">            </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#333</span><span class="p">;</span>
+<span class="w">            </span><span class="k">text-decoration</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">            </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="p">.</span><span class="nc">pagination</span><span class="w"> </span><span class="nt">a</span><span class="p">:</span><span class="nd">hover</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#ddd</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="p">.</span><span class="nc">pagination</span><span class="w"> </span><span class="nt">a</span><span class="p">.</span><span class="nc">active</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#4CAF50</span><span class="p">;</span>
+<span class="w">            </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;pagination&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span><span class="ni">&amp;laquo;</span> Anterior<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;active&quot;</span><span class="p">&gt;</span>1<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>2<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>3<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Siguiente <span class="ni">&amp;raquo;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="explicacion-del-codigo"><strong>Explicación del Código</strong></h3>
+<ul>
+<li><strong>HTML</strong>: Los enlaces de paginación están envueltos dentro de un <code>&lt;ul&gt;</code> con la clase <strong><code>pagination</code></strong>. Cada página está representada por un enlace <code>&lt;a&gt;</code>, y el enlace de la página activa se marca con la clase <strong><code>active</code></strong>.</li>
+<li><strong>CSS</strong>: El estilo de la paginación se organiza con <strong><code>display: flex;</code></strong> para alinear los elementos en línea y centrarlos. Los enlaces cambian de color al pasar el ratón y el enlace activo tiene un fondo verde.</li>
+</ul>
+<h3 id="resultado-esperado"><strong>Resultado Esperado</strong></h3>
+<p>Este código genera una barra de paginación en la que los usuarios pueden navegar entre páginas. La página activa tendrá un estilo diferente, destacando la página actual.</p>
+<hr />
+<h3 id="96-ejemplo-paso-a-paso-menu-de-navegacion-interactivo-hover"><strong>9.6. Ejemplo paso a paso: Menú de Navegación Interactivo (Hover)</strong></h3>
+<h4 id="html-base-del-menu-de-navegacion"><strong>HTML Base del Menú de Navegación:</strong></h4>
+<p>Vamos a crear un menú de navegación con <strong>subniveles</strong>. Este tipo de menú es útil cuando tenemos varias opciones dentro de una categoría principal, como por ejemplo en el menú de <strong>Productos</strong>, que tiene tres subcategorías: <strong>Interior</strong>, <strong>Exterior</strong>, y <strong>Mixtos</strong>.</p>
+<h3 id="html-base-del-menu-de-navegacion-con-subniveles"><strong>HTML Base del Menú de Navegación con Subniveles</strong></h3>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Menú de Navegación con Subniveles<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">        </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="n">Arial</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span>
+<span class="w">            </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">            </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="nt">nav</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#333</span><span class="p">;</span>
+<span class="w">            </span><span class="k">overflow</span><span class="p">:</span><span class="w"> </span><span class="kc">hidden</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="nt">nav</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">inline-block</span><span class="p">;</span>
+<span class="w">            </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<span class="w">            </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">            </span><span class="k">text-decoration</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">            </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="nt">nav</span><span class="w"> </span><span class="nt">a</span><span class="p">:</span><span class="nd">hover</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#ddd</span><span class="p">;</span>
+<span class="w">            </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">black</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c">/* Estilos para los subniveles */</span>
+<span class="w">        </span><span class="p">.</span><span class="nc">submenu</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">            </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#444</span><span class="p">;</span>
+<span class="w">            </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">absolute</span><span class="p">;</span>
+<span class="w">            </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">            </span><span class="k">left</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">            </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="p">.</span><span class="nc">submenu</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">block</span><span class="p">;</span>
+<span class="w">            </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="nt">nav</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nt">ul</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nt">li</span><span class="p">:</span><span class="nd">hover</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">.</span><span class="nc">submenu</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">block</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="nt">ul</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">list-style-type</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">            </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">            </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="nt">li</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">relative</span><span class="p">;</span>
+<span class="w">            </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">inline-block</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Inicio<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Productos<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;submenu&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Interior<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Exterior<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Mixtos<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Servicios<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;submenu&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Presenciales<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Online<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Contacto<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;submenu&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Correo<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Mapa<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="explicacion-del-codigo_1"><strong>Explicación del Código</strong></h3>
+<ul>
+<li><strong>HTML</strong>: El menú de navegación está contenido dentro de una etiqueta <code>&lt;nav&gt;</code>. Cada ítem del menú se coloca dentro de una lista no ordenada <code>&lt;ul&gt;</code>. Los <strong>subniveles</strong> (por ejemplo, las opciones dentro de "Productos", "Servicios" y "Contacto") se agrupan en un <code>&lt;div class="submenu"&gt;</code>.</li>
+<li><strong>CSS</strong>: Se usa <strong><code>position: absolute;</code></strong> para posicionar los subniveles de manera que se muestren <strong>bajo el ítem principal</strong> al pasar el ratón sobre él. El <strong>hover</strong> sobre los elementos <code>&lt;li&gt;</code> de la lista activa el <strong><code>display: block;</code></strong> de los subniveles, mostrando las opciones del submenú.</li>
+</ul>
+<h3 id="resultado-esperado_1"><strong>Resultado Esperado</strong></h3>
+<h2 id="al-pasar-el-raton-sobre-productos-servicios-o-contacto-se-desplegaran-los-subniveles-correspondientes-con-las-opciones-que-hemos-definido">Al pasar el ratón sobre <strong>Productos</strong>, <strong>Servicios</strong> o <strong>Contacto</strong>, se desplegarán los subniveles correspondientes con las opciones que hemos definido.</h2>
 
 
 
